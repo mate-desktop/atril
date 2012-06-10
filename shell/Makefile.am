@@ -44,8 +44,6 @@ atril_SOURCES=				\
 	ev-history.h			\
 	ev-keyring.h			\
 	ev-keyring.c			\
-	ev-marshal.c			\
-	ev-marshal.h			\
 	ev-message-area.c		\
 	ev-message-area.h		\
 	ev-metadata.c			\
@@ -90,12 +88,21 @@ atril_SOURCES=				\
 	ev-sidebar-thumbnails.h		\
 	main.c
 
+nodist_atril_SOURCES = \
+	ev-marshal.c \
+	ev-marshal.h \
+	$(NULL)
+
 if ENABLE_DBUS
 atril_SOURCES += \
 	ev-media-player-keys.c \
-	ev-media-player-keys.h
+	ev-media-player-keys.h \
+ 	$(NULL)
+nodist_atril_SOURCES += \
+	ev-gdbus-generated.c \
+	ev-gdbus-generated.h \
+	$(NULL)
 endif
-
 
 atril_LDFLAGS = $(AM_LDFLAGS)
 
@@ -111,6 +118,10 @@ atril_LDADD=										\
 	$(SHELL_LIBS)
 
 BUILT_SOURCES = ev-marshal.h ev-marshal.c
+
+if ENABLE_DBUS
+BUILT_SOURCES += ev-gdbus-generated.c ev-gdbus-generated.h
+endif
 
 if ENABLE_DBUS
 atrild_SOURCES=			\
@@ -131,7 +142,9 @@ atrild_LDADD=				\
 	$(EV_DAEMON_LIBS)
 endif
 
-EXTRA_DIST = ev-marshal.list
+EXTRA_DIST = \
+	ev-marshal.list \
+	ev-gdbus.xml
 
 ev-marshal.h: $(srcdir)/ev-marshal.list
 	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=ev_marshal $(srcdir)/ev-marshal.list --header > ev-marshal.h
@@ -139,6 +152,14 @@ ev-marshal.h: $(srcdir)/ev-marshal.list
 ev-marshal.c: $(srcdir)/ev-marshal.list
 	echo '#include "ev-marshal.h"' > ev-marshal.c
 	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=ev_marshal $(srcdir)/ev-marshal.list --body >> ev-marshal.c
+
+ev-gdbus-generated.c ev-gdbus-generated.h: ev-gdbus.xml Makefile
+	$(AM_V_GEN) $(GDBUS_CODEGEN) \
+			--interface-prefix=org.mate.atril \
+			--c-namespace=Ev \
+			--c-generate-object-manager \
+			--generate-c-code ev-gdbus-generated \
+			$<
 
 DISTCLEANFILES =
 
