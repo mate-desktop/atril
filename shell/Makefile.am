@@ -120,12 +120,21 @@ atril_LDADD=										\
 BUILT_SOURCES = ev-marshal.h ev-marshal.c
 
 if ENABLE_DBUS
-BUILT_SOURCES += ev-gdbus-generated.c ev-gdbus-generated.h
+BUILT_SOURCES += \
+	ev-gdbus-generated.c \
+	ev-gdbus-generated.h \
+	ev-daemon-gdbus-generated.c \
+	ev-daemon-gdbus-generated.h
 endif
 
 if ENABLE_DBUS
 atrild_SOURCES=			\
-	ev-daemon.c
+	ev-daemon.c \
+ 	$(NULL)
+nodist_atrild_SOURCES = \
+	ev-daemon-gdbus-generated.c \
+	ev-daemon-gdbus-generated.h
+	$(NULL)
 
 atrild_CFLAGS=				\
 	-DATRILDATADIR=\"$(pkgdatadir)\"			\
@@ -144,7 +153,8 @@ endif
 
 EXTRA_DIST = \
 	ev-marshal.list \
-	ev-gdbus.xml
+	ev-gdbus.xml \
+	ev-daemon-gdbus.xml
 
 ev-marshal.h: $(srcdir)/ev-marshal.list
 	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=ev_marshal $(srcdir)/ev-marshal.list --header > ev-marshal.h
@@ -161,6 +171,14 @@ ev-gdbus-generated.c ev-gdbus-generated.h: ev-gdbus.xml Makefile
 			--generate-c-code ev-gdbus-generated \
 			$<
 
-DISTCLEANFILES =
+ev-daemon-gdbus-generated.c ev-daemon-gdbus-generated.h: ev-daemon-gdbus.xml Makefile
+	$(AM_V_GEN) $(GDBUS_CODEGEN) \
+			--interface-prefix=org.mate.atril \
+			--c-namespace=Ev \
+			--c-generate-object-manager \
+			--generate-c-code ev-daemon-gdbus-generated \
+			$<
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 -include $(top_srcdir)/git.mk
