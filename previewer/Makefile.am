@@ -5,11 +5,12 @@ man_MANS = atril-previewer.1
 
 atril_previewer_SOURCES = \
 	ev-previewer.c		\
+	ev-previewer-resources.c \
 	ev-previewer-window.h	\
-	ev-previewer-window.c
+	ev-previewer-window.c \
+	$(NULL)
 
 atril_previewer_CPPFLAGS = \
-	-DATRILDATADIR=\"$(pkgdatadir)\"	\
 	-I$(top_srcdir)                         \
 	-I$(top_builddir) 			\
         -I$(top_srcdir)/libdocument             \
@@ -33,6 +34,17 @@ atril_previewer_LDADD = \
 	$(PREVIEWER_LIBS)                           \
     $(WEBKIT_LIBS)
 
-EXTRA_DIST = $(man_MANS)
+ev-previewer-resources.c: previewer.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/previewer.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate-source --c-name ev_previewer $<
+
+EXTRA_DIST = \
+	previewer.gresource.xml \
+	previewer-ui.xml \
+	$(man_MANS) \
+	$(NULL)
+
+CLEANFILES = \
+	ev-previewer-resources.c \
+	$(NULL)
 
 -include $(top_srcdir)/git.mk
