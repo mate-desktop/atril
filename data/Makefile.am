@@ -15,8 +15,6 @@ man_MANS=atril.1
 
 uidir = $(pkgdatadir)
 ui_DATA =				\
-	atril-ui.xml			\
-	atril-toolbar.xml		\
 	hand-open.png
 
 #

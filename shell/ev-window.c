@@ -288,6 +288,8 @@ struct _EvWindowPrivate {
 
 #define MAX_RECENT_ITEM_LEN (40)
 
+#define TOOLBAR_RESOURCE_PATH "/org/mate/atril/shell/ui/toolbar.xml"
+
 static const gchar *document_print_settings[] = {
 	GTK_PRINT_SETTINGS_N_COPIES,
 	GTK_PRINT_SETTINGS_COLLATE,
@@ -7520,19 +7522,16 @@ get_toolbars_model (void)
 {
 	EggToolbarsModel *toolbars_model;
 	gchar            *toolbars_file;
-	gchar            *toolbars_path;
 	gint              i;
 
 	toolbars_model = egg_toolbars_model_new ();
 
 	toolbars_file = g_build_filename (ev_application_get_dot_dir (EV_APP, FALSE),
 					  "atril_toolbar.xml", NULL);
-	toolbars_path = g_build_filename (ev_application_get_data_dir (EV_APP),
-					 "atril-toolbar.xml", NULL);
-	egg_toolbars_model_load_names (toolbars_model, toolbars_path);
+	egg_toolbars_model_load_names_from_resource (toolbars_model, TOOLBAR_RESOURCE_PATH);
 
 	if (!egg_toolbars_model_load_toolbars (toolbars_model, toolbars_file)) {
-		egg_toolbars_model_load_toolbars (toolbars_model, toolbars_path);
+		egg_toolbars_model_load_toolbars_from_resource (toolbars_model, TOOLBAR_RESOURCE_PATH);
                 goto skip_conversion;
 	}
 
@@ -7554,7 +7553,6 @@ get_toolbars_model (void)
 
     skip_conversion:
 	g_free (toolbars_file);
-	g_free (toolbars_path);
 
 	egg_toolbars_model_set_flags (toolbars_model, 0, EGG_TB_MODEL_NOT_REMOVABLE);
 
@@ -7660,7 +7658,6 @@ ev_window_init (EvWindow *ev_window)
 	GtkWidget *overlay;
 	GObject *mpkeys;
 	guint page_cache_mb;
-	gchar *ui_path;
 #ifdef ENABLE_DBUS
 	GDBusConnection *connection;
 	static gint window_id = 0;
@@ -7756,15 +7753,10 @@ ev_window_init (EvWindow *ev_window)
 	gtk_ui_manager_insert_action_group (ev_window->priv->ui_manager,
 					    action_group, 0);
 
-	ui_path = g_build_filename (ev_application_get_data_dir (EV_APP),
-				    "atril-ui.xml", NULL);
-	if (!gtk_ui_manager_add_ui_from_file (
-		ev_window->priv->ui_manager, ui_path, &error))
-	{
-		g_warning ("building menus failed: %s", error->message);
-		g_error_free (error);
-	}
-	g_free (ui_path);
+	gtk_ui_manager_add_ui_from_resource (ev_window->priv->ui_manager,
+	                                     "/org/mate/atril/shell/ui/atril.xml",
+	                                     &error);
+	g_assert_no_error (error);
 
 	ev_window->priv->recent_manager = gtk_recent_manager_get_default ();
 	ev_window->priv->recent_action_group = NULL;
