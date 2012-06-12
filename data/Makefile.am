@@ -19,10 +19,6 @@ ui_DATA =				\
 	atril-toolbar.xml		\
 	hand-open.png
 
-if ENABLE_PREVIEWER
-ui_DATA += atril-previewer-ui.xml
-endif
-
 #
 # Desktop file
 #
