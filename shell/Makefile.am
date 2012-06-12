@@ -65,6 +65,8 @@ atril_SOURCES=				\
 	ev-properties-license.h		\
 	ev-open-recent-action.c		\
 	ev-open-recent-action.h		\
+	ev-resources.c			\
+	ev-resources.h			\
 	ev-utils.c			\
 	ev-utils.h			\
 	ev-window.c			\
@@ -115,7 +117,8 @@ atril_LDADD=										\
 	$(top_builddir)/libmisc/libevmisc.la						\
 	$(SHELL_LIBS)
 
-BUILT_SOURCES =
+BUILT_SOURCES = \
+	ev-resources.c
 
 if ENABLE_DBUS
 BUILT_SOURCES += \
@@ -150,8 +153,12 @@ atrild_LDADD=				\
 endif
 
 EXTRA_DIST = \
+	atril-ui.xml \
+	atril-toolbar.xml \
+	atril.gresource.xml \
 	ev-gdbus.xml \
 	ev-daemon-gdbus.xml
+
 
 ev-gdbus-generated.c ev-gdbus-generated.h: ev-gdbus.xml Makefile
 	$(AM_V_GEN) $(GDBUS_CODEGEN) \
@@ -168,6 +175,9 @@ ev-daemon-gdbus-generated.c ev-daemon-gdbus-generated.h: ev-daemon-gdbus.xml Mak
 			--c-generate-object-manager \
 			--generate-c-code ev-daemon-gdbus-generated \
 			$<
+
+ev-resources.c: atril.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/atril.gresource.xml)
+	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate-source --c-name ev $<
 
 DISTCLEANFILES = $(BUILT_SOURCES)
 

@@ -70,7 +70,6 @@ const gchar *     ev_application_get_uri             (EvApplication   *applicati
 GObject		 *ev_application_get_media_keys	     (EvApplication   *application);
 const gchar      *ev_application_get_dot_dir         (EvApplication   *application,
                                                       gboolean         create);
-const gchar      *ev_application_get_data_dir        (EvApplication   *application);
 
 G_END_DECLS
 
