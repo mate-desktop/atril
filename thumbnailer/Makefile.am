@@ -6,11 +6,8 @@ atril_thumbnailer_SOURCES = \
 	atril-thumbnailer.c
 
 atril_thumbnailer_CPPFLAGS = \
-	-DATRILDATADIR=\"$(pkgdatadir)\"	\
 	-I$(top_srcdir)				\
 	-I$(top_builddir)			\
-	-DMATELOCALEDIR=\"$(datadir)/locale\"	\
-	-DMATEICONDIR=\""$(datadir)/pixmaps"\" \
 	$(AM_CPPFLAGS)
 
 atril_thumbnailer_CFLAGS = \

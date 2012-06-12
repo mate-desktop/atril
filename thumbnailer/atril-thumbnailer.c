@@ -174,34 +174,6 @@ atril_thumbnail_pngenc_get (EvDocument *document, const char *thumbnail, int siz
 	g_object_unref (page);
 	
 	if (pixbuf != NULL) {
-		const char *overlaid_icon_name = NULL;
-
-		if (overlaid_icon_name) {
-			GdkPixbuf *overlaid_pixbuf;
-
-			gchar *overlaid_icon_path = g_strdup_printf ("%s/%s", ATRILDATADIR, overlaid_icon_name);
-			overlaid_pixbuf = gdk_pixbuf_new_from_file (overlaid_icon_path, NULL);
-			g_free (overlaid_icon_path);
-			if (overlaid_pixbuf != NULL) {
-				int delta_height, delta_width;
-				
-				delta_width = gdk_pixbuf_get_width (pixbuf) -
-					gdk_pixbuf_get_width (overlaid_pixbuf);
-				delta_height = gdk_pixbuf_get_height (pixbuf) -
-					gdk_pixbuf_get_height (overlaid_pixbuf);
-				
-				gdk_pixbuf_composite (overlaid_pixbuf, pixbuf,
-						      delta_width, delta_height,
-						      gdk_pixbuf_get_width (overlaid_pixbuf),
-						      gdk_pixbuf_get_height (overlaid_pixbuf),
-						      delta_width, delta_height,
-						      1, 1,
-						      GDK_INTERP_NEAREST, 100);
-				
-				g_object_unref  (overlaid_pixbuf);
-			}
-		}
-		
 		if (gdk_pixbuf_save (pixbuf, thumbnail, "png", NULL, NULL)) {
 			g_object_unref  (pixbuf);
 			return TRUE;
