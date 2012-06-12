@@ -32,8 +32,6 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
-#include "totem-scrsaver.h"
-
 #include "eggsmclient.h"
 
 #include "ev-application.h"
@@ -58,8 +56,6 @@ struct _EvApplication {
 	EvMediaPlayerKeys *keys;
 	gboolean doc_registered;
 #endif
-
-	TotemScrsaver *scr_saver;
 
 	EggSMClient *smclient;
 };
@@ -885,9 +881,6 @@ ev_application_shutdown (GApplication *gapplication)
 
 	ev_application_accel_map_save (application);
 
-	g_object_unref (application->scr_saver);
-	application->scr_saver = NULL;
-
         g_free (application->dot_dir);
         application->dot_dir = NULL;
 
@@ -1002,11 +995,6 @@ static void ev_application_init(EvApplication* ev_application)
 	ev_application_init_session (ev_application);
 
 	ev_application_accel_map_load (ev_application);
-
-	ev_application->scr_saver = totem_scrsaver_new ();
-	g_object_set (ev_application->scr_saver,
-		      "reason", _("Running in presentation mode"),
-		      NULL);
 }
 
 gboolean
@@ -1064,18 +1052,6 @@ ev_application_get_media_keys (EvApplication *application)
 #else
 	return NULL;
 #endif /* ENABLE_DBUS */
-}
-
-void
-ev_application_screensaver_enable (EvApplication *application)
-{
-	totem_scrsaver_enable (application->scr_saver);
-}
-
-void
-ev_application_screensaver_disable (EvApplication *application)
-{
-	totem_scrsaver_disable (application->scr_saver);
 }
 
 const gchar *
