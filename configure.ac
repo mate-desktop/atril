@@ -59,8 +59,6 @@ AC_PROG_CXX
 AC_STDC_HEADERS
 AM_PROG_LIBTOOL
 AC_PROG_SED
-AC_PATH_PROG([GLIB_GENMARSHAL], [glib-genmarshal])
-AC_PATH_PROG([GLIB_MKENUMS], [glib-mkenums])
 
 MATE_MAINTAINER_MODE_DEFINES
 MATE_COMPILE_WARNINGS
@@ -112,6 +110,34 @@ PKG_CHECK_MODULES(FRONTEND_CORE, gtk+-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0 >= $GLIB_REQUIRED)
 
 PKG_CHECK_MODULES([SHELL_CORE],[libxml-2.0 >= $LIBXML_REQUIRED gtk+-3.0 >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED gthread-2.0 x11])
+
+# ***************
+# Build utilities
+# ***************
+
+AC_ARG_VAR([GLIB_GENMARSHAL],[the glib-genmarschal programme])
+AC_PATH_PROG([GLIB_GENMARSHAL],[glib-genmarshal],[])
+if test -z "$GLIB_GENMARSHAL"; then
+  AC_MSG_ERROR([glib-genmarshal not found])
+fi
+
+AC_ARG_VAR([GLIB_MKENUMS],[the glib-mkenums programme])
+AC_PATH_PROG([GLIB_MKENUMS],[glib-mkenums],[])
+if test -z "$GLIB_MKENUMS"; then
+  AC_MSG_ERROR([glib-mkenums not found])
+fi
+
+AC_ARG_VAR([GLIB_COMPILE_RESOURCES],[the glib-compile-resources programme])
+AC_PATH_PROG([GLIB_COMPILE_RESOURCES],[glib-compile-resources],[])
+if test -z "$GLIB_COMPILE_RESOURCES"; then
+  AC_MSG_ERROR([glib-compile-resources not found])
+fi
+
+AC_ARG_VAR([XMLLINT],[the xmllint programme])
+AC_PATH_PROG([XMLLINT],[xmllint],[])
+if test -z "$XMLLINT"; then
+  AC_MSG_ERROR([xmllint not found])
+fi
 
 # Although GTK+ 3.10 includes hi-dpi functionality, it does not require a cairo with
 # cairo_surface_set_device_scale(), which we also need if we're to support hi-dpi,
