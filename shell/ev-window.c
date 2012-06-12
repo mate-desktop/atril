@@ -6,7 +6,7 @@
  *  Copyright (C) 2004 Martin Kretzschmar
  *  Copyright (C) 2004 Red Hat, Inc.
  *  Copyright (C) 2000, 2001, 2002, 2003, 2004 Marco Pesenti Gritti
- *  Copyright © 2003, 2004, 2005, 2009 Christian Persch
+ *  Copyright © 2003, 2004, 2005, 2009, 2012 Christian Persch
  *
  *  Author:
  *    Martin Kretzschmar <martink@gnome.org>
@@ -381,11 +381,9 @@ static void    zoom_control_changed_cb                 (EphyZoomAction *action,
                                                          float           zoom,
                                                          EvWindow       *ev_window);
 
-static guint ev_window_n_copies = 0;
-
 static gchar *caja_sendto = NULL;
 
-G_DEFINE_TYPE (EvWindow, ev_window, GTK_TYPE_WINDOW)
+G_DEFINE_TYPE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
 static gdouble
 get_screen_dpi (EvWindow *window)
@@ -2714,8 +2712,6 @@ ev_window_open_copy_at_dest (EvWindow   *window,
 			     EvLinkDest *dest)
 {
 	EvWindow *new_window = EV_WINDOW (ev_window_new ());
-
-	ev_window_n_copies++;
 
 	if (window->priv->metadata)
 		new_window->priv->metadata = g_object_ref (window->priv->metadata);
@@ -5867,18 +5863,6 @@ ev_window_drag_data_received (GtkWidget        *widget,
 }
 
 static void
-ev_window_finalize (GObject *object)
-{
-	G_OBJECT_CLASS (ev_window_parent_class)->finalize (object);
-
-	if (ev_window_n_copies == 0) {
-		ev_application_shutdown (EV_APP);
-	} else {
-		ev_window_n_copies--;
-	}
-}
-
-static void
 ev_window_set_caret_navigation_enabled (EvWindow *window,
                                         gboolean enabled)
 {
@@ -6246,7 +6230,6 @@ ev_window_class_init (EvWindowClass *ev_window_class)
 	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (ev_window_class);
 
 	g_object_class->dispose = ev_window_dispose;
-	g_object_class->finalize = ev_window_finalize;
 
 	widget_class->delete_event = ev_window_delete_event;
 	widget_class->key_press_event = ev_window_key_press_event;
@@ -7551,7 +7534,7 @@ ev_window_emit_closed (EvWindow *window)
 	 * to make sure the signal is emitted.
 	 */
 	if (ev_application_get_n_windows (EV_APP) == 1)
-		g_dbus_connection_flush_sync (ev_application_get_dbus_connection (EV_APP), NULL, NULL);
+		g_dbus_connection_flush_sync (g_application_get_dbus_connection (g_application_get_default ()), NULL, NULL);
 }
 
 static void
@@ -7609,7 +7592,7 @@ ev_window_init (EvWindow *ev_window)
 	ev_window->priv = EV_WINDOW_GET_PRIVATE (ev_window);
 
 #ifdef ENABLE_DBUS
-	connection = ev_application_get_dbus_connection (EV_APP);
+	connection = g_application_get_dbus_connection (g_application_get_default ());
         if (connection) {
                 EvAtrilWindow *skeleton;
 
@@ -8057,6 +8040,7 @@ ev_window_new (void)
 
 	ev_window = GTK_WIDGET (g_object_new (EV_TYPE_WINDOW,
 					      "type", GTK_WINDOW_TOPLEVEL,
+					      "application", g_application_get_default (),
 					      NULL));
 
 	return ev_window;

@@ -224,8 +224,10 @@ load_files (const char **files)
 int
 main (int argc, char *argv[])
 {
+	EvApplication  *application;
 	GOptionContext *context;
 	GError         *error = NULL;
+	int             status;
 
 #ifdef ENABLE_NLS
 	/* Initialize the i18n stuff */
@@ -266,7 +268,15 @@ main (int argc, char *argv[])
 
 	egg_set_desktop_file (MATEDATADIR "/applications/atril.desktop");
 
-	ev_application_load_session (EV_APP);
+	application = ev_application_new ();
+	if (!g_application_register (G_APPLICATION (application), NULL, &error)) {
+	        g_printerr ("Failed to register: %s\n", error->message);
+	        g_error_free (error);
+	        status = 1;
+	        goto done;
+	}
+
+	ev_application_load_session (application);
 	load_files (file_arguments);
 
 	/* Change directory so we don't prevent unmounting in case the initial cwd
@@ -274,10 +284,12 @@ main (int argc, char *argv[])
 	 */
 	g_chdir (g_get_home_dir ());
 
-	gtk_main ();
+	status = g_application_run (G_APPLICATION (application), 0, NULL);
 
+    done:
 	ev_shutdown ();
 	ev_stock_icons_shutdown ();
 
-	return 0;
+	g_object_unref (application);
+	return status;
 }
