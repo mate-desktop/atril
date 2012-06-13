@@ -88,8 +88,6 @@ atril_SOURCES=				\
 	main.c
 
 nodist_atril_SOURCES = \
-	ev-marshal.c \
-	ev-marshal.h \
 	$(NULL)
 
 if ENABLE_DBUS
@@ -115,7 +113,7 @@ atril_LDADD=										\
 	$(top_builddir)/libmisc/libevmisc.la						\
 	$(SHELL_LIBS)
 
-BUILT_SOURCES = ev-marshal.h ev-marshal.c
+BUILT_SOURCES =
 
 if ENABLE_DBUS
 BUILT_SOURCES += \
@@ -150,16 +148,8 @@ atrild_LDADD=				\
 endif
 
 EXTRA_DIST = \
-	ev-marshal.list \
 	ev-gdbus.xml \
 	ev-daemon-gdbus.xml
-
-ev-marshal.h: $(srcdir)/ev-marshal.list
-	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=ev_marshal $(srcdir)/ev-marshal.list --header > ev-marshal.h
-
-ev-marshal.c: $(srcdir)/ev-marshal.list
-	echo '#include "ev-marshal.h"' > ev-marshal.c
-	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=ev_marshal $(srcdir)/ev-marshal.list --body >> ev-marshal.c
 
 ev-gdbus-generated.c ev-gdbus-generated.h: ev-gdbus.xml Makefile
 	$(AM_V_GEN) $(GDBUS_CODEGEN) \
