@@ -65,8 +65,6 @@ atril_SOURCES=				\
 	ev-properties-license.h		\
 	ev-open-recent-action.c		\
 	ev-open-recent-action.h		\
-	ev-resources.c			\
-	ev-resources.h			\
 	ev-utils.c			\
 	ev-utils.h			\
 	ev-window.c			\
@@ -92,6 +90,7 @@ atril_SOURCES=				\
 	main.c
 
 nodist_atril_SOURCES = \
+	ev-resources.c \
 	$(NULL)
 
 if ENABLE_DBUS
