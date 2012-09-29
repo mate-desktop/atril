@@ -153,6 +153,7 @@ atrild_LDADD=				\
 endif
 
 EXTRA_DIST = \
+	atril.css \
 	atril-ui.xml \
 	atril-toolbar.xml \
 	atril.gresource.xml \
