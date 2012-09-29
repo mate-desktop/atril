@@ -68,6 +68,7 @@
 #include "ev-image.h"
 #include "ev-job-scheduler.h"
 #include "ev-jobs.h"
+#include "ev-loading-message.h"
 #include "ev-message-area.h"
 #include "ev-metadata.h"
 #include "ev-navigation-action.h"
@@ -137,6 +138,7 @@ struct _EvWindowPrivate {
 	GtkWidget *find_bar;
 	GtkWidget *scrolled_window;
 	GtkWidget *view;
+	GtkWidget *loading_message;
 	GtkWidget *presentation_view;
 	GtkWidget *message_area;
 	GtkWidget *password_view;
@@ -162,6 +164,9 @@ struct _EvWindowPrivate {
 	/* Progress Messages */
 	guint progress_idle;
 	GCancellable *progress_cancellable;
+
+	/* Loading message */
+	guint loading_message_timeout;
 
 	/* Dialogs */
 	GtkWidget *properties;
@@ -868,6 +873,35 @@ ev_window_warning_message (EvWindow    *window,
 	ev_window_set_message_area (window, area);
 }
 
+static gboolean
+show_loading_message_cb (EvWindow *window)
+{
+	window->priv->loading_message_timeout = 0;
+	gtk_widget_show (window->priv->loading_message);
+
+	return FALSE;
+}
+
+static void
+ev_window_show_loading_message (EvWindow *window)
+{
+	if (window->priv->loading_message_timeout)
+		return;
+	window->priv->loading_message_timeout =
+		g_timeout_add_full (G_PRIORITY_LOW, 0.5, (GSourceFunc)show_loading_message_cb, window, NULL);
+}
+
+static void
+ev_window_hide_loading_message (EvWindow *window)
+{
+	if (window->priv->loading_message_timeout) {
+		g_source_remove (window->priv->loading_message_timeout);
+		window->priv->loading_message_timeout = 0;
+	}
+
+	gtk_widget_hide (window->priv->loading_message);
+}
+
 typedef struct _PageTitleData {
 	const gchar *page_label;
 	gchar       *page_title;
@@ -1017,6 +1051,17 @@ view_caret_cursor_moved_cb (EvView   *view,
 
 	ev_metadata_set_string (window->priv->metadata, "caret-position", caret_position);
 	g_free (caret_position);
+}
+
+static void
+view_is_loading_changed_cb (EvView     *view,
+			    GParamSpec *spec,
+			    EvWindow   *window)
+{
+	if (ev_view_is_loading (view))
+		ev_window_show_loading_message (window);
+	else
+		ev_window_hide_loading_message (window);
 }
 
 static void
@@ -1833,7 +1878,7 @@ ev_window_load_job_cb (EvJob *job,
 
 	g_assert (job_load->uri);
 
-	ev_view_set_loading (EV_VIEW (ev_window->priv->view), FALSE);
+	ev_window_hide_loading_message (ev_window);
 	/* Success! */
 	if (!ev_job_is_failed (job)) {  
 		ev_document_model_set_document (ev_window->priv->model, document);
@@ -2090,7 +2135,7 @@ ev_window_load_remote_failed (EvWindow *ev_window,
 {
 	if ( !ev_window->priv->view ) return;
 	
-	ev_view_set_loading (EV_VIEW (ev_window->priv->view), FALSE);
+	ev_window_hide_loading_message (ev_window);
 	ev_window->priv->in_reload = FALSE;
 	ev_window_error_message (ev_window, error, 
 				 "%s", _("Unable to open document"));
@@ -2182,7 +2227,7 @@ window_open_file_copy_ready_cb (GFile        *source,
 		ev_window->priv->uri = NULL;
 		g_object_unref (source);
 		
-		ev_view_set_loading (EV_VIEW (ev_window->priv->view), FALSE);
+		ev_window_hide_loading_message (ev_window);
 	} else {
 		ev_window_load_remote_failed (ev_window, error);
 		g_object_unref (source);
@@ -2346,7 +2391,7 @@ ev_window_open_uri (EvWindow       *ev_window,
 	if (!g_file_is_native (source_file) && !ev_window->priv->local_uri) {
 		ev_window_load_file_remote (ev_window, source_file);
 	} else {
-		ev_view_set_loading (EV_VIEW (ev_window->priv->view), TRUE);
+		ev_window_show_loading_message (ev_window);
 		g_object_unref (source_file);
 		ev_job_scheduler_push_job (ev_window->priv->load_job, EV_JOB_PRIORITY_NONE);
 	}
@@ -6021,6 +6066,11 @@ ev_window_dispose (GObject *object)
 		priv->interface_settings = NULL;
 	}
 
+	if (priv->loading_message_timeout) {
+		g_source_remove (priv->loading_message_timeout);
+		priv->loading_message_timeout = 0;
+	}
+
 	if (priv->monitor) {
 		g_object_unref (priv->monitor);
 		priv->monitor = NULL;
@@ -7607,6 +7657,7 @@ ev_window_init (EvWindow *ev_window)
 	GError *error = NULL;
 	GtkWidget *sidebar_widget;
 	GtkWidget *menuitem;
+	GtkWidget *overlay;
 	GObject *mpkeys;
 	guint page_cache_mb;
 	gchar *ui_path;
@@ -7863,14 +7914,26 @@ ev_window_init (EvWindow *ev_window)
 			     sidebar_widget);
 
 	ev_window->priv->view_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+
+	overlay = gtk_overlay_new ();
 	ev_window->priv->scrolled_window =
 		GTK_WIDGET (g_object_new (GTK_TYPE_SCROLLED_WINDOW,
 					  "shadow-type", GTK_SHADOW_IN,
 					  NULL));
-	gtk_box_pack_start (GTK_BOX (ev_window->priv->view_box),
-			    ev_window->priv->scrolled_window,
-			    TRUE, TRUE, 0);
+	gtk_container_add (GTK_CONTAINER (overlay), ev_window->priv->scrolled_window);
 	gtk_widget_show (ev_window->priv->scrolled_window);
+
+	ev_window->priv->loading_message = ev_loading_message_new ();
+	gtk_widget_set_name (ev_window->priv->loading_message, "ev-loading-message");
+	gtk_widget_set_halign (ev_window->priv->loading_message, GTK_ALIGN_END);
+	gtk_widget_set_valign (ev_window->priv->loading_message, GTK_ALIGN_START);
+	gtk_widget_set_no_show_all (ev_window->priv->loading_message, TRUE);
+	gtk_overlay_add_overlay (GTK_OVERLAY (overlay), ev_window->priv->loading_message);
+
+	gtk_box_pack_start (GTK_BOX (ev_window->priv->view_box),
+			    overlay,
+			    TRUE, TRUE, 0);
+	gtk_widget_show (overlay);
 
 	gtk_paned_add2 (GTK_PANED (ev_window->priv->hpaned),
 			ev_window->priv->view_box);
@@ -7916,6 +7979,9 @@ ev_window_init (EvWindow *ev_window)
 				 ev_window, 0);
 	g_signal_connect_object (ev_window->priv->view, "layers-changed",
 				 G_CALLBACK (view_layers_changed_cb),
+				 ev_window, 0);
+	g_signal_connect_object (ev_window->priv->view, "notify::is-loading",
+				 G_CALLBACK (view_is_loading_changed_cb),
 				 ev_window, 0);
 	g_signal_connect_object (ev_window->priv->view, "cursor-moved",
 				 G_CALLBACK (view_caret_cursor_moved_cb),

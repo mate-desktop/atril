@@ -6,7 +6,6 @@ NOINST_H_FILES =			\
 	ev-image-accessible.h	\
 	ev-link-accessible.h	\
 	ev-page-accessible.h	\
-	ev-loading-window.h		\
 	ev-page-cache.h			\
 	ev-pixbuf-cache.h		\
 	ev-timeline.h			\
@@ -38,7 +37,6 @@ libatrilview_la_SOURCES = 			\
 	ev-document-model.c		\
 	ev-form-field-accessible.c	\
 	ev-image-accessible.c	\
-	ev-loading-window.c		\
 	ev-jobs.c			\
 	ev-job-scheduler.c		\
 	ev-link-accessible.c	\
