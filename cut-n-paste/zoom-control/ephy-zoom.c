@@ -31,7 +31,7 @@ ephy_zoom_get_zoom_level_index (float level)
 	float previous, current, mean;
 
 	/* Handle our options at the beginning of the list. */
-	if (level == EPHY_ZOOM_BEST_FIT) {
+	if (level == EPHY_ZOOM_FIT_PAGE) {
 	  return 0;
 	} else if (level == EPHY_ZOOM_FIT_WIDTH) {
 	  return 1;
