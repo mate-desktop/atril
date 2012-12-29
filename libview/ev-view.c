@@ -229,6 +229,11 @@ static double	zoom_for_size_fit_page 			     (gdouble doc_width,
 							      gdouble doc_height,
 							      int     target_width,
 							      int     target_height);
+static double   zoom_for_size_automatic                      (GdkScreen *screen,
+							      gdouble    doc_width,
+							      gdouble    doc_height,
+							      int        target_width,
+							      int        target_height);
 static void     ev_view_zoom_for_size                        (EvView *view,
 							      int     width,
 							      int     height);
@@ -3173,6 +3178,7 @@ ev_view_size_request_continuous_dual_page (EvView         *view,
 	switch (view->sizing_mode) {
 	        case EV_SIZING_FIT_WIDTH:
 	        case EV_SIZING_FIT_PAGE:
+	        case EV_SIZING_AUTOMATIC:
 			requisition->width = 1;
 
 			break;
@@ -3202,6 +3208,7 @@ ev_view_size_request_continuous (EvView         *view,
 	switch (view->sizing_mode) {
 	        case EV_SIZING_FIT_WIDTH:
 	        case EV_SIZING_FIT_PAGE:
+	        case EV_SIZING_AUTOMATIC:
 			requisition->width = 1;
 
 			break;
@@ -3296,7 +3303,8 @@ ev_view_size_request (GtkWidget      *widget,
 	 */
 	if (!view->internal_size_request &&
 	    (view->sizing_mode == EV_SIZING_FIT_WIDTH ||
-	     view->sizing_mode == EV_SIZING_FIT_PAGE)) {
+	     view->sizing_mode == EV_SIZING_FIT_PAGE ||
+	     view->sizing_mode == EV_SIZING_AUTOMATIC)) {
 		GtkAllocation allocation;
 
 		gtk_widget_get_allocation (widget, &allocation);
@@ -3362,7 +3370,8 @@ ev_view_size_allocate (GtkWidget      *widget,
 		return;
 
 	if (view->sizing_mode == EV_SIZING_FIT_WIDTH ||
-	    view->sizing_mode == EV_SIZING_FIT_PAGE) {
+	    view->sizing_mode == EV_SIZING_FIT_PAGE ||
+	    view->sizing_mode == EV_SIZING_AUTOMATIC) {
 		GtkRequisition req;
 
 		ev_view_zoom_for_size (view,
@@ -5890,6 +5899,45 @@ zoom_for_size_fit_page (gdouble doc_width,
 	return MIN (w_scale, h_scale);
 }
 
+static double
+zoom_for_size_automatic (GdkScreen *screen,
+			 gdouble    doc_width,
+			 gdouble    doc_height,
+			 int        target_width,
+			 int        target_height)
+{
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkMonitor *monitor;
+	GdkDisplay *display;
+#else
+	gint        monitor;
+#endif
+	double fit_width_scale;
+	double scale;
+
+	fit_width_scale = zoom_for_size_fit_width (doc_width, doc_height, target_width, target_height);
+
+	if (doc_height < doc_width) {
+		double fit_height_scale;
+
+		fit_height_scale = zoom_for_size_fit_height (doc_width, doc_height, target_width, target_height);
+		scale = MIN (fit_width_scale, fit_height_scale);
+	} else {
+		double actual_scale;
+
+#if GTK_CHECK_VERSION (3, 22, 0)
+		display = gdk_screen_get_display (screen);
+		monitor = gdk_display_get_primary_monitor (display);
+#else
+		monitor = gdk_screen_get_primary_monitor (screen);
+#endif
+		actual_scale = ev_document_misc_get_screen_dpi (screen, monitor) / 72.0;
+		scale = MIN (fit_width_scale, actual_scale);
+	}
+
+	return scale;
+}
+
 static void
 ev_view_zoom_for_size_continuous_and_dual_page (EvView *view,
 						int     width,
@@ -5917,12 +5965,20 @@ ev_view_zoom_for_size_continuous_and_dual_page (EvView *view,
 
 	sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
 
-	if (view->sizing_mode == EV_SIZING_FIT_WIDTH) {
+	switch (view->sizing_mode) {
+	case EV_SIZING_FIT_WIDTH:
 		scale = zoom_for_size_fit_width (doc_width, doc_height, width - sb_size, height);
-	} else if (view->sizing_mode == EV_SIZING_FIT_PAGE)
+		break;
+	case EV_SIZING_FIT_PAGE:
 		scale = zoom_for_size_fit_page (doc_width, doc_height, width - sb_size, height);
-	else
+		break;
+	case EV_SIZING_AUTOMATIC:
+		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+						 doc_width, doc_height, width - sb_size, height);
+		break;
+	default:
 		g_assert_not_reached ();
+	}
 
 	ev_document_model_set_scale (view->model, scale);
 }
@@ -5953,12 +6009,20 @@ ev_view_zoom_for_size_continuous (EvView *view,
 
 	sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
 
-	if (view->sizing_mode == EV_SIZING_FIT_WIDTH) {
+	switch (view->sizing_mode) {
+	case EV_SIZING_FIT_WIDTH:
 		scale = zoom_for_size_fit_width (doc_width, doc_height, width - sb_size, height);
-	} else if (view->sizing_mode == EV_SIZING_FIT_PAGE)
+		break;
+	case EV_SIZING_FIT_PAGE:
 		scale = zoom_for_size_fit_page (doc_width, doc_height, width - sb_size, height);
-	else
+		break;
+	case EV_SIZING_AUTOMATIC:
+		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+						 doc_width, doc_height, width - sb_size, height);
+		break;
+	default:
 		g_assert_not_reached ();
+	}
 
 	ev_document_model_set_scale (view->model, scale);
 }
@@ -5972,6 +6036,7 @@ ev_view_zoom_for_size_dual_page (EvView *view,
 	gdouble doc_width, doc_height;
 	gdouble scale;
 	gint other_page;
+	gint sb_size;
 
 	other_page = view->current_page ^ 1;
 
@@ -5992,15 +6057,22 @@ ev_view_zoom_for_size_dual_page (EvView *view,
 	width -= ((border.left + border.right)* 2 + 3 * view->spacing);
 	height -= (border.top + border.bottom + 2 * view->spacing);
 
-	if (view->sizing_mode == EV_SIZING_FIT_WIDTH) {
-		gint sb_size;
-
+	switch (view->sizing_mode) {
+	case EV_SIZING_FIT_WIDTH:
 		sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
 		scale = zoom_for_size_fit_width (doc_width, doc_height, width - sb_size, height);
-	} else if (view->sizing_mode == EV_SIZING_FIT_PAGE)
+		break;
+	case EV_SIZING_FIT_PAGE:
 		scale = zoom_for_size_fit_page (doc_width, doc_height, width, height);
-	else
+		break;
+	case EV_SIZING_AUTOMATIC:
+		sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
+		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+						 doc_width, doc_height, width - sb_size, height);
+		break;
+	default:
 		g_assert_not_reached ();
+	}
 
 	ev_document_model_set_scale (view->model, scale);
 }
@@ -6013,6 +6085,7 @@ ev_view_zoom_for_size_single_page (EvView *view,
 	gdouble doc_width, doc_height;
 	GtkBorder border;
 	gdouble scale;
+	gint sb_size;
 
 	get_doc_page_size (view, view->current_page, &doc_width, &doc_height);
 
@@ -6022,15 +6095,22 @@ ev_view_zoom_for_size_single_page (EvView *view,
 	width -= (border.left + border.right + 2 * view->spacing);
 	height -= (border.top + border.bottom + 2 * view->spacing);
 
-	if (view->sizing_mode == EV_SIZING_FIT_WIDTH) {
-		gint sb_size;
-
+	switch (view->sizing_mode) {
+	case EV_SIZING_FIT_WIDTH:
 		sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
 		scale = zoom_for_size_fit_width (doc_width, doc_height, width - sb_size, height);
-	} else if (view->sizing_mode == EV_SIZING_FIT_PAGE)
+		break;
+	case EV_SIZING_FIT_PAGE:
 		scale = zoom_for_size_fit_page (doc_width, doc_height, width, height);
-	else
+		break;
+	case EV_SIZING_AUTOMATIC:
+		sb_size = ev_view_get_scrollbar_size (view, GTK_ORIENTATION_VERTICAL);
+		scale = zoom_for_size_automatic (gtk_widget_get_screen (GTK_WIDGET (view)),
+						 doc_width, doc_height, width - sb_size, height);
+		break;
+	default:
 		g_assert_not_reached ();
+	}
 
 	ev_document_model_set_scale (view->model, scale);
 }
@@ -6042,7 +6122,8 @@ ev_view_zoom_for_size (EvView *view,
 {
 	g_return_if_fail (EV_IS_VIEW (view));
 	g_return_if_fail (view->sizing_mode == EV_SIZING_FIT_WIDTH ||
-			  view->sizing_mode == EV_SIZING_FIT_PAGE);
+			  view->sizing_mode == EV_SIZING_FIT_PAGE ||
+			  view->sizing_mode == EV_SIZING_AUTOMATIC);
 	g_return_if_fail (width >= 0);
 	g_return_if_fail (height >= 0);
 
