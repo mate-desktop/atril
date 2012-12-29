@@ -47,7 +47,7 @@ struct
 zoom_levels[] =
 {
 	{ N_("Fit Page"),       EPHY_ZOOM_FIT_PAGE  },
-	{ N_("Fit Page Width"), EPHY_ZOOM_FIT_WIDTH },
+	{ N_("Fit Width"),      EPHY_ZOOM_FIT_WIDTH },
 	{ N_("Expand Window to Fit"), EPHY_ZOOM_EXPAND_WINDOW_TO_FIT },
 	{ NULL,                 EPHY_ZOOM_SEPARATOR },
 	{ N_("50%"), 0.5 },
