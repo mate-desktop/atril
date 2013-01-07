@@ -94,6 +94,14 @@ create_thumbnail_frame (int        width,
 	return retval;
 }
 
+/**
+ * ev_document_misc_get_thumbnail_frame:
+ * @width: the desired width
+ * @height: the desired height
+ * @source_pixbuf: a #GdkPixbuf
+ *
+ * Returns: (transfer full): a #GdkPixbuf
+ */
 GdkPixbuf *
 ev_document_misc_get_thumbnail_frame (int        width,
 				      int        height,
@@ -102,6 +110,14 @@ ev_document_misc_get_thumbnail_frame (int        width,
 	return create_thumbnail_frame (width, height, source_pixbuf, TRUE);
 }
 
+/**
+ * ev_document_misc_get_loading_thumbnail:
+ * @width: the desired width
+ * @height: the desired height
+ * @inverted_colors: whether to invert colors
+ *
+ * Returns: (transfer full): a #GdkPixbuf
+ */
 GdkPixbuf *
 ev_document_misc_get_loading_thumbnail (int      width,
 					int      height,
@@ -199,6 +215,12 @@ ev_document_misc_surface_from_pixbuf (GdkPixbuf *pixbuf)
 	return surface;
 }
 
+/**
+ * ev_document_misc_pixbuf_from_surface:
+ * @surface: a #cairo_surface_t
+ *
+ * Returns: (transfer full): a #GdkPixbuf
+ */
 GdkPixbuf *
 ev_document_misc_pixbuf_from_surface (cairo_surface_t *surface)
 {
