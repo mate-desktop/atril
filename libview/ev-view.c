@@ -5988,6 +5988,12 @@ jump_to_find_page (EvView *view, EvViewFindDirection direction, gint shift)
 	}
 }
 
+/**
+ * ev_view_find_changed: (skip)
+ * @view: an #EvView
+ * @results: the results as returned by ev_job_find_get_results()
+ * @page: page index
+ */
 void
 ev_view_find_changed (EvView *view, GList **results, gint page)
 {
