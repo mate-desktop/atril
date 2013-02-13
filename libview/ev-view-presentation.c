@@ -507,7 +507,10 @@ ev_view_presentation_update_current_page (EvViewPresentation *pview,
 		}
 	}
 
-	pview->current_page = page;
+	if (pview->current_page != page) {
+		pview->current_page = page;
+		g_object_notify (G_OBJECT (pview), "current-page");
+	}
 
 	if (pview->page_cache)
 		ev_page_cache_set_page_range (pview->page_cache, page, page);
@@ -521,6 +524,21 @@ ev_view_presentation_update_current_page (EvViewPresentation *pview,
 
 	if (EV_JOB_RENDER (pview->curr_job)->surface)
 		gtk_widget_queue_draw (GTK_WIDGET (pview));
+}
+
+static void
+ev_view_presentation_set_current_page (EvViewPresentation *pview,
+                                       guint               page)
+{
+	if (pview->current_page == page)
+		return;
+
+	if (!gtk_widget_get_realized (GTK_WIDGET (pview))) {
+		pview->current_page = page;
+		g_object_notify (G_OBJECT (pview), "current-page");
+	} else {
+		ev_view_presentation_update_current_page (pview, page);
+	}
 }
 
 void
@@ -1373,7 +1391,7 @@ ev_view_presentation_set_property (GObject      *object,
 		pview->enable_animations = EV_IS_DOCUMENT_TRANSITION (pview->document);
 		break;
 	case PROP_CURRENT_PAGE:
-		pview->current_page = g_value_get_uint (value);
+		ev_view_presentation_set_current_page (pview, g_value_get_uint (value));
 		break;
 	case PROP_ROTATION:
                 ev_view_presentation_set_rotation (pview, g_value_get_uint (value));
@@ -1395,6 +1413,9 @@ ev_view_presentation_get_property (GObject    *object,
         EvViewPresentation *pview = EV_VIEW_PRESENTATION (object);
 
         switch (prop_id) {
+        case PROP_CURRENT_PAGE:
+                g_value_set_uint (value, pview->current_page);
+                break;
         case PROP_ROTATION:
                 g_value_set_uint (value, ev_view_presentation_get_rotation (pview));
                 break;
@@ -1478,7 +1499,7 @@ ev_view_presentation_class_init (EvViewPresentationClass *klass)
 							    "The current page",
 							    0, G_MAXUINT, 0,
 							    G_PARAM_WRITABLE |
-							    G_PARAM_CONSTRUCT_ONLY));
+							    G_PARAM_CONSTRUCT));
 	g_object_class_install_property (gobject_class,
 					 PROP_ROTATION,
 					 g_param_spec_uint ("rotation",
