@@ -483,6 +483,7 @@ ev_window_setup_action_sensitivity (EvWindow *ev_window)
 	ev_window_set_action_sensitive (ev_window, "FilePrint", has_pages && ok_to_print);
 	ev_window_set_action_sensitive (ev_window, "FileProperties", has_document && has_properties);
 	ev_window_set_action_sensitive (ev_window, "FileSendTo", has_document);
+	ev_window_set_action_sensitive (ev_window, "ViewPresentation", has_document);
 
         /* Edit menu */
 	ev_window_set_action_sensitive (ev_window, "EditSelectAll", has_pages && can_get_text);
