@@ -214,6 +214,10 @@ struct _EvView {
 	/* Accessibility */
 	AtkObject *accessible;
 
+	/* Caret navigation */
+	gboolean caret_enabled;
+	gint     cursor_offset;
+
 	/* Gestures */
 	GtkGesture *pan_gesture;
 	GtkGesture *zoom_gesture;
