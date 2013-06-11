@@ -4695,20 +4695,22 @@ ev_view_forward_key_event_to_focused_child (EvView      *view,
 static gboolean
 cursor_backward_char (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
 	if (view->cursor_offset == 0)
 		return ev_view_previous_page (view);
 
-	view->cursor_offset--;
+	do {
+		view->cursor_offset--;
+	} while (view->cursor_offset >= 0 && !log_attrs[view->cursor_offset].is_cursor_position);
 
 	return TRUE;
 }
@@ -4716,20 +4718,22 @@ cursor_backward_char (EvView *view)
 static gboolean
 cursor_forward_char (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
-	if (view->cursor_offset >= n_areas)
+	if (view->cursor_offset >= n_attrs)
 		return ev_view_next_page (view);
 
-	view->cursor_offset++;
+	do {
+		view->cursor_offset++;
+	} while (view->cursor_offset <= n_attrs && !log_attrs[view->cursor_offset].is_cursor_position);
 
 	return TRUE;
 }
@@ -4737,26 +4741,19 @@ cursor_forward_char (EvView *view)
 static gboolean
 cursor_backward_word_start (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
-	const gchar *page_text;
-	gint         i, j;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
+	gint          i, j;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
-	page_text = ev_page_cache_get_text (view->page_cache, view->current_page);
-	if (!page_text)
-		return FALSE;
-
-	/* Skip blanks and new lines. */
-	/* FIXME: Text is not ASCII but utf8, use pango for word breaking. */
-	for (i = view->cursor_offset - 1; i >= 0 && g_ascii_isspace (page_text[i]); i--);
-
+	/* Skip current word starts */
+	for (i = view->cursor_offset; i >= 0 && log_attrs[i].is_word_start; i--);
 	if (i <= 0) {
 		if (ev_view_previous_page (view))
 			return cursor_backward_word_start (view);
@@ -4764,13 +4761,8 @@ cursor_backward_word_start (EvView *view)
 	}
 
 	/* Move to the beginning of the word */
-	/* FIXME: Text is not ASCII but utf8, use pango for word breaking. */
-	for (j = i; j >= 0 && !g_ascii_isspace (page_text[j]); j--);
-
-	if (j <= 0)
-		view->cursor_offset = 0;
-	else
-		view->cursor_offset = j + 1;
+	for (j = i; j >= 0 && !log_attrs[j].is_word_start; j--);
+	view->cursor_offset = MAX (0, j);
 
 	return TRUE;
 }
@@ -4778,40 +4770,28 @@ cursor_backward_word_start (EvView *view)
 static gboolean
 cursor_forward_word_end (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
-	const gchar *page_text;
-	gint         i, j;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
+	gint          i, j;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
-	page_text = ev_page_cache_get_text (view->page_cache, view->current_page);
-	if (!page_text)
-		return FALSE;
-
-	/* Skip blanks and new lines. */
-	/* FIXME: Text is not ASCII but utf8, use pango for word breaking. */
-	for (i = view->cursor_offset; i < n_areas && g_ascii_isspace (page_text[i]); i++);
-
-	if (i >= n_areas) {
+	/* Skip current current word ends */
+	for (i = view->cursor_offset; i < n_attrs && log_attrs[i].is_word_end; i++);
+	if (i >= n_attrs) {
 		if (ev_view_next_page (view))
 			return cursor_forward_word_end (view);
 		return FALSE;
 	}
 
 	/* Move to the end of the word. */
-	/* FIXME: Text is not ASCII but utf8, use pango for word breaking. */
-	for (j = i; j < (gint)n_areas && !g_ascii_isspace (page_text[j]); j++);
-
-	if (j >= n_areas)
-		view->cursor_offset = n_areas;
-	else
-		view->cursor_offset = j;
+	for (j = i; j < n_attrs && !log_attrs[j].is_word_end; j++);
+	view->cursor_offset = MIN (j, n_attrs);
 
 	return TRUE;
 }
@@ -4819,29 +4799,19 @@ cursor_forward_word_end (EvView *view)
 static gboolean
 cursor_go_to_line_start (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
-	const gchar *page_text;
-	gint         i;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
+	gint          i;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
-	page_text = ev_page_cache_get_text (view->page_cache, view->current_page);
-	if (!page_text)
-		return FALSE;
-
-	/* FIXME: Text is not ASCII but utf8, use pango for line breaking. */
-	for (i = view->cursor_offset - 1; i >= 0 && page_text[i] != '\n'; i--);
-
-	if (i <= 0)
-		view->cursor_offset = 0;
-	else
-		view->cursor_offset = i + 1;
+	for (i = view->cursor_offset; i >= 0 && !log_attrs[i].is_mandatory_break; i--);
+	view->cursor_offset = MAX (0, i);
 
 	return TRUE;
 }
@@ -4849,14 +4819,21 @@ cursor_go_to_line_start (EvView *view)
 static gboolean
 cursor_backward_line (EvView *view)
 {
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
+
 	/* FIXME: Keep the line offset when moving between lines */
 	if (!cursor_go_to_line_start (view))
 		return FALSE;
 
 	if (view->cursor_offset == 0)
-		ev_view_previous_page (view);
-	else
+		return ev_view_previous_page (view);
+
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+
+	do {
 		view->cursor_offset--;
+	} while (view->cursor_offset >= 0 && !log_attrs[view->cursor_offset].is_cursor_position);
 
 	return TRUE;
 }
@@ -4864,29 +4841,26 @@ cursor_backward_line (EvView *view)
 static gboolean
 cursor_go_to_line_end (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
-	const gchar *page_text;
-	gint         i;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
+	gint          i;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
-	page_text = ev_page_cache_get_text (view->page_cache, view->current_page);
-	if (!page_text)
-		return FALSE;
+	for (i = view->cursor_offset + 1; i <= n_attrs && !log_attrs[i].is_mandatory_break; i++);
+	view->cursor_offset = MIN (i, n_attrs);
 
-	/* FIXME: Text is not ASCII but utf8, use pango for line breaking. */
-	for (i = view->cursor_offset; i < (gint)n_areas && page_text[i] != '\n'; i++);
+	if (view->cursor_offset == n_attrs)
+		return TRUE;
 
-	if (i >= n_areas)
-		view->cursor_offset = n_areas;
-	else
-		view->cursor_offset = i;
+	do {
+		view->cursor_offset--;
+	} while (view->cursor_offset >= 0 && !log_attrs[view->cursor_offset].is_cursor_position);
 
 	return TRUE;
 }
@@ -4894,21 +4868,21 @@ cursor_go_to_line_end (EvView *view)
 static gboolean
 cursor_forward_line (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
 
 	/* FIXME: Keep the line offset when moving between lines */
 	if (!cursor_go_to_line_end (view))
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
-		return FALSE;
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
 
-	if (view->cursor_offset == n_areas)
-		ev_view_next_page (view);
-	else
+	if (view->cursor_offset == n_attrs)
+		return ev_view_next_page (view);
+
+	do {
 		view->cursor_offset++;
+	} while (view->cursor_offset <= n_attrs && !log_attrs[view->cursor_offset].is_cursor_position);
 
 	return TRUE;
 }
@@ -4924,17 +4898,17 @@ cursor_go_to_page_start (EvView *view)
 static gboolean
 cursor_go_to_page_end (EvView *view)
 {
-	EvRectangle *areas = NULL;
-	guint        n_areas = 0;
+	PangoLogAttr *log_attrs = NULL;
+	gulong        n_attrs;
 
 	if (!view->page_cache)
 		return FALSE;
 
-	ev_page_cache_get_text_layout (view->page_cache, view->current_page, &areas, &n_areas);
-	if (!areas)
+	ev_page_cache_get_text_log_attrs (view->page_cache, view->current_page, &log_attrs, &n_attrs);
+	if (!log_attrs)
 		return FALSE;
 
-	view->cursor_offset = n_areas;
+	view->cursor_offset = n_attrs;
 
 	return TRUE;
 }
@@ -5995,7 +5969,8 @@ setup_caches (EvView *view)
 	ev_page_cache_set_flags (view->page_cache,
 				 ev_page_cache_get_flags (view->page_cache) |
 				 EV_PAGE_DATA_INCLUDE_TEXT_LAYOUT |
-				 EV_PAGE_DATA_INCLUDE_TEXT);
+				 EV_PAGE_DATA_INCLUDE_TEXT |
+		                 EV_PAGE_DATA_INCLUDE_TEXT_LOG_ATTRS);
 
 	inverted_colors = ev_document_model_get_inverted_colors (view->model);
 	ev_pixbuf_cache_set_inverted_colors (view->pixbuf_cache, inverted_colors);
