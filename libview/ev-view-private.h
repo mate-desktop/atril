@@ -217,6 +217,7 @@ struct _EvView {
 	/* Caret navigation */
 	gboolean caret_enabled;
 	gint     cursor_offset;
+	gint     cursor_page;
 	gboolean cursor_visible;
 	guint    cursor_blink_timeout_id;
 	guint    cursor_blink_time;
