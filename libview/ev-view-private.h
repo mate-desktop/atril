@@ -278,6 +278,9 @@ void _ev_view_transform_doc_rect_to_view_rect (EvView       *view,
 					       int           page,
 					       EvRectangle  *doc_rect,
 					       GdkRectangle *view_rect);
+void _ev_view_get_selection_colors (EvView  *view,
+                                    GdkRGBA *bg_color,
+                                    GdkRGBA *fg_color);
 
 void _ev_view_set_focused_element (EvView *view,
                                    EvMapping *element_mapping,
