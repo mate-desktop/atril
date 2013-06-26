@@ -4720,7 +4720,6 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 		else 
 		    selection_scroll_timeout_cb (view);
 
-		view->selection_info.in_selection = TRUE;
 		view->motion.x = x + view->scroll_x;
 		view->motion.y = y + view->scroll_y;
 
@@ -5227,11 +5226,9 @@ extend_selection_from_cursor (EvView *view,
 			      GdkPoint *start_point,
 			      GdkPoint *end_point)
 {
-	if (!(view->selection_info.in_selection && view->selection_info.selections)) {
-		clear_selection (view);
+	if (!view->selection_info.selections) {
 		view->selection_info.start.x = start_point->x;
 		view->selection_info.start.y = start_point->y;
-		view->selection_info.in_selection = TRUE;
 	}
 
 	compute_selections (view,
@@ -6318,7 +6315,6 @@ ev_view_init (EvView *view)
 	view->drag_info.in_drag = FALSE;
 	view->scroll_info.autoscrolling = FALSE;
 	view->selection_info.selections = NULL;
-	view->selection_info.in_selection = FALSE;
 	view->selection_info.in_drag = FALSE;
 	view->selection_mode = EV_VIEW_SELECTION_TEXT;
 	view->continuous = TRUE;
@@ -7686,7 +7682,7 @@ clear_selection (EvView *view)
 
 		g_signal_emit (view, signals[SIGNAL_SELECTION_CHANGED], 0, NULL);
 	}
-	view->selection_info.in_selection = FALSE;
+
 	if (view->pixbuf_cache)
 		ev_pixbuf_cache_set_selection_list (view->pixbuf_cache, NULL);
 }
