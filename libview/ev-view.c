@@ -6576,7 +6576,8 @@ setup_caches (EvView *view)
 				 ev_page_cache_get_flags (view->page_cache) |
 				 EV_PAGE_DATA_INCLUDE_TEXT_LAYOUT |
 				 EV_PAGE_DATA_INCLUDE_TEXT |
-		                 EV_PAGE_DATA_INCLUDE_TEXT_LOG_ATTRS);
+				 EV_PAGE_DATA_INCLUDE_TEXT_ATTRS |
+				 EV_PAGE_DATA_INCLUDE_TEXT_LOG_ATTRS);
 
 	inverted_colors = ev_document_model_get_inverted_colors (view->model);
 	ev_pixbuf_cache_set_inverted_colors (view->pixbuf_cache, inverted_colors);
