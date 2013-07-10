@@ -28,6 +28,7 @@
 
 #include <glib-object.h>
 #include <glib.h>
+#include <gdk/gdk.h>
 
 #include "ev-document.h"
 
@@ -56,6 +57,8 @@ struct _EvDocumentTextInterface
 					      EvPage           *page,
 					      EvRectangle     **areas,
 					      guint            *n_areas);
+	PangoAttrList  *(* get_text_attrs)   (EvDocumentText   *document_text,
+					      EvPage           *page);
 };
 
 GType           ev_document_text_get_type         (void) G_GNUC_CONST;
@@ -68,7 +71,8 @@ gboolean        ev_document_text_get_text_layout  (EvDocumentText  *document_tex
 						   guint           *n_areas);
 cairo_region_t *ev_document_text_get_text_mapping (EvDocumentText  *document_text,
 						   EvPage          *page);
-
+PangoAttrList  *ev_document_text_get_text_attrs   (EvDocumentText  *document_text,
+						   EvPage          *page);
 G_END_DECLS
 
 #endif /* EV_DOCUMENT_TEXT_H */
