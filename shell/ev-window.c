@@ -628,12 +628,6 @@ ev_window_set_view_accels_sensitivity (EvWindow *window, gboolean sensitive)
 	if (window->priv->action_group) {
 		ev_window_set_action_sensitive (window, "PageDown", sensitive);
 		ev_window_set_action_sensitive (window, "PageUp", sensitive);
-		ev_window_set_action_sensitive (window, "Space", sensitive);
-		ev_window_set_action_sensitive (window, "ShiftSpace", sensitive);
-		ev_window_set_action_sensitive (window, "BackSpace", sensitive);
-		ev_window_set_action_sensitive (window, "ShiftBackSpace", sensitive);
-		ev_window_set_action_sensitive (window, "Return", sensitive);
-		ev_window_set_action_sensitive (window, "ShiftReturn", sensitive);
 		ev_window_set_action_sensitive (window, "Plus", sensitive);
 		ev_window_set_action_sensitive (window, "Minus", sensitive);
 		ev_window_set_action_sensitive (window, "KpPlus", sensitive);
@@ -641,7 +635,6 @@ ev_window_set_view_accels_sensitivity (EvWindow *window, gboolean sensitive)
 		ev_window_set_action_sensitive (window, "Equal", sensitive);
 		ev_window_set_action_sensitive (window, "p", sensitive);
 		ev_window_set_action_sensitive (window, "n", sensitive);
-
 		ev_window_set_action_sensitive (window, "Slash", sensitive && can_find);
 	}
 }
@@ -6275,18 +6268,6 @@ static const GtkActionEntry entries[] = {
         { "PageDown", NULL, "", "Page_Down", NULL,
           G_CALLBACK (ev_window_cmd_scroll_forward) },
         { "PageUp", NULL, "", "Page_Up", NULL,
-          G_CALLBACK (ev_window_cmd_scroll_backward) },
-        { "Space", NULL, "", "space", NULL,
-          G_CALLBACK (ev_window_cmd_scroll_forward) },
-        { "ShiftSpace", NULL, "", "<shift>space", NULL,
-          G_CALLBACK (ev_window_cmd_scroll_backward) },
-        { "BackSpace", NULL, "", "BackSpace", NULL,
-          G_CALLBACK (ev_window_cmd_scroll_backward) },
-        { "ShiftBackSpace", NULL, "", "<shift>BackSpace", NULL,
-          G_CALLBACK (ev_window_cmd_scroll_forward) },
-        { "Return", NULL, "", "Return", NULL,
-          G_CALLBACK (ev_window_cmd_scroll_forward) },
-        { "ShiftReturn", NULL, "", "<shift>Return", NULL,
           G_CALLBACK (ev_window_cmd_scroll_backward) },
 	{ "p", GTK_STOCK_GO_UP, "", "p", NULL,
 	  G_CALLBACK (ev_window_cmd_go_previous_page) },
