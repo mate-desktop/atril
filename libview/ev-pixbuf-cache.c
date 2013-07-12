@@ -925,9 +925,9 @@ new_selection_surface_needed (EvPixbufCache *pixbuf_cache,
 			      gint           page,
 			      gfloat         scale)
 {
-	if (job_info->selection || job_info->points_set)
+	if (job_info->selection)
 		return job_info->selection_scale != scale;
-	return FALSE;
+	return job_info->points_set;
 }
 
 static gboolean
@@ -936,9 +936,9 @@ new_selection_region_needed (EvPixbufCache *pixbuf_cache,
                              gint           page,
                              gfloat         scale)
 {
-	if (job_info->selection_region || job_info->points_set)
+	if (job_info->selection_region)
 		return job_info->selection_region_scale != scale;
-	return FALSE;
+	return job_info->points_set;
 }
 
 static void
