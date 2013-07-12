@@ -3921,7 +3921,7 @@ ev_window_cmd_scroll_forward (GtkAction *action, EvWindow *window)
 	if (window->priv->document && window->priv->document->iswebdocument == TRUE)
 		return;
 	
-	ev_view_scroll (EV_VIEW (window->priv->view), GTK_SCROLL_PAGE_FORWARD, FALSE);
+	g_signal_emit_by_name (window->priv->view, "scroll", GTK_SCROLL_PAGE_FORWARD, GTK_ORIENTATION_VERTICAL);
 }
 
 static void
@@ -3931,7 +3931,7 @@ ev_window_cmd_scroll_backward (GtkAction *action, EvWindow *window)
 	if (window->priv->document && window->priv->document->iswebdocument == TRUE)
 		return;
 	
-	ev_view_scroll (EV_VIEW (window->priv->view), GTK_SCROLL_PAGE_BACKWARD, FALSE);
+	g_signal_emit_by_name (window->priv->view, "scroll", GTK_SCROLL_PAGE_BACKWARD, GTK_ORIENTATION_VERTICAL);
 }
 
 static void
@@ -5695,15 +5695,6 @@ find_bar_visibility_changed_cb (EggFindBar *find_bar,
 		else
 			egg_find_bar_set_status_text (EGG_FIND_BAR (ev_window->priv->find_bar), NULL);
 	}
-}
-
-static void
-find_bar_scroll (EggFindBar   *find_bar,
-		 GtkScrollType scroll,
-		 EvWindow     *ev_window)
-{
-	if (ev_window->priv->document->iswebdocument == TRUE ) return ;
-	ev_view_scroll (EV_VIEW (ev_window->priv->view), scroll, FALSE);
 }
 
 static void
@@ -7987,10 +7978,6 @@ ev_window_init (EvWindow *ev_window)
 	g_signal_connect (ev_window->priv->find_bar,
 			  "notify::visible",
 			  G_CALLBACK (find_bar_visibility_changed_cb),
-			  ev_window);
-	g_signal_connect (ev_window->priv->find_bar,
-			  "scroll",
-			  G_CALLBACK (find_bar_scroll),
 			  ev_window);
 
 	/* Popups */
