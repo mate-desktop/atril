@@ -288,7 +288,10 @@ void _ev_view_transform_doc_rect_to_view_rect (EvView       *view,
 void _ev_view_get_selection_colors (EvView  *view,
                                     GdkRGBA *bg_color,
                                     GdkRGBA *fg_color);
-
+gint _ev_view_get_caret_cursor_offset_at_doc_point (EvView *view,
+                                                    gint    page,
+                                                    gdouble doc_x,
+                                                    gdouble doc_y);
 void _ev_view_set_focused_element (EvView *view,
                                    EvMapping *element_mapping,
                                    gint page);
