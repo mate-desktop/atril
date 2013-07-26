@@ -30,7 +30,10 @@
       <summary>Page cache size in MiB</summary>
       <description>The maximum size that will be used to cache rendered pages, limits maximum zoom level.</description>
     </key>
-
+    <key name="show-caret-navigation-message" type="b">
+      <default>true</default>
+      <summary>Show a dialog to confirm that the user wants to activate the caret navigation.</summary>
+    </key>
     <child name="default" schema="org.mate.Atril.Default"/>
   </schema>
 
