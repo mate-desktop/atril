@@ -34,6 +34,7 @@
 #include "ev-document-links.h"
 #include "ev-document-layers.h"
 #include "ev-document-misc.h"
+#include "ev-document-text.h"
 #include "ev-pixbuf-cache.h"
 #include "ev-page-cache.h"
 #include "ev-view-marshal.h"
@@ -3443,6 +3444,20 @@ ev_view_pend_cursor_blink (EvView *view)
 								 (GSourceFunc)blink_cb, view);
 }
 
+gboolean
+ev_view_supports_caret_navigation (EvView *view)
+{
+	EvDocumentTextInterface *iface;
+
+	if (!view->document || !EV_IS_DOCUMENT_TEXT (view->document))
+		return FALSE;
+
+	iface = EV_DOCUMENT_TEXT_GET_IFACE (view->document);
+	if (!iface->get_text_layout || !iface->get_text)
+		return FALSE;
+
+	return TRUE;
+}
 
 void
 ev_view_set_caret_navigation_enabled (EvView   *view,
