@@ -83,7 +83,7 @@ HTML_IMAGES =
 # Extra SGML files that are included by $(DOC_MAIN_SGML_FILE).
 # e.g. content_files=running.sgml building.sgml changes-2.0.sgml
 content_files = \
- 	version.xml
+	version.xml
 
 # SGML files where gtk-doc abbrevations (#GtkWidget) are expanded
 # These files must be listed here *and* in content_files
@@ -101,6 +101,7 @@ GTKDOC_CFLAGS = \
 	-I$(top_srcdir)/libview 			\
 	-I$(top_srcdir)/libdocument                     \
 	-I$(top_builddir)/libdocument                   \
+	-I$(top_builddir)/libview			\
 	-DATRILDATADIR=\"$(pkgdatadir)\"		\
 	-DMATEDATADIR=\"$(datadir)\"			\
 	-DATRIL_UIDIR=\"$(pkgdatadir)\" 		\
