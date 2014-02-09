@@ -21,6 +21,7 @@
 
 #include "config.h"
 
+#define G_LOG_DOMAIN "AtrilDaemon"
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <gio/gio.h>
@@ -41,7 +42,7 @@
 
 #define DAEMON_TIMEOUT (30) /* seconds */
 
-#define LOG g_printerr
+#define LOG g_debug
 
 
 #define EV_TYPE_DAEMON_APPLICATION              (ev_daemon_application_get_type ())
@@ -136,7 +137,7 @@ name_appeared_cb (GDBusConnection *connection,
                   const gchar     *name_owner,
                   gpointer         user_data)
 {
-        LOG ("Watch name'%s' appeared with owner '%s'\n", name, name_owner);
+        LOG ("Watch name'%s' appeared with owner '%s'", name, name_owner);
 }
 
 static void
@@ -147,7 +148,7 @@ name_vanished_cb (GDBusConnection *connection,
         EvDaemonApplication *application = EV_DAEMON_APPLICATION (user_data);
 	GList *l;
 
-        LOG ("Watch name'%s' disappeared\n", name);
+        LOG ("Watch name'%s' disappeared", name);
 
         for (l = application->docs; l != NULL; l = l->next) {
                 EvDoc *doc = (EvDoc *) l->data;
@@ -155,7 +156,7 @@ name_vanished_cb (GDBusConnection *connection,
                 if (strcmp (doc->dbus_name, name) != 0)
                         continue;
 
-                LOG ("Watch found URI '%s' for name; removing\n", doc->uri);
+                LOG ("Watch found URI '%s' for name; removing", doc->uri);
 
                 application->docs = g_list_delete_link (application->docs, l);
                 ev_doc_free (doc);
@@ -174,7 +175,7 @@ process_pending_invocations (EvDaemonApplication *application,
 	GList *l;
 	GList *uri_invocations;
 
-	LOG ("RegisterDocument process pending invocations for URI %s\n", uri);
+	LOG ("RegisterDocument process pending invocations for URI %s", uri);
 	uri_invocations = g_hash_table_lookup (application->pending_invocations, uri);
 
 	for (l = uri_invocations; l != NULL; l = l->next) {
@@ -224,7 +225,7 @@ handle_register_document_cb (EvDaemon              *object,
 
         doc = ev_daemon_application_find_doc (application, uri);
         if (doc != NULL) {
-                LOG ("RegisterDocument found owner '%s' for URI '%s'\n", doc->dbus_name, uri);
+                LOG ("RegisterDocument found owner '%s' for URI '%s'", doc->dbus_name, uri);
                 ev_daemon_complete_register_document (object, invocation, doc->dbus_name);
 
                 return TRUE;
@@ -233,7 +234,7 @@ handle_register_document_cb (EvDaemon              *object,
         sender = g_dbus_method_invocation_get_sender (invocation);
         connection = g_dbus_method_invocation_get_connection (invocation);
 
-        LOG ("RegisterDocument registered owner '%s' for URI '%s'\n", sender, uri);
+        LOG ("RegisterDocument registered owner '%s' for URI '%s'", sender, uri);
 
         doc = g_new (EvDoc, 1);
         doc->dbus_name = g_strdup (sender);
@@ -273,11 +274,11 @@ handle_unregister_document_cb (EvDaemon              *object,
         EvDoc *doc;
         const char *sender;
 
-        LOG ("UnregisterDocument URI '%s'\n", uri);
+        LOG ("UnregisterDocument URI '%s'", uri);
 
         doc = ev_daemon_application_find_doc (application, uri);
         if (doc == NULL) {
-                LOG ("UnregisterDocument URI was not registered!\n");
+                LOG ("UnregisterDocument URI was not registered!");
                 g_dbus_method_invocation_return_error_literal (invocation,
                                                                G_DBUS_ERROR,
                                                                G_DBUS_ERROR_INVALID_ARGS,
@@ -287,7 +288,7 @@ handle_unregister_document_cb (EvDaemon              *object,
 
         sender = g_dbus_method_invocation_get_sender (invocation);
         if (strcmp (doc->dbus_name, sender) != 0) {
-                LOG ("UnregisterDocument called by non-owner (owner '%s' sender '%s')\n",
+                LOG ("UnregisterDocument called by non-owner (owner '%s' sender '%s')",
                      doc->dbus_name, sender);
 
                 g_dbus_method_invocation_return_error_literal (invocation,
@@ -323,7 +324,7 @@ handle_find_document_cb (EvDaemon              *object,
 {
         EvDoc *doc;
 
-        LOG ("FindDocument URI '%s' \n", uri);
+        LOG ("FindDocument URI '%s'", uri);
 
         doc = ev_daemon_application_find_doc (application, uri);
         if (doc != NULL) {
@@ -353,7 +354,7 @@ handle_find_document_cb (EvDaemon              *object,
                 }
         }
 
-        LOG ("FindDocument URI '%s' was not registered!\n", uri);
+        LOG ("FindDocument URI '%s' was not registered!", uri);
         // FIXME: shouldn't this return an error then?
         ev_daemon_complete_find_document (object, invocation, "");
 
