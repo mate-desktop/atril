@@ -3510,6 +3510,9 @@ ev_view_set_caret_cursor_position (EvView *view,
 		view->cursor_page = page;
 		view->cursor_offset = offset;
 
+		g_signal_emit (view, signals[SIGNAL_CURSOR_MOVED], 0,
+			       view->cursor_page, view->cursor_offset);
+
 		if (view->caret_enabled && cursor_is_in_visible_page (view))
 			gtk_widget_queue_draw (GTK_WIDGET (view));
 	}
