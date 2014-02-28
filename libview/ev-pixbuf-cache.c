@@ -296,9 +296,9 @@ copy_job_to_job_info (EvJobRender   *job_render,
 
 		job_info->selection_points = job_render->selection_points;
 		job_info->selection = cairo_surface_reference (job_render->selection);
-		job_info->selection_scale = job_render->scale;
 		if (job_info->selection)
 			set_device_scale_on_surface (job_info->selection, job_info->device_scale);
+		job_info->selection_scale = job_render->scale * job_info->device_scale;
 		g_assert (job_info->selection_points.x1 >= 0);
 
 		job_info->selection_region_points = job_render->selection_points;
@@ -1093,7 +1093,7 @@ ev_pixbuf_cache_get_selection_surface (EvPixbufCache   *pixbuf_cache,
 		if (job_info->selection)
 			set_device_scale_on_surface (job_info->selection, job_info->device_scale);
 		job_info->selection_points = job_info->target_points;
-		job_info->selection_scale = scale;
+		job_info->selection_scale = scale * job_info->device_scale;
 		g_object_unref (rc);
 		ev_document_doc_mutex_unlock ();
 	}
