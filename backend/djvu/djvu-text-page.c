@@ -365,13 +365,15 @@ djvu_text_page_append_text (DjvuTextPage *page,
  * djvu_text_page_search:
  * @page: #DjvuTextPage instance
  * @text: text to search
+ * @case_sensitive: do not ignore case
  * 
  * Searches the page for the given text. The results list has to be 
  * externally freed afterwards.
  */
 void 
 djvu_text_page_search (DjvuTextPage *page, 
-		       const char   *text)
+		       const char   *text,
+		       gboolean case_sensitive)
 {
 	char *haystack = page->text;
 	int search_len;
@@ -380,6 +382,10 @@ djvu_text_page_search (DjvuTextPage *page,
 		return;
 
 	search_len = strlen (text);
+
+	if (!case_sensitive)
+		text = g_utf8_casefold(text, search_len);
+
 	while ((haystack = strstr (haystack, text)) != NULL) {
 		int start_p = haystack - page->text;
 		miniexp_t start = djvu_text_page_position (page, start_p);
