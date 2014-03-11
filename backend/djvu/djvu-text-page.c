@@ -384,7 +384,7 @@ djvu_text_page_search (DjvuTextPage *page,
 	search_len = strlen (text);
 
 	if (!case_sensitive)
-		text = g_utf8_casefold(text, search_len);
+		text = g_utf8_casefold (text, search_len);
 
 	while ((haystack = strstr (haystack, text)) != NULL) {
 		int start_p = haystack - page->text;
@@ -397,6 +397,10 @@ djvu_text_page_search (DjvuTextPage *page,
 		haystack = haystack + search_len;
 	}
 	page->results = g_list_reverse (page->results);
+
+	/* The const qualifier has been lost if the text has been casefolded. */
+	if (!case_sensitive)
+		g_free ((char *)text);
 }
 
 
