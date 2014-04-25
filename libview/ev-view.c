@@ -811,6 +811,10 @@ view_update_range_and_current_page (EvView *view)
 					MAX(view->start_page - PAGE_CACHE_NUMBER, 0),
 					MIN(view->end_page + PAGE_CACHE_NUMBER, ev_document_get_n_pages (view->document) - 1),
 					view->selection_info.selections);
+	if (view->accessible)
+		ev_view_accessible_set_page_range (EV_VIEW_ACCESSIBLE (view->accessible),
+						   view->start_page,
+						   view->end_page);
 
 	if (ev_pixbuf_cache_get_surface (view->pixbuf_cache, view->current_page))
 	    gtk_widget_queue_draw (GTK_WIDGET (view));
