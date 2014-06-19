@@ -574,7 +574,6 @@ ev_annotation_set_color (EvAnnotation   *annot,
     rgba.alpha = 1.;
 
     ev_annotation_set_rgba (annot, &rgba);
-    g_object_notify (G_OBJECT (annot), "color");
 
     return TRUE;
 }
@@ -621,6 +620,7 @@ ev_annotation_set_rgba (EvAnnotation  *annot,
 
     annot->rgba = *rgba;
     g_object_notify (G_OBJECT (annot), "rgba");
+    g_object_notify (G_OBJECT (annot), "color");
 
     return TRUE;
 }
