@@ -57,6 +57,7 @@ enum {
 	SIGNAL_SELECTION_CHANGED,
 	SIGNAL_SYNC_SOURCE,
 	SIGNAL_ANNOT_ADDED,
+	SIGNAL_ANNOT_REMOVED,
 	SIGNAL_LAYERS_CHANGED,
 	N_SIGNALS
 };
@@ -3102,6 +3103,8 @@ ev_view_remove_annotation (EvView       *view,
         g_return_if_fail (EV_IS_VIEW (view));
         g_return_if_fail (EV_IS_ANNOTATION (annot));
 
+        g_object_ref (annot);
+
         page = ev_annotation_get_page_index (annot);
 
         if (EV_IS_ANNOTATION_MARKUP (annot)) {
@@ -3125,6 +3128,9 @@ ev_view_remove_annotation (EvView       *view,
 
         /* FIXME: only redraw the annot area */
         ev_view_reload_page (view, page, NULL);
+
+        g_signal_emit (view, signals[SIGNAL_ANNOT_REMOVED], 0, annot);
+        g_object_unref (annot);
 }
 
 static gboolean
@@ -5189,6 +5195,14 @@ ev_view_class_init (EvViewClass *class)
 		         g_cclosure_marshal_VOID__OBJECT,
 		         G_TYPE_NONE, 1,
 			 EV_TYPE_ANNOTATION);
+	signals[SIGNAL_ANNOT_REMOVED] = g_signal_new ("annot-removed",
+		         G_TYPE_FROM_CLASS (object_class),
+		         G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
+		         G_STRUCT_OFFSET (EvViewClass, annot_removed),
+		         NULL, NULL,
+		         g_cclosure_marshal_VOID__OBJECT,
+		         G_TYPE_NONE, 1,
+		         EV_TYPE_ANNOTATION);
 	signals[SIGNAL_LAYERS_CHANGED] = g_signal_new ("layers-changed",
 			 G_TYPE_FROM_CLASS (object_class),
 		         G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
