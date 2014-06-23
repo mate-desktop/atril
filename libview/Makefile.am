@@ -2,6 +2,7 @@ lib_LTLIBRARIES = libatrilview.la
 
 NOINST_H_FILES =			\
 	ev-annotation-window.h	\
+	ev-image-accessible.h	\
 	ev-link-accessible.h	\
 	ev-page-accessible.h	\
 	ev-loading-window.h		\
@@ -34,6 +35,7 @@ header_DATA = $(INST_H_FILES)
 libatrilview_la_SOURCES = 			\
 	ev-annotation-window.c		\
 	ev-document-model.c		\
+	ev-image-accessible.c	\
 	ev-loading-window.c		\
 	ev-jobs.c			\
 	ev-job-scheduler.c		\
