@@ -269,5 +269,9 @@ void _ev_view_transform_doc_rect_to_view_rect (EvView       *view,
 					       EvRectangle  *doc_rect,
 					       GdkRectangle *view_rect);
 
+void _ev_view_set_focused_element (EvView *view,
+                                   EvMapping *element_mapping,
+                                   gint page);
+
 #endif  /* __EV_VIEW_PRIVATE_H__ */
 
