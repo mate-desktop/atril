@@ -5361,7 +5361,8 @@ view_menu_annot_popup (EvWindow     *ev_window,
 {
 	GtkAction *action;
 	gboolean   show_annot = FALSE;
-	gboolean can_remove_annots;
+	gboolean can_remove_annots = FALSE;
+
 	if (ev_window->priv->document->iswebdocument == TRUE ) return ;
 	if (ev_window->priv->annot)
 		g_object_unref (ev_window->priv->annot);
@@ -5371,7 +5372,8 @@ view_menu_annot_popup (EvWindow     *ev_window,
 					      "AnnotProperties");
 	gtk_action_set_visible (action, (annot != NULL && EV_IS_ANNOTATION_MARKUP (annot)));
 
-	can_remove_annots = ev_document_annotations_can_remove_annotation (EV_DOCUMENT_ANNOTATIONS (ev_window->priv->document));
+	if (EV_IS_DOCUMENT_ANNOTATIONS (ev_window->priv->document))
+		can_remove_annots = ev_document_annotations_can_remove_annotation (EV_DOCUMENT_ANNOTATIONS (ev_window->priv->document));
 
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 	                                      "RemoveAnnot");
