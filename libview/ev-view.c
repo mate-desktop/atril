@@ -840,6 +840,7 @@ set_scroll_adjustment (EvView *view,
 }
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
+void
 ev_view_set_scroll_adjustments (GtkLayout      *layout,
 				GtkAdjustment  *hadjustment,
 				GtkAdjustment  *vadjustment)
@@ -6567,4 +6568,3 @@ ev_view_previous_page (EvView *view)
 		return FALSE;
 	}
 }
-		
