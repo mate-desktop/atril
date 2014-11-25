@@ -195,6 +195,7 @@ epub_document_check_hits(EvDocumentFind *document_find,
 	
 	xmlBufferFree(bodybuffer);
 	xmlFreeDoc(htmldoc);
+	g_free (filepath);
 
 	return count;
 }
@@ -1089,8 +1090,8 @@ static gchar*
 get_toc_file_name(gchar *containeruri)
 {
 	gchar *containerfilename = g_filename_from_uri(containeruri,NULL,NULL);
-
 	open_xml_document(containerfilename);
+	g_free (containerfilename);
 
 	set_xml_root_node(NULL);
 
@@ -1328,6 +1329,7 @@ epub_document_get_info(EvDocument *document)
 		return epubinfo;
 	
 	open_xml_document(infofile);
+	g_free (infofile);
 
 	set_xml_root_node((xmlChar*)"package");
 
@@ -1441,6 +1443,7 @@ epub_document_get_alternate_stylesheet(gchar *docuri)
 {
     gchar *filename = g_filename_from_uri(docuri,NULL,NULL);
     open_xml_document(filename);
+    g_free(filename);
 
     set_xml_root_node(NULL);
 
@@ -1453,7 +1456,6 @@ epub_document_get_alternate_stylesheet(gchar *docuri)
     if (xmlretval != NULL) {
         return (gchar*)xml_get_data_from_node(xmlretval,XML_ATTRIBUTE,(xmlChar*)"href");
     }
-    g_free(filename);
     xml_free_doc();
     return NULL;
 }
