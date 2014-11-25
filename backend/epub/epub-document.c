@@ -719,41 +719,37 @@ extract_epub_from_container (const gchar* uri,
                              EpubDocument *epub_document,
                              GError ** error)
 {
-    GError* err = NULL ;
-    GString * temporary_sub_directory ; 
+    GError *err = NULL;
     epub_document->archivename = g_filename_from_uri(uri,NULL,error);
-    gchar* epubfilename ;
+
     if ( !epub_document->archivename )
     {
-         if (err)    {
+        if (err) {
             g_propagate_error (error, err);
         } 
-        else    {
+        else {
             g_set_error_literal (error,
                          EV_DOCUMENT_ERROR,
                          EV_DOCUMENT_ERROR_INVALID,
                          _("could not retrieve filename"));
         }
-        return FALSE ;
+        return FALSE;
     }
 
-    epubfilename = g_strrstr(epub_document->archivename,"/");
+    gchar *epubfilename = g_strrstr(epub_document->archivename,"/");
     if ( *epubfilename == '/' )
-    epubfilename++ ;
+        epubfilename++ ;
 
-    temporary_sub_directory = g_string_new( epubfilename );
+    GString *temporary_sub_directory = g_string_new(epubfilename);
     g_string_append(temporary_sub_directory,"XXXXXX") ;
-
-    epub_document->tmp_archive_dir = ev_mkdtemp(temporary_sub_directory->str,error) ;
+    epub_document->tmp_archive_dir = ev_mkdtemp(temporary_sub_directory->str, error);
+    g_string_free(temporary_sub_directory, TRUE);
 
     if (!epub_document->tmp_archive_dir) {
-        return FALSE ;
+        return FALSE;
     }
 
-    g_string_free(temporary_sub_directory,TRUE);
-
     epub_document->epubDocument = unzOpen64(epub_document->archivename);
-
     if ( epub_document->epubDocument == NULL )
     {
         if (err)    {
@@ -765,8 +761,11 @@ extract_epub_from_container (const gchar* uri,
                          EV_DOCUMENT_ERROR_INVALID,
                          _("could not open archive"));
         }
-        return FALSE ;
+        return FALSE;
     }
+
+    gboolean result = FALSE;
+
     if ( unzGoToFirstFile(epub_document->epubDocument) != UNZ_OK )
     {
         if (err) {
@@ -778,8 +777,9 @@ extract_epub_from_container (const gchar* uri,
                          EV_DOCUMENT_ERROR_INVALID,
                          _("could not extract archive"));
         }
-        return FALSE ;
+        goto out;
     }
+
     while ( TRUE )
     {
         if ( extract_one_file(epub_document,&err) == FALSE )
@@ -793,15 +793,18 @@ extract_epub_from_container (const gchar* uri,
                              EV_DOCUMENT_ERROR_INVALID,
                              _("could not extract archive"));
             }
-			return FALSE;
+			goto out;
         }   
 
-        if ( unzGoToNextFile(epub_document->epubDocument) == UNZ_END_OF_LIST_OF_FILE )
-            break ;
+        if ( unzGoToNextFile(epub_document->epubDocument) == UNZ_END_OF_LIST_OF_FILE ) {
+            result = TRUE;
+            break;
+        }
     }
 
+out:
     unzClose(epub_document->epubDocument);
-    return TRUE ;
+    return result;
 }
 
 static gchar* 
