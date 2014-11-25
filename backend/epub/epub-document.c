@@ -1212,10 +1212,13 @@ setup_document_index(EpubDocument *epub_document,gchar *containeruri)
         g_string_append_printf (tocpath,"/%s",tocfilename);
         index = setup_index_from_navfile(tocpath->str);
         g_string_free(tocpath,TRUE);
+        g_free (tocfilename);
         return index;
     }
 
     g_string_append_printf (tocpath,"/%s",tocfilename);
+    g_free (tocfilename);
+
     GString *pagelink;
     open_xml_document(tocpath->str);
     g_string_free(tocpath,TRUE);
@@ -1299,18 +1302,23 @@ epub_document_get_info(EvDocument *document)
 	xmlNodePtr metanode ;
 	GString* buffer ;
 	gchar* archive_dir = epub_document->tmp_archive_dir;
+
 	GString* containerpath = g_string_new(epub_document->tmp_archive_dir);
 	g_string_append_printf(containerpath,"/META-INF/container.xml");
 	gchar* containeruri = g_filename_to_uri(containerpath->str,NULL,&error);
+	g_string_free (containerpath, TRUE);
 	if ( error )
 	{
 		return NULL ;
 	}
+
 	gchar* uri = get_uri_to_content (containeruri,&error,epub_document);
+	g_free (containeruri);
 	if ( error )
 	{
 		return NULL ;
 	}
+
 	EvDocumentInfo* epubinfo = g_new0 (EvDocumentInfo, 1);
 
 	epubinfo->fields_mask = EV_DOCUMENT_INFO_TITLE |
@@ -1325,9 +1333,12 @@ epub_document_get_info(EvDocument *document)
 			    EV_DOCUMENT_INFO_N_PAGES ;
 
 	infofile = g_filename_from_uri(uri,NULL,&error);
+	g_free (uri);
 	if ( error )
+	{
 		return epubinfo;
-	
+	}
+
 	open_xml_document(infofile);
 	g_free (infofile);
 
@@ -1353,7 +1364,7 @@ epub_document_get_info(EvDocument *document)
 
 	buffer = g_string_new((gchar*)xml_get_data_from_node (xmlroot,XML_ATTRIBUTE,(xmlChar*)"version"));
 	g_string_prepend(buffer,"epub ");
-	epubinfo->format = g_strdup(buffer->str);
+	epubinfo->format = g_string_free(buffer,FALSE);
 	
 	/*FIXME: Add more of these as you write the corresponding modules*/
 	
@@ -1371,9 +1382,6 @@ epub_document_get_info(EvDocument *document)
 	/*Copying*/
 	epubinfo->permissions = EV_DOCUMENT_PERMISSIONS_OK_TO_COPY;
 	/*TODO : Add a function to get date*/
-	g_free(uri);
-	g_string_free(containerpath,TRUE);
-	g_string_free(buffer,TRUE);
 	
 	if (xmldocument)
 		xml_free_doc();
