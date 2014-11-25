@@ -937,14 +937,10 @@ check_add_page_numbers(linknode *listdata, contentListNode *comparenode)
 static GList*
 setup_document_content_list(const gchar* content_uri, GError** error,gchar *documentdir)
 {
-    GList* newlist = NULL ;
-    GError *   err = NULL ; 
-    gint indexcounter= 1;
-    xmlNodePtr manifest,spine,itemrefptr,itemptr ;
+    GError *err = NULL;
+    gint indexcounter = 1;
+    xmlNodePtr manifest,spine,itemrefptr,itemptr;
     gboolean errorflag = FALSE;
-
-    gchar* relativepath ;
-    GString* absolutepath = g_string_new(NULL);
 
     if ( open_xml_document(content_uri) == FALSE )
     {
@@ -993,6 +989,9 @@ setup_document_content_list(const gchar* content_uri, GError** error,gchar *docu
     {
         errorflag=TRUE;
     }
+
+    GList *newlist = NULL;
+
     /*Parse the spine for remaining itemrefs*/
     do
     {
@@ -1003,11 +1002,12 @@ setup_document_content_list(const gchar* content_uri, GError** error,gchar *docu
         }
         if ( xmlStrcmp(itemrefptr->name,(xmlChar*)"itemref") == 0)
         {    
-            contentListNode* newnode = g_malloc0(sizeof(newnode));    
+            contentListNode *newnode = g_malloc0(sizeof(newnode));    
             newnode->key = (gchar*)xml_get_data_from_node(itemrefptr,XML_ATTRIBUTE,(xmlChar*)"idref");
-                   if ( newnode->key == NULL )
+            if ( newnode->key == NULL )
             {
-                errorflag =TRUE;    
+                g_free (newnode);
+                errorflag = TRUE;    
                 break;
             }
             xmlretval=NULL ;
@@ -1019,22 +1019,31 @@ setup_document_content_list(const gchar* content_uri, GError** error,gchar *docu
             }
             else
             {
-                errorflag=TRUE;
+                g_free (newnode->key);
+                g_free (newnode);
+                errorflag = TRUE;
                 break;
             }
-            relativepath = (gchar*)xml_get_data_from_node(itemptr,XML_ATTRIBUTE,(xmlChar*)"href");
-            g_string_assign(absolutepath,documentdir);
+
+            GString* absolutepath = g_string_new(documentdir);
+            gchar *relativepath = (gchar*)xml_get_data_from_node(itemptr,XML_ATTRIBUTE,(xmlChar*)"href");
             g_string_append_printf(absolutepath,"/%s",relativepath);
+            g_free (relativepath);
+
             newnode->value = g_filename_to_uri(absolutepath->str,NULL,&err);
+            g_string_free(absolutepath,TRUE);
+
             if ( newnode->value == NULL )
             {
-                errorflag =TRUE;    
+                g_free (newnode->key);
+                g_free (newnode);
+                errorflag = TRUE;    
                 break;
             }
 			
 			newnode->index = indexcounter++ ;
 
-            newlist = g_list_prepend(newlist,newnode);
+            newlist = g_list_prepend(newlist, newnode);
         }
         itemrefptr = itemrefptr->next ;
     }
@@ -1054,14 +1063,13 @@ setup_document_content_list(const gchar* content_uri, GError** error,gchar *docu
                                 _("Could not set up document tree for loading, some files missing"));
         }
         /*free any nodes that were set up and return empty*/
-        g_string_free(absolutepath,TRUE);
-        g_list_free_full(newlist,(GDestroyNotify)free_tree_nodes);
-        return NULL ;
+        g_list_free_full(newlist, (GDestroyNotify)free_tree_nodes);
+        return NULL;
     }
+
 	newlist = g_list_reverse(newlist);
-    g_string_free(absolutepath,TRUE);
 	xml_free_doc();
-    return newlist ;
+    return newlist;
 
 }
 
