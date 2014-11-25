@@ -1683,11 +1683,9 @@ epub_document_load (EvDocument* document,
                     GError**    error)
 {
 	EpubDocument *epub_document = EPUB_DOCUMENT(document);
-	GError* err = NULL ;
-	gchar* containeruri ;
-	GString *containerpath ;
-	gchar* contentOpfUri ;
-	if ( check_mime_type (uri,&err) == FALSE )
+	GError *err = NULL;
+
+	if ( check_mime_type (uri, &err) == FALSE )
 	{
 		/*Error would've been set by the function*/
 		g_propagate_error(error,err);
@@ -1703,16 +1701,19 @@ epub_document_load (EvDocument* document,
 	}
 
 	/*FIXME : can this be different, ever?*/
-	containerpath = g_string_new(epub_document->tmp_archive_dir);
+	GString *containerpath = g_string_new(epub_document->tmp_archive_dir);
 	g_string_append_printf(containerpath,"/META-INF/container.xml");
-	containeruri = g_filename_to_uri(containerpath->str,NULL,&err);
+	gchar *containeruri = g_filename_to_uri(containerpath->str,NULL,&err);
+	g_string_free (containerpath, TRUE);
 
 	if ( err )
 	{
 		g_propagate_error(error,err);
 		return FALSE;
 	}
-	contentOpfUri = get_uri_to_content (containeruri,&err,epub_document);
+
+	gchar *contentOpfUri = get_uri_to_content (containeruri,&err,epub_document);
+	g_free (containeruri);
 
 	if ( contentOpfUri == NULL )
 	{
@@ -1729,13 +1730,15 @@ epub_document_load (EvDocument* document,
 	    epub_document_set_index_pages(epub_document->index, epub_document->contentList);
 
     epub_document_add_mathJax(contentOpfUri,epub_document->documentdir);
+	g_free (contentOpfUri);
+
 	if ( epub_document->contentList == NULL )
 	{
 		g_propagate_error(error,err);
 		return FALSE;
 	}
 
-	return TRUE ;
+	return TRUE;
 }
 
 static void
