@@ -834,9 +834,11 @@ ev_job_fonts_run (EvJob *job)
 	/* Do not block the main loop */
 	if (!ev_document_doc_mutex_trylock ())
 		return TRUE;
-	
-	if (!ev_document_fc_mutex_trylock ())
+
+	if (!ev_document_fc_mutex_trylock ()) {
+		ev_document_doc_mutex_unlock ();
 		return TRUE;
+	}
 
 #ifdef EV_ENABLE_DEBUG
 	/* We use the #ifdef in this case because of the if */
