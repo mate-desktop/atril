@@ -495,7 +495,7 @@ totem_scrsaver_init (TotemScrsaver *scr)
 void
 totem_scrsaver_disable (TotemScrsaver *scr)
 {
-	g_return_if_fail (TOTEM_SCRSAVER (scr));
+	g_return_if_fail (TOTEM_IS_SCRSAVER (scr));
 
 	if (scr->priv->disabled != FALSE)
 		return;
@@ -516,7 +516,7 @@ totem_scrsaver_disable (TotemScrsaver *scr)
 void
 totem_scrsaver_enable (TotemScrsaver *scr)
 {
-	g_return_if_fail (TOTEM_SCRSAVER (scr));
+	g_return_if_fail (TOTEM_IS_SCRSAVER (scr));
 
 	if (scr->priv->disabled == FALSE)
 		return;
@@ -537,7 +537,7 @@ totem_scrsaver_enable (TotemScrsaver *scr)
 void
 totem_scrsaver_set_state (TotemScrsaver *scr, gboolean enable)
 {
-	g_return_if_fail (TOTEM_SCRSAVER (scr));
+	g_return_if_fail (TOTEM_IS_SCRSAVER (scr));
 
 	if (scr->priv->disabled == !enable)
 		return;
