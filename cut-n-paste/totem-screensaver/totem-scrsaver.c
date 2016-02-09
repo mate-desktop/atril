@@ -41,10 +41,11 @@
 
 #include "totem-scrsaver.h"
 
-#define GS_SERVICE   "org.mate.ScreenSaver"
-#define GS_PATH      "/org/mate/ScreenSaver"
-#define GS_INTERFACE "org.mate.ScreenSaver"
+#define GS_SERVICE   "org.gnome.SessionManager"
+#define GS_PATH      "/org/gnome/SessionManager"
+#define GS_INTERFACE "org.gnome.SessionManager"
 
+#define GSM_INHIBITOR_FLAG_IDLE 1 << 3
 #define XSCREENSAVER_MIN_TIMEOUT 60
 
 enum {
@@ -61,7 +62,7 @@ struct TotemScrsaverPrivate {
 	char *reason;
 
 	GDBusProxy *gs_proxy;
-	gboolean have_screensaver_dbus;
+	gboolean have_session_dbus;
 	guint32 cookie;
 
 	/* To save the screensaver info */
@@ -81,7 +82,7 @@ G_DEFINE_TYPE(TotemScrsaver, totem_scrsaver, G_TYPE_OBJECT)
 static gboolean
 screensaver_is_running_dbus (TotemScrsaver *scr)
 {
-	return scr->priv->have_screensaver_dbus;
+	return scr->priv->have_session_dbus;
 }
 
 static void
@@ -144,7 +145,7 @@ screensaver_inhibit_dbus (TotemScrsaver *scr,
 {
 	TotemScrsaverPrivate *priv = scr->priv;
 
-	if (!priv->have_screensaver_dbus)
+	if (!priv->have_session_dbus)
 		return;
 
 	g_object_ref (scr);
@@ -153,17 +154,19 @@ screensaver_inhibit_dbus (TotemScrsaver *scr,
 		g_return_if_fail (scr->priv->reason != NULL);
 		g_dbus_proxy_call (priv->gs_proxy,
 				   "Inhibit",
-				   g_variant_new ("(ss)",
+				   g_variant_new ("(susu)",
 						  g_get_application_name (),
-						  scr->priv->reason),
+						  0,
+						  scr->priv->reason,
+						  GSM_INHIBITOR_FLAG_IDLE),
 				   G_DBUS_CALL_FLAGS_NO_AUTO_START,
 				   -1,
 				   NULL,
 				   on_inhibit_cb,
 				   scr);
 	} else {
-                g_dbus_proxy_call (priv->gs_proxy,
-				   "UnInhibit",
+		g_dbus_proxy_call (priv->gs_proxy,
+				   "Uninhibit",
 				   g_variant_new ("(u)", priv->cookie),
 				   G_DBUS_CALL_FLAGS_NO_AUTO_START,
 				   -1,
@@ -193,10 +196,10 @@ screensaver_update_dbus_presence (TotemScrsaver *scr)
 
 	name_owner = g_dbus_proxy_get_name_owner (priv->gs_proxy);
 	if (name_owner) {
-		priv->have_screensaver_dbus = TRUE;
+		priv->have_session_dbus = TRUE;
 		g_free (name_owner);
 	} else {
-		priv->have_screensaver_dbus = FALSE;
+		priv->have_session_dbus = FALSE;
 	}
 }
 
