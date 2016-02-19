@@ -10,6 +10,7 @@
 # Antonio Ognio <gnrfan@gnrfan.org, 2004, 2005
 # Daniel Fernandez <dfdez@ya.com>, 2005
 # difusion, 2014
+# ebray187 <ebray187@gmail.com>, 2016
 # Emiliano Fascetti, 2014-2015
 # Francisco Javier F. Serrador <serrador@cvs.mate.org>, 2005, 2006
 # Jorge González <jorgegonz@svn.mate.org>, 2007, 2008, 2010
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-06 13:44+0200\n"
-"PO-Revision-Date: 2015-10-25 20:59+0000\n"
-"Last-Translator: Emiliano Fascetti\n"
+"POT-Creation-Date: 2016-01-07 23:34+0300\n"
+"PO-Revision-Date: 2016-02-10 20:58+0000\n"
+"Last-Translator: ebray187 <ebray187@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/mate/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,7 +57,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "No se puede encontrar una orden apropiada para descomprimir este tipo de cómic"
 
-#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:616
+#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
@@ -76,7 +77,7 @@ msgid "No images found in archive %s"
 msgstr "No se encontraron imágenes en el archivador %s"
 
 #: ../backend/comics/comics-document.c:848
-#: ../backend/epub/epub-document.c:1767
+#: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Hubo un error al eliminar «%s»."
@@ -112,59 +113,59 @@ msgstr "El documento DVI tiene un formato incorrecto"
 msgid "DVI Documents"
 msgstr "Documentos DVI"
 
-#: ../backend/epub/epub-document.c:633
+#: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
 msgstr "No es un documento ePub"
 
-#: ../backend/epub/epub-document.c:734
+#: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
 msgstr "No se pudo obtener el nombre del archivo"
 
-#: ../backend/epub/epub-document.c:762
+#: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
 msgstr "No se pudo abrir el archivador"
 
-#: ../backend/epub/epub-document.c:778 ../backend/epub/epub-document.c:794
+#: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
 msgstr "No se pudo extraer el archivador"
 
-#: ../backend/epub/epub-document.c:826 ../backend/epub/epub-document.c:909
+#: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
 msgstr "No se pudo recuperar el archivo contenedor"
 
-#: ../backend/epub/epub-document.c:838
+#: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
 msgstr "No se pudo abrir el archivo contenedor"
 
-#: ../backend/epub/epub-document.c:848
+#: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
 msgstr "El archivo contenedor está dañado"
 
-#: ../backend/epub/epub-document.c:858
+#: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
 msgstr "El archivo ePub no es válido o está dañado"
 
-#: ../backend/epub/epub-document.c:868
+#: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
 msgstr "El archivo ePub está dañado, ningún contenedor"
 
-#: ../backend/epub/epub-document.c:953
+#: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
 msgstr "No se pudo analizar el «manifest» del contenido"
 
-#: ../backend/epub/epub-document.c:962
+#: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
 msgstr "El archivo de contenido no es válido"
 
-#: ../backend/epub/epub-document.c:971
+#: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
 msgstr "El archivo ePub no tiene «spine»"
 
-#: ../backend/epub/epub-document.c:980
+#: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
 msgstr "El archivo ePub no tiene «manifest»"
 
-#: ../backend/epub/epub-document.c:1066
+#: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "No se pudo configurar el árbol del documento para su carga: faltan algunos archivos"
 
@@ -172,67 +173,67 @@ msgstr "No se pudo configurar el árbol del documento para su carga: faltan algu
 msgid "epub Documents"
 msgstr "Documentos ePub"
 
-#: ../backend/pdf/ev-poppler.cc:520
+#: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
 msgstr "Este trabajo está en el dominio público"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:774 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:364
 msgid "Yes"
 msgstr "Sí"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:777 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:368
 msgid "No"
 msgstr "No"
 
-#: ../backend/pdf/ev-poppler.cc:907
+#: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
 msgstr "Tipo 1"
 
-#: ../backend/pdf/ev-poppler.cc:909
+#: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
 msgstr "Tipo 1C"
 
-#: ../backend/pdf/ev-poppler.cc:911
+#: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
 msgstr "Tipo 3"
 
-#: ../backend/pdf/ev-poppler.cc:913
+#: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
 msgstr "TrueType"
 
-#: ../backend/pdf/ev-poppler.cc:915
+#: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
 msgstr "Tipo 1 (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:917
+#: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
 msgstr "Tipo 1C (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:919
+#: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
 msgstr "TrueType (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:921
+#: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
 msgstr "Tipo de tipografía desconocida"
 
-#: ../backend/pdf/ev-poppler.cc:947
+#: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
 msgstr "Sin nombre"
 
-#: ../backend/pdf/ev-poppler.cc:955
+#: ../backend/pdf/ev-poppler.cc:953
 msgid "Embedded subset"
 msgstr "Subconjunto incrustado"
 
-#: ../backend/pdf/ev-poppler.cc:957
+#: ../backend/pdf/ev-poppler.cc:955
 msgid "Embedded"
 msgstr "Incrustado"
 
-#: ../backend/pdf/ev-poppler.cc:959
+#: ../backend/pdf/ev-poppler.cc:957
 msgid "Not embedded"
 msgstr "No incrustado"
 
@@ -331,32 +332,32 @@ msgstr "No se pueden pasar URI de documentos a una entrada .desktop «Type=Link�
 msgid "Not a launchable item"
 msgstr "No es un elemento lanzable"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:229
+#: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
 msgstr "Desactivar la conexión con el gestor de sesiones"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232
+#: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "Especificar el archivo que contiene la configuración guardada"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232 ../previewer/ev-previewer.c:45
-#: ../previewer/ev-previewer.c:46
+#: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
+#: ../previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "ARCHIVO"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
 msgstr "Especificar el ID de gestión de sesión"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
 msgstr "ID"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:256
+#: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
 msgstr "Opciones de gestión de la sesión:"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:257
+#: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
 msgstr "Mostrar las opciones de gestión de la sesión"
 
@@ -489,9 +490,8 @@ msgstr "<p> Atril es un visor de documentos sencillo. Puede mostrar e imprimir d
 msgid "Atril Document Viewer"
 msgstr "Visor de documentos Atril"
 
-#. Manually set name and icon
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5006
-#: ../shell/ev-window-title.c:157 ../shell/main.c:306
+#: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
 msgstr "Visor de documentos"
@@ -508,15 +508,15 @@ msgstr "Saltarse las restricciones del documento"
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr "Saltarse las restricciones del documento, como restricción para copiar o imprimir."
 
-#: ../previewer/ev-previewer.c:44
+#: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
 msgstr "Eliminar el archivo temporal"
 
-#: ../previewer/ev-previewer.c:45
+#: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
 msgstr "Archivo de ajustes de impresión"
 
-#: ../previewer/ev-previewer.c:140 ../previewer/ev-previewer.c:174
+#: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
 msgstr "Visor de documentos de MATE"
 
@@ -578,11 +578,11 @@ msgstr "Ajustar al a_ncho de página"
 msgid "Make the current document fill the window width"
 msgstr "Hace que el documento actual llene la anchura de la ventana"
 
-#: ../previewer/ev-previewer-window.c:558 ../shell/ev-window.c:6315
+#: ../previewer/ev-previewer-window.c:547 ../shell/ev-window.c:6315
 msgid "Page"
 msgstr "Página"
 
-#: ../previewer/ev-previewer-window.c:559 ../shell/ev-window.c:6316
+#: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6316
 msgid "Select Page"
 msgstr "Seleccione la página"
 
@@ -814,50 +814,50 @@ msgstr "Vista de documento"
 msgid "Jump to page:"
 msgstr "Saltar a la página:"
 
-#: ../libview/ev-view-presentation.c:1046
+#: ../libview/ev-view-presentation.c:1038
 msgid "End of presentation. Click to exit."
 msgstr "Fin de la presentación. Pulse para salir."
 
-#: ../libview/ev-view.c:1867
+#: ../libview/ev-view.c:1863
 msgid "Go to first page"
 msgstr "Ir a la primera página"
 
-#: ../libview/ev-view.c:1869
+#: ../libview/ev-view.c:1865
 msgid "Go to previous page"
 msgstr "Ir a la página anterior"
 
-#: ../libview/ev-view.c:1871
+#: ../libview/ev-view.c:1867
 msgid "Go to next page"
 msgstr "Ir a la página siguiente"
 
-#: ../libview/ev-view.c:1873
+#: ../libview/ev-view.c:1869
 msgid "Go to last page"
 msgstr "Ir a la última página"
 
-#: ../libview/ev-view.c:1875
+#: ../libview/ev-view.c:1871
 msgid "Go to page"
 msgstr "Ir a la página"
 
-#: ../libview/ev-view.c:1877
+#: ../libview/ev-view.c:1873
 msgid "Find"
 msgstr "Buscar"
 
-#: ../libview/ev-view.c:1905
+#: ../libview/ev-view.c:1901
 #, c-format
 msgid "Go to page %s"
 msgstr "Ir a la página %s"
 
-#: ../libview/ev-view.c:1911
+#: ../libview/ev-view.c:1907
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "Ir a %s en el archivo «%s»"
 
-#: ../libview/ev-view.c:1914
+#: ../libview/ev-view.c:1910
 #, c-format
 msgid "Go to file “%s”"
 msgstr "Ir al archivo «%s»"
 
-#: ../libview/ev-view.c:1922
+#: ../libview/ev-view.c:1918
 #, c-format
 msgid "Launch %s"
 msgstr "Lanzar %s"
@@ -966,7 +966,7 @@ msgstr "Abierta"
 msgid "Close"
 msgstr "Cerrada"
 
-#: ../shell/ev-application.c:1054
+#: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
 msgstr "Ejecutándose en modo presentación"
 
@@ -1105,7 +1105,7 @@ msgstr "El documento no contiene ninguna anotación"
 msgid "Page %d"
 msgstr "Página %d"
 
-#: ../shell/ev-sidebar-attachments.c:713
+#: ../shell/ev-sidebar-attachments.c:695
 msgid "Attachments"
 msgstr "Adjuntos"
 
@@ -1349,8 +1349,8 @@ msgstr "Atril"
 #: ../shell/ev-window.c:5077
 msgid ""
 "© 1996–2009 The Evince authors\n"
-"© 2012–2014 The MATE developers"
-msgstr "© 1996–2009 Los autores de Evince\n© 2012–2014 Los desarrolladores de MATE"
+"© 2012–2016 The MATE developers"
+msgstr "© 1996–2009 Los autores de Evince\n© 2012–2016 Los desarrolladores de MATE"
 
 #: ../shell/ev-window.c:5083
 msgid "translator-credits"
@@ -1708,46 +1708,46 @@ msgstr "%s — Se requiere una contraseña"
 msgid "By extension"
 msgstr "Por extensión"
 
-#: ../shell/main.c:69 ../shell/main.c:270
+#: ../shell/main.c:57 ../shell/main.c:233
 msgid "MATE Document Viewer"
 msgstr "Visor de documentos de MATE"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "The page label of the document to display."
 msgstr "La etiqueta de página del documento que mostrar."
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "PAGE"
 msgstr "PÁGINA"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "The page number of the document to display."
 msgstr "El número de página del documento que mostrar."
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "NUMBER"
 msgstr "NÚMERO"
 
-#: ../shell/main.c:79
+#: ../shell/main.c:67
 msgid "Run atril in fullscreen mode"
 msgstr "Ejecutar Atril en modo pantalla completa"
 
-#: ../shell/main.c:80
+#: ../shell/main.c:68
 msgid "Run atril in presentation mode"
 msgstr "Ejecutar Atril en modo presentación"
 
-#: ../shell/main.c:81
+#: ../shell/main.c:69
 msgid "Run atril as a previewer"
 msgstr "Ejecutar Atril como un previsualizador"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "The word or phrase to find in the document"
 msgstr "La palabra o frase que buscar en el documento"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "STRING"
 msgstr "CADENA"
 
-#: ../shell/main.c:86
+#: ../shell/main.c:74
 msgid "[FILE…]"
 msgstr "[ARCHIVO…]"

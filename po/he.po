@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Bar Bokovza <bokovzabox@gmail.com>, 2015
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2003
 # Yaron Shahrabani <gezer@lists.launchpad.net>, 2010
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-06 13:44+0200\n"
-"PO-Revision-Date: 2015-09-06 11:43+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"POT-Creation-Date: 2016-01-07 23:34+0300\n"
+"PO-Revision-Date: 2016-02-08 15:26+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Hebrew (http://www.transifex.com/mate/MATE/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,17 +26,17 @@ msgstr ""
 #, c-format
 msgid ""
 "Error launching the command “%s” in order to decompress the comic book: %s"
-msgstr "Error launching the command “%s” in order to decompress the comic book: %s"
+msgstr "שגיאה בעת הפעלת הפעולה \"%s\" על מנת לחלץ את ספר הקומיקס : %s"
 
 #: ../backend/comics/comics-document.c:231
 #, c-format
 msgid "The command “%s” failed at decompressing the comic book."
-msgstr "The command “%s” failed at decompressing the comic book."
+msgstr "הפעולה \"%s\" נכשלה בחילוץ ספר הקומיקס"
 
 #: ../backend/comics/comics-document.c:240
 #, c-format
 msgid "The command “%s” did not end normally."
-msgstr "The command “%s” did not end normally."
+msgstr "הפעולה \"%s\" לא הסתיימה בצורה שגרתית"
 
 #: ../backend/comics/comics-document.c:444
 #, c-format
@@ -47,7 +48,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "Can't find an appropriate command to decompress this type of comic book"
 
-#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:616
+#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
@@ -59,23 +60,23 @@ msgstr "File corrupted"
 
 #: ../backend/comics/comics-document.c:565
 msgid "No files in archive"
-msgstr "No files in archive"
+msgstr "אין קבצים בקובץ הארכיון"
 
 #: ../backend/comics/comics-document.c:604
 #, c-format
 msgid "No images found in archive %s"
-msgstr "No images found in archive %s"
+msgstr "אין תמונות בקובץ הארכיון %s"
 
 #: ../backend/comics/comics-document.c:848
-#: ../backend/epub/epub-document.c:1767
+#: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
-msgstr "There was an error deleting “%s”."
+msgstr "הייתה שגיאה במהלך מחיקת \"%s\"."
 
 #: ../backend/comics/comics-document.c:991
 #, c-format
 msgid "Error %s"
-msgstr "Error %s"
+msgstr "שגיאה %s"
 
 #: ../backend/comics/comicsdocument.atril-backend.in.h:1
 msgid "Comic Books"
@@ -83,7 +84,7 @@ msgstr "ספרי קומיקס"
 
 #: ../backend/djvu/djvu-document.c:173
 msgid "DjVu document has incorrect format"
-msgstr "DjVu document has incorrect format"
+msgstr "פורמט המסמך DjVu לא תקין"
 
 #: ../backend/djvu/djvu-document.c:250
 msgid ""
@@ -97,133 +98,133 @@ msgstr "מסמכי DjVu"
 
 #: ../backend/dvi/dvi-document.c:113
 msgid "DVI document has incorrect format"
-msgstr "DVI document has incorrect format"
+msgstr "פורמט המסמך DVI לא תקין"
 
 #: ../backend/dvi/dvidocument.atril-backend.in.h:1
 msgid "DVI Documents"
 msgstr "מסמכי DVI"
 
-#: ../backend/epub/epub-document.c:633
+#: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
-msgstr ""
+msgstr "זהו לא קובץ ePub"
 
-#: ../backend/epub/epub-document.c:734
+#: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
-msgstr ""
+msgstr "לא ניתן לאחזר את שם הקובץ"
 
-#: ../backend/epub/epub-document.c:762
+#: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
-msgstr ""
+msgstr "לא ניתן לפתוח קובץ ארכיון"
 
-#: ../backend/epub/epub-document.c:778 ../backend/epub/epub-document.c:794
+#: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
-msgstr ""
+msgstr "לא ניתן לחלץ קובץ ארכיון"
 
-#: ../backend/epub/epub-document.c:826 ../backend/epub/epub-document.c:909
+#: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:838
+#: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:848
+#: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:858
+#: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:868
+#: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:953
+#: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:962
+#: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:971
+#: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:980
+#: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:1066
+#: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
-msgstr ""
+msgstr "מסמכי ePub"
 
-#: ../backend/pdf/ev-poppler.cc:520
+#: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
 msgstr "יצירה זו היא לרשות הציבור"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:774 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:364
 msgid "Yes"
 msgstr "כן"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:777 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:368
 msgid "No"
 msgstr "לא"
 
-#: ../backend/pdf/ev-poppler.cc:907
+#: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
 msgstr "Type 1"
 
-#: ../backend/pdf/ev-poppler.cc:909
+#: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
 msgstr "Type 1C"
 
-#: ../backend/pdf/ev-poppler.cc:911
+#: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
 msgstr "Type 3"
 
-#: ../backend/pdf/ev-poppler.cc:913
+#: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
 msgstr "TrueType"
 
-#: ../backend/pdf/ev-poppler.cc:915
+#: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
 msgstr "Type 1 (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:917
+#: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
 msgstr "Type 1C (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:919
+#: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
 msgstr "TrueType (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:921
+#: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
 msgstr "סוג גופן לא ידוע"
 
-#: ../backend/pdf/ev-poppler.cc:947
+#: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
 msgstr "ללא שם"
 
-#: ../backend/pdf/ev-poppler.cc:955
+#: ../backend/pdf/ev-poppler.cc:953
 msgid "Embedded subset"
 msgstr "תת־קבוצה מוטמעת"
 
-#: ../backend/pdf/ev-poppler.cc:957
+#: ../backend/pdf/ev-poppler.cc:955
 msgid "Embedded"
 msgstr "מוטמע"
 
-#: ../backend/pdf/ev-poppler.cc:959
+#: ../backend/pdf/ev-poppler.cc:957
 msgid "Not embedded"
 msgstr "לא מוטמע"
 
@@ -322,32 +323,32 @@ msgstr "לא ניתן להעביר כתובת מסמך לכניסת שולחן �
 msgid "Not a launchable item"
 msgstr "הפריט אינו ניתן לשיגור"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:229
+#: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
 msgstr "Disable connection to session manager"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232
+#: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
-msgstr "Specify file containing saved configuration"
+msgstr "הגדר קובץ המכיל הגדרות שמורות"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232 ../previewer/ev-previewer.c:45
-#: ../previewer/ev-previewer.c:46
+#: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
+#: ../previewer/ev-previewer.c:37
 msgid "FILE"
-msgstr "FILE"
+msgstr "קובץ"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
-msgstr "Specify session management ID"
+msgstr "הגדר מס\"ד ניהול עבור ה-Session"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
-msgstr "ID"
+msgstr "מספר סידורי"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:256
+#: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
 msgstr "Session management options:"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:257
+#: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
 msgstr "Show session management options"
 
@@ -402,7 +403,7 @@ msgstr "התאמה לרוחב העמוד"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6057
 msgid "Expand Window to Fit"
-msgstr ""
+msgstr "התאמה לגודל החלון"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
@@ -478,11 +479,10 @@ msgstr ""
 
 #: ../data/atril.desktop.in.in.h:1
 msgid "Atril Document Viewer"
-msgstr ""
+msgstr "מציג המסמכים Atril"
 
-#. Manually set name and icon
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5006
-#: ../shell/ev-window-title.c:157 ../shell/main.c:306
+#: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
 msgstr "מציג מסמכים"
@@ -493,21 +493,21 @@ msgstr "הצגת מסמכים מרובי עמודים"
 
 #: ../data/org.mate.Atril.gschema.xml.h:1
 msgid "Override document restrictions"
-msgstr ""
+msgstr "דרוס מגבלות מסמך"
 
 #: ../data/org.mate.Atril.gschema.xml.h:2
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr ""
 
-#: ../previewer/ev-previewer.c:44
+#: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
-msgstr "Delete the temporary file"
+msgstr "מחק את הקובץ הזמני"
 
-#: ../previewer/ev-previewer.c:45
+#: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
-msgstr "Print settings file"
+msgstr "קובץ הגדרות הדפסה"
 
-#: ../previewer/ev-previewer.c:140 ../previewer/ev-previewer.c:174
+#: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
 msgstr "כלי להצגה מקדימה של מסמכים של MATE"
 
@@ -569,11 +569,11 @@ msgstr "התאמה ל_רוחב עמוד"
 msgid "Make the current document fill the window width"
 msgstr "הצגת המסמך הנוכחי כך שימלא את רוחב העמוד"
 
-#: ../previewer/ev-previewer-window.c:558 ../shell/ev-window.c:6315
+#: ../previewer/ev-previewer-window.c:547 ../shell/ev-window.c:6315
 msgid "Page"
 msgstr "עמוד"
 
-#: ../previewer/ev-previewer-window.c:559 ../shell/ev-window.c:6316
+#: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6316
 msgid "Select Page"
 msgstr "בחירת עמוד"
 
@@ -677,11 +677,11 @@ msgstr "‏%s, נוף (%s)"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:1
 msgid "Atril properties"
-msgstr ""
+msgstr "תכונות Atril"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:2
 msgid "Shows details for Atril documents"
-msgstr ""
+msgstr "הצג פרטים למסמכי Atril"
 
 #: ../libmisc/ev-page-action-widget.c:68
 #, c-format
@@ -723,7 +723,7 @@ msgstr "בחירת העמודים שגויה"
 
 #: ../libview/ev-print-operation.c:1233
 msgid "Warning"
-msgstr "Warning"
+msgstr "אזהרה"
 
 #: ../libview/ev-print-operation.c:1235
 msgid "Your print range selection does not include any pages"
@@ -805,50 +805,50 @@ msgstr "תצוגת מסמך"
 msgid "Jump to page:"
 msgstr "קפיצה לעמוד:"
 
-#: ../libview/ev-view-presentation.c:1046
+#: ../libview/ev-view-presentation.c:1038
 msgid "End of presentation. Click to exit."
 msgstr "סוף המצגת. נא ללחוץ ליציאה."
 
-#: ../libview/ev-view.c:1867
+#: ../libview/ev-view.c:1863
 msgid "Go to first page"
 msgstr "מעבר לעמוד הראשון"
 
-#: ../libview/ev-view.c:1869
+#: ../libview/ev-view.c:1865
 msgid "Go to previous page"
 msgstr "מעבר לעמוד הקודם"
 
-#: ../libview/ev-view.c:1871
+#: ../libview/ev-view.c:1867
 msgid "Go to next page"
 msgstr "מעבר לעמוד הבא"
 
-#: ../libview/ev-view.c:1873
+#: ../libview/ev-view.c:1869
 msgid "Go to last page"
 msgstr "מעבר לעמוד האחרון"
 
-#: ../libview/ev-view.c:1875
+#: ../libview/ev-view.c:1871
 msgid "Go to page"
 msgstr "מעבר לעמוד"
 
-#: ../libview/ev-view.c:1877
+#: ../libview/ev-view.c:1873
 msgid "Find"
 msgstr "חיפוש"
 
-#: ../libview/ev-view.c:1905
+#: ../libview/ev-view.c:1901
 #, c-format
 msgid "Go to page %s"
 msgstr "מעבר לעמוד %s"
 
-#: ../libview/ev-view.c:1911
+#: ../libview/ev-view.c:1907
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "מעבר ל־%s בקובץ “%s”"
 
-#: ../libview/ev-view.c:1914
+#: ../libview/ev-view.c:1910
 #, c-format
 msgid "Go to file “%s”"
 msgstr "מעבר לקובץ “%s”"
 
-#: ../libview/ev-view.c:1922
+#: ../libview/ev-view.c:1918
 #, c-format
 msgid "Launch %s"
 msgstr "שיגור %s"
@@ -875,7 +875,7 @@ msgstr "חיפוש המופע הבא של המחרוזת"
 
 #: ../shell/eggfindbar.c:350
 msgid "Case Sensitive"
-msgstr ""
+msgstr "רגיש לאותיות גדולות וקטנות"
 
 #: ../shell/eggfindbar.c:353
 msgid "Toggle case sensitive search"
@@ -957,7 +957,7 @@ msgstr "פתיחה"
 msgid "Close"
 msgstr "סגירה"
 
-#: ../shell/ev-application.c:1054
+#: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
 msgstr "מופעל מצב מצגת"
 
@@ -1096,21 +1096,21 @@ msgstr "המסמך אינו מכיל הערות"
 msgid "Page %d"
 msgstr "עמוד %d"
 
-#: ../shell/ev-sidebar-attachments.c:713
+#: ../shell/ev-sidebar-attachments.c:695
 msgid "Attachments"
 msgstr "צרופות"
 
 #: ../shell/ev-sidebar-bookmarks.c:152
 msgid "_Open Bookmark"
-msgstr ""
+msgstr "_פתח סימניה"
 
 #: ../shell/ev-sidebar-bookmarks.c:154
 msgid "_Rename Bookmark"
-msgstr ""
+msgstr "_שנה את שם הסימניה"
 
 #: ../shell/ev-sidebar-bookmarks.c:156
 msgid "_Remove Bookmark"
-msgstr ""
+msgstr "_מחק סימניה"
 
 #: ../shell/ev-sidebar-bookmarks.c:311 ../shell/ev-window.c:952
 #: ../shell/ev-window.c:4733
@@ -1120,7 +1120,7 @@ msgstr "עמוד %s"
 
 #: ../shell/ev-sidebar-bookmarks.c:609
 msgid "Bookmarks"
-msgstr ""
+msgstr "סימניות"
 
 #: ../shell/ev-sidebar-layers.c:444
 msgid "Layers"
@@ -1147,7 +1147,7 @@ msgstr "עמוד %s — %s"
 msgid ""
 "Cannot enter presentation mode with ePub documents use fullscreen mode "
 "instead."
-msgstr ""
+msgstr "לא ניתן להיכנס למצב מצגת עם מסמכי ePub. השתמש במצב מסך מלא במקום."
 
 #: ../shell/ev-window.c:1577
 msgid "The document contains no pages"
@@ -1159,7 +1159,7 @@ msgstr "המסמך מכיל עמודים ריקים בלבד"
 
 #: ../shell/ev-window.c:1618
 msgid "Presentation mode is not supported for ePub documents."
-msgstr ""
+msgstr "מצב מצגת לא תומך בקבצי ePub."
 
 #: ../shell/ev-window.c:1810 ../shell/ev-window.c:1978
 msgid "Unable to open document"
@@ -1293,7 +1293,7 @@ msgstr "_סגירה לאחר ההדפסה"
 
 #: ../shell/ev-window.c:4165
 msgid "Presentation mode is not supported for ePub documents"
-msgstr ""
+msgstr "מצב מצגת לא נתמך עבור קבצי ePub"
 
 #: ../shell/ev-window.c:4477
 msgid "Toolbar Editor"
@@ -1340,7 +1340,7 @@ msgstr "‏Atril"
 #: ../shell/ev-window.c:5077
 msgid ""
 "© 1996–2009 The Evince authors\n"
-"© 2012–2014 The MATE developers"
+"© 2012–2016 The MATE developers"
 msgstr ""
 
 #: ../shell/ev-window.c:5083
@@ -1372,7 +1372,7 @@ msgstr "_קובץ"
 
 #: ../shell/ev-window.c:6000
 msgid "_Edit"
-msgstr "ע_ריכה"
+msgstr "_עריכה"
 
 #: ../shell/ev-window.c:6001
 msgid "_View"
@@ -1384,11 +1384,11 @@ msgstr "_מעבר"
 
 #: ../shell/ev-window.c:6003
 msgid "_Bookmarks"
-msgstr ""
+msgstr "_סימניות"
 
 #: ../shell/ev-window.c:6004
 msgid "_Help"
-msgstr "ע_זרה"
+msgstr "_עזרה"
 
 #. File menu
 #: ../shell/ev-window.c:6007 ../shell/ev-window.c:6355
@@ -1417,7 +1417,7 @@ msgstr "שמור עותק של המסמך הנוכחי"
 
 #: ../shell/ev-window.c:6016
 msgid "_Print…"
-msgstr "ה_דפסה..."
+msgstr "_הדפסה"
 
 #: ../shell/ev-window.c:6019
 msgid "P_roperties"
@@ -1461,7 +1461,7 @@ msgstr "טעינה מחדש של המסמך"
 
 #: ../shell/ev-window.c:6056
 msgid "_Expand Window to Fit"
-msgstr ""
+msgstr "_הרחב בהתאם לגודל החלון"
 
 #: ../shell/ev-window.c:6060
 msgid "Auto_scroll"
@@ -1486,11 +1486,11 @@ msgstr "מעבר לעמוד האחרון"
 #. Bookmarks menu
 #: ../shell/ev-window.c:6078
 msgid "_Add Bookmark"
-msgstr ""
+msgstr "_הוסף סימניה"
 
 #: ../shell/ev-window.c:6079
 msgid "Add a bookmark for the current page"
-msgstr ""
+msgstr "הוסף סימניה עבור הדף הנוכחי"
 
 #. Help menu
 #: ../shell/ev-window.c:6083
@@ -1699,46 +1699,46 @@ msgstr "%s — נדרשת ססמה"
 msgid "By extension"
 msgstr "לפי סיומת"
 
-#: ../shell/main.c:69 ../shell/main.c:270
+#: ../shell/main.c:57 ../shell/main.c:233
 msgid "MATE Document Viewer"
-msgstr "MATE Document Viewer"
+msgstr "מציג המסמכים של MATE"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "The page label of the document to display."
-msgstr "The page label of the document to display."
+msgstr "תווית העמוד של המסמך להצגה"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "PAGE"
-msgstr "PAGE"
+msgstr "עמוד"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "The page number of the document to display."
-msgstr "The page number of the document to display."
+msgstr "מספר העמוד של המסמך להצגה"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "NUMBER"
-msgstr "NUMBER"
+msgstr "מספר"
 
-#: ../shell/main.c:79
+#: ../shell/main.c:67
 msgid "Run atril in fullscreen mode"
-msgstr "Run atril in fullscreen mode"
+msgstr "הרץ את Atril במצב \"מסך מלא\""
 
-#: ../shell/main.c:80
+#: ../shell/main.c:68
 msgid "Run atril in presentation mode"
-msgstr "Run atril in presentation mode"
+msgstr "הרץ את Atril במצב מצגת"
 
-#: ../shell/main.c:81
+#: ../shell/main.c:69
 msgid "Run atril as a previewer"
-msgstr "Run atril as a previewer"
+msgstr "הרץ את Atril כמציג"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "The word or phrase to find in the document"
-msgstr "The word or phrase to find in the document"
+msgstr "המילה או הביטוי לחיפוש במסמך"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "STRING"
-msgstr "STRING"
+msgstr "מחרוזת"
 
-#: ../shell/main.c:86
+#: ../shell/main.c:74
 msgid "[FILE…]"
 msgstr "[FILE…]"

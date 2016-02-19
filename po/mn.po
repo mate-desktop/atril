@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-06 13:44+0200\n"
-"PO-Revision-Date: 2015-09-06 11:43+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"POT-Creation-Date: 2016-01-07 23:34+0300\n"
+"PO-Revision-Date: 2016-01-07 20:34+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Mongolian (http://www.transifex.com/mate/MATE/language/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "Энэ төрлийн зурагт номыг задлах тохиромжтой команд олсонгүй"
 
-#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:616
+#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
@@ -65,7 +65,7 @@ msgid "No images found in archive %s"
 msgstr "%s архиваас зураг олдсонгүй"
 
 #: ../backend/comics/comics-document.c:848
-#: ../backend/epub/epub-document.c:1767
+#: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr " \"%s\"-ийг устгахад алдаа гарсан байна."
@@ -101,59 +101,59 @@ msgstr "DVI баримт бичиг буруу форматтай байна. "
 msgid "DVI Documents"
 msgstr "DVI Баримт бичиг"
 
-#: ../backend/epub/epub-document.c:633
+#: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:734
+#: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:762
+#: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:778 ../backend/epub/epub-document.c:794
+#: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:826 ../backend/epub/epub-document.c:909
+#: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:838
+#: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:848
+#: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:858
+#: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:868
+#: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:953
+#: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:962
+#: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:971
+#: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:980
+#: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
 msgstr ""
 
-#: ../backend/epub/epub-document.c:1066
+#: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 
@@ -161,67 +161,67 @@ msgstr ""
 msgid "epub Documents"
 msgstr ""
 
-#: ../backend/pdf/ev-poppler.cc:520
+#: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
 msgstr "Энэ бүтээл нийтийн домэйнд байна"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:774 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:364
 msgid "Yes"
 msgstr "Тийм"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:777 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:368
 msgid "No"
 msgstr "Үгүй"
 
-#: ../backend/pdf/ev-poppler.cc:907
+#: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
 msgstr "Төрөл 1 "
 
-#: ../backend/pdf/ev-poppler.cc:909
+#: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
 msgstr "Төрөл 1C"
 
-#: ../backend/pdf/ev-poppler.cc:911
+#: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
 msgstr "Төрөл 3"
 
-#: ../backend/pdf/ev-poppler.cc:913
+#: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
 msgstr "ТрүүТайп"
 
-#: ../backend/pdf/ev-poppler.cc:915
+#: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
 msgstr "Төрөл 1(CID)"
 
-#: ../backend/pdf/ev-poppler.cc:917
+#: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
 msgstr "Төрөл 1C CID)"
 
-#: ../backend/pdf/ev-poppler.cc:919
+#: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
 msgstr "ТрүүТайп (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:921
+#: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
 msgstr "Фонтны танигдахгүй төрөл "
 
-#: ../backend/pdf/ev-poppler.cc:947
+#: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
 msgstr "Нэр өгөөгүй байна"
 
-#: ../backend/pdf/ev-poppler.cc:955
+#: ../backend/pdf/ev-poppler.cc:953
 msgid "Embedded subset"
 msgstr "Оруулсан зүйлс"
 
-#: ../backend/pdf/ev-poppler.cc:957
+#: ../backend/pdf/ev-poppler.cc:955
 msgid "Embedded"
 msgstr "Оруулсан "
 
-#: ../backend/pdf/ev-poppler.cc:959
+#: ../backend/pdf/ev-poppler.cc:957
 msgid "Not embedded"
 msgstr "Оруулаагүй"
 
@@ -320,32 +320,32 @@ msgstr "URIs баримт бичгийг 'Type=Link' дэсктопын орол
 msgid "Not a launchable item"
 msgstr "Нээж болох зүйл биш байна"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:229
+#: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
 msgstr "Сэшн менежерт холбогдох боломжгүй болгох"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232
+#: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "Тохиргоо сануулсан файлыг ялган харуулах"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232 ../previewer/ev-previewer.c:45
-#: ../previewer/ev-previewer.c:46
+#: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
+#: ../previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
 msgstr "Сэшн менежментийн ID-г ялган харуулах"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
 msgstr "ID"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:256
+#: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
 msgstr "Сэшн менежментийн сонголтууд:"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:257
+#: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
 msgstr "Сэшн менежментийн сонголтуудыг харуулах"
 
@@ -478,9 +478,8 @@ msgstr ""
 msgid "Atril Document Viewer"
 msgstr ""
 
-#. Manually set name and icon
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5006
-#: ../shell/ev-window-title.c:157 ../shell/main.c:306
+#: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
 msgstr "Баримт бичиг үзүүлэгч"
@@ -497,15 +496,15 @@ msgstr ""
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr ""
 
-#: ../previewer/ev-previewer.c:44
+#: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
 msgstr "Түр зуурын файлыг устгах"
 
-#: ../previewer/ev-previewer.c:45
+#: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
 msgstr "Тохиргооны файлыг хэвлэх"
 
-#: ../previewer/ev-previewer.c:140 ../previewer/ev-previewer.c:174
+#: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
 msgstr "ГНОУМ баримт бичиг урьдчилан үзүүлэгч"
 
@@ -567,11 +566,11 @@ msgstr "Хуудасны өргөнтэй тааруулах"
 msgid "Make the current document fill the window width"
 msgstr "Нээлттэй байгаа баримт бичгээ цонхны өргөнийг дүүргэж байршуулах"
 
-#: ../previewer/ev-previewer-window.c:558 ../shell/ev-window.c:6315
+#: ../previewer/ev-previewer-window.c:547 ../shell/ev-window.c:6315
 msgid "Page"
 msgstr "Хуудас "
 
-#: ../previewer/ev-previewer-window.c:559 ../shell/ev-window.c:6316
+#: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6316
 msgid "Select Page"
 msgstr "Хуудсаа сонгох "
 
@@ -803,50 +802,50 @@ msgstr "Баримт бичгийн харагдац"
 msgid "Jump to page:"
 msgstr "Хуудас руу очих:"
 
-#: ../libview/ev-view-presentation.c:1046
+#: ../libview/ev-view-presentation.c:1038
 msgid "End of presentation. Click to exit."
 msgstr "Үзүүлэн дууслаа. Хулганаараа товшин гарна уу."
 
-#: ../libview/ev-view.c:1867
+#: ../libview/ev-view.c:1863
 msgid "Go to first page"
 msgstr "Эхний хуудсанд очих"
 
-#: ../libview/ev-view.c:1869
+#: ../libview/ev-view.c:1865
 msgid "Go to previous page"
 msgstr "Өмнөх хуудсанд очих"
 
-#: ../libview/ev-view.c:1871
+#: ../libview/ev-view.c:1867
 msgid "Go to next page"
 msgstr "Дараах хуудсанд очих"
 
-#: ../libview/ev-view.c:1873
+#: ../libview/ev-view.c:1869
 msgid "Go to last page"
 msgstr "Сүүлийн хуудсанд очих"
 
-#: ../libview/ev-view.c:1875
+#: ../libview/ev-view.c:1871
 msgid "Go to page"
 msgstr "Хуудсанд очих"
 
-#: ../libview/ev-view.c:1877
+#: ../libview/ev-view.c:1873
 msgid "Find"
 msgstr "Хайж олох"
 
-#: ../libview/ev-view.c:1905
+#: ../libview/ev-view.c:1901
 #, c-format
 msgid "Go to page %s"
 msgstr "%s хуудсанд очих"
 
-#: ../libview/ev-view.c:1911
+#: ../libview/ev-view.c:1907
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "“%s” файл дээрх %s -д очих"
 
-#: ../libview/ev-view.c:1914
+#: ../libview/ev-view.c:1910
 #, c-format
 msgid "Go to file “%s”"
 msgstr "“%s”файлд очих"
 
-#: ../libview/ev-view.c:1922
+#: ../libview/ev-view.c:1918
 #, c-format
 msgid "Launch %s"
 msgstr "%s-ийг нээх "
@@ -955,7 +954,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ../shell/ev-application.c:1054
+#: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
 msgstr "Үзүүлэнгийн горим дээр ажиллаж байна"
 
@@ -1094,7 +1093,7 @@ msgstr ""
 msgid "Page %d"
 msgstr ""
 
-#: ../shell/ev-sidebar-attachments.c:713
+#: ../shell/ev-sidebar-attachments.c:695
 msgid "Attachments"
 msgstr "Хавсралт"
 
@@ -1338,7 +1337,7 @@ msgstr "Эвинс"
 #: ../shell/ev-window.c:5077
 msgid ""
 "© 1996–2009 The Evince authors\n"
-"© 2012–2014 The MATE developers"
+"© 2012–2016 The MATE developers"
 msgstr ""
 
 #: ../shell/ev-window.c:5083
@@ -1697,46 +1696,46 @@ msgstr "%s - Нууц үгээ оруулах хэрэгтэй"
 msgid "By extension"
 msgstr "Өргөтгөлөөр "
 
-#: ../shell/main.c:69 ../shell/main.c:270
+#: ../shell/main.c:57 ../shell/main.c:233
 msgid "MATE Document Viewer"
 msgstr "ГНОУМ баримт бичиг үзүүлэгч"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "The page label of the document to display."
 msgstr ""
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "PAGE"
 msgstr "ХУУДАС"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "The page number of the document to display."
 msgstr ""
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "NUMBER"
 msgstr ""
 
-#: ../shell/main.c:79
+#: ../shell/main.c:67
 msgid "Run atril in fullscreen mode"
 msgstr "Эвинсийг дэлгэц дүүрэн горимоор ажиллуулах"
 
-#: ../shell/main.c:80
+#: ../shell/main.c:68
 msgid "Run atril in presentation mode"
 msgstr "Эвинсийг үзүүлэнгийн горимоор ажиллуулах"
 
-#: ../shell/main.c:81
+#: ../shell/main.c:69
 msgid "Run atril as a previewer"
 msgstr "Эвинсийг урьдчилан үзүүлэгч болгон ажиллуулах"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "The word or phrase to find in the document"
 msgstr "Баримт бичгээс хайх үг болон холбоо үг"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "STRING"
 msgstr "БИЧВЭР"
 
-#: ../shell/main.c:86
+#: ../shell/main.c:74
 msgid "[FILE…]"
 msgstr "[ФАЙЛ...]"

@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-06 13:44+0200\n"
-"PO-Revision-Date: 2015-09-06 14:06+0000\n"
-"Last-Translator: ABE Tsunehiko\n"
+"POT-Creation-Date: 2016-01-07 23:34+0300\n"
+"PO-Revision-Date: 2016-01-07 20:34+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,7 +53,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "このタイプのコミックブックを解凍するのに適したコマンドが見つかりません"
 
-#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:616
+#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
@@ -73,7 +73,7 @@ msgid "No images found in archive %s"
 msgstr "%s のアーカイブには画像は含まれていません"
 
 #: ../backend/comics/comics-document.c:848
-#: ../backend/epub/epub-document.c:1767
+#: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "“%s” の削除中にエラーが発生しました。"
@@ -109,59 +109,59 @@ msgstr "DVI ドキュメントの書式が壊れています"
 msgid "DVI Documents"
 msgstr "DVI ドキュメント"
 
-#: ../backend/epub/epub-document.c:633
+#: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
 msgstr "ePub ドキュメントではありません"
 
-#: ../backend/epub/epub-document.c:734
+#: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
 msgstr "ファイル名を読み込めません"
 
-#: ../backend/epub/epub-document.c:762
+#: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
 msgstr "アーカイブを開けません"
 
-#: ../backend/epub/epub-document.c:778 ../backend/epub/epub-document.c:794
+#: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
 msgstr "アーカイブから抽出できません"
 
-#: ../backend/epub/epub-document.c:826 ../backend/epub/epub-document.c:909
+#: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
 msgstr "container ファイルを読み込めません"
 
-#: ../backend/epub/epub-document.c:838
+#: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
 msgstr "container ファイルを開けません"
 
-#: ../backend/epub/epub-document.c:848
+#: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
 msgstr "container ファイルが破損しています"
 
-#: ../backend/epub/epub-document.c:858
+#: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
 msgstr "epub ファイルが無効か破損しています"
 
-#: ../backend/epub/epub-document.c:868
+#: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
 msgstr "epub ファイルが破損しており、container が含まれていません"
 
-#: ../backend/epub/epub-document.c:953
+#: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
 msgstr "content ファイルの manifest が取得できません"
 
-#: ../backend/epub/epub-document.c:962
+#: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
 msgstr "content ファイルが無効です"
 
-#: ../backend/epub/epub-document.c:971
+#: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
 msgstr "epub ファイルに spine がありません"
 
-#: ../backend/epub/epub-document.c:980
+#: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
 msgstr "epub ファイルに manifest がありません"
 
-#: ../backend/epub/epub-document.c:1066
+#: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "ファイルがいくつか足りず、読み込みに必要なドキュメントツリーが構成できません"
 
@@ -169,67 +169,67 @@ msgstr "ファイルがいくつか足りず、読み込みに必要なドキュ
 msgid "epub Documents"
 msgstr "epub ドキュメント"
 
-#: ../backend/pdf/ev-poppler.cc:520
+#: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
 msgstr "この作品はパブリックドメインです"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:774 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:364
 msgid "Yes"
 msgstr "はい"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:777 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:368
 msgid "No"
 msgstr "いいえ"
 
-#: ../backend/pdf/ev-poppler.cc:907
+#: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
 msgstr "Type 1"
 
-#: ../backend/pdf/ev-poppler.cc:909
+#: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
 msgstr "Type 1C"
 
-#: ../backend/pdf/ev-poppler.cc:911
+#: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
 msgstr "Type 3"
 
-#: ../backend/pdf/ev-poppler.cc:913
+#: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
 msgstr "TrueType"
 
-#: ../backend/pdf/ev-poppler.cc:915
+#: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
 msgstr "Type 1 (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:917
+#: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
 msgstr "Type 1C (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:919
+#: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
 msgstr "TrueType (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:921
+#: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
 msgstr "不明なフォントの種類です"
 
-#: ../backend/pdf/ev-poppler.cc:947
+#: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
 msgstr "名前なし"
 
-#: ../backend/pdf/ev-poppler.cc:955
+#: ../backend/pdf/ev-poppler.cc:953
 msgid "Embedded subset"
 msgstr "埋め込みのサブセット"
 
-#: ../backend/pdf/ev-poppler.cc:957
+#: ../backend/pdf/ev-poppler.cc:955
 msgid "Embedded"
 msgstr "埋め込み"
 
-#: ../backend/pdf/ev-poppler.cc:959
+#: ../backend/pdf/ev-poppler.cc:957
 msgid "Not embedded"
 msgstr "埋め込みではない"
 
@@ -328,32 +328,32 @@ msgstr "ドキュメントの URI を 'Type=Link' という desktop エントリ
 msgid "Not a launchable item"
 msgstr "起動できないアイテムです"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:229
+#: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
 msgstr "セッションマネージャーに接続しない"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232
+#: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "設定が保存されているファイルを指定する"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232 ../previewer/ev-previewer.c:45
-#: ../previewer/ev-previewer.c:46
+#: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
+#: ../previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FILE"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
 msgstr "セッション ID を指定する"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
 msgstr "ID"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:256
+#: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
 msgstr "セッション管理用のオプション:"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:257
+#: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
 msgstr "セッション管理用のオプションを表示する"
 
@@ -486,9 +486,8 @@ msgstr "<p> Atril はシンプルなマルチページのドキュメントビ�
 msgid "Atril Document Viewer"
 msgstr "Atril ドキュメントビューアー"
 
-#. Manually set name and icon
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5006
-#: ../shell/ev-window-title.c:157 ../shell/main.c:306
+#: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
 msgstr "ドキュメントビューアー"
@@ -505,15 +504,15 @@ msgstr "ドキュメントの制限を上書きする"
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr "コピーや印刷の制限などのドキュメントの制限を上書きします"
 
-#: ../previewer/ev-previewer.c:44
+#: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
 msgstr "一時ファイルを削除"
 
-#: ../previewer/ev-previewer.c:45
+#: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
 msgstr "プリンター設定ファイル"
 
-#: ../previewer/ev-previewer.c:140 ../previewer/ev-previewer.c:174
+#: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
 msgstr "MATE ドキュメントプレビューアー"
 
@@ -575,11 +574,11 @@ msgstr "幅に合わせる(_W)"
 msgid "Make the current document fill the window width"
 msgstr "このドキュメントの幅をウィンドウの幅に合わせます"
 
-#: ../previewer/ev-previewer-window.c:558 ../shell/ev-window.c:6315
+#: ../previewer/ev-previewer-window.c:547 ../shell/ev-window.c:6315
 msgid "Page"
 msgstr "ページ"
 
-#: ../previewer/ev-previewer-window.c:559 ../shell/ev-window.c:6316
+#: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6316
 msgid "Select Page"
 msgstr "直接ページを指定します"
 
@@ -811,50 +810,50 @@ msgstr "ドキュメントビューアー"
 msgid "Jump to page:"
 msgstr "移動先のページ:"
 
-#: ../libview/ev-view-presentation.c:1046
+#: ../libview/ev-view-presentation.c:1038
 msgid "End of presentation. Click to exit."
 msgstr "プレゼンテーションの最後です。クリックで終了します。"
 
-#: ../libview/ev-view.c:1867
+#: ../libview/ev-view.c:1863
 msgid "Go to first page"
 msgstr "先頭ページへジャンプします"
 
-#: ../libview/ev-view.c:1869
+#: ../libview/ev-view.c:1865
 msgid "Go to previous page"
 msgstr "前のページへジャンプします"
 
-#: ../libview/ev-view.c:1871
+#: ../libview/ev-view.c:1867
 msgid "Go to next page"
 msgstr "次のページへジャンプします"
 
-#: ../libview/ev-view.c:1873
+#: ../libview/ev-view.c:1869
 msgid "Go to last page"
 msgstr "最後のページへジャンプします"
 
-#: ../libview/ev-view.c:1875
+#: ../libview/ev-view.c:1871
 msgid "Go to page"
 msgstr "ページへジャンプします"
 
-#: ../libview/ev-view.c:1877
+#: ../libview/ev-view.c:1873
 msgid "Find"
 msgstr "検索"
 
-#: ../libview/ev-view.c:1905
+#: ../libview/ev-view.c:1901
 #, c-format
 msgid "Go to page %s"
 msgstr "%s ページへジャンプします"
 
-#: ../libview/ev-view.c:1911
+#: ../libview/ev-view.c:1907
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "ファイル \"%2$s\" の %1$s へジャンプします"
 
-#: ../libview/ev-view.c:1914
+#: ../libview/ev-view.c:1910
 #, c-format
 msgid "Go to file “%s”"
 msgstr "ファイル \"%s\" へ移動します"
 
-#: ../libview/ev-view.c:1922
+#: ../libview/ev-view.c:1918
 #, c-format
 msgid "Launch %s"
 msgstr "%s の起動"
@@ -963,7 +962,7 @@ msgstr "開く"
 msgid "Close"
 msgstr "閉じる"
 
-#: ../shell/ev-application.c:1054
+#: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
 msgstr "プレゼンテーションモードで実行中です"
 
@@ -1102,7 +1101,7 @@ msgstr "ドキュメントには注釈がありません"
 msgid "Page %d"
 msgstr "%d ページ"
 
-#: ../shell/ev-sidebar-attachments.c:713
+#: ../shell/ev-sidebar-attachments.c:695
 msgid "Attachments"
 msgstr "添付ファイル"
 
@@ -1345,8 +1344,8 @@ msgstr "Atril"
 #: ../shell/ev-window.c:5077
 msgid ""
 "© 1996–2009 The Evince authors\n"
-"© 2012–2014 The MATE developers"
-msgstr "© 1996–2009 The Evince authors\n© 2012–2014 The MATE developers"
+"© 2012–2016 The MATE developers"
+msgstr ""
 
 #: ../shell/ev-window.c:5083
 msgid "translator-credits"
@@ -1703,46 +1702,46 @@ msgstr "%s - パスワードが必要です"
 msgid "By extension"
 msgstr "拡張子順"
 
-#: ../shell/main.c:69 ../shell/main.c:270
+#: ../shell/main.c:57 ../shell/main.c:233
 msgid "MATE Document Viewer"
 msgstr "MATE ドキュメントビューアー"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "The page label of the document to display."
 msgstr "表示するドキュメントのページラベル"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "PAGE"
 msgstr "PAGE"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "The page number of the document to display."
 msgstr "表示するドキュメントのページ番号"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "NUMBER"
 msgstr "NUMBER"
 
-#: ../shell/main.c:79
+#: ../shell/main.c:67
 msgid "Run atril in fullscreen mode"
 msgstr "フルスクリーンモードで起動する"
 
-#: ../shell/main.c:80
+#: ../shell/main.c:68
 msgid "Run atril in presentation mode"
 msgstr "プレゼンテーションモードで起動する"
 
-#: ../shell/main.c:81
+#: ../shell/main.c:69
 msgid "Run atril as a previewer"
 msgstr "プレビューアーとして起動する"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "The word or phrase to find in the document"
 msgstr "ドキュメントの中から単語や語句を検索する"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "STRING"
 msgstr "STRING"
 
-#: ../shell/main.c:86
+#: ../shell/main.c:74
 msgid "[FILE…]"
 msgstr "[ファイル…]"

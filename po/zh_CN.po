@@ -8,6 +8,7 @@
 # Funda Wang <fundawang@linux.net.cn>, 2004, 2005
 # 白铭骢 <jeffbai@aosc.xyz>, 2014
 # liushuyu011 <liushuyu_011@163.com>, 2014
+# Mingye Wang <arthur200126@gmail.com>, 2016
 # Tao Wang <dancefire@gmail.com>, 2010
 # Wylmer Wang <wantinghard@gmail.com>, 2013-2014
 # xhacker <liu.dongyuan@gmail.com>, 2010
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-06 13:44+0200\n"
-"PO-Revision-Date: 2015-11-13 01:32+0000\n"
-"Last-Translator: 白铭骢 <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2016-01-07 23:34+0300\n"
+"PO-Revision-Date: 2016-01-08 21:21+0000\n"
+"Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,7 +57,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "无法找到合适的命令来解压这种类型的 Comic Book 文档"
 
-#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:616
+#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
@@ -76,7 +77,7 @@ msgid "No images found in archive %s"
 msgstr "存档 %s 中未找到图像"
 
 #: ../backend/comics/comics-document.c:848
-#: ../backend/epub/epub-document.c:1767
+#: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "删除“%s”时出错。"
@@ -112,59 +113,59 @@ msgstr "DVI 文档的格式不对"
 msgid "DVI Documents"
 msgstr "DVI 文档"
 
-#: ../backend/epub/epub-document.c:633
+#: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
 msgstr "不是 ePub 文档"
 
-#: ../backend/epub/epub-document.c:734
+#: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
 msgstr "无法获知文件名"
 
-#: ../backend/epub/epub-document.c:762
+#: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
 msgstr "打不开归档"
 
-#: ../backend/epub/epub-document.c:778 ../backend/epub/epub-document.c:794
+#: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
 msgstr "无法提取归档"
 
-#: ../backend/epub/epub-document.c:826 ../backend/epub/epub-document.c:909
+#: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
 msgstr "无法获取归档文件"
 
-#: ../backend/epub/epub-document.c:838
+#: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
 msgstr "无法打开容器文件"
 
-#: ../backend/epub/epub-document.c:848
+#: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
 msgstr "容器文件已损坏"
 
-#: ../backend/epub/epub-document.c:858
+#: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
 msgstr "epub 文件无效或损坏"
 
-#: ../backend/epub/epub-document.c:868
+#: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
 msgstr "epub 文件损坏，没有容器"
 
-#: ../backend/epub/epub-document.c:953
+#: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
 msgstr "无法解析内容清单"
 
-#: ../backend/epub/epub-document.c:962
+#: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
 msgstr "内容文件无效"
 
-#: ../backend/epub/epub-document.c:971
+#: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
 msgstr "epub 文件没有书脊 "
 
-#: ../backend/epub/epub-document.c:980
+#: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
 msgstr "epub 文件没有清单 "
 
-#: ../backend/epub/epub-document.c:1066
+#: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "无法设置文档树以加载，缺少一些文件"
 
@@ -172,67 +173,67 @@ msgstr "无法设置文档树以加载，缺少一些文件"
 msgid "epub Documents"
 msgstr "epub 文档"
 
-#: ../backend/pdf/ev-poppler.cc:520
+#: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
 msgstr "这项工作是在公共领域"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:774 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:364
 msgid "Yes"
 msgstr "是"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:777 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:368
 msgid "No"
 msgstr "否"
 
-#: ../backend/pdf/ev-poppler.cc:907
+#: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
 msgstr "Type 1"
 
-#: ../backend/pdf/ev-poppler.cc:909
+#: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
 msgstr "Type 1C"
 
-#: ../backend/pdf/ev-poppler.cc:911
+#: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
 msgstr "Type 3"
 
-#: ../backend/pdf/ev-poppler.cc:913
+#: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
 msgstr "TrueType"
 
-#: ../backend/pdf/ev-poppler.cc:915
+#: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
 msgstr "Type 1 (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:917
+#: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
 msgstr "Type 1C (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:919
+#: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
 msgstr "TrueType (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:921
+#: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
 msgstr "未知字体类型"
 
-#: ../backend/pdf/ev-poppler.cc:947
+#: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
 msgstr "无名称"
 
-#: ../backend/pdf/ev-poppler.cc:955
+#: ../backend/pdf/ev-poppler.cc:953
 msgid "Embedded subset"
 msgstr "嵌入子集"
 
-#: ../backend/pdf/ev-poppler.cc:957
+#: ../backend/pdf/ev-poppler.cc:955
 msgid "Embedded"
 msgstr "嵌入"
 
-#: ../backend/pdf/ev-poppler.cc:959
+#: ../backend/pdf/ev-poppler.cc:957
 msgid "Not embedded"
 msgstr "未嵌入"
 
@@ -331,32 +332,32 @@ msgstr "无法将文档 URL 传递给“Type=Link”的桌面项"
 msgid "Not a launchable item"
 msgstr "不是可调用项"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:229
+#: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
 msgstr "禁用到会话管理器的连接"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232
+#: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "指定包含已保存配置的文件"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232 ../previewer/ev-previewer.c:45
-#: ../previewer/ev-previewer.c:46
+#: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
+#: ../previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "文件"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
 msgstr "指定会话管理 ID"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
 msgstr "ID"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:256
+#: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
 msgstr "会话管理选项："
 
-#: ../cut-n-paste/smclient/eggsmclient.c:257
+#: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
 msgstr "显示会话管理选项"
 
@@ -489,9 +490,8 @@ msgstr "<p> Atril 是一个简易的多页文档阅读器。它可以显示并�
 msgid "Atril Document Viewer"
 msgstr "Atril 文档查看器"
 
-#. Manually set name and icon
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5006
-#: ../shell/ev-window-title.c:157 ../shell/main.c:306
+#: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
 msgstr "文档查看器"
@@ -508,15 +508,15 @@ msgstr "忽略文档限制"
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr "忽略文档限制，比如限制复制或打印。"
 
-#: ../previewer/ev-previewer.c:44
+#: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
 msgstr "删除临时文件"
 
-#: ../previewer/ev-previewer.c:45
+#: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
 msgstr "打印设置文件"
 
-#: ../previewer/ev-previewer.c:140 ../previewer/ev-previewer.c:174
+#: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
 msgstr "MATE 文档预览器"
 
@@ -578,11 +578,11 @@ msgstr "适合页宽(_W)"
 msgid "Make the current document fill the window width"
 msgstr "让当前文档适合窗口宽度"
 
-#: ../previewer/ev-previewer-window.c:558 ../shell/ev-window.c:6315
+#: ../previewer/ev-previewer-window.c:547 ../shell/ev-window.c:6315
 msgid "Page"
 msgstr "页面"
 
-#: ../previewer/ev-previewer-window.c:559 ../shell/ev-window.c:6316
+#: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6316
 msgid "Select Page"
 msgstr "选择页面"
 
@@ -814,50 +814,50 @@ msgstr "文档视图"
 msgid "Jump to page:"
 msgstr "转到指定页："
 
-#: ../libview/ev-view-presentation.c:1046
+#: ../libview/ev-view-presentation.c:1038
 msgid "End of presentation. Click to exit."
 msgstr "演示文稿结束。单击退出。"
 
-#: ../libview/ev-view.c:1867
+#: ../libview/ev-view.c:1863
 msgid "Go to first page"
 msgstr "转到第一页"
 
-#: ../libview/ev-view.c:1869
+#: ../libview/ev-view.c:1865
 msgid "Go to previous page"
 msgstr "转到上一页"
 
-#: ../libview/ev-view.c:1871
+#: ../libview/ev-view.c:1867
 msgid "Go to next page"
 msgstr "转到下一页"
 
-#: ../libview/ev-view.c:1873
+#: ../libview/ev-view.c:1869
 msgid "Go to last page"
 msgstr "转到最后一页"
 
-#: ../libview/ev-view.c:1875
+#: ../libview/ev-view.c:1871
 msgid "Go to page"
 msgstr "转到指定页"
 
-#: ../libview/ev-view.c:1877
+#: ../libview/ev-view.c:1873
 msgid "Find"
 msgstr "查找"
 
-#: ../libview/ev-view.c:1905
+#: ../libview/ev-view.c:1901
 #, c-format
 msgid "Go to page %s"
 msgstr "转到第 %s 页"
 
-#: ../libview/ev-view.c:1911
+#: ../libview/ev-view.c:1907
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "转到文件“%2$s”的 %1$s"
 
-#: ../libview/ev-view.c:1914
+#: ../libview/ev-view.c:1910
 #, c-format
 msgid "Go to file “%s”"
 msgstr "转到文件“%s”"
 
-#: ../libview/ev-view.c:1922
+#: ../libview/ev-view.c:1918
 #, c-format
 msgid "Launch %s"
 msgstr "调用 %s"
@@ -966,7 +966,7 @@ msgstr "打开"
 msgid "Close"
 msgstr "关闭"
 
-#: ../shell/ev-application.c:1054
+#: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
 msgstr "以放映模式运行"
 
@@ -1105,7 +1105,7 @@ msgstr "此文档不包含任何注释"
 msgid "Page %d"
 msgstr "第 %d 页"
 
-#: ../shell/ev-sidebar-attachments.c:713
+#: ../shell/ev-sidebar-attachments.c:695
 msgid "Attachments"
 msgstr "附件"
 
@@ -1348,8 +1348,8 @@ msgstr "Atril"
 #: ../shell/ev-window.c:5077
 msgid ""
 "© 1996–2009 The Evince authors\n"
-"© 2012–2014 The MATE developers"
-msgstr "© 1996–2009 Evince 作者\n© 2012–2014 MATE 开发者"
+"© 2012–2016 The MATE developers"
+msgstr "© 1996–2009 Evince 作者\n© 2012–2016 MATE 开发者"
 
 #: ../shell/ev-window.c:5083
 msgid "translator-credits"
@@ -1706,46 +1706,46 @@ msgstr "%s - 需要密码"
 msgid "By extension"
 msgstr "按扩展名"
 
-#: ../shell/main.c:69 ../shell/main.c:270
+#: ../shell/main.c:57 ../shell/main.c:233
 msgid "MATE Document Viewer"
 msgstr "MATE 文档查看器"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "The page label of the document to display."
 msgstr "要显示的文档的页标签。"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "PAGE"
 msgstr "页面"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "The page number of the document to display."
 msgstr "要显示的文档的页编号。"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "NUMBER"
 msgstr "页号"
 
-#: ../shell/main.c:79
+#: ../shell/main.c:67
 msgid "Run atril in fullscreen mode"
 msgstr "以全屏模式运行 atril"
 
-#: ../shell/main.c:80
+#: ../shell/main.c:68
 msgid "Run atril in presentation mode"
 msgstr "以放映模式运行 atril"
 
-#: ../shell/main.c:81
+#: ../shell/main.c:69
 msgid "Run atril as a previewer"
 msgstr "以预览程序模式运行 atril"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "The word or phrase to find in the document"
 msgstr "文档中待查找的单词或短语"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "STRING"
 msgstr "字符串"
 
-#: ../shell/main.c:86
+#: ../shell/main.c:74
 msgid "[FILE…]"
 msgstr "[文件...]"

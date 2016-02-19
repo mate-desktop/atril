@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Siranush <ss.m.95@mail.ru>, 2015
+# Siranush <ss.m.95@mail.ru>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-06 13:44+0200\n"
-"PO-Revision-Date: 2015-11-10 13:56+0000\n"
+"POT-Creation-Date: 2016-01-07 23:34+0300\n"
+"PO-Revision-Date: 2016-01-28 13:43+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "Հնարավոր չէ գտնել համապատասխան հրահանգ այս տիպի կոմիկանա գիքի փաթեթավորման համար"
 
-#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:616
+#: ../backend/comics/comics-document.c:525 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
@@ -64,7 +64,7 @@ msgid "No images found in archive %s"
 msgstr "Արխիվում պատկերներ չեն հայտնաբերվել %s"
 
 #: ../backend/comics/comics-document.c:848
-#: ../backend/epub/epub-document.c:1767
+#: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Ոչնչացման ընթացքում սխալ կար “%s”."
@@ -100,59 +100,59 @@ msgstr "DVI փաստաթուղթը ունի սխալ ձևաչափ"
 msgid "DVI Documents"
 msgstr "DVI Փաստաթղթեր"
 
-#: ../backend/epub/epub-document.c:633
+#: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
 msgstr "Ոչ մի ePub փաստաթուղթ"
 
-#: ../backend/epub/epub-document.c:734
+#: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
 msgstr "չի հաջողվում վերստանալ ֆայլի անունը"
 
-#: ../backend/epub/epub-document.c:762
+#: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
 msgstr "չի հաջողվում բացել արխիվը"
 
-#: ../backend/epub/epub-document.c:778 ../backend/epub/epub-document.c:794
+#: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
 msgstr "չի հաջողվում հանել արխիվը"
 
-#: ../backend/epub/epub-document.c:826 ../backend/epub/epub-document.c:909
+#: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
 msgstr "հնարավոր չէ վերստանալ կոնտեյներային ֆայլ"
 
-#: ../backend/epub/epub-document.c:838
+#: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
 msgstr "հնարավոր  չէ բացել կոնտեյներային ֆայլ"
 
-#: ../backend/epub/epub-document.c:848
+#: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
 msgstr "կոնտեյներային ֆայլը վնասված է"
 
-#: ../backend/epub/epub-document.c:858
+#: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
 msgstr "epub ֆայլը անվավեր է կամ վնասված"
 
-#: ../backend/epub/epub-document.c:868
+#: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
 msgstr "ePub ֆայլը կոռումպացված է, ոչ բեռնարկղային"
 
-#: ../backend/epub/epub-document.c:953
+#: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
 msgstr "հնարավոր չէ ակնհայտ վերլուծել բովանդակությունը"
 
-#: ../backend/epub/epub-document.c:962
+#: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
 msgstr "ֆայլի պարունակությունը անվավեր է"
 
-#: ../backend/epub/epub-document.c:971
+#: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
 msgstr "ePub ֆայլը չունի ողնաշար"
 
-#: ../backend/epub/epub-document.c:980
+#: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
 msgstr "ePub ֆայլը հայտնի չէ"
 
-#: ../backend/epub/epub-document.c:1066
+#: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "Չհաջողվեց ստեղծվել  փաստաթղթային ծառ բեռնման համառ, որոշ ֆայլեր բացակայում են"
 
@@ -160,67 +160,67 @@ msgstr "Չհաջողվեց ստեղծվել  փաստաթղթային ծառ բ�
 msgid "epub Documents"
 msgstr "epub Փաստաթղթեր"
 
-#: ../backend/pdf/ev-poppler.cc:520
+#: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
 msgstr "Այս աշխատանքը գտնվում է Հանրային Տիրույթում"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:774 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:364
 msgid "Yes"
 msgstr "Այո"
 
 #. translators: this is the document security state
-#: ../backend/pdf/ev-poppler.cc:777 ../backend/pdf/ev-poppler.cc:780
+#: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
 #: ../properties/ev-properties-view.c:368
 msgid "No"
 msgstr "Ոչ"
 
-#: ../backend/pdf/ev-poppler.cc:907
+#: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
 msgstr "Տիպ 1"
 
-#: ../backend/pdf/ev-poppler.cc:909
+#: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
 msgstr "Տիպ 1C"
 
-#: ../backend/pdf/ev-poppler.cc:911
+#: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
 msgstr "Տիպ 3"
 
-#: ../backend/pdf/ev-poppler.cc:913
+#: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
 msgstr "ՃիշտՏիպ"
 
-#: ../backend/pdf/ev-poppler.cc:915
+#: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
 msgstr "Տիպ  1 (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:917
+#: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
 msgstr "Տիպ 1C (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:919
+#: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
 msgstr "ՃիշտՏիպ (CID)"
 
-#: ../backend/pdf/ev-poppler.cc:921
+#: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
 msgstr "Տառատեսակի անհայտ տիպ"
 
-#: ../backend/pdf/ev-poppler.cc:947
+#: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
 msgstr "Անանուն"
 
-#: ../backend/pdf/ev-poppler.cc:955
+#: ../backend/pdf/ev-poppler.cc:953
 msgid "Embedded subset"
 msgstr "Ներդրված ենթաբազմություն"
 
-#: ../backend/pdf/ev-poppler.cc:957
+#: ../backend/pdf/ev-poppler.cc:955
 msgid "Embedded"
 msgstr "Ներդրված"
 
-#: ../backend/pdf/ev-poppler.cc:959
+#: ../backend/pdf/ev-poppler.cc:957
 msgid "Not embedded"
 msgstr "Չներդրված"
 
@@ -319,32 +319,32 @@ msgstr "Չի հաջողվել անցկացնել փաստաթղթի URI–ներ
 msgid "Not a launchable item"
 msgstr "Չգործարկվող տարր"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:229
+#: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
 msgstr "Ապաակտիվացնել ենթահամակարգի կառավարչի հետ կապը"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232
+#: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
 msgstr "Նշել պահպանված կոնֆիգուրացիա պարունակող ֆայլը"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:232 ../previewer/ev-previewer.c:45
-#: ../previewer/ev-previewer.c:46
+#: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
+#: ../previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "ՖԱՅԼ"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
 msgstr "Նշել ենթահամակարգի կառավարչի իդենտիֆիկատորները"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:235
+#: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
 msgstr "ID"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:256
+#: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
 msgstr "Ենթահամակարգի կառավարման ընտրացանկ։"
 
-#: ../cut-n-paste/smclient/eggsmclient.c:257
+#: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
 msgstr "Ցույց տալ ենթահամակարգի կառավարման ընտրացանկը"
 
@@ -471,15 +471,14 @@ msgid ""
 " <p> Atril is a fork of Evince and part of the MATE Desktop Environment. If "
 "you would like to know more about MATE and Atril, please visit the project's"
 " home page. </p>"
-msgstr ""
+msgstr "<p> Atril պարզ բազմաէջ փաստաթղթերի արտապատկերման միջոց է։ Այն կարող է ցուցադրել և տպել  PostScript (PS), DJVU, DVI, XPS և PDF ֆայլեր, ինչպես նաև կոմիկական գիրք արխիվային ֆայլերը։ Երբ աջակցում է փաստաթղթեր այն թույլ է տալիս որոնել տեքստը, պատճենահանել փոխանակման բուֆերում, hyper-տեքստային նավագնացություն և սեղանի բովանդակության էջանշանները։</p>  <p> Atril համարժեք է Evince ֊ին և  MATE Աշխատանքային Սեղանի Միջավայրի մի մասն է։ Եթե ցանկանում եք ավելին իմանալ MATE֊ի և Atril֊ի մասին խնդրում ենք այցելեք ծրագրի գլխավոր էջ </p>"
 
 #: ../data/atril.desktop.in.in.h:1
 msgid "Atril Document Viewer"
 msgstr "Atril Փաստաթղթի Դիտող"
 
-#. Manually set name and icon
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5006
-#: ../shell/ev-window-title.c:157 ../shell/main.c:306
+#: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
 msgstr "Փաստաթուղթ Դիտող"
@@ -496,15 +495,15 @@ msgstr "Փաստաթղթի սահմանափակումների անտեսում"
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr "Փաստաթղթի սահմանափակումների անտեսում, ինչպես պատճենելու կամ տպելու սահմանափակումը."
 
-#: ../previewer/ev-previewer.c:44
+#: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
 msgstr "Ջնջել ժամանակավոր ֆայլը"
 
-#: ../previewer/ev-previewer.c:45
+#: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
 msgstr "Տպել ֆայլի պարամետրերը"
 
-#: ../previewer/ev-previewer.c:140 ../previewer/ev-previewer.c:174
+#: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
 msgstr "MATE Փաստաթղթի  նախադիտակ"
 
@@ -566,11 +565,11 @@ msgstr "Համապատասխանեցնել էջի _Լայնությունը"
 msgid "Make the current document fill the window width"
 msgstr "Կատարել ընթացիկ փաստաթղթի պատուհանի լայնության լրացում"
 
-#: ../previewer/ev-previewer-window.c:558 ../shell/ev-window.c:6315
+#: ../previewer/ev-previewer-window.c:547 ../shell/ev-window.c:6315
 msgid "Page"
 msgstr "Էջ"
 
-#: ../previewer/ev-previewer-window.c:559 ../shell/ev-window.c:6316
+#: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6316
 msgid "Select Page"
 msgstr "Ընտրել էջը"
 
@@ -747,7 +746,7 @@ msgid ""
 "• \"Shrink to Printable Area\": Document pages larger than the printable area are reduced to fit the printable area of the printer page.\n"
 "\n"
 "• \"Fit to Printable Area\": Document pages are enlarged or reduced as required to fit the printable area of the printer page.\n"
-msgstr ""
+msgstr "Սանդղակավորել փաստաթղթի էջերը համապատասխանեցնելով ընտրված տպիչի էջի հետ։ Ընտրեք հետևյալներից մերը․\n\n• \"Ոչ մեկը\"․ Չկա էջի սանդղակավորում․\n\n•\"Կրճատել Տպագրելու Տարածքը\"․ Փաստաթղթերի էջերը ավելի մեծ է, քան տպագրման տարածքը, կրճատել համապատասխան տպագրման տարածքը տպիչի էջում:\n\n•\"Համապատասխանեցնել Տպագրելու տարածքը\"․ Փաստաթղթերի էջերը մեծացնել կամ փոքրացնել, ինչպես պահանջում է տպագրման տարածքում համապատասխանությունը տպագրման էջին։\n"
 
 #: ../libview/ev-print-operation.c:1914
 msgid "Auto Rotate and Center"
@@ -757,7 +756,7 @@ msgstr "Ավտո Պտտում  և Կենտրոնավորում"
 msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
-msgstr ""
+msgstr "Պտտեցնել տպիչի դիրքորոշումը յուրաքանչյուր էջի դիրքորոշումը համապատասխանեցնել յուրաքանչյուր փաստաթղթի էջին։ Փաստաթղթերի էջերը կլինեն կենտրոնացված տպիչի էջի շրջանակներում։ "
 
 #: ../libview/ev-print-operation.c:1922
 msgid "Select page size using document page size"
@@ -802,50 +801,50 @@ msgstr "Փաստաթուղթ Դիտել"
 msgid "Jump to page:"
 msgstr "Ցատկել դեպի էջը:"
 
-#: ../libview/ev-view-presentation.c:1046
+#: ../libview/ev-view-presentation.c:1038
 msgid "End of presentation. Click to exit."
 msgstr "Ներկայացման Ավարտ. Սեղմեք դուրս գալ."
 
-#: ../libview/ev-view.c:1867
+#: ../libview/ev-view.c:1863
 msgid "Go to first page"
 msgstr "Գնալ առաջին էջ"
 
-#: ../libview/ev-view.c:1869
+#: ../libview/ev-view.c:1865
 msgid "Go to previous page"
 msgstr "Գնալ նախորդ էջ"
 
-#: ../libview/ev-view.c:1871
+#: ../libview/ev-view.c:1867
 msgid "Go to next page"
 msgstr "Գնալ հաջորդ էջ"
 
-#: ../libview/ev-view.c:1873
+#: ../libview/ev-view.c:1869
 msgid "Go to last page"
 msgstr "Գնալ վերջին էջ"
 
-#: ../libview/ev-view.c:1875
+#: ../libview/ev-view.c:1871
 msgid "Go to page"
 msgstr "Գնալ դեպի էջը"
 
-#: ../libview/ev-view.c:1877
+#: ../libview/ev-view.c:1873
 msgid "Find"
 msgstr "Գտնել"
 
-#: ../libview/ev-view.c:1905
+#: ../libview/ev-view.c:1901
 #, c-format
 msgid "Go to page %s"
 msgstr "Գնալ դեպի էջ %s"
 
-#: ../libview/ev-view.c:1911
+#: ../libview/ev-view.c:1907
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "Գնալ դեպի %s ֆայլի մեջ “%s”"
 
-#: ../libview/ev-view.c:1914
+#: ../libview/ev-view.c:1910
 #, c-format
 msgid "Go to file “%s”"
 msgstr "Գնալ դեպի ֆայլ “%s”"
 
-#: ../libview/ev-view.c:1922
+#: ../libview/ev-view.c:1918
 #, c-format
 msgid "Launch %s"
 msgstr "Գործարկել  %s"
@@ -954,7 +953,7 @@ msgstr "Բաց"
 msgid "Close"
 msgstr "Փակ"
 
-#: ../shell/ev-application.c:1054
+#: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
 msgstr "Ներկայացնամ ռեժիմի ընթացք"
 
@@ -981,7 +980,7 @@ msgstr "Մետատվյալի փոխակերպում"
 msgid ""
 "The metadata format used by Atril has changed, and hence it needs to be "
 "migrated. If the migration is cancelled the metadata storage will not work."
-msgstr ""
+msgstr "Մետատվյալների ձևաչափն օգտագործված է Atril֊ի կողմից փոխված և հետևաբար այն պետք է տեղափոխել։ Եթե փոփոխությունը չեղյալ է հայտարարվել, ապա մետատվյալները պահեստավորման չի աշխատում:"
 
 #: ../shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
@@ -1093,7 +1092,7 @@ msgstr "Փաստաթուղթը չի պարունակում ծանոթագրու�
 msgid "Page %d"
 msgstr "Էջ %d"
 
-#: ../shell/ev-sidebar-attachments.c:713
+#: ../shell/ev-sidebar-attachments.c:695
 msgid "Attachments"
 msgstr "Հավելվածները"
 
@@ -1144,7 +1143,7 @@ msgstr "Էջ %s — %s"
 msgid ""
 "Cannot enter presentation mode with ePub documents use fullscreen mode "
 "instead."
-msgstr ""
+msgstr "Հնարավոր չէ մուտք գործել ներկայացման ռեժիմ ePub փաստաթղթերի հետ միասին օգտագործելով ամբողջ էկրանի ռեժիմի փոխարեն։"
 
 #: ../shell/ev-window.c:1577
 msgid "The document contains no pages"
@@ -1244,13 +1243,13 @@ msgstr "Տպագրվող աշխատանք “%s”"
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
-msgstr ""
+msgstr "Փաստաթուղթը պարունակում ձեավոր դաշտեր, որոնք լրացվում են։ Եթե դուք չպահպանեք պատճենը, փոփոխությունը ընդմիշտ կկորցնեք։"
 
 #: ../shell/ev-window.c:3600
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
-msgstr ""
+msgstr "Փաստաթուղթը պարունակում է նոր կամ փոփոխված անոտացիաներ։ Եթե դուք չպահպանեք պատճենը, փոփոխությունը  ընդմիշտ կկորցնեք։"
 
 #: ../shell/ev-window.c:3607
 #, c-format
@@ -1313,7 +1312,7 @@ msgid ""
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version.\n"
-msgstr ""
+msgstr "Atril ազատ ծրագրային ապահովում է, դուք կարող եք վերաբաշխել և/կամ ձևափոխել այն՝ համաձայն GNU Համընդհանուր Հանրային Արտոնագրի պայմանների, ինչպես հրապարակվել է Ազատ Ծրագրային Ապահովության Հիմնադրամում, կամ տարբերակ 2 լիցենզիայի, կամ (ձեր ընտրությամբ) ցանկացած ավելի ուշ տարբերակը։\n"
 
 #: ../shell/ev-window.c:5041
 msgid ""
@@ -1321,14 +1320,14 @@ msgid ""
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details.\n"
-msgstr ""
+msgstr "Atril տարածվում է այն հույսով, որ օգտակար կլինի, բաըց ԱՌԱՆՑ ՈՐԵՎԷ ԵՐԱՇԽԻՔՆԵՐԻ; բացակայում են նույնիսկ ՎԱՃԱՌՔԻ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐԸ, ԲԱՎԱՐԱՐ ՈՐԱԿԸ կամ ՈՐՈՇ ՆՊԱՏԱԿՈՎ ԿԻՐԱՌԵԼԻՈՒԹՅՈՒՆԸ։ Մանրամասները տեսեք GNU համընդհանուր հանրային արտոնագրի մեջ։\n"
 
 #: ../shell/ev-window.c:5045
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
-msgstr ""
+msgstr "Դուք պետք է ընդունեք GNU Համընդհանուր Հանրային Արտոնագրի պատճենը Atril֊ի հետ համատեղ, եթե ոչ, ապա գրեք Ազատ Ծրագրային Ապահովման Հիմնադրամ Հասցե, 51 Franklin փողոց, Հինգերորդ հարկ, Boston, MA 02110-1301 ԱՄՆ\n"
 
 #: ../shell/ev-window.c:5074
 msgid "Atril"
@@ -1337,8 +1336,8 @@ msgstr "Atril"
 #: ../shell/ev-window.c:5077
 msgid ""
 "© 1996–2009 The Evince authors\n"
-"© 2012–2014 The MATE developers"
-msgstr "© 1996–2009 Ցուցաբերել հեղինակները\n© 2012–2014 Mate մշակողները"
+"© 2012–2016 The MATE developers"
+msgstr "© 1996–2009 Ցուցաբերել հեղինակները\n© 2012–2016 Mate մշակողները"
 
 #: ../shell/ev-window.c:5083
 msgid "translator-credits"
@@ -1696,46 +1695,46 @@ msgstr "%s — Պահանջվում է գաղտնաբառ"
 msgid "By extension"
 msgstr "Ըստ երկարաձգման"
 
-#: ../shell/main.c:69 ../shell/main.c:270
+#: ../shell/main.c:57 ../shell/main.c:233
 msgid "MATE Document Viewer"
 msgstr "Գնոմ Փաստաթուղթ Դիտող"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "The page label of the document to display."
 msgstr "Ցուցադրել փաստաթղթի էջի պիտակը․"
 
-#: ../shell/main.c:77
+#: ../shell/main.c:65
 msgid "PAGE"
 msgstr "ԷՋ"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "The page number of the document to display."
 msgstr "Ցուցադրել փաստաթղթի էջի համարը․"
 
-#: ../shell/main.c:78
+#: ../shell/main.c:66
 msgid "NUMBER"
 msgstr "ՀԱՄԱՐ"
 
-#: ../shell/main.c:79
+#: ../shell/main.c:67
 msgid "Run atril in fullscreen mode"
 msgstr "Գործարկել atril֊ը ամբողջ էկրանի ռեժիմում"
 
-#: ../shell/main.c:80
+#: ../shell/main.c:68
 msgid "Run atril in presentation mode"
 msgstr "Գործարկել atril֊ը ներկայացման ռեժիմում"
 
-#: ../shell/main.c:81
+#: ../shell/main.c:69
 msgid "Run atril as a previewer"
 msgstr "Գործարկել atril֊ը, որպես նախադիտող"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "The word or phrase to find in the document"
 msgstr "Բառը կամ արտահայտությունը գտնել փաստաթղթում"
 
-#: ../shell/main.c:82
+#: ../shell/main.c:70
 msgid "STRING"
 msgstr "ՏՈՂ"
 
-#: ../shell/main.c:86
+#: ../shell/main.c:74
 msgid "[FILE…]"
 msgstr "[ՖԱՅԼ...]"
