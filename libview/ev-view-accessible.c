@@ -380,6 +380,13 @@ initialize_children (EvViewAccessible *self)
 		child = ev_page_accessible_new (self, i);
 		g_ptr_array_add (self->priv->children, child);
 	}
+        /* When a document is reloaded, it may have less pages.
+         * We need to update the end page accordingly to avoid
+         * invalid access to self->priv->children
+         * See https://bugzilla.gnome.org/show_bug.cgi?id=735744
+         */
+	if (self->priv->end_page >= n_pages)
+		self->priv->end_page = n_pages - 1;
 }
 
 static void
