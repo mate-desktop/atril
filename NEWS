@@ -1,17 +1,13 @@
-1.13.1
+1.14.0
 ------
 
- * totem-screensaver: use org.gnome.SessionManager to inhibit screensaver
- * totem-screensaver: don't use old API and add ref to TotemScrsaver
- * totem-screensaver: fix assertions on entry to TotemScrsaver methods
+ * Drop MateConf migration script
+ * Update copyrights, mention MATE team in Caja extension
+ * Use org.gnome.SessionManager DBus name to inhibit screensaver
  * GTK+3: add atril-window style class to top level
- * fix some build warnings
-
-1.13.0
-------
-
- * update copyrights, mention MATE team in caja extension
- * drop MateConf migration script
+ * GTK+3: add css name EggToolbarEditor for 3.20
+ * Some more fixes and cleanups
+ * Translations update
 
 1.12.2
 ------
