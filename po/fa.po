@@ -6,14 +6,15 @@
 # sir_hawell <arash.cordi@gmail.com>, 2014
 # Elnaz Sarbar <elnaz@farsiweb.info>, 2006
 # Meelad Zakaria <meelad@farsiweb.info>, 2004, 2005, 2006
+# Mohammadreza Abdollahzadeh <morealaz@gmail.com>, 2016
 # Roozbeh Pournader <roozbeh@farsiweb.info>, 2003, 2004, 2005, 2006
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-07 23:34+0300\n"
-"PO-Revision-Date: 2016-01-07 20:34+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-03-10 12:26+0000\n"
+"Last-Translator: Mohammadreza Abdollahzadeh <morealaz@gmail.com>\n"
 "Language-Team: Persian (http://www.transifex.com/mate/MATE/language/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr "دستور ”%s” به طور عادی به پایان نرسید"
 #: ../backend/comics/comics-document.c:444
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr ""
+msgstr "%s یک نوع MIME کمیک نمی باشد"
 
 #: ../backend/comics/comics-document.c:451
 msgid ""
@@ -105,67 +106,67 @@ msgstr "نوشتارهای DVI"
 
 #: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
-msgstr ""
+msgstr "نوعی نوشتار ePub نمی باشد"
 
 #: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
-msgstr ""
+msgstr "امکان بازیابی نام فایل وجود ندارد"
 
 #: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
-msgstr ""
+msgstr "امکان باز کردن آرشیو وجود ندارد"
 
 #: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
-msgstr ""
+msgstr "امکان استخراج آرشیو وجود ندارد"
 
 #: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
-msgstr ""
+msgstr "امکان بازیابی فایل دربرگیرنده وجود ندارد"
 
 #: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
-msgstr ""
+msgstr "امکان باز کردن فایل دربرگیرنده وجود ندارد"
 
 #: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
-msgstr ""
+msgstr "فایل دربرگیرنده مخدوش است"
 
 #: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
-msgstr ""
+msgstr "فایل ePub نامعتبر یا مخدوش است"
 
 #: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
-msgstr ""
+msgstr "فایل ePub مخدوش است، فایل دربرگیرنده ای وجود ندارد"
 
 #: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
-msgstr ""
+msgstr "امکان تجزیه لیست محتوا وجود ندارد"
 
 #: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
-msgstr ""
+msgstr "فایل محتوا نامعتبر می‌باشد"
 
 #: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
-msgstr ""
+msgstr "فایل epub بدون جلد است"
 
 #: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
-msgstr ""
+msgstr "فایل epub لیست محتوا ندارد"
 
 #: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
-msgstr ""
+msgstr "امکان ایجاد درخت محتوای پرونده جهت بارگذاری وجود ندارد، بعضی از فایلها وجود ندارند"
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
-msgstr ""
+msgstr "نوشتارهای epub"
 
 #: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
-msgstr ""
+msgstr "این اثر برای استفاده عموم آزاد می باشد"
 
 #. translators: this is the document security state
 #: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
@@ -295,7 +296,7 @@ msgstr "فایل یک فایل .desktop معتبر نیست"
 #: ../cut-n-paste/smclient/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "نسخه فایل میز کاری ناشناخته‌ی '%s'"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:957
 #, c-format

@@ -12,12 +12,13 @@
 # Martin Kretzschmar <martink@gnome.org>, 2004
 # Tobias Bannert <tobannert@gmail.com>, 2013
 # Tobias Bannert <tobannert@gmail.com>, 2014-2016
+# Wolfgang Ulbrich <chat-to-me@raveit.de>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-07 23:34+0300\n"
-"PO-Revision-Date: 2016-01-08 17:11+0000\n"
+"PO-Revision-Date: 2016-03-22 18:58+0000\n"
 "Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/mate/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -154,15 +155,15 @@ msgstr "Inhaltsdatei ist ungültig"
 
 #: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
-msgstr "EPUB-Datei hat keinen »spine«"
+msgstr "EPUB-Datei hat keine Struktur"
 
 #: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
-msgstr "EPUB-Datei hat klein Manifest"
+msgstr "EPUB-Datei hat kein Manifest"
 
 #: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
-msgstr "Dokumentenbau konnte nicht zum Laden eingestellt werden, einige Dateien fehlen"
+msgstr "Dokumentenbaum konnte nicht zum Laden eingestellt werden, einige Dateien fehlen"
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
@@ -186,15 +187,15 @@ msgstr "Nein"
 
 #: ../backend/pdf/ev-poppler.cc:905
 msgid "Type 1"
-msgstr "Type 1"
+msgstr "Typ 1"
 
 #: ../backend/pdf/ev-poppler.cc:907
 msgid "Type 1C"
-msgstr "Type 1C"
+msgstr "Typ 1C"
 
 #: ../backend/pdf/ev-poppler.cc:909
 msgid "Type 3"
-msgstr "Type 3"
+msgstr "Typ 3"
 
 #: ../backend/pdf/ev-poppler.cc:911
 msgid "TrueType"
@@ -202,11 +203,11 @@ msgstr "TrueType"
 
 #: ../backend/pdf/ev-poppler.cc:913
 msgid "Type 1 (CID)"
-msgstr "Type 1 (CID)"
+msgstr "Typ 1 (CID)"
 
 #: ../backend/pdf/ev-poppler.cc:915
 msgid "Type 1C (CID)"
-msgstr "Type 1C (CID)"
+msgstr "Typ 1C (CID)"
 
 #: ../backend/pdf/ev-poppler.cc:917
 msgid "TrueType (CID)"
@@ -310,7 +311,7 @@ msgstr "%s wird gestartet"
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1098
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Anwendung akzeptiert keine Dokumente als Befehlszeilenargumente"
+msgstr "Anwendung akzeptiert keine Dokumente als Befehlszeilenargument"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1166
 #, c-format
@@ -653,7 +654,7 @@ msgstr "Kein"
 #. * it isn't default:mm or default:inch it will not work
 #: ../properties/ev-properties-view.c:217
 msgid "default:mm"
-msgstr "default:mm"
+msgstr "vorgabe:mm"
 
 #: ../properties/ev-properties-view.c:261
 #, c-format
@@ -795,11 +796,11 @@ msgstr "Runter rollen"
 
 #: ../libview/ev-view-accessible.c:53
 msgid "Scroll View Up"
-msgstr "Ansicht nach oben verschieben"
+msgstr "Ansicht nach oben rollen"
 
 #: ../libview/ev-view-accessible.c:54
 msgid "Scroll View Down"
-msgstr "Ansicht nach unten verschieben"
+msgstr "Ansicht nach unten rollen"
 
 #: ../libview/ev-view-accessible.c:883
 msgid "Document View"
@@ -963,7 +964,7 @@ msgstr "Schließen"
 
 #: ../shell/ev-application.c:1005
 msgid "Running in presentation mode"
-msgstr "Derzeit im Präsentationsmodus"
+msgstr "Präsentationsmodus läuft gerade"
 
 #: ../shell/ev-keyring.c:86
 #, c-format
@@ -1044,7 +1045,7 @@ msgstr "Allgemein"
 
 #: ../shell/ev-properties-dialog.c:104
 msgid "Fonts"
-msgstr "Schrift"
+msgstr "Schriften"
 
 #: ../shell/ev-properties-dialog.c:117
 msgid "Document License"
@@ -1281,7 +1282,7 @@ msgstr "Soll vor dem Schließen auf das Beenden des Druckauftrages »%s« gewart
 #, c-format
 msgid ""
 "There are %d print jobs active. Wait until print finishes before closing?"
-msgstr "%d Druckaufträge sind aktiv. Soll vor dem Schließen auf das Beenden des Druckens gewartet werden?"
+msgstr "%d Druckaufträge sind aktiv. Bitte auf das Beenden des Druckauftrags warten, bevor Sie das Dokument schließen?"
 
 #: ../shell/ev-window.c:3719
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1289,7 +1290,7 @@ msgstr "Wenn Sie das Fenster schließen, werden ausstehende Druckaufträge nicht
 
 #: ../shell/ev-window.c:3723
 msgid "Cancel _print and Close"
-msgstr "Drucken a_bbrechen und schließen"
+msgstr "Drucken _abrechen und schließen"
 
 #: ../shell/ev-window.c:3727
 msgid "Close _after Printing"
@@ -1312,7 +1313,7 @@ msgstr "Beim Anzeigen der Hilfe ist ein Fehler aufgetreten"
 msgid ""
 "Document Viewer\n"
 "Using %s (%s)"
-msgstr "Dokumentenbetrachter\nVerwendet %s (%s)"
+msgstr "Dokumentenbetrachter\nverwendet %s (%s)"
 
 #: ../shell/ev-window.c:5037
 msgid ""
