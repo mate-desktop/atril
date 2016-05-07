@@ -17,6 +17,14 @@
       <summary>Automatically reload then document</summary>
       <description>The document is automatically reloaded on file change.</description>
     </key>
+    <key name="document-directory" type="ms">
+      <default>nothing</default>
+      <summary>The URI of the directory last used to open or save a document</summary>
+    </key>
+    <key name="pictures-directory" type="ms">
+      <default>nothing</default>
+      <summary>The URI of the directory last used to save a picture</summary>
+    </key>
     <child name="default" schema="org.mate.Atril.Default"/>
   </schema>
 
