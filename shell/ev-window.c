@@ -2481,7 +2481,6 @@ file_open_dialog_response_cb (GtkWidget *chooser,
 {
 	if (response_id == GTK_RESPONSE_OK) {
 		GSList *uris;
-		gchar  *uri;
 
 		uris = gtk_file_chooser_get_uris (GTK_FILE_CHOOSER (chooser));
 
@@ -2492,11 +2491,6 @@ file_open_dialog_response_cb (GtkWidget *chooser,
 		g_slist_foreach (uris, (GFunc)g_free, NULL);
 		g_slist_free (uris);
 
-		uri = gtk_file_chooser_get_current_folder_uri (GTK_FILE_CHOOSER (chooser));
-		ev_application_set_filechooser_uri (EV_APP,
-						    GTK_FILE_CHOOSER_ACTION_OPEN,
-						    uri);
-		g_free (uri);
 	}
 
 	gtk_widget_destroy (chooser);
@@ -2506,7 +2500,7 @@ static void
 ev_window_cmd_file_open (GtkAction *action, EvWindow *window)
 {
 	GtkWidget   *chooser;
-	const gchar *default_uri;
+	const gchar *default_uri = NULL;
 	gchar       *parent_uri = NULL;
 
 	chooser = gtk_file_chooser_dialog_new (_("Open Document"),
@@ -2521,8 +2515,7 @@ ev_window_cmd_file_open (GtkAction *action, EvWindow *window)
 	gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (chooser), TRUE);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (chooser), FALSE);
 
-	default_uri = ev_application_get_filechooser_uri (EV_APP, GTK_FILE_CHOOSER_ACTION_OPEN);
-	if (!default_uri && window->priv->uri) {
+	if (window->priv->uri) {
 		GFile *file, *parent;
 
 		file = g_file_new_for_uri (window->priv->uri);
@@ -2972,7 +2965,6 @@ file_save_dialog_response_cb (GtkWidget *fc,
 			      EvWindow  *ev_window)
 {
 	gchar *uri;
-	GFile *file, *parent;
 
 	if (response_id != GTK_RESPONSE_OK) {
 		gtk_widget_destroy (fc);
@@ -2980,19 +2972,6 @@ file_save_dialog_response_cb (GtkWidget *fc,
 	}
 
 	uri = gtk_file_chooser_get_uri (GTK_FILE_CHOOSER (fc));
-	file = g_file_new_for_uri (uri);
-	parent = g_file_get_parent (file);
-	g_object_unref (file);
-	if (parent) {
-		gchar *folder_uri;
-
-		folder_uri = g_file_get_uri (parent);
-		ev_application_set_filechooser_uri (EV_APP,
-						    GTK_FILE_CHOOSER_ACTION_SAVE,
-						    folder_uri);
-		g_free (folder_uri);
-		g_object_unref (parent);
-	}
 
 	/* FIXME: remote copy should be done here rather than in the save job, 
 	 * so that we can track progress and cancel the operation
@@ -3017,7 +2996,7 @@ ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 	GtkWidget *fc;
 	gchar *base_name;
 	GFile *file;
-	const gchar *default_uri;
+	const gchar *folder;
 
 	fc = gtk_file_chooser_dialog_new (
 		_("Save a Copy"),
@@ -3039,16 +3018,9 @@ ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 	base_name = g_file_get_basename (file);
 	gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (fc), base_name);
 
-	default_uri = ev_application_get_filechooser_uri (EV_APP, GTK_FILE_CHOOSER_ACTION_SAVE);
-	if (default_uri) {
-		gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (fc), default_uri);
-	} else {
-		const gchar *folder;
-
-		folder = g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS);
-		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (fc),
-						     folder ? folder : g_get_home_dir ());
-	}
+	folder = g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS);
+	gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (fc),
+					     folder ? folder : g_get_home_dir ());
 
 	g_object_unref (file);
 	g_free (base_name);
