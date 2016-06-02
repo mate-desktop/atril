@@ -253,6 +253,7 @@ struct _EvWindowPrivate {
 
 #define GS_SCHEMA_NAME           "org.mate.Atril"
 #define GS_OVERRIDE_RESTRICTIONS "override-restrictions"
+#define GS_PAGE_CACHE_SIZE       "page-cache-size"
 #define GS_AUTO_RELOAD           "auto-reload"
 
 #define SIDEBAR_DEFAULT_SIZE    132
@@ -270,7 +271,6 @@ struct _EvWindowPrivate {
 #define EV_TOOLBARS_FILENAME "atril-toolbar.xml"
 
 #define MIN_SCALE 0.05409
-#define PAGE_CACHE_SIZE 52428800 /* 50MB */
 
 #define MAX_RECENT_ITEM_LEN (40)
 
@@ -1377,6 +1377,18 @@ setup_view_from_metadata (EvWindow *window)
 }
 
 static void
+page_cache_size_changed (GSettings *settings,
+			 gchar     *key,
+			 EvWindow  *ev_window)
+{
+	guint page_cache_mb;
+
+	page_cache_mb = g_settings_get_uint (settings, GS_PAGE_CACHE_SIZE);
+	ev_view_set_page_cache_size (EV_VIEW (ev_window->priv->view),
+				     page_cache_mb * 1024 * 1024);
+}
+
+static void
 ev_window_setup_default (EvWindow *ev_window)
 {
 	EvDocumentModel *model = ev_window->priv->model;
@@ -1477,6 +1489,27 @@ lockdown_changed (GSettings *settings,
 		  EvWindow    *ev_window)
 {
 	ev_window_setup_action_sensitivity (ev_window);
+}
+
+static GSettings *
+ev_window_ensure_settings (EvWindow *ev_window)
+{
+        EvWindowPrivate *priv = ev_window->priv;
+
+        if (priv->settings != NULL)
+                return priv->settings;
+
+        priv->settings = g_settings_new (GS_SCHEMA_NAME);
+        g_signal_connect (priv->settings,
+                          "changed::"GS_OVERRIDE_RESTRICTIONS,
+                          G_CALLBACK (override_restrictions_changed),
+                          ev_window);
+        g_signal_connect (priv->settings,
+			  "changed::"GS_PAGE_CACHE_SIZE,
+			  G_CALLBACK (page_cache_size_changed),
+			  ev_window);
+
+        return priv->settings;
 }
 
 static gboolean
@@ -4300,17 +4333,19 @@ ev_window_update_max_min_scale (EvWindow *window)
 	gdouble    min_width, min_height;
 	gdouble    width, height;
 	gdouble    max_scale;
+	guint      page_cache_mb;
 	gint       rotation = ev_document_model_get_rotation (window->priv->model);
 
 	if (!window->priv->document)
 		return;
 
+	page_cache_mb = g_settings_get_uint (window->priv->settings, GS_PAGE_CACHE_SIZE);
 	dpi = get_screen_dpi (window) / 72.0;
 
 	ev_document_get_min_page_size (window->priv->document, &min_width, &min_height);
 	width = (rotation == 0 || rotation == 180) ? min_width : min_height;
 	height = (rotation == 0 || rotation == 180) ? min_height : min_width;
-	max_scale = sqrt (PAGE_CACHE_SIZE / (width * dpi * 4 * height * dpi));
+	max_scale = sqrt ((page_cache_mb * 1024 * 1024) / (width * dpi * 4 * height * dpi));
 
 	action = gtk_action_group_get_action (window->priv->action_group,
 					      ZOOM_CONTROL_ACTION);
@@ -7398,6 +7433,7 @@ ev_window_init (EvWindow *ev_window)
 	GtkWidget *menuitem;
 	EggToolbarsModel *toolbars_model;
 	GObject *mpkeys;
+	guint page_cache_mb;
 	gchar *ui_path;
 #ifdef ENABLE_DBUS
 	GDBusConnection *connection;
@@ -7672,7 +7708,10 @@ ev_window_init (EvWindow *ev_window)
 	                         ev_window, 0);
 #endif
 #endif
-	ev_view_set_page_cache_size (EV_VIEW (ev_window->priv->view), PAGE_CACHE_SIZE);
+	page_cache_mb = g_settings_get_uint (ev_window_ensure_settings (ev_window),
+					     GS_PAGE_CACHE_SIZE);
+	ev_view_set_page_cache_size (EV_VIEW (ev_window->priv->view),
+				     page_cache_mb * 1024 * 1024);
 	ev_view_set_model (EV_VIEW (ev_window->priv->view), ev_window->priv->model);
 
 	ev_window->priv->password_view = ev_password_view_new (GTK_WINDOW (ev_window));
