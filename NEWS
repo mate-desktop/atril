@@ -1,3 +1,19 @@
+1.15.0
+------
+
+ * Translations update
+ * removed old gnome files
+ * fix minor build warning
+ * backend: drop some win32-specific stuff
+ * ev-window: add new gsetting to set the page cache size
+ * shell: Create metadata object even for temp files
+ * shell: Store and restore current folder when opening or saving file
+ * ev-window: Don't crash when trying to save a copy
+ * shell: Don't set the current folder while saving a file
+ * shell: Do not save file chooser open/save uri
+ * Add a setting to disable auto-reload
+ * backend, libdocument: reorganize some includes
+
 1.14.1
 ------
 
