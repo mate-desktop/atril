@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# André Rivero Castillo <hab130@gmail.com>, 2016
 # Antón Méixome <meixome@mancomun.org>, 2009
 # Fran Diéguez <frandieguez@ubuntu.com>, 2010
 # Fran Diéguez <frandieguez@ubuntu.com>, 2009-2010
@@ -17,8 +18,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-07 23:34+0300\n"
-"PO-Revision-Date: 2016-01-07 20:34+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-06-07 12:01+0000\n"
+"Last-Translator: André Rivero Castillo <hab130@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/mate/MATE/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,47 +111,47 @@ msgstr "Documentos DVI"
 
 #: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
-msgstr ""
+msgstr "Non é un documento ePub"
 
 #: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
-msgstr ""
+msgstr "non se puido recuperar o nome do arquivo"
 
 #: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
-msgstr ""
+msgstr "non se puido abrir o arquivo"
 
 #: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
-msgstr ""
+msgstr "non se puido extraer o arquivo"
 
 #: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
-msgstr ""
+msgstr "Non se puido recuperar o arquivo conlector."
 
 #: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
-msgstr ""
+msgstr "non se puido abrir o arquivo colector"
 
 #: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
-msgstr ""
+msgstr "o arquivo colector está corrompìdo"
 
 #: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
-msgstr ""
+msgstr "o arquivo epub non é válido ou está corrompido"
 
 #: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
-msgstr ""
+msgstr "o arquivo epub está corrompido, sen colector"
 
 #: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
-msgstr ""
+msgstr "non se puido analizar o manifesto de contido"
 
 #: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
-msgstr ""
+msgstr "o contido do arquivo non é válido"
 
 #: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
@@ -158,15 +159,15 @@ msgstr ""
 
 #: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
-msgstr ""
+msgstr "o arquivo epub carece de manifesto"
 
 #: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
-msgstr ""
+msgstr "Non se puido configurar a árbore do documento para a carga, faltan arquivos."
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
-msgstr ""
+msgstr "Documentos epub"
 
 #: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
@@ -467,7 +468,7 @@ msgstr "6400%"
 
 #: ../data/atril.appdata.xml.in.h:1
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr ""
+msgstr "Un Visor de Documentos para o entorno de escritorio MATE"
 
 #: ../data/atril.appdata.xml.in.h:2
 msgid ""
@@ -479,7 +480,7 @@ msgid ""
 " <p> Atril is a fork of Evince and part of the MATE Desktop Environment. If "
 "you would like to know more about MATE and Atril, please visit the project's"
 " home page. </p>"
-msgstr ""
+msgstr "<p> Atril é un sinxelo visor de documentos multi-páxina. Pode amosar e imprimir documentos  PostScript (PS), PostScript Encapsulado (EPS),  DJVU, DVI, XPS e Formato Portable de Documentos (PDF), así como tamén arquivos de banda deseñada. Cando o documento o permite, tamén permite buscar texto, copiar texto ó portapapeis, navegación en hipertextos e marcadores de táboa de contidos</p> <p> Atril é unha versión de Evince e forma parte do Entorno de Escritorio Mate. Se queres aprender máis sobre MATE e Atril, por favor visita a páxina do proxecto. </p>"
 
 #: ../data/atril.desktop.in.in.h:1
 msgid "Atril Document Viewer"
@@ -497,11 +498,11 @@ msgstr "Ver documentos de varias páxinas"
 
 #: ../data/org.mate.Atril.gschema.xml.h:1
 msgid "Override document restrictions"
-msgstr ""
+msgstr "Anular as restricións do documento."
 
 #: ../data/org.mate.Atril.gschema.xml.h:2
 msgid "Override document restrictions, like restriction to copy or to print."
-msgstr ""
+msgstr "Anular as restricións do documento, como por exemplo copiar ou imprimir."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -681,11 +682,11 @@ msgstr "%s, Horizontal (%s)"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:1
 msgid "Atril properties"
-msgstr ""
+msgstr "Propiedades de Atril"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:2
 msgid "Shows details for Atril documents"
-msgstr ""
+msgstr "Amosa detalles dos documentos de Atril"
 
 #: ../libmisc/ev-page-action-widget.c:68
 #, c-format
@@ -1106,15 +1107,15 @@ msgstr "Anexos"
 
 #: ../shell/ev-sidebar-bookmarks.c:152
 msgid "_Open Bookmark"
-msgstr ""
+msgstr "_Abrir Marcador"
 
 #: ../shell/ev-sidebar-bookmarks.c:154
 msgid "_Rename Bookmark"
-msgstr ""
+msgstr "_Renomear Marcador"
 
 #: ../shell/ev-sidebar-bookmarks.c:156
 msgid "_Remove Bookmark"
-msgstr ""
+msgstr "_Eliminar Marcador"
 
 #: ../shell/ev-sidebar-bookmarks.c:311 ../shell/ev-window.c:952
 #: ../shell/ev-window.c:4733
@@ -1124,7 +1125,7 @@ msgstr "Páxina %s"
 
 #: ../shell/ev-sidebar-bookmarks.c:609
 msgid "Bookmarks"
-msgstr ""
+msgstr "Marcadores"
 
 #: ../shell/ev-sidebar-layers.c:444
 msgid "Layers"
@@ -1151,7 +1152,7 @@ msgstr "Páxina %s — %s"
 msgid ""
 "Cannot enter presentation mode with ePub documents use fullscreen mode "
 "instead."
-msgstr ""
+msgstr "Non se pode entrar en modo presentación cos documentos ePub, en troques, usa a vista de pantalla completa."
 
 #: ../shell/ev-window.c:1577
 msgid "The document contains no pages"
@@ -1163,7 +1164,7 @@ msgstr "O documento só contén páxinas baleiras"
 
 #: ../shell/ev-window.c:1618
 msgid "Presentation mode is not supported for ePub documents."
-msgstr ""
+msgstr "O modo presentación non é soportado para documentos ePub."
 
 #: ../shell/ev-window.c:1810 ../shell/ev-window.c:1978
 msgid "Unable to open document"
@@ -1297,7 +1298,7 @@ msgstr "Pechar _despois de imprimir"
 
 #: ../shell/ev-window.c:4165
 msgid "Presentation mode is not supported for ePub documents"
-msgstr ""
+msgstr "O modo de presentación non soporta arquivos ePub"
 
 #: ../shell/ev-window.c:4477
 msgid "Toolbar Editor"
@@ -1345,7 +1346,7 @@ msgstr "Atril"
 msgid ""
 "© 1996–2009 The Evince authors\n"
 "© 2012–2016 The MATE developers"
-msgstr ""
+msgstr "© 1996–2009 The Evince authors\n© 2012–2016 The MATE developers"
 
 #: ../shell/ev-window.c:5083
 msgid "translator-credits"
@@ -1388,7 +1389,7 @@ msgstr "_Ir"
 
 #: ../shell/ev-window.c:6003
 msgid "_Bookmarks"
-msgstr ""
+msgstr "_Marcadores"
 
 #: ../shell/ev-window.c:6004
 msgid "_Help"
@@ -1490,11 +1491,11 @@ msgstr "Ir á última páxina"
 #. Bookmarks menu
 #: ../shell/ev-window.c:6078
 msgid "_Add Bookmark"
-msgstr ""
+msgstr "_Engadir Marcador"
 
 #: ../shell/ev-window.c:6079
 msgid "Add a bookmark for the current page"
-msgstr ""
+msgstr "Engadir un marcador á páxina actual"
 
 #. Help menu
 #: ../shell/ev-window.c:6083
