@@ -149,6 +149,8 @@ struct _EvWindowPrivate {
 	GtkWidget *sidebar_layers;
 	GtkWidget *sidebar_annots;
 	GtkWidget *sidebar_bookmarks;
+	EggToolbarsModel *toolbars_model;
+	GSettings        *interface_settings;
 #if ENABLE_EPUB
 	GtkWidget *webview;
 #endif
@@ -245,6 +247,9 @@ struct _EvWindowPrivate {
 #define MATE_LOCKDOWN_SAVE         "disable-save-to-disk"
 #define MATE_LOCKDOWN_PRINT        "disable-printing"
 #define MATE_LOCKDOWN_PRINT_SETUP  "disable-print-setup"
+
+#define MATE_INTERFACE_SCHEMA      "org.mate.interface"
+#define MATE_INTERFACE_TB_STYLE    "toolbar-style"
 
 #ifdef ENABLE_DBUS
 #define EV_WINDOW_DBUS_OBJECT_PATH "/org/mate/atril/Window/%d"
@@ -1478,6 +1483,27 @@ ev_window_refresh_window_thumbnail (EvWindow *ev_window)
 }
 
 static void
+ev_window_setup_toolbar_flags (EvWindow *ev_window)
+{
+	EggTbModelFlags flags = egg_toolbars_model_get_flags(ev_window->priv->toolbars_model, 0);
+	char *style;
+	if ((style = g_settings_get_string (ev_window->priv->interface_settings, MATE_INTERFACE_TB_STYLE))) {
+		flags &= ~EGG_TB_MODEL_STYLES_MASK;
+		if (!strcmp (style, "both")) {
+			flags |= EGG_TB_MODEL_BOTH;
+		} else if (!strcmp (style, "both-horiz")) {
+			flags |= EGG_TB_MODEL_BOTH_HORIZ;
+		} else if (!strcmp (style, "icons")) {
+			flags |= EGG_TB_MODEL_ICONS;
+		} else if (!strcmp (style, "text")) {
+			flags |= EGG_TB_MODEL_TEXT;
+		}
+		g_free(style);
+	}
+	egg_toolbars_model_set_flags(ev_window->priv->toolbars_model, 0, flags);
+}
+
+static void
 override_restrictions_changed (GSettings *settings,
 			       gchar     *key,
 			       EvWindow  *ev_window)
@@ -1512,6 +1538,14 @@ ev_window_ensure_settings (EvWindow *ev_window)
 			  ev_window);
 
         return priv->settings;
+}
+
+static void
+interface_changed (GSettings *settings,
+		   gchar       *key,
+		   EvWindow    *ev_window)
+{
+	ev_window_setup_toolbar_flags (ev_window);
 }
 
 static gboolean
@@ -5792,6 +5826,11 @@ ev_window_dispose (GObject *object)
 		priv->lockdown_settings = NULL;
 	}
 
+	if (priv->interface_settings) {
+		g_object_unref (priv->interface_settings);
+		priv->interface_settings = NULL;
+	}
+
 	if (priv->monitor) {
 		g_object_unref (priv->monitor);
 		priv->monitor = NULL;
@@ -5962,6 +6001,11 @@ ev_window_dispose (GObject *object)
 	if (priv->print_queue) {
 		g_queue_free (priv->print_queue);
 		priv->print_queue = NULL;
+	}
+
+	if (priv->toolbars_model) {
+		g_object_unref (priv->toolbars_model);
+		priv->toolbars_model = NULL;
 	}
 
 	G_OBJECT_CLASS (ev_window_parent_class)->dispose (object);
@@ -7462,7 +7506,6 @@ ev_window_init (EvWindow *ev_window)
 	GError *error = NULL;
 	GtkWidget *sidebar_widget;
 	GtkWidget *menuitem;
-	EggToolbarsModel *toolbars_model;
 	GObject *mpkeys;
 	guint page_cache_mb;
 	gchar *ui_path;
@@ -7594,14 +7637,20 @@ ev_window_init (EvWindow *ev_window)
 					      "/MainMenu/EditMenu/EditRotateRightMenu");
 	gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (menuitem), TRUE);
 
-	toolbars_model = get_toolbars_model ();
+	ev_window->priv->toolbars_model = get_toolbars_model ();
 	ev_window->priv->toolbar = GTK_WIDGET
 		(g_object_new (EGG_TYPE_EDITABLE_TOOLBAR,
 			       "ui-manager", ev_window->priv->ui_manager,
 			       "popup-path", "/ToolbarPopup",
-			       "model", toolbars_model,
+			       "model", ev_window->priv->toolbars_model,
 			       NULL));
-	g_object_unref (toolbars_model);
+
+	ev_window->priv->interface_settings = g_settings_new (MATE_INTERFACE_SCHEMA);
+	g_signal_connect (ev_window->priv->interface_settings,
+			  "changed",
+			  G_CALLBACK (interface_changed),
+			  ev_window);
+	ev_window_setup_toolbar_flags (ev_window);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (ev_window->priv->toolbar)),
