@@ -1487,7 +1487,8 @@ ev_window_setup_toolbar_flags (EvWindow *ev_window)
 {
 	EggTbModelFlags flags = egg_toolbars_model_get_flags(ev_window->priv->toolbars_model, 0);
 	char *style;
-	if ((style = g_settings_get_string (ev_window->priv->interface_settings, MATE_INTERFACE_TB_STYLE))) {
+	if (ev_window->priv->interface_settings &&
+	    (style = g_settings_get_string (ev_window->priv->interface_settings, MATE_INTERFACE_TB_STYLE))) {
 		flags &= ~EGG_TB_MODEL_STYLES_MASK;
 		if (!strcmp (style, "both")) {
 			flags |= EGG_TB_MODEL_BOTH;
@@ -7645,11 +7646,17 @@ ev_window_init (EvWindow *ev_window)
 			       "model", ev_window->priv->toolbars_model,
 			       NULL));
 
-	ev_window->priv->interface_settings = g_settings_new (MATE_INTERFACE_SCHEMA);
-	g_signal_connect (ev_window->priv->interface_settings,
-			  "changed",
-			  G_CALLBACK (interface_changed),
-			  ev_window);
+	GSettingsSchema *schema_mate_interface_schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default(), MATE_INTERFACE_SCHEMA, FALSE);
+	if (schema_mate_interface_schema != NULL) {
+		g_settings_schema_unref (schema_mate_interface_schema);
+
+		if (!ev_window->priv->interface_settings)
+			ev_window->priv->interface_settings = g_settings_new (MATE_INTERFACE_SCHEMA);
+		g_signal_connect (ev_window->priv->interface_settings,
+				  "changed",
+				  G_CALLBACK (interface_changed),
+				  ev_window);
+	}
 	ev_window_setup_toolbar_flags (ev_window);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
