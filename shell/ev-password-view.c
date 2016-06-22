@@ -120,8 +120,10 @@ ev_password_view_init (EvPasswordView *password_view)
 	password_view->priv = EV_PASSWORD_VIEW_GET_PRIVATE (password_view);
 
 	password_view->priv->password_save = G_PASSWORD_SAVE_NEVER;
-	
+
+#if !GTK_CHECK_VERSION(3,0,0)
 	gtk_widget_push_composite_child ();
+#endif
 
 	/* set ourselves up */
 	align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
@@ -158,7 +160,9 @@ ev_password_view_init (EvPasswordView *password_view)
 	gtk_box_pack_end (GTK_BOX (hbox), button, FALSE, FALSE, 0);
 
 	gtk_widget_show_all (align);
+#if !GTK_CHECK_VERSION(3,0,0)
 	gtk_widget_pop_composite_child ();
+#endif
 }
 
 /* Public functions */
