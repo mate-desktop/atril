@@ -28,6 +28,10 @@
 #include "ev-page-action.h"
 #include "ev-page-action-widget.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
+#endif
+
 /* Widget we pass back */
 static void  ev_page_action_widget_init       (EvPageActionWidget      *action_widget);
 static void  ev_page_action_widget_class_init (EvPageActionWidgetClass *action_widget);

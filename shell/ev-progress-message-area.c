@@ -24,6 +24,10 @@
 
 #include "ev-progress-message-area.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 #define EV_PROGRESS_MESSAGE_AREA_GET_PRIVATE(obj) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((obj), EV_TYPE_PROGRESS_MESSAGE_AREA, EvProgressMessageAreaPrivate))
 

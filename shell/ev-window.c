@@ -106,6 +106,10 @@
 #include "ev-media-player-keys.h"
 #endif /* ENABLE_DBUS */
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 typedef enum {
 	PAGE_MODE_DOCUMENT,
 	PAGE_MODE_PASSWORD

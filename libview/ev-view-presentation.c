@@ -34,6 +34,7 @@
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 #define gdk_cursor_unref g_object_unref
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
 #endif
 
 enum {

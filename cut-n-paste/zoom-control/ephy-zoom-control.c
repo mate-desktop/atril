@@ -28,6 +28,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 #define EPHY_ZOOM_CONTROL_GET_PRIVATE(object)\
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EPHY_TYPE_ZOOM_CONTROL, EphyZoomControlPrivate))
 

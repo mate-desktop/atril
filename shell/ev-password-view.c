@@ -30,6 +30,11 @@
 #include "ev-keyring.h"
 #include "ev-password-view.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 enum {
 	UNLOCK,
 	LAST_SIGNAL

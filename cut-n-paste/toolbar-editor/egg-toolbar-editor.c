@@ -31,6 +31,7 @@
 #if GTK_CHECK_VERSION (3, 0, 0)
 #define gdk_cursor_unref g_object_unref
 #define gtk_widget_render_icon(A,B,C,D) gtk_widget_render_icon_pixbuf(A,B,C)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
 #endif
 
 static const GtkTargetEntry dest_drag_types[] = {
