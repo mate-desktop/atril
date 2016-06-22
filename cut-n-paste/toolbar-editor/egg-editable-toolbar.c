@@ -1822,7 +1822,11 @@ new_separator_pixbuf (void)
   GtkWidget *separator;
   GdkPixbuf *pixbuf;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+  separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
+#else
   separator = gtk_vseparator_new ();
+#endif
   pixbuf = new_pixbuf_from_widget (separator);
   return pixbuf;
 }
