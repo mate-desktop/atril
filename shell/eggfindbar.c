@@ -331,7 +331,11 @@ egg_find_bar_init (EggFindBar *find_bar)
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), priv->find_entry);
 
   /* Prev */
+#if GTK_CHECK_VERSION (3, 0, 0)
   arrow = gtk_image_new_from_icon_name ("pan-start-symbolic", GTK_ICON_SIZE_BUTTON);
+#else
+  arrow = gtk_arrow_new (GTK_ARROW_LEFT, GTK_SHADOW_NONE);
+#endif
   priv->previous_button = gtk_tool_button_new (arrow, Q_("Find Pre_vious"));
   gtk_tool_button_set_use_underline (GTK_TOOL_BUTTON (priv->previous_button), TRUE);
   gtk_tool_item_set_is_important (priv->previous_button, TRUE);
@@ -339,7 +343,11 @@ egg_find_bar_init (EggFindBar *find_bar)
 			       _("Find previous occurrence of the search string"));
 
   /* Next */
+#if GTK_CHECK_VERSION (3, 0, 0)
   arrow = gtk_image_new_from_icon_name ("pan-end-symbolic", GTK_ICON_SIZE_BUTTON);
+#else
+  arrow = gtk_arrow_new (GTK_ARROW_RIGHT, GTK_SHADOW_NONE);
+#endif
   priv->next_button = gtk_tool_button_new (arrow, Q_("Find Ne_xt"));
   gtk_tool_button_set_use_underline (GTK_TOOL_BUTTON (priv->next_button), TRUE);
   gtk_tool_item_set_is_important (priv->next_button, TRUE);
