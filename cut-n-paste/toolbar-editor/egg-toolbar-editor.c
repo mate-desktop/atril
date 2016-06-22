@@ -673,9 +673,7 @@ setup_editor (EggToolbarEditor *editor)
 static void
 egg_toolbar_editor_init (EggToolbarEditor *t)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_orientable_set_orientation (GTK_ORIENTABLE (t), GTK_ORIENTATION_VERTICAL);
-#endif
 
   t->priv = EGG_TOOLBAR_EDITOR_GET_PRIVATE (t);
 
