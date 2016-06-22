@@ -29,6 +29,10 @@
 #include "ev-job-scheduler.h"
 #include "ev-stock-icons.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_widget_render_icon(A,B,C,D) gtk_widget_render_icon_pixbuf(A,B,C)
+#endif
+
 enum {
 	PROP_0,
 	PROP_WIDGET
