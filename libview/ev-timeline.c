@@ -21,6 +21,7 @@
 
 #include <glib.h>
 #include <math.h>
+#include <gtk/gtk.h>
 #include <gdk/gdk.h>
 #include "ev-timeline.h"
 
@@ -150,7 +151,9 @@ ev_timeline_run_frame (EvTimeline *timeline)
 	gdouble         progress;
 	guint           elapsed_time;
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gdk_threads_enter();
+#endif
 
 	priv = EV_TIMELINE_GET_PRIV (timeline);
 
@@ -174,7 +177,9 @@ ev_timeline_run_frame (EvTimeline *timeline)
 		}
 	}
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gdk_threads_leave();
+#endif
 
 	return TRUE;
 }
