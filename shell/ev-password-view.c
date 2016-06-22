@@ -251,7 +251,11 @@ ev_password_view_ask_password (EvPasswordView *password_view)
 	GtkWidget *content_area, *action_area;
 	GtkWidget *entry_container;
 	GtkWidget *hbox, *main_vbox, *vbox, *icon;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkWidget *grid;
+#else
 	GtkWidget *table;
+#endif
 	GtkWidget *label;
 	gchar     *format, *markup, *file_name;
 
@@ -332,11 +336,19 @@ ev_password_view_ask_password (EvPasswordView *password_view)
 			    FALSE, FALSE, 0);
 	gtk_widget_show (entry_container);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	grid = gtk_grid_new ();
+	gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+	gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+	gtk_container_add (GTK_CONTAINER (entry_container), grid);
+	gtk_widget_show (grid);
+#else
 	table = gtk_table_new (1, 2, FALSE);
 	gtk_table_set_col_spacings (GTK_TABLE (table), 12);
 	gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 	gtk_container_add (GTK_CONTAINER (entry_container), table);
 	gtk_widget_show (table);
+#endif
 
 	label = gtk_label_new_with_mnemonic (_("_Password:"));
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
@@ -349,6 +361,13 @@ ev_password_view_ask_password (EvPasswordView *password_view)
 	g_signal_connect (password_view->priv->password_entry, "activate",
 			  G_CALLBACK (ev_password_dialog_entry_activated_cb),
 			  dialog);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
+	gtk_widget_show (label);
+
+	gtk_grid_attach (GTK_GRID (grid), password_view->priv->password_entry, 1, 0, 1, 1);
+	gtk_widget_set_hexpand (password_view->priv->password_entry, TRUE);
+#else
 	gtk_table_attach (GTK_TABLE (table), label,
 			  0, 1, 0, 1,
 			  GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);	
@@ -356,6 +375,7 @@ ev_password_view_ask_password (EvPasswordView *password_view)
 
 	gtk_table_attach_defaults (GTK_TABLE (table), password_view->priv->password_entry,
 				   1, 2, 0, 1);
+#endif
 	gtk_widget_show (password_view->priv->password_entry);
 	
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label),
