@@ -347,7 +347,12 @@ ev_attachment_launch_app (EvAttachment *attachment,
 {
 	gboolean           result;
 	GList             *files = NULL;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkAppLaunchContext *context;
+	GdkDisplay          *display;
+#else
 	GAppLaunchContext *context = NULL;
+#endif
 	GError            *ioerror = NULL;
 
 	g_assert (G_IS_FILE (attachment->priv->tmp_file));
@@ -355,6 +360,17 @@ ev_attachment_launch_app (EvAttachment *attachment,
 
 	files = g_list_prepend (files, attachment->priv->tmp_file);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	display = screen ? gdk_screen_get_display (screen) : gdk_display_get_default ();
+	context = gdk_display_get_app_launch_context (display);
+	gdk_app_launch_context_set_screen (context, screen);
+	gdk_app_launch_context_set_timestamp (context, timestamp);
+
+	result = g_app_info_launch (attachment->priv->app, files,
+							    G_APP_LAUNCH_CONTEXT (context),
+							    &ioerror);
+	g_object_unref (context);
+#else
 	context = G_APP_LAUNCH_CONTEXT (gdk_app_launch_context_new ());
 	gdk_app_launch_context_set_screen (GDK_APP_LAUNCH_CONTEXT (context), screen);
 	gdk_app_launch_context_set_timestamp (GDK_APP_LAUNCH_CONTEXT (context), timestamp);
@@ -364,6 +380,7 @@ ev_attachment_launch_app (EvAttachment *attachment,
 	
 	if (context)
 		g_object_unref (context);
+#endif
 
 	if (!result) {
 		g_set_error (error,

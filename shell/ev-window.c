@@ -6581,7 +6581,12 @@ launch_action (EvWindow *window, EvLinkAction *action)
 	GAppInfo *app_info;
 	GFile *file;
 	GList file_list = {NULL};
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkAppLaunchContext *context;
+	GdkScreen *screen;
+#else
 	GAppLaunchContext *context;
+#endif
 	GError *error = NULL;
 
 	if (filename == NULL)
@@ -6612,6 +6617,15 @@ launch_action (EvWindow *window, EvLinkAction *action)
 		return;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	screen = gtk_window_get_screen (GTK_WINDOW (window));
+	context = gdk_display_get_app_launch_context (gdk_screen_get_display (screen));
+	gdk_app_launch_context_set_screen (context, screen);
+	gdk_app_launch_context_set_timestamp (context, gtk_get_current_event_time ());
+
+	file_list.data = file;
+	if (!g_app_info_launch (app_info, &file_list, G_APP_LAUNCH_CONTEXT (context), &error)) {
+#else
 	context = G_APP_LAUNCH_CONTEXT (gdk_app_launch_context_new ());
 	gdk_app_launch_context_set_screen (GDK_APP_LAUNCH_CONTEXT (context),
 					   gtk_window_get_screen (GTK_WINDOW (window)));
@@ -6620,6 +6634,7 @@ launch_action (EvWindow *window, EvLinkAction *action)
 	
 	file_list.data = file;
 	if (!g_app_info_launch (app_info, &file_list, context, &error)) {
+#endif
 		ev_window_error_message (window, error,
 					 "%s",
 					 _("Unable to launch external application."));
@@ -6640,6 +6655,15 @@ launch_external_uri (EvWindow *window, EvLinkAction *action)
 	const gchar *uri = ev_link_action_get_uri (action);
 	GError *error = NULL;
 	gboolean ret;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GdkAppLaunchContext *context;
+	GdkScreen *screen;
+
+	screen = gtk_window_get_screen (GTK_WINDOW (window));
+	context = gdk_display_get_app_launch_context (gdk_screen_get_display (screen));
+	gdk_app_launch_context_set_screen (context, screen);
+	gdk_app_launch_context_set_timestamp (context, gtk_get_current_event_time ());
+#else
 	GAppLaunchContext *context;
 
 	context = G_APP_LAUNCH_CONTEXT (gdk_app_launch_context_new ());
@@ -6647,6 +6671,7 @@ launch_external_uri (EvWindow *window, EvLinkAction *action)
 					   gtk_window_get_screen (GTK_WINDOW (window)));
 	gdk_app_launch_context_set_timestamp (GDK_APP_LAUNCH_CONTEXT (context),
 					      gtk_get_current_event_time ());
+#endif
 
 	if (!g_strstr_len (uri, strlen (uri), "://") &&
 	    !g_str_has_prefix (uri, "mailto:")) {
@@ -6671,10 +6696,17 @@ launch_external_uri (EvWindow *window, EvLinkAction *action)
 				new_uri = g_strdup_printf ("file:///%s", uri);
 			}
 		}
+#if GTK_CHECK_VERSION (3, 0, 0)
+		ret = g_app_info_launch_default_for_uri (new_uri, G_APP_LAUNCH_CONTEXT (context), &error);
+		g_free (new_uri);
+	} else {
+		ret = g_app_info_launch_default_for_uri (uri, G_APP_LAUNCH_CONTEXT (context), &error);
+#else
 		ret = g_app_info_launch_default_for_uri (new_uri, context, &error);
 		g_free (new_uri);
 	} else {
 		ret = g_app_info_launch_default_for_uri (uri, context, &error);
+#endif
 	}
 
   	if (ret == FALSE) {
