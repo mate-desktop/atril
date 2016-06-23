@@ -284,10 +284,12 @@ ev_password_view_ask_password (EvPasswordView *password_view)
 	gtk_dialog_set_default_response (dialog, GTK_RESPONSE_OK);
 	gtk_dialog_set_response_sensitive (GTK_DIALOG (dialog),
 					   GTK_RESPONSE_OK, FALSE);
+#if !GTK_CHECK_VERSION(3,0,0)
 	gtk_dialog_set_alternative_button_order (dialog,
 						 GTK_RESPONSE_OK,
 						 GTK_RESPONSE_CANCEL,
 						 -1);
+#endif
 	
 	/* Build contents */
 	hbox = gtk_hbox_new (FALSE, 12);
