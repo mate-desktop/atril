@@ -528,7 +528,11 @@ ev_view_presentation_update_current_page (EvViewPresentation *pview,
 	if (pview->cursor != EV_VIEW_CURSOR_HIDDEN) {
 		gint x, y;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+		ev_document_misc_get_pointer_position (GTK_WIDGET (pview), &x, &y);
+#else
 		gtk_widget_get_pointer (GTK_WIDGET (pview), &x, &y);
+#endif
 		ev_view_presentation_set_cursor_for_location (pview, x, y);
 	}
 
@@ -1219,7 +1223,11 @@ ev_view_presentation_key_press_event (GtkWidget   *widget,
 
 		ev_view_presentation_goto_window_create (pview);
 		ev_view_presentation_goto_window_send_key_event (pview, (GdkEvent *)event);
+#if GTK_CHECK_VERSION(3, 0, 0)
+		ev_document_misc_get_pointer_position (GTK_WIDGET (pview), &x, &y);
+#else
 		gtk_widget_get_pointer (GTK_WIDGET (pview), &x, &y);
+#endif
 		gtk_window_move (GTK_WINDOW (pview->goto_window), x, y);
 		gtk_widget_show (pview->goto_window);
 		ev_view_presentation_goto_entry_grab_focus (pview);
