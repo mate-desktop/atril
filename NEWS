@@ -1,3 +1,49 @@
+1.15.1
+------
+
+ * Translations update
+ * dvi: Use new font name instead of the old one
+ * dvi: Use t1 font mapping files
+ * xps: Fill version information of EvDocumentBackendInfo
+ * comics: Fix some memory leaks
+ * eggfindbar: Find next/previous with control + Up/Down
+ * libview: Add an option to show odd pages on the left in dual mode
+ * libview: Add dual-odd-left property to EvDocumentModel
+ * Refresh thumbnail only when window has a document
+ * Fix rotated tiff documents
+ * GTK+-3 ev-view-presentation: Fix a unused-but-set-variable compile warning
+ * GTK+-3 toolbar-editor: port GtkTable to GtkGrid
+ * GTK+-3: Use ev_document_misc_get_pointer_position() instad of deprecated gtk_widget_get_pointer()
+ * GTK+-3: do not use deprecated gtk_dialog_set_alternative_button_order
+ * GTK+-3: do not use gdk_app_launch_context_new()
+ * Use gdk_display_get_app_launch_context() instead.
+ * libdocument: Document EvAnnotation.
+ * libdocument: Make EvSourceLink boxed.
+ * libdocument: Add missing annotation to ev_document_factory_get_document.
+ * libdocument: Use G_DEFINE_BOXED_TYPE instead of custom macro
+ * document-model: annotate ev_document_model_get_document()
+ * configure: Bump poppler requirements to 0.18.0
+ * shell: add plural form for "cancel print jobs before closing" dialog
+ * GTK+-3 cut-n-paste: Update toolbar-editor from libegg
+ * Fix undefined variable warnings in dvi-backend
+ * GTK+-3: Use GtkGrid instead of GtkTable
+ * GTK+-3 ev-sidebar-annotations: replace deprecated gtk_widget_render_icon
+ * GTK+-3 ev-password-view: Do not use deprecate composite-child API
+ * GTK+-3: fix deprecated gtk_{v/h}separator_new
+ * synctex: update to 1.18
+ * synctex: Fix -Wundef warning
+ * synctex: Update from upstream
+ * synctex: fix compile warnings
+ * synctex: update to version 1.17
+ * cut-n-paste: Update synctex parser to version 1.16
+ * schema: some corrections and a typo fix
+ * egg_toolbar_editor: use gtk_orientable_set_orientation () for both toolkit versions
+ * GTK+-3.0: avoid deprecated usage of GtkArrow
+ * Do not use deprecated GTK_TYPE_VBOX definitions
+ * GTK3 ev-timeline: don't use deprecated gdk_threads_{enter/leave} ()
+ * GTK+-3: do not use deprecated gtk_{h/v}box_new
+ * GTK3 egg: don't use deprecated gdk_threads_{enter/leave} ()
+
 1.15.0
 ------
 
