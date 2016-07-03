@@ -5107,6 +5107,10 @@ ev_view_class_init (EvViewClass *class)
 
 	object_class->dispose = ev_view_dispose;
 
+#if GTK_CHECK_VERSION(3, 20, 0)
+	gtk_widget_class_set_css_name (widget_class, "evview");
+#endif
+
 #if GTK_CHECK_VERSION (3, 0, 0)
 	container_class->remove = ev_view_remove;
 	container_class->forall = ev_view_forall;
