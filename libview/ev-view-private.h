@@ -108,11 +108,13 @@ typedef struct _EvHeightToPageCache {
 } EvHeightToPageCache;
 
 struct _EvView {
-	GtkLayout layout;
-
 #if GTK_CHECK_VERSION (3, 0, 0)
+	GtkContainer layout;
+
 	/* Container */
 	GList *children;
+#else
+	GtkLayout layout;
 #endif
 
 	EvDocument *document;
@@ -208,7 +210,11 @@ struct _EvView {
 };
 
 struct _EvViewClass {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	GtkContainerClass parent_class;
+#else
 	GtkLayoutClass parent_class;
+#endif
 
 	void    (*binding_activated)	  (EvView         *view,
 					   GtkScrollType   scroll,
