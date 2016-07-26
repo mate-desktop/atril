@@ -1,6 +1,31 @@
 1.15.2
 ------
 
+    Translations update
+    fix sendto with non-latin filenames or filenames with spaces
+    Split dual mode option into dual mode with odd and even pages on the left
+    document-model: Make dual mode and dual mode odd page left mutally exclusive
+    Allow to use Send To action from the toolbar
+    Use document-send icon for Send To action
+    Add Send To action to file menu
+    Add --named-dest command line argument
+    distcheck: explicitly use currently selected GTK+ version
+    GTK+-3 gimpcellrenderertoggle: Fix compile warnings
+    tiff: issue warnings on print errors
+    tiff: fix compile warning
+    toolbar-editor: Fix compiler warning
+    ev-view: add missing semicolon to gtk-doc comment
+    shell: Fix -Wformat-nonliteral warning
+    tiff: Fix for -Wformat-nonliteral warnings
+    Setting parent for annotation properties dialog
+    GTK+-3 libview: Fix compiler warnings
+    GTK+-3 ev-view-presentation: Fix a crash during the build with introspection enabled
+    ev-view: Fix compile warning
+    GTK+-3.20 ev-view: Update EvView style to use CSS node name
+    Gtk+-3 ev-view: Set a style class on the view so it can be more easily styled
+    GTK+-3 ev-view-private: Use GtkContainer and GtkContainerClass in EvView and EvViewClass
+    GTK+-3 ev-view: Make EvView inherit from GtkContainer instead of GtkFixed
+
 1.15.1
 ------
 
