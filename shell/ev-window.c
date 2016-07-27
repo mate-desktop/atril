@@ -42,7 +42,6 @@
 #include <gtk/gtk.h>
 
 #ifdef WITH_MATEDESKTOP
-#include <libmate-desktop/mate-aboutdialog.h>
 #include <libmate-desktop/mate-gsettings.h>
 #endif
 
@@ -5233,11 +5232,7 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 
 	comments = build_comments_string (ev_window->priv->document);
 
-#ifdef WITH_MATEDESKTOP
-	mate_show_about_dialog (
-#else
 	gtk_show_about_dialog (
-#endif
 		GTK_WINDOW (ev_window),
 		"name", _("Atril"),
 		"version", VERSION,
