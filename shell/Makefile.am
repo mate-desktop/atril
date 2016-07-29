@@ -19,7 +19,6 @@ AM_CPPFLAGS=							\
 	-DLIBEXECDIR=\""$(libexecdir)"\"			\
 	-DATRIL_COMPILATION					\
 	$(SHELL_CFLAGS)						\
-	$(MATE_DESKTOP_CFLAGS)					\
 	$(WARN_CFLAGS)						\
 	$(DISABLE_DEPRECATED)
 
@@ -112,8 +111,7 @@ atril_LDADD=										\
 	$(top_builddir)/libdocument/libatrildocument.la					\
 	$(top_builddir)/libview/libatrilview.la						\
 	$(top_builddir)/libmisc/libevmisc.la						\
-	$(SHELL_LIBS)									\
-	$(MATE_DESKTOP_LIBS)
+	$(SHELL_LIBS)
 
 BUILT_SOURCES = ev-marshal.h ev-marshal.c
 
