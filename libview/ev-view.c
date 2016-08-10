@@ -3623,7 +3623,7 @@ ev_view_button_press_event (GtkWidget      *widget,
 {
 	EvView *view = EV_VIEW (widget);
 
-	if (!view->document)
+	if (!view->document || ev_document_get_n_pages (view->document) <= 0)
 		return FALSE;
 	
 	if (!gtk_widget_has_focus (widget)) {
