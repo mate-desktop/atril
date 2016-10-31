@@ -619,7 +619,7 @@ if test "x$enable_dvi" = "xyes"; then
     ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}application/x-dvi;application/x-bzdvi;application/x-gzdvi;"
 fi
 if test "x$enable_djvu" = "xyes"; then
-    ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}image/vnd.djvu;"
+    ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}image/vnd.djvu;image/vnd.djvu+multipage;"
 fi
 if test "x$enable_tiff" = "xyes"; then
     ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}image/tiff;"
