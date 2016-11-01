@@ -1,3 +1,16 @@
+1.16.1
+------
+
+ * Build: require poppler 0.22.0 (for case-sensitive search in PDFs)
+ * [comics] fix MIME type comparisons
+ * [comics] support application/vnd.comicbook+zip MIME type
+ * [djvu] support image/vnd.djvu+multipage MIME type
+ * [pdf] fix case-sensitive search
+ * thumbnailer: skip epub files (thumbnail generation never worked
+   there and caused segfaults)
+ * Some code cleanups
+ * Translations update
+
 1.16.0
 ------
 
