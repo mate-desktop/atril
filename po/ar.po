@@ -6,7 +6,7 @@
 # alibacha19 <alibacha19@gmail.com>, 2015
 # Khaled Hosny <khaledhosny@eglug.org>, 2006-2010
 # مهدي السطيفي <chinoune.mehdi@gmail.com>, 2014
-# Mosaab Alzoubi <moceap@hotmail.com>, 2013-2014
+# Mosaab Alzoubi <moceap@hotmail.com>, 2013-2014,2016
 # Usama Akkad <uak@aya.sy>, 2008
 # Yousef Raffah <yousef@raffah.com>, 2006
 # مهدي السطيفي <chinoune.mehdi@gmail.com>, 2014
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-27 12:23+0300\n"
-"PO-Revision-Date: 2016-07-27 09:24+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-10-03 05:31+0000\n"
+"Last-Translator: Mosaab Alzoubi <moceap@hotmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/mate/MATE/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -506,29 +506,29 @@ msgstr "تجاوز قيود المستند، مثل قيود النسخ أو إ�
 
 #: ../data/org.mate.Atril.gschema.xml.h:3
 msgid "Automatically reload the document"
-msgstr ""
+msgstr "إعادة تحميل المستند تلقائيًا"
 
 #: ../data/org.mate.Atril.gschema.xml.h:4
 msgid "Whether the document is automatically reloaded on file change."
-msgstr ""
+msgstr "إعادة تحميل الملف تلقائيًا عند أي تغيير له."
 
 #: ../data/org.mate.Atril.gschema.xml.h:5
 msgid "The URI of the directory last used to open or save a document."
-msgstr ""
+msgstr "رابط آخر مجلد استخدم لفتح او حفظ مستند."
 
 #: ../data/org.mate.Atril.gschema.xml.h:6
 msgid "The URI of the directory last used to save a picture."
-msgstr ""
+msgstr "رابط آخر مجلد استخدم لحفظ صورة."
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "حجم الصفحة المخبئية بالميغا بايت"
 
 #: ../data/org.mate.Atril.gschema.xml.h:8
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
-msgstr ""
+msgstr "الحجم الأقصى الذي ستسعمله الذاكرة الخبيئة للصفحات المفتوحة، يحد من مستوى التقريب."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -1272,7 +1272,7 @@ msgstr "احفظ نسخة"
 
 #: ../shell/ev-window.c:3173
 msgid "Could not send current document"
-msgstr ""
+msgstr "تعذر إرسال المستند الحالي"
 
 #: ../shell/ev-window.c:3423
 #, c-format
@@ -1329,12 +1329,12 @@ msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "يوجد عدد %d عمليات طباعة فاعلة حاليًا. أأنتظر حتى الإكمال قبل الإغلاق؟"
+msgstr[1] "يوجد عدد %d عمليات طباعة فاعلة حاليًا. أأنتظر حتى الإكمال قبل الإغلاق؟"
+msgstr[2] "يوجد عدد %d عمليات طباعة فاعلة حاليًا. أأنتظر حتى الإكمال قبل الإغلاق؟"
+msgstr[3] "يوجد عدد %d عمليات طباعة فاعلة حاليًا. أأنتظر حتى الإكمال قبل الإغلاق؟"
+msgstr[4] "يوجد عدد %d عمليات طباعة فاعلة حاليًا. أأنتظر حتى الإكمال قبل الإغلاق؟"
+msgstr[5] "يوجد عدد %d عمليات طباعة فاعلة حاليًا. أأنتظر حتى الإكمال قبل الإغلاق؟"
 
 #: ../shell/ev-window.c:3844
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1478,11 +1478,11 @@ msgstr "احفظ نسخة من المستند الحالي"
 
 #: ../shell/ev-window.c:6186
 msgid "Send _To..."
-msgstr ""
+msgstr "أرسل_ إلى..."
 
 #: ../shell/ev-window.c:6187
 msgid "Send current document by mail, instant message..."
-msgstr ""
+msgstr "أرسل المستند الحالي بالبريد الإلكتروني، رسالة فورية..."
 
 #: ../shell/ev-window.c:6189
 msgid "_Print…"
@@ -1614,19 +1614,19 @@ msgstr "اعرض كامل المستند"
 
 #: ../shell/ev-window.c:6335
 msgid "_Dual (Even pages left)"
-msgstr ""
+msgstr "مزدوج (الصفحات ال_زوجية يسارًا)"
 
 #: ../shell/ev-window.c:6336
 msgid "Show two pages at once with even pages on the left"
-msgstr ""
+msgstr "أظهر صفحتين كل مرة حيث اليسرى ذات الرقم الزّوجي"
 
 #: ../shell/ev-window.c:6338
 msgid "Dual (_Odd pages left)"
-msgstr ""
+msgstr "مزدوج (الصفحات ال_فردية يسارًا)"
 
 #: ../shell/ev-window.c:6339
 msgid "Show two pages at once with odd pages on the left"
-msgstr ""
+msgstr "أظهر صفحتين كل مرة حيث اليسرى ذات الرقم الفردي"
 
 #: ../shell/ev-window.c:6341
 msgid "_Fullscreen"
@@ -1713,7 +1713,7 @@ msgstr "انتقل عبر الصفحات المُزارة"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6551
 msgid "Send To"
-msgstr ""
+msgstr "أرسل إلى"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6557
@@ -1807,11 +1807,11 @@ msgstr "شُغّلت \"منضدة\" في نمط ملء الشاشة"
 
 #: ../shell/main.c:69
 msgid "Named destination to display."
-msgstr ""
+msgstr "الوجهة المحددة للعرض."
 
 #: ../shell/main.c:69
 msgid "DEST"
-msgstr ""
+msgstr "الواجهة"
 
 #: ../shell/main.c:70
 msgid "Run atril in presentation mode"
