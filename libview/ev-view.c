@@ -5707,9 +5707,7 @@ draw_surface (cairo_t 	      *cr,
 	gdouble width, height;
 	gdouble device_scale_x = 1, device_scale_y = 1;
 
-#ifdef HAVE_HIDPI_SUPPORT
 	cairo_surface_get_device_scale (surface, &device_scale_x, &device_scale_y);
-#endif
 	width = cairo_image_surface_get_width (surface) / device_scale_x;
 	height = cairo_image_surface_get_height (surface) / device_scale_y;
 
@@ -5841,9 +5839,7 @@ draw_one_page (EvView       *view,
 			return;
 		}
 
-#ifdef HAVE_HIDPI_SUPPORT
 		cairo_surface_get_device_scale (page_surface, &device_scale_x, &device_scale_y);
-#endif
 
 		if (page == current_page)
 			ev_view_set_loading (view, FALSE);
@@ -5878,9 +5874,7 @@ draw_one_page (EvView       *view,
 			scale_x = (gdouble)width / cairo_image_surface_get_width (page_surface);
 			scale_y = (gdouble)height / cairo_image_surface_get_height (page_surface);
 
-#ifdef HAVE_HIDPI_SUPPORT
 			cairo_surface_get_device_scale (page_surface, &device_scale_x, &device_scale_y);
-#endif
 
 			scale_x *= device_scale_x;
 			scale_y *= device_scale_y;
