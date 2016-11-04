@@ -82,7 +82,7 @@ AC_SUBST([EV_INTLTOOL_ATRIL_BACKEND_RULE])
 GLIB_GSETTINGS
 
 dnl Specify required versions of dependencies
-CAIRO_REQUIRED=1.10.0
+CAIRO_REQUIRED=1.14.0
 GLIB_REQUIRED=2.50.0
 GTK_REQUIRED=3.22.0
 WEBKIT_REQUIRED=2.4.3
@@ -137,23 +137,6 @@ AC_ARG_VAR([XMLLINT],[the xmllint programme])
 AC_PATH_PROG([XMLLINT],[xmllint],[])
 if test -z "$XMLLINT"; then
   AC_MSG_ERROR([xmllint not found])
-fi
-
-# Although GTK+ 3.10 includes hi-dpi functionality, it does not require a cairo with
-# cairo_surface_set_device_scale(), which we also need if we're to support hi-dpi,
-# so we need check for that explicity.
-
-atril_save_LIBS=$LIBS
-LIBS="$LIBS $LIBVIEW_LIBS"
-AC_CHECK_FUNCS(cairo_surface_set_device_scale)
-LIBS=$atril_save_LIBS
-
-AC_MSG_CHECKING([for hi-dpi support])
-if test "$ac_cv_func_cairo_surface_set_device_scale" = yes ; then
-   AC_DEFINE([HAVE_HIDPI_SUPPORT], [1], [Define if cairo and GTK+ have necessary functions for hi-dpi])
-   AC_MSG_RESULT([yes])
-else
-   AC_MSG_RESULT([no])
 fi
 
 dnl
