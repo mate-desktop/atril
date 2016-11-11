@@ -24,9 +24,8 @@ AM_CPPFLAGS=							\
 
 bin_PROGRAMS=atril
 
-libexec_PROGRAMS=atril-convert-metadata
 if ENABLE_DBUS
-libexec_PROGRAMS += atrild
+libexec_PROGRAMS = atrild
 endif
 
 atril_SOURCES=				\
@@ -114,12 +113,6 @@ atril_LDADD=										\
 	$(SHELL_LIBS)
 
 BUILT_SOURCES = ev-marshal.h ev-marshal.c
-
-atril_convert_metadata_SOURCES=	\
-	ev-convert-metadata.c
-
-atril_convert_metadata_LDADD=		\
-	$(SHELL_LIBS)
 
 if ENABLE_DBUS
 atrild_SOURCES=			\
