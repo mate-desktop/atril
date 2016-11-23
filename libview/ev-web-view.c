@@ -219,14 +219,14 @@ ev_web_view_new (void)
 
 	webview = g_object_new (EV_TYPE_WEB_VIEW, NULL);
 
-	#if GTK_CHECK_VERSION (3, 0, 0)
-		EV_WEB_VIEW(webview)->findcontroller = webkit_web_view_get_find_controller (WEBKIT_WEB_VIEW(webview));
-		EV_WEB_VIEW(webview)->findoptions = webkit_find_controller_get_options (EV_WEB_VIEW(webview)->findcontroller);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	EV_WEB_VIEW(webview)->findcontroller = webkit_web_view_get_find_controller (WEBKIT_WEB_VIEW(webview));
+	EV_WEB_VIEW(webview)->findoptions = webkit_find_controller_get_options (EV_WEB_VIEW(webview)->findcontroller);
 
-		EV_WEB_VIEW(webview)->zoom_level = 1.0;
+	EV_WEB_VIEW(webview)->zoom_level = 1.0;
 
-		EV_WEB_VIEW(webview)->findoptions |= WEBKIT_FIND_OPTIONS_NONE;
-	#endif
+	EV_WEB_VIEW(webview)->findoptions |= WEBKIT_FIND_OPTIONS_NONE;
+#endif
 
 	return webview;
 }
@@ -501,7 +501,7 @@ jump_to_find_results(EvWebView *webview,
                     gpointer    data)
 #endif
 {
-	#if !GTK_CHECK_VERSION (3, 0, 0)
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gint n_results;
 	gboolean forward ;
 	gboolean wrap ;
@@ -743,12 +743,12 @@ ev_web_view_set_handler(EvWebView *webview,gboolean visible)
 #if GTK_CHECK_VERSION (3, 0, 0)
 		                 "load-changed",
 #else
-			             "notify::load-status",
+		                 "notify::load-status",
 #endif
-			             G_CALLBACK(jump_to_find_results),
-			             NULL);
+		                 G_CALLBACK(jump_to_find_results),
+		                 NULL);
 #if GTK_CHECK_VERSION (3, 0, 0)
-			g_signal_connect(webview->findcontroller,
+		g_signal_connect(webview->findcontroller,
 		                 "counted-matches",
 		                 G_CALLBACK(results_counted_cb),
 		                 webview);

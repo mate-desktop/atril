@@ -478,7 +478,7 @@ ev_sidebar_bookmarks_init (EvSidebarBookmarks *sidebar_bookmarks)
 #if GTK_CHECK_VERSION (3, 0, 0)
         hbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
 #else
-	hbox = gtk_hbutton_box_new ();
+        hbox = gtk_hbutton_box_new ();
 #endif
 
         priv->add_button = gtk_button_new_from_stock (GTK_STOCK_ADD);

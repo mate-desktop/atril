@@ -433,7 +433,7 @@ ev_document_misc_get_pointer_position (GtkWidget *widget,
                                        gint      *y)
 {
 #if GTK_CHECK_VERSION (3, 20, 0)
-		GdkSeat *seat;
+        GdkSeat *seat;
 #else
         GdkDeviceManager *device_manager;
 #endif
@@ -448,7 +448,7 @@ ev_document_misc_get_pointer_position (GtkWidget *widget,
         if (!gtk_widget_get_realized (widget))
                 return;
 
-#if GTK_CHECK_VERSION(3, 20, 0)
+#if GTK_CHECK_VERSION (3, 20, 0)
         seat = gdk_display_get_default_seat (gtk_widget_get_display (widget));
         device_pointer = gdk_seat_get_pointer (seat);
 #else
