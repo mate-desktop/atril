@@ -380,11 +380,7 @@ ev_sidebar_bookmarks_popup_menu (GtkWidget *widget)
         EvSidebarBookmarks *sidebar_bookmarks = EV_SIDEBAR_BOOKMARKS (widget);
         gint                x, y;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
         ev_document_misc_get_pointer_position (widget, &x, &y);
-#else
-        gtk_widget_get_pointer (widget, &x, &y);
-#endif
         return ev_sidebar_bookmarks_popup_menu_show (sidebar_bookmarks, x, y, TRUE);
 }
 
@@ -475,11 +471,7 @@ ev_sidebar_bookmarks_init (EvSidebarBookmarks *sidebar_bookmarks)
         gtk_container_add (GTK_CONTAINER (swindow), priv->tree_view);
         gtk_widget_show (priv->tree_view);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
         hbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-        hbox = gtk_hbutton_box_new ();
-#endif
 
         priv->add_button = gtk_button_new_from_stock (GTK_STOCK_ADD);
         g_signal_connect (priv->add_button, "clicked",

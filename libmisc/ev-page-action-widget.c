@@ -28,10 +28,6 @@
 #include "ev-page-action.h"
 #include "ev-page-action-widget.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#endif
-
 /* Widget we pass back */
 static void  ev_page_action_widget_init       (EvPageActionWidget      *action_widget);
 static void  ev_page_action_widget_class_init (EvPageActionWidgetClass *action_widget);
@@ -162,7 +158,7 @@ ev_page_action_widget_init (EvPageActionWidget *action_widget)
 	GtkWidget *hbox;
 	AtkObject *obj;
 
-	hbox = gtk_hbox_new (FALSE, 0);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_set_spacing (GTK_BOX (hbox), 6);
 
 	action_widget->entry = gtk_entry_new ();

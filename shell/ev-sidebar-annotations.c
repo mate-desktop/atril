@@ -29,10 +29,6 @@
 #include "ev-job-scheduler.h"
 #include "ev-stock-icons.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_widget_render_icon(A,B,C,D) gtk_widget_render_icon_pixbuf(A,B,C)
-#endif
-
 enum {
 	PROP_0,
 	PROP_WIDGET
@@ -132,10 +128,8 @@ ev_sidebar_annotations_add_annots_list (EvSidebarAnnotations *ev_annots)
 					GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (swindow),
 					     GTK_SHADOW_IN);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	// Use as much vertical space as available
 	gtk_widget_set_vexpand (GTK_WIDGET (swindow), TRUE);
-#endif
 
 	/* Create tree view */
 	loading_model = ev_sidebar_annotations_create_simple_model (_("Loading…"));
@@ -434,18 +428,16 @@ job_finished_callback (EvJobAnnots          *job,
 			if (EV_IS_ANNOTATION_TEXT (annot)) {
 				if (!text_icon) {
 					/* FIXME: use a better icon than EDIT */
-					text_icon = gtk_widget_render_icon (priv->tree_view,
-									    GTK_STOCK_EDIT,
-									    GTK_ICON_SIZE_BUTTON,
-									    NULL);
+					text_icon = gtk_widget_render_icon_pixbuf (priv->tree_view,
+									           GTK_STOCK_EDIT,
+									           GTK_ICON_SIZE_BUTTON);
 				}
 				pixbuf = text_icon;
 			} else if (EV_IS_ANNOTATION_ATTACHMENT (annot)) {
 				if (!attachment_icon) {
-					attachment_icon = gtk_widget_render_icon (priv->tree_view,
-										  EV_STOCK_ATTACHMENT,
-										  GTK_ICON_SIZE_BUTTON,
-										  NULL);
+					attachment_icon = gtk_widget_render_icon_pixbuf (priv->tree_view,
+										         EV_STOCK_ATTACHMENT,
+										         GTK_ICON_SIZE_BUTTON);
 				}
 				pixbuf = attachment_icon;
 			}

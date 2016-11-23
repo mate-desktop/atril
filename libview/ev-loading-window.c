@@ -24,10 +24,6 @@
 #include <glib/gi18n.h>
 #include "ev-loading-window.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#endif
-
 enum {
 	PROP_0,
 	PROP_PARENT
@@ -75,18 +71,14 @@ ev_loading_window_init (EvLoadingWindow *window)
 	GtkWidget   *widget = GTK_WIDGET (window);
 	GtkWidget   *hbox;
 	GtkWidget   *label;
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GtkStyleContext *context;
 	GdkRGBA    fg, bg;
-#else
-	GtkStyle    *style;
-	GdkColor    fg, bg;
-#endif
+
 	const gchar *loading_text = _("Loading…");
 	const gchar *fg_color_name = "info_fg_color";
 	const gchar *bg_color_name = "info_bg_color";
 
-	hbox = gtk_hbox_new (FALSE, 12);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
 
 	window->spinner = gtk_spinner_new ();
 	gtk_box_pack_start (GTK_BOX (hbox), window->spinner, FALSE, FALSE, 0);
@@ -108,7 +100,6 @@ ev_loading_window_init (EvLoadingWindow *window)
 	gtk_window_set_decorated (gtk_window, FALSE);
 	gtk_window_set_resizable (gtk_window, FALSE);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	context = gtk_widget_get_style_context (widget);
 	if (!gtk_style_context_lookup_color (context, fg_color_name, &fg) ||
 	    !gtk_style_context_lookup_color (context, bg_color_name, &bg)) {
@@ -126,27 +117,6 @@ ev_loading_window_init (EvLoadingWindow *window)
         gtk_widget_override_background_color (widget, GTK_STATE_NORMAL, &bg);
         gtk_widget_override_color (widget, GTK_STATE_NORMAL, &fg);
 }
-#else
-	style = gtk_widget_get_style (widget);
-	if (!gtk_style_lookup_color (style, fg_color_name, &fg) ||
-	    !gtk_style_lookup_color (style, bg_color_name, &bg)) {
-		fg.pixel = 0;
-		fg.red = 0xb800;
-		fg.green = 0xad00;
-		fg.blue = 0x9d00;
-
-		bg.pixel = 0;
-		bg.red = 0xff00;
-		bg.green = 0xff00;
-		bg.blue = 0xbf00;
-	}
-
-	if (!gdk_color_equal (&bg, &style->bg[GTK_STATE_NORMAL]))
-		gtk_widget_modify_bg (widget, GTK_STATE_NORMAL, &bg);
-	if (!gdk_color_equal (&fg, &style->fg[GTK_STATE_NORMAL]))
-		gtk_widget_modify_fg (widget, GTK_STATE_NORMAL, &fg);
-}
-#endif
 
 static GObject *
 ev_loading_window_constructor (GType                  type,
@@ -205,12 +175,8 @@ ev_loading_window_size_allocate (GtkWidget      *widget,
 				 GtkAllocation  *allocation)
 {
 	EvLoadingWindow *window = EV_LOADING_WINDOW (widget);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_surface_t *surface;
 	cairo_region_t *shape;
-#else
-	GdkPixmap       *mask;
-#endif
 	cairo_t         *cr;
 	double           r;
 
@@ -222,13 +188,8 @@ ev_loading_window_size_allocate (GtkWidget      *widget,
 	window->width = allocation->width;
 	window->height = allocation->height;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	surface = cairo_image_surface_create (CAIRO_FORMAT_A8, window->width, window->height);
 	cr = cairo_create (surface);
-#else
-	mask = gdk_pixmap_new (NULL, window->width, window->height, 1);
-	cr = gdk_cairo_create (GDK_DRAWABLE (mask));
-#endif
 
 	cairo_save (cr);
 	cairo_rectangle (cr, 0, 0, window->width, window->height);
@@ -243,16 +204,11 @@ ev_loading_window_size_allocate (GtkWidget      *widget,
 
 	cairo_destroy (cr);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	shape = gdk_cairo_region_create_from_surface (surface);
 	cairo_surface_destroy (surface);
 
 	gtk_widget_shape_combine_region (widget, shape);
 	cairo_region_destroy (shape);
-#else
-	gtk_widget_shape_combine_mask (widget, mask, 0, 0);
-	g_object_unref (mask);
-#endif
 }
 
 static void

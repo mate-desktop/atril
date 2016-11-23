@@ -21,8 +21,6 @@
 
 #include <glib.h>
 #include <math.h>
-#include <gtk/gtk.h>
-#include <gdk/gdk.h>
 #include "ev-timeline.h"
 
 #define EV_TIMELINE_GET_PRIV(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), EV_TYPE_TIMELINE, EvTimelinePriv))
@@ -151,10 +149,6 @@ ev_timeline_run_frame (EvTimeline *timeline)
 	gdouble         progress;
 	guint           elapsed_time;
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gdk_threads_enter();
-#endif
-
 	priv = EV_TIMELINE_GET_PRIV (timeline);
 
 	elapsed_time = (guint) (g_timer_elapsed (priv->timer, NULL) * 1000);
@@ -176,10 +170,6 @@ ev_timeline_run_frame (EvTimeline *timeline)
 			ev_timeline_rewind (timeline);
 		}
 	}
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gdk_threads_leave();
-#endif
 
 	return TRUE;
 }

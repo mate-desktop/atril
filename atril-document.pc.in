@@ -7,6 +7,6 @@ backenddir=@libdir@/atril/@EV_BINARY_VERSION@/backends
 Name: Atril Document
 Description: MATE document viewer backend library
 Version: @VERSION@
-Requires: gio-2.0 >= @GLIB_REQUIRED@ gtk+-@GTK_API_VERSION@ >= @GTK_REQUIRED@
+Requires: gio-2.0 >= @GLIB_REQUIRED@ gtk+-3.0 >= @GTK_REQUIRED@
 Libs: -L${libdir} -latrildocument
 Cflags: -I${includedir}

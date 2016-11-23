@@ -82,8 +82,7 @@ DISTCHECK_CONFIGURE_FLAGS =   \
     --enable-gtk-doc          \
     --disable-caja            \
     --disable-tests           \
-    --disable-silent-rules    \
-    --with-gtk=$(GTK_API_VERSION)
+    --disable-silent-rules
 
 distuninstallcheck_listfiles = find . -type f -print | grep -v /share/mate/help/ | grep -v \.omf
 

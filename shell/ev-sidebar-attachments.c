@@ -264,11 +264,7 @@ ev_sidebar_attachments_popup_menu (GtkWidget *widget)
 	EvSidebarAttachments *ev_attachbar = EV_SIDEBAR_ATTACHMENTS (widget);
 	gint                  x, y;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 	ev_document_misc_get_pointer_position (widget, &x, &y);
-#else
-	gtk_widget_get_pointer (widget, &x, &y);
-#endif
 
 	return ev_sidebar_attachments_popup_menu_show (ev_attachbar, x, y);
 }

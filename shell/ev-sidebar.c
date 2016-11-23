@@ -32,10 +32,6 @@
 #include "ev-sidebar.h"
 #include "ev-sidebar-page.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#endif
-
 enum
 {
 	PROP_0,
@@ -235,11 +231,7 @@ ev_sidebar_select_button_press_cb (GtkWidget      *widget,
 		gtk_widget_get_allocation (widget, &allocation);
 		width = allocation.width;
 		gtk_widget_set_size_request (ev_sidebar->priv->menu, -1, -1);
-#if GTK_CHECK_VERSION (3, 0, 0)
 		gtk_widget_get_preferred_size (ev_sidebar->priv->menu, &requisition, NULL);
-#else
-		gtk_widget_size_request (ev_sidebar->priv->menu, &requisition);
-#endif
 		gtk_widget_set_size_request (ev_sidebar->priv->menu,
 					     MAX (width, requisition.width), -1);
 		
@@ -357,7 +349,7 @@ ev_sidebar_init (EvSidebar *ev_sidebar)
 					    G_TYPE_INT);
 
 	/* top option menu */
-	hbox = gtk_hbox_new (FALSE, 0);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	ev_sidebar->priv->hbox = hbox;
 	gtk_box_pack_start (GTK_BOX (ev_sidebar), hbox, FALSE, FALSE, 0);
 	gtk_widget_show (hbox);
@@ -371,7 +363,7 @@ ev_sidebar_init (EvSidebar *ev_sidebar)
 			  G_CALLBACK (ev_sidebar_select_button_key_press_cb),
 			  ev_sidebar);
 
-	select_hbox = gtk_hbox_new (FALSE, 0);
+	select_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
 	ev_sidebar->priv->label = gtk_label_new ("");
 	gtk_box_pack_start (GTK_BOX (select_hbox),
@@ -379,11 +371,7 @@ ev_sidebar_init (EvSidebar *ev_sidebar)
 			    FALSE, FALSE, 0);
 	gtk_widget_show (ev_sidebar->priv->label);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	arrow = gtk_image_new_from_icon_name ("pan-down-symbolic", GTK_ICON_SIZE_BUTTON);
-#else
-	arrow = gtk_arrow_new (GTK_ARROW_DOWN, GTK_SHADOW_NONE);
-#endif
 	gtk_box_pack_end (GTK_BOX (select_hbox), arrow, FALSE, FALSE, 0);
 	gtk_widget_show (arrow);
 

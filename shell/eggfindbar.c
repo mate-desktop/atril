@@ -26,10 +26,6 @@
 
 #include "eggfindbar.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#endif
-
 struct _EggFindBarPrivate
 {
   gchar *search_string;
@@ -165,23 +161,6 @@ egg_find_bar_class_init (EggFindBarClass *klass)
                                                          "TRUE for a case sensitive search",
                                                          FALSE,
                                                          G_PARAM_READWRITE));
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  /* Style properties */
-  gtk_widget_class_install_style_property (widget_class,
-                                           g_param_spec_boxed ("all_matches_color",
-                                                               "Highlight color",
-                                                               "Color of highlight for all matches",
-                                                               GDK_TYPE_COLOR,
-                                                               G_PARAM_READABLE));
-
-  gtk_widget_class_install_style_property (widget_class,
-                                           g_param_spec_boxed ("current_match_color",
-                                                               "Current color",
-                                                               "Color of highlight for the current match",
-                                                               GDK_TYPE_COLOR,
-                                                               G_PARAM_READABLE));
-#endif
 
   g_type_class_add_private (object_class, sizeof (EggFindBarPrivate));
 
@@ -323,7 +302,7 @@ egg_find_bar_init (EggFindBar *find_bar)
 
   /* Find: |_____| */
   item = gtk_tool_item_new ();
-  box = gtk_hbox_new (FALSE, 12);
+  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
   
   alignment = gtk_alignment_new (0.0, 0.5, 1.0, 0.0);
   gtk_alignment_set_padding (GTK_ALIGNMENT (alignment), 0, 0, 2, 2);
@@ -336,11 +315,7 @@ egg_find_bar_init (EggFindBar *find_bar)
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), priv->find_entry);
 
   /* Prev */
-#if GTK_CHECK_VERSION (3, 0, 0)
   arrow = gtk_image_new_from_icon_name ("pan-start-symbolic", GTK_ICON_SIZE_BUTTON);
-#else
-  arrow = gtk_arrow_new (GTK_ARROW_LEFT, GTK_SHADOW_NONE);
-#endif
   priv->previous_button = gtk_tool_button_new (arrow, Q_("Find Pre_vious"));
   gtk_tool_button_set_use_underline (GTK_TOOL_BUTTON (priv->previous_button), TRUE);
   gtk_tool_item_set_is_important (priv->previous_button, TRUE);
@@ -348,11 +323,7 @@ egg_find_bar_init (EggFindBar *find_bar)
 			       _("Find previous occurrence of the search string"));
 
   /* Next */
-#if GTK_CHECK_VERSION (3, 0, 0)
   arrow = gtk_image_new_from_icon_name ("pan-end-symbolic", GTK_ICON_SIZE_BUTTON);
-#else
-  arrow = gtk_arrow_new (GTK_ARROW_RIGHT, GTK_SHADOW_NONE);
-#endif
   priv->next_button = gtk_tool_button_new (arrow, Q_("Find Ne_xt"));
   gtk_tool_button_set_use_underline (GTK_TOOL_BUTTON (priv->next_button), TRUE);
   gtk_tool_item_set_is_important (priv->next_button, TRUE);
@@ -678,63 +649,6 @@ egg_find_bar_get_case_sensitive (EggFindBar *find_bar)
 
   return priv->case_sensitive;
 }
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-static void
-get_style_color (EggFindBar *find_bar,
-                 const char *style_prop_name,
-                 GdkColor   *color)
-{
-  GdkColor *style_color;
-
-  gtk_widget_ensure_style (GTK_WIDGET (find_bar));
-  gtk_widget_style_get (GTK_WIDGET (find_bar),
-                        "color", &style_color, NULL);
-  if (style_color)
-    {
-      *color = *style_color;
-      gdk_color_free (style_color);
-    }
-}
-
-/**
- * egg_find_bar_get_all_matches_color:
- *
- * Gets the color to use to highlight all the
- * known matches.
- *
- * Since: 2.6
- */
-void
-egg_find_bar_get_all_matches_color (EggFindBar *find_bar,
-                                    GdkColor   *color)
-{
-  GdkColor found_color = { 0, 0, 0, 0x0f0f };
-
-  get_style_color (find_bar, "all_matches_color", &found_color);
-
-  *color = found_color;
-}
-
-/**
- * egg_find_bar_get_current_match_color:
- *
- * Gets the color to use to highlight the match
- * we're currently on.
- *
- * Since: 2.6
- */
-void
-egg_find_bar_get_current_match_color (EggFindBar *find_bar,
-                                      GdkColor   *color)
-{
-  GdkColor found_color = { 0, 0, 0, 0xffff };
-
-  get_style_color (find_bar, "current_match_color", &found_color);
-
-  *color = found_color;
-}
-#endif
 
 /**
  * egg_find_bar_set_status_text:

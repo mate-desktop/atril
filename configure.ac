@@ -3,8 +3,8 @@
 # *****************************************************************************
 
 m4_define([ev_major_version], [1])
-m4_define([ev_minor_version], [16])
-m4_define([ev_micro_version], [1])
+m4_define([ev_minor_version], [17])
+m4_define([ev_micro_version], [0])
 m4_define([ev_extra_version], [])
 m4_define([ev_version], [ev_major_version.ev_minor_version.ev_micro_version()ev_extra_version])
 
@@ -96,28 +96,13 @@ AC_MSG_RESULT([$with_gtk])
 dnl Specify required versions of dependencies
 CAIRO_REQUIRED=1.9.10
 GLIB_REQUIRED=2.36.0
+GTK_REQUIRED=3.14.0
+WEBKIT_REQUIRED=2.4.3
 LIBSECRET_REQUIRED=0.5
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       WEBKIT_API_VERSION=1.0
-       GAIL_API_VERSION=
-       GTK_REQUIRED=2.24.0
-       WEBKIT_REQUIRED=2.4.3
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       WEBKIT_API_VERSION=4.0
-       GAIL_API_VERSION=-3.0
-       GTK_REQUIRED=3.0.0
-       WEBKIT_REQUIRED=2.4.3
-       ;;
-esac
+LIBXML_REQUIRED=2.5.0
 
 AC_SUBST([GLIB_REQUIRED])
 AC_SUBST([GTK_REQUIRED])
-AC_SUBST([GTK_API_VERSION])
-
-LIBXML_REQUIRED=2.5.0
 
 dnl Check dependencies
 
@@ -130,13 +115,13 @@ dnl Check dependencies
 
 AC_SEARCH_LIBS([hypot],[m])
 
-PKG_CHECK_MODULES(LIBDOCUMENT, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED)
-PKG_CHECK_MODULES(LIBVIEW, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED gail$GAIL_API_VERSION >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
-PKG_CHECK_MODULES(BACKEND, cairo >= $CAIRO_REQUIRED gtk+-$GTK_API_VERSION >= $GTK_REQUIRED)
-PKG_CHECK_MODULES(FRONTEND_CORE, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
+PKG_CHECK_MODULES(LIBDOCUMENT, gtk+-3.0 >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED)
+PKG_CHECK_MODULES(LIBVIEW, gtk+-3.0 >= $GTK_REQUIRED gail-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
+PKG_CHECK_MODULES(BACKEND, cairo >= $CAIRO_REQUIRED gtk+-3.0 >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(FRONTEND_CORE, gtk+-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0 >= $GLIB_REQUIRED)
 
-PKG_CHECK_MODULES([SHELL_CORE],[libxml-2.0 >= $LIBXML_REQUIRED gtk+-$GTK_API_VERSION >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED gthread-2.0 x11])
+PKG_CHECK_MODULES([SHELL_CORE],[libxml-2.0 >= $LIBXML_REQUIRED gtk+-3.0 >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED gthread-2.0 x11])
 
 dnl
 dnl zlib support
@@ -156,7 +141,7 @@ dnl
 dnl SM client
 dnl
 
-PKG_CHECK_MODULES([SMCLIENT],[gtk+-$GTK_API_VERSION gthread-2.0 sm >= 1.0.0])
+PKG_CHECK_MODULES([SMCLIENT],[gtk+-3.0 gthread-2.0 sm >= 1.0.0])
 AC_SUBST([SMCLIENT_CFLAGS])
 AC_SUBST([SMCLIENT_LIBS])
 
@@ -178,7 +163,7 @@ AC_ARG_WITH([gtk-unix-print],
 AC_MSG_RESULT([$with_gtk_unix_print])
 
 if test "$with_gtk_unix_print" = "yes"; then
-   PKG_CHECK_MODULES(GTKUNIXPRINT, [gtk+-unix-print-$GTK_API_VERSION >= $GTK_REQUIRED])
+   PKG_CHECK_MODULES(GTKUNIXPRINT, [gtk+-unix-print-3.0 >= $GTK_REQUIRED])
    AC_DEFINE([GTKUNIXPRINT_ENABLED], [1], [Define if gtk+-unix-print is enabled.])
 fi
 
@@ -272,7 +257,7 @@ AC_ARG_ENABLE([caja],
   [enable_caja=yes])
 
 if test "$enable_caja" = "yes" ; then
-  PKG_CHECK_MODULES([CAJA],[gtk+-x11-$GTK_API_VERSION $MM gthread-2.0 libcaja-extension],
+  PKG_CHECK_MODULES([CAJA],[gtk+-x11-3.0 $MM gthread-2.0 libcaja-extension >= 1.17.1],
                     [],[AC_MSG_ERROR([libcaja-extension not found; use --disable-caja to disable the caja extensions])])
   CAJA_EXTENSION_DIR=`$PKG_CONFIG --variable=extensiondir libcaja-extension`
   AC_SUBST([cajaextensiondir],[$CAJA_EXTENSION_DIR])
@@ -305,7 +290,7 @@ AC_ARG_ENABLE([previewer],
   [enable_previewer=yes])
 
 if test x$enable_previewer = "xyes" ; then
-  PKG_CHECK_MODULES([PREVIEWER],[gtk+-$GTK_API_VERSION >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED])
+  PKG_CHECK_MODULES([PREVIEWER],[gtk+-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED])
 fi
 
 AM_CONDITIONAL([ENABLE_PREVIEWER],[test "$enable_previewer" = "yes"])
@@ -578,22 +563,13 @@ AC_ARG_ENABLE(epub,
 
 have_webkit="no"
 if test "x$enable_epub" = "xyes"; then
-    case "$with_gtk" in
-        2.0)
-        PKG_CHECK_MODULES(EPUB, webkit-$WEBKIT_API_VERSION >= $WEBKIT_REQUIRED \
-            libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
-        ;;
-        3.0)
-        PKG_CHECK_MODULES(EPUB, webkit2gtk-$WEBKIT_API_VERSION >= $WEBKIT_REQUIRED \
-            libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
-        if test "x$have_webkit" = "xno"; then
-           AC_MSG_NOTICE([Webkit2 4.0 not found, trying 3.0])
-           WEBKIT_API_VERSION=3.0
-           PKG_CHECK_MODULES(EPUB, webkit2gtk-$WEBKIT_API_VERSION >= $WEBKIT_REQUIRED \
-               libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
-        fi
-        ;;
-    esac
+    PKG_CHECK_MODULES(EPUB, webkit2gtk-4.0 >= $WEBKIT_REQUIRED \
+       libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
+    if test "x$have_webkit" = "xno"; then
+       AC_MSG_NOTICE([Webkit2 4.0 not found, trying 3.0])
+       PKG_CHECK_MODULES(EPUB, webkit2gtk-3.0 >= $WEBKIT_REQUIRED \
+          libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
+    fi
 
     if test "x$have_webkit" = "xyes"; then
        AC_DEFINE([ENABLE_EPUB], [1], [Enable support for ePub documents.])
@@ -653,7 +629,7 @@ YELP_HELP_INIT
 GTK_DOC_CHECK([1.13], [--flavour no-tmpl])
 
 AC_SUBST([GLIB_PREFIX], [$($PKG_CONFIG --variable=prefix glib-2.0)])
-AC_SUBST([GTK_PREFIX], [$($PKG_CONFIG --variable=prefix gtk+-$GTK_API_VERSION)])
+AC_SUBST([GTK_PREFIX], [$($PKG_CONFIG --variable=prefix gtk+-3.0)])
 
 # ******************
 # Backends directory
@@ -757,7 +733,6 @@ AC_OUTPUT
 echo "
 Configure summary:
 
-    GTK+ version........:    $with_gtk
     GTK+ Unix Print.....:    $with_gtk_unix_print
     Keyring Support.....:    $with_keyring
     DBUS Support........:    $enable_dbus

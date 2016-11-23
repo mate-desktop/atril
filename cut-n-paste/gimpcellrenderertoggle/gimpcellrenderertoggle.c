@@ -25,16 +25,7 @@
 #include "gimpwidgetsmarshal.h"
 #include "gimpcellrenderertoggle.h"
 
-
 #define DEFAULT_ICON_SIZE  GTK_ICON_SIZE_BUTTON
-
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define GTK_STATE_INSENSITIVE GTK_STATE_FLAG_INSENSITIVE
-#define GTK_STATE_SELECTED GTK_STATE_FLAG_SELECTED
-#define GTK_STATE_ACTIVE GTK_STATE_FLAG_ACTIVE
-#define GTK_STATE_NORMAL 0
-#define gtk_widget_render_icon(A,B,C,D) gtk_widget_render_icon_pixbuf(A,B,C)
-#endif
 
 enum
 {
@@ -61,42 +52,23 @@ static void gimp_cell_renderer_toggle_set_property (GObject         *object,
                                                     GParamSpec      *pspec);
 static void gimp_cell_renderer_toggle_get_size     (GtkCellRenderer *cell,
                                                     GtkWidget       *widget,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                                     const GdkRectangle *rectangle,
-#else
-                                                    GdkRectangle    *rectangle,
-#endif
                                                     gint            *x_offset,
                                                     gint            *y_offset,
                                                     gint            *width,
                                                     gint            *height);
 static void gimp_cell_renderer_toggle_render       (GtkCellRenderer *cell,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                                     cairo_t         *cr,
-#else
-                                                    GdkWindow       *window,
-#endif
                                                     GtkWidget       *widget,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                                     const GdkRectangle *background_area,
                                                     const GdkRectangle *cell_area,
-#else
-                                                    GdkRectangle    *background_area,
-                                                    GdkRectangle    *cell_area,
-                                                    GdkRectangle    *expose_area,
-#endif
                                                     GtkCellRendererState flags);
 static gboolean gimp_cell_renderer_toggle_activate (GtkCellRenderer *cell,
                                                     GdkEvent        *event,
                                                     GtkWidget       *widget,
                                                     const gchar     *path,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                                     const GdkRectangle *background_area,
                                                     const GdkRectangle *cell_area,
-#else
-                                                    GdkRectangle    *background_area,
-                                                    GdkRectangle    *cell_area,
-#endif
                                                     GtkCellRendererState  flags);
 static void gimp_cell_renderer_toggle_create_pixbuf (GimpCellRendererToggle *toggle,
                                                      GtkWidget              *widget);
@@ -234,23 +206,15 @@ gimp_cell_renderer_toggle_set_property (GObject      *object,
 static void
 gimp_cell_renderer_toggle_get_size (GtkCellRenderer *cell,
                                     GtkWidget       *widget,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                     const GdkRectangle *cell_area,
-#else
-                                    GdkRectangle    *cell_area,
-#endif
                                     gint            *x_offset,
                                     gint            *y_offset,
                                     gint            *width,
                                     gint            *height)
 {
   GimpCellRendererToggle *toggle = GIMP_CELL_RENDERER_TOGGLE (cell);
-#if GTK_CHECK_VERSION (3, 0, 0)
   GtkStyleContext        *context  = gtk_widget_get_style_context (widget);
   GtkBorder               border;
-#else
-  GtkStyle               *style  = gtk_widget_get_style (widget);
-#endif
   gint                    calc_width;
   gint                    calc_height;
   gint                    pixbuf_width;
@@ -273,9 +237,7 @@ gimp_cell_renderer_toggle_get_size (GtkCellRenderer *cell,
   gtk_cell_renderer_get_alignment (cell, &xalign, &yalign);
   gtk_cell_renderer_get_padding (cell, &xpad, &ypad);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_style_context_get_border (context, 0, &border);
-#endif
 
   if (! toggle->pixbuf)
     gimp_cell_renderer_toggle_create_pixbuf (toggle, widget);
@@ -283,15 +245,8 @@ gimp_cell_renderer_toggle_get_size (GtkCellRenderer *cell,
   pixbuf_width  = gdk_pixbuf_get_width  (toggle->pixbuf);
   pixbuf_height = gdk_pixbuf_get_height (toggle->pixbuf);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   calc_width  = (pixbuf_width + (gint) xpad * 2 + (border.left + border.right));
   calc_height = (pixbuf_height + (gint) ypad * 2 + (border.top + border.bottom));
-#else
-  calc_width  = (pixbuf_width +
-                 (gint) xpad * 2 + style->xthickness * 2);
-  calc_height = (pixbuf_height +
-                 (gint) ypad * 2 + style->ythickness * 2);
-#endif
 
   if (width)
     *width  = calc_width;
@@ -317,39 +272,20 @@ gimp_cell_renderer_toggle_get_size (GtkCellRenderer *cell,
     }
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gimp_cell_renderer_toggle_get_size gtk_cell_renderer_get_size
-#endif
-
 static void
 gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                   cairo_t              *cr,
-#else
-                                  GdkWindow            *window,
-#endif
                                   GtkWidget            *widget,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                   const GdkRectangle   *background_area,
                                   const GdkRectangle   *cell_area,
-#else
-                                  GdkRectangle         *background_area,
-                                  GdkRectangle         *cell_area,
-                                  GdkRectangle         *expose_area,
-#endif
                                   GtkCellRendererState  flags)
 {
   GimpCellRendererToggle *toggle = GIMP_CELL_RENDERER_TOGGLE (cell);
   GdkRectangle            toggle_rect;
   GdkRectangle            draw_rect;
-#if GTK_CHECK_VERSION (3, 0, 0)
   GtkStyleContext        *context = gtk_widget_get_style_context (widget);
   GdkRectangle            clip_rect;
   GtkStateFlags           state;
-#else
-  GtkStyle               *style  = gtk_widget_get_style (widget);
-  GtkStateType            state;
-#endif
   gboolean                active;
   gint                    xpad;
   gint                    ypad;
@@ -357,26 +293,19 @@ gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
   if (! toggle->stock_id)
     {
       GTK_CELL_RENDERER_CLASS (parent_class)->render (cell,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                                       cr,
-#else
-                                                      window,
-#endif
                                                       widget,
                                                       background_area,
                                                       cell_area,
-#if !GTK_CHECK_VERSION (3, 0, 0)
-                                                      expose_area,
-#endif
                                                       flags);
       return;
     }
 
-  gimp_cell_renderer_toggle_get_size (cell, widget, cell_area,
-                                      &toggle_rect.x,
-                                      &toggle_rect.y,
-                                      &toggle_rect.width,
-                                      &toggle_rect.height);
+  gtk_cell_renderer_get_size (cell, widget, cell_area,
+                              &toggle_rect.x,
+                              &toggle_rect.y,
+                              &toggle_rect.width,
+                              &toggle_rect.height);
 
   gtk_cell_renderer_get_padding (cell, &xpad, &ypad);
   toggle_rect.x      += cell_area->x + xpad;
@@ -392,24 +321,23 @@ gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
 
   if (!gtk_cell_renderer_get_sensitive (cell))
     {
-      state = GTK_STATE_INSENSITIVE;
+      state = GTK_STATE_FLAG_INSENSITIVE;
     }
   else if ((flags & GTK_CELL_RENDERER_SELECTED) == GTK_CELL_RENDERER_SELECTED)
     {
       if (gtk_widget_has_focus (widget))
-        state = GTK_STATE_SELECTED;
+        state = GTK_STATE_FLAG_SELECTED;
       else
-        state = GTK_STATE_ACTIVE;
+        state = GTK_STATE_FLAG_ACTIVE;
     }
   else
     {
       if (gtk_cell_renderer_toggle_get_activatable (GTK_CELL_RENDERER_TOGGLE (cell)))
-        state = GTK_STATE_NORMAL;
+        state = GTK_STATE_FLAG_NORMAL;
       else
-        state = GTK_STATE_INSENSITIVE;
+        state = GTK_STATE_FLAG_INSENSITIVE;
     }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   if ((flags & GTK_CELL_RENDERER_PRELIT) &&
       gdk_cairo_get_clip_rectangle(cr, &clip_rect) &&
       gdk_rectangle_intersect (&clip_rect, cell_area, &draw_rect))
@@ -424,25 +352,12 @@ gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
       gtk_style_context_restore (context);
       cairo_restore (cr);
     }
-#else
-  if (gdk_rectangle_intersect (expose_area, cell_area, &draw_rect) &&
-      (flags & GTK_CELL_RENDERER_PRELIT))
-    gtk_paint_shadow (style,
-                      window,
-                      state,
-                      active ? GTK_SHADOW_IN : GTK_SHADOW_OUT,
-                      &draw_rect,
-                      widget, NULL,
-                      toggle_rect.x,     toggle_rect.y,
-                      toggle_rect.width, toggle_rect.height);
-#endif
 
   if (active)
     {
       GdkPixbuf *insensitive = NULL;
       GdkPixbuf *pixbuf = toggle->pixbuf;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
       GtkBorder  border = { 1, 1, 1, 1 };
 
 #if 0
@@ -459,14 +374,6 @@ gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
       toggle_rect.height -= (border.top + border.bottom);
 
       if (state & GTK_STATE_FLAG_INSENSITIVE)
-#else
-      toggle_rect.x      += style->xthickness;
-      toggle_rect.y      += style->ythickness;
-      toggle_rect.width  -= style->xthickness * 2;
-      toggle_rect.height -= style->ythickness * 2;
-
-      if (state == GTK_STATE_INSENSITIVE)
-#endif
         {
 	  GtkIconSource *source;
 
@@ -479,21 +386,10 @@ gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
 	  gtk_icon_source_set_size (source, GTK_ICON_SIZE_SMALL_TOOLBAR);
 	  gtk_icon_source_set_size_wildcarded (source, FALSE);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
           gtk_style_context_save (context);
           gtk_style_context_set_state (context, GTK_STATE_FLAG_INSENSITIVE);
           insensitive = gtk_render_icon_pixbuf (context, source, (GtkIconSize)-1);
           gtk_style_context_restore (context);
-#else
-	  insensitive = gtk_style_render_icon (gtk_widget_get_style (widget),
-					       source,
-					       gtk_widget_get_direction (widget),
-					       GTK_STATE_INSENSITIVE,
-					       /* arbitrary */
-					       (GtkIconSize)-1,
-					       widget,
-					       "gimpcellrenderertoggle");
-#endif
 
 	  gtk_icon_source_free (source);
 
@@ -502,19 +398,9 @@ gimp_cell_renderer_toggle_render (GtkCellRenderer      *cell,
 
       if (gdk_rectangle_intersect (&draw_rect, &toggle_rect, &draw_rect))
         {
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	  cairo_t *cr;
-	  
-	  cr = gdk_cairo_create (window);
-#endif
-
 	  gdk_cairo_set_source_pixbuf (cr, pixbuf, toggle_rect.x, toggle_rect.y);
 	  gdk_cairo_rectangle (cr, &draw_rect);
 	  cairo_fill (cr);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	  cairo_destroy (cr);
-#endif
 	}
 	      
       if (insensitive)
@@ -527,13 +413,8 @@ gimp_cell_renderer_toggle_activate (GtkCellRenderer      *cell,
                                     GdkEvent             *event,
                                     GtkWidget            *widget,
                                     const gchar          *path,
-#if GTK_CHECK_VERSION (3, 0, 0)
                                     const GdkRectangle   *background_area,
                                     const GdkRectangle   *cell_area,
-#else
-                                    GdkRectangle         *background_area,
-                                    GdkRectangle         *cell_area,
-#endif
                                     GtkCellRendererState  flags)
 {
   GtkCellRendererToggle *toggle = GTK_CELL_RENDERER_TOGGLE (cell);
@@ -565,11 +446,10 @@ gimp_cell_renderer_toggle_create_pixbuf (GimpCellRendererToggle *toggle,
   if (toggle->pixbuf)
     g_object_unref (toggle->pixbuf);
 
-  toggle->pixbuf = gtk_widget_render_icon (widget,
-                                           toggle->stock_id,
-                                           toggle->stock_size, NULL);
+  toggle->pixbuf = gtk_widget_render_icon_pixbuf (widget,
+                                                  toggle->stock_id,
+                                                  toggle->stock_size);
 }
-
 
 /**
  * gimp_cell_renderer_toggle_new:
