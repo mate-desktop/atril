@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-27 12:23+0300\n"
-"PO-Revision-Date: 2016-07-27 09:24+0000\n"
+"POT-Creation-Date: 2016-11-17 14:20+0300\n"
+"PO-Revision-Date: 2016-11-17 11:21+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Malagasy (http://www.transifex.com/mate/MATE/language/mg/)\n"
 "MIME-Version: 1.0\n"
@@ -166,15 +166,15 @@ msgstr ""
 
 #. translators: this is the document security state
 #: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
-#: ../properties/ev-properties-view.c:381
-#: ../properties/ev-properties-view.c:448
+#: ../properties/ev-properties-view.c:386
+#: ../properties/ev-properties-view.c:453
 msgid "Yes"
 msgstr "Eny"
 
 #. translators: this is the document security state
 #: ../backend/pdf/ev-poppler.cc:775 ../backend/pdf/ev-poppler.cc:778
-#: ../properties/ev-properties-view.c:385
-#: ../properties/ev-properties-view.c:452
+#: ../properties/ev-properties-view.c:390
+#: ../properties/ev-properties-view.c:457
 msgid "No"
 msgstr "Tsia"
 
@@ -391,7 +391,7 @@ msgid "Separator"
 msgstr "Mpampisaraka"
 
 #. translators: this is the label for toolbar button
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6574
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6562
 msgid "Best Fit"
 msgstr "Ny tena mety"
 
@@ -399,7 +399,7 @@ msgstr "Ny tena mety"
 msgid "Fit Page Width"
 msgstr "Ataovy mameno ny indran'ny pejy"
 
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6230
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6218
 msgid "Expand Window to Fit"
 msgstr ""
 
@@ -479,7 +479,7 @@ msgstr ""
 msgid "Atril Document Viewer"
 msgstr ""
 
-#: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5174
+#: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5166
 #: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
@@ -535,7 +535,7 @@ msgstr ""
 msgid "MATE Document Previewer"
 msgstr ""
 
-#: ../previewer/ev-previewer-window.c:95 ../shell/ev-window.c:3479
+#: ../previewer/ev-previewer-window.c:95 ../shell/ev-window.c:3471
 msgid "Failed to print document"
 msgstr "Tsy nahavita nanonta ilay tahirin-kevitra"
 
@@ -545,59 +545,61 @@ msgid "The selected printer '%s' could not be found"
 msgstr ""
 
 #. Go menu
-#: ../previewer/ev-previewer-window.c:288 ../shell/ev-window.c:6237
+#: ../previewer/ev-previewer-window.c:288 ../shell/ev-window.c:6225
 msgid "_Previous Page"
 msgstr "_Pejy aloha"
 
-#: ../previewer/ev-previewer-window.c:289 ../shell/ev-window.c:6238
+#: ../previewer/ev-previewer-window.c:289 ../shell/ev-window.c:6226
 msgid "Go to the previous page"
 msgstr "Mankany amin'ny pejy aloha"
 
-#: ../previewer/ev-previewer-window.c:291 ../shell/ev-window.c:6240
+#: ../previewer/ev-previewer-window.c:291 ../shell/ev-window.c:6228
 msgid "_Next Page"
 msgstr "Pejy _manaraka"
 
-#: ../previewer/ev-previewer-window.c:292 ../shell/ev-window.c:6241
+#: ../previewer/ev-previewer-window.c:292 ../shell/ev-window.c:6229
 msgid "Go to the next page"
 msgstr "Mankany amin'ny pejy manaraka"
 
-#: ../previewer/ev-previewer-window.c:295 ../shell/ev-window.c:6221
+#: ../previewer/ev-previewer-window.c:295 ../shell/ev-window.c:6209
 msgid "Enlarge the document"
 msgstr "Alehibiazo ilay tahirin-kevitra"
 
-#: ../previewer/ev-previewer-window.c:298 ../shell/ev-window.c:6224
+#: ../previewer/ev-previewer-window.c:298 ../shell/ev-window.c:6212
 msgid "Shrink the document"
 msgstr "Akelezo ilay tahirin-kevitra"
 
-#: ../previewer/ev-previewer-window.c:301 ../libview/ev-print-operation.c:1313
+#. translators: Print document currently shown in the Print Preview window
+#. translators: Title of the print dialog
+#: ../previewer/ev-previewer-window.c:302 ../libview/ev-print-operation.c:1314
 msgid "Print"
 msgstr "Hanonta"
 
-#: ../previewer/ev-previewer-window.c:302 ../shell/ev-window.c:6190
+#: ../previewer/ev-previewer-window.c:303 ../shell/ev-window.c:6178
 msgid "Print this document"
 msgstr "Manonta ity tahirin-kevitra ity"
 
-#: ../previewer/ev-previewer-window.c:346 ../shell/ev-window.c:6347
+#: ../previewer/ev-previewer-window.c:347 ../shell/ev-window.c:6335
 msgid "_Best Fit"
 msgstr "Ny _tena mety"
 
-#: ../previewer/ev-previewer-window.c:347 ../shell/ev-window.c:6348
+#: ../previewer/ev-previewer-window.c:348 ../shell/ev-window.c:6336
 msgid "Make the current document fill the window"
 msgstr "Mahatonga ity tahirin-kevitra ity hameno ny fikandrana"
 
-#: ../previewer/ev-previewer-window.c:349 ../shell/ev-window.c:6350
+#: ../previewer/ev-previewer-window.c:350 ../shell/ev-window.c:6338
 msgid "Fit Page _Width"
 msgstr "_Mameno ny indran'ny pejy"
 
-#: ../previewer/ev-previewer-window.c:350 ../shell/ev-window.c:6351
+#: ../previewer/ev-previewer-window.c:351 ../shell/ev-window.c:6339
 msgid "Make the current document fill the window width"
 msgstr "Mahatonga ity tahirin-kevitra ity hameno ny indran'ny fikandrana"
 
-#: ../previewer/ev-previewer-window.c:551 ../shell/ev-window.c:6491
+#: ../previewer/ev-previewer-window.c:552 ../shell/ev-window.c:6479
 msgid "Page"
 msgstr "Pejy"
 
-#: ../previewer/ev-previewer-window.c:552 ../shell/ev-window.c:6492
+#: ../previewer/ev-previewer-window.c:553 ../shell/ev-window.c:6480
 msgid "Select Page"
 msgstr "Mamaritra ilay pejy"
 
@@ -663,7 +665,13 @@ msgstr ""
 msgid "Paper Size:"
 msgstr ""
 
-#: ../properties/ev-properties-view.c:200 ../libview/ev-print-operation.c:1911
+#. translators: This is used when a document property does
+#. not have a value.  Examples:
+#. Author: None
+#. Keywords: None
+#. translators: Value for 'Page Scaling:' to not scale the document pages on
+#. printing
+#: ../properties/ev-properties-view.c:205 ../libview/ev-print-operation.c:1913
 msgid "None"
 msgstr "Tsy misy"
 
@@ -672,30 +680,30 @@ msgstr "Tsy misy"
 #. * want inches, otherwise translate to default:mm.
 #. * Do *not* translate it to "predefinito:mm", if it
 #. * it isn't default:mm or default:inch it will not work
-#: ../properties/ev-properties-view.c:233
+#: ../properties/ev-properties-view.c:238
 msgid "default:mm"
 msgstr ""
 
-#: ../properties/ev-properties-view.c:277
+#: ../properties/ev-properties-view.c:282
 #, c-format
 msgid "%.0f × %.0f mm"
 msgstr ""
 
-#: ../properties/ev-properties-view.c:281
+#: ../properties/ev-properties-view.c:286
 #, c-format
 msgid "%.2f × %.2f inch"
 msgstr ""
 
 #. Note to translators: first placeholder is the paper name (eg.
 #. * A4), second placeholder is the paper size (eg. 297x210 mm)
-#: ../properties/ev-properties-view.c:305
+#: ../properties/ev-properties-view.c:310
 #, c-format
 msgid "%s, Portrait (%s)"
 msgstr ""
 
 #. Note to translators: first placeholder is the paper name (eg.
 #. * A4), second placeholder is the paper size (eg. 297x210 mm)
-#: ../properties/ev-properties-view.c:312
+#: ../properties/ev-properties-view.c:317
 #, c-format
 msgid "%s, Landscape (%s)"
 msgstr ""
@@ -754,19 +762,19 @@ msgstr ""
 msgid "Your print range selection does not include any pages"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1897 ../libview/ev-print-operation.c:1905
+#: ../libview/ev-print-operation.c:1898 ../libview/ev-print-operation.c:1906
 msgid "Page Scaling:"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1912
+#: ../libview/ev-print-operation.c:1914
 msgid "Shrink to Printable Area"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1913
+#: ../libview/ev-print-operation.c:1915
 msgid "Fit to Printable Area"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1916
+#: ../libview/ev-print-operation.c:1918
 msgid ""
 "Scale document pages to fit the selected printer page. Select from one of the following:\n"
 "\n"
@@ -777,27 +785,27 @@ msgid ""
 "• \"Fit to Printable Area\": Document pages are enlarged or reduced as required to fit the printable area of the printer page.\n"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1932
+#: ../libview/ev-print-operation.c:1934
 msgid "Auto Rotate and Center"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1935
+#: ../libview/ev-print-operation.c:1937
 msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1944
+#: ../libview/ev-print-operation.c:1946
 msgid "Select page size using document page size"
 msgstr ""
 
-#: ../libview/ev-print-operation.c:1946
+#: ../libview/ev-print-operation.c:1948
 msgid ""
 "When enabled, each page will be printed on the same size paper as the "
 "document page."
 msgstr ""
 
-#: ../libview/ev-print-operation.c:2035
+#: ../libview/ev-print-operation.c:2037
 msgid "Page Handling"
 msgstr ""
 
@@ -882,7 +890,7 @@ msgstr "Handefa ny %s"
 msgid "Find:"
 msgstr "Karohy:"
 
-#: ../shell/eggfindbar.c:344 ../shell/ev-window.c:6207
+#: ../shell/eggfindbar.c:344 ../shell/ev-window.c:6195
 msgid "Find Pre_vious"
 msgstr "_Aloha"
 
@@ -890,7 +898,7 @@ msgstr "_Aloha"
 msgid "Find previous occurrence of the search string"
 msgstr "Mikaroka izay mitovy amin'ilay laha-daza any aloha"
 
-#: ../shell/eggfindbar.c:356 ../shell/ev-window.c:6205
+#: ../shell/eggfindbar.c:356 ../shell/ev-window.c:6193
 msgid "Find Ne_xt"
 msgstr "_Manaraka"
 
@@ -997,26 +1005,6 @@ msgstr ""
 #, c-format
 msgid "Password for document %s"
 msgstr "Teny fanalahidin'ny tahirin-kevitra %s"
-
-#: ../shell/ev-convert-metadata.c:92
-#, c-format
-msgid "Converting %s"
-msgstr ""
-
-#: ../shell/ev-convert-metadata.c:96
-#, c-format
-msgid "%d of %d documents converted"
-msgstr ""
-
-#: ../shell/ev-convert-metadata.c:169 ../shell/ev-convert-metadata.c:185
-msgid "Converting metadata"
-msgstr ""
-
-#: ../shell/ev-convert-metadata.c:191
-msgid ""
-"The metadata format used by Atril has changed, and hence it needs to be "
-"migrated. If the migration is cancelled the metadata storage will not work."
-msgstr ""
 
 #: ../shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
@@ -1144,8 +1132,8 @@ msgstr ""
 msgid "_Remove Bookmark"
 msgstr ""
 
-#: ../shell/ev-sidebar-bookmarks.c:313 ../shell/ev-window.c:963
-#: ../shell/ev-window.c:4875
+#: ../shell/ev-sidebar-bookmarks.c:313 ../shell/ev-window.c:958
+#: ../shell/ev-window.c:4867
 #, c-format
 msgid "Page %s"
 msgstr ""
@@ -1170,141 +1158,141 @@ msgstr "Fizahan-takila"
 msgid "Thumbnails"
 msgstr "Sary madinika"
 
-#: ../shell/ev-window.c:960
+#: ../shell/ev-window.c:955
 #, c-format
 msgid "Page %s — %s"
 msgstr ""
 
-#: ../shell/ev-window.c:1100
+#: ../shell/ev-window.c:1095
 msgid ""
 "Cannot enter presentation mode with ePub documents use fullscreen mode "
 "instead."
 msgstr ""
 
-#: ../shell/ev-window.c:1626
+#: ../shell/ev-window.c:1618
 msgid "The document contains no pages"
 msgstr ""
 
-#: ../shell/ev-window.c:1629
+#: ../shell/ev-window.c:1621
 msgid "The document contains only empty pages"
 msgstr ""
 
-#: ../shell/ev-window.c:1668
+#: ../shell/ev-window.c:1660
 msgid "Presentation mode is not supported for ePub documents."
 msgstr ""
 
-#: ../shell/ev-window.c:1862 ../shell/ev-window.c:2030
+#: ../shell/ev-window.c:1854 ../shell/ev-window.c:2022
 msgid "Unable to open document"
 msgstr "Tsy nahasokatra ilay tahirin-kevitra"
 
-#: ../shell/ev-window.c:1999
+#: ../shell/ev-window.c:1991
 #, c-format
 msgid "Loading document from “%s”"
 msgstr ""
 
-#: ../shell/ev-window.c:2143 ../shell/ev-window.c:2434
+#: ../shell/ev-window.c:2135 ../shell/ev-window.c:2426
 #, c-format
 msgid "Downloading document (%d%%)"
 msgstr ""
 
-#: ../shell/ev-window.c:2176
+#: ../shell/ev-window.c:2168
 msgid "Failed to load remote file."
 msgstr ""
 
-#: ../shell/ev-window.c:2378
+#: ../shell/ev-window.c:2370
 #, c-format
 msgid "Reloading document from %s"
 msgstr ""
 
-#: ../shell/ev-window.c:2410
+#: ../shell/ev-window.c:2402
 msgid "Failed to reload document."
 msgstr ""
 
-#: ../shell/ev-window.c:2624
+#: ../shell/ev-window.c:2616
 msgid "Open Document"
 msgstr "Hanokatra ilay tahirin-kevitra"
 
-#: ../shell/ev-window.c:2900
+#: ../shell/ev-window.c:2892
 #, c-format
 msgid "Saving document to %s"
 msgstr ""
 
-#: ../shell/ev-window.c:2903
+#: ../shell/ev-window.c:2895
 #, c-format
 msgid "Saving attachment to %s"
 msgstr ""
 
-#: ../shell/ev-window.c:2906
+#: ../shell/ev-window.c:2898
 #, c-format
 msgid "Saving image to %s"
 msgstr ""
 
-#: ../shell/ev-window.c:2950 ../shell/ev-window.c:3050
+#: ../shell/ev-window.c:2942 ../shell/ev-window.c:3042
 #, c-format
 msgid "The file could not be saved as “%s”."
 msgstr "Tsy voaraikitra ho “%s” ilay rakitra."
 
-#: ../shell/ev-window.c:2981
+#: ../shell/ev-window.c:2973
 #, c-format
 msgid "Uploading document (%d%%)"
 msgstr ""
 
-#: ../shell/ev-window.c:2985
+#: ../shell/ev-window.c:2977
 #, c-format
 msgid "Uploading attachment (%d%%)"
 msgstr ""
 
-#: ../shell/ev-window.c:2989
+#: ../shell/ev-window.c:2981
 #, c-format
 msgid "Uploading image (%d%%)"
 msgstr ""
 
-#: ../shell/ev-window.c:3101
+#: ../shell/ev-window.c:3093
 msgid "Save a Copy"
 msgstr "Handraikitra dika mitovy"
 
-#: ../shell/ev-window.c:3173
+#: ../shell/ev-window.c:3165
 msgid "Could not send current document"
 msgstr ""
 
-#: ../shell/ev-window.c:3423
+#: ../shell/ev-window.c:3415
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../shell/ev-window.c:3536
+#: ../shell/ev-window.c:3528
 #, c-format
 msgid "Printing job “%s”"
 msgstr ""
 
-#: ../shell/ev-window.c:3713
+#: ../shell/ev-window.c:3705
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
 msgstr ""
 
-#: ../shell/ev-window.c:3717
+#: ../shell/ev-window.c:3709
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
 
-#: ../shell/ev-window.c:3724
+#: ../shell/ev-window.c:3716
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
 msgstr ""
 
-#: ../shell/ev-window.c:3743
+#: ../shell/ev-window.c:3735
 msgid "Close _without Saving"
 msgstr ""
 
-#: ../shell/ev-window.c:3747
+#: ../shell/ev-window.c:3739
 msgid "Save a _Copy"
 msgstr ""
 
-#: ../shell/ev-window.c:3823
+#: ../shell/ev-window.c:3815
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
 msgstr ""
@@ -1312,7 +1300,7 @@ msgstr ""
 #. TRANS: the singular form is not really used as n_print_jobs > 1
 #. but some languages distinguish between different plurals forms,
 #. so the ngettext is needed.
-#: ../shell/ev-window.c:3829
+#: ../shell/ev-window.c:3821
 #, c-format
 msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
@@ -1321,38 +1309,38 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../shell/ev-window.c:3844
+#: ../shell/ev-window.c:3836
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr ""
 
-#: ../shell/ev-window.c:3848
+#: ../shell/ev-window.c:3840
 msgid "Cancel _print and Close"
 msgstr ""
 
-#: ../shell/ev-window.c:3852
+#: ../shell/ev-window.c:3844
 msgid "Close _after Printing"
 msgstr ""
 
-#: ../shell/ev-window.c:4303
+#: ../shell/ev-window.c:4295
 msgid "Presentation mode is not supported for ePub documents"
 msgstr ""
 
-#: ../shell/ev-window.c:4617
+#: ../shell/ev-window.c:4609
 msgid "Toolbar Editor"
 msgstr "Mpanova anjam-pitaovana"
 
-#: ../shell/ev-window.c:4920
+#: ../shell/ev-window.c:4912
 msgid "There was an error displaying help"
 msgstr ""
 
-#: ../shell/ev-window.c:5170
+#: ../shell/ev-window.c:5162
 #, c-format
 msgid ""
 "Document Viewer\n"
 "Using %s (%s)"
 msgstr ""
 
-#: ../shell/ev-window.c:5205
+#: ../shell/ev-window.c:5197
 msgid ""
 "Atril is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -1360,7 +1348,7 @@ msgid ""
 "version.\n"
 msgstr "Rindran'asa maimaimpoana ny Atril. Azonao zaraina ary/na ovaina mifanaraka amin'ireo fepetra voalaza anatin'ny fahazoan-dàlana ho an'ny besinimaro GNU izay navoakan'ny Free Software Foundation io rindran'asa io; na ilay andiany faha 2, na izay andiany taty afara (araka ny safidinao).\n"
 
-#: ../shell/ev-window.c:5209
+#: ../shell/ev-window.c:5201
 msgid ""
 "Atril is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -1368,388 +1356,388 @@ msgid ""
 "details.\n"
 msgstr "Ny Gcalctool dia naparitaka noho ny fiheverana fa hisy ilàna azy izy io. Tsy misy fiantohana mihitsy izy io, na dia ilay fiantohana (tsy voalaza an-tsoratra) ny FAHALAVORARIANY HO AN'NY VAROTRA na ny FETEZANY ANAOVANA ZAVATRA aza. Vakio ilay Fahazoan-dàlana ho an'ny besinimaro GNU hahalalanao ny antsipiriany.\n"
 
-#: ../shell/ev-window.c:5213
+#: ../shell/ev-window.c:5205
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
 msgstr ""
 
-#: ../shell/ev-window.c:5242
+#: ../shell/ev-window.c:5230
 msgid "Atril"
 msgstr "Atril"
 
-#: ../shell/ev-window.c:5245
+#: ../shell/ev-window.c:5233
 msgid ""
 "© 1996–2009 The Evince authors\n"
 "© 2012–2016 The MATE developers"
 msgstr ""
 
-#: ../shell/ev-window.c:5251
+#: ../shell/ev-window.c:5239
 msgid "translator-credits"
 msgstr "Mpandrindra: Thierry Randrianiriana <thierry@isvtec.com>\nMpandika teny: Fanomezana Rajaonarisoa <fano@isvtec.com>"
 
 #. TRANS: Sometimes this could be better translated as
 #. "%d hit(s) on this page".  Therefore this string
 #. contains plural cases.
-#: ../shell/ev-window.c:5522
+#: ../shell/ev-window.c:5510
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
 msgstr[0] "in-%d hita anatin'ity pejy ity"
 msgstr[1] "in-%d hita anatin'ity pejy ity"
 
-#: ../shell/ev-window.c:5527
+#: ../shell/ev-window.c:5515
 msgid "Not found"
 msgstr ""
 
-#: ../shell/ev-window.c:5533
+#: ../shell/ev-window.c:5521
 #, c-format
 msgid "%3d%% remaining to search"
 msgstr "%3d%% sisa tadiavina"
 
-#: ../shell/ev-window.c:6169
+#: ../shell/ev-window.c:6157
 msgid "_File"
 msgstr "_Rakitra"
 
-#: ../shell/ev-window.c:6170
+#: ../shell/ev-window.c:6158
 msgid "_Edit"
 msgstr "_Fanovana"
 
-#: ../shell/ev-window.c:6171
+#: ../shell/ev-window.c:6159
 msgid "_View"
 msgstr "_Seho"
 
-#: ../shell/ev-window.c:6172
+#: ../shell/ev-window.c:6160
 msgid "_Go"
 msgstr "_Alefa"
 
-#: ../shell/ev-window.c:6173
+#: ../shell/ev-window.c:6161
 msgid "_Bookmarks"
 msgstr ""
 
-#: ../shell/ev-window.c:6174
+#: ../shell/ev-window.c:6162
 msgid "_Help"
 msgstr "_Toro-làlana"
 
 #. File menu
-#: ../shell/ev-window.c:6177 ../shell/ev-window.c:6531
+#: ../shell/ev-window.c:6165 ../shell/ev-window.c:6519
 msgid "_Open…"
 msgstr ""
 
-#: ../shell/ev-window.c:6178 ../shell/ev-window.c:6532
+#: ../shell/ev-window.c:6166 ../shell/ev-window.c:6520
 msgid "Open an existing document"
 msgstr "Manokatra tahirin-kevitra"
 
-#: ../shell/ev-window.c:6180
+#: ../shell/ev-window.c:6168
 msgid "Op_en a Copy"
 msgstr ""
 
-#: ../shell/ev-window.c:6181
+#: ../shell/ev-window.c:6169
 msgid "Open a copy of the current document in a new window"
 msgstr ""
 
-#: ../shell/ev-window.c:6183
+#: ../shell/ev-window.c:6171
 msgid "_Save a Copy…"
 msgstr ""
 
-#: ../shell/ev-window.c:6184
+#: ../shell/ev-window.c:6172
 msgid "Save a copy of the current document"
 msgstr "Mandraikitra dika mitovy amin'io tahirin-kevitra io"
 
-#: ../shell/ev-window.c:6186
+#: ../shell/ev-window.c:6174
 msgid "Send _To..."
 msgstr ""
 
-#: ../shell/ev-window.c:6187
+#: ../shell/ev-window.c:6175
 msgid "Send current document by mail, instant message..."
 msgstr ""
 
-#: ../shell/ev-window.c:6189
+#: ../shell/ev-window.c:6177
 msgid "_Print…"
 msgstr ""
 
-#: ../shell/ev-window.c:6192
+#: ../shell/ev-window.c:6180
 msgid "P_roperties"
 msgstr "_Toetoetra"
 
-#: ../shell/ev-window.c:6200
+#: ../shell/ev-window.c:6188
 msgid "Select _All"
 msgstr "Farito izy _rehetra"
 
-#: ../shell/ev-window.c:6202
+#: ../shell/ev-window.c:6190
 msgid "_Find…"
 msgstr ""
 
-#: ../shell/ev-window.c:6203
+#: ../shell/ev-window.c:6191
 msgid "Find a word or phrase in the document"
 msgstr "Mikaroka teny na andian-teny ao anatin'ilay tahirin-kevitra"
 
-#: ../shell/ev-window.c:6209
+#: ../shell/ev-window.c:6197
 msgid "T_oolbar"
 msgstr "_Anjam-pitaovana"
 
-#: ../shell/ev-window.c:6211
+#: ../shell/ev-window.c:6199
 msgid "Rotate _Left"
 msgstr "Ahodino _miankavia"
 
-#: ../shell/ev-window.c:6213
+#: ../shell/ev-window.c:6201
 msgid "Rotate _Right"
 msgstr "Ahodino mianka_vanana"
 
-#: ../shell/ev-window.c:6215
+#: ../shell/ev-window.c:6203
 msgid "Save Current Settings as _Default"
 msgstr ""
 
-#: ../shell/ev-window.c:6226
+#: ../shell/ev-window.c:6214
 msgid "_Reload"
 msgstr "_Avereno aseho"
 
-#: ../shell/ev-window.c:6227
+#: ../shell/ev-window.c:6215
 msgid "Reload the document"
 msgstr "Mamerina maneho ilay tahirin-kevitra"
 
-#: ../shell/ev-window.c:6229
+#: ../shell/ev-window.c:6217
 msgid "_Expand Window to Fit"
 msgstr ""
 
-#: ../shell/ev-window.c:6233
+#: ../shell/ev-window.c:6221
 msgid "Auto_scroll"
 msgstr ""
 
-#: ../shell/ev-window.c:6243
+#: ../shell/ev-window.c:6231
 msgid "_First Page"
 msgstr "Pejy _voalohany"
 
-#: ../shell/ev-window.c:6244
+#: ../shell/ev-window.c:6232
 msgid "Go to the first page"
 msgstr "Mankany amin'ny pejy voalohany"
 
-#: ../shell/ev-window.c:6246
+#: ../shell/ev-window.c:6234
 msgid "_Last Page"
 msgstr "_Pejy _farany"
 
-#: ../shell/ev-window.c:6247
+#: ../shell/ev-window.c:6235
 msgid "Go to the last page"
 msgstr "Mankany amin'ny pejy farany"
 
 #. Bookmarks menu
-#: ../shell/ev-window.c:6251
+#: ../shell/ev-window.c:6239
 msgid "_Add Bookmark"
 msgstr ""
 
-#: ../shell/ev-window.c:6252
+#: ../shell/ev-window.c:6240
 msgid "Add a bookmark for the current page"
 msgstr ""
 
 #. Help menu
-#: ../shell/ev-window.c:6256
+#: ../shell/ev-window.c:6244
 msgid "_Contents"
 msgstr "_Mpiaty"
 
-#: ../shell/ev-window.c:6259
+#: ../shell/ev-window.c:6247
 msgid "_About"
 msgstr "_Mombamomba"
 
 #. Toolbar-only
-#: ../shell/ev-window.c:6263
+#: ../shell/ev-window.c:6251
 msgid "Leave Fullscreen"
 msgstr "Tsy mameno efijery intsony"
 
-#: ../shell/ev-window.c:6264
+#: ../shell/ev-window.c:6252
 msgid "Leave fullscreen mode"
 msgstr "Mitsahatra mameno efijery"
 
-#: ../shell/ev-window.c:6266
+#: ../shell/ev-window.c:6254
 msgid "Start Presentation"
 msgstr ""
 
-#: ../shell/ev-window.c:6267
+#: ../shell/ev-window.c:6255
 msgid "Start a presentation"
 msgstr ""
 
 #. View Menu
-#: ../shell/ev-window.c:6326
+#: ../shell/ev-window.c:6314
 msgid "_Toolbar"
 msgstr "_Anjam-pitaovana"
 
-#: ../shell/ev-window.c:6327
+#: ../shell/ev-window.c:6315
 msgid "Show or hide the toolbar"
 msgstr "Maneho na manafina ny anjam-pitaovana"
 
-#: ../shell/ev-window.c:6329
+#: ../shell/ev-window.c:6317
 msgid "Side _Pane"
 msgstr "_Tontonana an-tsisiny"
 
-#: ../shell/ev-window.c:6330
+#: ../shell/ev-window.c:6318
 msgid "Show or hide the side pane"
 msgstr "Maneho na manafina ny tontonana an-tsisiny"
 
-#: ../shell/ev-window.c:6332
+#: ../shell/ev-window.c:6320
 msgid "_Continuous"
 msgstr "_Mitohitohy"
 
-#: ../shell/ev-window.c:6333
+#: ../shell/ev-window.c:6321
 msgid "Show the entire document"
 msgstr "Maneho ilay tahirin-kevitra iray manontolo"
 
-#: ../shell/ev-window.c:6335
+#: ../shell/ev-window.c:6323
 msgid "_Dual (Even pages left)"
 msgstr ""
 
-#: ../shell/ev-window.c:6336
+#: ../shell/ev-window.c:6324
 msgid "Show two pages at once with even pages on the left"
 msgstr ""
 
-#: ../shell/ev-window.c:6338
+#: ../shell/ev-window.c:6326
 msgid "Dual (_Odd pages left)"
 msgstr ""
 
-#: ../shell/ev-window.c:6339
+#: ../shell/ev-window.c:6327
 msgid "Show two pages at once with odd pages on the left"
 msgstr ""
 
-#: ../shell/ev-window.c:6341
+#: ../shell/ev-window.c:6329
 msgid "_Fullscreen"
 msgstr "_Mameno efijery"
 
-#: ../shell/ev-window.c:6342
+#: ../shell/ev-window.c:6330
 msgid "Expand the window to fill the screen"
 msgstr "Mahatonga ny fikandrana hameno ny efijery"
 
-#: ../shell/ev-window.c:6344
+#: ../shell/ev-window.c:6332
 msgid "Pre_sentation"
 msgstr ""
 
-#: ../shell/ev-window.c:6345
+#: ../shell/ev-window.c:6333
 msgid "Run document as a presentation"
 msgstr "Mandefa ilay tahirin-kevitra tahaka ny hoe fampisehoana"
 
-#: ../shell/ev-window.c:6353
+#: ../shell/ev-window.c:6341
 msgid "_Inverted Colors"
 msgstr ""
 
-#: ../shell/ev-window.c:6354
+#: ../shell/ev-window.c:6342
 msgid "Show page contents with the colors inverted"
 msgstr ""
 
 #. Links
-#: ../shell/ev-window.c:6362
+#: ../shell/ev-window.c:6350
 msgid "_Open Link"
 msgstr "_Sokafy io rohy io"
 
-#: ../shell/ev-window.c:6364
+#: ../shell/ev-window.c:6352
 msgid "_Go To"
 msgstr "_Ho any amin'ny"
 
-#: ../shell/ev-window.c:6366
+#: ../shell/ev-window.c:6354
 msgid "Open in New _Window"
 msgstr ""
 
-#: ../shell/ev-window.c:6368
+#: ../shell/ev-window.c:6356
 msgid "_Copy Link Address"
 msgstr "_Adikao ny adiresiny"
 
-#: ../shell/ev-window.c:6370
+#: ../shell/ev-window.c:6358
 msgid "_Save Image As…"
 msgstr ""
 
-#: ../shell/ev-window.c:6372
+#: ../shell/ev-window.c:6360
 msgid "Copy _Image"
 msgstr ""
 
-#: ../shell/ev-window.c:6374
+#: ../shell/ev-window.c:6362
 msgid "Annotation Properties…"
 msgstr ""
 
-#: ../shell/ev-window.c:6379
+#: ../shell/ev-window.c:6367
 msgid "_Open Attachment"
 msgstr ""
 
-#: ../shell/ev-window.c:6381
+#: ../shell/ev-window.c:6369
 msgid "_Save Attachment As…"
 msgstr ""
 
-#: ../shell/ev-window.c:6505
+#: ../shell/ev-window.c:6493
 msgid "Zoom"
 msgstr "Zòma"
 
-#: ../shell/ev-window.c:6507
+#: ../shell/ev-window.c:6495
 msgid "Adjust the zoom level"
 msgstr "Manamboatra ny tahan'ny zòma"
 
-#: ../shell/ev-window.c:6517
+#: ../shell/ev-window.c:6505
 msgid "Navigation"
 msgstr ""
 
-#: ../shell/ev-window.c:6519
+#: ../shell/ev-window.c:6507
 msgid "Back"
 msgstr ""
 
 #. translators: this is the history action
-#: ../shell/ev-window.c:6522
+#: ../shell/ev-window.c:6510
 msgid "Move across visited pages"
 msgstr ""
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6551
+#: ../shell/ev-window.c:6539
 msgid "Send To"
 msgstr ""
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6557
+#: ../shell/ev-window.c:6545
 msgid "Previous"
 msgstr "Aloha"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6562
+#: ../shell/ev-window.c:6550
 msgid "Next"
 msgstr "Manaraka"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6566
+#: ../shell/ev-window.c:6554
 msgid "Zoom In"
 msgstr "Manalehibe"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6570
+#: ../shell/ev-window.c:6558
 msgid "Zoom Out"
 msgstr "Manakely"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6578
+#: ../shell/ev-window.c:6566
 msgid "Fit Width"
 msgstr "Mameno ny indra"
 
-#: ../shell/ev-window.c:6728 ../shell/ev-window.c:6755
+#: ../shell/ev-window.c:6716 ../shell/ev-window.c:6743
 msgid "Unable to launch external application."
 msgstr ""
 
-#: ../shell/ev-window.c:6829
+#: ../shell/ev-window.c:6817
 msgid "Unable to open external link"
 msgstr ""
 
-#: ../shell/ev-window.c:7023
+#: ../shell/ev-window.c:7011
 msgid "Couldn't find appropriate format to save image"
 msgstr ""
 
-#: ../shell/ev-window.c:7055
+#: ../shell/ev-window.c:7043
 msgid "The image could not be saved."
 msgstr ""
 
-#: ../shell/ev-window.c:7087
+#: ../shell/ev-window.c:7075
 msgid "Save Image"
 msgstr ""
 
-#: ../shell/ev-window.c:7223
+#: ../shell/ev-window.c:7211
 msgid "Unable to open attachment"
 msgstr "Tsy nahasokatra ilay mpanaraka"
 
-#: ../shell/ev-window.c:7279
+#: ../shell/ev-window.c:7267
 msgid "The attachment could not be saved."
 msgstr "Tsy nety noraiketina ilay mpanaraka."
 
-#: ../shell/ev-window.c:7324
+#: ../shell/ev-window.c:7312
 msgid "Save Attachment"
 msgstr ""
 
