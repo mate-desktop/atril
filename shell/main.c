@@ -234,7 +234,9 @@ main (int argc, char *argv[])
 	textdomain (GETTEXT_PACKAGE);
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 	gdk_set_allowed_backends ("x11");
+#endif
 
 	context = g_option_context_new (N_("MATE Document Viewer"));
 	g_option_context_set_translation_domain(context, GETTEXT_PACKAGE);
