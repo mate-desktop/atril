@@ -207,7 +207,7 @@ ev_sidebar_annotations_add_annots_palette (EvSidebarAnnotations *ev_annots)
 
 	/* FIXME: use a better icon than EDIT */
 	item = gtk_toggle_tool_button_new ();
-	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (item), GTK_STOCK_EDIT);
+	gtk_tool_button_set_icon_name (GTK_TOOL_BUTTON (item), "gtk-edit");
 	gtk_tool_button_set_label (GTK_TOOL_BUTTON (item), _("Text"));
 	gtk_widget_set_tooltip_text (GTK_WIDGET (item), _("Add text annotation"));
 	ev_annots->priv->annot_text_item = item;
@@ -411,6 +411,7 @@ job_finished_callback (EvJobAnnots          *job,
 			gchar        *markup;
 			GtkTreeIter   child_iter;
 			GdkPixbuf    *pixbuf = NULL;
+			GtkIconTheme *icon_theme;
 
 			annot = ((EvMapping *)(ll->data))->data;
 			if (!EV_IS_ANNOTATION_MARKUP (annot))
@@ -425,19 +426,25 @@ job_finished_callback (EvJobAnnots          *job,
 				markup = g_strdup_printf ("<span weight=\"bold\">%s</span>", label);
 			}
 
+			icon_theme = gtk_icon_theme_get_default();
+
 			if (EV_IS_ANNOTATION_TEXT (annot)) {
 				if (!text_icon) {
 					/* FIXME: use a better icon than EDIT */
-					text_icon = gtk_widget_render_icon_pixbuf (priv->tree_view,
-									           GTK_STOCK_EDIT,
-									           GTK_ICON_SIZE_BUTTON);
+					text_icon = gtk_icon_theme_load_icon (icon_theme,
+									           "gtk-edit",
+									           GTK_ICON_SIZE_BUTTON,
+									           GTK_ICON_LOOKUP_FORCE_SVG | GTK_ICON_LOOKUP_USE_BUILTIN,
+									           NULL);
 				}
 				pixbuf = text_icon;
 			} else if (EV_IS_ANNOTATION_ATTACHMENT (annot)) {
 				if (!attachment_icon) {
-					attachment_icon = gtk_widget_render_icon_pixbuf (priv->tree_view,
-										         EV_STOCK_ATTACHMENT,
-										         GTK_ICON_SIZE_BUTTON);
+					attachment_icon = gtk_icon_theme_load_icon (icon_theme,
+									           EV_STOCK_ATTACHMENT,
+									           GTK_ICON_SIZE_BUTTON,
+									           GTK_ICON_LOOKUP_FORCE_SVG | GTK_ICON_LOOKUP_USE_BUILTIN,
+									           NULL);
 				}
 				pixbuf = attachment_icon;
 			}
