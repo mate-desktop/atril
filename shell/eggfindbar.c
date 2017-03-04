@@ -346,8 +346,11 @@ egg_find_bar_init (EggFindBar *find_bar)
   priv->status_label = gtk_label_new (NULL);
   gtk_label_set_ellipsize (GTK_LABEL (priv->status_label),
                            PANGO_ELLIPSIZE_END);
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (priv->status_label), 0.0);
+#else
   gtk_misc_set_alignment (GTK_MISC (priv->status_label), 0.0, 0.5);
-
+#endif
 
   g_signal_connect (priv->find_entry, "changed",
                     G_CALLBACK (entry_changed_callback),
