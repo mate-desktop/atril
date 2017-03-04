@@ -396,18 +396,15 @@ event_box_realize_cb (GtkWidget *widget, GtkImage *icon)
       const gchar *icon_name;
       GdkScreen *screen;
       GtkIconTheme *icon_theme;
-      GtkSettings *settings;
       gint width, height;
       GdkPixbuf *pixbuf;
 
       gtk_image_get_icon_name (icon, &icon_name, NULL);
       screen = gtk_widget_get_screen (widget);
       icon_theme = gtk_icon_theme_get_for_screen (screen);
-      settings = gtk_settings_get_for_screen (screen);
 
-      if (!gtk_icon_size_lookup_for_settings (settings,
-                                              GTK_ICON_SIZE_LARGE_TOOLBAR,
-					      &width, &height))
+      if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
+					             &width, &height))
         {
 	  width = height = 24;
 	}
