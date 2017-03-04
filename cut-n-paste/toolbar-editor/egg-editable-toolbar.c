@@ -493,16 +493,13 @@ configure_item_cursor (GtkToolItem *item,
                 {
                   GdkScreen *screen;
                   GtkIconTheme *icon_theme;
-                  GtkSettings *settings;
                   gint width, height;
 
                   screen = gtk_widget_get_screen (widget);
                   icon_theme = gtk_icon_theme_get_for_screen (screen);
-                  settings = gtk_settings_get_for_screen (screen);
 
-                  if (!gtk_icon_size_lookup_for_settings (settings,
-                                                          GTK_ICON_SIZE_LARGE_TOOLBAR,
-                                                          &width, &height))
+                  if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
+                                             &width, &height))
                     {
                       width = height = 24;
                     }
@@ -1809,14 +1806,10 @@ new_pixbuf_from_widget (GtkWidget *widget)
   GtkWidget *window;
   GdkPixbuf *pixbuf;
   gint icon_height;
-  GdkScreen *screen;
 
-  screen = gtk_widget_get_screen (widget);
-
-  if (!gtk_icon_size_lookup_for_settings (gtk_settings_get_for_screen (screen),
-					  GTK_ICON_SIZE_LARGE_TOOLBAR,
-					  NULL,
-					  &icon_height))
+  if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
+                             NULL,
+                             &icon_height))
     {
       icon_height = DEFAULT_ICON_HEIGHT;
     }
