@@ -201,7 +201,7 @@ struct _EvView {
 	EvMapping *synctex_result;
 
 	/* Accessibility */
-	gboolean a11y_enabled;
+	AtkObject *accessible;
 };
 
 struct _EvViewClass {
