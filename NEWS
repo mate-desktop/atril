@@ -1,3 +1,29 @@
+### artil 1.17.1
+
+  * ev-view-accessible: Fix some coding style issues
+  * ev-view-accessible: Add helper function to get text before, at or after offset
+  * libview: Make EvLinkAccessible implement AtkAction
+  * libview: Implement AtkHypertext interface
+  * libdocument: Add length and nth methods to EvMappingList
+  * ev-view: Inlcude ev-jobs in ev-view.h
+  * ev-view-accessible: Use _ev_view_transform_doc_rect_to_view_rect()
+  * ev-view-accessible: Use _ev_view_transform_view_point_to_doc_point()
+  * libview: Rename EvView coordinate transformation functions
+  * a11y: Do not use AtkFactory to create the EvViewAccessible
+  * eggfindbar: don't use deprecated GtkAlignment
+  * docs: Add missing EvAnnotation API to sections.txt
+  * egg-toolbar-editor.c: don't use deprecated gtk_icon_size_lookup_for_settings
+  * egg-editable-toolbar: don't use deprecated gtk_icon_size_lookup_for_settings
+  * zoom-control.c: don't use deprecated gtk_combo_box_set_focus_on_click
+  * avoid deprecated gtk_misc_set_alignment
+  * sidebar-annotations: don't use deprecated gtk_widget_render_icon_pixbuf
+  * Previously opened page incorrectly restored if it was the last one
+  * Revert "sometimes info->linearized is not a string" and "crash on g_free the address 0 or 1"
+  * First page should not reloaded
+  * force X11
+  * Update atril NEWS to use consistent, project wide, markdown-like formatting.
+  * comics backend: add support for unarchiver (unar and lsar)
+
 ### artil 1.17.0
 
   * Translations update
