@@ -538,29 +538,24 @@ append_grid (GtkGrid *grid, GList *items, gint y, gint width)
   if (items != NULL)
     {
       gint x = 0;
-      GtkWidget *alignment;
       GtkWidget *item;
 
       if (y > 0)
         {
           item = gtk_separator_new (GTK_ORIENTATION_HORIZONTAL);
-          alignment = gtk_alignment_new (0.5, 0.5, 1.0, 0.0);
-          g_object_set (G_OBJECT (alignment), "expand", TRUE, NULL);
-          gtk_container_add (GTK_CONTAINER (alignment), item);
-          gtk_widget_show (alignment);
+          gtk_widget_set_hexpand (item, TRUE);
+          gtk_widget_set_vexpand (item, FALSE);
           gtk_widget_show (item);
 
-          gtk_grid_attach (grid, alignment, 0, y, width, 1);
+          gtk_grid_attach (grid, item, 0, y, width, 1);
           y++;
         }
 
       for (; items != NULL; items = items->next)
         {
           item = items->data;
-          alignment = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
-          g_object_set (G_OBJECT (alignment), "expand", TRUE, NULL);
-          gtk_container_add (GTK_CONTAINER (alignment), item);
-          gtk_widget_show (alignment);
+          gtk_widget_set_hexpand (item, FALSE);
+          gtk_widget_set_vexpand (item, FALSE);
           gtk_widget_show (item);
 
           if (x >= width)
@@ -568,7 +563,7 @@ append_grid (GtkGrid *grid, GList *items, gint y, gint width)
               x = 0;
               y++;
             }
-          gtk_grid_attach (grid, alignment, x, y, 1, 1);
+          gtk_grid_attach (grid, item, x, y, 1, 1);
           x++;
         }
 
