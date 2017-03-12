@@ -298,7 +298,13 @@ move_item_cb (GtkAction          *action,
   gdk_event_get_coords (realevent, &event->motion.x, &event->motion.y);
   gdk_event_get_root_coords (realevent, &event->motion.x_root, &event->motion.y_root);
 
-  gtk_drag_begin (toolitem, list, GDK_ACTION_MOVE, 1, event);
+  gtk_drag_begin_with_coordinates (toolitem,
+                                   list,
+                                   GDK_ACTION_MOVE,
+                                   1,
+                                   event,
+                                   event->motion.x,
+                                   event->motion.y);
   gdk_event_free (event);
   gtk_target_list_unref (list);
 }
