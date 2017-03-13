@@ -1,37 +1,18 @@
-### atril 1.17.1
+### atril 1.18.0
 
-  * ev-view-accessible: Fix some coding style issues
-  * ev-view-accessible: Add helper function to get text before, at or after offset
-  * libview: Make EvLinkAccessible implement AtkAction
-  * libview: Implement AtkHypertext interface
-  * libdocument: Add length and nth methods to EvMappingList
-  * ev-view: Inlcude ev-jobs in ev-view.h
-  * ev-view-accessible: Use _ev_view_transform_doc_rect_to_view_rect()
-  * ev-view-accessible: Use _ev_view_transform_view_point_to_doc_point()
-  * libview: Rename EvView coordinate transformation functions
-  * a11y: Do not use AtkFactory to create the EvViewAccessible
-  * eggfindbar: don't use deprecated GtkAlignment
-  * docs: Add missing EvAnnotation API to sections.txt
-  * egg-toolbar-editor.c: don't use deprecated gtk_icon_size_lookup_for_settings
-  * egg-editable-toolbar: don't use deprecated gtk_icon_size_lookup_for_settings
-  * zoom-control.c: don't use deprecated gtk_combo_box_set_focus_on_click
-  * avoid deprecated gtk_misc_set_alignment
-  * sidebar-annotations: don't use deprecated gtk_widget_render_icon_pixbuf
-  * Previously opened page incorrectly restored if it was the last one
-  * Revert "sometimes info->linearized is not a string" and "crash on g_free the address 0 or 1"
-  * First page should not reloaded
-  * force X11
-  * Update atril NEWS to use consistent, project wide, markdown-like formatting.
-  * comics backend: add support for unarchiver (unar and lsar)
-
-### atril 1.17.0
-
+  * NEWS: use consistent, project wide, markdown-like formatting to make
+    generating release announcements easier
+  * Build: require caja >= 1.17.1
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+    build option
+  * [comics] add support for unarchiver (unar and lsar)
+  * [libview] increase page cache size to reduce number of page reloads
+  * Remove metadata migration code
+  * Force X11 backend
+  * Fix lots of GTK+ deprecations
+  * Fix some a11y issues
+  * Some more fixes and cleanups
   * Translations update
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
-  * cut-n-paste: set vertical box to be homogeneous in GTK+3 code too
-  * shell: use modern function inside GTK+3 code block (and drop #define)
-  * shell: replace deprecated function call inside GTK+3 code block
-  * shell: remove metadata migration code
 
 ### atril 1.16.1
 
@@ -40,7 +21,8 @@
   * [comics] support application/vnd.comicbook+zip MIME type
   * [djvu] support image/vnd.djvu+multipage MIME type
   * [pdf] fix case-sensitive search
-  * thumbnailer: skip epub files (thumbnail generation never worked there and caused segfaults)
+  * thumbnailer: skip epub files (thumbnail generation never worked
+    there and caused segfaults)
   * Some code cleanups
   * Translations update
 
@@ -48,13 +30,17 @@
 
   * Build: require poppler 0.18.0
   * Use GtkAboutDialog instead of MateAboutDialog
-  * Drop dependency on libmate-desktop and --without-matedesktop build option
+  * Drop dependency on libmate-desktop and --without-matedesktop
+    build option
   * Update toolbar-editor from libegg
   * Update synctex to 1.18
-  * Split dual mode option into dual mode with odd and even pages on the left
+  * Split dual mode option into dual mode with odd and even pages
+    on the left
   * Add Ctrl+Up/Down keybindings for previous/next search result
-  * Add caja-sendto support for sending current document by email, to removable device, etc.
-  * Improve named destinations support with --named-dest command line argument and dbus support
+  * Add caja-sendto support for sending current document by email,
+    to removable device, etc.
+  * Improve named destinations support with --named-dest command line
+    argument and dbus support
   * [dvi] Use t1 font mapping files
   * GTK+3: add style class for view
   * GTK+3: fix possible crash when building with introspection enabled
