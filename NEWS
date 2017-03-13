@@ -1,4 +1,4 @@
-### artil 1.17.1
+### atril 1.17.1
 
   * ev-view-accessible: Fix some coding style issues
   * ev-view-accessible: Add helper function to get text before, at or after offset
@@ -24,7 +24,7 @@
   * Update atril NEWS to use consistent, project wide, markdown-like formatting.
   * comics backend: add support for unarchiver (unar and lsar)
 
-### artil 1.17.0
+### atril 1.17.0
 
   * Translations update
   * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
@@ -33,7 +33,7 @@
   * shell: replace deprecated function call inside GTK+3 code block
   * shell: remove metadata migration code
 
-### artil 1.16.1
+### atril 1.16.1
 
   * Build: require poppler 0.22.0 (for case-sensitive search in PDFs)
   * [comics] fix MIME type comparisons
@@ -44,7 +44,7 @@
   * Some code cleanups
   * Translations update
 
-### artil 1.16.0
+### atril 1.16.0
 
   * Build: require poppler 0.18.0
   * Use GtkAboutDialog instead of MateAboutDialog
@@ -62,7 +62,7 @@
   * Some more fixes and cleanups
   * Translations update
 
-### artil 1.14.2
+### atril 1.14.2
 
   * Add setting to set page cache size
   * Add setting to disable auto-reload
@@ -71,12 +71,12 @@
   * Translations update
   * Make distcheck use currently selected GTK+ version
 
-### artil 1.14.1
+### atril 1.14.1
 
   * Translations update
   * fix several random webview related crashes
 
-### artil 1.14.0
+### atril 1.14.0
 
   * Drop MateConf migration script
   * Update copyrights, mention MATE team in Caja extension
@@ -87,16 +87,16 @@
   * Translations update
   * Fix Changelog generation
 
-### artil 1.12.2
+### atril 1.12.2
 
   * [epub] Fix crash when accessibility is enabled
 
-### artil 1.12.1
+### atril 1.12.1
 
   * [dvi] Fix crash due to regression
   * Translations update
 
-### artil 1.12.0
+### atril 1.12.0
 
   * Drop support for win32/osx/hildon
   * Drop useless mate-icon-theme dependency
@@ -105,20 +105,20 @@
   * Retrieve strings directly from gschema (requires intltool 0.50.1)
   * Several code cleanups
 
-### artil 1.10.2
+### atril 1.10.2
 
   * Fix several command line options
   * Fix several findbar issues
   * Make libmatedesktop optional
   * [pdf] Fix saving annotations added to different pages
 
-### artil 1.10.1
+### atril 1.10.1
 
   * Fix crash when pressing Esc with no document opened
   * Gtk3: Add webkit2gtk-4.0 and prefer it over 3.0
   * Help fixes
 
-### artil 1.10.0
+### atril 1.10.0
 
   * Fix some crashes
   * comics backend: add support for bsdtar
@@ -159,7 +159,7 @@
   * Add epub support (part of GSoC 2014).
   * Use MateAboutDialog from libmate-desktop.
 
-### artil 1.8.0
+### atril 1.8.0
 
   * Drop libmatekeyring and use libsecret.
   * Move from mate-doc-utils to yelp-tools.
