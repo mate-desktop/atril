@@ -4757,6 +4757,16 @@ ev_view_forall (GtkContainer *container,
 }
 
 static void
+ev_view_parent_set (GtkWidget *widget,
+		    GtkWidget *previous_parent)
+{
+	GtkWidget *parent;
+
+	parent = gtk_widget_get_parent (widget);
+	g_assert (!parent || GTK_IS_SCROLLED_WINDOW (parent));
+}
+
+static void
 ev_view_class_init (EvViewClass *class)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (class);
@@ -4788,6 +4798,7 @@ ev_view_class_init (EvViewClass *class)
 	widget_class->drag_motion = ev_view_drag_motion;
 	widget_class->popup_menu = ev_view_popup_menu;
 	widget_class->query_tooltip = ev_view_query_tooltip;
+	widget_class->parent_set = ev_view_parent_set;
 
 	object_class->dispose = ev_view_dispose;
 
