@@ -1074,7 +1074,7 @@ update_document_mode (EvWindow *window, EvDocumentMode mode)
 	if (mode == EV_DOCUMENT_MODE_PRESENTATION) {
 		if (window->priv->document) {
 			if (window->priv->document->iswebdocument) {
-				ev_window_warning_message(window,_("Cannot enter presentation mode with ePub documents use fullscreen mode instead."));
+				ev_window_warning_message(window,_("Cannot enter presentation mode with ePub documents, use fullscreen mode instead."));
 				return;
 			}
 		}
