@@ -6,7 +6,6 @@ AM_CPPFLAGS=							\
 	-I$(top_srcdir)/cut-n-paste/zoom-control/		\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor/		\
 	-I$(top_srcdir)/cut-n-paste/totem-screensaver/		\
-	-I$(top_srcdir)/cut-n-paste/gimpcellrenderertoggle/	\
 	-I$(top_srcdir)/cut-n-paste/smclient/			\
 	-I$(top_srcdir)/libdocument				\
 	-I$(top_builddir)/libdocument				\
@@ -104,7 +103,6 @@ atril_LDADD=										\
 	$(top_builddir)/cut-n-paste/zoom-control/libephyzoom.la				\
 	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la			\
 	$(top_builddir)/cut-n-paste/totem-screensaver/libtotemscrsaver.la		\
-	$(top_builddir)/cut-n-paste/gimpcellrenderertoggle/libgimpcellrenderertoggle.la	\
 	$(top_builddir)/cut-n-paste/smclient/libsmclient.la				\
 	$(top_builddir)/properties/libevproperties.la					\
 	$(top_builddir)/libdocument/libatrildocument.la					\
