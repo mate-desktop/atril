@@ -1179,7 +1179,11 @@ ev_view_presentation_key_press_event (GtkWidget   *widget,
 	EvViewPresentation *pview = EV_VIEW_PRESENTATION (widget);
 
 	if (pview->state == EV_PRESENTATION_END)
+#if GTK_CHECK_VERSION (3, 0, 0)
 		return gtk_bindings_activate_event (G_OBJECT (widget), event);
+#else
+		return gtk_bindings_activate_event (GTK_OBJECT (widget), event);
+#endif
 
 	switch (event->keyval) {
 	case GDK_KEY_b:
@@ -1239,7 +1243,11 @@ ev_view_presentation_key_press_event (GtkWidget   *widget,
 		return TRUE;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 	return gtk_bindings_activate_event (G_OBJECT (widget), event);
+#else
+	return gtk_bindings_activate_event (GTK_OBJECT (widget), event);
+#endif
 }
 
 static gboolean

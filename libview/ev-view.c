@@ -4427,7 +4427,11 @@ ev_view_key_press_event (GtkWidget   *widget,
 		return FALSE;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 	return gtk_bindings_activate_event (G_OBJECT (widget), event);
+#else
+	return gtk_bindings_activate_event (GTK_OBJECT (widget), event);
+#endif
 }
 
 static gint
