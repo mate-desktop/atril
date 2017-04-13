@@ -94,7 +94,7 @@ AC_ARG_WITH([gtk],
 AC_MSG_RESULT([$with_gtk])
 
 dnl Specify required versions of dependencies
-CAIRO_REQUIRED=1.9.10
+CAIRO_REQUIRED=1.10.0
 GLIB_REQUIRED=2.36.0
 GTK_REQUIRED=3.14.0
 WEBKIT_REQUIRED=2.4.3
