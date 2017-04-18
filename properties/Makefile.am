@@ -37,6 +37,8 @@ extension_DATA = $(extension_in_files:.caja-extension.in=.caja-extension)
 
 EXTRA_DIST = $(extension_in_files)
 
+CLEANFILES = $(extension_DATA)
+
 endif # ENABLE_CAJA
 
 -include $(top_srcdir)/git.mk
