@@ -1,5 +1,18 @@
 ### atril 1.19.0
 
+    sync with transifex
+    update copyright year to 2017
+    build: properly clean the generated .caja-extension file
+    build: require cairo >= 1.10.0 and drop some old code
+    shell: remove unused code from utils
+    ev-view: avoid deprecated gtk_drag_begin
+    egg-editable-toolbar: avoid deprecated gtk_drag_begin
+    message-area: replace some GtkStock deprecations
+    ev-sidebar: avoid deprecated GTK_STOCK_CLOSE icon
+    password-view: replace some GtkStock deprecations
+    password-view: don't use deprecated GtkAlignment
+    toolbar-editor: don't use deprecated GtkAlignment
+
 ### atril 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting to make
