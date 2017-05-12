@@ -3207,11 +3207,12 @@ static void
 ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 {
 	GtkWidget *fc;
-	gchar *base_name;
-	GFile *file;
+	gchar *base_name, *dir_name, *var_tmp_dir, *tmp_dir;
+	GFile *file, *parent;
+	const gchar *default_dir, *dest_dir, *documents_dir;
 
 	fc = gtk_file_chooser_dialog_new (
-		_("Save a Copy"),
+		_("Save As…"),
 		GTK_WINDOW (ev_window), GTK_FILE_CHOOSER_ACTION_SAVE,
 		"gtk-cancel", GTK_RESPONSE_CANCEL,
 		"gtk-save", GTK_RESPONSE_OK,
@@ -3224,14 +3225,31 @@ ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 	gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (fc), TRUE);
 	file = g_file_new_for_uri (ev_window->priv->uri);
 	base_name = g_file_get_basename (file);
-	gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (fc), base_name);
+	parent = g_file_get_parent (file);
+	dir_name = g_file_get_path (parent);
+	g_object_unref (parent);
 
-	g_object_unref (file);
+	gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (fc), base_name);
 	g_free (base_name);
 
-        ev_window_file_chooser_restore_folder (ev_window, GTK_FILE_CHOOSER (fc),
-                                               ev_window->priv->uri,
-                                               G_USER_DIRECTORY_DOCUMENTS);
+	documents_dir = g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS);
+	default_dir = g_file_test (documents_dir, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_DIR) ?
+	              documents_dir : g_get_home_dir ();
+
+	tmp_dir = g_build_filename ("tmp", NULL);
+	var_tmp_dir = g_build_filename ("var", "tmp", NULL);
+	dest_dir = dir_name && !g_str_has_prefix (dir_name, g_get_tmp_dir ()) &&
+			    !g_str_has_prefix (dir_name, tmp_dir) &&
+	                    !g_str_has_prefix (dir_name, var_tmp_dir) ?
+	                    dir_name : default_dir;
+
+	gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (fc),
+					     dest_dir);
+
+	g_object_unref (file);
+	g_free (tmp_dir);
+	g_free (var_tmp_dir);
+	g_free (dir_name);
 
 	g_signal_connect (fc, "response",
 			  G_CALLBACK (file_save_dialog_response_cb),
@@ -3846,7 +3864,7 @@ ev_window_check_document_modified (EvWindow *ev_window)
 				GTK_RESPONSE_NO,
 				"gtk-cancel",
 				GTK_RESPONSE_CANCEL,
-				_("Save a _Copy"),
+				_("_Save As…"),
 				GTK_RESPONSE_YES,
 				NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_YES);
@@ -6340,7 +6358,7 @@ static const GtkActionEntry entries[] = {
 	{ "FileOpenCopy", NULL, N_("Op_en a Copy"), "<control>N",
 	  N_("Open a copy of the current document in a new window"),
 	  G_CALLBACK (ev_window_cmd_file_open_copy) },
-       	{ "FileSaveAs", "document-save-as", N_("_Save a Copy…"), "<control>S",
+	{ "FileSaveAs", "document-save-as", N_("_Save As…"), "<control>S",
 	  N_("Save a copy of the current document"),
 	  G_CALLBACK (ev_window_cmd_save_as) },
 	{ "FileSendTo", EV_STOCK_SEND_TO, N_("Send _To..."), NULL,
@@ -6350,7 +6368,7 @@ static const GtkActionEntry entries[] = {
 	  N_("Print this document"),
 	  G_CALLBACK (ev_window_cmd_file_print) },
 	{ "FileProperties", "document-properties", N_("P_roperties"), "<alt>Return", NULL,
-	  G_CALLBACK (ev_window_cmd_file_properties) },			      
+	  G_CALLBACK (ev_window_cmd_file_properties) },
 	{ "FileCloseWindow", "window-close", N_("_Close"), "<control>W", NULL,
 	  G_CALLBACK (ev_window_cmd_file_close_window) },
 
