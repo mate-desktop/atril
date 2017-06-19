@@ -252,6 +252,9 @@ ev_web_view_inverted_colors_changed_cb (EvDocumentModel *model,
 				        EvWebView       *webview)
 {
 	EvDocument *document = ev_document_model_get_document(model);
+
+	if (!document || !document->iswebdocument)
+	    return;
 	
 	if (ev_document_model_get_inverted_colors(model) == TRUE) {
 		if (document == NULL) {
