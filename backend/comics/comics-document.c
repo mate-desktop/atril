@@ -411,6 +411,16 @@ comics_check_decompress_command	(gchar          *mime_type,
 			return TRUE;
 		}
 
+	} else if (g_content_type_is_a (mime_type, "application/x-cbt") ||
+		   g_content_type_is_a (mime_type, "application/x-tar")) {
+		/* tar utility (Tape ARchive) */
+		comics_document->selected_command =
+				g_find_program_in_path ("lsar");
+		if (comics_document->selected_command) {
+			comics_document->command_usage = UNARCHIVER;
+			return TRUE;
+		}
+
 	} else {
 		g_set_error (error,
 			     EV_DOCUMENT_ERROR,
