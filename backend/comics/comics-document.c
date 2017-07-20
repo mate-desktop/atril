@@ -45,7 +45,6 @@ typedef enum
 	GNAUNRAR,
 	UNZIP,
 	P7ZIP,
-	TAR,
 	UNARCHIVER
 } ComicBookDecompressType;
 
@@ -107,8 +106,6 @@ static const ComicBookDecompressCommand command_usage_def[] = {
         /* 7zip */
 	{NULL               , "%s l -- %s"     , "%s x -y %s -o%s", FALSE, OFFSET_7Z},
 
-        /* tar */
-	{"%s -xOf"          , "%s -tf %s"      , NULL             , FALSE, NO_OFFSET},
 
 	/* UNARCHIVER */
 	{"unar -o -"	    , "%s %s"	       , NULL		  , FALSE, NO_OFFSET}
@@ -365,12 +362,6 @@ comics_check_decompress_command	(gchar          *mime_type,
 			comics_document->command_usage = UNARCHIVER;
 			return TRUE;
 		}
-		comics_document->selected_command =
-				g_find_program_in_path ("bsdtar");
-		if (comics_document->selected_command) {
-			comics_document->command_usage = TAR;
-			return TRUE;
-		}
 
 	} else if (g_content_type_is_a (mime_type, "application/x-cbz") ||
 		   g_content_type_is_a (mime_type, "application/zip")) {
@@ -382,12 +373,6 @@ comics_check_decompress_command	(gchar          *mime_type,
 		if (comics_document->selected_command &&
 		    comics_document->alternative_command) {
 			comics_document->command_usage = UNZIP;
-			return TRUE;
-		}
-		comics_document->selected_command =
-				g_find_program_in_path ("bsdtar");
-		if (comics_document->selected_command) {
-			comics_document->command_usage = TAR;
 			return TRUE;
 		}
 		comics_document->selected_command =
@@ -420,38 +405,22 @@ comics_check_decompress_command	(gchar          *mime_type,
 			return TRUE;
 		}
 		comics_document->selected_command =
-				g_find_program_in_path ("bsdtar");
-		if (comics_document->selected_command) {
-			comics_document->command_usage = TAR;
-			return TRUE;
-		}
-		comics_document->selected_command =
 				g_find_program_in_path ("lsar");
 		if (comics_document->selected_command) {
 			comics_document->command_usage = UNARCHIVER;
 			return TRUE;
 		}
+
 	} else if (g_content_type_is_a (mime_type, "application/x-cbt") ||
 		   g_content_type_is_a (mime_type, "application/x-tar")) {
 		/* tar utility (Tape ARchive) */
 		comics_document->selected_command =
-				g_find_program_in_path ("tar");
-		if (comics_document->selected_command) {
-			comics_document->command_usage = TAR;
-			return TRUE;
-		}
-		comics_document->selected_command =
-				g_find_program_in_path ("bsdtar");
-		if (comics_document->selected_command) {
-			comics_document->command_usage = TAR;
-			return TRUE;
-		}
-		comics_document->selected_command =
 				g_find_program_in_path ("lsar");
 		if (comics_document->selected_command) {
 			comics_document->command_usage = UNARCHIVER;
 			return TRUE;
 		}
+
 	} else {
 		g_set_error (error,
 			     EV_DOCUMENT_ERROR,
