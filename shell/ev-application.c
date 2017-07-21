@@ -734,7 +734,6 @@ method_call_cb (GDBusConnection       *connection,
         const gchar     *key;
         GVariant        *value;
         GdkDisplay      *display = NULL;
-        int              screen_number = 0;
 	EvLinkDest      *dest = NULL;
 	EvWindowRunMode  mode = EV_WINDOW_MODE_NORMAL;
 	const gchar     *search_string = NULL;
@@ -746,8 +745,6 @@ method_call_cb (GDBusConnection       *connection,
 		while (g_variant_iter_loop (iter, "{&sv}", &key, &value)) {
 			if (strcmp (key, "display") == 0 && g_variant_classify (value) == G_VARIANT_CLASS_STRING) {
 				display = ev_display_open_if_needed (g_variant_get_string (value, NULL));
-			} else if (strcmp (key, "screen") == 0 && g_variant_classify (value) == G_VARIANT_CLASS_STRING) {
-				screen_number = g_variant_get_int32 (value);
 			} else if (strcmp (key, "mode") == 0 && g_variant_classify (value) == G_VARIANT_CLASS_UINT32) {
 			mode = g_variant_get_uint32 (value);
 			} else if (strcmp (key, "page-label") == 0 && g_variant_classify (value) == G_VARIANT_CLASS_STRING) {
@@ -762,10 +759,8 @@ method_call_cb (GDBusConnection       *connection,
 		}
 		g_variant_iter_free (iter);
 
-		if (display != NULL &&
-		    screen_number >= 0 &&
-		    screen_number < gdk_display_get_n_screens (display))
-			screen = gdk_display_get_screen (display, screen_number);
+		if (display != NULL)
+			screen = gdk_display_get_default_screen (display);
 		else
 			screen = gdk_screen_get_default ();
 
