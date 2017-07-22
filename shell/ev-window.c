@@ -4864,10 +4864,17 @@ ev_window_cmd_help_contents (GtkAction *action, EvWindow *ev_window)
 {
 	GError  *error = NULL;
 
+#if GTK_CHECK_VERSION (3, 22, 0)
+	gtk_show_uri_on_window (GTK_WINDOW (ev_window),
+		      EV_HELP,
+		      gtk_get_current_event_time (),
+		      &error);
+#else
 	gtk_show_uri (gtk_window_get_screen (GTK_WINDOW (ev_window)),
 		      EV_HELP,
 		      gtk_get_current_event_time (),
 		      &error);
+#endif
 	if (error) {
 		ev_window_error_message (ev_window, error, 
 					 "%s", _("There was an error displaying help"));
