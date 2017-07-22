@@ -8,6 +8,7 @@
 # Kees Lijkendijk <clkndk@gmail.com>, 2016
 # Michael Steenbeek <m.o.steenbeek@gmail.com>, 2013-2014
 # Nathan Follens, 2015
+# Pjotr <pjotrvertaalt@gmail.com>, 2017
 # Reinout van Schouwen <reinout@cs.vu.nl>, 2005, 2009
 # René Devers <rene.devers@gmail.com>, 2016
 # Tino Meinen <a.t.meinen@chello.nl>, 2005, 2006
@@ -17,8 +18,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-18 18:26+0300\n"
-"PO-Revision-Date: 2017-04-30 15:31+0000\n"
-"Last-Translator: dragnadh <dragnadh@gmail.com>\n"
+"PO-Revision-Date: 2017-07-02 18:07+0000\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/mate/MATE/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,22 +31,22 @@ msgstr ""
 #, c-format
 msgid ""
 "Error launching the command “%s” in order to decompress the comic book: %s"
-msgstr "Er is een fout opgetreden bij het uitvoeren van opdracht ʻ%sʼ teneinde het stripboek %s uit te pakken"
+msgstr "Er is een fout opgetreden bij het uitvoeren van opdracht '%s' teneinde het stripboek %s uit te pakken"
 
 #: ../backend/comics/comics-document.c:222
 #, c-format
 msgid "The command “%s” failed at decompressing the comic book."
-msgstr "De opdracht ʻ%sʼ is mislukt bij het uitpakken van het stripboek."
+msgstr "De opdracht '%s' is mislukt bij het uitpakken van het stripboek."
 
 #: ../backend/comics/comics-document.c:231
 #, c-format
 msgid "The command “%s” did not end normally."
-msgstr "De opdracht ʻ%sʼ is abnormaal afgesloten."
+msgstr "De opdracht '%s' is abnormaal afgesloten."
 
 #: ../backend/comics/comics-document.c:459
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr "Geen stripboek-MIME-type: %s"
+msgstr "Geen stripboek-MIME-type (bestandssoort): %s"
 
 #: ../backend/comics/comics-document.c:466
 msgid ""
@@ -56,7 +57,7 @@ msgstr "Kan geen passende opdracht vinden om dit type stripboek uit te pakken"
 #: ../libdocument/ev-document-factory.c:145
 #: ../libdocument/ev-document-factory.c:288
 msgid "Unknown MIME Type"
-msgstr "Onbekend MIME-type"
+msgstr "Onbekend MIME-type (bestandssoort)"
 
 #: ../backend/comics/comics-document.c:567
 msgid "File corrupted"
@@ -88,13 +89,13 @@ msgstr "Stripboeken"
 
 #: ../backend/djvu/djvu-document.c:173
 msgid "DjVu document has incorrect format"
-msgstr "DjVu-document heeft onjuist formaat"
+msgstr "DjVu-document heeft onjuiste opmaak"
 
 #: ../backend/djvu/djvu-document.c:250
 msgid ""
 "The document is composed of several files. One or more of these files cannot"
 " be accessed."
-msgstr "Dit document bestaat uit meerdere bestanden. Een van deze bestanden kan niet benaderd worden."
+msgstr "Dit document bestaat uit meerdere bestanden. Eén of meer van deze bestanden kan niet benaderd worden."
 
 #: ../backend/djvu/djvudocument.atril-backend.in.h:1
 msgid "DjVu Documents"
@@ -102,7 +103,7 @@ msgstr "DjVu-documenten"
 
 #: ../backend/dvi/dvi-document.c:107
 msgid "DVI document has incorrect format"
-msgstr "DVI-document heeft onjuist formaat"
+msgstr "DVI-document heeft onjuiste opmaak"
 
 #: ../backend/dvi/dvidocument.atril-backend.in.h:1
 msgid "DVI Documents"
@@ -110,43 +111,43 @@ msgstr "DVI-documenten"
 
 #: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
-msgstr "Niet een ePub-document"
+msgstr "Geen ePub-document"
 
 #: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
-msgstr "Kon bestandsnaam niet terugvinden"
+msgstr "kon bestandsnaam niet terugvinden"
 
 #: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
-msgstr "Kon archief niet openen"
+msgstr "kon archief niet openen"
 
 #: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
-msgstr "Kon archief niet uitpakken"
+msgstr "kon archief niet uitpakken"
 
 #: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
-msgstr "Kon containerbestand niet terugvinden"
+msgstr "kon bevattend bestand niet terugvinden"
 
 #: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
-msgstr "Kon containerbestand niet openen"
+msgstr "kon bevattend bestand niet openen"
 
 #: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
-msgstr "Containerbestand is corrupt"
+msgstr "bevattend bestand is corrupt"
 
 #: ../backend/epub/epub-document.c:869
 msgid "epub file is invalid or corrupt"
-msgstr "epub bestand is ongeldig of corrupt"
+msgstr "epub-bestand is ongeldig of corrupt"
 
 #: ../backend/epub/epub-document.c:879
 msgid "epub file is corrupt, no container"
-msgstr "epub is corrupt, geen container"
+msgstr "epub-bestand is corrupt, geen bevattend bestand"
 
 #: ../backend/epub/epub-document.c:964
 msgid "could not parse content manifest"
-msgstr "Kon inhoud manifest niet analyseren"
+msgstr "kon inhoud manifest niet analyseren"
 
 #: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
@@ -158,11 +159,11 @@ msgstr "epub-bestand heeft geen ruggengraat"
 
 #: ../backend/epub/epub-document.c:991
 msgid "epub file has no manifest"
-msgstr "epub bestand heeft geen manifest"
+msgstr "epub-bestand heeft geen manifest"
 
 #: ../backend/epub/epub-document.c:1077
 msgid "Could not set up document tree for loading, some files missing"
-msgstr "Kon documentstructuur niet opzetten tijdens het laden, sommige bestanden missen."
+msgstr "Kon documentstructuur niet opzetten tijdens het laden, sommige bestanden ontbreken"
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
@@ -237,12 +238,12 @@ msgstr "PDF-documenten"
 #: ../backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
-msgstr "Open van document ‘%s’ mislukt"
+msgstr "Open van document ‘%s’ is mislukt"
 
 #: ../backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr "Opslaan van document ‘%s’ mislukt"
+msgstr "Opslaan van document ‘%s’ is mislukt"
 
 #: ../backend/ps/psdocument.atril-backend.in.h:1
 msgid "PostScript Documents"
@@ -283,32 +284,32 @@ msgstr "Alle bestanden"
 #: ../libdocument/ev-file-helpers.c:147
 #, c-format
 msgid "Failed to create a temporary file: %s"
-msgstr "Aanmaken van een tijdelijk bestand mislukt: %s"
+msgstr "Aanmaken van een tijdelijk bestand is mislukt: %s"
 
 #: ../libdocument/ev-file-helpers.c:309
 #, c-format
 msgid "Failed to create a temporary directory: %s"
-msgstr "Aanmaken van een tijdelijke map mislukt: %s."
+msgstr "Aanmaken van een tijdelijke map is mislukt: %s."
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Bestand is geen geldig desktop-bestand"
+msgstr "Bestand is geen geldig .desktop-bestand"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:188
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Onbekende versie ‘%s’ van desktop-bestand"
+msgstr "Onbekende versie ‘%s’ van .desktop-bestand"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:957
 #, c-format
 msgid "Starting %s"
-msgstr "%s starten"
+msgstr "%s starten..."
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1098
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "De toepassing accepteert geen documenten op de opdrachtregel"
+msgstr "De toepassing aanvaardt geen documenten via de opdrachtregel"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1166
 #, c-format
@@ -318,12 +319,12 @@ msgstr "Onbekende opstartoptie: %d"
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1365
 #, c-format
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Kan geen document-URI's naar een desktopbestand met ‘Type=Link’ sturen"
+msgstr "Kan geen document-URI's naar een desktop-invoerveld met ‘Type=Link’ sturen"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1384
 #, c-format
 msgid "Not a launchable item"
-msgstr "Geen uitvoerbaar item"
+msgstr "Geen opstartbaar element"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
@@ -331,7 +332,7 @@ msgstr "Verbinding met sessiebeheer uitschakelen"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
-msgstr "Bestand met opgeslagen instellingen opgeven"
+msgstr "Geef bestand op met opgeslagen instellingen"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
 #: ../previewer/ev-previewer.c:37
@@ -372,15 +373,15 @@ msgstr "Ver_plaatsen op werkbalk"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1466
 msgid "Move the selected item on the toolbar"
-msgstr "Geselecteerd item op de werkbalk verplaatsen"
+msgstr "Verplaats het geselecteerde element op de werkbalk"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1467
 msgid "_Remove from Toolbar"
-msgstr "Ver_wijderen van werkbalk"
+msgstr "Ver_wijderen uit werkbalk"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1468
 msgid "Remove the selected item from the toolbar"
-msgstr "Geselecteerd item van de werkbalk verwijderen"
+msgstr "Verwijder het geselecteerde element uit de werkbalk"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1469
 msgid "_Delete Toolbar"
@@ -401,7 +402,7 @@ msgstr "Passend"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:50
 msgid "Fit Page Width"
-msgstr "Paginabreed"
+msgstr "Paginabreed passend"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6186
 msgid "Expand Window to Fit"
@@ -465,7 +466,7 @@ msgstr "6400%"
 
 #: ../data/atril.appdata.xml.in.h:1
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr "Een document viewer voor de MATE bureaublad omgeving"
+msgstr "Documentweergave voor de MATE-werkomgeving"
 
 #: ../data/atril.appdata.xml.in.h:2
 msgid ""
@@ -477,21 +478,21 @@ msgid ""
 " <p> Atril is a fork of Evince and part of the MATE Desktop Environment. If "
 "you would like to know more about MATE and Atril, please visit the project's"
 " home page. </p>"
-msgstr "<p> Atril is een eenvoudige multi-pagina documentlezer. Het kan PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, XPS en Portable Document Format (PDF)-bestanden weergeven en afdrukken, evenals strip-archiefbestanden. Indien ondersteund door het document laat Atril ook zoeken naar tekst, tekst kopiëren naar het klembord, hypertekst-navigate en inhoudsopgave-bladwijzers toe. </p> <p> Atril is een afsplitsing van Evince en onderdeel van de MATE desktopomgeving. Als u meer wil weten over MATE en Atril, gelieve dan de hoofdpagina van het project te bezoeken. </p>"
+msgstr "<p> Atril is een eenvoudige multi-pagina-documentlezer. Hij kan PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, XPS en Portable Document Format (PDF)-bestanden weergeven en afdrukken, evenals strip-archiefbestanden. Indien ondersteund door het document kan Atril ook zoeken naar tekst, tekst kopiëren naar het klembord, hypertekst-navigatie en inhoudsopgave-bladwijzers. </p> <p> Atril is een afsplitsing van Evince en onderdeel van de MATE-werkomgeving. Als u meer wilt weten over MATE en Atril, gelieve dan de thuispagina van het project te bezoeken. </p>"
 
 #: ../data/atril.desktop.in.in.h:1
 msgid "Atril Document Viewer"
-msgstr "Atril Documentviewer"
+msgstr "Atril Documentweergave"
 
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5127
 #: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
-msgstr "Documentenviewer"
+msgstr "Documentweergave"
 
 #: ../data/atril.desktop.in.in.h:3
 msgid "View multi-page documents"
-msgstr "Documenten weergeven"
+msgstr "Documenten met meerdere pagina's weergeven"
 
 #: ../data/org.mate.Atril.gschema.xml.h:1
 msgid "Override document restrictions"
@@ -499,7 +500,7 @@ msgstr "Documentrestricties negeren"
 
 #: ../data/org.mate.Atril.gschema.xml.h:2
 msgid "Override document restrictions, like restriction to copy or to print."
-msgstr "Documentrestricties, zoals een beperking op kopiëren of afdrukken, negeren."
+msgstr "Documentrestricties negeren, zoals een beperking op kopiëren of afdrukken."
 
 #: ../data/org.mate.Atril.gschema.xml.h:3
 msgid "Automatically reload the document"
@@ -511,21 +512,21 @@ msgstr "Of het document automatisch herladen wordt bij bestandswijziging."
 
 #: ../data/org.mate.Atril.gschema.xml.h:5
 msgid "The URI of the directory last used to open or save a document."
-msgstr "De URL van de directory laatst gebruikt gebruiken om een document te openen of op te slaan."
+msgstr "De URI van de laatst gebruikte map om een document te openen of op te slaan."
 
 #: ../data/org.mate.Atril.gschema.xml.h:6
 msgid "The URI of the directory last used to save a picture."
-msgstr "De URL van de directory laatst gebruikt gebruiken om een foto in op te slaan."
+msgstr "De URI van de laatst gebruikte map om een foto in op te slaan."
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
-msgstr "Pagina cache in MiB"
+msgstr "Grootte van tijdelijke paginaopslag in MiB"
 
 #: ../data/org.mate.Atril.gschema.xml.h:8
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
-msgstr "De maximale grote van cache gerenderde pagina's is gelimteerd aan het maximale zoom level."
+msgstr "De maximale grootte van de tijdelijke opslag voor weergegeven pagina's, beperkt het maximale vergrotingsniveau."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -537,7 +538,7 @@ msgstr "Het instellingenbestand afdrukken"
 
 #: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
-msgstr "MATE documentenpreviewer"
+msgstr "MATE Documentvoorbeeldweergave"
 
 #: ../previewer/ev-previewer-window.c:91 ../shell/ev-window.c:3470
 msgid "Failed to print document"
@@ -546,7 +547,7 @@ msgstr "Afdrukken van het document is mislukt"
 #: ../previewer/ev-previewer-window.c:237
 #, c-format
 msgid "The selected printer '%s' could not be found"
-msgstr "Kan de geselecteerde printer ʻ%sʼ niet vinden."
+msgstr "Kon de geselecteerde printer ʻ%sʼ niet vinden"
 
 #. Go menu
 #: ../previewer/ev-previewer-window.c:284 ../shell/ev-window.c:6193
@@ -589,7 +590,7 @@ msgstr "_Passend"
 
 #: ../previewer/ev-previewer-window.c:344 ../shell/ev-window.c:6304
 msgid "Make the current document fill the window"
-msgstr "Het huidige document passend weergeven in het venster"
+msgstr "Het huidige document venstervullend weergeven"
 
 #: ../previewer/ev-previewer-window.c:346 ../shell/ev-window.c:6306
 msgid "Fit Page _Width"
@@ -597,7 +598,7 @@ msgstr "Pagina_breed passend"
 
 #: ../previewer/ev-previewer-window.c:347 ../shell/ev-window.c:6307
 msgid "Make the current document fill the window width"
-msgstr "Het huidige document passend maken op de breedte van het venster"
+msgstr "Maak het huidige document passend op de breedte van het venster"
 
 #: ../previewer/ev-previewer-window.c:548 ../shell/ev-window.c:6447
 msgid "Page"
@@ -634,7 +635,7 @@ msgstr "Trefwoorden:"
 
 #: ../properties/ev-properties-view.c:65
 msgid "Producer:"
-msgstr "Programma:"
+msgstr "Producent:"
 
 #: ../properties/ev-properties-view.c:66
 msgid "Creator:"
@@ -658,7 +659,7 @@ msgstr "Geoptimaliseerd:"
 
 #: ../properties/ev-properties-view.c:71
 msgid "Format:"
-msgstr "Formaat:"
+msgstr "Bestandssoort:"
 
 #: ../properties/ev-properties-view.c:72
 msgid "Security:"
@@ -666,7 +667,7 @@ msgstr "Beveiliging:"
 
 #: ../properties/ev-properties-view.c:73
 msgid "Paper Size:"
-msgstr "Papierformaat"
+msgstr "Papierformaat:"
 
 #. translators: This is used when a document property does
 #. not have a value.  Examples:
@@ -713,21 +714,21 @@ msgstr "%s, liggend (%s)"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:1
 msgid "Atril properties"
-msgstr "Atril eigenschappen"
+msgstr "Atril-eigenschappen"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:2
 msgid "Shows details for Atril documents"
-msgstr "details voor Atril documenten tonen"
+msgstr "Details voor Atril-documenten tonen"
 
 #: ../libmisc/ev-page-action-widget.c:68
 #, c-format
 msgid "(%d of %d)"
-msgstr "(%d uit %d)"
+msgstr "(%d van %d)"
 
 #: ../libmisc/ev-page-action-widget.c:70
 #, c-format
 msgid "of %d"
-msgstr "uit %d"
+msgstr "van %d"
 
 #. Create tree view
 #: ../libview/ev-loading-window.c:77 ../shell/ev-sidebar-annotations.c:135
@@ -751,7 +752,7 @@ msgstr "Pagina %d van %d afdrukken…"
 
 #: ../libview/ev-print-operation.c:1162
 msgid "Printing is not supported on this printer."
-msgstr "Afdrukken is niet mogelijk met deze printer."
+msgstr "Afdrukken wordt niet ondersteund voor deze printer."
 
 #: ../libview/ev-print-operation.c:1227
 msgid "Invalid page selection"
@@ -790,13 +791,13 @@ msgstr "Documentpagina's schalen zodat deze op de printerpagina's passen. Kies e
 
 #: ../libview/ev-print-operation.c:1911
 msgid "Auto Rotate and Center"
-msgstr "Automatisch roteren en centreren"
+msgstr "Automatisch draaien en centreren"
 
 #: ../libview/ev-print-operation.c:1914
 msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
-msgstr "Paginaoriëntatie van printer zo roteren dat deze overeenkomt met de paginaoriëntatie van documentpagina's. Documentpagina's zullen gecentreerd worden op de printerpagina."
+msgstr "Paginaoriëntatie van printer zo draaien dat deze overeenkomt met de paginaoriëntatie van documentpagina's. Documentpagina's zullen gecentreerd worden op de printerpagina."
 
 #: ../libview/ev-print-operation.c:1919
 msgid "Select page size using document page size"
@@ -835,7 +836,7 @@ msgstr "Beeld omlaag schuiven"
 
 #: ../libview/ev-view-accessible.c:105
 msgid "Document View"
-msgstr "Documentbeeld"
+msgstr "Documentweergave"
 
 #: ../libview/ev-view-presentation.c:692
 msgid "Jump to page:"
@@ -899,7 +900,7 @@ msgstr "Vo_rige zoeken"
 
 #: ../shell/eggfindbar.c:331
 msgid "Find previous occurrence of the search string"
-msgstr "Zoeken naar vorige positie waar de zoekreeks voorkomt"
+msgstr "Zoek naar vorige positie waar de zoekreeks voorkomt"
 
 #: ../shell/eggfindbar.c:335 ../shell/ev-window.c:6161
 msgid "Find Ne_xt"
@@ -907,7 +908,7 @@ msgstr "V_olgende zoeken"
 
 #: ../shell/eggfindbar.c:339
 msgid "Find next occurrence of the search string"
-msgstr "Zoeken naar volgende positie waar de zoekreeks voorkomt"
+msgstr "Zoek naar volgende positie waar de zoekreeks voorkomt"
 
 #: ../shell/eggfindbar.c:346
 msgid "Case Sensitive"
@@ -915,7 +916,7 @@ msgstr "Hoofdlettergevoelig"
 
 #: ../shell/eggfindbar.c:349
 msgid "Toggle case sensitive search"
-msgstr "Hoofdlettergevoelige zoekopdracht"
+msgstr "Hoofdlettergevoeligheid zoekopdracht omschakelen"
 
 #: ../shell/ev-annotation-properties-dialog.c:94
 msgid "Icon:"
@@ -947,7 +948,7 @@ msgstr "Alinea"
 
 #: ../shell/ev-annotation-properties-dialog.c:110
 msgid "Insert"
-msgstr "Toevoeging"
+msgstr "Invoegen"
 
 #: ../shell/ev-annotation-properties-dialog.c:111
 msgid "Cross"
@@ -955,7 +956,7 @@ msgstr "Kruis"
 
 #: ../shell/ev-annotation-properties-dialog.c:112
 msgid "Circle"
-msgstr "Circle"
+msgstr "Cirkel"
 
 #: ../shell/ev-annotation-properties-dialog.c:113
 msgid "Unknown"
@@ -971,11 +972,11 @@ msgstr "Kleur:"
 
 #: ../shell/ev-annotation-properties-dialog.c:187
 msgid "Style:"
-msgstr "Style:"
+msgstr "Stijl:"
 
 #: ../shell/ev-annotation-properties-dialog.c:205
 msgid "Transparent"
-msgstr "Transparant"
+msgstr "Doorzichtig"
 
 #: ../shell/ev-annotation-properties-dialog.c:212
 msgid "Opaque"
@@ -983,7 +984,7 @@ msgstr "Ondoorzichtig"
 
 #: ../shell/ev-annotation-properties-dialog.c:222
 msgid "Initial window state:"
-msgstr "Initiële weergave:"
+msgstr "Initiële vensterstatus:"
 
 #: ../shell/ev-annotation-properties-dialog.c:232
 msgid "Open"
@@ -1004,17 +1005,17 @@ msgstr "Wachtwoord voor document %s"
 
 #: ../shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
-msgstr "Een recentelijk geopend document heropenen"
+msgstr "Open een recentelijk gebruikt document"
 
 #: ../shell/ev-password-view.c:140
 msgid ""
 "This document is locked and can only be read by entering the correct "
 "password."
-msgstr "Het document is beveiligd en kan alleen gelezen worden door het juiste wachtwoord te geven."
+msgstr "Dit document is vergrendeld en kan alleen gelezen worden door het juiste wachtwoord in te geven."
 
 #: ../shell/ev-password-view.c:149 ../shell/ev-password-view.c:265
 msgid "_Unlock Document"
-msgstr "_Document vrijgeven"
+msgstr "_Document ontgrendelen"
 
 #: ../shell/ev-password-view.c:257
 msgid "Enter password"
@@ -1024,7 +1025,7 @@ msgstr "Voer wachtwoord in"
 #, c-format
 msgid ""
 "The document “%s” is locked and requires a password before it can be opened."
-msgstr "Het document ‘%s’ is beveiligd en vereist een wachtwoord voordat het geopend kan worden."
+msgstr "Het document ‘%s’ is vergrendeld en vereist een wachtwoord voordat het geopend kan worden."
 
 #: ../shell/ev-password-view.c:300
 msgid "Password required"
@@ -1077,7 +1078,7 @@ msgstr "Gebruiksvoorwaarden"
 
 #: ../shell/ev-properties-license.c:147
 msgid "Text License"
-msgstr "Licentie-tekst"
+msgstr "Licentietekst"
 
 #: ../shell/ev-properties-license.c:153
 msgid "Further Information"
@@ -1105,7 +1106,7 @@ msgstr "Toevoegen"
 
 #: ../shell/ev-sidebar-annotations.c:367
 msgid "Document contains no annotations"
-msgstr "Dit document bevat geen annotaties"
+msgstr "Document bevat geen annotaties"
 
 #: ../shell/ev-sidebar-annotations.c:399
 #, c-format
@@ -1157,52 +1158,52 @@ msgstr "Miniaturen"
 #: ../shell/ev-window.c:948
 #, c-format
 msgid "Page %s — %s"
-msgstr "Page %s — %s"
+msgstr "Pagina %s — %s"
 
 #: ../shell/ev-window.c:1077
 msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
-msgstr "Kan presentatie modus niet openen met ePub documenten, in plaats daarvan gebruik volledig scherm modus. "
+msgstr "Kan presentatiemodus niet openen met ePub-documenten, gebruik in plaats daarvan de schermvullende modus. "
 
 #: ../shell/ev-window.c:1628
 msgid "The document contains no pages"
-msgstr "Het document heeft geen bladzijden"
+msgstr "Het document bevat geen bladzijden"
 
 #: ../shell/ev-window.c:1631
 msgid "The document contains only empty pages"
-msgstr "Het document bevat slechts lege pagina's"
+msgstr "Het document bevat slechts lege bladzijden"
 
 #: ../shell/ev-window.c:1670
 msgid "Presentation mode is not supported for ePub documents."
-msgstr "Presentatie modus is niet ondersteund voor ePub documenten."
+msgstr "Presentatiemodus wordt niet ondersteund voor ePub-documenten."
 
 #: ../shell/ev-window.c:1864 ../shell/ev-window.c:2032
 msgid "Unable to open document"
-msgstr "Kon het document niet openen"
+msgstr "Kan het document niet openen"
 
 #: ../shell/ev-window.c:2001
 #, c-format
 msgid "Loading document from “%s”"
-msgstr "Document van ʻ%sʼ laden"
+msgstr "Document laden vanuit ʻ%sʼ..."
 
 #: ../shell/ev-window.c:2145 ../shell/ev-window.c:2436
 #, c-format
 msgid "Downloading document (%d%%)"
-msgstr "Document downloaden (%d%%)"
+msgstr "Document binnenhalen (%d%%)..."
 
 #: ../shell/ev-window.c:2178
 msgid "Failed to load remote file."
-msgstr "Kon document op afstand niet laden."
+msgstr "Kon document-op-afstand niet laden."
 
 #: ../shell/ev-window.c:2380
 #, c-format
 msgid "Reloading document from %s"
-msgstr "Document van %s herladen"
+msgstr "Document herladen vanuit %s..."
 
 #: ../shell/ev-window.c:2412
 msgid "Failed to reload document."
-msgstr "Kon document niet herladen"
+msgstr "Kon document niet herladen."
 
 #: ../shell/ev-window.c:2626
 msgid "Open Document"
@@ -1211,17 +1212,17 @@ msgstr "Document openen"
 #: ../shell/ev-window.c:2902
 #, c-format
 msgid "Saving document to %s"
-msgstr "Document opslaan naar %s"
+msgstr "Document opslaan naar %s..."
 
 #: ../shell/ev-window.c:2905
 #, c-format
 msgid "Saving attachment to %s"
-msgstr "Bijlage opslaan naar %s"
+msgstr "Bijlage opslaan naar %s..."
 
 #: ../shell/ev-window.c:2908
 #, c-format
 msgid "Saving image to %s"
-msgstr "Afbeelding opslaan naar %s"
+msgstr "Afbeelding opslaan naar %s..."
 
 #: ../shell/ev-window.c:2952 ../shell/ev-window.c:3052
 #, c-format
@@ -1231,17 +1232,17 @@ msgstr "Het bestand kon niet worden opgeslagen als ‘%s’."
 #: ../shell/ev-window.c:2983
 #, c-format
 msgid "Uploading document (%d%%)"
-msgstr "Document uploaden (%d%%)"
+msgstr "Document versturen (%d%%)..."
 
 #: ../shell/ev-window.c:2987
 #, c-format
 msgid "Uploading attachment (%d%%)"
-msgstr "Bijlage uploaden (%d%%)"
+msgstr "Bijlage versturen (%d%%)..."
 
 #: ../shell/ev-window.c:2991
 #, c-format
 msgid "Uploading image (%d%%)"
-msgstr "Afbeelding uploaden (%d%%)"
+msgstr "Afbeelding versturen (%d%%)..."
 
 #: ../shell/ev-window.c:3103
 msgid "Save a Copy"
@@ -1249,7 +1250,7 @@ msgstr "Een kopie opslaan"
 
 #: ../shell/ev-window.c:3164
 msgid "Could not send current document"
-msgstr "Kan huidig document niet verzenden"
+msgstr "Kon huidig document niet verzenden"
 
 #: ../shell/ev-window.c:3414
 #, c-format
@@ -1261,19 +1262,19 @@ msgstr[1] "%d taken in de wachtrij"
 #: ../shell/ev-window.c:3527
 #, c-format
 msgid "Printing job “%s”"
-msgstr "Afdrukken van taak ‘%s’"
+msgstr "Afdrukken van taak ‘%s’..."
 
 #: ../shell/ev-window.c:3704
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
-msgstr "Het document bevat ingevulde formuliervelden. Als het document niet wordt opgeslagen, zullen deze wijzigingen verloren gaan."
+msgstr "Het document bevat ingevulde formuliervelden. Als het document niet wordt opgeslagen, zullen deze wijzigingen blijvend verloren gaan."
 
 #: ../shell/ev-window.c:3708
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
-msgstr "Het document bevat nieuwe of aangepaste annotaties. Als het document niet wordt opgeslagen, zullen deze wijzigingen verloren gaan."
+msgstr "Het document bevat nieuwe of aangepaste annotaties. Als het document niet wordt opgeslagen, zullen deze wijzigingen blijvend verloren gaan."
 
 #: ../shell/ev-window.c:3715
 #, c-format
@@ -1291,7 +1292,7 @@ msgstr "Een _kopie opslaan"
 #: ../shell/ev-window.c:3807
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
-msgstr "Wachten tot afdruktaak ‘%s’ voltooid alvorens af te sluiten?"
+msgstr "Wachten tot afdruktaak ‘%s’ voltooid is alvorens af te sluiten?"
 
 #. TRANS: the singular form is not really used as n_print_jobs > 1
 #. but some languages distinguish between different plurals forms,
@@ -1319,22 +1320,22 @@ msgstr "Sluiten na _afdrukken"
 
 #: ../shell/ev-window.c:4260
 msgid "Presentation mode is not supported for ePub documents"
-msgstr "Presentatie modus is niet ondersteund voor ePub documenten"
+msgstr "Presentatiemodus wordt niet ondersteund voor ePub-documenten"
 
 #: ../shell/ev-window.c:4574
 msgid "Toolbar Editor"
-msgstr "Werkbalk-editor"
+msgstr "Werkbalk-bewerker"
 
 #: ../shell/ev-window.c:4873
 msgid "There was an error displaying help"
-msgstr "Er is een fout opgetreden bij het tonen van de hulp."
+msgstr "Er is een fout opgetreden bij het tonen van de hulptekst"
 
 #: ../shell/ev-window.c:5123
 #, c-format
 msgid ""
 "Document Viewer\n"
 "Using %s (%s)"
-msgstr "Documentenviewer\nMaakt gebruik van %s (%s)"
+msgstr "Documentweergave\nMaakt gebruik van %s (%s)"
 
 #: ../shell/ev-window.c:5158
 msgid ""
@@ -1342,7 +1343,7 @@ msgid ""
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version.\n"
-msgstr "Atril is vrije software; u mag het opnieuw distribueren en/of wijzigen\nonder de voorwaarden van de GNU General Public License zoals gepubliceerd\ndoor de Free Software Foundation; ofwel versie 2 van deze licentie of\n(zo u wilt) een latere versie.\n"
+msgstr "Atril is vrije programmatuur; u mag hem opnieuw distribueren en/of wijzigen\nonder de voorwaarden van de GNU General Public License zoals gepubliceerd\ndoor de Free Software Foundation; ofwel versie 2 van deze licentie ofwel\n(zo u wilt) enige latere versie.\n"
 
 #: ../shell/ev-window.c:5162
 msgid ""
@@ -1350,14 +1351,14 @@ msgid ""
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details.\n"
-msgstr "Atril wordt gedistibueerd in de hoop dat het nuttig zal zijn,\nmaar ZONDER ENIGE GARANTIE; zonder zelfs de geïmpliceerde garantie\nvan VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.  Zie de\nGNU General Public License voor meer details.\n"
+msgstr "Atril wordt gedistribueerd in de hoop dat hij nuttig zal zijn,\nmaar ZONDER ENIGE GARANTIE; zonder zelfs de geïmpliceerde garantie\nvan VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.  Zie de\nGNU General Public License voor meer details.\n"
 
 #: ../shell/ev-window.c:5166
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
-msgstr "U moet een kopie van de GNU General Public License hebben gekregen\nsamen met Atril; zoniet, schrijf dan naar de Free Software Foundation,\nInc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
+msgstr "U zou een exemplaar van de GNU General Public License moeten hebben gekregen\nsamen met Atril; zoniet, schrijf dan naar de Free Software Foundation,\nInc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
 
 #: ../shell/ev-window.c:5191
 msgid "Atril"
@@ -1371,7 +1372,7 @@ msgstr "© 1996–2009 Ontwikkelaars van Evince\n© 2012–2017 Ontwikkelaars va
 
 #: ../shell/ev-window.c:5200
 msgid "translator-credits"
-msgstr "Tino Meinen\nWouter Bolsterlee\nReinout van Schouwen\nKijk voor meer informatie op http://nl.mate.org/"
+msgstr "Tino Meinen\nWouter Bolsterlee\nReinout van Schouwen\nPjotr\nKijk voor meer informatie op http://nl.mate.org/"
 
 #. TRANS: Sometimes this could be better translated as
 #. "%d hit(s) on this page".  Therefore this string
@@ -1390,7 +1391,7 @@ msgstr "Niet gevonden"
 #: ../shell/ev-window.c:5482
 #, c-format
 msgid "%3d%% remaining to search"
-msgstr "Nog %3d%% te doorzoeken"
+msgstr "Nog %3d%% te doorzoeken..."
 
 #: ../shell/ev-window.c:6125
 msgid "_File"
@@ -1431,7 +1432,7 @@ msgstr "Een _kopie openen"
 
 #: ../shell/ev-window.c:6137
 msgid "Open a copy of the current document in a new window"
-msgstr "Een kopie van het huidige document openen in een nieuw venster"
+msgstr "Open een kopie van het huidige document in een nieuw venster"
 
 #: ../shell/ev-window.c:6139
 msgid "_Save a Copy…"
@@ -1439,15 +1440,15 @@ msgstr "Een kopie opsl_aan…"
 
 #: ../shell/ev-window.c:6140
 msgid "Save a copy of the current document"
-msgstr "Sla een kopie van het huidige document op"
+msgstr "Sla een kopie op van het huidige document"
 
 #: ../shell/ev-window.c:6142
 msgid "Send _To..."
-msgstr "Verzen_Naar..."
+msgstr "Zend _naar..."
 
 #: ../shell/ev-window.c:6143
 msgid "Send current document by mail, instant message..."
-msgstr "Verstuur huidig document via mail, instant messaging..."
+msgstr "Verstuur huidig document via mail, instantbericht..."
 
 #: ../shell/ev-window.c:6145
 msgid "_Print…"
@@ -1467,7 +1468,7 @@ msgstr "_Zoeken…"
 
 #: ../shell/ev-window.c:6159
 msgid "Find a word or phrase in the document"
-msgstr "Een woord of een zin in het document zoeken"
+msgstr "Zoek een woord of een zin in het document"
 
 #: ../shell/ev-window.c:6165
 msgid "T_oolbar"
@@ -1524,7 +1525,7 @@ msgstr "Bl_adwijzer toevoegen"
 
 #: ../shell/ev-window.c:6208
 msgid "Add a bookmark for the current page"
-msgstr "Bladwijzer op huidige pagina toevoegen"
+msgstr "Bladwijzer toevoegen voor huidige pagina"
 
 #. Help menu
 #: ../shell/ev-window.c:6212
@@ -1546,7 +1547,7 @@ msgstr "Schermvullende modus verlaten"
 
 #: ../shell/ev-window.c:6222
 msgid "Start Presentation"
-msgstr "Presentatie"
+msgstr "Presentatie starten"
 
 #: ../shell/ev-window.c:6223
 msgid "Start a presentation"
@@ -1579,19 +1580,19 @@ msgstr "Het gehele document tonen"
 
 #: ../shell/ev-window.c:6291
 msgid "_Dual (Even pages left)"
-msgstr "_Dual (Even paginas links)"
+msgstr "_Tweevoudig (even pagina's links)"
 
 #: ../shell/ev-window.c:6292
 msgid "Show two pages at once with even pages on the left"
-msgstr "Twee pagina's tegelijk tonen met even paginas links"
+msgstr "Twee pagina's tegelijk tonen met de even pagina's links"
 
 #: ../shell/ev-window.c:6294
 msgid "Dual (_Odd pages left)"
-msgstr "Dual (_Oneven paginas links)"
+msgstr "Tweevoudig (_oneven pagina's links)"
 
 #: ../shell/ev-window.c:6295
 msgid "Show two pages at once with odd pages on the left"
-msgstr "Twee paginas tegelijk tonen met oneven paginas links"
+msgstr "Twee pagina's tegelijk tonen met de oneven pagina's links"
 
 #: ../shell/ev-window.c:6297
 msgid "_Fullscreen"
@@ -1620,7 +1621,7 @@ msgstr "Pagina's tonen met omgekeerde kleuren"
 #. Links
 #: ../shell/ev-window.c:6318
 msgid "_Open Link"
-msgstr "Verwijzing _openen"
+msgstr "Koppeling _openen"
 
 #: ../shell/ev-window.c:6320
 msgid "_Go To"
@@ -1632,7 +1633,7 @@ msgstr "In _nieuw venster openen"
 
 #: ../shell/ev-window.c:6324
 msgid "_Copy Link Address"
-msgstr "Verwijzingsadres _kopiëren"
+msgstr "Koppelingsadres _kopiëren"
 
 #: ../shell/ev-window.c:6326
 msgid "_Save Image As…"
@@ -1656,11 +1657,11 @@ msgstr "Bijlage op_slaan als…"
 
 #: ../shell/ev-window.c:6461
 msgid "Zoom"
-msgstr "Zoom"
+msgstr "Vergrotingsfactor"
 
 #: ../shell/ev-window.c:6463
 msgid "Adjust the zoom level"
-msgstr "Het zoomniveau aanpassen"
+msgstr "De vergrotingsfactor bijstellen"
 
 #: ../shell/ev-window.c:6473
 msgid "Navigation"
@@ -1673,12 +1674,12 @@ msgstr "Terug"
 #. translators: this is the history action
 #: ../shell/ev-window.c:6478
 msgid "Move across visited pages"
-msgstr "Navigeren naar bezochte pagina's"
+msgstr "Navigeren door bezochte pagina's"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6507
 msgid "Send To"
-msgstr "Verstuur Naar"
+msgstr "Verzend naar"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6513
@@ -1693,29 +1694,29 @@ msgstr "Volgende"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6522
 msgid "Zoom In"
-msgstr "Inzoomen"
+msgstr "Vergroten"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6526
 msgid "Zoom Out"
-msgstr "Uitzoomen"
+msgstr "Verkleinen"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6534
 msgid "Fit Width"
-msgstr "Breedte"
+msgstr "Passend voor breedte"
 
 #: ../shell/ev-window.c:6680 ../shell/ev-window.c:6696
 msgid "Unable to launch external application."
-msgstr "De externe verwijzing kon niet geopend worden"
+msgstr "De externe toepassing kan niet gestart worden."
 
 #: ../shell/ev-window.c:6753
 msgid "Unable to open external link"
-msgstr "De externe verwijzing kon niet geopend worden"
+msgstr "De externe koppeling kan niet geopend worden"
 
 #: ../shell/ev-window.c:6947
 msgid "Couldn't find appropriate format to save image"
-msgstr "Kon geen geschikt formaat voor opslaan van afbeelding vinden"
+msgstr "Kon geen geschikte bestandssoort vinden voor opslaan van afbeelding"
 
 #: ../shell/ev-window.c:6979
 msgid "The image could not be saved."
@@ -1727,7 +1728,7 @@ msgstr "Afbeelding opslaan"
 
 #: ../shell/ev-window.c:7141
 msgid "Unable to open attachment"
-msgstr "De bijlage kon niet geopend worden"
+msgstr "De bijlage kan niet geopend worden"
 
 #: ../shell/ev-window.c:7197
 msgid "The attachment could not be saved."
@@ -1744,15 +1745,15 @@ msgstr "%s — Wachtwoord vereist"
 
 #: ../shell/ev-utils.c:105
 msgid "By extension"
-msgstr "Op toevoeging"
+msgstr "Op extensie"
 
 #: ../shell/main.c:58 ../shell/main.c:239
 msgid "MATE Document Viewer"
-msgstr "MATE documentenviewer"
+msgstr "MATE Documentweergave"
 
 #: ../shell/main.c:66
 msgid "The page label of the document to display."
-msgstr "Het paginalabel van het weer te geven document."
+msgstr "Het pagina-etiket van het weer te geven document."
 
 #: ../shell/main.c:66
 msgid "PAGE"
@@ -1768,7 +1769,7 @@ msgstr "NUMMER"
 
 #: ../shell/main.c:68
 msgid "Run atril in fullscreen mode"
-msgstr "Starten met volledig scherm"
+msgstr "Draai Atril in schermvullende modus"
 
 #: ../shell/main.c:69
 msgid "Named destination to display."
@@ -1780,19 +1781,19 @@ msgstr "BEST"
 
 #: ../shell/main.c:70
 msgid "Run atril in presentation mode"
-msgstr "Starten als diapresentatie"
+msgstr "Draai Atril in presentatiemodus"
 
 #: ../shell/main.c:71
 msgid "Run atril as a previewer"
-msgstr "Starten in voorbeeldmodus"
+msgstr "Draai Atril in voorbeeldmodus"
 
 #: ../shell/main.c:72
 msgid "The word or phrase to find in the document"
-msgstr "Woord of zinsnede waarnaar gezocht moet worden"
+msgstr "Woord of zinsnede waarnaar gezocht moet worden in het document"
 
 #: ../shell/main.c:72
 msgid "STRING"
-msgstr "STRING"
+msgstr "REEKS"
 
 #: ../shell/main.c:76
 msgid "[FILE…]"
