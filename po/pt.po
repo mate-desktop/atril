@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Carlos Moreira, 2014-2015
+# Carlos Moreira, 2014-2015,2017
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2005-2010
 # Gonçalo Silva <de2a9293@opayq.com>, 2013
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2015-2016
@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-18 18:26+0300\n"
-"PO-Revision-Date: 2017-04-23 15:02+0000\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
+"PO-Revision-Date: 2017-05-18 09:15+0000\n"
+"Last-Translator: Carlos Moreira\n"
 "Language-Team: Portuguese (http://www.transifex.com/mate/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -501,7 +501,7 @@ msgstr "Ignorar restrições do documento, tais como restrições de cópia ou i
 
 #: ../data/org.mate.Atril.gschema.xml.h:3
 msgid "Automatically reload the document"
-msgstr "Recarregar automáticamente o documento"
+msgstr "Recarregar automaticamente o documento"
 
 #: ../data/org.mate.Atril.gschema.xml.h:4
 msgid "Whether the document is automatically reloaded on file change."
@@ -509,11 +509,11 @@ msgstr "Se o documento é recarregado automaticamente com o ficheiro alterado."
 
 #: ../data/org.mate.Atril.gschema.xml.h:5
 msgid "The URI of the directory last used to open or save a document."
-msgstr "O URI do directório usado pela última vez para abrir ou salvar um documento."
+msgstr "O URI do diretório usado pela última vez para abrir ou guardar um documento."
 
 #: ../data/org.mate.Atril.gschema.xml.h:6
 msgid "The URI of the directory last used to save a picture."
-msgstr "O URI do directório usado pela última vez para salvar a imagem."
+msgstr "O URI do diretório usado pela última vez para guardar a imagem."
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
@@ -523,7 +523,7 @@ msgstr "O tamanho da cache da página em MiB"
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
-msgstr "O tamanho máximo que será usado para armazenar em cache páginas apresentadas, limita o nível máximo de zoom."
+msgstr "O tamanho máximo que será usado para armazenar em cache páginas apresentadas, limita o nível máximo de ampliação."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -1247,7 +1247,7 @@ msgstr "Gravar uma cópia"
 
 #: ../shell/ev-window.c:3164
 msgid "Could not send current document"
-msgstr "Não foi possível enviar o actual documento"
+msgstr "Não foi possível enviar o documento atual"
 
 #: ../shell/ev-window.c:3414
 #, c-format
@@ -1301,7 +1301,7 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] "Há %d um trabalho de impressão activo. Esperar que termine a impressão antes de fechar?"
-msgstr[1] "Há %d trabalhos de impressão activos. Aguardar até que a impressão termine antes de fechar?"
+msgstr[1] "Há %d trabalhos de impressão ativos. Aguardar até que a impressão termine antes de fechar?"
 
 #: ../shell/ev-window.c:3828
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1441,11 +1441,11 @@ msgstr "Gravar uma cópia do documento atual"
 
 #: ../shell/ev-window.c:6142
 msgid "Send _To..."
-msgstr "Enviar _Para..."
+msgstr "Enviar _para..."
 
 #: ../shell/ev-window.c:6143
 msgid "Send current document by mail, instant message..."
-msgstr "Enviar o actual  documento por mail, mensagem instantânea..."
+msgstr "Enviar o documento atual por correio, mensagem instantânea..."
 
 #: ../shell/ev-window.c:6145
 msgid "_Print…"
@@ -1577,7 +1577,7 @@ msgstr "Mostrar todo o documento"
 
 #: ../shell/ev-window.c:6291
 msgid "_Dual (Even pages left)"
-msgstr "_Dual (até mesmo páginas à esquerda)"
+msgstr "_Dual (páginas pares à esquerda)"
 
 #: ../shell/ev-window.c:6292
 msgid "Show two pages at once with even pages on the left"
@@ -1585,7 +1585,7 @@ msgstr "Mostrar duas páginas ao mesmo tempo com páginas pares no lado esquerdo
 
 #: ../shell/ev-window.c:6294
 msgid "Dual (_Odd pages left)"
-msgstr "Duplo (_páginas ímpares à esquerda)"
+msgstr "Dual (_páginas ímpares à esquerda)"
 
 #: ../shell/ev-window.c:6295
 msgid "Show two pages at once with odd pages on the left"
@@ -1676,7 +1676,7 @@ msgstr "Mover por entre as páginas visitadas"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6507
 msgid "Send To"
-msgstr "Enviar Para"
+msgstr "Enviar para"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6513
