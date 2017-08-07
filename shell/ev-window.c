@@ -4099,24 +4099,6 @@ fullscreen_toolbar_setup_item_properties (GtkUIManager *ui_manager)
 }
 
 static void
-fullscreen_toolbar_remove_shadow (GtkWidget *toolbar)
-{
-	GtkCssProvider *provider;
-
-	gtk_widget_set_name (toolbar, "ev-fullscreen-toolbar");
-
-	provider = gtk_css_provider_new ();
-	gtk_css_provider_load_from_data (provider,
-					 "#ev-fullscreen-toolbar {\n"
-					 " -GtkToolbar-shadow-type: none; }",
-					 -1, NULL);
-	gtk_style_context_add_provider (gtk_widget_get_style_context (toolbar),
-					GTK_STYLE_PROVIDER (provider),
-					GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-	g_object_unref (provider);
-}
-
-static void
 ev_window_run_fullscreen (EvWindow *window)
 {
 	gboolean fullscreen_window = TRUE;
@@ -4129,9 +4111,10 @@ ev_window_run_fullscreen (EvWindow *window)
 			gtk_ui_manager_get_widget (window->priv->ui_manager,
 						   "/FullscreenToolbar");
 
+		gtk_widget_set_name (window->priv->fullscreen_toolbar,
+				     "atril-fullscreen-toolbar");
 		gtk_toolbar_set_style (GTK_TOOLBAR (window->priv->fullscreen_toolbar),
 				       GTK_TOOLBAR_BOTH_HORIZ);
-		fullscreen_toolbar_remove_shadow (window->priv->fullscreen_toolbar);
 		fullscreen_toolbar_setup_item_properties (window->priv->ui_manager);
 
 		gtk_box_pack_start (GTK_BOX (window->priv->main_box),
