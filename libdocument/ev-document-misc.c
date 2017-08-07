@@ -143,20 +143,28 @@ ev_document_misc_paint_one_page (cairo_t      *cr,
 	GtkStyleContext *context = gtk_widget_get_style_context (widget);
 	GtkStateFlags state = gtk_widget_get_state_flags (widget);
         GdkRGBA fg, bg, shade_bg;
-        GtkSymbolicColor *c1, *c2;
 
         gtk_style_context_get_background_color (context, state, &bg);
         gtk_style_context_get_color (context, state, &fg);
-
-        // FIXME: should we cache the shade_bg?
-        c1 = gtk_symbolic_color_new_literal (&bg);
-        c2 = gtk_symbolic_color_new_shade (c1, 0.7);
-        gtk_symbolic_color_resolve (c2, NULL, &shade_bg);
-        gtk_symbolic_color_unref (c1);
-        gtk_symbolic_color_unref (c2);
+        gtk_style_context_get_color (context, state, &shade_bg);
+        shade_bg.alpha *= 0.5;
 
 	gdk_cairo_set_source_rgba (cr, highlight ? &fg : &shade_bg);
-	gdk_cairo_rectangle (cr, area);
+	cairo_rectangle (cr,
+			 area->x,
+			 area->y,
+			 area->width - border->right + border->left,
+			 area->height - border->bottom + border->top);
+	cairo_rectangle (cr,
+			 area->x + area->width - border->right,
+			 area->y + border->right - border->left,
+			 border->right,
+			 area->height - border->right + border->left);
+	cairo_rectangle (cr,
+			 area->x + border->bottom - border->top,
+			 area->y + area->height - border->bottom,
+			 area->width - border->bottom + border->top,
+			 border->bottom);
 	cairo_fill (cr);
 
 	if (inverted_colors)
@@ -168,21 +176,6 @@ ev_document_misc_paint_one_page (cairo_t      *cr,
 			 area->y + border->top,
 			 area->width - (border->left + border->right),
 			 area->height - (border->top + border->bottom));
-	cairo_fill (cr);
-
-	gdk_cairo_set_source_rgba (cr, &bg);
-	cairo_rectangle (cr,
-			 area->x,
-			 area->y + area->height - (border->bottom - border->top),
-			 border->bottom - border->top,
-			 border->bottom - border->top);
-	cairo_fill (cr);
-
-	cairo_rectangle (cr,
-			 area->x + area->width - (border->right - border->left),
-			 area->y,
-			 border->right - border->left,
-			 border->right - border->left);
 	cairo_fill (cr);
 }
 
