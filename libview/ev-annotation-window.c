@@ -102,7 +102,7 @@ get_screen_dpi (EvAnnotationWindow *window)
 	gint monitor;
 
 	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	monitor = gdk_screen_get_monitor_at_window(screen, gtk_widget_get_window(GTK_WIDGET(GTK_WINDOW(window))));
+	monitor = gdk_screen_get_primary_monitor (screen);
 	return ev_document_misc_get_screen_dpi (screen, monitor);
 }
 
