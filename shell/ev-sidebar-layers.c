@@ -284,6 +284,7 @@ ev_sidebar_layers_init (EvSidebarLayers *ev_layers)
 
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (ev_layers), GTK_ORIENTATION_VERTICAL);
 	swindow = gtk_scrolled_window_new (NULL, NULL);
+	gtk_widget_set_vexpand (swindow, TRUE);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (swindow),
 					GTK_POLICY_NEVER,
 					GTK_POLICY_AUTOMATIC);
