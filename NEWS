@@ -1,3 +1,19 @@
+### atril 1.18.1
+
+  * Take monitor scale factor into account when calculating zoom.
+  * Add hi-dpi support for main view.
+  * sidebar-thumbnails: fix unwanted move to start after fullscreen
+  * sidebar-thumbnails: preload one extra visible range while scrolling
+  * sidebar-thumbnails: keep thumbnails already rendered
+  * sidebar-thumbnails: fix clunky scrolling
+  * sidebar-layers: Make it actually usable and fix a runtime warning
+  * libview: save changes to a dropdown in an embedded form
+  * ev-window: remove deprecated GtkToolbar-shadow-type
+  * annotation-properties-dialog: don't use a headerbar
+  * comics: make the files containing "--checkpoint-action=" unsupported
+  * Translations update
+  * update copyright year to 2017
+
 ### atril 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting to make
