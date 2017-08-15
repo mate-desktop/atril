@@ -1,17 +1,50 @@
+### atril 1.19.1
+
+  * sidebar-thumbnails: fix unwanted move to start after fullscreen
+  * sidebar-thumbnails: preload one extra visible range while scrolling
+  * sidebar-thumbnails: keep thumbnails already rendered
+  * sidebar-thumbnails: fix clunky scrolling
+  * update copyright year in Caja extension
+  * annotations-sidebar: Clean up the styling
+  * ev-annotation-window: Fix setting the color of the window border
+  * libview: fix annotation window focus change after creation
+  * libview: Fix focus on ev_annotation_window
+  * libview: Don't change the font color of the annotation window
+  * shell: Use GdkRGBA for annotations
+  * libdocument: Add EvAnnotation API using GdkRGBA
+  * libdocument: Use the new deprecation macros
+  * Add deprecation macros
+  * fix runtime warnings caused by previous HDPI commit
+  * Take monitor scale factor into account when calculating zoom.
+  * Add hi-dpi support for main view.
+  * shell: Ditch gimpcellrenderertoggle
+  * sidebar-layers: Make it actually usable and fix a runtime warning
+  * libview: setting annotation window icons sizes
+  * libview: save changes to a dropdown in an embedded form
+  * libdocument: adjust rendering of shadow for active and inactive pages
+  * avoid deprecated gdk_screen_make_display_name
+  * ev-window: remove deprecated GtkToolbar-shadow-type
+  * annotation-properties-dialog: don't use a headerbar
+  * avoid deprecated gdk_display_get_screen and gdk_display_get_n_screens
+  * ev-window: don't use deprecated gtk_show_uri
+  * Translations update
+  * avoid deprecated gdk_screen_get_number
+  * Restore Polish translation credits from GNOME
+
 ### atril 1.19.0
 
-    sync with transifex
-    update copyright year to 2017
-    build: properly clean the generated .caja-extension file
-    build: require cairo >= 1.10.0 and drop some old code
-    shell: remove unused code from utils
-    ev-view: avoid deprecated gtk_drag_begin
-    egg-editable-toolbar: avoid deprecated gtk_drag_begin
-    message-area: replace some GtkStock deprecations
-    ev-sidebar: avoid deprecated GTK_STOCK_CLOSE icon
-    password-view: replace some GtkStock deprecations
-    password-view: don't use deprecated GtkAlignment
-    toolbar-editor: don't use deprecated GtkAlignment
+  * Translations update
+  * update copyright year to 2017
+  * build: properly clean the generated .caja-extension file
+  * build: require cairo >= 1.10.0 and drop some old code
+  * shell: remove unused code from utils
+  * ev-view: avoid deprecated gtk_drag_begin
+  * egg-editable-toolbar: avoid deprecated gtk_drag_begin
+  * message-area: replace some GtkStock deprecations
+  * ev-sidebar: avoid deprecated GTK_STOCK_CLOSE icon
+  * password-view: replace some GtkStock deprecations
+  * password-view: don't use deprecated GtkAlignment
+  * toolbar-editor: don't use deprecated GtkAlignment
 
 ### atril 1.18.0
 
