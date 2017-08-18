@@ -375,9 +375,13 @@ gdouble
 ev_document_misc_get_screen_dpi (GdkScreen *screen, gint monitor)
 {
 	gdouble dp, di;
+	gint sc_width, sc_height;
+
+	gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
+				 &sc_width, &sc_height);
 
 	/*diagonal in pixels*/
-	dp = hypot (gdk_screen_get_width (screen), gdk_screen_get_height (screen));
+	dp = hypot (sc_width, sc_height);
 
 	/*diagonal in inches*/
 	di = hypot (gdk_screen_get_width_mm(screen), gdk_screen_get_height_mm (screen)) / 25.4;
