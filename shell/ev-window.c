@@ -1299,6 +1299,8 @@ setup_document_from_metadata (EvWindow *window)
 		GdkScreen *screen;
 		gint       request_width;
 		gint       request_height;
+		gint       sc_width;
+		gint       sc_height;
 
 		ev_document_get_max_page_size (window->priv->document,
 					       &document_width, &document_height);
@@ -1307,9 +1309,13 @@ setup_document_from_metadata (EvWindow *window)
 		request_height = (gint)(height_ratio * document_height + 0.5);
 
 		screen = gtk_window_get_screen (GTK_WINDOW (window));
+
+		gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
+					 &sc_width, &sc_height);
+
 		if (screen) {
-			request_width = MIN (request_width, gdk_screen_get_width (screen));
-			request_height = MIN (request_height, gdk_screen_get_height (screen));
+			request_width = MIN (request_width, sc_width);
+			request_height = MIN (request_height, sc_height);
 		}
 
 		if (request_width > 0 && request_height > 0) {
