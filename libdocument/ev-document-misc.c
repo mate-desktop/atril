@@ -376,6 +376,11 @@ ev_document_misc_get_screen_dpi (GdkScreen *screen, gint monitor)
 {
 	gdouble dp, di;
 	gint sc_width, sc_height;
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkMonitor      *monitor_id;
+
+	monitor_id = gdk_display_get_monitor (gdk_screen_get_display (screen), monitor);
+#endif
 
 	gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
 				 &sc_width, &sc_height);
@@ -384,7 +389,11 @@ ev_document_misc_get_screen_dpi (GdkScreen *screen, gint monitor)
 	dp = hypot (sc_width, sc_height);
 
 	/*diagonal in inches*/
+#if GTK_CHECK_VERSION (3, 22, 0)
+	di = hypot (gdk_monitor_get_width_mm(monitor_id), gdk_monitor_get_height_mm (monitor_id)) / 25.4;
+#else
 	di = hypot (gdk_screen_get_width_mm(screen), gdk_screen_get_height_mm (screen)) / 25.4;
+#endif
 
 #ifdef HAVE_HIDPI_SUPPORT
 	di /= gdk_screen_get_monitor_scale_factor(screen, monitor);
