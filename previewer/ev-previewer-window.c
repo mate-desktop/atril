@@ -70,11 +70,21 @@ G_DEFINE_TYPE (EvPreviewerWindow, ev_previewer_window, GTK_TYPE_WINDOW)
 static gdouble
 get_screen_dpi (EvPreviewerWindow *window)
 {
-	GdkScreen *screen;
-	gint monitor;
+	GdkScreen  *screen;
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkMonitor *monitor;
+	GdkDisplay *display;
+#else
+	gint        monitor;
+#endif
 
 	screen = gtk_window_get_screen (GTK_WINDOW (window));
+#if GTK_CHECK_VERSION (3, 22, 0)
+	display = gdk_screen_get_display (screen);
+	monitor = gdk_display_get_primary_monitor (display);
+#else
 	monitor = gdk_screen_get_primary_monitor (screen);
+#endif
 	return ev_document_misc_get_screen_dpi (screen, monitor);
 }
 
