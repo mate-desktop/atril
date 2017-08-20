@@ -1213,12 +1213,23 @@ static gboolean
 init_presentation (GtkWidget *widget)
 {
 	EvViewPresentation *pview = EV_VIEW_PRESENTATION (widget);
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkDisplay         *display = gtk_widget_get_display (widget);
+	GdkRectangle        monitor;
+	GdkMonitor         *monitor_num;
+#else
 	GdkScreen          *screen = gtk_widget_get_screen (widget);
 	GdkRectangle        monitor;
 	gint                monitor_num;
+#endif
 
+#if GTK_CHECK_VERSION (3, 22, 0)
+	monitor_num = gdk_display_get_monitor_at_window (display, gtk_widget_get_window (widget));
+	gdk_monitor_get_geometry (monitor_num, &monitor);
+#else
 	monitor_num = gdk_screen_get_monitor_at_window (screen, gtk_widget_get_window (widget));
 	gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
+#endif
 	pview->monitor_width = monitor.width;
 	pview->monitor_height = monitor.height;
 
