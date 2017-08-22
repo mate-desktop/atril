@@ -336,6 +336,8 @@ static void     ev_view_popup_cmd_copy_image            (GtkAction        *actio
 							 EvWindow         *window);
 static void     ev_view_popup_cmd_annot_properties      (GtkAction        *action,
 							 EvWindow         *window);
+static void     ev_view_popup_cmd_remove_annotation     (GtkAction        *action,
+							 EvWindow         *window);
 static void	ev_attachment_popup_cmd_open_attachment (GtkAction        *action,
 							 EvWindow         *window);
 static void	ev_attachment_popup_cmd_save_attachment_as (GtkAction     *action, 
@@ -5359,6 +5361,7 @@ view_menu_annot_popup (EvWindow     *ev_window,
 {
 	GtkAction *action;
 	gboolean   show_annot = FALSE;
+	gboolean can_remove_annots;
 	if (ev_window->priv->document->iswebdocument == TRUE ) return ;
 	if (ev_window->priv->annot)
 		g_object_unref (ev_window->priv->annot);
@@ -5367,6 +5370,12 @@ view_menu_annot_popup (EvWindow     *ev_window,
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 					      "AnnotProperties");
 	gtk_action_set_visible (action, (annot != NULL && EV_IS_ANNOTATION_MARKUP (annot)));
+
+	can_remove_annots = ev_document_annotations_can_remove_annotation (EV_DOCUMENT_ANNOTATIONS (ev_window->priv->document));
+
+	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
+	                                      "RemoveAnnot");
+	gtk_action_set_visible (action, (annot != NULL && can_remove_annots));
 
 	if (annot && EV_IS_ANNOTATION_ATTACHMENT (annot)) {
 		EvAttachment *attachment;
@@ -6336,7 +6345,9 @@ static const GtkActionEntry view_popup_entries [] = {
 	{ "CopyImage", NULL, N_("Copy _Image"), NULL,
 	  NULL, G_CALLBACK (ev_view_popup_cmd_copy_image) },
 	{ "AnnotProperties", NULL, N_("Annotation Properties…"), NULL,
-	  NULL, G_CALLBACK (ev_view_popup_cmd_annot_properties) }
+	  NULL, G_CALLBACK (ev_view_popup_cmd_annot_properties) },
+	{ "RemoveAnnot", NULL, N_("Remove Annot…"), NULL,
+	  NULL, G_CALLBACK (ev_view_popup_cmd_remove_annotation) }
 };
 
 static const GtkActionEntry attachment_popup_entries [] = {
@@ -7123,6 +7134,14 @@ ev_view_popup_cmd_annot_properties (GtkAction *action,
 	}
 
 	gtk_widget_destroy (GTK_WIDGET (dialog));
+}
+
+static void
+ev_view_popup_cmd_remove_annotation (GtkAction *action,
+                                     EvWindow  *window)
+{
+        ev_view_remove_annotation (EV_VIEW (window->priv->view),
+                                   window->priv->annot);
 }
 
 static void
