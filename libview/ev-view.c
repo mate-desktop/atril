@@ -626,7 +626,9 @@ view_set_adjustment_values (EvView         *view,
 			break;
 	}
 
+#if !GTK_CHECK_VERSION (3,18,0)
 	gtk_adjustment_changed (adjustment);
+#endif
 }
 
 static void
