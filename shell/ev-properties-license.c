@@ -58,6 +58,8 @@ get_license_text_widget (EvDocumentLicense *license)
 	gtk_text_buffer_set_text (buffer, ev_document_license_get_text (license), -1);
 
 	swindow = gtk_scrolled_window_new (NULL, NULL);
+	gtk_widget_set_hexpand (swindow, TRUE);
+	gtk_widget_set_margin_start (swindow, 12);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (swindow),
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
@@ -77,6 +79,7 @@ get_license_uri_widget (const gchar *uri)
 	gchar     *markup;
 
 	label = gtk_label_new (NULL);
+	gtk_widget_set_margin_start (label, 12);
 	g_object_set (G_OBJECT (label),
 		      "xalign", 0.0,
 		      "width_chars", 25,
@@ -103,7 +106,6 @@ ev_properties_license_add_section (EvPropertiesLicense *properties,
 				   GtkWidget           *contents)
 {
 	GtkWidget *title;
-	GtkWidget *alignment;
 	gchar     *markup;
 
 	title = gtk_label_new (NULL);
@@ -119,13 +121,8 @@ ev_properties_license_add_section (EvPropertiesLicense *properties,
 	gtk_box_pack_start (GTK_BOX (properties), title, FALSE, FALSE, 0);
 	gtk_widget_show (title);
 
-	alignment = gtk_alignment_new (0.5, 0.5, 1., 1.);
-	gtk_alignment_set_padding (GTK_ALIGNMENT (alignment), 0, 0, 12, 0);
-	gtk_container_add (GTK_CONTAINER (alignment), contents);
+	gtk_box_pack_start (GTK_BOX (properties), contents, FALSE, TRUE, 0);
 	gtk_widget_show (contents);
-
-	gtk_box_pack_start (GTK_BOX (properties), alignment, FALSE, TRUE, 0);
-	gtk_widget_show (alignment);
 }
 
 void
