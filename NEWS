@@ -1,3 +1,46 @@
+### atril 1.19.2
+
+  * Translations update
+  * shell: Check if doc implements Annotations interface before cast
+  * Refreshing annotations' sidebar upon deletion
+  * libdocument: Make ev_mapping_list_remove void
+  * page-cache: Add flags parameter to ev_page_cache_mark_dirty()
+  * pdf: Reset the annotation mapping when there are no more annotations
+  * Add an option to remove annotations to the view popup menu
+  * libview: add ev_view_remove_annotation
+  * pdf: Implement remove_annotation virtual func
+  * libdocument: add ev_mapping_list_remove
+  * libdocument: Add remove_annotation to DocumentAnnotations.
+  * pdf: Make annotation names unique
+  * pdf: Add support for adding other types of annotations
+  * libview: Rename ev_view_set_focused_element and make it public internally
+  * Change the opacity of the annotation window
+  * Change color of annotation window
+  * libview: Grab focus for form fields and links on mouse press
+  * libdocument: Added ev_mapping_list_get
+  * pdf: Add activation link for Fields that have it.
+  * libview: Handle activation link of a Form Field  if present
+  * libdocument: Add activation_link to EvFormField struct
+  * ev-properties-licence: don't use deprecated GtkAlignment
+  * libview: : avoid deprecated gtk_adjustment_changed
+  * ev-job-find: mark two methods as skip
+  * ev-jobs: have ev_job_failed_from_error shadow ev_job_failed
+  * libview: add missing transfer and element-type annotations
+  * ev-mapping-list: make a boxed type
+  * libdocument: add missing transfer and element-type annotations
+  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * avoid gdk_screen_get_primary_monitor/gdk_screen_get_monitor_scale_factor
+  * ev-document-misc.c: avoid deprecated gdk_screen_get_width/height_mm
+  * dvi: Mitigate command injection attacks by quoting filename
+  * mdvi-lib: Fix compilation warning (const-correctness)
+  * libmisc: set width chars for page label
+  * libview: Scroll small pages in non-continuous mode
+  * libview: Enable GDK_SMOOTH_SCROLL events for view
+  * libview: Ctrl+mouse wheel zoom should be pointer-centered, not window-centered
+  * ev-view: Add pan gesture to switch page
+  * ev-view: explicitly require a GtkScrolledWindow as the parent widget
+  * ev-view: Add pinch/zoom gesture to handle document zooming
+
 ### atril 1.19.1
 
   * sidebar-thumbnails: fix unwanted move to start after fullscreen
