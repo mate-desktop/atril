@@ -575,6 +575,9 @@ ev_window_update_actions (EvWindow *ev_window)
 						has_pages &&
 						ev_view_can_zoom_out (view) &&
 						!presentation_mode);
+		ev_window_set_action_sensitive (ev_window, "ViewZoomReset",
+						has_pages &&
+						!presentation_mode);
 		ev_window_set_action_sensitive (ev_window, "ViewDualOddLeft",
 						dual_mode);
 	}
@@ -4725,6 +4728,23 @@ ev_window_cmd_view_zoom_out (GtkAction *action, EvWindow *ev_window)
 }
 
 static void
+ev_window_cmd_view_zoom_reset (GtkAction *action, EvWindow *ev_window)
+{
+	g_return_if_fail (EV_IS_WINDOW (ev_window));
+
+	ev_document_model_set_sizing_mode (ev_window->priv->model, EV_SIZING_FREE);
+#if ENABLE_EPUB
+	if ( ev_window->priv->document->iswebdocument)  {
+	        ev_web_view_zoom_reset(EV_WEB_VIEW(ev_window->priv->webview));
+	}
+	else
+#endif
+	{
+	        ev_view_zoom_reset (EV_VIEW (ev_window->priv->view));
+	}
+}
+
+static void
 ev_window_cmd_go_previous_page (GtkAction *action, EvWindow *ev_window)
 {
         g_return_if_fail (EV_IS_WINDOW (ev_window));
@@ -6300,6 +6320,9 @@ static const GtkActionEntry entries[] = {
         { "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus",
           N_("Shrink the document"),
           G_CALLBACK (ev_window_cmd_view_zoom_out) },
+        { "ViewZoomReset", "zoom-original", N_("_Reset Zoom"), "<control>0",
+          N_("Reset zoom to 100\%"),
+          G_CALLBACK (ev_window_cmd_view_zoom_reset) },
         { "ViewReload", "view-refresh", N_("_Reload"), "<control>R",
           N_("Reload the document"),
           G_CALLBACK (ev_window_cmd_view_reload) },
@@ -6652,6 +6675,10 @@ set_action_properties (GtkActionGroup *action_group)
 	action = gtk_action_group_get_action (action_group, "ViewZoomOut");
 	/*translators: this is the label for toolbar button*/
 	g_object_set (action, "short_label", _("Zoom Out"), NULL);
+
+	action = gtk_action_group_get_action (action_group, "ViewZoomReset");
+	/*translators: this is the label for toolbar button*/
+	g_object_set (action, "short_label", _("Reset Zoom"), NULL);
 
 	action = gtk_action_group_get_action (action_group, "ViewFitPage");
 	/*translators: this is the label for toolbar button*/
