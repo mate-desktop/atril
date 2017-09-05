@@ -581,6 +581,12 @@ ev_window_update_actions (EvWindow *ev_window)
 		ev_window_set_action_sensitive (ev_window, "ViewDualOddLeft",
 						dual_mode);
 	}
+#if ENABLE_EPUB
+	else if (webview ) {
+		ev_window_set_action_sensitive (ev_window, "ViewDualOddLeft",
+						!dual_mode);
+	}
+#endif
         /* Go menu */
 	if (has_pages) {
 		ev_window_set_action_sensitive (ev_window, "GoPreviousPage", page > 0);
