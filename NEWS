@@ -1,5 +1,20 @@
 ### atril 1.19.3
 
+  * Translations update
+  * shell: disable ViewDualOddLeft in menus for epubs
+  * libview: only access the relevant page cache for the height request
+  * Activate shortcut keys for dual and continuous layout
+  * ev-view: Forward key events to the focused form field
+  * Add shortcut keys for fit-page and fit-width options
+  * shell: Do not open single page pdfs in dual mode by default
+  * libview: Don't update current_page to negative number
+  * libview: Make page layout a mode
+  * libview: Add new zoom mode that optimizes for readability
+  * Rename Fit Page Width as Fit Width
+  * Rename Best Fit mode as Fit Page
+  * Move dual page with odd pages left to the view menu
+  * libview: drop deprecated usage of gtk_container_set_resize_mode
+
 ### atril 1.19.2
 
   * Translations update
