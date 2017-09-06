@@ -603,10 +603,20 @@ ev_window_update_actions (EvWindow *ev_window)
 		ev_window_set_action_sensitive (ev_window, "GoLastPage", FALSE);
 	}
 
+	if (view) {
 	ev_window_set_action_sensitive (ev_window, "F7",
 	                                has_pages &&
 	                                ev_view_supports_caret_navigation (view) &&
 	                                !presentation_mode);
+	}
+#if ENABLE_EPUB
+	else if (webview) {
+	ev_window_set_action_sensitive (ev_window, "F7",
+	                                has_pages &&
+	                                !presentation_mode &&
+	                                !EV_WEB_VIEW(ev_window->priv->webview));
+}
+#endif
 
 	sizing_mode = ev_document_model_get_sizing_mode (ev_window->priv->model);
 	if (has_pages && sizing_mode != EV_SIZING_FIT_WIDTH && sizing_mode != EV_SIZING_FIT_PAGE) {
@@ -1424,6 +1434,7 @@ setup_view_from_metadata (EvWindow *window)
 		}
 	}
 
+#if !ENABLE_EPUB
 	/* Caret navigation mode */
 	if (ev_view_supports_caret_navigation (EV_VIEW (window->priv->view))) {
 		gboolean caret_navigation;
@@ -1447,6 +1458,7 @@ setup_view_from_metadata (EvWindow *window)
 		if (ev_metadata_get_boolean (window->priv->metadata, "caret-navigation", &caret_navigation))
 			ev_view_set_caret_navigation_enabled (EV_VIEW (window->priv->view), caret_navigation);
 	}
+#endif
 }
 
 static void
