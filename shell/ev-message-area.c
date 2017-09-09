@@ -148,6 +148,7 @@ ev_message_area_set_image_for_type (EvMessageArea *area,
 				    GtkMessageType type)
 {
 	const gchar *icon_name = NULL;
+	const gchar *stock_id = NULL;
 	AtkObject   *atk_obj;
 
 	switch (type) {
@@ -177,10 +178,9 @@ ev_message_area_set_image_for_type (EvMessageArea *area,
 	atk_obj = gtk_widget_get_accessible (GTK_WIDGET (area));
 	if (GTK_IS_ACCESSIBLE (atk_obj)) {
 		atk_object_set_role (atk_obj, ATK_ROLE_ALERT);
-		if (icon_name) {
+		if (stock_id) {
 			GtkStockItem item;
-
-			gtk_stock_lookup (icon_name, &item);
+			gtk_stock_lookup (stock_id, &item);
 			atk_object_set_name (atk_obj, item.label);
 		}
 	}
