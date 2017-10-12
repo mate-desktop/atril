@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-03 23:10+0200\n"
-"PO-Revision-Date: 2017-09-05 12:57+0000\n"
+"PO-Revision-Date: 2017-09-19 13:38+0000\n"
 "Last-Translator: ToMáš Marný\n"
 "Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "Nejedná se o typ MIME pro komiks: %s"
 #: ../backend/comics/comics-document.c:466
 msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
-msgstr "Nelze najít příslušný příkaz pro rozbalení této komiksové knihy."
+msgstr "Nelze najít příslušný příkaz pro rozbalení této komiksové knihy"
 
 #: ../backend/comics/comics-document.c:540 ../backend/epub/epub-document.c:627
 #: ../libdocument/ev-document-factory.c:145
@@ -72,11 +72,11 @@ msgstr "Neznámý typ MIME"
 
 #: ../backend/comics/comics-document.c:567
 msgid "File corrupted"
-msgstr "Soubor je poškozen."
+msgstr "Soubor je poškozen"
 
 #: ../backend/comics/comics-document.c:580
 msgid "No files in archive"
-msgstr "V archivu nebyly nalezeny žádné soubory."
+msgstr "V archivu nebyly nalezeny žádné soubory"
 
 #: ../backend/comics/comics-document.c:619
 #, c-format
@@ -126,7 +126,7 @@ msgstr "Toto není dokument ePub"
 
 #: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
-msgstr "Nelze načíst název souboru"
+msgstr "nelze načíst název souboru"
 
 #: ../backend/epub/epub-document.c:773
 msgid "could not open archive"
@@ -972,11 +972,11 @@ msgstr "Kruh"
 
 #: ../shell/ev-annotation-properties-dialog.c:115
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr "Neznámo"
 
 #: ../shell/ev-annotation-properties-dialog.c:140
 msgid "Annotation Properties"
-msgstr "Vlastnosti Anotace"
+msgstr "Vlastnosti poznámky"
 
 #: ../shell/ev-annotation-properties-dialog.c:175
 msgid "Color:"
@@ -1000,11 +1000,11 @@ msgstr "Výchozí stav okna:"
 
 #: ../shell/ev-annotation-properties-dialog.c:234
 msgid "Open"
-msgstr "Otevřít"
+msgstr "Otevřené"
 
 #: ../shell/ev-annotation-properties-dialog.c:235
 msgid "Close"
-msgstr "Zavřít"
+msgstr "Zavřené"
 
 #: ../shell/ev-application.c:998
 msgid "Running in presentation mode"
@@ -1102,11 +1102,11 @@ msgstr "Přidat"
 
 #: ../shell/ev-sidebar-annotations.c:209
 msgid "Add text annotation"
-msgstr "Přidat text anotace"
+msgstr "Přidat textovou poznámku"
 
 #: ../shell/ev-sidebar-annotations.c:346
 msgid "Document contains no annotations"
-msgstr "Dokument neobsahuje žádné anotace"
+msgstr "Dokument neobsahuje žádné poznámky"
 
 #: ../shell/ev-sidebar-annotations.c:378
 #, c-format
@@ -1115,7 +1115,7 @@ msgstr "Strana %d"
 
 #: ../shell/ev-sidebar-annotations.c:519
 msgid "Annotations"
-msgstr "Anotace"
+msgstr "Poznámky"
 
 #: ../shell/ev-sidebar-attachments.c:697
 msgid "Attachments"
@@ -1131,7 +1131,7 @@ msgstr "_Přejmenovat záložku"
 
 #: ../shell/ev-sidebar-bookmarks.c:158
 msgid "_Remove Bookmark"
-msgstr "_Přesunout záložku"
+msgstr "_Odstranit záložku"
 
 #: ../shell/ev-sidebar-bookmarks.c:313 ../shell/ev-window.c:969
 #: ../shell/ev-window.c:4848
@@ -1198,7 +1198,7 @@ msgstr "Stahuje se dokument (%d %%)"
 
 #: ../shell/ev-window.c:2205
 msgid "Failed to load remote file."
-msgstr "Nepodařilo se nahrát vzdálený soubor"
+msgstr "Nepodařilo se nahrát vzdálený soubor."
 
 #: ../shell/ev-window.c:2407
 #, c-format
@@ -1207,7 +1207,7 @@ msgstr "Obnovuje se dokument z %s"
 
 #: ../shell/ev-window.c:2439
 msgid "Failed to reload document."
-msgstr "Nepodařilo se obnovit dokument"
+msgstr "Nepodařilo se obnovit dokument."
 
 #: ../shell/ev-window.c:2653
 msgid "Open Document"
@@ -1273,13 +1273,13 @@ msgstr "Tiskne se úloha „%s“"
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
-msgstr "Dokument obsahuje pole formuláře, která byla vyplněna. Pokud neuložíte kopii, budou změny navždy ztraceny"
+msgstr "Dokument obsahuje pole formuláře, která byla vyplněna. Pokud neuložíte kopii, budou změny navždy ztraceny."
 
 #: ../shell/ev-window.c:3735
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
-msgstr "Dokument obsahuje nové nebo upravené anotace. Pokud neuložíte kopii, budou změny navždy ztraceny"
+msgstr "Dokument obsahuje nové nebo upravené poznámky. Pokud neuložíte kopii, budou změny navždy ztraceny."
 
 #: ../shell/ev-window.c:3742
 #, c-format
@@ -1308,9 +1308,9 @@ msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
-msgstr[0] "Běží %d aktivní tisková úloha. Počkat, na dokončení tisku před zavřením?"
-msgstr[1] "Běží %d aktivní tisková úloha. Počkat, na dokončení tisku před zavřením?"
-msgstr[2] "Existují %d aktivní tiskové úlohy. Počkat, na dokončení tisku před zavřením?"
+msgstr[0] "Běží %d aktivní tisková úloha. Počkat na dokončení tisku před zavřením?"
+msgstr[1] "Běží %d aktivní tiskové úlohy. Počkat na dokončení tisku před zavřením?"
+msgstr[2] "Existuje %d aktivních tiskových úloh. Počkat na dokončení tisku před zavřením?"
 
 #: ../shell/ev-window.c:3855
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1652,11 +1652,11 @@ msgstr "Kopí_rovat obrázek"
 
 #: ../shell/ev-window.c:6370
 msgid "Annotation Properties…"
-msgstr "Nastavení anotace..."
+msgstr "Vlastnosti poznámky…"
 
 #: ../shell/ev-window.c:6372
 msgid "Remove Annot…"
-msgstr ""
+msgstr "Odstranit poznámku…"
 
 #: ../shell/ev-window.c:6377
 msgid "_Open Attachment"
@@ -1759,7 +1759,7 @@ msgstr "Prohlížeč dokumentů pro pracovní prostředí MATE"
 
 #: ../shell/main.c:66
 msgid "The page label of the document to display."
-msgstr "Popisek stránky  dokumentu, který se zobrazí"
+msgstr "Popisek stránky dokumentu, která se má zobrazit."
 
 #: ../shell/main.c:66
 msgid "PAGE"
@@ -1767,7 +1767,7 @@ msgstr "STRÁNKA"
 
 #: ../shell/main.c:67
 msgid "The page number of the document to display."
-msgstr "Číslo stránky dokumentu, který se zobrazí"
+msgstr "Číslo stránky dokumentu, která se má zobrazit."
 
 #: ../shell/main.c:67
 msgid "NUMBER"
