@@ -1,5 +1,87 @@
 ### atril 1.19.4
 
+  * Translations update
+  * shell: fix stock item for message area
+  * docs: libview: Re-add type builtins section
+  * Fix crashes of epub documents with caret-navigation
+  * Store the caret cursor position in document metadata
+  * libview: Add ev_view_set_caret_cursor_position
+  * libview: Update the current page also when pending scroll is to find a location
+  * libview: Do not schedule a redraw when enabling/disabling caret navigation
+  * libview: Stop caret cursor blinking when cursor is not in a visible page
+  * shell: Enable/disable the caret navigation with F7
+  * libview: Add ev_view_supports_caret_navigation()
+  * ev-link-accesible: Return the index/offset after the last character in the link
+  * help: Remove references to removed selection mode
+  * libview: Fix selections starting/ending in page margins
+  * libview: Reduce the pages to scan for selections
+  * libview: Remove unused rectangle selection mode
+  * libview: Rework ev_view_accessible_get_selection
+  * libview: do not redraw the whole view when caret cursor moves
+  * libview: Update the cursor area after positioning the cursor when moving between lines
+  * ev-view-accessible: Fix ev_view_accesssible_get_n_selections
+  * ev-view-accessibl: Fix get_caret_offset when the caret navigation is enabled
+  * libview: Use error bell and return early when moving between lines fails
+  * libview: do not schedule a resize in ensure_rectangle_is_visible
+  * libview: Stop the cursor blink when there are selections active
+  * libview: Deprecate ev_view_scroll in favor of g_signal_emit_by_name
+  * ev-window: Use g_signal_emit_by name instead of ev_view_scroll
+  * previewer: Remove scroll accelerators
+  * ev-window: Remove scroll accelerators
+  * libview: Add more scroll key bindings to EvView
+  * libview: Fix second parameter type of scroll signal for h, j, k and l bindings
+  * libview: Use merge_selection_region passing NULL to clear the selections
+  * ev-pixbuf-cache: Clear the selection region also when clearing the job selection
+  * ev-pixbuf-cache: fix the condition for when a new selection is needed
+  * ev-view-accessible: Rewrite get_run_attributes to return the text attributes from the document
+  * pdf: Implement ev_document_text_get_text_attrs()
+  * libview: Get text attributes from backend and save them in page cache
+  * libdocument: Add ev_document_text_get_text_attrs()
+  * libview: Emit the AtkText text-caret-moved and text-selection-changed signals
+  * libview: clear the selection when cursor is moved
+  * libview: Do not show the caret cursor when there are active selections
+  * libview: Return NULL instead of empty regions from the pixbuf cache
+  * libview: Don't draw the caret cursor when the view is not focused
+  * libview: Fix moving caret cursor between lines in multicolumn documents
+  * libview: Pre-cache some prev/next pages to the current page range.
+  * ev-pixbuf-cache: schedule prev or next jobs first depending on the scroll direction
+  * ev-pixbuf-cache: Schedule jobs to render previous pages in inverse order
+  * libview: Added 'cursor-moved' signal to notify when the caret cursor has been moved.
+  * libview: Avoid unnecessary region copies when selecting text
+  * libview: Use a larger damage area to redraw selections
+  * libview: Don't queue a redraw when damaged region hasn't changed
+  * libview: Invalidate union of old and new selection
+  * libview: Move the caret cursor when clicking outside a selection
+  * libview: Remove unused in_selection member from SelectionInfo struct
+  * libview: Keep the offset inside a line when moving the caret between lines
+  * libview: Position the caret cursor at beginning/end of the line
+  * libview: Do not schedule a redraw when selecting all text
+  * libview: Use prepend + reverse instead of append to create selections  list
+  * libview: Use GSlice to allocate EvViewSelection
+  * libview: Text selection using the caret cursor.
+  * libview: Update the caret cursor after selecting text with the mouse
+  * libview: Take page border into account when computing selections
+  * libview: Fix a crash when selecting more than one page
+  * libview: Make sure the cursor blinks after moving it by a click
+  * libview: merge get_caret_cursor_rect_from_offset and get_caret_cursor_area
+  * libview: Notify about caret navigation errors using the error bell.
+  * libview: Do not redraw after a click if cursor position hasn't changed
+  * libview: Use GtkBindings for caret navigation
+  * libview: Rename EvView::binding-activated signal as EvView::scroll
+  * libview: Position the caret cursor by clicking
+  * libview: Use EvPixbufCache to find selection region
+  * libview: Split ev_pixbuf_cache_get_selection_surface into two functions
+  * libview: Draw selection highlight from region
+  * libview: Fix the damage area used to redraw the caret cursor
+  * libview: Actually update the page when moving the care from a different page
+  * libview: Avoid to update the current page and scroll to the cursor position,
+             if the caret cursor was not updated
+  * libview: Make caret cursor blink
+  * libview: Use logical attributes instead text layout to move the caret cursor
+  * libview: Add a way to get the text logical attributes from the page cache
+  * libview: Initial implementation of caret navigation
+  * libview: Refactor code for drawing page and selection surfaces
+
 ### atril 1.19.3
 
   * Translations update
