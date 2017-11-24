@@ -615,6 +615,10 @@ ev_window_update_actions (EvWindow *ev_window)
 	                                has_pages &&
 	                                !presentation_mode &&
 	                                !EV_WEB_VIEW(ev_window->priv->webview));
+	ev_window_set_action_sensitive (ev_window, "ViewCaretNavigation",
+	                                has_pages &&
+	                                !presentation_mode &&
+	                                !EV_WEB_VIEW(ev_window->priv->webview));
 }
 #endif
 
@@ -6438,6 +6442,9 @@ static const GtkToggleActionEntry toggle_entries[] = {
 	{ "ViewInvertedColors", EV_STOCK_INVERTED_COLORS, N_("_Inverted Colors"), "<control>I",
 	  N_("Show page contents with the colors inverted"),
 	  G_CALLBACK (ev_window_cmd_view_inverted_colors) },
+        { "ViewCaretNavigation", GTK_STOCK_INDEX, N_("Caret _Navigation"), "F7",
+	  N_("Activate or disable caret-navigation"),
+	  G_CALLBACK (ev_window_cmd_view_toggle_caret_navigation) },
 
 };
 
