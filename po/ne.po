@@ -3,6 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# chautari <chautari@gmail.com>, 2017
+# chautari <chautari@gmail.com>, 2017
 # Mahesh Subedi <submanesh@hotmail.com>, 2006
 # Narayan Kumar Magar <narayan@mpp.org.np>, 2007
 # Pawan Chitrakar <pawan@mpp.org.np>, 2005
@@ -14,8 +16,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-03 23:10+0200\n"
-"PO-Revision-Date: 2017-09-19 13:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
+"PO-Revision-Date: 2017-11-14 05:59+0000\n"
+"Last-Translator: chautari <chautari@gmail.com>\n"
 "Language-Team: Nepali (http://www.transifex.com/mate/MATE/language/ne/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,12 +39,12 @@ msgstr ""
 #: ../backend/comics/comics-document.c:231
 #, c-format
 msgid "The command “%s” did not end normally."
-msgstr ""
+msgstr "आदेश \"%s\" सामान्य रूपमा समाप्त भएन।"
 
 #: ../backend/comics/comics-document.c:459
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr ""
+msgstr "हास्य पुस्तक नभएको MIME प्रकार:%s"
 
 #: ../backend/comics/comics-document.c:466
 msgid ""
@@ -72,12 +74,12 @@ msgstr "संग्रह %s मा कुनै पनि छवि फेल�
 #: ../backend/epub/epub-document.c:1777
 #, c-format
 msgid "There was an error deleting “%s”."
-msgstr ""
+msgstr "%s मेटाउँदा एउटा त्रुटि भयो।"
 
 #: ../backend/comics/comics-document.c:1015
 #, c-format
 msgid "Error %s"
-msgstr ""
+msgstr "त्रुटि %s"
 
 #: ../backend/comics/comicsdocument.atril-backend.in.h:1
 msgid "Comic Books"
@@ -85,21 +87,21 @@ msgstr "कमिक पुस्तकहरू"
 
 #: ../backend/djvu/djvu-document.c:173
 msgid "DjVu document has incorrect format"
-msgstr ""
+msgstr "DjVu कागजात गलत ढाचाँमा छ"
 
 #: ../backend/djvu/djvu-document.c:250
 msgid ""
 "The document is composed of several files. One or more of these files cannot"
 " be accessed."
-msgstr ""
+msgstr "यो कागजातमा एक भन्दा बढि फाइलहरु सम्मिलित छन। ति मध्य एक वा बढि फाइलहरूमा पहुँच भएन।."
 
 #: ../backend/djvu/djvudocument.atril-backend.in.h:1
 msgid "DjVu Documents"
-msgstr ""
+msgstr "DjVu कागजातहरु"
 
 #: ../backend/dvi/dvi-document.c:107
 msgid "DVI document has incorrect format"
-msgstr "DVI कागजात गलत ढाचाँमा छ"
+msgstr "डि भि आइ कागजात गलत ढाचाँमा छ"
 
 #: ../backend/dvi/dvidocument.atril-backend.in.h:1
 msgid "DVI Documents"
@@ -107,7 +109,7 @@ msgstr "डि भि आइ कागजातहरु"
 
 #: ../backend/epub/epub-document.c:644
 msgid "Not an ePub document"
-msgstr ""
+msgstr "ई-पब कागजात होइन"
 
 #: ../backend/epub/epub-document.c:745
 msgid "could not retrieve filename"
@@ -119,15 +121,15 @@ msgstr "संग्रह खोल्न सकिएन"
 
 #: ../backend/epub/epub-document.c:789 ../backend/epub/epub-document.c:805
 msgid "could not extract archive"
-msgstr ""
+msgstr "सङ्ग्रह निकाल्न सकिएन"
 
 #: ../backend/epub/epub-document.c:837 ../backend/epub/epub-document.c:920
 msgid "could not retrieve container file"
-msgstr ""
+msgstr "कन्टेनर फाइल  प्राप्त गर्न सकिएन"
 
 #: ../backend/epub/epub-document.c:849
 msgid "could not open container file"
-msgstr ""
+msgstr "कन्टेनर फाइल खोल्न सकिएन"
 
 #: ../backend/epub/epub-document.c:859
 msgid "container file is corrupt"
@@ -147,7 +149,7 @@ msgstr ""
 
 #: ../backend/epub/epub-document.c:973
 msgid "content file is invalid"
-msgstr ""
+msgstr "सामाग्री फाइल अवैध छ"
 
 #: ../backend/epub/epub-document.c:982
 msgid "epub file has no spine"
@@ -163,11 +165,11 @@ msgstr ""
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
-msgstr ""
+msgstr "ई-पब कागजात"
 
 #: ../backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
-msgstr ""
+msgstr "यो काम सार्वजनिक डोमेनमा छ"
 
 #. translators: this is the document security state
 #: ../backend/pdf/ev-poppler.cc:772 ../backend/pdf/ev-poppler.cc:778
@@ -209,7 +211,7 @@ msgstr "सत्य प्रकार (CID)"
 
 #: ../backend/pdf/ev-poppler.cc:919
 msgid "Unknown font type"
-msgstr "फन्ट प्रकार अज्ञात"
+msgstr "अज्ञात फन्ट प्रकार "
 
 #: ../backend/pdf/ev-poppler.cc:945
 msgid "No name"
@@ -239,7 +241,7 @@ msgstr "“%s” कागजात लोड गर्न असफल भय�
 #: ../backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr ""
+msgstr "“%s” कागजात बचत गर्न असफल भयो"
 
 #: ../backend/ps/psdocument.atril-backend.in.h:1
 msgid "PostScript Documents"
@@ -267,7 +269,7 @@ msgstr "“%s” संलग्नता खोल्न सकेन"
 #: ../libdocument/ev-document-factory.c:170
 #, c-format
 msgid "File type %s (%s) is not supported"
-msgstr ""
+msgstr "फाइल प्रकार %s(%s)समर्थित छैन ।"
 
 #: ../libdocument/ev-document-factory.c:361
 msgid "All Documents"
@@ -280,17 +282,17 @@ msgstr "सबै फाइलहरू"
 #: ../libdocument/ev-file-helpers.c:147
 #, c-format
 msgid "Failed to create a temporary file: %s"
-msgstr ""
+msgstr "अस्थायी फाइल सिर्जना गर्न असफल: %s"
 
 #: ../libdocument/ev-file-helpers.c:309
 #, c-format
 msgid "Failed to create a temporary directory: %s"
-msgstr ""
+msgstr "अस्थायी डाइरेक्टरी सिर्जना गर्न असफल भयो:%s"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "फाइल मान्य .डेस्कटप फाइल होइन"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:188
 #, c-format
@@ -300,7 +302,7 @@ msgstr ""
 #: ../cut-n-paste/smclient/eggdesktopfile.c:957
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "%s सुरु गर्दै"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1098
 #, c-format
@@ -310,7 +312,7 @@ msgstr ""
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1166
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "अपरिचित सुरु विकल्प: %d"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1364
 #, c-format
@@ -320,11 +322,11 @@ msgstr ""
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1383
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "एउटा सुरुआतयोग्य वस्तु होइन"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:227
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "सत्र प्रबन्धकमा जडान गर्न असक्षम"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:230
 msgid "Specify file containing saved configuration"
@@ -333,23 +335,23 @@ msgstr ""
 #: ../cut-n-paste/smclient/eggsmclient.c:230 ../previewer/ev-previewer.c:36
 #: ../previewer/ev-previewer.c:37
 msgid "FILE"
-msgstr ""
+msgstr "फाइल"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
-msgstr ""
+msgstr "सत्र प्रबन्धक आईडी निर्दिष्ट गर्नुहोस्"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
-msgstr ""
+msgstr "आईडी"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:254
 msgid "Session management options:"
-msgstr ""
+msgstr "सत्र प्रबन्ध विकल्प:"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:255
 msgid "Show session management options"
-msgstr ""
+msgstr "सत्र प्रबन्ध विकल्प देखाउनुहोस्"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -394,7 +396,7 @@ msgstr "विभाजक"
 #. translators: this is the label for toolbar button
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6580
 msgid "Fit Page"
-msgstr ""
+msgstr "पृष्ठ मिलान"
 
 #. translators: this is the label for toolbar button
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6584
@@ -403,7 +405,7 @@ msgstr "चौडाइ मिलाउनुहोस"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6222
 msgid "Expand Window to Fit"
-msgstr ""
+msgstr "पर्दा भर्नका लागि सञ्झ्याल वढाउनुहोस्"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
@@ -447,19 +449,19 @@ msgstr "४००%"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:63
 msgid "800%"
-msgstr ""
+msgstr "८००%"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:64
 msgid "1600%"
-msgstr ""
+msgstr "१६००%"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:65
 msgid "3200%"
-msgstr ""
+msgstr "३२००%"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:66
 msgid "6400%"
-msgstr ""
+msgstr "६४००%"
 
 #: ../data/atril.appdata.xml.in.h:1
 msgid "A Document Viewer for the MATE desktop environment"
@@ -479,7 +481,7 @@ msgstr ""
 
 #: ../data/atril.desktop.in.in.h:1
 msgid "Atril Document Viewer"
-msgstr ""
+msgstr "आएट्रिल कागजात दृश्यक"
 
 #: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5154
 #: ../shell/ev-window-title.c:157
@@ -489,19 +491,19 @@ msgstr "कागजात दृश्यक"
 
 #: ../data/atril.desktop.in.in.h:3
 msgid "View multi-page documents"
-msgstr ""
+msgstr "बहु पृष्ठ कागजात हेर्नुहोस्"
 
 #: ../data/org.mate.Atril.gschema.xml.h:1
 msgid "Override document restrictions"
-msgstr ""
+msgstr "कागजात निषेधहरू मिच्नुहोस्"
 
 #: ../data/org.mate.Atril.gschema.xml.h:2
 msgid "Override document restrictions, like restriction to copy or to print."
-msgstr ""
+msgstr "कागजात प्रतिलिपि गर्न वा छाप्न प्रतिबन्ध अधिरोहण गर्नुहोस्।."
 
 #: ../data/org.mate.Atril.gschema.xml.h:3
 msgid "Automatically reload the document"
-msgstr ""
+msgstr "कागजात  स्वतः पुन लोड गर्नु"
 
 #: ../data/org.mate.Atril.gschema.xml.h:4
 msgid "Whether the document is automatically reloaded on file change."
@@ -517,25 +519,25 @@ msgstr ""
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "पृष्ठ क्यास आकार मेगाबाइटमा"
 
 #: ../data/org.mate.Atril.gschema.xml.h:8
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
-msgstr ""
+msgstr "अधिकतम जुम स्तर सीमाका साथ प्रस्तुत पृष्ठहरू अधिकतम आकार क्यास गर्न प्रयोग गरिने छ"
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
-msgstr ""
+msgstr "अस्थायी फाइल मेट्नुहोस्"
 
 #: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
-msgstr ""
+msgstr "मुद्रण सेटिङ्ग गर्ने फाइल"
 
 #: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
-msgstr ""
+msgstr "मेट कागजात दर्शक"
 
 #: ../previewer/ev-previewer-window.c:103 ../shell/ev-window.c:3497
 msgid "Failed to print document"
@@ -544,7 +546,7 @@ msgstr "कागजात मुद्रण गर्न असफल भय�
 #: ../previewer/ev-previewer-window.c:249
 #, c-format
 msgid "The selected printer '%s' could not be found"
-msgstr ""
+msgstr "चयन गरिएको मुद्रणयन्त्र \"%s\" भेट्टाउन सकिएन"
 
 #. Go menu
 #: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6229
@@ -583,7 +585,7 @@ msgstr "यो कागजातलाई मुद्रण गर्नुह
 
 #: ../previewer/ev-previewer-window.c:355 ../shell/ev-window.c:6343
 msgid "Fit Pa_ge"
-msgstr ""
+msgstr "पृष्ठ मिलान"
 
 #: ../previewer/ev-previewer-window.c:356 ../shell/ev-window.c:6344
 msgid "Make the current document fill the window"
@@ -591,7 +593,7 @@ msgstr "हालको कागजातलाई सञ्झ्याल भ
 
 #: ../previewer/ev-previewer-window.c:358 ../shell/ev-window.c:6346
 msgid "Fit _Width"
-msgstr ""
+msgstr "चौडाई मिलान"
 
 #: ../previewer/ev-previewer-window.c:359 ../shell/ev-window.c:6347
 msgid "Make the current document fill the window width"
@@ -611,60 +613,60 @@ msgstr "कागजातहरू"
 
 #: ../properties/ev-properties-view.c:60
 msgid "Title:"
-msgstr ""
+msgstr "शिर्षक"
 
 #: ../properties/ev-properties-view.c:61
 msgid "Location:"
-msgstr ""
+msgstr "स्थान:"
 
 #: ../properties/ev-properties-view.c:62
 msgid "Subject:"
-msgstr ""
+msgstr "विषय:"
 
 #: ../properties/ev-properties-view.c:63
 #: ../shell/ev-annotation-properties-dialog.c:160
 msgid "Author:"
-msgstr ""
+msgstr "लेखक:"
 
 #: ../properties/ev-properties-view.c:64
 msgid "Keywords:"
-msgstr ""
+msgstr "कुञ्जीशब्दहरू:"
 
 #: ../properties/ev-properties-view.c:65
 msgid "Producer:"
-msgstr ""
+msgstr "निर्माता:"
 
 #: ../properties/ev-properties-view.c:66
 msgid "Creator:"
-msgstr ""
+msgstr "सिर्जक:"
 
 #: ../properties/ev-properties-view.c:67
 msgid "Created:"
-msgstr ""
+msgstr "सिर्जना:"
 
 #: ../properties/ev-properties-view.c:68
 msgid "Modified:"
-msgstr ""
+msgstr "परिमार्जित:"
 
 #: ../properties/ev-properties-view.c:69
 msgid "Number of Pages:"
-msgstr ""
+msgstr "पृष्ठ सङ्ख्या"
 
 #: ../properties/ev-properties-view.c:70
 msgid "Optimized:"
-msgstr ""
+msgstr "अनुकूलित:"
 
 #: ../properties/ev-properties-view.c:71
 msgid "Format:"
-msgstr ""
+msgstr "ढाँचा:"
 
 #: ../properties/ev-properties-view.c:72
 msgid "Security:"
-msgstr ""
+msgstr "सुरक्षा:"
 
 #: ../properties/ev-properties-view.c:73
 msgid "Paper Size:"
-msgstr ""
+msgstr "पृष्ठ आकार:"
 
 #. translators: This is used when a document property does
 #. not have a value.  Examples:
@@ -688,12 +690,12 @@ msgstr "पुर्वनिर्धारित:मिलिमिटर"
 #: ../properties/ev-properties-view.c:265
 #, c-format
 msgid "%.0f × %.0f mm"
-msgstr ""
+msgstr "%.0f × %.0f मिमि"
 
 #: ../properties/ev-properties-view.c:269
 #, c-format
 msgid "%.2f × %.2f inch"
-msgstr ""
+msgstr "%.2f × %.2f इन्च"
 
 #. Note to translators: first placeholder is the paper name (eg.
 #. * A4), second placeholder is the paper size (eg. 297x210 mm)
@@ -711,7 +713,7 @@ msgstr "%s, ल्याण्डस्केप (%s)"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:1
 msgid "Atril properties"
-msgstr ""
+msgstr "आएट्रिल गुणहरू"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:2
 msgid "Shows details for Atril documents"
@@ -731,21 +733,21 @@ msgstr "को %d"
 #: ../libview/ev-loading-window.c:77 ../shell/ev-sidebar-annotations.c:159
 #: ../shell/ev-sidebar-layers.c:124 ../shell/ev-sidebar-links.c:260
 msgid "Loading…"
-msgstr ""
+msgstr "लोड गर्दैछ..."
 
 #. Initial state
 #: ../libview/ev-print-operation.c:346
 msgid "Preparing to print…"
-msgstr ""
+msgstr "मुद्रण गर्न तयारि"
 
 #: ../libview/ev-print-operation.c:348
 msgid "Finishing…"
-msgstr ""
+msgstr "समाप्त गर्दै…"
 
 #: ../libview/ev-print-operation.c:350
 #, c-format
 msgid "Printing page %d of %d…"
-msgstr ""
+msgstr "पृष्ठ छाप्दै %d/ %d…"
 
 #: ../libview/ev-print-operation.c:1174
 msgid "Printing is not supported on this printer."
@@ -753,27 +755,27 @@ msgstr "यस मुद्रकमा मुद्रण कार्य स�
 
 #: ../libview/ev-print-operation.c:1239
 msgid "Invalid page selection"
-msgstr ""
+msgstr "अवैध पृष्ठ छनोट"
 
 #: ../libview/ev-print-operation.c:1240
 msgid "Warning"
-msgstr ""
+msgstr "चेतावनी"
 
 #: ../libview/ev-print-operation.c:1242
 msgid "Your print range selection does not include any pages"
-msgstr ""
+msgstr "छानिएको मुद्रण सिमा कुनै पृष्ठहरू समावेश गर्दैन"
 
 #: ../libview/ev-print-operation.c:1900
 msgid "Page Scaling:"
-msgstr ""
+msgstr "पृष्ठ मापन:"
 
 #: ../libview/ev-print-operation.c:1907
 msgid "Shrink to Printable Area"
-msgstr ""
+msgstr "मुद्रणयोग्य क्षेत्रमा घटाउनुहोस्"
 
 #: ../libview/ev-print-operation.c:1908
 msgid "Fit to Printable Area"
-msgstr ""
+msgstr "मुद्रणयोग्य क्षेत्रमा मिलान गर्नुहोस्"
 
 #: ../libview/ev-print-operation.c:1911
 msgid ""
@@ -788,32 +790,32 @@ msgstr ""
 
 #: ../libview/ev-print-operation.c:1923
 msgid "Auto Rotate and Center"
-msgstr ""
+msgstr "स्वतः घुमाउनुहोस् र केन्द्र"
 
 #: ../libview/ev-print-operation.c:1926
 msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
-msgstr ""
+msgstr "प्रत्येक पृष्ठको अभिमुखीकरण मेल खाने प्रत्येक मुद्रण पृष्ठको अभिमुखिकरण घुमाउनुहोस्। कागजात पृष्ठ मुद्रण पृष्ठको भित्र केन्द्रित हुनेछ।"
 
 #: ../libview/ev-print-operation.c:1931
 msgid "Select page size using document page size"
-msgstr ""
+msgstr "कागजात पृष्ठ साइज प्रयोग गरी पृष्ठ साइज चयन गर्नुहोस्"
 
 #: ../libview/ev-print-operation.c:1933
 msgid ""
 "When enabled, each page will be printed on the same size paper as the "
 "document page."
-msgstr ""
+msgstr "सक्षम भएपछि, प्रत्येक पृष्ठ कागजात पृष्ठको रूपमा समान साइजमा मुद्रण गरिनेछ।"
 
 #: ../libview/ev-print-operation.c:2015
 msgid "Page Handling"
-msgstr ""
+msgstr "पृष्ठ ह्यान्डलिङ्"
 
 #: ../libview/ev-jobs.c:1743
 #, c-format
 msgid "Failed to print page %d: %s"
-msgstr ""
+msgstr "%d पृष्ठ मुद्रण गर्न असफल : %s"
 
 #: ../libview/ev-view-accessible.c:45
 msgid "Scroll Up"
@@ -841,7 +843,7 @@ msgstr "पृष्ठमा जानुहोस्:"
 
 #: ../libview/ev-view-presentation.c:1001
 msgid "End of presentation. Click to exit."
-msgstr ""
+msgstr "प्रस्तुति को अन्त्य। बाहिर निस्कन क्लिक गर्नुहोस्।."
 
 #: ../libview/ev-view.c:1897
 msgid "Go to first page"
@@ -909,7 +911,7 @@ msgstr "खोजी स्ट्रिङको पछिल्‍‌लो घ
 
 #: ../shell/eggfindbar.c:346
 msgid "Case Sensitive"
-msgstr ""
+msgstr "केस सेंसिटिव, केस संवेदनशील"
 
 #: ../shell/eggfindbar.c:349
 msgid "Toggle case sensitive search"
@@ -917,19 +919,19 @@ msgstr "केस सम्वेदनशील खोजी टगल गर�
 
 #: ../shell/ev-annotation-properties-dialog.c:96
 msgid "Icon:"
-msgstr ""
+msgstr "प्रतिमा:"
 
 #: ../shell/ev-annotation-properties-dialog.c:106
 msgid "Note"
-msgstr ""
+msgstr "द्रष्टव्य"
 
 #: ../shell/ev-annotation-properties-dialog.c:107
 msgid "Comment"
-msgstr ""
+msgstr "टिप्पणी"
 
 #: ../shell/ev-annotation-properties-dialog.c:108
 msgid "Key"
-msgstr ""
+msgstr "साँचो"
 
 #: ../shell/ev-annotation-properties-dialog.c:109
 msgid "Help"
@@ -937,23 +939,23 @@ msgstr "सहायता"
 
 #: ../shell/ev-annotation-properties-dialog.c:110
 msgid "New Paragraph"
-msgstr ""
+msgstr "नया अनुच्छेद"
 
 #: ../shell/ev-annotation-properties-dialog.c:111
 msgid "Paragraph"
-msgstr ""
+msgstr "अनुच्छेद"
 
 #: ../shell/ev-annotation-properties-dialog.c:112
 msgid "Insert"
-msgstr ""
+msgstr "घुसाउनुहोस्"
 
 #: ../shell/ev-annotation-properties-dialog.c:113
 msgid "Cross"
-msgstr ""
+msgstr "पार गर्नुहोस्"
 
 #: ../shell/ev-annotation-properties-dialog.c:114
 msgid "Circle"
-msgstr ""
+msgstr "वृत"
 
 #: ../shell/ev-annotation-properties-dialog.c:115
 msgid "Unknown"
@@ -961,19 +963,19 @@ msgstr "अज्ञात"
 
 #: ../shell/ev-annotation-properties-dialog.c:140
 msgid "Annotation Properties"
-msgstr ""
+msgstr "टिपोट गुणहरू"
 
 #: ../shell/ev-annotation-properties-dialog.c:175
 msgid "Color:"
-msgstr ""
+msgstr "रङ्ग:"
 
 #: ../shell/ev-annotation-properties-dialog.c:189
 msgid "Style:"
-msgstr ""
+msgstr "शैली:"
 
 #: ../shell/ev-annotation-properties-dialog.c:207
 msgid "Transparent"
-msgstr ""
+msgstr "पारदर्शी"
 
 #: ../shell/ev-annotation-properties-dialog.c:214
 msgid "Opaque"
@@ -981,15 +983,15 @@ msgstr ""
 
 #: ../shell/ev-annotation-properties-dialog.c:224
 msgid "Initial window state:"
-msgstr ""
+msgstr "सञ्झ्याल सुरू स्थिति:"
 
 #: ../shell/ev-annotation-properties-dialog.c:234
 msgid "Open"
-msgstr ""
+msgstr "खोल्नुहोस्"
 
 #: ../shell/ev-annotation-properties-dialog.c:235
 msgid "Close"
-msgstr ""
+msgstr "बन्दगर्नुहोस्"
 
 #: ../shell/ev-application.c:998
 msgid "Running in presentation mode"
@@ -1002,7 +1004,7 @@ msgstr "कागजात %s का लागि पासवर्ड"
 
 #: ../shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
-msgstr ""
+msgstr "हालै प्रयोग गरिएका कागजात खोल्नुहोस्"
 
 #: ../shell/ev-password-view.c:140
 msgid ""
@@ -1034,15 +1036,15 @@ msgstr "पासवर्ड:"
 
 #: ../shell/ev-password-view.c:366
 msgid "Forget password _immediately"
-msgstr ""
+msgstr "तत्काल पासवर्ड भुल्नुहोस्"
 
 #: ../shell/ev-password-view.c:378
 msgid "Remember password until you _log out"
-msgstr ""
+msgstr "तपाईँ लगआउट हुदासम्म पासवर्ड याद गर्नुहोस्"
 
 #: ../shell/ev-password-view.c:390
 msgid "Remember _forever"
-msgstr ""
+msgstr "सधैँ याद गर्नुहोस्"
 
 #: ../shell/ev-properties-dialog.c:62
 msgid "Properties"
@@ -1058,7 +1060,7 @@ msgstr "फन्टहरू"
 
 #: ../shell/ev-properties-dialog.c:117
 msgid "Document License"
-msgstr ""
+msgstr "कागजात इजाजतपत्र"
 
 #: ../shell/ev-properties-fonts.c:136
 msgid "Font"
@@ -1067,19 +1069,19 @@ msgstr "फन्ट"
 #: ../shell/ev-properties-fonts.c:163
 #, c-format
 msgid "Gathering font information… %3d%%"
-msgstr ""
+msgstr "फन्ट सूचना ... %3d%%"
 
 #: ../shell/ev-properties-license.c:138
 msgid "Usage terms"
-msgstr ""
+msgstr "उपयोग शब्द"
 
 #: ../shell/ev-properties-license.c:144
 msgid "Text License"
-msgstr ""
+msgstr "पाठ इजाजतपत्र"
 
 #: ../shell/ev-properties-license.c:150
 msgid "Further Information"
-msgstr ""
+msgstr "अरु जानकारी"
 
 #: ../shell/ev-sidebar-annotations.c:203
 msgid "Add"
@@ -1087,20 +1089,20 @@ msgstr "थप"
 
 #: ../shell/ev-sidebar-annotations.c:209
 msgid "Add text annotation"
-msgstr ""
+msgstr "पाठ टिपोट थप्नुहोस्"
 
 #: ../shell/ev-sidebar-annotations.c:346
 msgid "Document contains no annotations"
-msgstr ""
+msgstr "कागजातमा कुनै टिपोट छेन"
 
 #: ../shell/ev-sidebar-annotations.c:378
 #, c-format
 msgid "Page %d"
-msgstr ""
+msgstr "पृष्ठ %d"
 
 #: ../shell/ev-sidebar-annotations.c:519
 msgid "Annotations"
-msgstr ""
+msgstr "टिपोट"
 
 #: ../shell/ev-sidebar-attachments.c:697
 msgid "Attachments"
@@ -1108,15 +1110,15 @@ msgstr "संलग्नता"
 
 #: ../shell/ev-sidebar-bookmarks.c:154
 msgid "_Open Bookmark"
-msgstr ""
+msgstr "पुस्तकचिनो खोल्नुहोस्"
 
 #: ../shell/ev-sidebar-bookmarks.c:156
 msgid "_Rename Bookmark"
-msgstr ""
+msgstr "पुस्तकचिनो पुन: नामकरण गर्नुहोस्"
 
 #: ../shell/ev-sidebar-bookmarks.c:158
 msgid "_Remove Bookmark"
-msgstr ""
+msgstr "पुस्तकचिनो हटाउनुहोस्"
 
 #: ../shell/ev-sidebar-bookmarks.c:313 ../shell/ev-window.c:969
 #: ../shell/ev-window.c:4848
@@ -1126,15 +1128,15 @@ msgstr "पृष्ठ %s"
 
 #: ../shell/ev-sidebar-bookmarks.c:608
 msgid "Bookmarks"
-msgstr ""
+msgstr "बुकमार्कहरु"
 
 #: ../shell/ev-sidebar-layers.c:445
 msgid "Layers"
-msgstr ""
+msgstr "तहहरू"
 
 #: ../shell/ev-sidebar-links.c:336
 msgid "Print…"
-msgstr ""
+msgstr "मुद्रण:"
 
 #: ../shell/ev-sidebar-links.c:722
 msgid "Index"
@@ -1157,11 +1159,11 @@ msgstr ""
 
 #: ../shell/ev-window.c:1655
 msgid "The document contains no pages"
-msgstr ""
+msgstr "कागजातमा कुनै पृष्ठहरू छैनन्"
 
 #: ../shell/ev-window.c:1658
 msgid "The document contains only empty pages"
-msgstr ""
+msgstr "कागजात खाली छ वा ‍खाली पूष्ठ स्थान मात्र राखिएको छ"
 
 #: ../shell/ev-window.c:1697
 msgid "Presentation mode is not supported for ePub documents."
@@ -1174,25 +1176,25 @@ msgstr "कागजात खोल्न अक्षम छ"
 #: ../shell/ev-window.c:2028
 #, c-format
 msgid "Loading document from “%s”"
-msgstr ""
+msgstr "\"%s\" बाट कागजात लोड गर्दै"
 
 #: ../shell/ev-window.c:2172 ../shell/ev-window.c:2463
 #, c-format
 msgid "Downloading document (%d%%)"
-msgstr ""
+msgstr "डाउनलोड  कागजात  (%d%%)"
 
 #: ../shell/ev-window.c:2205
 msgid "Failed to load remote file."
-msgstr ""
+msgstr "टाढाको फाइल लोड गर्न असफल भयो ।."
 
 #: ../shell/ev-window.c:2407
 #, c-format
 msgid "Reloading document from %s"
-msgstr ""
+msgstr "%s बाट कागजात पुन लोड हुदै"
 
 #: ../shell/ev-window.c:2439
 msgid "Failed to reload document."
-msgstr ""
+msgstr "कागजात पुन लोड गर्न असफल भयो।."
 
 #: ../shell/ev-window.c:2653
 msgid "Open Document"
@@ -1201,17 +1203,17 @@ msgstr "कागजात खोल्नुहोस्"
 #: ../shell/ev-window.c:2929
 #, c-format
 msgid "Saving document to %s"
-msgstr ""
+msgstr " %s मा कागजात बचत गर्दै"
 
 #: ../shell/ev-window.c:2932
 #, c-format
 msgid "Saving attachment to %s"
-msgstr ""
+msgstr "%s मा सम्लग्न बचत गर्दै"
 
 #: ../shell/ev-window.c:2935
 #, c-format
 msgid "Saving image to %s"
-msgstr ""
+msgstr "%s मा छवि बचत गर्दै"
 
 #: ../shell/ev-window.c:2979 ../shell/ev-window.c:3079
 #, c-format
@@ -1221,17 +1223,17 @@ msgstr "“%s” को रुपमा फाइल बचत गर्न स�
 #: ../shell/ev-window.c:3010
 #, c-format
 msgid "Uploading document (%d%%)"
-msgstr ""
+msgstr "अपलोड कागजात  (%d%%)"
 
 #: ../shell/ev-window.c:3014
 #, c-format
 msgid "Uploading attachment (%d%%)"
-msgstr ""
+msgstr "अपलोड सम्लग्न (%d%%)"
 
 #: ../shell/ev-window.c:3018
 #, c-format
 msgid "Uploading image (%d%%)"
-msgstr ""
+msgstr "अपलोड छवि (%d%%)"
 
 #: ../shell/ev-window.c:3130
 msgid "Save a Copy"
@@ -1239,7 +1241,7 @@ msgstr "एउटा प्रतिलिपि बचत गर्नुहो
 
 #: ../shell/ev-window.c:3191
 msgid "Could not send current document"
-msgstr ""
+msgstr "हालको कागजात पठाउन सकेन"
 
 #: ../shell/ev-window.c:3441
 #, c-format
@@ -1251,7 +1253,7 @@ msgstr[1] ""
 #: ../shell/ev-window.c:3554
 #, c-format
 msgid "Printing job “%s”"
-msgstr ""
+msgstr "मुद्रण कार्य “%s”"
 
 #: ../shell/ev-window.c:3731
 msgid ""
@@ -1268,20 +1270,20 @@ msgstr ""
 #: ../shell/ev-window.c:3742
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
-msgstr ""
+msgstr "बन्द गर्नु अघि कागजात \"%s\" प्रतिलिपी बचत गर्नहुन्छ ?"
 
 #: ../shell/ev-window.c:3761
 msgid "Close _without Saving"
-msgstr ""
+msgstr "बचत नगरिकन बन्द गर्नुहोस्"
 
 #: ../shell/ev-window.c:3765
 msgid "Save a _Copy"
-msgstr ""
+msgstr "प्रतिलिपि बचत गर्नुहोस्"
 
 #: ../shell/ev-window.c:3834
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
-msgstr ""
+msgstr "\"%s\" मुद्रण कार्य समाप्त नभएसम्म पर्खनुहोस्?"
 
 #. TRANS: the singular form is not really used as n_print_jobs > 1
 #. but some languages distinguish between different plurals forms,
@@ -1297,15 +1299,15 @@ msgstr[1] ""
 
 #: ../shell/ev-window.c:3855
 msgid "If you close the window, pending print jobs will not be printed."
-msgstr ""
+msgstr "यदि तपाइँ सञ्झ्याल बन्द गर्नुहुन्छ भने, बाकि कार्यहरू मुद्रण हुने छैन।"
 
 #: ../shell/ev-window.c:3859
 msgid "Cancel _print and Close"
-msgstr ""
+msgstr "मुद्रण रद्द अनि बन्द गर्नुहोस्"
 
 #: ../shell/ev-window.c:3863
 msgid "Close _after Printing"
-msgstr ""
+msgstr "मुद्रण पछि बन्द गर्नुहोस्"
 
 #: ../shell/ev-window.c:4280
 msgid "Presentation mode is not supported for ePub documents"
@@ -1317,7 +1319,7 @@ msgstr "उपकरणपट्टी सम्पादक"
 
 #: ../shell/ev-window.c:4900
 msgid "There was an error displaying help"
-msgstr ""
+msgstr "मद्दत प्रदर्शन गर्दा त्यहाँ एउटा त्रुटि थियो ।"
 
 #: ../shell/ev-window.c:5150
 #, c-format
@@ -1332,7 +1334,7 @@ msgid ""
 "terms of the GNU General Public License as published by the Free Software "
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version.\n"
-msgstr "इभाइन्स स्वतन्त्र सफ्टवेयर हो, तपाईँले यसलाई स्वतन्त्र सफ्टवेयर संस्थाद्वारा प्रकाशित जिएनयु सामान्य सार्वजनिक ईजाजतपत्रको शर्त भित्र रहेर;वा ईजाजतपत्रको संस्करण २, वा (तपाईको विकल्प )मा पछिका कुनै संस्करणबाट पुनर्वितरण गर्न र/वा परिमार्जन गर्न सक्नुहुन्छ ।\n"
+msgstr "आएट्रिल स्वतन्त्र सफ्टवेयर हो, तपाईँले यसलाई स्वतन्त्र सफ्टवेयर संस्थाद्वारा प्रकाशित जिएनयु सामान्य सार्वजनिक ईजाजतपत्रको शर्त भित्र रहेर;वा ईजाजतपत्रको संस्करण २, वा (तपाईको विकल्प )मा पछिका कुनै संस्करणबाट पुनर्वितरण गर्न र/वा परिमार्जन गर्न सक्नुहुन्छ ।\n"
 
 #: ../shell/ev-window.c:5189
 msgid ""
@@ -1340,18 +1342,18 @@ msgid ""
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details.\n"
-msgstr "इभाइन्स उपयोगि हुने आशामा तर कुनै वारेन्टि विना, यद्यपि व्यापारिकरण वा कुनै निश्चित उदेश्यसँगको कुनै सूचीत वारेन्टि विना नै वितरण गरिएको हो । अरु विस्तृत विवरणका लागि जिएनयु साधारण सार्वजनिक ईजाजतपत्र हेर्नुहोस् ।\n"
+msgstr "आएट्रिल उपयोगि हुने आशामा तर कुनै वारेन्टि विना, यद्यपि व्यापारिकरण वा कुनै निश्चित उदेश्यसँगको कुनै सूचीत वारेन्टि विना नै वितरण गरिएको हो । अरु विस्तृत विवरणका लागि जिएनयु साधारण सार्वजनिक ईजाजतपत्र हेर्नुहोस् ।\n"
 
 #: ../shell/ev-window.c:5193
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
-msgstr ""
+msgstr "तपाईँले आएट्रिलसँगै एउटा जिएनयु साधारण सार्वजनिक अनुमतिपत्रको प्रतिलिपि प्राप्त गर्नुभएको हुनुपर्दछ; यदि छैन भने, Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA मा लेख्नुहोस्\n"
 
 #: ../shell/ev-window.c:5218
 msgid "Atril"
-msgstr "इभाइन्स"
+msgstr "आएट्रिल"
 
 #: ../shell/ev-window.c:5221
 msgid ""
@@ -1361,7 +1363,7 @@ msgstr ""
 
 #: ../shell/ev-window.c:5227
 msgid "translator-credits"
-msgstr "Mahesh Subedi<submanesh@yhoo.com>"
+msgstr "pawan chitrakar <chautari@gmail.com>,Mahesh Subedi<submanesh@yhoo.com>"
 
 #. TRANS: Sometimes this could be better translated as
 #. "%d hit(s) on this page".  Therefore this string
@@ -1400,7 +1402,7 @@ msgstr "जानुहोस्"
 
 #: ../shell/ev-window.c:6165
 msgid "_Bookmarks"
-msgstr ""
+msgstr "पुस्तकचिनो"
 
 #: ../shell/ev-window.c:6166
 msgid "_Help"
@@ -1409,7 +1411,7 @@ msgstr "मद्दत"
 #. File menu
 #: ../shell/ev-window.c:6169 ../shell/ev-window.c:6537
 msgid "_Open…"
-msgstr ""
+msgstr "खोल्नुहोस्"
 
 #: ../shell/ev-window.c:6170 ../shell/ev-window.c:6538
 msgid "Open an existing document"
@@ -1425,7 +1427,7 @@ msgstr "हालको कागजातको एउटा प्रतिल
 
 #: ../shell/ev-window.c:6175
 msgid "_Save a Copy…"
-msgstr ""
+msgstr "एउटा प्रतिलिपि बचत गर्नुहोस्…"
 
 #: ../shell/ev-window.c:6176
 msgid "Save a copy of the current document"
@@ -1433,7 +1435,7 @@ msgstr "चालु कागजातलाई एउटा प्रतिल
 
 #: ../shell/ev-window.c:6178
 msgid "Send _To..."
-msgstr ""
+msgstr "पठाउन लाई…"
 
 #: ../shell/ev-window.c:6179
 msgid "Send current document by mail, instant message..."
@@ -1441,7 +1443,7 @@ msgstr ""
 
 #: ../shell/ev-window.c:6181
 msgid "_Print…"
-msgstr ""
+msgstr "मुद्रण गर्नुहोस्..."
 
 #: ../shell/ev-window.c:6184
 msgid "P_roperties"
@@ -1453,7 +1455,7 @@ msgstr "सबै छान्नुहोस्"
 
 #: ../shell/ev-window.c:6194
 msgid "_Find…"
-msgstr ""
+msgstr "_खोज्नुस्"
 
 #: ../shell/ev-window.c:6195
 msgid "Find a word or phrase in the document"
@@ -1473,7 +1475,7 @@ msgstr "दायाँ घुमाउनुहोस्"
 
 #: ../shell/ev-window.c:6207
 msgid "Save Current Settings as _Default"
-msgstr ""
+msgstr "हालको सेटिङ्ग पूर्वनिर्धारित रूपमा बचत गर्नुहोस्"
 
 #: ../shell/ev-window.c:6218
 msgid "_Reload"
@@ -1485,11 +1487,11 @@ msgstr "कागजातलाई पुन:लोड गर्नुहोस
 
 #: ../shell/ev-window.c:6221
 msgid "_Expand Window to Fit"
-msgstr ""
+msgstr "सञ्झ्यालमा पृष्ठ ठिक्क गर्न जूम गर्नुहोस्"
 
 #: ../shell/ev-window.c:6225
 msgid "Auto_scroll"
-msgstr ""
+msgstr "स्वत: स्क्रोल गर्नुहोस्"
 
 #: ../shell/ev-window.c:6235
 msgid "_First Page"
@@ -1510,11 +1512,11 @@ msgstr "अन्तिम पृष्ठमा जानुहोस्"
 #. Bookmarks menu
 #: ../shell/ev-window.c:6243
 msgid "_Add Bookmark"
-msgstr ""
+msgstr "पुस्तकचिनो थप्नुहोस्"
 
 #: ../shell/ev-window.c:6244
 msgid "Add a bookmark for the current page"
-msgstr ""
+msgstr "हालको पृष्ठलाई पुस्तकचिनो थप्नुहोस्"
 
 #. Help menu
 #: ../shell/ev-window.c:6248
@@ -1569,15 +1571,15 @@ msgstr "सम्पूर्णकागजात देखाउनुहो�
 
 #: ../shell/ev-window.c:6331
 msgid "_Dual"
-msgstr ""
+msgstr "दोहोरो"
 
 #: ../shell/ev-window.c:6332
 msgid "Show two pages at once"
-msgstr ""
+msgstr "दुइ कागजात एकै पटक देखाउनुहोस्"
 
 #: ../shell/ev-window.c:6334
 msgid "_Odd pages left"
-msgstr ""
+msgstr "बिजोड पृष्ठ बायामा"
 
 #: ../shell/ev-window.c:6335
 msgid "Show odd pages on the left in dual mode"
@@ -1593,7 +1595,7 @@ msgstr "पर्दा भर्नका लागि सञ्झ्याल
 
 #: ../shell/ev-window.c:6340
 msgid "Pre_sentation"
-msgstr ""
+msgstr "प्रस्तुति"
 
 #: ../shell/ev-window.c:6341
 msgid "Run document as a presentation"
@@ -1601,7 +1603,7 @@ msgstr "प्रस्तुति जस्तै कागजात चला
 
 #: ../shell/ev-window.c:6349
 msgid "_Inverted Colors"
-msgstr ""
+msgstr "उल्टो रङ्ग"
 
 #: ../shell/ev-window.c:6350
 msgid "Show page contents with the colors inverted"
@@ -1626,7 +1628,7 @@ msgstr "लिङ्क ठेगाना प्रतिलिपि बना
 
 #: ../shell/ev-window.c:6366
 msgid "_Save Image As…"
-msgstr ""
+msgstr "छवि बचत गर्नुहोस्"
 
 #: ../shell/ev-window.c:6368
 msgid "Copy _Image"
@@ -1634,19 +1636,19 @@ msgstr "छवि प्रतिलिपि बनाउनुहोस्"
 
 #: ../shell/ev-window.c:6370
 msgid "Annotation Properties…"
-msgstr ""
+msgstr "टिपोट गुणहरू…"
 
 #: ../shell/ev-window.c:6372
 msgid "Remove Annot…"
-msgstr ""
+msgstr "टिप्पणी हटाउनुहोस्"
 
 #: ../shell/ev-window.c:6377
 msgid "_Open Attachment"
-msgstr ""
+msgstr "संलग्नता  खोल्नुहोस्"
 
 #: ../shell/ev-window.c:6379
 msgid "_Save Attachment As…"
-msgstr ""
+msgstr "संलग्नता बचत गर्नुहोस्"
 
 #: ../shell/ev-window.c:6511
 msgid "Zoom"
@@ -1672,7 +1674,7 @@ msgstr "पहिला खोलिएका पृष्ठहरूमा ज
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6557
 msgid "Send To"
-msgstr ""
+msgstr "यसलाई पठाउनुहोस्"
 
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6563
@@ -1696,7 +1698,7 @@ msgstr "जुम आउट"
 
 #: ../shell/ev-window.c:6730 ../shell/ev-window.c:6746
 msgid "Unable to launch external application."
-msgstr ""
+msgstr "बाह्य अनुप्रयोग खोल्न अक्षम छ।."
 
 #: ../shell/ev-window.c:6803
 msgid "Unable to open external link"
@@ -1704,7 +1706,7 @@ msgstr "बाह्य लिङ्क खोल्न अक्षम छ"
 
 #: ../shell/ev-window.c:6997
 msgid "Couldn't find appropriate format to save image"
-msgstr ""
+msgstr "चित्र बचत गर्न उपयुक्त ढाँचा फेला पार्न सकेन"
 
 #: ../shell/ev-window.c:7029
 msgid "The image could not be saved."
@@ -1733,15 +1735,15 @@ msgstr "%s — पासवर्डको आवश्यकता"
 
 #: ../shell/ev-utils.c:135
 msgid "By extension"
-msgstr ""
+msgstr "फाइल विस्तार"
 
 #: ../shell/main.c:58 ../shell/main.c:239
 msgid "MATE Document Viewer"
-msgstr "जिनोम कागजात दर्शक"
+msgstr "मेट कागजात दर्शक"
 
 #: ../shell/main.c:66
 msgid "The page label of the document to display."
-msgstr ""
+msgstr "कागजात पृष्ठको लेबल देखाउनुहोस्।."
 
 #: ../shell/main.c:66
 msgid "PAGE"
@@ -1749,11 +1751,11 @@ msgstr "पृष्ठ"
 
 #: ../shell/main.c:67
 msgid "The page number of the document to display."
-msgstr ""
+msgstr "कागजातमा पृष्ठ सङ्ख्या देखाउनुहोस्"
 
 #: ../shell/main.c:67
 msgid "NUMBER"
-msgstr ""
+msgstr "सङ्ख्या"
 
 #: ../shell/main.c:68
 msgid "Run atril in fullscreen mode"
@@ -1761,11 +1763,11 @@ msgstr "पूरा पर्दा मोडमा इभान्स चल�
 
 #: ../shell/main.c:69
 msgid "Named destination to display."
-msgstr ""
+msgstr "नाम गन्तव्य देखाउनुहोस्।."
 
 #: ../shell/main.c:69
 msgid "DEST"
-msgstr ""
+msgstr "DEST"
 
 #: ../shell/main.c:70
 msgid "Run atril in presentation mode"
@@ -1777,12 +1779,12 @@ msgstr "एउटा पूर्वदर्शकको रुपमा इभ
 
 #: ../shell/main.c:72
 msgid "The word or phrase to find in the document"
-msgstr ""
+msgstr "कागजातमा शब्द वा वाक्याशं फेलापार्नुहोस्"
 
 #: ../shell/main.c:72
 msgid "STRING"
-msgstr ""
+msgstr "STRING"
 
 #: ../shell/main.c:76
 msgid "[FILE…]"
-msgstr ""
+msgstr "[फाइल…]"

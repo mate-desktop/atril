@@ -5,13 +5,15 @@
 # Translators:
 # Faludi Zoltán, 2015
 # Falu <info@falu.me>, 2016
-# Falu <info@falu.me>, 2016-2017
+# Falu <info@falu.me>, 2015-2017
 # Falu.Me, 2015
 # Falu <info@falu.me>, 2015
 # Gabor Kelemen <kelemeng at mate dot hu>, 2005-2010
 # KAMI KAMI <kami911@gmail.com>, 2015
 # KAMI KAMI <kami911@gmail.com>, 2016
 # KAMI KAMI <kami911@gmail.com>, 2015-2016
+# KAMI KAMI <kami911@gmail.com>, 2015-2017
+# KAMI KAMI <kami911@gmail.com>, 2017
 # Rezső Páder <rezso@rezso.net>, 2013-2015
 # Zoltán Rápolthy <real_zolee@hotmail.com>, 2017
 msgid ""
@@ -19,8 +21,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-03 23:10+0200\n"
-"PO-Revision-Date: 2017-09-19 13:38+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>\n"
+"PO-Revision-Date: 2017-11-21 13:27+0000\n"
+"Last-Translator: KAMI KAMI <kami911@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +34,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Error launching the command “%s” in order to decompress the comic book: %s"
-msgstr "Hiba a parancs („%s”) indításakor a következő képregény kicsomagolásához: %s"
+msgstr "Hiba történt a parancs („%s”) indításakor a következő képregény kicsomagolásakor: %s"
 
 #: ../backend/comics/comics-document.c:222
 #, c-format
@@ -315,7 +317,7 @@ msgstr "Az alkalmazás nem fogad el dokumentumokat a parancssorban"
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1166
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Ismeretlen indítási beállítás: %d"
+msgstr "Ismeretlen indítási kapcsoló: %d"
 
 #: ../cut-n-paste/smclient/eggdesktopfile.c:1364
 #, c-format
@@ -342,7 +344,7 @@ msgstr "FÁJL"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "Specify session management ID"
-msgstr "A munkamenet-kezelő azonosítójának megadása"
+msgstr "Munkamenet-kezelő azonosítójának megadása"
 
 #: ../cut-n-paste/smclient/eggsmclient.c:233
 msgid "ID"
@@ -399,7 +401,7 @@ msgstr "Elválasztó"
 #. translators: this is the label for toolbar button
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6580
 msgid "Fit Page"
-msgstr ""
+msgstr "Teljes oldal"
 
 #. translators: this is the label for toolbar button
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6584
@@ -528,7 +530,7 @@ msgstr "Oldal gyorsítótár mérete MiB-ban"
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
-msgstr "A renderelt oldalak gyorsítótárának maximális mérete korlátozza a maximális nagyítási szintet. "
+msgstr "A leképzett oldalak gyorsítótárának maximális mérete korlátozza a maximális nagyítási szintet. "
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -588,7 +590,7 @@ msgstr "A jelenlegi dokumentum nyomtatása"
 
 #: ../previewer/ev-previewer-window.c:355 ../shell/ev-window.c:6343
 msgid "Fit Pa_ge"
-msgstr ""
+msgstr "_Teljes oldal"
 
 #: ../previewer/ev-previewer-window.c:356 ../shell/ev-window.c:6344
 msgid "Make the current document fill the window"
@@ -596,7 +598,7 @@ msgstr "A jelenlegi dokumentum töltse ki az ablakot"
 
 #: ../previewer/ev-previewer-window.c:358 ../shell/ev-window.c:6346
 msgid "Fit _Width"
-msgstr ""
+msgstr "Teljes _szélesség"
 
 #: ../previewer/ev-previewer-window.c:359 ../shell/ev-window.c:6347
 msgid "Make the current document fill the window width"
@@ -966,7 +968,7 @@ msgstr "Ismeretlen"
 
 #: ../shell/ev-annotation-properties-dialog.c:140
 msgid "Annotation Properties"
-msgstr "Magyarázattulajdonságok"
+msgstr "Jegyzettulajdonságok"
 
 #: ../shell/ev-annotation-properties-dialog.c:175
 msgid "Color:"
@@ -1092,11 +1094,11 @@ msgstr "Hozzáadás"
 
 #: ../shell/ev-sidebar-annotations.c:209
 msgid "Add text annotation"
-msgstr "Szöveges megjegyzés hozzáadása"
+msgstr "Szöveges jegyzet hozzáadása"
 
 #: ../shell/ev-sidebar-annotations.c:346
 msgid "Document contains no annotations"
-msgstr "A dokumentum nem tartalmaz megjegyzéseket"
+msgstr "A dokumentum nem tartalmaz jegyzeteket"
 
 #: ../shell/ev-sidebar-annotations.c:378
 #, c-format
@@ -1105,7 +1107,7 @@ msgstr "%d. oldal"
 
 #: ../shell/ev-sidebar-annotations.c:519
 msgid "Annotations"
-msgstr "Megjegyzések"
+msgstr "Jegyzetek"
 
 #: ../shell/ev-sidebar-attachments.c:697
 msgid "Attachments"
@@ -1574,19 +1576,19 @@ msgstr "A teljes dokumentum mutatása"
 
 #: ../shell/ev-window.c:6331
 msgid "_Dual"
-msgstr ""
+msgstr "_Dupla"
 
 #: ../shell/ev-window.c:6332
 msgid "Show two pages at once"
-msgstr ""
+msgstr "Két oldal egyszerre"
 
 #: ../shell/ev-window.c:6334
 msgid "_Odd pages left"
-msgstr ""
+msgstr "Páratlan oldalak _balra"
 
 #: ../shell/ev-window.c:6335
 msgid "Show odd pages on the left in dual mode"
-msgstr ""
+msgstr "Két oldal megjelenítése egyszerre, a páratlan oldalakkal a bal oldalon"
 
 #: ../shell/ev-window.c:6337
 msgid "_Fullscreen"
@@ -1639,11 +1641,11 @@ msgstr "Ké_p másolása"
 
 #: ../shell/ev-window.c:6370
 msgid "Annotation Properties…"
-msgstr "Magyarázatok tulajdonságai…"
+msgstr "Jegyzet tulajdonságai…"
 
 #: ../shell/ev-window.c:6372
 msgid "Remove Annot…"
-msgstr ""
+msgstr "Jegyzet eltávolítása…"
 
 #: ../shell/ev-window.c:6377
 msgid "_Open Attachment"
