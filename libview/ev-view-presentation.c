@@ -23,6 +23,7 @@
 #include <stdlib.h>
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
 
 #include "ev-view-presentation.h"
@@ -720,16 +721,12 @@ ev_view_presentation_goto_window_send_key_event (EvViewPresentation *pview,
 {
 	GdkEventKey *new_event;
 	GdkScreen   *screen;
-	gint         sc_width;
-	gint         sc_height;
 
 	/* Move goto window off screen */
 	screen = gtk_widget_get_screen (GTK_WIDGET (pview));
-
-	gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
-				 &sc_width, &sc_height);
-
-	gtk_window_move (GTK_WINDOW (pview->goto_window), sc_width + 1, sc_height + 1);
+	gtk_window_move (GTK_WINDOW (pview->goto_window),
+			 WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) + 1,
+			 HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) + 1);
 	gtk_widget_show (pview->goto_window);
 
 	new_event = (GdkEventKey *) gdk_event_copy (event);

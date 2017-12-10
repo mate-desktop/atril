@@ -26,6 +26,7 @@
 
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
 
 #include "ev-mapping-list.h"
@@ -5723,19 +5724,15 @@ show_loading_window_cb (EvView *view)
 	if (!view->loading_window) {
 		GtkWindow *parent;
 		GdkScreen *screen;
-		gint       sc_width;
-		gint       sc_height;
 
 		parent = GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (view)));
 		view->loading_window = ev_loading_window_new (parent);
 
 		/* Show the window off screen to get a valid size asap */
 		screen = gtk_widget_get_screen (GTK_WIDGET (view));
-
-		gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
-					 &sc_width, &sc_height);
-
-		gtk_window_move (GTK_WINDOW (view->loading_window), sc_width + 1, sc_height + 1);
+		gtk_window_move (GTK_WINDOW (view->loading_window),
+				 WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) + 1,
+				 HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) + 1);
 		gtk_widget_show (view->loading_window);
 	}
 
