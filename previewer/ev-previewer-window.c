@@ -488,6 +488,11 @@ data_dir (void)
 static void
 ev_previewer_window_init (EvPreviewerWindow *window)
 {
+	GtkStyleContext *context;
+
+	context = gtk_widget_get_style_context (GTK_WIDGET (window));
+	gtk_style_context_add_class (context, "atril-previewer-window");
+
 	gtk_window_set_default_size (GTK_WINDOW (window), 600, 600);
 }
 
