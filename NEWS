@@ -1,41 +1,48 @@
+### atril 1.19.6
+
+  * Translations update
+  * Revert "libview: Update the current page also when pending scroll is to find a location"
+  * previewer: add style class atril-previewer-window
+  * WidthOfScreen and HeightOfScreen implementation
+
 ### atril 1.19.5
 
-    sync with transifex
-    shell: show caret navigation in menu
-    ev-link-accessible: Improve efficiency of methods to get start and end indices
-    Expose form fields as AtkObject children of the page
-    Expose images as AtkObject children of the page
-    Expose links as AtkObject children of the page
-    ev-view-accessible: Add a method to determine if a given doc rect is showing
-    ev-page-cache: Add method to check if a given page has been cached
-    libview: Update the caret cursor when jumping to a find result
-    libview: Update ATK_STATE_SHOWING when the visible page range changes
-    libview: Implement AtkComponent for pages
-    libview: Fix shift+click text selection
-    a11y: ensure text cached when you request an EvPageAccessible
-    a11y: managing atk states on EvPageAccessible
-    a11y: add if applies ATK_RELATION_FLOWS_TO/FROM on EvPageAccessible
-    a11y: move AtkHyperText implementation from EvViewAccessible to EvPageAccessible
-    a11y: move AtkText implementation from EvViewAccessible to EvPageAccessible
-    a11y: expose EvPageAccessible as children of EvViewAccessible
-    a11y: new EvPageAccessible
-    libview: Fix some broken aspects EvViewAccessible text support
-    libview: Take caret navigation into account when getting AtkHyperlink indices
-    a11y: cleaning implementation for atk_text_get_caret_offset
-    a11y: fixing implementation for atk_text_set_caret_offset
-    view: set_caret_cursor_position should emit "cursor-moved" if applies
-    Remove support for deprecated atk_text_get_text_{before,after}_offset()
-    a11y: implement AtkDocument on EvViewAccessible
-    a11y: with caret navigation enabled, accessibility current page is cursor page
-    ev-view-accessible: call document_changed_cb when setting the model
-    Some text fixes for caret message area
-    ev-view-accessible: Fix a crash in ev_view_accessible_get_link
-    ev-view-accessible: Clear the cached data when the current page
-    shell: remove view_actions_focus_out_cb
-    shell: Remove ev_window_set_view_accels_sensitivity
-    shell: forward accels to the focused widget
-    Use a global array for view accel action
-    fix crash when selecting text in djvu documents
+  * Translations update
+  * shell: show caret navigation in menu
+  * ev-link-accessible: Improve efficiency of methods to get start and end indices
+  * Expose form fields as AtkObject children of the page
+  * Expose images as AtkObject children of the page
+  * Expose links as AtkObject children of the page
+  * ev-view-accessible: Add a method to determine if a given doc rect is showing
+  * ev-page-cache: Add method to check if a given page has been cached
+  * libview: Update the caret cursor when jumping to a find result
+  * libview: Update ATK_STATE_SHOWING when the visible page range changes
+  * libview: Implement AtkComponent for pages
+  * libview: Fix shift+click text selection
+  * a11y: ensure text cached when you request an EvPageAccessible
+  * a11y: managing atk states on EvPageAccessible
+  * a11y: add if applies ATK_RELATION_FLOWS_TO/FROM on EvPageAccessible
+  * a11y: move AtkHyperText implementation from EvViewAccessible to EvPageAccessible
+  * a11y: move AtkText implementation from EvViewAccessible to EvPageAccessible
+  * a11y: expose EvPageAccessible as children of EvViewAccessible
+  * a11y: new EvPageAccessible
+  * libview: Fix some broken aspects EvViewAccessible text support
+  * libview: Take caret navigation into account when getting AtkHyperlink indices
+  * a11y: cleaning implementation for atk_text_get_caret_offset
+  * a11y: fixing implementation for atk_text_set_caret_offset
+  * view: set_caret_cursor_position should emit "cursor-moved" if applies
+  * Remove support for deprecated atk_text_get_text_{before,after}_offset()
+  * a11y: implement AtkDocument on EvViewAccessible
+  * a11y: with caret navigation enabled, accessibility current page is cursor page
+  * ev-view-accessible: call document_changed_cb when setting the model
+  * Some text fixes for caret message area
+  * ev-view-accessible: Fix a crash in ev_view_accessible_get_link
+  * ev-view-accessible: Clear the cached data when the current page
+  * shell: remove view_actions_focus_out_cb
+  * shell: Remove ev_window_set_view_accels_sensitivity
+  * shell: forward accels to the focused widget
+  * Use a global array for view accel action
+  * fix crash when selecting text in djvu documents
 
 ### atril 1.19.4
 
