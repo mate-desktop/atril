@@ -5258,7 +5258,7 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		"name", _("Atril"),
 		"version", VERSION,
 		"copyright",
-		_("© 1996–2009 The Evince authors\n© 2012–2017 The MATE developers"),
+		_("© 1996–2009 The Evince authors\n© 2012–2018 The MATE developers"),
 		"license", license_trans,
 		"website", "http://www.mate-desktop.org/",
 		"comments", comments,
