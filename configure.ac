@@ -83,16 +83,6 @@ AC_SUBST([EV_INTLTOOL_ATRIL_BACKEND_RULE])
 
 GLIB_GSETTINGS
 
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-  [AS_HELP_STRING([--with-gtk=2.0|3.0], [which gtk+ version to compile against (default: 2.0)])],
-  [case "$with_gtk" in
-     2.0|3.0) ;;
-     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
-   esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
 dnl Specify required versions of dependencies
 CAIRO_REQUIRED=1.10.0
 GLIB_REQUIRED=2.36.0
