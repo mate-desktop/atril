@@ -131,34 +131,18 @@ menu_position_func (GtkMenu           *menu,
 	GtkTextDirection direction;
 	GdkWindow *gdk_window;
 	GdkRectangle monitor;
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkMonitor *monitor_num;
 	GdkDisplay *display;
-#else
-	gint monitor_num;
-	GdkScreen *screen;
-#endif
 
 	gtk_widget_get_preferred_size (GTK_WIDGET (button->menu), &menu_req, NULL);
 	direction = gtk_widget_get_direction (widget);
-#if GTK_CHECK_VERSION (3, 22, 0)
 	display = gtk_widget_get_display (GTK_WIDGET (menu));
-#else
-	screen = gtk_widget_get_screen (GTK_WIDGET (menu));
-#endif
 
 	gdk_window = gtk_widget_get_window (widget);
-#if GTK_CHECK_VERSION (3, 22, 0)
 	monitor_num = gdk_display_get_monitor_at_window (display, gdk_window);
 	if (monitor_num == NULL)
 		monitor_num = gdk_display_get_monitor (display, 0);
 	gdk_monitor_get_geometry (monitor_num, &monitor);
-#else
-	monitor_num = gdk_screen_get_monitor_at_window (screen, gdk_window);
-	if (monitor_num < 0)
-		monitor_num = 0;
-	gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
-#endif
 
 	gdk_window_get_origin (gdk_window, x, y);
 	gtk_widget_get_allocation (widget, &allocation);

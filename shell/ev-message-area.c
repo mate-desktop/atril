@@ -105,11 +105,7 @@ ev_message_area_init (EvMessageArea *area)
 	gtk_label_set_use_markup (GTK_LABEL (area->priv->label), TRUE);
 	gtk_label_set_line_wrap (GTK_LABEL (area->priv->label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (area->priv->label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (area->priv->label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (area->priv->label), 0.0, 0.5);
-#endif
 	gtk_widget_set_can_focus (area->priv->label, TRUE);
 	gtk_box_pack_start (GTK_BOX (vbox), area->priv->label, TRUE, TRUE, 0);
 	gtk_widget_show (area->priv->label);
@@ -118,11 +114,7 @@ ev_message_area_init (EvMessageArea *area)
 	gtk_label_set_use_markup (GTK_LABEL (area->priv->secondary_label), TRUE);
 	gtk_label_set_line_wrap (GTK_LABEL (area->priv->secondary_label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (area->priv->secondary_label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (area->priv->secondary_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (area->priv->secondary_label), 0.0, 0.5);
-#endif
 	gtk_widget_set_can_focus (area->priv->secondary_label, TRUE);
 	gtk_box_pack_start (GTK_BOX (vbox), area->priv->secondary_label, TRUE, TRUE, 0);
 

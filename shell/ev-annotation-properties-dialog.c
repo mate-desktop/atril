@@ -94,11 +94,7 @@ ev_annotation_properties_dialog_constructed (GObject *object)
 	switch (dialog->annot_type) {
 	case EV_ANNOTATION_TYPE_TEXT:
 		label = gtk_label_new (_("Icon:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 		gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-		gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 		gtk_grid_attach (GTK_GRID (grid), label, 0, 5, 1, 1);
 		gtk_widget_show (label);
 
@@ -158,11 +154,7 @@ ev_annotation_properties_dialog_init (EvAnnotationPropertiesDialog *annot_dialog
 	gtk_widget_show (grid);
 
 	label = gtk_label_new (_("Author:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 	gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
 	gtk_widget_show (label);
 
@@ -173,11 +165,7 @@ ev_annotation_properties_dialog_init (EvAnnotationPropertiesDialog *annot_dialog
 	gtk_widget_show (annot_dialog->author);
 
 	label = gtk_label_new (_("Color:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 	gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
 	gtk_widget_show (label);
 
@@ -187,11 +175,7 @@ ev_annotation_properties_dialog_init (EvAnnotationPropertiesDialog *annot_dialog
 	gtk_widget_show (annot_dialog->color);
 
 	label = gtk_label_new (_("Style:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 	gtk_grid_attach (GTK_GRID (grid), label, 0, 2, 1, 1);
 	gtk_widget_show (label);
 
@@ -222,11 +206,7 @@ ev_annotation_properties_dialog_init (EvAnnotationPropertiesDialog *annot_dialog
 	gtk_widget_show (hbox);
 
 	label = gtk_label_new (_("Initial window state:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 	gtk_grid_attach (GTK_GRID (grid), label, 0, 4, 1, 1);
 	gtk_widget_show (label);
 

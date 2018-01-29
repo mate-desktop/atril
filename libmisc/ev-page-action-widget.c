@@ -182,11 +182,7 @@ ev_page_action_widget_init (EvPageActionWidget *action_widget)
 
 	action_widget->label = gtk_label_new (NULL);
 	gtk_label_set_width_chars (GTK_LABEL (action_widget->label), 14);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (action_widget->label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (action_widget->label), 0.0, 0.5);
-#endif
 	gtk_box_pack_start (GTK_BOX (hbox), action_widget->label,
 			    FALSE, FALSE, 0);
 	gtk_widget_show (action_widget->label);

@@ -395,11 +395,7 @@ ev_document_misc_invert_pixbuf (GdkPixbuf *pixbuf)
 }
 
 gdouble
-#if GTK_CHECK_VERSION (3, 22, 0)
 ev_document_misc_get_screen_dpi (GdkScreen *screen, GdkMonitor *monitor)
-#else
-ev_document_misc_get_screen_dpi (GdkScreen *screen, gint monitor)
-#endif
 {
 	gdouble dp, di;
 
@@ -407,13 +403,8 @@ ev_document_misc_get_screen_dpi (GdkScreen *screen, gint monitor)
 	dp = hypot (WidthOfScreen (gdk_x11_screen_get_xscreen (screen)), HeightOfScreen (gdk_x11_screen_get_xscreen (screen)));
 
 	/*diagonal in inches*/
-#if GTK_CHECK_VERSION (3, 22, 0)
 	di = hypot (gdk_monitor_get_width_mm(monitor), gdk_monitor_get_height_mm (monitor)) / 25.4;
 	di /= gdk_monitor_get_scale_factor (monitor);
-#else
-	di = hypot (gdk_screen_get_width_mm(screen), gdk_screen_get_height_mm (screen)) / 25.4;
-	di /= gdk_screen_get_monitor_scale_factor(screen, monitor);
-#endif
 
 	return (dp / di);
 }
@@ -446,11 +437,7 @@ ev_document_misc_get_pointer_position (GtkWidget *widget,
                                        gint      *x,
                                        gint      *y)
 {
-#if GTK_CHECK_VERSION (3, 20, 0)
         GdkSeat *seat;
-#else
-        GdkDeviceManager *device_manager;
-#endif
         GdkDevice        *device_pointer;
         GdkRectangle      allocation;
 
@@ -462,13 +449,8 @@ ev_document_misc_get_pointer_position (GtkWidget *widget,
         if (!gtk_widget_get_realized (widget))
                 return;
 
-#if GTK_CHECK_VERSION (3, 20, 0)
         seat = gdk_display_get_default_seat (gtk_widget_get_display (widget));
         device_pointer = gdk_seat_get_pointer (seat);
-#else
-        device_manager = gdk_display_get_device_manager (gtk_widget_get_display (widget));
-        device_pointer = gdk_device_manager_get_client_pointer (device_manager);
-#endif
         gdk_window_get_device_position (gtk_widget_get_window (widget),
                                         device_pointer,
                                         x, y, NULL);

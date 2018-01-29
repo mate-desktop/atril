@@ -56,13 +56,9 @@ cairo_surface_t *ev_document_misc_surface_rotate_and_scale (cairo_surface_t *sur
 							    gint             dest_height,
 							    gint             dest_rotation);
 void             ev_document_misc_invert_surface (cairo_surface_t *surface);
-void		 ev_document_misc_invert_pixbuf  (GdkPixbuf       *pixbuf);
+void             ev_document_misc_invert_pixbuf  (GdkPixbuf       *pixbuf);
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 gdouble          ev_document_misc_get_screen_dpi (GdkScreen *screen, GdkMonitor *monitor);
-#else
-gdouble          ev_document_misc_get_screen_dpi (GdkScreen *screen, gint monitor);
-#endif
 
 gchar           *ev_document_misc_format_date (GTime utime);
 

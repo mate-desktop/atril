@@ -26,7 +26,6 @@
 #include <string.h>
 #include <glib/gi18n.h>
 
-#if GTK_CHECK_VERSION(3, 22, 0)
 static int
 _gtk_get_monitor_num (GdkMonitor *monitor)
 {
@@ -43,7 +42,6 @@ _gtk_get_monitor_num (GdkMonitor *monitor)
 
 	return -1;
 }
-#endif
 
 static void
 ev_gui_sanitise_popup_position (GtkMenu *menu,
@@ -51,13 +49,8 @@ ev_gui_sanitise_popup_position (GtkMenu *menu,
 				gint *x,
 				gint *y)
 {
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkDisplay *display = gtk_widget_get_display (widget);
 	GdkMonitor *monitor_num;
-#else
-	GdkScreen *screen = gtk_widget_get_screen (widget);
-	gint monitor_num;
-#endif
 	GdkRectangle monitor;
 	GtkRequisition req;
 
@@ -65,15 +58,9 @@ ev_gui_sanitise_popup_position (GtkMenu *menu,
 
 	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 	monitor_num = gdk_display_get_monitor_at_point (display, *x, *y);
 	gtk_menu_set_monitor (menu, _gtk_get_monitor_num (monitor_num));
 	gdk_monitor_get_geometry (monitor_num, &monitor);
-#else
-	monitor_num = gdk_screen_get_monitor_at_point (screen, *x, *y);
-	gtk_menu_set_monitor (menu, monitor_num);
-	gdk_screen_get_monitor_geometry (screen, monitor_num, &monitor);
-#endif
 
 	*x = CLAMP (*x, monitor.x, monitor.x + MAX (0, monitor.width - req.width));
 	*y = CLAMP (*y, monitor.y, monitor.y + MAX (0, monitor.height - req.height));

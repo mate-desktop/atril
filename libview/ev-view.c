@@ -497,24 +497,16 @@ is_dual_page (EvView   *view,
 	switch (view->page_layout) {
 	case EV_PAGE_LAYOUT_AUTOMATIC: {
 		GdkScreen    *screen;
-#if GTK_CHECK_VERSION (3, 22, 0)
 		GdkMonitor *monitor;
 		GdkDisplay *display;
-#else
-		gint        monitor;
-#endif
 		double        scale;
 		double        doc_width;
 		double        doc_height;
 		GtkAllocation allocation;
 
 		screen = gtk_widget_get_screen (GTK_WIDGET (view));
-#if GTK_CHECK_VERSION (3, 22, 0)
 		display = gdk_screen_get_display (screen);
 		monitor = gdk_display_get_primary_monitor (display);
-#else
-		monitor = gdk_screen_get_primary_monitor (screen);
-#endif
 		scale = ev_document_misc_get_screen_dpi (screen, monitor) / 72.0;
 
 		ev_document_get_max_page_size (view->document, &doc_width, &doc_height);
@@ -693,10 +685,6 @@ view_set_adjustment_values (EvView         *view,
 			gtk_adjustment_set_value (adjustment, (int)new_value);
 			break;
 	}
-
-#if !GTK_CHECK_VERSION (3,18,0)
-	gtk_adjustment_changed (adjustment);
-#endif
 }
 
 static void
@@ -6306,9 +6294,7 @@ ev_view_class_init (EvViewClass *class)
 
 	object_class->dispose = ev_view_dispose;
 
-#if GTK_CHECK_VERSION (3, 20, 0)
 	gtk_widget_class_set_css_name (widget_class, "evview");
-#endif
 
 	container_class->remove = ev_view_remove;
 	container_class->forall = ev_view_forall;
@@ -7142,12 +7128,8 @@ zoom_for_size_automatic (GdkScreen *screen,
 			 int        target_width,
 			 int        target_height)
 {
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkMonitor *monitor;
 	GdkDisplay *display;
-#else
-	gint        monitor;
-#endif
 	double fit_width_scale;
 	double scale;
 
@@ -7161,12 +7143,8 @@ zoom_for_size_automatic (GdkScreen *screen,
 	} else {
 		double actual_scale;
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 		display = gdk_screen_get_display (screen);
 		monitor = gdk_display_get_primary_monitor (display);
-#else
-		monitor = gdk_screen_get_primary_monitor (screen);
-#endif
 		actual_scale = ev_document_misc_get_screen_dpi (screen, monitor) / 72.0;
 		scale = MIN (fit_width_scale, actual_scale);
 	}
