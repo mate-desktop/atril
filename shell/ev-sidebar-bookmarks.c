@@ -151,7 +151,7 @@ ev_bookmarks_popup_cmd_remove_bookmark (GtkAction          *action,
 }
 
 static const GtkActionEntry popup_entries[] = {
-        { "OpenBookmark", GTK_STOCK_OPEN, N_("_Open Bookmark"), NULL,
+        { "OpenBookmark", "document-open", N_("_Open Bookmark"), NULL,
           NULL, G_CALLBACK (ev_bookmarks_popup_cmd_open_bookmark) },
         { "RenameBookmark", NULL, N_("_Rename Bookmark"), NULL,
           NULL, G_CALLBACK (ev_bookmarks_popup_cmd_rename_bookmark) },
@@ -473,7 +473,9 @@ ev_sidebar_bookmarks_init (EvSidebarBookmarks *sidebar_bookmarks)
 
         hbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
 
-        priv->add_button = gtk_button_new_from_stock (GTK_STOCK_ADD);
+        priv->add_button = gtk_button_new_with_mnemonic (_("_Add"));
+        gtk_button_set_image (GTK_BUTTON (priv->add_button), gtk_image_new_from_icon_name ("list-add", GTK_ICON_SIZE_BUTTON));
+
         g_signal_connect (priv->add_button, "clicked",
                           G_CALLBACK (ev_sidebar_bookmarks_add_clicked),
                           sidebar_bookmarks);
@@ -481,7 +483,9 @@ ev_sidebar_bookmarks_init (EvSidebarBookmarks *sidebar_bookmarks)
         gtk_box_pack_start (GTK_BOX (hbox), priv->add_button, TRUE, TRUE, 6);
         gtk_widget_show (priv->add_button);
 
-        priv->del_button = gtk_button_new_from_stock (GTK_STOCK_REMOVE);
+        priv->del_button = gtk_button_new_with_mnemonic (_("_Remove"));
+        gtk_button_set_image (GTK_BUTTON (priv->del_button), gtk_image_new_from_icon_name ("list-remove", GTK_ICON_SIZE_BUTTON));
+
         g_signal_connect (priv->del_button, "clicked",
                           G_CALLBACK (ev_sidebar_bookmarks_del_clicked),
                           sidebar_bookmarks);

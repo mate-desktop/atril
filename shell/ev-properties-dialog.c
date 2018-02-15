@@ -64,7 +64,7 @@ ev_properties_dialog_init (EvPropertiesDialog *properties)
 	gtk_container_set_border_width (GTK_CONTAINER (properties), 5);
 	gtk_box_set_spacing (content_area, 2);
 
-	gtk_dialog_add_button (GTK_DIALOG (properties), GTK_STOCK_CLOSE,
+	gtk_dialog_add_button (GTK_DIALOG (properties), "gtk-close",
 			       GTK_RESPONSE_CANCEL);
 	gtk_dialog_set_default_response (GTK_DIALOG (properties), 
 			                 GTK_RESPONSE_CANCEL);
