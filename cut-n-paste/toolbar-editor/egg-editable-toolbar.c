@@ -1464,9 +1464,9 @@ egg_editable_toolbar_set_ui_manager (EggEditableToolbar *etoolbar,
   static const GtkActionEntry actions[] = {
     { "MoveToolItem", STOCK_DRAG_MODE, N_("_Move on Toolbar"), NULL,
       N_("Move the selected item on the toolbar"), G_CALLBACK (move_item_cb) },
-    { "RemoveToolItem", GTK_STOCK_REMOVE, N_("_Remove from Toolbar"), NULL,
+    { "RemoveToolItem", "list-remove", N_("_Remove from Toolbar"), NULL,
       N_("Remove the selected item from the toolbar"), G_CALLBACK (remove_item_cb) },
-    { "RemoveToolbar", GTK_STOCK_DELETE, N_("_Delete Toolbar"), NULL,
+    { "RemoveToolbar", "edit-delete", N_("_Delete Toolbar"), NULL,
       N_("Remove the selected toolbar"), G_CALLBACK (remove_toolbar_cb) },
   };
 

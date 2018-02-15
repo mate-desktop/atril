@@ -45,7 +45,7 @@ G_BEGIN_DECLS
 #define EV_STOCK_RESIZE_SE              "resize-se"
 #define EV_STOCK_RESIZE_SW              "resize-sw"
 #define EV_STOCK_CLOSE                  "close"
-#define EV_STOCK_INVERTED_COLORS        "inverted"
+#define EV_STOCK_INVERTED_COLORS        "stock_filters-invert"
 #define EV_STOCK_ATTACHMENT             "mail-attachment"
 #define EV_STOCK_SEND_TO                "document-send"
 
