@@ -332,7 +332,7 @@ build_popup_menu (EvSidebarLinks *sidebar)
 	GtkWidget *item;
 
 	menu = gtk_menu_new ();
-	item = gtk_image_menu_item_new_from_stock (GTK_STOCK_PRINT, NULL);
+	item = gtk_image_menu_item_new_from_stock ("gtk-print", NULL);
 	gtk_label_set_label (GTK_LABEL (gtk_bin_get_child (GTK_BIN (item))), _("Print…"));
 	gtk_widget_show (item);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);

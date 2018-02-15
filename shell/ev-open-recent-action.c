@@ -67,7 +67,7 @@ ev_open_recent_action_create_tool_item (GtkAction *action)
 	gtk_recent_filter_add_application (filter, g_get_application_name ());
 	gtk_recent_chooser_set_filter (GTK_RECENT_CHOOSER (toolbar_recent_menu), filter);
 
-	tool_item = GTK_WIDGET (gtk_menu_tool_button_new_from_stock (GTK_STOCK_OPEN));
+	tool_item = GTK_WIDGET (gtk_menu_tool_button_new_from_stock ("gtk-open"));
 	gtk_menu_tool_button_set_arrow_tooltip_text (GTK_MENU_TOOL_BUTTON (tool_item),
 						     _("Open a recently used document"));
 	gtk_menu_tool_button_set_menu (GTK_MENU_TOOL_BUTTON (tool_item),

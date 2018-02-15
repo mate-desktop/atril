@@ -137,8 +137,8 @@ ev_annotation_properties_dialog_init (EvAnnotationPropertiesDialog *annot_dialog
 	gtk_window_set_destroy_with_parent (GTK_WINDOW (annot_dialog), TRUE);
 	gtk_container_set_border_width (GTK_CONTAINER (annot_dialog), 5);
 	gtk_dialog_add_buttons (dialog,
-				GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
-				GTK_STOCK_APPLY, GTK_RESPONSE_APPLY,
+				"gtk-close", GTK_RESPONSE_CLOSE,
+				"gtk-apply", GTK_RESPONSE_APPLY,
 				NULL);
 	gtk_dialog_set_default_response (dialog, GTK_RESPONSE_APPLY);
 
