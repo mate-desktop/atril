@@ -24,11 +24,11 @@
 
 #include <config.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <glib/gstdio.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
