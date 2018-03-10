@@ -6404,6 +6404,8 @@ static const GtkActionEntry entries[] = {
           G_CALLBACK (ev_window_cmd_view_zoom_in) },
         { "CtrlKpMinus", "zoom-out", NULL, "<control>KP_Subtract", NULL,
           G_CALLBACK (ev_window_cmd_view_zoom_out) },
+        { "CtrlKpZero", "zoom-original", NULL, "<control>KP_0", NULL,
+          G_CALLBACK (ev_window_cmd_view_zoom_reset) },
 	{ "CtrlInsert", "edit-copy", NULL, "<control>Insert", NULL,
 	  G_CALLBACK (ev_window_cmd_edit_copy) },
 	{ "FitPage", EV_STOCK_ZOOM_PAGE, NULL, "f", NULL,
