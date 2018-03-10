@@ -6446,7 +6446,7 @@ static const GtkToggleActionEntry toggle_entries[] = {
         { "ViewFitWidth", EV_STOCK_ZOOM_WIDTH, N_("Fit _Width"), "w",
           N_("Make the current document fill the window width"),
           G_CALLBACK (ev_window_cmd_view_fit_width) },
-	{ "ViewInvertedColors", EV_STOCK_INVERTED_COLORS, N_("_Inverted Colors"), "<control>I",
+	{ "ViewInvertedColors", EV_STOCK_INVERTED_COLORS, N_("Inverted _Colors"), "<control>I",
 	  N_("Show page contents with the colors inverted"),
 	  G_CALLBACK (ev_window_cmd_view_inverted_colors) },
         { "ViewCaretNavigation", "gtk-index", N_("Caret _Navigation"), "F7",
