@@ -324,6 +324,8 @@ static const GtkActionEntry accel_entries[] = {
 	  G_CALLBACK (ev_previewer_window_zoom_in) },
 	{ "CtrlKpMinus", "zoom-out", NULL, "<control>KP_Subtract", NULL,
 	  G_CALLBACK (ev_previewer_window_zoom_out) },
+	{ "CtrlKpZero", "zoom-original", NULL, "<control>KP_0", NULL,
+	  G_CALLBACK (ev_previewer_window_zoom_reset) },
 	{ "FocusPageSelector", NULL, "", "<control>l", NULL,
 	  G_CALLBACK (ev_previewer_window_focus_page_selector) }
 
