@@ -1,0 +1,5 @@
+#! /bin/sh
+
+PACKAGE=atril;
+
+make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
