@@ -1,3 +1,42 @@
+### atril 1.21.0
+
+    shell: Don't dist generated files
+    Disable view presentation if there is no document.
+    Allow changing the page of a presentation
+    libview: Fix goto window in presentation mode
+    libview: avoid deprecated gdk_screen_get_monitor
+    EvPresentationView: Render correctly on hi-dpi displays
+    libview: Fix g_return condition in set_device_scale_on_surface()
+    EvView: render correctly on hi-dpi displays
+    libview: use css to draw the background of presentations
+    shell: Use GResource for data files
+    toolbar-editor: Add methods to load from GResource
+    previewer: Use GResource for data files
+    build: Add configure check for glib-compile-resources
+    update resource for translations
+    libview: Check number of pages when processing button events
+    libview: Add check for pageless documents to ev_view_accessible_focus_changed
+    libview: Check number of pages on ev_view_document_changed_cb
+    Use GtkOverlay to show the loading message
+    shell: Remove unused marshalers
+    thumbnailer: Send error messages to stderr
+    shell: Use GtkApplication to inhibit the screensaver
+    shell: Port to GtkApplication
+    shell: Use g_printerr instead of g_warning
+    daemon: Port to GApplication
+    daemon: Use gdbus-codegen for the org.mate.atril.Daemon interface
+    shell: Use gdbus-codegen for the org.mate.atril.Window interface
+    shell: Use gdbus-codegen for the org.mate.atril.Application interface
+    libview: save inverted colors in a document
+    Save/restore context when getting colors for a different state
+    epub: allow to save epub documents
+    epub:  fix loading epub thumbnails
+    Check legal boundaries of accessible pages
+    shell: fix menu-accel for inverted colors
+    shell: add keypad accels for zoom_reset
+    Add zoom reset
+    avoid deprecated GtkStock
+
 ### atril 1.20.0
 
   * Translations update
