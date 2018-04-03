@@ -3601,6 +3601,22 @@ start_selection_for_event (EvView         *view,
 			    &(view->selection_info.start));
 }
 
+static void
+extend_selection (EvView *view,
+		  GdkPoint *start_point,
+		  GdkPoint *end_point)
+{
+	if (!view->selection_info.selections) {
+		view->selection_info.start.x = start_point->x;
+		view->selection_info.start.y = start_point->y;
+	}
+
+	compute_selections (view,
+			    EV_SELECTION_STYLE_GLYPH,
+			    &(view->selection_info.start),
+			    end_point);
+}
+
 static gboolean
 ev_view_button_press_event (GtkWidget      *widget,
 			    GdkEventButton *event)
@@ -3643,6 +3659,12 @@ ev_view_button_press_event (GtkWidget      *widget,
 			if (EV_IS_SELECTION (view->document) && view->selection_info.selections) {
 				if (event->type == GDK_3BUTTON_PRESS) {
 					start_selection_for_event (view, event);
+				} else if (event->state & GDK_SHIFT_MASK) {
+					GdkPoint end_point;
+
+					end_point.x = event->x + view->scroll_x;
+					end_point.y = event->y + view->scroll_y;
+					extend_selection (view, &view->selection_info.start, &end_point);
 				} else if (location_in_selected_text (view,
 							       event->x + view->scroll_x,
 							       event->y + view->scroll_y)) {
