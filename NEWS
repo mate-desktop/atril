@@ -1,3 +1,22 @@
+### atril 1.18.5
+
+  * Fix build without epub
+  * Disable presentation if there is no document or document
+    has no pages (fixes some crashes)
+  * epub: allow to save epub documents
+  * libview: check number of pages on ev_view_document_changed_cb
+    (fixes crash on corrupted PDF with no pages)
+  * libview: setting annotation window icons sizes
+  * libview: don't change the font color of the annotation window
+  * libview: fix focus on ev_annotation_window
+  * libview: fix annotation window focus change after creation
+  * libview: fix occasional black color of annotation window border
+  * libview: fix text selection with mouse in annotation window
+  * libview: fix shift+click text selection
+  * libview: save inverted colors in a document
+  * libview: fix goto window in presentation mode
+  * libview: fix a crash in ev_view_accessible_get_link
+
 ### atril 1.18.4
 
   * epub: fix loading epub thumbnails
