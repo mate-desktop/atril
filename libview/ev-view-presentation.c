@@ -904,6 +904,7 @@ ev_view_presentation_set_cursor (EvViewPresentation *pview,
 				 EvViewCursor        view_cursor)
 {
 	GtkWidget  *widget;
+	GdkDisplay *display;
 	GdkCursor  *cursor;
 
 	if (pview->cursor == view_cursor)
@@ -915,9 +916,10 @@ ev_view_presentation_set_cursor (EvViewPresentation *pview,
 
 	pview->cursor = view_cursor;
 
-	cursor = ev_view_cursor_new (gtk_widget_get_display (widget), view_cursor);
+	display = gtk_widget_get_display (widget);
+	cursor = ev_view_cursor_new (display, view_cursor);
 	gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
-	gdk_flush ();
+	gdk_display_flush (display);
 	if (cursor)
 		g_object_unref (cursor);
 }
