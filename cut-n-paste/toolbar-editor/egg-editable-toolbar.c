@@ -367,7 +367,7 @@ popup_context_menu_cb (GtkWidget          *toolbar,
       menu = GTK_MENU (gtk_ui_manager_get_widget (etoolbar->priv->manager,
 						  etoolbar->priv->popup_path));
       g_return_if_fail (menu != NULL);
-      gtk_menu_popup (menu, NULL, NULL, NULL, NULL, button_number, gtk_get_current_event_time ());
+      gtk_menu_popup_at_pointer (menu, NULL);
       g_signal_connect_object (menu, "selection-done",
 			       G_CALLBACK (popup_context_deactivate),
 			       etoolbar, 0);
@@ -401,7 +401,7 @@ button_press_event_cb (GtkWidget *widget,
       menu = GTK_MENU (gtk_ui_manager_get_widget (etoolbar->priv->manager,
 						  etoolbar->priv->popup_path));
       g_return_val_if_fail (menu != NULL, FALSE);
-      gtk_menu_popup (menu, NULL, NULL, NULL, NULL, event->button, event->time);
+      gtk_menu_popup_at_pointer (menu, (const GdkEvent*) event);
       g_signal_connect_object (menu, "selection-done",
 			       G_CALLBACK (popup_context_deactivate),
 			       etoolbar, 0);
