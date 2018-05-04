@@ -192,30 +192,6 @@ ev_sidebar_class_init (EvSidebarClass *ev_sidebar_class)
 							      G_PARAM_READWRITE));
 }
 
-static void
-ev_sidebar_menu_position_under (GtkMenu  *menu,
-				int      *x,
-				int      *y,
-				gboolean *push_in,
-				gpointer  user_data)
-{
-	GtkWidget    *widget;
-	GtkAllocation allocation;
-
-	g_return_if_fail (GTK_IS_BUTTON (user_data));
-	g_return_if_fail (!gtk_widget_get_has_window (GTK_WIDGET (user_data)));
-
-	widget = GTK_WIDGET (user_data);
-	   
-	gdk_window_get_origin (gtk_widget_get_window (widget), x, y);
-	gtk_widget_get_allocation (widget, &allocation);
-	   
-	*x += allocation.x;
-	*y += allocation.y + allocation.height;
-	   
-	*push_in = FALSE;
-}
-
 static gboolean
 ev_sidebar_select_button_press_cb (GtkWidget      *widget,
 				   GdkEventButton *event,
@@ -238,9 +214,11 @@ ev_sidebar_select_button_press_cb (GtkWidget      *widget,
 		gtk_widget_grab_focus (widget);
 			 
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
-		gtk_menu_popup (GTK_MENU (ev_sidebar->priv->menu),
-				NULL, NULL, ev_sidebar_menu_position_under, widget,
-				event->button, event->time);
+		gtk_menu_popup_at_widget (GTK_MENU (ev_sidebar->priv->menu),
+		                          widget,
+		                          GDK_GRAVITY_SOUTH_WEST,
+		                          GDK_GRAVITY_NORTH_WEST,
+		                          (const GdkEvent*) event);
 
 		return TRUE;
 	}
@@ -260,9 +238,11 @@ ev_sidebar_select_button_key_press_cb (GtkWidget   *widget,
 	    event->keyval == GDK_KEY_Return ||
 	    event->keyval == GDK_KEY_KP_Enter) {
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
-		gtk_menu_popup (GTK_MENU (ev_sidebar->priv->menu),
-			        NULL, NULL, ev_sidebar_menu_position_under, widget,
-				1, event->time);
+		gtk_menu_popup_at_widget (GTK_MENU (ev_sidebar->priv->menu),
+		                          widget,
+		                          GDK_GRAVITY_SOUTH_WEST,
+		                          GDK_GRAVITY_NORTH_WEST,
+		                          (const GdkEvent*) event);
 		return TRUE;
 	}
 
