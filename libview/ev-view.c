@@ -8047,6 +8047,7 @@ ev_view_copy_link_address (EvView       *view,
 static void
 ev_view_set_cursor (EvView *view, EvViewCursor new_cursor)
 {
+	GdkDisplay *display;
 	GdkCursor *cursor = NULL;
 	GtkWidget *widget;
 	GdkWindow *bin_window;
@@ -8059,9 +8060,10 @@ ev_view_set_cursor (EvView *view, EvViewCursor new_cursor)
 
 	bin_window = gtk_widget_get_window (GTK_WIDGET (view));
 	widget = gtk_widget_get_toplevel (GTK_WIDGET (view));
-	cursor = ev_view_cursor_new (gtk_widget_get_display (widget), new_cursor);
+	display = gtk_widget_get_display (widget);
+	cursor = ev_view_cursor_new (display, new_cursor);
 	gdk_window_set_cursor (bin_window, cursor);
-	gdk_flush ();
+	gdk_display_flush (display);
 	if (cursor)
 		g_object_unref (cursor);
 }
