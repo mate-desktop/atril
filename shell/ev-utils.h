@@ -26,12 +26,6 @@
 
 G_BEGIN_DECLS
 
-void 			ev_gui_menu_position_tree_selection (GtkMenu   *menu,
-							     gint      *x,
-							     gint      *y,
-							     gboolean  *push_in,
-							     gpointer   user_data);
-
 void           		file_chooser_dialog_add_writable_pixbuf_formats (GtkFileChooser *chooser);
 GdkPixbufFormat* 	get_gdk_pixbuf_format_by_extension (gchar *uri);
 
