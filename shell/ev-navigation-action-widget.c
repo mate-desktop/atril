@@ -119,54 +119,6 @@ ev_navigation_action_widget_set_menu(EvNavigationActionWidget *button, GtkWidget
 }
 
 static void
-menu_position_func (GtkMenu           *menu,
-                    int               *x,
-                    int               *y,
-                    gboolean          *push_in,
-                    EvNavigationActionWidget *button)
-{
-	GtkWidget *widget = GTK_WIDGET (button);
-	GtkRequisition menu_req;
-	GtkAllocation  allocation;
-	GtkTextDirection direction;
-	GdkWindow *gdk_window;
-	GdkRectangle monitor;
-	GdkMonitor *monitor_num;
-	GdkDisplay *display;
-
-	gtk_widget_get_preferred_size (GTK_WIDGET (button->menu), &menu_req, NULL);
-	direction = gtk_widget_get_direction (widget);
-	display = gtk_widget_get_display (GTK_WIDGET (menu));
-
-	gdk_window = gtk_widget_get_window (widget);
-	monitor_num = gdk_display_get_monitor_at_window (display, gdk_window);
-	if (monitor_num == NULL)
-		monitor_num = gdk_display_get_monitor (display, 0);
-	gdk_monitor_get_geometry (monitor_num, &monitor);
-
-	gdk_window_get_origin (gdk_window, x, y);
-	gtk_widget_get_allocation (widget, &allocation);
-	*x += allocation.x;
-	*y += allocation.y;
-
-	if (direction == GTK_TEXT_DIR_LTR)
-		*x += MAX (allocation.width - menu_req.width, 0);
-	else if (menu_req.width > allocation.width)
-    		*x -= menu_req.width - allocation.width;
-
-	if ((*y + allocation.height + menu_req.height) <= monitor.y + monitor.height)
-    		*y += allocation.height;
-	else if ((*y - menu_req.height) >= monitor.y)
-    		*y -= menu_req.height;
-	else if (monitor.y + monitor.height - (*y + allocation.height) > *y)
-    		*y += allocation.height;
-	else
-    		*y -= menu_req.height; 
-
-	*push_in = FALSE;
-}
-
-static void
 popup_menu_under_arrow (EvNavigationActionWidget *button,
                         GdkEventButton    *event)
 {
@@ -175,11 +127,8 @@ popup_menu_under_arrow (EvNavigationActionWidget *button,
 	if (!button->menu)
 		return;
 
-	gtk_menu_popup (button->menu, NULL, NULL, 
-    	    		(GtkMenuPositionFunc) menu_position_func,
-        	         button,
-            	         event ? event->button : 0,
-                         event ? event->time : gtk_get_current_event_time ());
+	gtk_menu_popup_at_pointer (button->menu,
+	                           (const GdkEvent*) event);
 }
 
 static void
