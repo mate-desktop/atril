@@ -5577,9 +5577,8 @@ view_menu_popup_cb (EvView   *view,
 	if (!has_annot)
 		view_menu_annot_popup (ev_window, NULL);
 
-	gtk_menu_popup (GTK_MENU (ev_window->priv->view_popup),
-			NULL, NULL, NULL, NULL,
-			3, gtk_get_current_event_time ());
+	gtk_menu_popup_at_pointer (GTK_MENU (ev_window->priv->view_popup),
+	                           NULL);
 	return TRUE;
 }
 
@@ -5602,10 +5601,8 @@ attachment_bar_menu_popup_cb (EvSidebarAttachments *attachbar,
 	
 	popup = ev_window->priv->attachment_popup;
 
-	gtk_menu_popup (GTK_MENU (popup), NULL, NULL,
-			NULL, NULL,
-			3, gtk_get_current_event_time ());
-
+	gtk_menu_popup_at_pointer (GTK_MENU (popup),
+	                           NULL);
 	return TRUE;
 }
 
