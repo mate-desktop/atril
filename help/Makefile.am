@@ -2,7 +2,7 @@ SUBDIRS = reference
 
 @YELP_HELP_RULES@
 
-HELP_ID = atril
+HELP_ID = atril-user-quide
 HELP_FILES = index.docbook legal.xml
 HELP_MEDIA = figures/atril_start_window.png
 
