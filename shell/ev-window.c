@@ -5997,7 +5997,7 @@ ev_window_cmd_view_toggle_caret_navigation (GtkAction *action,
 	                                    NULL);
 	ev_message_area_set_secondary_text (EV_MESSAGE_AREA (message_area),
 	                                    _("Pressing F7 turns the caret navigation on or off. "
-	                                    "This feature places a moveable cursor in text pages, "
+	                                    "This feature places a movable cursor in text pages, "
 	                                    "allowing you to move around and select text with your keyboard. "
 	                                    "Do you want to enable the caret navigation?"));
 
