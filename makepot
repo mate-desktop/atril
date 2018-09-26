@@ -1,9 +1,9 @@
 #! /bin/sh
 
 PACKAGE=atril;
-PACKAGE_GUIDE=atril-user-quide;
 
 # normal translations
 make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
+
 # translations for user-quide
-make -C help $PACKAGE_GUIDE.pot && mv help/$PACKAGE_GUIDE.pot .
+make -C help $PACKAGE.pot
