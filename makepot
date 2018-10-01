@@ -6,4 +6,5 @@ PACKAGE=atril;
 make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
 
 # translations for user-quide
+rm -f help/$PACKAGE.pot &&
 make -C help $PACKAGE.pot
