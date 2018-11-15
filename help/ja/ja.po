@@ -1,100 +1,120 @@
-# Japanese help translation for atril.
-# Satoru SATOH <ss@mate.gr.jp>, 2007.
-#
-# TODO: 印刷の節などは実際の動作とは異なる説明となってしまっている。
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# ABE Tsunehiko, 2018
+# あわしろいくや <ikunya@gmail.com>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril/help trunk\n"
-"POT-Creation-Date: 2007-08-20 03:16+0100\n"
-"PO-Revision-Date: 2007-08-22 05:49+0900\n"
-"Last-Translator: Satoru SATOH <ss@mate.gr.jp>\n"
-"Language-Team: Japanese <mate-translation@mate.gr.jp>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"POT-Creation-Date: 2018-09-26 17:11+0200\n"
+"PO-Revision-Date: 2018-09-18 09:08+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/atril.xml:146(None)
-msgid ""
-"@@image: 'figures/atril_start_window.png'; "
-"md5=7f4da5e33bcac35738a268d93d497d47"
-msgstr "@@image: 'figures/atril_start_window.png'; "
-"md5=facb0196a444d6ffdc4fd53ea7ee632b"
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"相花 毅 <takeshi.aihana@gmail.com>\n"
+"佐藤 暁 <ss@gnome.gr.jp>\n"
+"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
+"Akira TAGOH <tagoh@gnome.gr.jp>\n"
+"Yukihiro Nakai <nakai@gnome.gr.jp>\n"
+"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
+"Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
+"やまね ひでき <henrich@debian.or.jp>\n"
+"草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
+"松澤 二郎 <jmatsuzawa@gnome.org>\n"
+"日本GNOMEユーザー会 http://www.gnome.gr.jp/"
 
-#: C/atril.xml:25(title)
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:25
 msgid "Atril Document Viewer Manual"
-msgstr "Atril ドキュメントビューア マニュアル"
+msgstr ""
 
-#: C/atril.xml:27(para)
+#. (itstool) path: abstract/para
+#: C/index.docbook:27
 msgid ""
 "The Atril Document Viewer application enables you to view documents of "
 "various formats like Portable Document Format (PDF) files and PostScript "
 "files"
-msgstr "Atril ドキュメントビューアで PDF や PostScript のような様々な"
-"フォーマットのドキュメントを見ることができます。"
+msgstr ""
 
-#: C/atril.xml:33(year)
-msgid "2005"
-msgstr "2005"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:32
+msgid "<year>2015</year> <holder>MATE Documentation Project</holder>"
+msgstr ""
 
-#: C/atril.xml:34(holder) C/atril.xml:91(para)
-msgid "Nickolay V. Shmyrev"
-msgstr "Nickolay V. Shmyrev"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
+msgid "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
+msgstr ""
 
-#: C/atril.xml:37(year)
-msgid "2004"
-msgstr "2004"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:40
+msgid "<year>2004</year> <holder>Sun Microsystems</holder>"
+msgstr ""
 
-#: C/atril.xml:38(holder) C/atril.xml:61(orgname)
-msgid "Sun Microsystems"
-msgstr "サンマイクロシステムズ"
-
-#: C/atril.xml:49(publishername) C/atril.xml:67(orgname)
-#: C/atril.xml:92(para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:104
 msgid "MATE Documentation Project"
-msgstr "MATE ドキュメントプロジェクト"
+msgstr "MATE ドキュメンテーション・プロジェクト"
 
-# 参考訳: http://www.opensource.jp/fdl/fdl.ja.html
-#: C/atril.xml:2(para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:56 C/index.docbook:113 C/index.docbook:121
+msgid "GNOME Documentation Project"
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
 "in the file COPYING-DOCS distributed with this manual."
-msgstr "この文書を、フリーソフトウェア財団発行の GNU フリー文書利用許諾契約書 (GFDL) "
-"のバージョン 1.1 かそれ以降が定める条件の下で複製、頒布、あるいは改変すること"
-"を許可します。変更不可部分、表カバーテキスト、裏カバーテキストは存在しませ"
-"ん。この利用許諾契約書 (GFDL) の複製は<ulink type=\"help\" url=\"help:fdl\">"
-"このリンク</ulink> またはこのマニュアルと一緒に配布されているファイル "
-"COPYING-DOCS を参照して下さい。"
+msgstr ""
+"このドキュメントをフリーソフトウェア財団発行の GNU フリー文書利用許諾契約書 (バージョン 1.1 かそれ以降から一つを選択) "
+"が定める条件の下で複製、頒布、あるいは改変することを許可する。変更不可部分、表カバーテキスト、裏カバーテキストは存在しない。この利用許諾契約書の複製物は<ulink"
+" type=\"help\" url=\"help:fdl\">このリンク</ulink>、またはこの文書と共に配布されている <filename"
+">COPYING-DOCS</filename> というファイルに中に記載されている。"
 
-#: C/atril.xml:12(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of MATE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in "
-"section 6 of the license."
-msgstr "このマニュアルは GFDL の下で配布される MATE マニュアルのコレクションの一部で"
-"す。コレクションと別にこのマニュアルを配布したい場合は、ライセンスの第六節に"
-"あるようにライセンスのコピーをマニュアルに加えれば配布できます。"
+"you can do so by adding a copy of the license to the manual, as described in"
+" section 6 of the license."
+msgstr ""
+"本ドキュメントは GFDL の下で配布されているその他の MATE "
+"マニュアル集の一部である。これらのマニュアルとは別に本ドキュメントを別個に配布する場合は、GFDL "
+"のセクション6で説明しているように、そのマニュアル集に対するライセンスの複製を添付することで実現できる。"
 
-#: C/atril.xml:19(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any MATE "
 "documentation, and the members of the MATE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
-msgstr "製品やサービスを区別するために企業によって利用されている名称の多くは登録商標"
-"です。これらの名称が MATE ドキュメントで使われていて MATE ドキュメントプロ"
-"ジェクトのメンバーが商標と認識している場合、これらの名前を大文字あるいは語句"
-"の最初の文字を大文字で記述しています。"
+msgstr ""
+"企業は自分達の製品とサービスを区別するために使用する多くの名称が登録商標であると主張している。これらの名称が MATE "
+"のドキュメントの中に表記されていたり、これらの登録商標が MATE "
+"ドキュメンテーション・プロジェクトのメンバに提示している箇所は全部を大文字または最初の文字を大文字にしている。"
 
-# 訳すべきか?
-#: C/atril.xml:35(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -120,829 +140,1252 @@ msgstr ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 
-#: C/atril.xml:55(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
 
-#: C/atril.xml:28(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
-msgstr "ドキュメントおよび変更されているドキュメントは次の GNU フリー文書利用許諾契約"
-"書 (GFDL) の下で頒布されます: <placeholder-1/>"
+"<_:orderedlist-1/>"
+msgstr ""
 
-#: C/atril.xml:59(firstname)
-msgid "Sun"
-msgstr "Sun"
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:65
+msgid ""
+"<firstname>MATE Documentation Project</firstname> <surname/> "
+"<affiliation><orgname>MATE Desktop</orgname></affiliation>"
+msgstr ""
 
-#: C/atril.xml:60(surname)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:70
+msgid ""
+"<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
+"<affiliation><orgname>Sun Microsystems</orgname></affiliation>"
+msgstr ""
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:75
+msgid ""
+"<firstname>Nickolay V. </firstname> <surname>Shmyrev</surname> <affiliation>"
+" <orgname>GNOME Documentation Project</orgname> <address> "
+"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
+msgstr ""
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:103
 msgid "MATE Documentation Team"
-msgstr "MATE ドキュメントチーム"
+msgstr ""
 
-#: C/atril.xml:64(firstname)
-msgid "Nickolay V."
-msgstr "Nickolay V."
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:99
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.2</revnumber> <date>July "
+"2015</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:65(surname)
-msgid "Shmyrev"
-msgstr "Shmyrev"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:111
+msgid "Niels Giesen"
+msgstr ""
 
-#: C/atril.xml:68(email)
-msgid "nshmyrev@yandex.ru"
-msgstr "nshmyrev@yandex.ru"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:112
+msgid "Claude Paroz"
+msgstr ""
 
-#: C/atril.xml:88(revnumber)
-msgid "Atril Document Viewer Manual V1.0"
-msgstr "Atril ドキュメントビューア マニュアル v1.0"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:107
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.1</revnumber> "
+"<date>2008-04-05</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:89(date)
-msgid "2005-04-06"
-msgstr "2005-04-06"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:120
+msgid "Nickolay V. Shmyrev"
+msgstr ""
 
-#: C/atril.xml:97(releaseinfo)
-msgid "This manual describes version 0.2 of Atril Document Viewer"
-msgstr "このマニュアルは Atril ドキュメントビューアの 0.2 について説明しています。"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:116
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.0</revnumber> "
+"<date>2005-04-06</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:100(title)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:126
+msgid "This manual describes version 1.10.1 of Atril Document Viewer"
+msgstr ""
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:129
 msgid "Feedback"
 msgstr "フィードバック"
 
-#: C/atril.xml:101(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:130
 msgid ""
 "To report a bug or make a suggestion regarding the Atril Document Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"mate-feedback\" type=\"help\">MATE Feedback Page</ulink>."
-msgstr "Atril ドキュメントビューアまたはこのマニュアルの"
-"バグや提案を報告して頂く場合、"
-"<ulink url=\"help:mate-feedback\" type=\"help\">MATE "
-"フィードバックページ</ulink> 内の指示に従って下さい。"
+"application or this manual, follow the directions in the <ulink url=\"help"
+":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+msgstr ""
 
-#: C/atril.xml:108(primary)
-msgid "Atril Document Viewer"
-msgstr "Atril ドキュメントビューア"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:136
+msgid "<primary>Atril Document Viewer</primary>"
+msgstr ""
 
-#: C/atril.xml:111(primary)
-msgid "atril"
-msgstr "atril"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:139
+msgid "<primary>atril</primary>"
+msgstr ""
 
-#: C/atril.xml:119(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:148
 msgid "Introduction"
-msgstr "概要"
-
-#: C/atril.xml:120(para)
-msgid ""
-"The <application>Atril Document Viewer</application> application enables "
-"you to view documents of various formats like Portable Document Format (PDF) "
-"files and PostScript files. <application>Atril Document Viewer</"
-"application> follows Freedesktop.org and MATE standards to provide "
-"integration with Desktop Environment."
-msgstr "<application>Atril ドキュメントビューア</application> によって"
-"Portable Document Format (PDF) ファイルや PostScript ファイルのような"
-"様々な形式のドキュメントを見ることができます。"
-"<application>Atril ドキュメントビューア</application> はデスクトップ"
-"環境との統合を提供するために Freedesktop.org と MATE の標準に従っています。"
-
-#: C/atril.xml:127(title)
-msgid "Getting Started"
 msgstr "はじめに"
 
-#: C/atril.xml:130(title)
-msgid "To Start Atril Document Viewer"
-msgstr "Atril ドキュメントビューアの起動"
+#. (itstool) path: sect1/para
+#: C/index.docbook:149
+msgid ""
+"The <application>Atril Document Viewer</application> application enables you"
+" to view documents of various formats like Portable Document Format (PDF) "
+"files and PostScript files. <application>Atril Document Viewer</application>"
+" follows Freedesktop.org and MATE standards to provide integration with "
+"Desktop Environment."
+msgstr ""
 
-#: C/atril.xml:131(para)
+#. (itstool) path: sect1/title
+#: C/index.docbook:156
+msgid "Getting Started"
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:159
+msgid "To Start Atril Document Viewer"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:160
 msgid ""
 "<application>Atril Document Viewer</application> starts when you open a "
 "document such as a PDF or PostScript file."
-msgstr "PDF または PostScript ファイルのドキュメントを開くと "
-"<application>Atril ドキュメントビューア</application> が起動します。"
+msgstr ""
 
-#: C/atril.xml:132(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:161
 msgid ""
-"Alternatively, you can start <application>Atril Document Viewer</"
-"application> from the command line, with the command: <command>atril</"
-"command>."
-msgstr "あるいは、コマンド <command>atril</command> をコマンド行で"
-"入力して <application>Atril ドキュメントビューア</application> を"
-"起動することもできます。"
+"Alternatively, you can start <application>Atril Document "
+"Viewer</application> from the command line, with the command: "
+"<command>atril</command>."
+msgstr ""
 
-#: C/atril.xml:137(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:166
 msgid "When You Start Atril Document Viewer"
-msgstr "Atril ドキュメントビューアのメインウィンドウ"
+msgstr ""
 
-#: C/atril.xml:138(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:167
 msgid ""
 "When you start <application>Atril Document Viewer</application>, the "
 "following window is displayed."
-msgstr "<application>Atril ドキュメントビューア</application> を"
-"起動すると、次のようなウィンドウが表示されます。"
+msgstr ""
 
-#: C/atril.xml:142(title)
+#. (itstool) path: figure/title
+#: C/index.docbook:171
 msgid "Atril Document Viewer Window"
-msgstr "Atril ドキュメントビューアのメインウィンドウ"
+msgstr ""
 
-#: C/atril.xml:149(phrase)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:175
+msgctxt "_"
 msgid ""
-"Shows Atril Document Viewer main window. Contains titlebar, menubar, "
-"toolbar and display area. Menubar contains File, Edit, View, Go and Help "
-"menus."
-msgstr "Atril ドキュメントビューアのメインウィンドウです。"
-"タイトルバーとメニューバー、ツールバーそして表示領域があります。"
-"メニューバーにはファイル、編集、表示、移動そしてヘルプメニューが"
-"含まれています。"
+"external ref='figures/atril_start_window.png' "
+"md5='b960ec0ad3ac9b113710e4e449438499'"
+msgstr ""
 
-#: C/atril.xml:155(para)
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:173
+msgid ""
+"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Atril Document "
+"Viewer main window. Contains titlebar, menubar, toolbar and display area. "
+"Menubar contains File, Edit, View, Go and Help menus. </phrase> "
+"</textobject>"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:184
 msgid ""
 "The <application>Atril Document Viewer</application> window contains the "
 "following elements:"
-msgstr "<application>Atril ドキュメントビューア</application> の"
-"ウィンドウには次の要素が含まれています:"
+msgstr ""
 
-#: C/atril.xml:159(term) C/atril.xml:207(para)
+#. (itstool) path: varlistentry/term
+#. (itstool) path: entry/para
+#: C/index.docbook:188 C/index.docbook:236
 msgid "Menubar"
 msgstr "メニューバー"
 
-#: C/atril.xml:161(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:190
 msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
-msgstr "<application>Atril ドキュメントビューア</application> で"
-"ドキュメントについて作業するのに必要なすべてのコマンドのメニューが"
-"あります。"
+msgstr ""
 
-#: C/atril.xml:165(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:194
 msgid "Toolbar"
 msgstr "ツールバー"
 
-#: C/atril.xml:167(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:196
 msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
-msgstr "ツールバーにはメニューバーからアクセスできるコマンドのサブセットが"
-"含まれています。"
+msgstr ""
 
-#: C/atril.xml:171(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:200
 msgid "Display area"
-msgstr "表示領域"
+msgstr ""
 
-#: C/atril.xml:173(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:202
 msgid "The display area displays the document."
-msgstr "ドキュメントの内容を表示する領域です。"
+msgstr ""
 
-#: C/atril.xml:187(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:216
 msgid "UI Component"
-msgstr "UI コンポーネント"
+msgstr ""
 
-#: C/atril.xml:189(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:218 C/index.docbook:666
 msgid "Action"
-msgstr "アクション"
+msgstr "動作"
 
-#: C/atril.xml:194(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:223
 msgid "Window"
-msgstr "ウィンドウ"
+msgstr ""
 
-#: C/atril.xml:198(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:227
 msgid ""
-"Drag a file into the <application>Atril Document Viewer</application> "
-"window from another application such as a file manager."
-msgstr "ファイルマネージャのような他のアプリケーションから "
-"<application>Atril ドキュメントビューア</application> の"
-"ウィンドウにファイルをドラッグ"
+"Drag a file into the <application>Atril Document Viewer</application> window"
+" from another application such as a file manager."
+msgstr ""
 
-#: C/atril.xml:201(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:230
 msgid "Double-click on the file name in the file manager"
-msgstr "ファイルマネージャ内でファイル名をダブルクリック"
+msgstr ""
 
-#: C/atril.xml:208(para) C/atril.xml:235(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:237
 msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></"
-"menuchoice>."
-msgstr "<menuchoice><guimenu>ファイル</guimenu><guimenuitem>開く"
-"</guimenuitem></menuchoice> を選択"
+"Choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
+msgstr ""
 
-#: C/atril.xml:212(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:241
 msgid "Shortcut keys"
-msgstr "ショートカット"
+msgstr ""
 
-#: C/atril.xml:213(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:242
 msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo> を押す"
+msgstr ""
 
-#: C/atril.xml:178(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:207
 msgid ""
 "In <application>Atril Document Viewer</application>, you can perform the "
 "same action in several ways. For example, you can open a document in the "
-"following ways: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1\" "
-"rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
-"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
-"tgroup></informaltable>"
-msgstr "<application>Atril ドキュメントビューア</application> では"
-"同じアクションをいくつかの方法で実行できます。例えばドキュメントを"
-"開くには次のようにします: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1\" "
-"rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
-"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
-"tgroup></informaltable>"
+"following ways: <_:informaltable-1/>"
+msgstr ""
 
-# 唐突なので少し意訳
-#: C/atril.xml:219(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:248
 msgid "This manual documents functionality from the menubar."
-msgstr "メニューバーからこのマニュアルを開くこともできます。"
+msgstr ""
 
-#: C/atril.xml:227(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:256
 msgid "Usage"
 msgstr "使い方"
 
-#: C/atril.xml:231(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:260
 msgid "To Open A Document"
-msgstr "ドキュメントを開く"
+msgstr ""
 
-#: C/atril.xml:232(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:261
 msgid "To open a document, perform the following steps:"
-msgstr "ドキュメントを開くには次のステップを実行します:"
+msgstr ""
 
-#: C/atril.xml:239(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
+msgid ""
+"Choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> "
+"</menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:268
 msgid ""
 "In the <guilabel>Open Document</guilabel> dialog, select the file you want "
 "to open."
-msgstr "<guilabel>ドキュメントを開く</guilabel> ダイアログで"
-"開きたいファイルを選択します。"
+msgstr ""
 
-#: C/atril.xml:244(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
 msgid ""
-"Click <guibutton>Open</guibutton>. <application>Atril Document Viewer</"
-"application> displays the name of the document in the titlebar of the window."
-msgstr "<guibutton>開く</guibutton> をクリックします。"
-"<application>Atril ドキュメントビューア</application> の"
-"ウィンドウのタイトルバーにドキュメントの名前が表示されます。"
+"Click <guibutton>Open</guibutton>. <application>Atril Document "
+"Viewer</application> displays the name of the document in the titlebar of "
+"the window."
+msgstr ""
 
-#: C/atril.xml:249(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:278
 msgid ""
-"To open another document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Open</guimenuitem></menuchoice> again. "
+"To open another document, choose <menuchoice> "
+"<guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. "
 "<application>Atril Document Viewer</application> opens each file in a new "
 "window."
-msgstr "他のドキュメントを開くには再度 <menuchoice><guimenu>ファイル"
-"</guimenu><guimenuitem>開く</guimenuitem></menuchoice> を選択します。"
-"<application>Atril ドキュメントビューア</application> は"
-"新しいウィンドウでそれぞれのファイルを開きます。"
+msgstr ""
 
-#: C/atril.xml:252(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:281
 msgid ""
 "If you try to open a document with format that <application>Atril Document "
 "Viewer</application> does not recognize, the application displays an error "
 "message."
-msgstr "<application>Atril ドキュメントビューア</application> が"
-"認識しないファイル形式のドキュメントを開こうとすると"
-"エラーメッセージが表示されます。"
+msgstr ""
 
-#: C/atril.xml:258(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:287
 msgid "To Navigate Through a Document"
-msgstr "ドキュメントをナビゲート"
+msgstr ""
 
-#: C/atril.xml:259(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:288
 msgid "You can navigate through a file as follows:"
-msgstr "ファイルは次のようにしてナビゲートできます:"
+msgstr ""
 
-#: C/atril.xml:262(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:291
 msgid ""
-"To view the next page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Next Page</guimenuitem></menuchoice>."
-msgstr "次のページを見るには <menuchoice><guimenu>移動</guimenu>"
-"<guimenuitem>次のページ</guimenuitem></menuchoice> を選択します。"
+"To view the next page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Next Page</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:266(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:295
 msgid ""
-"To view the previous page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Previous Page</guimenuitem></menuchoice>."
-msgstr "前のページを見るには <menuchoice><guimenu>移動</guimenu>"
-"<guimenuitem>前のページ</guimenuitem></menuchoice> を選択します。"
+"To view the previous page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:270(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
 msgid ""
-"To view the first page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>First Page</guimenuitem></menuchoice>."
-msgstr "最初のページを見るには <menuchoice><guimenu>移動</guimenu>"
-"<guimenuitem>先頭のページ</guimenuitem></menuchoice> を選択します。"
+"To view the first page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>First Page</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:274(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:303
 msgid ""
-"To view the last page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Last Page</guimenuitem></menuchoice>."
-msgstr "最後のページを見るには <menuchoice><guimenu>移動</guimenu>"
-"<guimenuitem>最後のページ</guimenuitem></menuchoice> を選択します。"
+"To view the last page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>Last Page</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:278(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:307
 msgid ""
 "To view a particular page, enter the page number or page label in the text "
 "box on the toolbar, then press <keycap>Return</keycap>."
-msgstr "特定のページを見るにはツールバーのテキストボックスに"
-"ページ番号かページラベルを入力して、<keycap>Return</keycap> を押します。"
+msgstr ""
 
-#: C/atril.xml:285(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
 msgid "To Scroll a Page"
-msgstr "ページのスクロール"
+msgstr ""
 
-#: C/atril.xml:286(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
 msgid ""
-"To display the page contents that are not currently displayed in the display "
-"area, use the following methods:"
-msgstr "表示領域に現在表示されていないページの内容を表示するには"
-"次のようにします:"
+"To display the page contents that are not currently displayed in the display"
+" area, use the following methods:"
+msgstr ""
 
-#: C/atril.xml:289(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:318
 msgid "Use the arrow keys or space key on the keyboard."
-msgstr "キーボードのカーソルキーかスペースキーを使います。"
+msgstr ""
 
-#: C/atril.xml:292(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:321
 msgid ""
 "Drag the display area by clicking with the middle mouse button somewhere in "
 "the document and then moving the mouse. For example, to scroll down the "
 "page, drag the display area upwards in the window."
-msgstr "ドキュメントのどこかをマウスの中央ボタンでクリックし、"
-"表示エリアをドラッグしてマウスを移動します。例えばページを下に"
-"スクロールするには表示領域をウィンドウの上の方にドラッグします。"
+msgstr ""
 
-#: C/atril.xml:295(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:324
 msgid "Use the scrollbars on the window."
-msgstr "ウィンドウのスクロールバーを使います。"
+msgstr ""
 
-#: C/atril.xml:302(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:331
 msgid "To Change the Page Size"
-msgstr "ページサイズの変更"
+msgstr ""
 
-#: C/atril.xml:303(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:332
 msgid ""
-"You can use the following methods to resize a page in the "
-"<application>Atril Document Viewer</application> display area:"
-msgstr "<application>Atril ドキュメントビューア</application> の"
-"表示領域の中のページの大きさを変更するには次のようにします:"
+"You can use the following methods to resize a page in the <application>Atril"
+" Document Viewer</application> display area:"
+msgstr ""
 
-#: C/atril.xml:308(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:337
 msgid ""
-"To increase the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>."
-msgstr "ページサイズを大きくするには <menuchoice><guimenu>表示</guimenu>"
-"<guimenuitem>拡大</guimenuitem></menuchoice> を選択します。"
+"To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:313(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:342
 msgid ""
-"To decrease the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom Out</guimenuitem></menuchoice>."
-msgstr "ページサイズを小さくするには <menuchoice><guimenu>表示</guimenu>"
-"<guimenuitem>縮小</guimenuitem></menuchoice> を選択します。"
+"To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:318(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:347
 msgid ""
 "To resize a page to have the same width as the <application>Atril Document "
-"Viewer</application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Fit page width</guimenuitem></menuchoice>."
-msgstr "ページをリサイズして <application>Atril ドキュメントビューア"
-"</application> の表示領域と同じ幅にするには <menuchoice><guimenu>表示</guimenu>"
-"<guimenuitem>幅に合わせる</guimenuitem></menuchoice> を選択します。"
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Fit page width</guimenuitem> "
+"</menuchoice>."
+msgstr ""
 
-#: C/atril.xml:323(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:352
 msgid ""
-"To resize a page to fit within the <application>Atril Document Viewer</"
-"application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Best Fit</guimenuitem></menuchoice>."
-msgstr "ページをリサイズして <application>Atril ドキュメントビューア"
-"</application> の表示領域の大きさにちょうど合うようにするには "
-"<menuchoice><guimenu>表示</guimenu><guimenuitem>全体に合わせる</guimenuitem>"
-"</menuchoice> を選択します。"
+"To resize a page to fit within the <application>Atril Document "
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Best Fit</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:328(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:357
 msgid ""
 "To resize the <application>Atril Document Viewer</application> window to "
-"have the same width and height as the screen, choose "
-"<menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></"
-"menuchoice>. To resize the <application>Atril Document Viewer</application> "
-"window to the original size, click on the <guibutton>Exit Full Screen</"
-"guibutton> button."
-msgstr "<application>Atril ドキュメントビューア</application> の"
-"ウィンドウをリサイズして画面と同じ幅と高さにするには "
-"<menuchoice><guimenu>表示</guimenu><guimenuitem>フルスクリーン表示"
-"</guimenuitem></menuchoice> を選択します。"
-"<application>Atril ドキュメントビューア</application> の"
-"ウィンドウをリサイズして元の大きさに戻すには <guibutton>フルスクリーンの"
-"解除</guibutton> ボタンをクリックします。"
+"have the same width and height as the screen, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Full Screen</guimenuitem> "
+"</menuchoice>. To resize the <application>Atril Document "
+"Viewer</application> window to the original size, click on the "
+"<guibutton>Exit Full Screen</guibutton> button."
+msgstr ""
 
-#: C/atril.xml:336(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:365
 msgid "To View Pages or Document Structure"
-msgstr "ページまたはドキュメントの構造を表示"
+msgstr ""
 
-# Adobe Reader では 'bookmarks' は 'しおり' と訳されているようだ。
-#: C/atril.xml:337(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:366
 msgid "To view bookmarks or pages, perform the following steps:"
-msgstr "しおりまたはページのサムネイルを表示するには次のステップを"
-"実行します:"
+msgstr ""
 
-#: C/atril.xml:341(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:370
 msgid ""
-"Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</"
-"guimenuitem></menuchoice> or press <keycap>F9</keycap>."
-msgstr "<menuchoice><guimenu>表示</guimenu><guimenuitem>サイドペイン"
-"</guimenuitem></menuchoice> または <keycap>F9</keycap> を押します。"
+"Choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Sidebar</guimenuitem> </menuchoice> or press "
+"<keycap>F9</keycap>."
+msgstr ""
 
-#: C/atril.xml:346(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:375
 msgid ""
 "Use the drop-down list in the side-pane header to select whether to display "
 "document structure or pages in the side pane."
-msgstr "サイドペインのへッダのドロップダウンリストを使って、サイドペインに"
-"ドキュメントの構造とページのどちらを表示するか選択します。"
+msgstr ""
 
-#: C/atril.xml:351(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:380
 msgid ""
 "Use the side-pane scrollbars to display the required item or page in the "
 "side pane."
-msgstr "サイドペインのスクロールバーを使って、サイドペインに"
-"求めるアイテムまたはページを表示します。"
+msgstr ""
 
-#: C/atril.xml:356(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:385
 msgid ""
 "Click on an entry to navigate to that location in the document. Click on a "
 "page to navigate to that page in the document."
-msgstr "エントリをクリックするとドキュメントのその位置に移動できます。"
-"ページをクリックするとドキュメントのそのページに移動できます。"
+msgstr ""
 
-#: C/atril.xml:362(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:391
 msgid "To View the Properties of a Document"
-msgstr "ドキュメントのプロパティを表示"
+msgstr ""
 
-#: C/atril.xml:363(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:392
 msgid ""
-"To view the properties of a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Properties</guimenuitem></menuchoice>."
-msgstr "ドキュメントのプロパティを見るには <menuchoice><guimenu>"
-"ファイル</guimenu><guimenuitem>プロパティ</guimenuitem></menuchoice>"
-" を選択します。"
+"To view the properties of a document, choose <menuchoice> "
+"<guimenu>File</guimenu> <guimenuitem>Properties</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:369(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:398
 msgid ""
-"The <guilabel>Properties</guilabel> dialog displays all information available"
-msgstr "<guilabel>プロパティ</guilabel> ダイアログには利用できる"
-"すべての情報が表示されます。"
+"The <guilabel>Properties</guilabel> dialog displays all information "
+"available"
+msgstr ""
 
-#: C/atril.xml:375(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:404
 msgid "To Print a Document"
-msgstr "ドキュメントの印刷"
+msgstr ""
 
-#: C/atril.xml:376(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:405
 msgid ""
-"To print a Document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
-msgstr "ドキュメントを印刷するには <menuchoice><guimenu>ファイル</guimenu>"
-"<guimenuitem>印刷</guimenuitem></menuchoice> を選択します。"
+"To print a Document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Print</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:380(para)
+#. (itstool) path: note/para
+#: C/index.docbook:409
 msgid ""
 "If you cannot choose the <guimenuitem>Print</guimenuitem> menu item, the "
 "author of the document has disabled the print option for this document. To "
 "enable the print option, you must enter the master password when you open "
 "the document. See <xref linkend=\"atril-password\"/> for more information "
 "about password-protected files."
-msgstr "<guimenuitem>印刷</guimenuitem> メニューアイテムを選択できない場合は"
-"そのドキュメントの作者は印刷オプションを無効にしています。印刷オプションを"
-"有効にするにはドキュメントを開く際にマスターパスワードを入力しなければ"
-"いけません。パスワードで保護されたファイルの詳細については "
-"<xref linkend=\"atril-password\"/> を参照して下さい。"
+msgstr ""
 
-#: C/atril.xml:384(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:413
 msgid ""
 "The <guilabel>Print</guilabel> dialog has the following tabbed sections:"
-msgstr "<guilabel>印刷</guilabel> ダイアログには次のタブセクションがあります:"
+msgstr ""
 
-#: C/atril.xml:390(link) C/atril.xml:406(title)
+#. (itstool) path: listitem/para
+#: C/index.docbook:418
+msgid "<link linkend=\"print-dialog-job\">Job</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:423
+msgid "<link linkend=\"print-dialog-printer\">Printer</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:428
+msgid "<link linkend=\"print-dialog-paper\">Paper</link>"
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:435
 msgid "Job"
-msgstr "ジョブ"
+msgstr "仕事"
 
-#: C/atril.xml:395(link) C/atril.xml:428(title) C/atril.xml:430(guilabel)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:437
+msgid "<guilabel>Print range</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:439
+msgid ""
+"Select one of the following options to determine how many pages to print:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:442
+msgid "<guilabel>All</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:443
+msgid "Select this option to print all of the pages in the document."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:446
+msgid "<guilabel>Pages From</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:447
+msgid ""
+"Select this option to print the selected range of pages in the document. Use"
+" the spin boxes to specify the first page and last page of the range."
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:457
 msgid "Printer"
 msgstr "プリンタ"
 
-#: C/atril.xml:400(link) C/atril.xml:522(title)
-msgid "Paper"
-msgstr "用紙"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:459
+msgid "<guilabel>Printer</guilabel>"
+msgstr ""
 
-#: C/atril.xml:408(guilabel)
-msgid "Print range"
-msgstr "印刷範囲"
-
-#: C/atril.xml:410(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:461
 msgid ""
-"Select one of the following options to determine how many pages to print:"
-msgstr "次のいずれかのオプションを選択して、出力するページ数を指定します。"
+"Use this drop-down list to select the printer to which you want to print the"
+" document."
+msgstr ""
 
-#: C/atril.xml:413(guilabel)
-msgid "All"
-msgstr "全て"
-
-#: C/atril.xml:414(para)
-msgid "Select this option to print all of the pages in the document."
-msgstr "ドキュメントのすべてのページを印刷する場合はこのオプションを選択します。"
-
-#: C/atril.xml:417(guilabel)
-msgid "Pages From"
-msgstr "範囲"
-
-#: C/atril.xml:418(para)
-msgid ""
-"Select this option to print the selected range of pages in the document. Use "
-"the spin boxes to specify the first page and last page of the range."
-msgstr "ドキュメントの指定のページ範囲を印刷するにはこのオプションを選択します。"
-"ページの範囲の最初と最後をスピンボックスを使って指定します。"
-
-#: C/atril.xml:432(para)
-msgid ""
-"Use this drop-down list to select the printer to which you want to print the "
-"document."
-msgstr "ドキュメントを印刷するプリンタを選択するにはこのドロップダウンリストを"
-"使います。"
-
-#: C/atril.xml:434(para)
+#. (itstool) path: note/para
+#: C/index.docbook:463
 msgid ""
 "The <guilabel>Create a PDF document</guilabel> option is not supported in "
 "this version of <application>Atril Document Viewer</application>."
-msgstr "<guilabel>PDF ドキュメントの作成</guilabel> オプションは"
-"<application>Atril ドキュメントビューア</application> の"
-"このバージョンではサポートされていません。"
+msgstr ""
 
-#: C/atril.xml:440(guilabel)
-msgid "Settings"
-msgstr "設定"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:469
+msgid "<guilabel>Settings</guilabel>"
+msgstr ""
 
-#: C/atril.xml:442(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:471
 msgid "Use this drop-down list to select the printer settings."
-msgstr "ドロップダウンリストから印刷設定を選択します。"
+msgstr ""
 
-#: C/atril.xml:444(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:473
 msgid ""
 "To configure the printer, click <guibutton>Configure</guibutton>. For "
 "example, you can enable or disable duplex printing, or schedule delayed "
 "printing, if this functionality is supported by the printer."
-msgstr "プリンタを設定するには <guibutton>設定</guibutton> をクリックします。"
-"プリンタが機能をサポートしていれば、例えば、両面印刷を有効または"
-"無効にしたり、後で印刷させたりできます。"
+msgstr ""
 
-#: C/atril.xml:448(guilabel)
-msgid "Location"
-msgstr "場所"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:477
+msgid "<guilabel>Location</guilabel>"
+msgstr ""
 
-#: C/atril.xml:450(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:479
 msgid ""
 "Use this drop-down list to select one of the following print destinations:"
-msgstr "ドロップダウンリストから次の中のどれかの印刷先を選択します:"
+msgstr ""
 
-#: C/atril.xml:455(guilabel)
-msgid "CUPS"
-msgstr "CUPS"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:484
+msgid "<guilabel>CUPS</guilabel>"
+msgstr ""
 
-#: C/atril.xml:457(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:486
 msgid "Print the document to a CUPS printer."
-msgstr "CUPS プリンタに印刷します。"
+msgstr ""
 
-#: C/atril.xml:461(para)
+#. (itstool) path: note/para
+#: C/index.docbook:490
 msgid ""
 "If the selected printer is a CUPS printer, <guilabel>CUPS</guilabel> is the "
 "only entry in this drop-down list."
-msgstr "選択されたプリンタが CUPS プリンタである場合は <guilabel>CUPS"
-"</guilabel> だけがこのドロップダウンリストの唯一のエントリとなります。"
+msgstr ""
 
-#: C/atril.xml:468(guilabel)
-msgid "lpr"
-msgstr "lpr"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:497
+msgid "<guilabel>lpr</guilabel>"
+msgstr ""
 
-#: C/atril.xml:470(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:499
 msgid "Print the document to a printer."
-msgstr "ドキュメントを一つのプリンタで印刷します。"
+msgstr ""
 
-#: C/atril.xml:476(guilabel)
-msgid "File"
-msgstr "ファイル"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:505
+msgid "<guilabel>File</guilabel>"
+msgstr ""
 
-#: C/atril.xml:478(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:507
 msgid "Print the document to a PostScript file."
-msgstr "ドキュメントを PostScript ファイルに出力します。"
+msgstr ""
 
-#: C/atril.xml:481(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:510
 msgid ""
 "Click <guibutton>Save As</guibutton> to display a dialog where you specify "
 "the name and location of the PostScript file."
-msgstr "<guibutton>別名で保存</guibutton> をクリックして "
-"PostScript ファイルの名前と場所を指定するためのダイアログを"
-"表示させます。"
+msgstr ""
 
-#: C/atril.xml:487(guilabel)
-msgid "Custom"
-msgstr "カスタム"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:516
+msgid "<guilabel>Custom</guilabel>"
+msgstr ""
 
-#: C/atril.xml:489(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:518
 msgid "Use the specified command to print the document."
-msgstr "ドキュメントを印刷するために特定のコマンドを使用します。"
+msgstr ""
 
-#: C/atril.xml:492(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:521
 msgid ""
 "Type the name of the command in the text box. Include all command-line "
 "arguments."
-msgstr "テキストボックスにコマンド名を入力します。"
-"すべてのコマンド行引数を含めます。"
+msgstr ""
 
-#: C/atril.xml:500(guilabel)
-msgid "State"
-msgstr "状態"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:529
+msgid "<guilabel>State</guilabel>"
+msgstr ""
 
-#: C/atril.xml:502(para) C/atril.xml:508(para) C/atril.xml:514(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:531 C/index.docbook:537 C/index.docbook:543
 msgid ""
 "This functionality is not supported in this version of <application>Atril "
 "Document Viewer</application>."
-msgstr "この機能はこのバージョンの "
-"<application>Atril ドキュメントビューア</application> では"
-"サポートされていません。"
+msgstr ""
 
-# ?
-#: C/atril.xml:506(guilabel)
-msgid "Type"
-msgstr "種類"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:535
+msgid "<guilabel>Type</guilabel>"
+msgstr ""
 
-#: C/atril.xml:512(guilabel)
-msgid "Comment"
-msgstr "コメント"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:541
+msgid "<guilabel>Comment</guilabel>"
+msgstr ""
 
-#: C/atril.xml:524(guilabel)
-msgid "Paper size"
-msgstr "用紙サイズ"
+#. (itstool) path: sect3/title
+#: C/index.docbook:551
+msgid "Paper"
+msgstr ""
 
-#: C/atril.xml:526(para)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:553
+msgid "<guilabel>Paper size</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:555
 msgid ""
-"Use this drop-down list to select the size of the paper to which you want to "
-"print the document."
-msgstr "ドキュメントを印刷する用紙のサイズを選択するには"
-"このドロップダウンリストを使います。"
+"Use this drop-down list to select the size of the paper to which you want to"
+" print the document."
+msgstr ""
 
-#: C/atril.xml:529(guilabel)
-msgid "Width"
-msgstr "幅"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:558
+msgid "<guilabel>Width</guilabel>"
+msgstr ""
 
-#: C/atril.xml:531(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:560
 msgid ""
 "Use this spin box to specify the width of the paper. Use the adjacent drop-"
 "down list to change the measurement unit."
-msgstr "用紙の幅を指定するにはこのスピンボックスを使います。"
-"サイズの単位を変更するには隣のドロップダウンリストを使います。"
+msgstr ""
 
-#: C/atril.xml:534(guilabel)
-msgid "Height"
-msgstr "高さ"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:563
+msgid "<guilabel>Height</guilabel>"
+msgstr ""
 
-#: C/atril.xml:536(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:565
 msgid "Use this spin box to specify the height of the paper."
-msgstr "用紙の高さを指定します。"
+msgstr ""
 
-#: C/atril.xml:539(guilabel)
-msgid "Feed orientation"
-msgstr "用紙の向き"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:568
+msgid "<guilabel>Feed orientation</guilabel>"
+msgstr ""
 
-#: C/atril.xml:541(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:570
 msgid ""
 "Use this drop-down list to select the orientation of the paper in the "
 "printer."
-msgstr "ドロップダウンリストからプリンタ内の用紙の向きを選択します。"
+msgstr ""
 
-#: C/atril.xml:544(guilabel)
-msgid "Page orientation"
-msgstr "ページの向き"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:573
+msgid "<guilabel>Page orientation</guilabel>"
+msgstr ""
 
-#: C/atril.xml:546(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:575
 msgid "Use this drop-down list to select the page orientation."
-msgstr "ドロップダウンリストから用紙の向きを選択します。"
+msgstr ""
 
-#: C/atril.xml:549(guilabel)
-msgid "Layout"
-msgstr "レイアウト"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:578
+msgid "<guilabel>Layout</guilabel>"
+msgstr ""
 
-#: C/atril.xml:551(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:580
 msgid ""
 "Use this drop-down list to select the page layout. A preview of each layout "
 "that you select is displayed in the <guilabel>Preview</guilabel> area."
 msgstr ""
-"ページレイアウトを選択するにはこのドロップダウンリストを使います。<guilabel>「プレ"
-"ビュー」</guilabel>領域には、選択した各レイアウトのプレビューが表示されます。"
 
-#: C/atril.xml:554(guilabel)
-msgid "Paper Tray"
-msgstr "用紙トレイ"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:583
+msgid "<guilabel>Paper Tray</guilabel>"
+msgstr ""
 
-#: C/atril.xml:556(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:585
 msgid "Use this drop-down list to select the paper tray."
-msgstr "用紙のトレイを選択するにはこのドロップダウンリストを使います。"
+msgstr ""
 
-#: C/atril.xml:566(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:595
 msgid "To Copy a Document"
-msgstr "ドキュメントのコピー"
+msgstr ""
 
-#: C/atril.xml:567(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:596
 msgid "To copy a file, perform the following steps:"
-msgstr "ファイルをコピーするには次のステップを実行します:"
+msgstr ""
 
-#: C/atril.xml:571(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:600
 msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Save a Copy</"
-"guimenuitem></menuchoice>."
-msgstr "<menuchoice><guimenu>ファイル</guimenu><guimenuitem>"
-"別名で保存</guimenuitem></menuchoice> を選択します。"
+"Choose <menuchoice> <guimenu>File</guimenu> <guimenuitem>Save a "
+"Copy</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:576(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:605
 msgid ""
 "Type the new filename in the <guilabel>Filename</guilabel> text box in the "
 "<guilabel>Save a Copy</guilabel> dialog."
-msgstr "<guilabel>別名で保存</guilabel> ダイアログの "
-"<guilabel>名前</guilabel> テキストボックスに新しいファイル名を"
-"入力します。"
+msgstr ""
 
-#: C/atril.xml:579(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:608
 msgid ""
 "If necessary, specify the location of the copied document. By default, "
 "copies are saved in your home directory."
-msgstr "必要ならコピーしたドキュメントの場所も指定します。デフォルトでは"
-"コピーはホームディレクトリに保存されます。"
+msgstr ""
 
-#: C/atril.xml:584(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:613
 msgid "Click <guibutton>Save</guibutton>."
-msgstr "<guibutton>保存</guibutton> をクリックします。"
+msgstr ""
 
-#: C/atril.xml:593(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:622
 msgid "To Work With Password-Protected Documents"
-msgstr "パスワードで保護されたドキュメントを扱う"
+msgstr ""
 
-#: C/atril.xml:594(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:623
 msgid "An author can use the following password levels to protect a document:"
-msgstr "ドキュメントの作成者はドキュメントを保護するのに次のパスワード"
-"レベルを使うことができます:"
+msgstr ""
 
-#: C/atril.xml:599(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:628
 msgid "User password that allows others only to read the document."
-msgstr "他者にドキュメントの読み込みだけを許可するユーザーパスワード"
+msgstr ""
 
-#: C/atril.xml:603(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:632
 msgid ""
 "Master password that allows others to perform additional actions, such as "
 "print the document."
-msgstr "他者にドキュメントの印刷などの追加のアクションを許可するマスターパスワード"
+msgstr ""
 
-#: C/atril.xml:607(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:636
 msgid ""
 "When you try to open a password-protected document, <application>Atril "
 "Document Viewer</application> displays a security dialog. Type either the "
 "user password or the master password in the <guilabel>Enter document "
-"password</guilabel> text box, then click <guibutton>Open Document</"
-"guibutton>."
-msgstr "パスワードで保護されたドキュメントを開こうとすると "
-"<application>Atril ドキュメントビューア</application> は"
-"セキュリティダイアログを表示します。ユーザーパスワードまたは"
-"マスターパスワードを <guilabel>パスワードの入力</guilabel> "
-"テキストボックスに入力し、<guibutton>ドキュメントを開く</guibutton> を"
-"クリックします。"
+"password</guilabel> text box, then click <guibutton>Open "
+"Document</guibutton>."
+msgstr ""
 
-#: C/atril.xml:614(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:643
 msgid "To Close a Document"
-msgstr "ドキュメントを閉じる"
+msgstr ""
 
-#: C/atril.xml:615(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:644
 msgid ""
-"To close a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
-msgstr "ドキュメントを閉じるには <menuchoice><guimenu>ファイル</guimenu>"
-"<guimenuitem>閉じる</guimenuitem></menuchoice> を選択します。"
+"To close a document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Close</guimenuitem> </menuchoice>."
+msgstr ""
 
-#: C/atril.xml:617(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:646
 msgid ""
 "If the window is the last <application>Atril Document Viewer</application> "
 "window open, the application exits."
-msgstr "ウィンドウが <application>Atril ドキュメントビューア</application> の"
-"最後の残りのウィンドウならアプリケーションは終了します。"
+msgstr ""
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/atril.xml:0(None)
-msgid "translator-credits"
-msgstr "佐藤 暁 <ss@mate.gr.jp>\n"
-"日本 MATE ユーザー会 http://www.mate.gr.jp"
+#. (itstool) path: sect1/title
+#: C/index.docbook:655
+msgid "Shortcuts"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:656
+msgid ""
+"Below is a list of all shortcuts present in <application>Atril Document "
+"Viewer</application>:"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:664
+msgid "Shortcut"
+msgstr "ショートカット"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:671
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:672
+msgid "Open an existing document"
+msgstr "既存のドキュメントを開きます"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:675
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:676
+msgid "Save a copy of the current document"
+msgstr "このドキュメントを別名で保存します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:679
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:680
+msgid "Print document"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:683
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:684
+msgid "Close window"
+msgstr "ウィンドウを閉じる"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:687
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:688
+msgid "Copy selection"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:691
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:692
+msgid "Select All"
+msgstr "すべて選択"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:696
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:697
+msgid "<keycap>/</keycap> (slash)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:699
+msgid "Find a word or phrase in the document"
+msgstr "このドキュメントの中にある単語や語句を検索します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:703
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:704
+msgid "<keycap>F3</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:706
+msgid "Find next"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:710
+msgid ""
+"<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (plus sign)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:711
+msgid "<keycap>+</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:712
+msgid "<keycap>=</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:714
+msgid "Zoom in"
+msgstr "拡大する"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:718
+msgid ""
+"<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (minus sign)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:719
+msgid "<keycap>-</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:721
+msgid "Zoom out"
+msgstr "縮小する"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:724
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:725
+msgid "Reload the document"
+msgstr "ドキュメントを再度読み込みます"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:729
+msgid "<keycap>Page Up</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:730
+msgid "Go to the previous page"
+msgstr "前のページに移動します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:733
+msgid "<keycap>Page Down</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:734
+msgid "Go to the next page"
+msgstr "次のページに移動します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:738
+msgid "<keycap>Space</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:739
+msgid "<keycombo><keycap>Shift</keycap><keycap>Backspace</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:740
+msgid "<keycap>Return</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:742
+msgid "Scroll forward"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:746
+msgid "<keycombo><keycap>Shift</keycap><keycap>Space</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:747
+msgid "<keycap>Backspace</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:748
+msgid "<keycombo><keycap>Shift</keycap><keycap>Return</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:750
+msgid "Scroll backward"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:754
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Up</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:755
+msgid "Go a bunch of pages up"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:758
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Down</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:759
+msgid "Go a bunch of pages down"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:762
+msgid "<keycap>Home</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:763
+msgid "Go to the first page"
+msgstr "先頭のページに移動します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:766
+msgid "<keycap>End</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:767
+msgid "Go to the last page"
+msgstr "最後のページに移動します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:770
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:771
+msgid "Go to page by number or label"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:774
+msgid "<keycap>F1</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:775
+msgid "Help"
+msgstr "ヘルプ"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:778
+msgid "<keycap>F5</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:779
+msgid "Run document as presentation"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:782
+msgid "<keycap>F9</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:783
+msgid "Show or hide the side pane"
+msgstr "サイドペインの表示を ON/OFF します"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:786
+msgid "<keycap>F11</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:787
+msgid "Toggle fullscreen mode"
+msgstr "フル・スクリーン表示を切り替える"
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "リンク"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""

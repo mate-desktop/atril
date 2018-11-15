@@ -1,91 +1,87 @@
-# Serbian translation of caja
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2005.
-#
-# This file is distributed under the same license as the caja package.
-#
-# Maintainer: Данило Шеган <danilo@gnome.org>
-#
+# Translators:
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Atril\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-24 21:37-0400\n"
-"PO-Revision-Date: 2005-07-24 06:42+0200\n"
-"Last-Translator: Данило Шеган <danilo@gnome.org>\n"
-"Language-Team: Serbian (sr) <gnom@prevod.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"POT-Creation-Date: 2018-09-26 17:11+0200\n"
+"PO-Revision-Date: 2018-09-18 09:08+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3;    plural=n%10==1 && n%100!=11 ? 0 :    n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: ../C/atril.xml:158(None)
-msgid ""
-"@@image: 'figures/atril_start_window.png'; "
-"md5=7f4da5e33bcac35738a268d93d497d47"
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
+
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:25
+msgid "Atril Document Viewer Manual"
 msgstr ""
 
-#: ../C/atril.xml:25(title) ../C/atril.xml:85(revnumber)
-msgid "Atril Document Viewer Manual V1.0"
-msgstr "Упутство за прегледач докумената Atril 1.0"
+#. (itstool) path: abstract/para
+#: C/index.docbook:27
+msgid ""
+"The Atril Document Viewer application enables you to view documents of "
+"various formats like Portable Document Format (PDF) files and PostScript "
+"files"
+msgstr ""
 
-#: ../C/atril.xml:27(para)
-msgid "User manual for the Atril Document Viewer."
-msgstr "Упутство за кориснике прегледача докумената Atril."
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:32
+msgid "<year>2015</year> <holder>MATE Documentation Project</holder>"
+msgstr ""
 
-#: ../C/atril.xml:30(year)
-msgid "2005"
-msgstr "2005"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
+msgid "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
+msgstr ""
 
-#: ../C/atril.xml:31(holder) ../C/atril.xml:88(para)
-msgid "Nickolay V. Shmyrev"
-msgstr "Николај В. Шмирев"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:40
+msgid "<year>2004</year> <holder>Sun Microsystems</holder>"
+msgstr ""
 
-#: ../C/atril.xml:34(year)
-msgid "2004"
-msgstr "2004"
-
-#: ../C/atril.xml:35(holder) ../C/atril.xml:58(orgname)
-msgid "Sun Microsystems"
-msgstr "Sun Microsystems"
-
-#: ../C/atril.xml:46(publishername) ../C/atril.xml:64(orgname)
-#: ../C/atril.xml:89(para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:104
 msgid "MATE Documentation Project"
-msgstr "Подухват документовања Гнома"
+msgstr ""
 
-#: ../C/atril.xml:2(para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:56 C/index.docbook:113 C/index.docbook:121
+msgid "GNOME Documentation Project"
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
 "in the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"Дозвољено умножавање, ширење(растурање), вршење(уношење) измена у овај "
-"документ под условима Гну-ове Слободне Документационе Дозволе (ГСДД), "
-"верзије 1.1 или било које накнадне верзије без инваријантних одељака, текста "
-"на насловној и последњој страни, а коју је објавила Задужбина Слободног "
-"Софтвера. Примерак ГСДД-е може се пронаћи на овој <ulink type=\"help\" url="
-"\"help:fdl\">адреси</ulink> или у датотеци COPYING-DOCS која је приложена"
-"(може се пронаћи) уз ово упутство."
 
-#: ../C/atril.xml:12(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of MATE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in "
-"section 6 of the license."
+"you can do so by adding a copy of the license to the manual, as described in"
+" section 6 of the license."
 msgstr ""
-"Ово упутство представља део збирке Гномових упутстава која се раздељују под "
-"условима ГСДД-е. Уколико намеравате да даље проследите ово упутство одвојено "
-"од збирке, то можете учинити уз прилагање примерка дозволе уз упутство, као "
-"што је описано у одељку 6 дозволе."
 
-#: ../C/atril.xml:19(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any MATE "
@@ -93,13 +89,9 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"Многи називи које компаније користе у циљу препознатљивости својих производа "
-"и услуга представљају робне марке. Када(уколико) се такви називи појављују"
-"(спомињу) у било којем Гном документу, а чланови Гномовог документационог "
-"пројекта имају сазнања о томе, тада су називи исписани великим словима или "
-"са великим почетним словима."
 
-#: ../C/atril.xml:35(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -113,463 +105,554 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"ЈЕ ДОКУМЕНТ ДОСТУПАН СА СВИМ СВОЈИМ ДОБРИМ И ЛОШИМ СТРАНАМА БЕЗ БИЛО КАКВОГ "
-"ЈАМСТВА, БИЛО ОНО ИЗРЕЧЕНО ИЛИ НЕ, УКЉУЧУЈУЧИ БЕЗ ОГРАНИЧЕЊА, ЈАМСТВО ДА ЈЕ "
-"ОВАЈ ДОКУМЕНТ ИЛИ ЊЕГОВА ИЗМЕЊЕНА ВЕРЗИЈА БЕЗ НЕДОСТАТАКА, СПРЕМАН ЗА "
-"ТРЖИШТЕ, СВРСИСХОДАН И НЕ НАРУШАВА ЗАКОНСКЕ НОРМЕ. ЦЕЛОКУПАН РИЗИК КОЈИ СЕ "
-"ОДНОСИ НА КВАЛИТЕТ, ТАЧНОСТ И ДОМЕТ(УЧИНАК) ДОКУМЕНТА ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ "
-"ВЕРЗИЈЕ СНОСИ КОРИСНИК. УКОЛИКО СЕ У БИЛО КОЈЕМ ДОКУМЕНТУ ИЛИ ЊЕГОВОЈ "
-"ИЗМЕЊЕНОЈ ВЕРЗИЈИ ПОЈАВИ НЕДОСТАТАК(ГРЕШКА) БИЛО КОЈЕ ВРСТЕ, КОРИСНИК (А НЕ "
-"АУТОР ИЗВОРНЕ ВЕРЗИЈЕ, БИЛО КОЈИ ДРУГИ АУТОР ИЛИ САРАДНИК) СНОСИ СВЕ "
-"ТРОШКОВЕ НЕОПХОДНОГ СЕРВИСИРАЊА, ПОПРАВКЕ ИЛИ ИСПРАВКЕ. ОВО ОГРАНИЧЕЊЕ "
-"ЈАМСТВА ПРЕДСТАВЉА САСТАВНИ ДЕО ОВЕ ДОЗВОЛЕ. УПОТРЕБА БИЛО КОЈЕГ ДОКУМЕНТА "
-"ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ НИЈЕ ДОЗВОЉЕНА ОСИМ ПОД УСЛОВИМА ОВОГ ОГРАНИЧЕЊА "
-"ЈАМСТВА."
 
-#: ../C/atril.xml:55(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"НИ ПОД КАКВИМ ОКОЛНОСТИМА ИЛИ ЗАКОНУ, БИЛО ЗБОГ КРШЕЊА (ИЛИ НЕМАРА) УГОВОРА, "
-"ИЛИ НА БИЛО КОЈИ ДРУГИ НАЧИН, АУТОР (ПРВОБИТНЕ ВЕРЗИЈЕ), САРАДНИК ИЛИ "
-"ИСПОРУЧИВАЛАЦ ДОКУМЕНТА ИЛИ ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ, НИТИ ДОБАВЉАЧ БИЛО КОЈЕ "
-"ОД НАВЕДЕНИХ СТРАНА НЕћЕ СНОСИТИ МАТЕРИЈАЛНУ ОДГОВОРНОСТ ЗА НАСТАЛА "
-"ДИРЕКТНА, ИНДИРЕКТНА, ПОСЕБНА, СЛУЧАЈНА ИЛИ ТИМЕ НАСТАЛА ОШТЕЋЕЊА БИЛО КОЈЕ "
-"ВРСТЕ УКЉУЧУЈУЋИ, БЕЗ ОГРАНИЧЕЊА, ШТЕТУ НАНЕСЕНУ УГЛЕДУ ФИРМЕ, ПРЕСТАНКУ "
-"ПРОИЗВОДЊЕ, ОТКАЗИВАЊЕ РАДА РАЧУНАРА ИЛИ КВАРА КАО И ЗА СВЕ ОСТАЛЕ ШТЕТЕ ИЛИ "
-"ГУБИТКЕ НАСТАЛЕ УСЛЕД КОРИШЋЕЊА ДОКУМЕНТА И ЊЕГОВИХ ИЗМЕЊЕНИХ ВЕРЗИЈА ЧАК И "
-"АКО ЈЕ ОШТЕЋЕНА СТРАНА БИЛА ОБАВЕШТЕНА О МОГУЋНОСТИ НАСТАНКА ТЕ ШТЕТЕ."
 
-# ова порука ће се мало изменити када се допуни xml2po бољом дефиницијом за ознаке у Докбук документима:
-#   појавиће се само један <placeholder-1/> уместо читавог <orderedlist>
-#: ../C/atril.xml:28(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
-"ОВАЈ ДОКУМЕНТ И ЊЕГОВЕ ИЗМЕЊЕНЕ ВЕРЗИЈЕ СУ ДОСТУПНЕ ПОД УСЛОВИМА ГНУ-ОВЕ "
-"СЛОБОДНЕ ДОКУМЕНТАЦИОНЕ ДОЗВОЛЕ УЗ ДОДАТНУ САГЛАСНОСТ ДА: <placeholder-1/>"
 
-#: ../C/atril.xml:56(firstname)
-msgid "Sun"
-msgstr "Sun"
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:65
+msgid ""
+"<firstname>MATE Documentation Project</firstname> <surname/> "
+"<affiliation><orgname>MATE Desktop</orgname></affiliation>"
+msgstr ""
 
-#: ../C/atril.xml:57(surname)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:70
+msgid ""
+"<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
+"<affiliation><orgname>Sun Microsystems</orgname></affiliation>"
+msgstr ""
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:75
+msgid ""
+"<firstname>Nickolay V. </firstname> <surname>Shmyrev</surname> <affiliation>"
+" <orgname>GNOME Documentation Project</orgname> <address> "
+"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
+msgstr ""
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:103
 msgid "MATE Documentation Team"
-msgstr "Тим за документовање Гнома"
+msgstr ""
 
-#: ../C/atril.xml:61(firstname)
-msgid "Nickolay V."
-msgstr "Николај В."
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:99
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.2</revnumber> <date>July "
+"2015</date> <_:revdescription-1/>"
+msgstr ""
 
-#: ../C/atril.xml:62(surname)
-msgid "Shmyrev"
-msgstr "Шмирев"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:111
+msgid "Niels Giesen"
+msgstr ""
 
-#: ../C/atril.xml:65(email)
-msgid "nshmyrev@yandex.ru"
-msgstr "nshmyrev@yandex.ru"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:112
+msgid "Claude Paroz"
+msgstr ""
 
-#: ../C/atril.xml:86(date)
-msgid "2005-04-06"
-msgstr "2005-04-06"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:107
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.1</revnumber> "
+"<date>2008-04-05</date> <_:revdescription-1/>"
+msgstr ""
 
-#: ../C/atril.xml:94(releaseinfo)
-msgid "This manual describes version 0.2 of Atril Document Viewer"
-msgstr "Ово упутство описује издање 0.2 прегледача докумената Atril"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:120
+msgid "Nickolay V. Shmyrev"
+msgstr ""
 
-#: ../C/atril.xml:97(title)
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:116
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.0</revnumber> "
+"<date>2005-04-06</date> <_:revdescription-1/>"
+msgstr ""
+
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:126
+msgid "This manual describes version 1.10.1 of Atril Document Viewer"
+msgstr ""
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:129
 msgid "Feedback"
-msgstr "Сарадња"
+msgstr ""
 
-#: ../C/atril.xml:98(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:130
 msgid ""
 "To report a bug or make a suggestion regarding the Atril Document Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"mate-feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink url=\"help"
+":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
-"Да пријавите грешку или учините предлог у вези прегледача докумената Atril "
-"или овог упутства, пратите упутства са <ulink url=\"help:mate-feedback\" "
-"type=\"help\">стране за учествовање у Гному</ulink>."
 
-#: ../C/atril.xml:105(primary)
-msgid "Atril Document Viewer"
-msgstr "Прегледач докумената Atril"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:136
+msgid "<primary>Atril Document Viewer</primary>"
+msgstr ""
 
-#: ../C/atril.xml:108(primary)
-msgid "atril"
-msgstr "atril"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:139
+msgid "<primary>atril</primary>"
+msgstr ""
 
-#: ../C/atril.xml:116(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:148
 msgid "Introduction"
 msgstr "Увод"
 
-#: ../C/atril.xml:117(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:149
 msgid ""
-"The <application>Atril Document Viewer</application> application enables "
-"you to view documents of various formats like Portable Document Format (PDF) "
-"files and PostScript files. <application>Atril Document Viewer</"
-"application> follows Freedesktop.org and MATE standards to provide "
-"integration with Desktop Environment."
+"The <application>Atril Document Viewer</application> application enables you"
+" to view documents of various formats like Portable Document Format (PDF) "
+"files and PostScript files. <application>Atril Document Viewer</application>"
+" follows Freedesktop.org and MATE standards to provide integration with "
+"Desktop Environment."
 msgstr ""
 
-#: ../C/atril.xml:124(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:156
 msgid "Getting Started"
-msgstr "Како почети"
+msgstr ""
 
-#: ../C/atril.xml:127(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:159
 msgid "To Start Atril Document Viewer"
-msgstr "Да покренете прегледач докумената Atril"
+msgstr ""
 
-#: ../C/atril.xml:128(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:160
 msgid ""
-"You can start <application>Atril Document Viewer</application> in the "
-"following ways:"
+"<application>Atril Document Viewer</application> starts when you open a "
+"document such as a PDF or PostScript file."
 msgstr ""
 
-#: ../C/atril.xml:132(term)
-msgid "<guimenu>Applications</guimenu> menu"
-msgstr "Мени <guimenu>Програми</guimenu>"
-
-#: ../C/atril.xml:134(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:161
 msgid ""
-"Choose <menuchoice><guisubmenu>Graphics</guisubmenu><guimenuitem>Atril "
-"Document Viewer</guimenuitem></menuchoice>."
+"Alternatively, you can start <application>Atril Document "
+"Viewer</application> from the command line, with the command: "
+"<command>atril</command>."
 msgstr ""
 
-#: ../C/atril.xml:139(term)
-msgid "Command line"
-msgstr "Наредба"
-
-#: ../C/atril.xml:141(para)
-msgid "Execute the following command: <command>atril</command>"
-msgstr ""
-
-#: ../C/atril.xml:149(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:166
 msgid "When You Start Atril Document Viewer"
 msgstr ""
 
-#: ../C/atril.xml:150(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:167
 msgid ""
 "When you start <application>Atril Document Viewer</application>, the "
 "following window is displayed."
 msgstr ""
 
-#: ../C/atril.xml:154(title)
+#. (itstool) path: figure/title
+#: C/index.docbook:171
 msgid "Atril Document Viewer Window"
 msgstr ""
 
-#: ../C/atril.xml:161(phrase)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:175
+msgctxt "_"
 msgid ""
-"Shows Atril Document Viewer main window. Contains titlebar, menubar, "
-"toolbar and display area. Menubar contains File, Edit, View, Go and Help "
-"menus."
+"external ref='figures/atril_start_window.png' "
+"md5='b960ec0ad3ac9b113710e4e449438499'"
 msgstr ""
 
-#: ../C/atril.xml:167(para)
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:173
+msgid ""
+"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Atril Document "
+"Viewer main window. Contains titlebar, menubar, toolbar and display area. "
+"Menubar contains File, Edit, View, Go and Help menus. </phrase> "
+"</textobject>"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:184
 msgid ""
 "The <application>Atril Document Viewer</application> window contains the "
 "following elements:"
 msgstr ""
 
-#: ../C/atril.xml:171(term) ../C/atril.xml:219(para)
+#. (itstool) path: varlistentry/term
+#. (itstool) path: entry/para
+#: C/index.docbook:188 C/index.docbook:236
 msgid "Menubar"
 msgstr ""
 
-#: ../C/atril.xml:173(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:190
 msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
 msgstr ""
 
-#: ../C/atril.xml:177(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:194
 msgid "Toolbar"
-msgstr "Линија са алатима"
+msgstr ""
 
-#: ../C/atril.xml:179(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:196
 msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
 msgstr ""
 
-#: ../C/atril.xml:183(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:200
 msgid "Display area"
 msgstr ""
 
-#: ../C/atril.xml:185(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:202
 msgid "The display area displays the document."
 msgstr ""
 
-#: ../C/atril.xml:199(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:216
 msgid "UI Component"
 msgstr ""
 
-#: ../C/atril.xml:201(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:218 C/index.docbook:666
 msgid "Action"
-msgstr "Акција"
+msgstr "Радња"
 
-#: ../C/atril.xml:206(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:223
 msgid "Window"
-msgstr "Прозор"
-
-#: ../C/atril.xml:210(para)
-msgid ""
-"Drag a file into the <application>Atril Document Viewer</application> "
-"window from another application such as a file manager."
 msgstr ""
 
-#: ../C/atril.xml:213(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:227
+msgid ""
+"Drag a file into the <application>Atril Document Viewer</application> window"
+" from another application such as a file manager."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:230
 msgid "Double-click on the file name in the file manager"
 msgstr ""
 
-#: ../C/atril.xml:220(para) ../C/atril.xml:247(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:237
 msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></"
-"menuchoice>."
+"Choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:224(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:241
 msgid "Shortcut keys"
 msgstr ""
 
-#: ../C/atril.xml:225(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:242
 msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
 msgstr ""
 
-#: ../C/atril.xml:190(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:207
 msgid ""
 "In <application>Atril Document Viewer</application>, you can perform the "
 "same action in several ways. For example, you can open a document in the "
-"following ways: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1\" "
-"rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
-"colname=\"COLSPEC1\" colwidth=\"50*\"/><thead><row valign=\"top\"><entry "
-"colname=\"COLSPEC0\"><placeholder-1/></entry><entry colname=\"COLSPEC1\" "
-"align=\"left\"><placeholder-2/></entry></row></thead><tbody><row valign=\"top"
-"\"><placeholder-3/><entry><placeholder-4/></entry></row><row valign=\"top"
-"\"><placeholder-5/><entry><placeholder-6/></entry></row><row valign=\"top"
-"\"><placeholder-7/><placeholder-8/></row></tbody></tgroup></informaltable>"
+"following ways: <_:informaltable-1/>"
 msgstr ""
 
-#: ../C/atril.xml:231(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:248
 msgid "This manual documents functionality from the menubar."
 msgstr ""
 
-#: ../C/atril.xml:239(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:256
 msgid "Usage"
+msgstr "Употреба"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:260
+msgid "To Open A Document"
 msgstr ""
 
-#: ../C/atril.xml:243(title)
-msgid "To Open a File"
+#. (itstool) path: sect2/para
+#: C/index.docbook:261
+msgid "To open a document, perform the following steps:"
 msgstr ""
 
-#: ../C/atril.xml:244(para)
-msgid "To open a File, perform the following steps:"
-msgstr ""
-
-#: ../C/atril.xml:251(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
 msgid ""
-"In the <guilabel>Load file</guilabel> dialog, select the file you want to "
-"open."
+"Choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> "
+"</menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:256(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:268
 msgid ""
-"Click <guibutton>Open</guibutton>. <application>Atril Document Viewer</"
-"application> displays the name of the document in the titlebar of the window."
+"In the <guilabel>Open Document</guilabel> dialog, select the file you want "
+"to open."
 msgstr ""
 
-#: ../C/atril.xml:261(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
 msgid ""
-"To open another document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Open</guimenuitem></menuchoice> again. "
+"Click <guibutton>Open</guibutton>. <application>Atril Document "
+"Viewer</application> displays the name of the document in the titlebar of "
+"the window."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:278
+msgid ""
+"To open another document, choose <menuchoice> "
+"<guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. "
 "<application>Atril Document Viewer</application> opens each file in a new "
 "window."
 msgstr ""
 
-#: ../C/atril.xml:264(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:281
 msgid ""
 "If you try to open a document with format that <application>Atril Document "
 "Viewer</application> does not recognize, the application displays an error "
 "message."
 msgstr ""
 
-#: ../C/atril.xml:270(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:287
 msgid "To Navigate Through a Document"
 msgstr ""
 
-#: ../C/atril.xml:271(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:288
 msgid "You can navigate through a file as follows:"
 msgstr ""
 
-#: ../C/atril.xml:274(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:291
 msgid ""
-"To view the next page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Next Page</guimenuitem></menuchoice>."
+"To view the next page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Next Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:278(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:295
 msgid ""
-"To view the previous page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Previous Page</guimenuitem></menuchoice>."
+"To view the previous page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:282(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
 msgid ""
-"To view the first page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>First Page</guimenuitem></menuchoice>."
+"To view the first page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>First Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:286(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:303
 msgid ""
-"To view the last page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Last Page</guimenuitem></menuchoice>."
+"To view the last page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>Last Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:290(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:307
 msgid ""
 "To view a particular page, enter the page number or page label in the text "
 "box on the toolbar, then press <keycap>Return</keycap>."
 msgstr ""
 
-#: ../C/atril.xml:297(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
 msgid "To Scroll a Page"
 msgstr ""
 
-#: ../C/atril.xml:298(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
 msgid ""
-"To display the page contents that are not currently displayed in the display "
-"area, use the following methods:"
+"To display the page contents that are not currently displayed in the display"
+" area, use the following methods:"
 msgstr ""
 
-#: ../C/atril.xml:301(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:318
 msgid "Use the arrow keys or space key on the keyboard."
 msgstr ""
 
-#: ../C/atril.xml:304(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:321
 msgid ""
-"Drag the display area in the opposite direction to the direction in which "
-"you want to scroll. For example, to scroll down the page, drag the display "
-"area upwards in the window."
+"Drag the display area by clicking with the middle mouse button somewhere in "
+"the document and then moving the mouse. For example, to scroll down the "
+"page, drag the display area upwards in the window."
 msgstr ""
 
-#: ../C/atril.xml:307(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:324
 msgid "Use the scrollbars on the window."
 msgstr ""
 
-#: ../C/atril.xml:314(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:331
 msgid "To Change the Page Size"
 msgstr ""
 
-#: ../C/atril.xml:315(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:332
 msgid ""
-"You can use the following methods to resize a page in the "
-"<application>Atril Document Viewer</application> display area:"
+"You can use the following methods to resize a page in the <application>Atril"
+" Document Viewer</application> display area:"
 msgstr ""
 
-#: ../C/atril.xml:320(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:337
 msgid ""
-"To increase the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>."
+"To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:325(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:342
 msgid ""
-"To decrease the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom Out</guimenuitem></menuchoice>."
+"To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:330(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:347
 msgid ""
 "To resize a page to have the same width as the <application>Atril Document "
-"Viewer</application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Fit page width</guimenuitem></menuchoice>."
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Fit page width</guimenuitem> "
+"</menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:335(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:352
 msgid ""
-"To resize a page to fit within the <application>Atril Document Viewer</"
-"application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Best Fit</guimenuitem></menuchoice>."
+"To resize a page to fit within the <application>Atril Document "
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Best Fit</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:340(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:357
 msgid ""
 "To resize the <application>Atril Document Viewer</application> window to "
-"have the same width and height as the screen, choose "
-"<menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></"
-"menuchoice>. To resize the <application>Atril Document Viewer</application> "
-"window to the original size, click on the <guibutton>Exit Full Screen</"
-"guibutton> button."
+"have the same width and height as the screen, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Full Screen</guimenuitem> "
+"</menuchoice>. To resize the <application>Atril Document "
+"Viewer</application> window to the original size, click on the "
+"<guibutton>Exit Full Screen</guibutton> button."
 msgstr ""
 
-#: ../C/atril.xml:348(title)
-msgid "To View Pages or Document Structore"
+#. (itstool) path: sect2/title
+#: C/index.docbook:365
+msgid "To View Pages or Document Structure"
 msgstr ""
 
-#: ../C/atril.xml:349(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:366
 msgid "To view bookmarks or pages, perform the following steps:"
 msgstr ""
 
-#: ../C/atril.xml:353(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:370
 msgid ""
-"Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</"
-"guimenuitem></menuchoice> or press <keycap>F9</keycap>."
+"Choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Sidebar</guimenuitem> </menuchoice> or press "
+"<keycap>F9</keycap>."
 msgstr ""
 
-#: ../C/atril.xml:358(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:375
 msgid ""
 "Use the drop-down list in the side-pane header to select whether to display "
 "document structure or pages in the side pane."
 msgstr ""
 
-#: ../C/atril.xml:363(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:380
 msgid ""
 "Use the side-pane scrollbars to display the required item or page in the "
 "side pane."
 msgstr ""
 
-#: ../C/atril.xml:368(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:385
 msgid ""
 "Click on an entry to navigate to that location in the document. Click on a "
 "page to navigate to that page in the document."
 msgstr ""
 
-#: ../C/atril.xml:374(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:391
 msgid "To View the Properties of a Document"
 msgstr ""
 
-#: ../C/atril.xml:375(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:392
 msgid ""
-"To view the properties of a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Properties</guimenuitem></menuchoice>."
+"To view the properties of a document, choose <menuchoice> "
+"<guimenu>File</guimenu> <guimenuitem>Properties</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:381(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:398
 msgid ""
-"The <guilabel>Properties</guilabel> dialog displays all information available"
+"The <guilabel>Properties</guilabel> dialog displays all information "
+"available"
 msgstr ""
 
-#: ../C/atril.xml:387(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:404
 msgid "To Print a Document"
 msgstr ""
 
-#: ../C/atril.xml:388(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:405
 msgid ""
-"To print a Document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
+"To print a Document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Print</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:392(para)
+#. (itstool) path: note/para
+#: C/index.docbook:409
 msgid ""
 "If you cannot choose the <guimenuitem>Print</guimenuitem> menu item, the "
 "author of the document has disabled the print option for this document. To "
@@ -578,1049 +661,687 @@ msgid ""
 "about password-protected files."
 msgstr ""
 
-#: ../C/atril.xml:396(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:413
 msgid ""
 "The <guilabel>Print</guilabel> dialog has the following tabbed sections:"
 msgstr ""
 
-#: ../C/atril.xml:402(link) ../C/atril.xml:418(title)
+#. (itstool) path: listitem/para
+#: C/index.docbook:418
+msgid "<link linkend=\"print-dialog-job\">Job</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:423
+msgid "<link linkend=\"print-dialog-printer\">Printer</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:428
+msgid "<link linkend=\"print-dialog-paper\">Paper</link>"
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:435
 msgid "Job"
 msgstr "Посао"
 
-#: ../C/atril.xml:407(link) ../C/atril.xml:440(title)
-#: ../C/atril.xml:442(guilabel)
-msgid "Printer"
-msgstr "Штампач"
-
-#: ../C/atril.xml:412(link) ../C/atril.xml:534(title)
-msgid "Paper"
-msgstr "Папир"
-
-#: ../C/atril.xml:420(guilabel)
-msgid "Print range"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:437
+msgid "<guilabel>Print range</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:422(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:439
 msgid ""
 "Select one of the following options to determine how many pages to print:"
 msgstr ""
 
-#: ../C/atril.xml:425(guilabel)
-msgid "All"
-msgstr "Све"
+#. (itstool) path: listitem/para
+#: C/index.docbook:442
+msgid "<guilabel>All</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:426(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:443
 msgid "Select this option to print all of the pages in the document."
 msgstr ""
 
-#: ../C/atril.xml:429(guilabel)
-msgid "Pages From"
+#. (itstool) path: listitem/para
+#: C/index.docbook:446
+msgid "<guilabel>Pages From</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:430(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:447
 msgid ""
-"Select this option to print the selected range of pages in the document. Use "
-"the spin boxes to specify the first page and last page of the range."
+"Select this option to print the selected range of pages in the document. Use"
+" the spin boxes to specify the first page and last page of the range."
 msgstr ""
 
-#: ../C/atril.xml:444(para)
+#. (itstool) path: sect3/title
+#: C/index.docbook:457
+msgid "Printer"
+msgstr "Штампач"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:459
+msgid "<guilabel>Printer</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:461
 msgid ""
-"Use this drop-down list to select the printer to which you want to print the "
-"document."
+"Use this drop-down list to select the printer to which you want to print the"
+" document."
 msgstr ""
 
-#: ../C/atril.xml:446(para)
+#. (itstool) path: note/para
+#: C/index.docbook:463
 msgid ""
 "The <guilabel>Create a PDF document</guilabel> option is not supported in "
 "this version of <application>Atril Document Viewer</application>."
 msgstr ""
 
-#: ../C/atril.xml:452(guilabel)
-msgid "Settings"
-msgstr "Подешавања"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:469
+msgid "<guilabel>Settings</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:454(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:471
 msgid "Use this drop-down list to select the printer settings."
 msgstr ""
 
-#: ../C/atril.xml:456(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:473
 msgid ""
 "To configure the printer, click <guibutton>Configure</guibutton>. For "
 "example, you can enable or disable duplex printing, or schedule delayed "
 "printing, if this functionality is supported by the printer."
 msgstr ""
 
-#: ../C/atril.xml:460(guilabel)
-msgid "Location"
-msgstr "Место"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:477
+msgid "<guilabel>Location</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:462(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:479
 msgid ""
 "Use this drop-down list to select one of the following print destinations:"
 msgstr ""
 
-#: ../C/atril.xml:467(guilabel)
-msgid "CUPS"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:484
+msgid "<guilabel>CUPS</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:469(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:486
 msgid "Print the document to a CUPS printer."
 msgstr ""
 
-#: ../C/atril.xml:473(para)
+#. (itstool) path: note/para
+#: C/index.docbook:490
 msgid ""
 "If the selected printer is a CUPS printer, <guilabel>CUPS</guilabel> is the "
 "only entry in this drop-down list."
 msgstr ""
 
-# bug: is this a command name, or what?
-#: ../C/atril.xml:480(guilabel)
-msgid "lpr"
-msgstr "lpr"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:497
+msgid "<guilabel>lpr</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:482(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:499
 msgid "Print the document to a printer."
 msgstr ""
 
-#: ../C/atril.xml:488(guilabel)
-msgid "File"
-msgstr "Датотека"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:505
+msgid "<guilabel>File</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:490(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:507
 msgid "Print the document to a PostScript file."
 msgstr ""
 
-#: ../C/atril.xml:493(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:510
 msgid ""
 "Click <guibutton>Save As</guibutton> to display a dialog where you specify "
 "the name and location of the PostScript file."
 msgstr ""
 
-#: ../C/atril.xml:499(guilabel)
-msgid "Custom"
-msgstr "Произвољно"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:516
+msgid "<guilabel>Custom</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:501(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:518
 msgid "Use the specified command to print the document."
 msgstr ""
 
-#: ../C/atril.xml:504(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:521
 msgid ""
 "Type the name of the command in the text box. Include all command-line "
 "arguments."
 msgstr ""
 
-#: ../C/atril.xml:512(guilabel)
-msgid "State"
-msgstr "Стање"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:529
+msgid "<guilabel>State</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:514(para) ../C/atril.xml:520(para)
-#: ../C/atril.xml:526(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:531 C/index.docbook:537 C/index.docbook:543
 msgid ""
 "This functionality is not supported in this version of <application>Atril "
 "Document Viewer</application>."
 msgstr ""
 
-#: ../C/atril.xml:518(guilabel)
-msgid "Type"
-msgstr "Тип"
-
-#: ../C/atril.xml:524(guilabel)
-msgid "Comment"
-msgstr "Примедба"
-
-#: ../C/atril.xml:536(guilabel)
-msgid "Paper size"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:535
+msgid "<guilabel>Type</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:538(para)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:541
+msgid "<guilabel>Comment</guilabel>"
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:551
+msgid "Paper"
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:553
+msgid "<guilabel>Paper size</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:555
 msgid ""
-"Use this drop-down list to select the size of the paper to which you want to "
-"print the document."
+"Use this drop-down list to select the size of the paper to which you want to"
+" print the document."
 msgstr ""
 
-#: ../C/atril.xml:541(guilabel)
-msgid "Width"
-msgstr "Ширина"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:558
+msgid "<guilabel>Width</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:543(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:560
 msgid ""
 "Use this spin box to specify the width of the paper. Use the adjacent drop-"
 "down list to change the measurement unit."
 msgstr ""
 
-#: ../C/atril.xml:546(guilabel)
-msgid "Height"
-msgstr "Висина"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:563
+msgid "<guilabel>Height</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:548(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:565
 msgid "Use this spin box to specify the height of the paper."
 msgstr ""
 
-#: ../C/atril.xml:551(guilabel)
-msgid "Feed orientation"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:568
+msgid "<guilabel>Feed orientation</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:553(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:570
 msgid ""
 "Use this drop-down list to select the orientation of the paper in the "
 "printer."
 msgstr ""
 
-#: ../C/atril.xml:556(guilabel)
-msgid "Page orientation"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:573
+msgid "<guilabel>Page orientation</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:558(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:575
 msgid "Use this drop-down list to select the page orientation."
 msgstr ""
 
-#: ../C/atril.xml:561(guilabel)
-msgid "Layout"
-msgstr "Изглед"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:578
+msgid "<guilabel>Layout</guilabel>"
+msgstr ""
 
-#: ../C/atril.xml:563(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:580
 msgid ""
 "Use this drop-down list to select the page layout. A preview of each layout "
 "that you select is displayed in the <guilabel>Preview</guilabel> area."
 msgstr ""
 
-#: ../C/atril.xml:566(guilabel)
-msgid "Paper Tray"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:583
+msgid "<guilabel>Paper Tray</guilabel>"
 msgstr ""
 
-#: ../C/atril.xml:568(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:585
 msgid "Use this drop-down list to select the paper tray."
 msgstr ""
 
-#: ../C/atril.xml:578(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:595
 msgid "To Copy a Document"
 msgstr ""
 
-#: ../C/atril.xml:579(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:596
 msgid "To copy a file, perform the following steps:"
 msgstr ""
 
-#: ../C/atril.xml:583(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:600
 msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Save a Copy</"
-"guimenuitem></menuchoice>."
+"Choose <menuchoice> <guimenu>File</guimenu> <guimenuitem>Save a "
+"Copy</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:588(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:605
 msgid ""
 "Type the new filename in the <guilabel>Filename</guilabel> text box in the "
 "<guilabel>Save a Copy</guilabel> dialog."
 msgstr ""
 
-#: ../C/atril.xml:591(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:608
 msgid ""
 "If necessary, specify the location of the copied document. By default, "
 "copies are saved in your home directory."
 msgstr ""
 
-#: ../C/atril.xml:596(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:613
 msgid "Click <guibutton>Save</guibutton>."
 msgstr ""
 
-#: ../C/atril.xml:605(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:622
 msgid "To Work With Password-Protected Documents"
 msgstr ""
 
-#: ../C/atril.xml:606(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:623
 msgid "An author can use the following password levels to protect a document:"
 msgstr ""
 
-#: ../C/atril.xml:611(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:628
 msgid "User password that allows others only to read the document."
 msgstr ""
 
-#: ../C/atril.xml:615(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:632
 msgid ""
 "Master password that allows others to perform additional actions, such as "
 "print the document."
 msgstr ""
 
-#: ../C/atril.xml:619(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:636
 msgid ""
 "When you try to open a password-protected document, <application>Atril "
 "Document Viewer</application> displays a security dialog. Type either the "
 "user password or the master password in the <guilabel>Enter document "
-"password</guilabel> text box, then click <guibutton>Open Document</"
-"guibutton>."
+"password</guilabel> text box, then click <guibutton>Open "
+"Document</guibutton>."
 msgstr ""
 
-#: ../C/atril.xml:626(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:643
 msgid "To Close a Document"
 msgstr ""
 
-#: ../C/atril.xml:627(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:644
 msgid ""
-"To close a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
+"To close a document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Close</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: ../C/atril.xml:629(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:646
 msgid ""
 "If the window is the last <application>Atril Document Viewer</application> "
 "window open, the application exits."
 msgstr ""
 
-#: ../C/atril.xml:632(para)
+#. (itstool) path: sect1/title
+#: C/index.docbook:655
+msgid "Shortcuts"
+msgstr ""
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:656
 msgid ""
-"To quit <application>Atril Document Viewer</application> at any time, no "
-"matter how many windows are open, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Quit</guimenuitem></menuchoice>."
+"Below is a list of all shortcuts present in <application>Atril Document "
+"Viewer</application>:"
 msgstr ""
 
-#: ../C/atril.xml:634(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:664
+msgid "Shortcut"
+msgstr "Пречица"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:671
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:672
+msgid "Open an existing document"
+msgstr "Отворите постојећи документ"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:675
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:676
+msgid "Save a copy of the current document"
+msgstr "Сачувајте један примерак текућег документа"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:679
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:680
+msgid "Print document"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:683
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:684
+msgid "Close window"
+msgstr "Затворите прозор"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:687
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:688
+msgid "Copy selection"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:691
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:692
+msgid "Select All"
+msgstr "Изабери све"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:696
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:697
+msgid "<keycap>/</keycap> (slash)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:699
+msgid "Find a word or phrase in the document"
+msgstr "Пронађите реч или израз у документу"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:703
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:704
+msgid "<keycap>F3</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:706
+msgid "Find next"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:710
 msgid ""
-"When you quit, <application>Atril Document Viewer</application> closes all "
-"documents opened in the current session."
+"<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (plus sign)"
 msgstr ""
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: ../C/atril.xml:0(None)
-msgid "translator-credits"
+#. (itstool) path: entry/para
+#: C/index.docbook:711
+msgid "<keycap>+</keycap>"
 msgstr ""
-"Данило Шеган <danilo@gnome.org>\n"
-"\n"
-"Prevod.org — превод на српски језик."
 
-#~ msgid "_Remove Toolbar"
-#~ msgstr "_Уклони алатке"
-
-#~ msgid "Separator"
-#~ msgstr "Раздвајач"
-
-#~ msgid "Best Fit"
-#~ msgstr "Најбоље уклапање"
-
-#~ msgid "Fit Page Width"
-#~ msgstr "Уклопи према ширини странице"
-
-#~ msgid "50%"
-#~ msgstr "50%"
-
-#~ msgid "75%"
-#~ msgstr "75%"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "125%"
-#~ msgstr "125%"
-
-#~ msgid "150%"
-#~ msgstr "150%"
-
-#~ msgid "175%"
-#~ msgstr "175%"
-
-#~ msgid "200%"
-#~ msgstr "200%"
-
-#~ msgid "300%"
-#~ msgstr "300%"
-
-#~ msgid "400%"
-#~ msgstr "400%"
-
-#~ msgid "Document Viewer"
-#~ msgstr "Прегледач документа"
-
-#~ msgid "View multipage documents"
-#~ msgstr "Прегледај вишестраничне документе"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "_Password:"
-#~ msgstr "_Лозинка:"
-
-#~ msgid "<b>Author:</b>"
-#~ msgstr "<b>Аутор:</b>"
-
-#~ msgid "<b>Created:</b>"
-#~ msgstr "<b>Направљен:</b> "
-
-#~ msgid "<b>Creator:</b>"
-#~ msgstr "<b>Творац:</b>"
-
-#~ msgid "<b>Format:</b>"
-#~ msgstr "<b>Облик:</b>"
-
-#~ msgid "<b>Keywords:</b>"
-#~ msgstr "<b>Кључне речи:</b>"
-
-#~ msgid "<b>Modified:</b>"
-#~ msgstr "<b>Мењан:</b>"
-
-#~ msgid "<b>Number of Pages:</b>"
-#~ msgstr "<b>Број страна:</b>"
-
-#~ msgid "<b>Optimized:</b>"
-#~ msgstr "<b>Оптимизовано:</b>"
-
-#~ msgid "<b>Producer:</b>"
-#~ msgstr "<b>Произвођач:</b>"
-
-#~ msgid "<b>Security:</b>"
-#~ msgstr "<b>Безбедност:</b>"
-
-#~ msgid "<b>Subject:</b>"
-#~ msgstr "<b>Тема:</b> "
-
-#~ msgid "<b>Title:</b>"
-#~ msgstr "<b>Наслов:</b>"
-
-#~ msgid "Default sidebar size"
-#~ msgstr "Подразумевана величина бочне траке"
-
-#~ msgid "Show sidebar by default"
-#~ msgstr "Уобичајено прикажи бочну траку"
-
-#~ msgid "Show statusbar by default"
-#~ msgstr "Уобичајено прикажи линију са стањем"
-
-#~ msgid "Show toolbar by default"
-#~ msgstr "Уобичајено прикажи траку са алатом"
-
-#~ msgid ""
-#~ "Sidebar is the side item that contains the Index and Thumbnail lists. The "
-#~ "default size sets the sidebar's width in pixels based from the side of "
-#~ "the window. Any integer will be accepted. The sidebar will never shrink "
-#~ "smaller than the size of the text required to display Thumbnails or "
-#~ "Index. Large values will cause the sidebar to take up as much of the page "
-#~ "display area as possible relative to the window's size."
-#~ msgstr ""
-#~ "Бочна трака је бочна ставка која садржи индекс и списак сличица страна. "
-#~ "Подразумевана величина поставља ширину бочне траке у тачкама у односу на "
-#~ "страну прозора. Прихвата се било који цео број, а бочна трака се никад "
-#~ "неће смањити испод величине неопходне за приказ сличица или индекса. "
-#~ "Велике вредности ће учинити да бочна трака заузме што је могуће више "
-#~ "простора за приказ странице у односу на величину прозора."
-
-# bug: dot missing
-#~ msgid ""
-#~ "Sidebar is the side item that contains the Index and Thumbnail lists. Two "
-#~ "boolean options, true makes sidebar visible by default while false makes "
-#~ "sidebar not visible by default"
-#~ msgstr ""
-#~ "Бочна трака је бочна ставка која садржи индекс и списак сличица страна. "
-#~ "Две истинитосне вредности, постављено чини бочну траку подразумевано "
-#~ "приказаном док искључење подразумевано сакрива бочну траку."
-
-# bug: dot missing
-#~ msgid ""
-#~ "Sidebar is the side item that contains the Index and Thumbnail lists. Two "
-#~ "boolean options, true makes sidebar visible by default while false makes "
-#~ "sidebar not visible by default."
-#~ msgstr ""
-#~ "Бочна трака је бочна ставка која садржи индекс и списак сличица страна. "
-#~ "Две истинитосне вредности, постављање подразумевано приказује бочну траку "
-#~ "док искључење подразумевано сакрива бочну траку."
-
-#~ msgid ""
-#~ "Statusbar is the standard bottom bar that display additional information "
-#~ "about links and other actions. Two boolean options, true makes the "
-#~ "statusbar visible by default while false makes sidebar not visible by "
-#~ "default."
-#~ msgstr ""
-#~ "Линија са стањем је уобичајена трака у дну која приказује додатне податке "
-#~ "о везама и другим акцијама. Две истинитосне вредности, постављање "
-#~ "подразумевано приказује линију са стањем док искључење подразумевано "
-#~ "сакрива линију са стањем."
-
-#~ msgid ""
-#~ "Toolbar is the top bar that contains navigation and zoom controls. Two "
-#~ "boolean options, true makes toolbar visible by default while false makes "
-#~ "toolbar not visible by default."
-#~ msgstr ""
-#~ "Трака са алатом је уобичајена трака у врху која садржи елементе за "
-#~ "навигацију и увећање. Две истинитосне вредности, постављање подразумевано "
-#~ "приказује траку са алатом док искључење подразумевано сакрива траку са "
-#~ "алатом."
-
-#~ msgid "File not available"
-#~ msgstr "Датотека није доступна"
-
-#~ msgid "DVI document has incorrect format"
-#~ msgstr "DVI документ је неисправног облика"
-
-#~ msgid "Yes"
-#~ msgstr "Да"
-
-#~ msgid "No"
-#~ msgstr "Не"
-
-#~ msgid "No name"
-#~ msgstr "Без имена"
-
-#~ msgid "Document"
-#~ msgstr "Документ"
-
-#~ msgid "None"
-#~ msgstr "Ништа"
-
-#~ msgid "BBox"
-#~ msgstr "BBox"
-
-#~ msgid "Letter"
-#~ msgstr "Писмо"
-
-#~ msgid "Tabloid"
-#~ msgstr "Таблоид"
-
-#~ msgid "Ledger"
-#~ msgstr "Праг"
-
-#~ msgid "Legal"
-#~ msgstr "Правно"
-
-#~ msgid "Statement"
-#~ msgstr "Изјава"
-
-#~ msgid "Executive"
-#~ msgstr "Извршни"
-
-#~ msgid "A0"
-#~ msgstr "A0"
-
-#~ msgid "A1"
-#~ msgstr "A1"
-
-#~ msgid "A2"
-#~ msgstr "A2"
-
-#~ msgid "A3"
-#~ msgstr "A3"
-
-#~ msgid "A4"
-#~ msgstr "A4"
-
-#~ msgid "A5"
-#~ msgstr "A5"
-
-#~ msgid "B4"
-#~ msgstr "B4"
-
-#~ msgid "B5"
-#~ msgstr "B5"
-
-#~ msgid "Folio"
-#~ msgstr "Фолија"
-
-#~ msgid "Quarto"
-#~ msgstr "Кварто"
-
-#~ msgid "10x14"
-#~ msgstr "10x14"
-
-#~ msgid "No document loaded."
-#~ msgstr "Документ није учитан."
-
-#~ msgid "Broken pipe."
-#~ msgstr "Прекинута веза."
-
-#~ msgid "Interpreter failed."
-#~ msgstr "Грешка при обради."
-
-#~ msgid "Error while decompressing file %s:\n"
-#~ msgstr "Грешка при отпакивању датотеке %s:\n"
-
-#~ msgid "Cannot open file %s.\n"
-#~ msgstr "Не могу да отворим датотеку %s.\n"
-
-#~ msgid "File is not readable."
-#~ msgstr "Датотеке није читљива."
-
-#~ msgid "Document loaded."
-#~ msgstr "Документ учитан."
-
-#~ msgid "Encapsulated PostScript"
-#~ msgstr "Угњеждени ПостСкрипт"
-
-#~ msgid "PostScript"
-#~ msgstr "ПостСкрипт"
-
-#~ msgid "Search string"
-#~ msgstr "Тражи ниску"
-
-# bug: since when do the strings have names?
-#~ msgid "The name of the string to be found"
-#~ msgstr "Име ниске коју тражити"
-
-#~ msgid "Case sensitive"
-#~ msgstr "Зависно од величине слова"
-
-#~ msgid "TRUE for a case sensitive search"
-#~ msgstr "Постављено за претрагу која зависи од величине слова"
-
-#~ msgid "Highlight color"
-#~ msgstr "Боја истицања"
-
-#~ msgid "Color of highlight for all matches"
-#~ msgstr "Боја истицања за сва поклапања"
-
-#~ msgid "Current color"
-#~ msgstr "Текућа боја"
-
-#~ msgid "Color of highlight for the current match"
-#~ msgstr "Боја истицања за текуће поклапање"
-
-#~ msgid "F_ind:"
-#~ msgstr "Н_ађи:"
-
-#~ msgid "_Previous"
-#~ msgstr "_Претходни"
-
-#~ msgid "_Next"
-#~ msgstr "_Следећи"
-
-#~ msgid "C_ase Sensitive"
-#~ msgstr "З_ависно од величине слова"
-
-#~ msgid "Unknown MIME Type"
-#~ msgstr "Непозната МИМЕ врста"
-
-#~ msgid "Unhandled MIME type: '%s'"
-#~ msgstr "Неприхваћена МИМЕ врста: „%s“"
-
-#~ msgid "All Documents"
-#~ msgstr "Сви документи"
-
-#~ msgid "PostScript Documents"
-#~ msgstr "Постскрипт документи"
-
-#~ msgid "PDF Documents"
-#~ msgstr "PDF документи"
-
-#~ msgid "Images"
-#~ msgstr "Слике"
-
-#~ msgid "DVI Documents"
-#~ msgstr "DVI документи"
-
-#~ msgid "Djvu Documents"
-#~ msgstr "Djvu документи"
-
-#~ msgid "All Files"
-#~ msgstr "Све датотеке"
-
-#~ msgid "(%d of %d)"
-#~ msgstr "(%d од %d)"
-
-#~ msgid "of %d"
-#~ msgstr " од %d"
-
-#~ msgid "Unable to find glade file"
-#~ msgstr "Не могу да нађем Глејд датотеку"
-
-#~ msgid ""
-#~ "The glade file, %s, cannot be found.  Please check that your installation "
-#~ "is complete."
-#~ msgstr ""
-#~ "Не могу да нађем Глејд датотеку „%s“. Проверите да ли је ваша инсталација "
-#~ "потпуна."
-
-#~ msgid "Password required"
-#~ msgstr "Лозинка је обавезна"
-
-#~ msgid ""
-#~ "The document <i>%s</i> is locked and requires a password before it can be "
-#~ "opened."
-#~ msgstr ""
-#~ "Документ <i>%s</i> је закључан и неопходна је лозинка пре него што се "
-#~ "може отворити."
-
-#~ msgid "Incorrect password"
-#~ msgstr "Неисправна лозинка"
-
-#~ msgid ""
-#~ "This document is locked and can only be read by entering the correct "
-#~ "password."
-#~ msgstr ""
-#~ "Овај документ је закључан и може се прочитати једино уз унос исправне "
-#~ "лозинке."
-
-#~ msgid "_Unlock Document"
-#~ msgstr "_Откључај документ"
-
-#~ msgid "Properties"
-#~ msgstr "Особине"
-
-#~ msgid "General"
-#~ msgstr "Опште"
-
-#~ msgid "Fonts"
-#~ msgstr "Фонтови"
-
-#~ msgid "Name"
-#~ msgstr "Име"
-
-#~ msgid "Gathering font information... %3d%%"
-#~ msgstr "Скупљам податке о фонтовима... %3d%%"
-
-#~ msgid "Loading..."
-#~ msgstr "Учитавање..."
-
-#~ msgid "Print..."
-#~ msgstr "Штампање..."
-
-#~ msgid "Index"
-#~ msgstr "Попис"
-
-#~ msgid "Thumbnails"
-#~ msgstr "Мали прикази"
-
-#~ msgid "Go to page %s"
-#~ msgstr "Иди на страну %s"
-
-#~ msgid "%d found on this page"
-#~ msgid_plural "%d found on this page"
-#~ msgstr[0] "%d погодак на овој страници"
-#~ msgstr[1] "%d поготка на овој страници"
-#~ msgstr[2] "%d погодака на овој страници"
-
-#~ msgid "Not found"
-#~ msgstr "Није нађено"
-
-#~ msgid "%3d%% remaining to search"
-#~ msgstr "Преостало да претражи %3d%%"
-
-#~ msgid "Unable to open document"
-#~ msgstr "Не могу да отворим документ"
-
-#~ msgid "Document Viewer - Password Required"
-#~ msgstr "Прегледач докумената — лозинка је обавезна"
-
-#~ msgid "%s - Password Required"
-#~ msgstr "%s — лозинка је обавезна"
-
-#~ msgid "Loading document. Please wait"
-#~ msgstr "Учитавам документ. Сачекајте"
-
-#~ msgid "Open document"
-#~ msgstr "Отвори документ"
-
-#~ msgid "The file could not be saved as \"%s\"."
-#~ msgstr "Датотека се не може сачувати као „%s“."
-
-#~ msgid "Save a Copy"
-#~ msgstr "Сачувај умножак"
-
-#~ msgid "Print"
-#~ msgstr "Штампај"
-
-#~ msgid "Pages"
-#~ msgstr "Странице"
-
-#~ msgid "Printing is not supported on this printer."
-#~ msgstr "Штампање није подржано за овај штампач."
-
-#~ msgid ""
-#~ "You were trying to print to a printer using the \"%s\" driver. This "
-#~ "program requires a PostScript printer driver."
-#~ msgstr ""
-#~ "Покушали сте да штампате користећи „%s“ драјвер. Овај програм захтева "
-#~ "ПостСкрипт драјвер за штампач."
-
-#~ msgid "The \"Find\" feature will not work with this document"
-#~ msgstr "Могућност претраживања неће радити за овај документ"
-
-#~ msgid "Searching for text is only supported for PDF documents."
-#~ msgstr "Тражење текста је подржано само за PDF документе."
-
-#~ msgid "Leave Fullscreen"
-#~ msgstr "Не преко целог екрана"
-
-#~ msgid "Toolbar editor"
-#~ msgstr "Уређивање алатки"
-
-#~ msgid ""
-#~ "PostScript and PDF File Viewer.\n"
-#~ "Using poppler %s (%s)"
-#~ msgstr ""
-#~ "Прегледач ПостСкрипт и PDF датотека.\n"
-#~ "Користи poppler %s (%s)"
-
-#~ msgid ""
-#~ "Atril is free software; you can redistribute it and/or modify\n"
-#~ "it under the terms of the GNU General Public License as published by\n"
-#~ "the Free Software Foundation; either version 2 of the License, or\n"
-#~ "(at your option) any later version.\n"
-#~ msgstr ""
-#~ "Atril је слободан софтвер; можете га расподељивати и/или га мењати\n"
-#~ "под условима ГНУ Опште Јавне Лиценце (GNU GPL) како је објављује \n"
-#~ "Задужбина за Слободни Софтвер (FSF); било верзије 2 те Лиценце, било\n"
-#~ "(по вашем нахођењу) било које новије верзије.\n"
-
-#~ msgid ""
-#~ "Atril is distributed in the hope that it will be useful,\n"
-#~ "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-#~ "GNU General Public License for more details.\n"
-#~ msgstr ""
-#~ "Atril се расподељује у нади да ће бити од користи, али БЕЗ\n"
-#~ "ИКАКВИХ ГАРАНЦИЈА; чак и без подразумеване гаранције \n"
-#~ "КОРИСНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.  Видите ГНУ \n"
-#~ "Општу Јавну Лиценцу за више детаља.\n"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License\n"
-#~ "along with Atril; if not, write to the Free Software Foundation, Inc.,\n"
-#~ "59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n"
-#~ msgstr ""
-#~ "Требали сте да примите примерак ГНУ Опште Јавне Лиценце уз Atril; ако\n"
-#~ "нисте, пишите Задужбини за Слободни Софтвер (Free Software Foundation, "
-#~ "Inc.), \n"
-#~ "59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n"
-
-#~ msgid "Atril"
-#~ msgstr "Atril"
-
-#~ msgid "© 1996-2005 The Atril authors"
-#~ msgstr "Сва права задржана © 1996–2005 Аутори Atril-а"
-
-#~ msgid "_File"
-#~ msgstr "_Датотека"
-
-#~ msgid "_Edit"
-#~ msgstr "_Уређивање"
-
-#~ msgid "_View"
-#~ msgstr "П_реглед"
-
-#~ msgid "_Go"
-#~ msgstr "_Иди"
-
-#~ msgid "_Help"
-#~ msgstr "_Помоћ"
-
-#~ msgid "Open an existing document"
-#~ msgstr "Отвори постојећи документ"
-
-#~ msgid "_Save a Copy..."
-#~ msgstr "_Сачувај умножак..."
-
-#~ msgid "Save the current document with a new filename"
-#~ msgstr "Сачувај текући документ под новим именом"
-
-#~ msgid "Print this document"
-#~ msgstr "Одштампај овај документ"
-
-#~ msgid "View the properties of this document"
-#~ msgstr "Прегледај особине овог документа"
-
-#~ msgid "Close this window"
-#~ msgstr "Затвори овај прозор"
-
-#~ msgid "Copy text from the document"
-#~ msgstr "Умножи текст из документа"
-
-#~ msgid "Select _All"
-#~ msgstr "Изабери _све"
-
-#~ msgid "Select the entire page"
-#~ msgstr "Изабери целу страницу"
-
-#~ msgid "Find a word or phrase in the document"
-#~ msgstr "Нађи реч или израз у документу"
-
-#~ msgid "Find Ne_xt"
-#~ msgstr "Пронађи _следеће"
-
-#~ msgid "Find next occurrence of the word or phrase"
-#~ msgstr "Пронађи следећу појаву речи или израза"
-
-#~ msgid "T_oolbar"
-#~ msgstr "_Алатке"
-
-#~ msgid "Customize the toolbar"
-#~ msgstr "Прилагоди траку са алатом"
-
-#~ msgid "Rotate _Left"
-#~ msgstr "Ротирај _лево"
-
-#~ msgid "Rotate the document to the left"
-#~ msgstr "Ротирај документ налево"
-
-#~ msgid "Rotate _Right"
-#~ msgstr "Ротирај _десно"
-
-#~ msgid "Rotate the document to the right"
-#~ msgstr "Ротирај документ надесно"
-
-#~ msgid "Enlarge the document"
-#~ msgstr "Увећај документ"
-
-#~ msgid "Shrink the document"
-#~ msgstr "Умањи документ"
-
-#~ msgid "_Reload"
-#~ msgstr "_Освежи"
-
-#~ msgid "Reload the document"
-#~ msgstr "Изнова учитај документ"
-
-#~ msgid "_Previous Page"
-#~ msgstr "_Претходна страна"
-
-#~ msgid "Go to the previous page"
-#~ msgstr "Иди на претходну страницу"
-
-#~ msgid "_Next Page"
-#~ msgstr "_Следећа страна"
-
-#~ msgid "Go to the next page"
-#~ msgstr "Иди на следећу страницу"
-
-#~ msgid "_First Page"
-#~ msgstr "_Прва страна"
-
-#~ msgid "Go to the first page"
-#~ msgstr "Иди на прву страницу"
-
-#~ msgid "_Last Page"
-#~ msgstr "_Последња страна"
-
-#~ msgid "Go to the last page"
-#~ msgstr "Иди на последњу страницу"
-
-#~ msgid "_Contents"
-#~ msgstr "_Садржај"
-
-#~ msgid "Display help for the viewer application"
-#~ msgstr "Прикажи помоћ за програм прегледача"
-
-#~ msgid "_About"
-#~ msgstr "_О програму"
-
-#~ msgid "Display credits for the document viewer creators"
-#~ msgstr "Прикажи заслуге твораца прегледача докумената"
-
-#~ msgid "Leave fullscreen mode"
-#~ msgstr "Не преко целог екрана"
-
-#~ msgid "Scroll one page forward"
-#~ msgstr "Клизај једну страну унапред"
-
-#~ msgid "Scroll one page backward"
-#~ msgstr "Клизај једну страну уназад"
-
-#~ msgid "Focus the page selector"
-#~ msgstr "Фокусирај избирач странице"
-
-#~ msgid "Go ten pages backward"
-#~ msgstr "Иди 10 страна уназад"
-
-#~ msgid "Go ten pages forward"
-#~ msgstr "Иди 10 страна унапред"
-
-#~ msgid "_Toolbar"
-#~ msgstr "Ала_тке"
-
-#~ msgid "Show or hide the toolbar"
-#~ msgstr "Прикажи или сакриј траку са алатом"
-
-#~ msgid "_Statusbar"
-#~ msgstr "Линија са _стањем"
-
-#~ msgid "Show or hide the statusbar"
-#~ msgstr "Прикажи или сакриј линију са стањем"
-
-#~ msgid "Side _pane"
-#~ msgstr "Бочна _површ"
-
-#~ msgid "Show or hide the side pane"
-#~ msgstr "Прикажи или сакриј бочну површ"
-
-#~ msgid "_Continuous"
-#~ msgstr "_Непрекидно"
-
-#~ msgid "Show the entire document"
-#~ msgstr "Прикажи читав документ"
-
-#~ msgid "_Dual"
-#~ msgstr "По _две"
-
-#~ msgid "Show two pages at once"
-#~ msgstr "Прикажи све странице одједном"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Цео екран"
-
-#~ msgid "Expand the window to fill the screen"
-#~ msgstr "Рашири прозор да попуни цео екран"
-
-#~ msgid "_Presentation"
-#~ msgstr "_Презентације"
-
-#~ msgid "Run document as a presentation"
-#~ msgstr "Пусти документ као презентацију"
-
-#~ msgid "_Best Fit"
-#~ msgstr "Нај_боље уклапање"
-
-#~ msgid "Make the current document fill the window"
-#~ msgstr "Нека текући документ попуни прозор"
-
-#~ msgid "Fit Page _Width"
-#~ msgstr "Уклопи према _ширини"
-
-#~ msgid "Make the current document fill the window width"
-#~ msgstr "Нека текући документ попуни ширину прозора"
-
-#~ msgid "Page"
-#~ msgstr "Страница"
-
-#~ msgid "Select Page"
-#~ msgstr "Изабери страницу"
-
-#~ msgid "Zoom"
-#~ msgstr "Увећај"
-
-#~ msgid "Adjust the zoom level"
-#~ msgstr "Прилагоди ниво увећања"
-
-#~ msgid "Previous"
-#~ msgstr "Претходна"
-
-#~ msgid "Next"
-#~ msgstr "Следећа"
-
-#~ msgid "Zoom In"
-#~ msgstr "Увећај"
-
-#~ msgid "Zoom Out"
-#~ msgstr "Умањи"
-
-#~ msgid "Fit Width"
-#~ msgstr "Уклопи ширину"
-
-#~ msgid "The page of the document to display."
-#~ msgstr "Страна документа за приказ."
-
-#~ msgid "PAGE"
-#~ msgstr "СТРАНА"
-
-#~ msgid ""
-#~ "Boolean options available, true enables thumbnailing and false disables "
-#~ "the creation of new thumbnails"
-#~ msgstr ""
-#~ "Доступне истинитосне вредности, постављање укључује приказ сличица за "
-#~ "стране, а искључивање зауставља прављење нових сличица"
-
-#~ msgid "Enable thumbnailing of PDF Documents"
-#~ msgstr "Укључи прављење сличица за PDF документе"
-
-#~ msgid "Thumbnail command for PDF Documents"
-#~ msgstr "Наредба за прављење сличица за PDF документе"
-
-#~ msgid ""
-#~ "Valid command plus arguments for the PDF Document thumbnailer. See "
-#~ "caja thumbnailer documentation for more information."
-#~ msgstr ""
-#~ "Исправна наредба уз аргументе за прављење сличица за PDF документе. "
-#~ "Погледајте документацију за сличице из Наутилуса за више података."
+#. (itstool) path: entry/para
+#: C/index.docbook:712
+msgid "<keycap>=</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:714
+msgid "Zoom in"
+msgstr "Увећава"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:718
+msgid ""
+"<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (minus sign)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:719
+msgid "<keycap>-</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:721
+msgid "Zoom out"
+msgstr "Умањује"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:724
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:725
+msgid "Reload the document"
+msgstr "Поново учитајте документ"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:729
+msgid "<keycap>Page Up</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:730
+msgid "Go to the previous page"
+msgstr "Идите на претходну страницу"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:733
+msgid "<keycap>Page Down</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:734
+msgid "Go to the next page"
+msgstr "Идите на следећу страницу"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:738
+msgid "<keycap>Space</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:739
+msgid "<keycombo><keycap>Shift</keycap><keycap>Backspace</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:740
+msgid "<keycap>Return</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:742
+msgid "Scroll forward"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:746
+msgid "<keycombo><keycap>Shift</keycap><keycap>Space</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:747
+msgid "<keycap>Backspace</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:748
+msgid "<keycombo><keycap>Shift</keycap><keycap>Return</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:750
+msgid "Scroll backward"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:754
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Up</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:755
+msgid "Go a bunch of pages up"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:758
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Down</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:759
+msgid "Go a bunch of pages down"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:762
+msgid "<keycap>Home</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:763
+msgid "Go to the first page"
+msgstr "Идите на прву страницу"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:766
+msgid "<keycap>End</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:767
+msgid "Go to the last page"
+msgstr "Идите на последњу страницу"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:770
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:771
+msgid "Go to page by number or label"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:774
+msgid "<keycap>F1</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:775
+msgid "Help"
+msgstr "Помоћ"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:778
+msgid "<keycap>F5</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:779
+msgid "Run document as presentation"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:782
+msgid "<keycap>F9</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:783
+msgid "Show or hide the side pane"
+msgstr "Прикажите или сакријте бочну површ"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:786
+msgid "<keycap>F11</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:787
+msgid "Toggle fullscreen mode"
+msgstr "Искључује/укључује приказ преко целог екрана"
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "веза"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
