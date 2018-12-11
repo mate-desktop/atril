@@ -1,92 +1,101 @@
-# Nederlandse vertaling van Atril-documentatie
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Michael Steenbeek <m.o.steenbeek@gmail.com>, 2018
+# Pjotr <pjotrvertaalt@gmail.com>, 2018
+# dragnadh <dragnadh@gmail.com>, 2018
+# René Devers <rene.devers@gmail.com>, 2018
 # 
-# Reinout van Schouwen <reinout@cs.vu.nl>, 2006
-# Wouter Bolsterlee <uws+mate@xs4all.nl>, 2006.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: Atril \n"
-"POT-Creation-Date: 2006-10-20 17:42+0200\n"
-"PO-Revision-Date: 2006-10-20 17:51+0200 \n"
-"Last-Translator: Wouter Bolsterlee <uws+mate@xs4all.nl>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"POT-Creation-Date: 2018-09-26 17:25+0200\n"
+"PO-Revision-Date: 2018-09-18 09:06+0000\n"
+"Last-Translator: René Devers <rene.devers@gmail.com>, 2018\n"
+"Language-Team: Dutch (https://www.transifex.com/mate/teams/13566/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/atril.xml:146(None)
-msgid ""
-"@@image: 'figures/atril_start_window.png'; "
-"md5=7f4da5e33bcac35738a268d93d497d47"
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Launchpad-bijdragers:\n"
+"  Daniël H. https://launchpad.net/~daan-is-here\n"
+"  Mark Cilissen https://launchpad.net/~pixlism\n"
+"  Peter van der Does https://launchpad.net/~pdoes\n"
+"  Tom Louwrier https://launchpad.net/~tom-louwrier\n"
+"  Twan Coenraad https://launchpad.net/~t.coenraad\n"
+"  cumulus007 https://launchpad.net/~cumulus-007\n"
+"  kactusrvm https://launchpad.net/~kactusrvm\n"
+"  kriekske https://launchpad.net/~kriekenbuik-gmail\n"
+"Andere bijdragers:\n"
+"Pjotr"
+
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:25
+msgid "Atril Document Viewer Manual"
 msgstr ""
 
-#: C/atril.xml:25(title)
-msgid "Atril Document Viewer Manual"
-msgstr "Handleiding van Atril Documentviewer"
-
-#: C/atril.xml:27(para)
+#. (itstool) path: abstract/para
+#: C/index.docbook:27
 msgid ""
 "The Atril Document Viewer application enables you to view documents of "
 "various formats like Portable Document Format (PDF) files and PostScript "
 "files"
 msgstr ""
-"De toepassing Atril Documentviewer stelt u in staat documenten in diverse "
-"formaten zoals Portable Document Format (PDF)en PostScript te bekijken."
 
-#: C/atril.xml:33(year)
-msgid "2005"
-msgstr "2005"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:32
+msgid "<year>2015</year> <holder>MATE Documentation Project</holder>"
+msgstr "<year>2015</year> <holder>MATE Documentatie Project</holder>"
 
-#: C/atril.xml:34(holder) C/atril.xml:91(para)
-msgid "Nickolay V. Shmyrev"
-msgstr "Nickolay V. Shmyrev"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
+msgid "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
+msgstr ""
 
-#: C/atril.xml:37(year)
-msgid "2004"
-msgstr "2004"
-
-#: C/atril.xml:38(holder) C/atril.xml:61(orgname)
-msgid "Sun Microsystems"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:40
+msgid "<year>2004</year> <holder>Sun Microsystems</holder>"
 msgstr "Sun Microsystems"
 
-#: C/atril.xml:49(publishername) C/atril.xml:67(orgname)
-#: C/atril.xml:92(para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:104
 msgid "MATE Documentation Project"
-msgstr "MATE Documentation Project"
+msgstr "MATE Documentatie Project"
 
-#: C/atril.xml:2(para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:56 C/index.docbook:113 C/index.docbook:121
+msgid "GNOME Documentation Project"
+msgstr "GNOME Documentatie Project"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
 "in the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"Toestemming wordt verleend tot het kopiëren, verspreiden en/of wijzigen van "
-"dit document onder de bepalingen van de GNU Vrije Documentatie Licentie, "
-"versie 1.1 of iedere latere versie uitgegeven door de Free Software "
-"Foundation; zonderInvariante Secties, zonder Omslagteksten voor de Voorkant "
-"en zonderOmslagteksten voor de Achterkant. Een kopie van de licentie is "
-"opgenomen via deze <ulink type=\"help\" url=\"help:fdl\">referentie</ulink> "
-"of in het bestand COPYING-DOCS dat bijgesloten is bij deze handleiding."
 
-#: C/atril.xml:12(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of MATE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in "
-"section 6 of the license."
+"you can do so by adding a copy of the license to the manual, as described in"
+" section 6 of the license."
 msgstr ""
-"Deze handleiding is onderdeel van een verzameling MATE-handleidingen die "
-"gedistribueerd worden onder de GFDL. Als u deze handleiding los van de "
-"verzameling wilt distribueren, dan kunt u dit doen door een exemplaar van de "
-"licentie toe te voegen aan de handleiding, zoals omschreven in sectie 6 van "
-"de licentie."
 
-#: C/atril.xml:19(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any MATE "
@@ -94,13 +103,9 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"Vele van de namen die door bedrijven worden gebruikt om hun producten en "
-"diensten te onderscheiden zijn geclaimd als handelsmerken. Wanneer deze "
-"namen voorkomen in wat voor MATE-documentatie dan ook, en de leden van het "
-"MATE Documentation Project zijn van deze handelsmerken op de hoogte, dan "
-"zijn deze namen in hoofdletters of met een beginhoofdletter weergegeven."
 
-#: C/atril.xml:35(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -114,488 +119,554 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DIT DOCUMENT WORDT “ALS ZODANIG” AANGEBODEN, ZONDER ENIGE VORM VAN GARANTIE, "
-"HETZIJ EXPLICIET HETZIJ IMPLICIET, MET INBEGRIP VAN, MAAR NIET BEPERKT TOT, "
-"GARANTIES DAT HET DOCUMENT OF EEN GEWIJZIGDE VERSIE VAN HET DOCUMENT VRIJ IS "
-"VAN FOUTEN, VERKOOPBAAR IS, GESCHIKT IS VOOR ENIG SPECIFIEK DOEL OF GEEN "
-"INBREUK MAAKT. HET GEHELE RISICO MET BETREKKING TOT DE KWALITEIT, "
-"ACCURAATHEID EN PRESTATIES VAN HET DOCUMENT OF EEN GEWIJZIGDE VERSIE VAN HET "
-"DOCUMENT LIGT BIJ U. ALS ENIG DOCUMENT OF GEWIJZIGDE VERSIE OP WELKE WIJZE "
-"DAN OOK FOUTIEF BLIJKT TE ZIJN, DAN NEEMT U (NIET DE OORSPRONKELIJKE "
-"SCHRIJVER, AUTEUR OF IEMAND ANDERS DIE BIJGEDRAGEN HEEFT) DE KOSTEN OP ZICH "
-"VAN AL HET VEREISTE ONDERH0UD, REPARATIE OF CORRECTIE. DEZE "
-"VRIJWARINGSVERKLARING VAN GARANTIE VORMT EEN ESSENTIEEL DEEL VAN DEZE "
-"LICENTIE. GEEN ENKEL GEBRUIK VAN ENIG DOCUMENT OF GEWIJZIGDE VERSIE VAN HET "
-"DOCUMENT IS HIERONDER TOEGESTAAN BEHALVE ONDER DEZE VERKLARING; EN "
 
-#: C/atril.xml:55(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"ONDER GEEN ENKELE OMSTANDIGHEID EN ONDER GEEN ENKELE JURIDISCHE THEORIE, "
-"HETZIJ IN DELICT (WAARONDER NALATIGHEID), CONTRACT, OF OP ANDERE WIJZE, IS "
-"DE AUTEUR, OORSPRONKELIJKE SCHRIJVER, ENIGE PERSOON DIE HEEFT BIJGEDRAGEN, "
-"OF ENIGE DISTRIBUTEUR VAN HET DOCUMENT OF GEWIJZIGDE VERSIE VAN HET "
-"DOCUMENT, OF ENIGE TOELEVERANCIER VAN ZULKE PARTIJEN, AANSPRAKELIJK TE "
-"STELLEN NAAR ENIGE PERSOON VOOR WELKE DIRECTE-, INDIRECTE-, SPECIALE-, "
-"INCIDENTELE- OF GEVOLGSCHADE DAN OOK, MET INBEGRIP VAN, MAAR NIET BEPERKT "
-"TOT, SCHADE TEN GEVOLGDE VAN VERLIES VAN GOEDE WIL, ONDERBREKING VAN WERK, "
-"SLECHT FUNCTIONEREN OF FALEN VAN DE COMPUTER, OF WAT VOOR ANDERE SCHADE DAN "
-"OOK RESULTEREND UIT OF GERELATEERD MET HET GEBRUIK VAN HET DOCUMENT EN "
-"GEWIJZIGDE VERSIES VAN HET DOCUMENT, ZELFS ALS ZULK EEN PARTIJ OP DE HOOGTE "
-"WAS GEWEEST VAN DE MOGELIJKHEID TOT DERGELIJKE SCHADE."
 
-#: C/atril.xml:28(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
-"HET DOCUMENT EN GEWIJZIGDE VERSIES VAN HET DOCUMENT WORDEN TER BESCHIKKING "
-"GESTELD ONDER DE VOORWAARDEN VAN DE GNU FREE DOCUMENTATION LICENSE MET DIEN "
-"VERSTANDE DAT: <placeholder-1/>"
 
-#: C/atril.xml:59(firstname)
-msgid "Sun"
-msgstr "Sun"
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:65
+msgid ""
+"<firstname>MATE Documentation Project</firstname> <surname/> "
+"<affiliation><orgname>MATE Desktop</orgname></affiliation>"
+msgstr ""
 
-#: C/atril.xml:60(surname)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:70
+msgid ""
+"<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
+"<affiliation><orgname>Sun Microsystems</orgname></affiliation>"
+msgstr ""
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:75
+msgid ""
+"<firstname>Nickolay V. </firstname> <surname>Shmyrev</surname> <affiliation>"
+" <orgname>GNOME Documentation Project</orgname> <address> "
+"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
+msgstr ""
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:103
 msgid "MATE Documentation Team"
-msgstr "MATE Documentation Team"
+msgstr ""
 
-#: C/atril.xml:64(firstname)
-msgid "Nickolay V."
-msgstr "Nickolay V."
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:99
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.2</revnumber> <date>July "
+"2015</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:65(surname)
-msgid "Shmyrev"
-msgstr "Shmyrev"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:111
+msgid "Niels Giesen"
+msgstr ""
 
-#: C/atril.xml:68(email)
-msgid "nshmyrev@yandex.ru"
-msgstr "nshmyrev@yandex.ru"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:112
+msgid "Claude Paroz"
+msgstr ""
 
-#: C/atril.xml:88(revnumber)
-msgid "Atril Document Viewer Manual V1.0"
-msgstr "Handleiding van Atril Documentviewer versie 1.0"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:107
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.1</revnumber> "
+"<date>2008-04-05</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:89(date)
-msgid "2005-04-06"
-msgstr "2005-04-06"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:120
+msgid "Nickolay V. Shmyrev"
+msgstr ""
 
-#: C/atril.xml:97(releaseinfo)
-msgid "This manual describes version 0.2 of Atril Document Viewer"
-msgstr "Deze handleiding beschrijft versie 0.2 van de Atril documentviewer"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:116
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.0</revnumber> "
+"<date>2005-04-06</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:100(title)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:126
+msgid "This manual describes version 1.10.1 of Atril Document Viewer"
+msgstr ""
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:129
 msgid "Feedback"
-msgstr "Terugkoppeling"
+msgstr ""
 
-#: C/atril.xml:101(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:130
 msgid ""
 "To report a bug or make a suggestion regarding the Atril Document Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"mate-feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink url=\"help"
+":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
-"Om een fout te rapporteren of suggestie te doen met betrekking tot de Atril "
-"documentviewer of deze handleiding, volgt u de aanwijzingen op de <ulink url="
-"\"help:mate-feedback\" type=\"help\">MATE terugkoppelingspagina</ulink>."
 
-#: C/atril.xml:108(primary)
-msgid "Atril Document Viewer"
-msgstr "Atril Documentviewer"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:136
+msgid "<primary>Atril Document Viewer</primary>"
+msgstr ""
 
-#: C/atril.xml:111(primary)
-msgid "atril"
-msgstr "atril"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:139
+msgid "<primary>atril</primary>"
+msgstr ""
 
-#: C/atril.xml:119(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:148
 msgid "Introduction"
 msgstr "Introductie"
 
-#: C/atril.xml:120(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:149
 msgid ""
-"The <application>Atril Document Viewer</application> application enables "
-"you to view documents of various formats like Portable Document Format (PDF) "
-"files and PostScript files. <application>Atril Document Viewer</"
-"application> follows Freedesktop.org and MATE standards to provide "
-"integration with Desktop Environment."
+"The <application>Atril Document Viewer</application> application enables you"
+" to view documents of various formats like Portable Document Format (PDF) "
+"files and PostScript files. <application>Atril Document Viewer</application>"
+" follows Freedesktop.org and MATE standards to provide integration with "
+"Desktop Environment."
 msgstr ""
-"De toepassing <application>Atril Documentviewer</application> " 
-"stelt u in staat documenten in diverse formaten zoals Portable " 
-"Document Format (PDF) en PostScript te bekijken. " 
-"<application>Atril Documentviewer</application> volgt "
-"Freedesktop.org- en MATE-standaarden om integratie met de "
-"werkomgeving tot stand te brengen."
 
-#: C/atril.xml:127(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:156
 msgid "Getting Started"
-msgstr "De eerste stappen"
+msgstr ""
 
-#: C/atril.xml:130(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:159
 msgid "To Start Atril Document Viewer"
-msgstr "Het starten van Atril Documentviewer"
+msgstr ""
 
-#: C/atril.xml:131(para)
-#, fuzzy
+#. (itstool) path: sect2/para
+#: C/index.docbook:160
 msgid ""
 "<application>Atril Document Viewer</application> starts when you open a "
 "document such as a PDF or PostScript file."
 msgstr ""
-"Het venster <application>Atril Documentviewer</application> bevat de "
-"volgende elementen:"
 
-#: C/atril.xml:132(para)
-#, fuzzy
+#. (itstool) path: sect2/para
+#: C/index.docbook:161
 msgid ""
-"Alternatively, you can start <application>Atril Document Viewer</"
-"application> from the command line, with the command: <command>atril</"
-"command>."
+"Alternatively, you can start <application>Atril Document "
+"Viewer</application> from the command line, with the command: "
+"<command>atril</command>."
 msgstr ""
-"Wannere u <application>Atril Documentviewer</application> start, wordt het "
-"volgende venster getoond."
 
-#: C/atril.xml:137(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:166
 msgid "When You Start Atril Document Viewer"
-msgstr "Wanneer u Atril Documentviewer gestart heeft"
+msgstr ""
 
-#: C/atril.xml:138(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:167
 msgid ""
 "When you start <application>Atril Document Viewer</application>, the "
 "following window is displayed."
 msgstr ""
-"Wannere u <application>Atril Documentviewer</application> start, wordt het "
-"volgende venster getoond."
 
-#: C/atril.xml:142(title)
+#. (itstool) path: figure/title
+#: C/index.docbook:171
 msgid "Atril Document Viewer Window"
-msgstr "Atril Documentviewer-venster"
-
-#: C/atril.xml:149(phrase)
-msgid ""
-"Shows Atril Document Viewer main window. Contains titlebar, menubar, "
-"toolbar and display area. Menubar contains File, Edit, View, Go and Help "
-"menus."
 msgstr ""
-"Toont het hoofdvenster van Atril Documentviewer. Bevat een titelbalk, "
-"menubalk, werkbalk en weergavegedeelte. De menubalk bevat de menu's Bestand, "
-"Bewerken, Beeld, Ga naar en Hulp."
 
-#: C/atril.xml:155(para)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:175
+msgctxt "_"
+msgid ""
+"external ref='figures/atril_start_window.png' "
+"md5='b960ec0ad3ac9b113710e4e449438499'"
+msgstr ""
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:173
+msgid ""
+"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Atril Document "
+"Viewer main window. Contains titlebar, menubar, toolbar and display area. "
+"Menubar contains File, Edit, View, Go and Help menus. </phrase> "
+"</textobject>"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:184
 msgid ""
 "The <application>Atril Document Viewer</application> window contains the "
 "following elements:"
 msgstr ""
-"Het venster <application>Atril Documentviewer</application> bevat de "
-"volgende elementen:"
 
-#: C/atril.xml:159(term) C/atril.xml:207(para)
+#. (itstool) path: varlistentry/term
+#. (itstool) path: entry/para
+#: C/index.docbook:188 C/index.docbook:236
 msgid "Menubar"
-msgstr "Menubalk"
+msgstr ""
 
-#: C/atril.xml:161(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:190
 msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
 msgstr ""
 
-#: C/atril.xml:165(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:194
 msgid "Toolbar"
-msgstr "Werkbalk"
+msgstr ""
 
-#: C/atril.xml:167(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:196
 msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
 msgstr ""
 
-#: C/atril.xml:171(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:200
 msgid "Display area"
-msgstr "Weergavegedeelte"
+msgstr ""
 
-#: C/atril.xml:173(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:202
 msgid "The display area displays the document."
-msgstr "Het weergavegedeelte geeft het document weer."
+msgstr ""
 
-#: C/atril.xml:187(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:216
 msgid "UI Component"
-msgstr "UI-component"
+msgstr ""
 
-#: C/atril.xml:189(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:218 C/index.docbook:666
 msgid "Action"
 msgstr "Actie"
 
-#: C/atril.xml:194(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:223
 msgid "Window"
-msgstr "Venster"
-
-#: C/atril.xml:198(para)
-msgid ""
-"Drag a file into the <application>Atril Document Viewer</application> "
-"window from another application such as a file manager."
 msgstr ""
 
-#: C/atril.xml:201(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:227
+msgid ""
+"Drag a file into the <application>Atril Document Viewer</application> window"
+" from another application such as a file manager."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:230
 msgid "Double-click on the file name in the file manager"
-msgstr "Dubbelklik op de bestandsnaam in het bestandsbeheer"
-
-#: C/atril.xml:208(para) C/atril.xml:235(para)
-msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></"
-"menuchoice>."
 msgstr ""
 
-#: C/atril.xml:212(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:237
+msgid ""
+"Choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:241
 msgid "Shortcut keys"
-msgstr "Sneltoetsen"
+msgstr ""
 
-#: C/atril.xml:213(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:242
 msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
-msgstr "Druk op <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
+msgstr ""
 
-#: C/atril.xml:178(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:207
 msgid ""
 "In <application>Atril Document Viewer</application>, you can perform the "
 "same action in several ways. For example, you can open a document in the "
-"following ways: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1\" "
-"rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
-"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
-"tgroup></informaltable>"
+"following ways: <_:informaltable-1/>"
 msgstr ""
 
-#: C/atril.xml:219(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:248
 msgid "This manual documents functionality from the menubar."
-msgstr "Deze handleiding documenteert de functionaliteit van de menubalk."
+msgstr ""
 
-#: C/atril.xml:227(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:256
 msgid "Usage"
 msgstr "Gebruik"
 
-#: C/atril.xml:231(title)
-msgid "To Open a File"
-msgstr "Een bestand openen"
-
-#: C/atril.xml:232(para)
-msgid "To open a File, perform the following steps:"
-msgstr "Om een bestand te openen, neemt u de volgende stappen:"
-
-#: C/atril.xml:239(para)
-msgid ""
-"In the <guilabel>Load file</guilabel> dialog, select the file you want to "
-"open."
+#. (itstool) path: sect2/title
+#: C/index.docbook:260
+msgid "To Open A Document"
 msgstr ""
 
-#: C/atril.xml:244(para)
-msgid ""
-"Click <guibutton>Open</guibutton>. <application>Atril Document Viewer</"
-"application> displays the name of the document in the titlebar of the window."
+#. (itstool) path: sect2/para
+#: C/index.docbook:261
+msgid "To open a document, perform the following steps:"
 msgstr ""
 
-#: C/atril.xml:249(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
 msgid ""
-"To open another document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Open</guimenuitem></menuchoice> again. "
+"Choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> "
+"</menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:268
+msgid ""
+"In the <guilabel>Open Document</guilabel> dialog, select the file you want "
+"to open."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
+msgid ""
+"Click <guibutton>Open</guibutton>. <application>Atril Document "
+"Viewer</application> displays the name of the document in the titlebar of "
+"the window."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:278
+msgid ""
+"To open another document, choose <menuchoice> "
+"<guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. "
 "<application>Atril Document Viewer</application> opens each file in a new "
 "window."
 msgstr ""
 
-#: C/atril.xml:252(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:281
 msgid ""
 "If you try to open a document with format that <application>Atril Document "
 "Viewer</application> does not recognize, the application displays an error "
 "message."
 msgstr ""
 
-#: C/atril.xml:258(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:287
 msgid "To Navigate Through a Document"
-msgstr "Navigeren door een document"
+msgstr ""
 
-#: C/atril.xml:259(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:288
 msgid "You can navigate through a file as follows:"
-msgstr "U kunt als volgt door een bestand navigeren:"
-
-#: C/atril.xml:262(para)
-msgid ""
-"To view the next page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Next Page</guimenuitem></menuchoice>."
 msgstr ""
 
-#: C/atril.xml:266(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:291
 msgid ""
-"To view the previous page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Previous Page</guimenuitem></menuchoice>."
+"To view the next page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Next Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: C/atril.xml:270(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:295
 msgid ""
-"To view the first page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>First Page</guimenuitem></menuchoice>."
+"To view the previous page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: C/atril.xml:274(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
 msgid ""
-"To view the last page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Last Page</guimenuitem></menuchoice>."
+"To view the first page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>First Page</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: C/atril.xml:278(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:303
+msgid ""
+"To view the last page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>Last Page</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:307
 msgid ""
 "To view a particular page, enter the page number or page label in the text "
 "box on the toolbar, then press <keycap>Return</keycap>."
 msgstr ""
 
-#: C/atril.xml:285(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
 msgid "To Scroll a Page"
-msgstr "Een pagina verschuiven"
-
-#: C/atril.xml:286(para)
-msgid ""
-"To display the page contents that are not currently displayed in the display "
-"area, use the following methods:"
 msgstr ""
 
-#: C/atril.xml:289(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
+msgid ""
+"To display the page contents that are not currently displayed in the display"
+" area, use the following methods:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:318
 msgid "Use the arrow keys or space key on the keyboard."
-msgstr "Gebruik de pijltjestoetsen of spatiebalk op het toetsenbord."
-
-#: C/atril.xml:292(para)
-msgid ""
-"Drag the display area in the opposite direction to the direction in which "
-"you want to scroll. For example, to scroll down the page, drag the display "
-"area upwards in the window."
 msgstr ""
 
-#: C/atril.xml:295(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:321
+msgid ""
+"Drag the display area by clicking with the middle mouse button somewhere in "
+"the document and then moving the mouse. For example, to scroll down the "
+"page, drag the display area upwards in the window."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:324
 msgid "Use the scrollbars on the window."
-msgstr "Gebruik de schuifbalken in het venster."
+msgstr ""
 
-#: C/atril.xml:302(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:331
 msgid "To Change the Page Size"
-msgstr "Het veranderen van de paginagrootte"
-
-#: C/atril.xml:303(para)
-msgid ""
-"You can use the following methods to resize a page in the "
-"<application>Atril Document Viewer</application> display area:"
 msgstr ""
 
-#: C/atril.xml:308(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:332
 msgid ""
-"To increase the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>."
+"You can use the following methods to resize a page in the <application>Atril"
+" Document Viewer</application> display area:"
 msgstr ""
 
-#: C/atril.xml:313(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:337
 msgid ""
-"To decrease the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom Out</guimenuitem></menuchoice>."
+"To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: C/atril.xml:318(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:342
+msgid ""
+"To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:347
 msgid ""
 "To resize a page to have the same width as the <application>Atril Document "
-"Viewer</application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Fit page width</guimenuitem></menuchoice>."
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Fit page width</guimenuitem> "
+"</menuchoice>."
 msgstr ""
 
-#: C/atril.xml:323(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:352
 msgid ""
-"To resize a page to fit within the <application>Atril Document Viewer</"
-"application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Best Fit</guimenuitem></menuchoice>."
+"To resize a page to fit within the <application>Atril Document "
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Best Fit</guimenuitem> </menuchoice>."
 msgstr ""
 
-#: C/atril.xml:328(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:357
 msgid ""
 "To resize the <application>Atril Document Viewer</application> window to "
-"have the same width and height as the screen, choose "
-"<menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></"
-"menuchoice>. To resize the <application>Atril Document Viewer</application> "
-"window to the original size, click on the <guibutton>Exit Full Screen</"
-"guibutton> button."
+"have the same width and height as the screen, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Full Screen</guimenuitem> "
+"</menuchoice>. To resize the <application>Atril Document "
+"Viewer</application> window to the original size, click on the "
+"<guibutton>Exit Full Screen</guibutton> button."
 msgstr ""
 
-#: C/atril.xml:336(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:365
 msgid "To View Pages or Document Structure"
-msgstr "Bekijken van pagina's of de documentstructuur"
-
-#: C/atril.xml:337(para)
-msgid "To view bookmarks or pages, perform the following steps:"
-msgstr "Om bladwijzers of pagina's te bekijken kunt u het volgende doen:"
-
-#: C/atril.xml:341(para)
-msgid ""
-"Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</"
-"guimenuitem></menuchoice> or press <keycap>F9</keycap>."
 msgstr ""
-"Kies <menuchoice><guimenu>Beeld</guimenu><guimenuitem>Zijbalk</guimenuitem></"
-"menuchoice> of druk op <keycap>F9</keycap>."
 
-#: C/atril.xml:346(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:366
+msgid "To view bookmarks or pages, perform the following steps:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:370
+msgid ""
+"Choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Sidebar</guimenuitem> </menuchoice> or press "
+"<keycap>F9</keycap>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:375
 msgid ""
 "Use the drop-down list in the side-pane header to select whether to display "
 "document structure or pages in the side pane."
 msgstr ""
-"Gebruik het uitklapmenu in de zijbalk om een keuze te maken tussen de "
-"documentstructuur en de pagina's."
 
-#: C/atril.xml:351(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:380
 msgid ""
 "Use the side-pane scrollbars to display the required item or page in the "
 "side pane."
 msgstr ""
-"Gebruik de schuifbalken in de zijbalk om het gewenste gedeelte te tonen."
 
-#: C/atril.xml:356(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:385
 msgid ""
 "Click on an entry to navigate to that location in the document. Click on a "
 "page to navigate to that page in the document."
 msgstr ""
-"Klik op het juiste gedeelte van de zijbalk om naar gedeelte van het document "
-"te tonen. Door op een pagina te klikken komt u op die pagina terecht."
 
-#: C/atril.xml:362(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:391
 msgid "To View the Properties of a Document"
-msgstr "Bekijken van eigenschappen van een document"
-
-#: C/atril.xml:363(para)
-msgid ""
-"To view the properties of a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Properties</guimenuitem></menuchoice>."
 msgstr ""
-"Om de eigenschappen van een document te bekijken, kiest u "
-"<menuchoice><guimenu>Bestand</guimenu><guimenuitem>Eigenschappen</"
-"guimenuitem></menuchoice>."
 
-#: C/atril.xml:369(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:392
 msgid ""
-"The <guilabel>Properties</guilabel> dialog displays all information available"
+"To view the properties of a document, choose <menuchoice> "
+"<guimenu>File</guimenu> <guimenuitem>Properties</guimenuitem> </menuchoice>."
 msgstr ""
-"Het <guilabel>Eigenschappen</guilabel>-venster toont alle beschikbare "
-"informatie."
 
-#: C/atril.xml:375(title)
+#. (itstool) path: sect2/para
+#: C/index.docbook:398
+msgid ""
+"The <guilabel>Properties</guilabel> dialog displays all information "
+"available"
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:404
 msgid "To Print a Document"
-msgstr "Een document afdrukken"
-
-#: C/atril.xml:376(para)
-msgid ""
-"To print a Document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
 msgstr ""
-"Om een document af te drukken, kiest u <menuchoice><guimenu>Bestand</"
-"guimenu><guimenuitem>Afdrukken</guimenuitem></menuchoice>."
 
-#: C/atril.xml:380(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:405
+msgid ""
+"To print a Document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Print</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: note/para
+#: C/index.docbook:409
 msgid ""
 "If you cannot choose the <guimenuitem>Print</guimenuitem> menu item, the "
 "author of the document has disabled the print option for this document. To "
@@ -604,326 +675,687 @@ msgid ""
 "about password-protected files."
 msgstr ""
 
-#: C/atril.xml:384(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:413
 msgid ""
 "The <guilabel>Print</guilabel> dialog has the following tabbed sections:"
 msgstr ""
-"Het <guilabel>Afdrukken</guilabel>-venster bevat de onderstaande onderdelen:"
 
-#: C/atril.xml:390(link) C/atril.xml:406(title)
+#. (itstool) path: listitem/para
+#: C/index.docbook:418
+msgid "<link linkend=\"print-dialog-job\">Job</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:423
+msgid "<link linkend=\"print-dialog-printer\">Printer</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:428
+msgid "<link linkend=\"print-dialog-paper\">Paper</link>"
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:435
 msgid "Job"
 msgstr "Taak"
 
-#: C/atril.xml:395(link) C/atril.xml:428(title) C/atril.xml:430(guilabel)
-msgid "Printer"
-msgstr "Printer"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:437
+msgid "<guilabel>Print range</guilabel>"
+msgstr ""
 
-#: C/atril.xml:400(link) C/atril.xml:522(title)
-msgid "Paper"
-msgstr "Papier"
-
-#: C/atril.xml:408(guilabel)
-msgid "Print range"
-msgstr "Afdrukbereik"
-
-#: C/atril.xml:410(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:439
 msgid ""
 "Select one of the following options to determine how many pages to print:"
 msgstr ""
-"Kies een van de onderstaande opties om aan te geven hoeveel pagina's "
-"afgedrukt dienen te worden:"
 
-#: C/atril.xml:413(guilabel)
-msgid "All"
-msgstr "Alle"
+#. (itstool) path: listitem/para
+#: C/index.docbook:442
+msgid "<guilabel>All</guilabel>"
+msgstr ""
 
-#: C/atril.xml:414(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:443
 msgid "Select this option to print all of the pages in the document."
-msgstr "Gebruik deze optie om alle pagina's af te drukken."
-
-#: C/atril.xml:417(guilabel)
-msgid "Pages From"
-msgstr "Pagina's vanaf"
-
-#: C/atril.xml:418(para)
-msgid ""
-"Select this option to print the selected range of pages in the document. Use "
-"the spin boxes to specify the first page and last page of the range."
-msgstr ""
-"Gebruik deze optie om het geselecteerde gedeelte van de pagina's af te "
-"drukken. U kunt hierbij de eerste en de laatste pagina die afgedrukt dienen "
-"te worden opgeven."
-
-#: C/atril.xml:432(para)
-msgid ""
-"Use this drop-down list to select the printer to which you want to print the "
-"document."
 msgstr ""
 
-#: C/atril.xml:434(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:446
+msgid "<guilabel>Pages From</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:447
+msgid ""
+"Select this option to print the selected range of pages in the document. Use"
+" the spin boxes to specify the first page and last page of the range."
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:457
+msgid "Printer"
+msgstr "Printer"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:459
+msgid "<guilabel>Printer</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:461
+msgid ""
+"Use this drop-down list to select the printer to which you want to print the"
+" document."
+msgstr ""
+
+#. (itstool) path: note/para
+#: C/index.docbook:463
 msgid ""
 "The <guilabel>Create a PDF document</guilabel> option is not supported in "
 "this version of <application>Atril Document Viewer</application>."
 msgstr ""
 
-#: C/atril.xml:440(guilabel)
-msgid "Settings"
-msgstr "Instellingen"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:469
+msgid "<guilabel>Settings</guilabel>"
+msgstr ""
 
-#: C/atril.xml:442(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:471
 msgid "Use this drop-down list to select the printer settings."
 msgstr ""
 
-#: C/atril.xml:444(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:473
 msgid ""
 "To configure the printer, click <guibutton>Configure</guibutton>. For "
 "example, you can enable or disable duplex printing, or schedule delayed "
 "printing, if this functionality is supported by the printer."
 msgstr ""
 
-#: C/atril.xml:448(guilabel)
-msgid "Location"
-msgstr "Locatie"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:477
+msgid "<guilabel>Location</guilabel>"
+msgstr ""
 
-#: C/atril.xml:450(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:479
 msgid ""
 "Use this drop-down list to select one of the following print destinations:"
 msgstr ""
 
-#: C/atril.xml:455(guilabel)
-msgid "CUPS"
-msgstr "CUPS"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:484
+msgid "<guilabel>CUPS</guilabel>"
+msgstr ""
 
-#: C/atril.xml:457(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:486
 msgid "Print the document to a CUPS printer."
-msgstr "Het document afdrukken naar een CUPS-printer."
+msgstr ""
 
-#: C/atril.xml:461(para)
+#. (itstool) path: note/para
+#: C/index.docbook:490
 msgid ""
 "If the selected printer is a CUPS printer, <guilabel>CUPS</guilabel> is the "
 "only entry in this drop-down list."
 msgstr ""
 
-#: C/atril.xml:468(guilabel)
-msgid "lpr"
-msgstr "lpr"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:497
+msgid "<guilabel>lpr</guilabel>"
+msgstr ""
 
-#: C/atril.xml:470(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:499
 msgid "Print the document to a printer."
-msgstr "Het document naar een printer afdrukken."
+msgstr ""
 
-#: C/atril.xml:476(guilabel)
-msgid "File"
-msgstr "Bestand"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:505
+msgid "<guilabel>File</guilabel>"
+msgstr ""
 
-#: C/atril.xml:478(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:507
 msgid "Print the document to a PostScript file."
-msgstr "Het document naar een PostScript-bestand afdrukken."
+msgstr ""
 
-#: C/atril.xml:481(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:510
 msgid ""
 "Click <guibutton>Save As</guibutton> to display a dialog where you specify "
 "the name and location of the PostScript file."
 msgstr ""
 
-#: C/atril.xml:487(guilabel)
-msgid "Custom"
-msgstr "Aangepast"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:516
+msgid "<guilabel>Custom</guilabel>"
+msgstr ""
 
-#: C/atril.xml:489(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:518
 msgid "Use the specified command to print the document."
 msgstr ""
 
-#: C/atril.xml:492(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:521
 msgid ""
 "Type the name of the command in the text box. Include all command-line "
 "arguments."
 msgstr ""
 
-#: C/atril.xml:500(guilabel)
-msgid "State"
-msgstr "Status"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:529
+msgid "<guilabel>State</guilabel>"
+msgstr ""
 
-#: C/atril.xml:502(para) C/atril.xml:508(para) C/atril.xml:514(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:531 C/index.docbook:537 C/index.docbook:543
 msgid ""
 "This functionality is not supported in this version of <application>Atril "
 "Document Viewer</application>."
 msgstr ""
 
-#: C/atril.xml:506(guilabel)
-msgid "Type"
-msgstr "Type"
-
-#: C/atril.xml:512(guilabel)
-msgid "Comment"
-msgstr "Opmerkingen"
-
-#: C/atril.xml:524(guilabel)
-msgid "Paper size"
-msgstr "Papiergrootte"
-
-#: C/atril.xml:526(para)
-msgid ""
-"Use this drop-down list to select the size of the paper to which you want to "
-"print the document."
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:535
+msgid "<guilabel>Type</guilabel>"
 msgstr ""
 
-#: C/atril.xml:529(guilabel)
-msgid "Width"
-msgstr "Breedte"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:541
+msgid "<guilabel>Comment</guilabel>"
+msgstr ""
 
-#: C/atril.xml:531(para)
+#. (itstool) path: sect3/title
+#: C/index.docbook:551
+msgid "Paper"
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:553
+msgid "<guilabel>Paper size</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:555
+msgid ""
+"Use this drop-down list to select the size of the paper to which you want to"
+" print the document."
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:558
+msgid "<guilabel>Width</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:560
 msgid ""
 "Use this spin box to specify the width of the paper. Use the adjacent drop-"
 "down list to change the measurement unit."
 msgstr ""
 
-#: C/atril.xml:534(guilabel)
-msgid "Height"
-msgstr "Hoogte"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:563
+msgid "<guilabel>Height</guilabel>"
+msgstr ""
 
-#: C/atril.xml:536(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:565
 msgid "Use this spin box to specify the height of the paper."
-msgstr "Gebruik dit draaivakje om de hoogte van het papier aan te geven."
+msgstr ""
 
-#: C/atril.xml:539(guilabel)
-msgid "Feed orientation"
-msgstr "Invoeroriëntatie"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:568
+msgid "<guilabel>Feed orientation</guilabel>"
+msgstr ""
 
-#: C/atril.xml:541(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:570
 msgid ""
 "Use this drop-down list to select the orientation of the paper in the "
 "printer."
 msgstr ""
 
-#: C/atril.xml:544(guilabel)
-msgid "Page orientation"
-msgstr "Paginaoriëntatie"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:573
+msgid "<guilabel>Page orientation</guilabel>"
+msgstr ""
 
-#: C/atril.xml:546(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:575
 msgid "Use this drop-down list to select the page orientation."
 msgstr ""
 
-#: C/atril.xml:549(guilabel)
-msgid "Layout"
-msgstr "Layout"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:578
+msgid "<guilabel>Layout</guilabel>"
+msgstr ""
 
-#: C/atril.xml:551(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:580
 msgid ""
 "Use this drop-down list to select the page layout. A preview of each layout "
 "that you select is displayed in the <guilabel>Preview</guilabel> area."
 msgstr ""
 
-#: C/atril.xml:554(guilabel)
-msgid "Paper Tray"
-msgstr "Papiervak"
-
-#: C/atril.xml:556(para)
-msgid "Use this drop-down list to select the paper tray."
-msgstr "Gebruik deze uitklaplijst om het papiervak te selecteren."
-
-#: C/atril.xml:566(title)
-msgid "To Copy a Document"
-msgstr "Een document kopiëren"
-
-#: C/atril.xml:567(para)
-msgid "To copy a file, perform the following steps:"
-msgstr "Om een document te kopiëren neemt u de volgende stappen:"
-
-#: C/atril.xml:571(para)
-msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Save a Copy</"
-"guimenuitem></menuchoice>."
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:583
+msgid "<guilabel>Paper Tray</guilabel>"
 msgstr ""
 
-#: C/atril.xml:576(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:585
+msgid "Use this drop-down list to select the paper tray."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:595
+msgid "To Copy a Document"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:596
+msgid "To copy a file, perform the following steps:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:600
+msgid ""
+"Choose <menuchoice> <guimenu>File</guimenu> <guimenuitem>Save a "
+"Copy</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:605
 msgid ""
 "Type the new filename in the <guilabel>Filename</guilabel> text box in the "
 "<guilabel>Save a Copy</guilabel> dialog."
 msgstr ""
 
-#: C/atril.xml:579(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:608
 msgid ""
 "If necessary, specify the location of the copied document. By default, "
 "copies are saved in your home directory."
 msgstr ""
 
-#: C/atril.xml:584(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:613
 msgid "Click <guibutton>Save</guibutton>."
-msgstr "Klik <guibutton>Opslaan</guibutton>."
+msgstr ""
 
-#: C/atril.xml:593(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:622
 msgid "To Work With Password-Protected Documents"
-msgstr "Werken met wachtwoord-beschermde documenten"
+msgstr ""
 
-#: C/atril.xml:594(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:623
 msgid "An author can use the following password levels to protect a document:"
 msgstr ""
 
-#: C/atril.xml:599(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:628
 msgid "User password that allows others only to read the document."
 msgstr ""
 
-#: C/atril.xml:603(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:632
 msgid ""
 "Master password that allows others to perform additional actions, such as "
 "print the document."
 msgstr ""
 
-#: C/atril.xml:607(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:636
 msgid ""
 "When you try to open a password-protected document, <application>Atril "
 "Document Viewer</application> displays a security dialog. Type either the "
 "user password or the master password in the <guilabel>Enter document "
-"password</guilabel> text box, then click <guibutton>Open Document</"
-"guibutton>."
+"password</guilabel> text box, then click <guibutton>Open "
+"Document</guibutton>."
 msgstr ""
 
-#: C/atril.xml:614(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:643
 msgid "To Close a Document"
-msgstr "Een document sluiten"
-
-#: C/atril.xml:615(para)
-msgid ""
-"To close a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
 msgstr ""
-"Om een document te sluiten, kies <menuchoice><guimenu>Bestand</"
-"guimenu><guimenuitem>Sluiten</guimenuitem></menuchoice>."
 
-#: C/atril.xml:617(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:644
+msgid ""
+"To close a document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Close</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:646
 msgid ""
 "If the window is the last <application>Atril Document Viewer</application> "
 "window open, the application exits."
 msgstr ""
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/atril.xml:0(None)
-msgid "translator-credits"
-msgstr "Reinout van Schouwen <reinout@cs.vu.nl>"
+#. (itstool) path: sect1/title
+#: C/index.docbook:655
+msgid "Shortcuts"
+msgstr ""
 
-#~ msgid "User manual for the Atril Document Viewer."
-#~ msgstr "Gebruikershandleiding van de Atril Documentviewer."
+#. (itstool) path: sect1/para
+#: C/index.docbook:656
+msgid ""
+"Below is a list of all shortcuts present in <application>Atril Document "
+"Viewer</application>:"
+msgstr ""
 
-#~ msgid ""
-#~ "You can start <application>Atril Document Viewer</application> in the "
-#~ "following ways:"
-#~ msgstr ""
-#~ "U kunt <application>Atril Document Viewer</application> starten op de "
-#~ "volgende manieren:"
+#. (itstool) path: entry/para
+#: C/index.docbook:664
+msgid "Shortcut"
+msgstr "Sneltoets"
 
-#~ msgid "<guimenu>Applications</guimenu> menu"
-#~ msgstr "<guimenu>Toepassingen</guimenu>-menu"
+#. (itstool) path: entry/para
+#: C/index.docbook:671
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
+msgstr ""
 
-#~ msgid ""
-#~ "Choose <menuchoice><guisubmenu>Graphics</guisubmenu><guimenuitem>Atril "
-#~ "Document Viewer</guimenuitem></menuchoice>."
-#~ msgstr ""
-#~ "Kies <menuchoice><guisubmenu>Grafisch</guisubmenu><guimenuitem>Atril "
-#~ "Documentviewer</guimenuitem></menuchoice>."
+#. (itstool) path: entry/para
+#: C/index.docbook:672
+msgid "Open an existing document"
+msgstr "Een bestaand document openen"
 
-#~ msgid "Command line"
-#~ msgstr "Opdrachtregel"
+#. (itstool) path: entry/para
+#: C/index.docbook:675
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
+msgstr ""
 
-#~ msgid "Execute the following command: <command>atril</command>"
-#~ msgstr "Voer de volgende opdracht uit: <command>atril</command>"
+#. (itstool) path: entry/para
+#: C/index.docbook:676
+msgid "Save a copy of the current document"
+msgstr "Sla een kopie op van het huidige document"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:679
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:680
+msgid "Print document"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:683
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:684
+msgid "Close window"
+msgstr "Venster sluiten"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:687
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:688
+msgid "Copy selection"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:691
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:692
+msgid "Select All"
+msgstr "Alles kiezen"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:696
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:697
+msgid "<keycap>/</keycap> (slash)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:699
+msgid "Find a word or phrase in the document"
+msgstr "Zoek een woord of een zin in het document"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:703
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:704
+msgid "<keycap>F3</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:706
+msgid "Find next"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:710
+msgid ""
+"<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (plus sign)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:711
+msgid "<keycap>+</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:712
+msgid "<keycap>=</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:714
+msgid "Zoom in"
+msgstr "Vergroten"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:718
+msgid ""
+"<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (minus sign)"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:719
+msgid "<keycap>-</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:721
+msgid "Zoom out"
+msgstr "Verkleinen"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:724
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:725
+msgid "Reload the document"
+msgstr "Het document herladen"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:729
+msgid "<keycap>Page Up</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:730
+msgid "Go to the previous page"
+msgstr "Ga naar de vorige pagina"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:733
+msgid "<keycap>Page Down</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:734
+msgid "Go to the next page"
+msgstr "Ga naar de volgende pagina"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:738
+msgid "<keycap>Space</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:739
+msgid "<keycombo><keycap>Shift</keycap><keycap>Backspace</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:740
+msgid "<keycap>Return</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:742
+msgid "Scroll forward"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:746
+msgid "<keycombo><keycap>Shift</keycap><keycap>Space</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:747
+msgid "<keycap>Backspace</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:748
+msgid "<keycombo><keycap>Shift</keycap><keycap>Return</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:750
+msgid "Scroll backward"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:754
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Up</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:755
+msgid "Go a bunch of pages up"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:758
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Down</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:759
+msgid "Go a bunch of pages down"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:762
+msgid "<keycap>Home</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:763
+msgid "Go to the first page"
+msgstr "Ga naar de eerste pagina"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:766
+msgid "<keycap>End</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:767
+msgid "Go to the last page"
+msgstr "Ga naar de laatste pagina"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:770
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:771
+msgid "Go to page by number or label"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:774
+msgid "<keycap>F1</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:775
+msgid "Help"
+msgstr "Hulp"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:778
+msgid "<keycap>F5</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:779
+msgid "Run document as presentation"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:782
+msgid "<keycap>F9</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:783
+msgid "Show or hide the side pane"
+msgstr "Het zijpaneel tonen of verbergen"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:786
+msgid "<keycap>F11</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:787
+msgid "Toggle fullscreen mode"
+msgstr "Volledig scherm-modus omschakelen"
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "koppeling"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""

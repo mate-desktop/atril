@@ -1,51 +1,96 @@
-# Finnish translation of Atril manual.
-#
-# Copyright © Tommi Vainikainen, 2006.
-# Copyright © Flammie Pirinen, 2006. (merged from gucharmap translation)
-# Copyright © Timo Jyrinki, 2008.
-#
+# Translators:
+# Lasse Liehu <larso@gmx.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Eslam Ali <talvikahvi@gmail.com>, 2018
+# nomen omen, 2018
+# Ammuu5, 2018
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 0.5.2\n"
-"POT-Creation-Date: 2008-04-06 03:16+0100\n"
-"PO-Revision-Date: 2008-07-07 17:41+0300\n"
-"Last-Translator: Tommi Vainikainen <Tommi.Vainikainen@iki.fi>\n"
-"Language-Team: Finnish\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"POT-Creation-Date: 2018-09-26 17:25+0200\n"
+"PO-Revision-Date: 2018-09-18 09:06+0000\n"
+"Last-Translator: Ammuu5, 2018\n"
+"Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: C/legal.xml:2(para)
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Tommi Vainikainen, 2005\n"
+"Ilkka Tuohela, 2005\n"
+"Sami Pesonen, 2004\n"
+"Jarkko Ranta, 2003-2004\n"
+"Johanna Makkonen, 2003"
+
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:25
+msgid "Atril Document Viewer Manual"
+msgstr ""
+
+#. (itstool) path: abstract/para
+#: C/index.docbook:27
+msgid ""
+"The Atril Document Viewer application enables you to view documents of "
+"various formats like Portable Document Format (PDF) files and PostScript "
+"files"
+msgstr ""
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:32
+msgid "<year>2015</year> <holder>MATE Documentation Project</holder>"
+msgstr ""
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:36
+msgid "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
+msgstr ""
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:40
+msgid "<year>2004</year> <holder>Sun Microsystems</holder>"
+msgstr "<year>2004</year> <holder>Sun Microsystems</holder>"
+
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:53 C/index.docbook:104
+msgid "MATE Documentation Project"
+msgstr "Maten dokumentointiprojekti"
+
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:56 C/index.docbook:113 C/index.docbook:121
+msgid "GNOME Documentation Project"
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
 "in the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"Tätä asiakirjaa saa kopioida, jakaa edelleen ja/tai muokata Free Software "
-"Foundationin julkaiseman GNU Free Documentation Licensen (GFDL) version 1.1 "
-"tai valinnaisesti myöhemmän version mukaisesti, ilman vaatimuksia "
-"muuttamattomista osioista ja etu- tai takakansiteksteistä. Kopion GFDL:stä "
-"voi nähdä napsauttamalla <ulink type=\"help\" url=\"help:fdl\">tätä "
-"linkkiä</ulink>, tai lukemalla ohjeen mukana toimitetun COPYING-DOCS-nimisen "
-"tiedoston."
 
-#: C/legal.xml:12(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of MATE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in "
-"section 6 of the license."
+"you can do so by adding a copy of the license to the manual, as described in"
+" section 6 of the license."
 msgstr ""
-"Tämä käyttöohje on osa Maten käyttöohjekokoelmaa ja levitetään GFDL-"
-"lisenssin alaisena. Jos haluat levittää tätä käyttöohjetta erillään "
-"kokoelmasta, voit tehdä sen liittämällä lisenssin kopion ohjeen mukaan, "
-"kuten lisenssin luku 6 sanelee."
 
-#: C/legal.xml:19(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any MATE "
@@ -53,12 +98,9 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"Monet tuotteiden ja palveluiden nimet ovat tuotemerkkejä. Maten "
-"dokumentointiprojektissa nämä nimet pyritään kirjoittamaan suuraakkosin tai "
-"isolla alkukirjaimella, sikäli kun projektin jäsenet tietävät kyseisistä "
-"tuotemerkeistä."
 
-#: C/legal.xml:35(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -72,578 +114,554 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"ASIAKIRJA TARJOTAAN SELLAISENAAN, ILMAN MINKÄÄNLAISTA KIRJATTUA TAI "
-"KONKLUDENTTISTA RAJATONTA TAKUUTA ASIAKIRJAN TAI SEN MUOKATUN VERSION "
-"VIRHEETTÖMYYDESTÄ, SOPIVUUDESTA KAUPALLISEEN KÄYTTÖÖN TAI TIETTYYN "
-"KÄYTTÖTARKOITUKSEEN TAI LOUKKAAMATTOMUUDESTA. TÄYSI VASTUU ASIAKIRJAN TAI "
-"SEN MUOKATUN VERSION LAADUSTA, TARKKUUDESTA JA TOIMIVUUDESTA ON KÄYTTÄJÄLLÄ. "
-"JOS ASIAKIRJA TAI SEN MUOKATTU VERSIO OSOITTAUTUU JOLLAKIN TAVALLA "
-"VIRHEELLISEKSI, KÄYTTÄJÄ (EI ALKUPERÄINEN KIRJOITTAJA TAI MUU TEKIJÄ) VASTAA "
-"PALVELUJEN, KORJAUSTEN TAI OIKAISUJEN KUSTANNUKSISTA. TÄMÄ "
-"VASTUUVAPAUSLAUSEKE ON EROTTAMATON OSA LISENSSIÄ. ASIAKIRJAN TAI SEN "
-"MUOKATTUJEN VERSIOIDEN KÄYTTÖ ON SALLITTUA VAIN TÄMÄN VASTUUVAPAUSLAUSEKKEEN "
-"NOJALLA; SEKÄ"
 
-#: C/legal.xml:55(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
 "CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
 "DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
 "FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
 "ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"MISSÄÄN OLOSUHTEISSA TAI MINKÄÄN OIKEUSLAITOKSEN ALAISUUDESSA, NIIN "
-"OIKEUSLOUKKAUKSISSA (MUKAAN LUKIEN HUOLIMATTOMUUS), SOPIMUS TAI MUUTOIN, "
-"ASIAKIRJAN TAI SEN MUOKATUN VERSION TEKIJÄ, ALKUPERÄINEN KIRJOITTAJA, KUKAAN "
-"AVUSTAJISTA, KUKAAN LEVITTÄJÄ TAIKKA KUKAAN TARJOAJA EI OLE VASTUUSSA "
-"KENELLEKÄÄN SUORASTA, EPÄSUORASTA, ERITYISESTÄ, TAPATURMAISESTA TAI "
-"VÄLILLISESTÄ VAHINGOSTA SISÄLTÄEN RAJOITUKSETTA VAHINGOT LIIKEARVON "
-"MENETYKSESTÄ, TYÖN KESKEYTYMISESTÄ, TIETOKONEVIRHEESTÄ TAI -HÄIRIÖSTÄ TAIKKA "
-"MISTÄÄN MUUSTA VAHINGOSTA TAI MENETYKSESTÄ, JOKA ILMENEE TAI LIITTYY "
-"ASIAKIRJAN TAI SEN MUOKATUN VERSION KÄYTTÖÖN EDES SILLOIN KUN OSAPUOLTA ON "
-"OLLUT TIETOINEN TÄLLAISEN VAHINGON MAHDOLLISUUDESTA."
 
-#: C/legal.xml:28(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
-"ASIAKIRJA SEKÄ MUOKATUT VERSIOT ASIAKIRJASTA TARJOTAAN GNU FREE "
-"DOCUMENTATION LICENSEN EHDOIN SEKÄ YMMÄRTÄEN ETTÄ: <placeholder-1/>"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/atril.xml:146(None)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:65
 msgid ""
-"@@image: 'figures/atril_start_window.png'; "
-"md5=7f4da5e33bcac35738a268d93d497d47"
+"<firstname>MATE Documentation Project</firstname> <surname/> "
+"<affiliation><orgname>MATE Desktop</orgname></affiliation>"
 msgstr ""
-"@@image: 'figures/atril_start_window.png'; "
-"md5=7f4da5e33bcac35738a268d93d497d47"
 
-#: C/atril.xml:25(title)
-msgid "Atril Document Viewer Manual"
-msgstr "Atril-asiakirjakatselimen käyttöohje"
-
-#: C/atril.xml:27(para)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:70
 msgid ""
-"The Atril Document Viewer application enables you to view documents of "
-"various formats like Portable Document Format (PDF) files and PostScript "
-"files"
+"<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
+"<affiliation><orgname>Sun Microsystems</orgname></affiliation>"
 msgstr ""
-"Atril-asiakirjakatselimella voi katsella mm. PDF- ja PostScript-muotoisia "
-"asiakirjoja"
 
-#: C/atril.xml:33(year)
-msgid "2005"
-msgstr "2005"
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:75
+msgid ""
+"<firstname>Nickolay V. </firstname> <surname>Shmyrev</surname> <affiliation>"
+" <orgname>GNOME Documentation Project</orgname> <address> "
+"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
+msgstr ""
 
-#: C/atril.xml:34(holder) C/atril.xml:91(para)
-msgid "Nickolay V. Shmyrev"
-msgstr "Nickolay V. Shmyrev"
-
-#: C/atril.xml:37(year)
-msgid "2004"
-msgstr "2004"
-
-#: C/atril.xml:38(holder) C/atril.xml:61(orgname)
-msgid "Sun Microsystems"
-msgstr "Sun Microsystems"
-
-#: C/atril.xml:49(publishername) C/atril.xml:67(orgname)
-#: C/atril.xml:92(para)
-msgid "MATE Documentation Project"
-msgstr "Maten dokumentointiprojekti"
-
-#: C/atril.xml:59(firstname)
-msgid "Sun"
-msgstr "Sun"
-
-#: C/atril.xml:60(surname)
+#. (itstool) path: revdescription/para
+#: C/index.docbook:103
 msgid "MATE Documentation Team"
-msgstr "Maten dokumentointiryhmä"
+msgstr ""
 
-#: C/atril.xml:64(firstname)
-msgid "Nickolay V."
-msgstr "Nickolay V."
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:99
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.2</revnumber> <date>July "
+"2015</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:65(surname)
-msgid "Shmyrev"
-msgstr "Shmyrev"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:111
+msgid "Niels Giesen"
+msgstr ""
 
-#: C/atril.xml:68(email)
-msgid "nshmyrev@yandex.ru"
-msgstr "nshmyrev@yandex.ru"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:112
+msgid "Claude Paroz"
+msgstr ""
 
-#: C/atril.xml:88(revnumber)
-msgid "Atril Document Viewer Manual V1.0"
-msgstr "Atril-asiakirjakatselimen käyttöohje v1.0"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:107
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.1</revnumber> "
+"<date>2008-04-05</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:89(date)
-msgid "2005-04-06"
-msgstr "2005-04-06"
+#. (itstool) path: revdescription/para
+#: C/index.docbook:120
+msgid "Nickolay V. Shmyrev"
+msgstr ""
 
-#: C/atril.xml:97(releaseinfo)
-msgid "This manual describes version 0.2 of Atril Document Viewer"
-msgstr "Tämä käyttöohje kuvaa Atril-asiakirjakatselimen version 0.2"
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:116
+msgid ""
+"<revnumber>Atril Document Viewer Manual V1.0</revnumber> "
+"<date>2005-04-06</date> <_:revdescription-1/>"
+msgstr ""
 
-#: C/atril.xml:100(title)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:126
+msgid "This manual describes version 1.10.1 of Atril Document Viewer"
+msgstr ""
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:129
 msgid "Feedback"
 msgstr "Palaute"
 
-#: C/atril.xml:101(para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:130
 msgid ""
 "To report a bug or make a suggestion regarding the Atril Document Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"mate-feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink url=\"help"
+":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
-"Ilmoittaaksesi viasta tai tehdäksesi ehdotuksen Atril-asiakirjakatselimeen "
-"taikka tähän käyttöohjeeseen liittyen, seuraa ohjeita <ulink url=\"help:"
-"mate-feedback\" type=\"help\">Maten palautesivulla</ulink>."
 
-#: C/atril.xml:111(primary)
-msgid "atril"
-msgstr "atril"
+#. (itstool) path: article/indexterm
+#: C/index.docbook:136
+msgid "<primary>Atril Document Viewer</primary>"
+msgstr ""
 
-#: C/atril.xml:119(title)
+#. (itstool) path: article/indexterm
+#: C/index.docbook:139
+msgid "<primary>atril</primary>"
+msgstr ""
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:148
 msgid "Introduction"
 msgstr "Johdanto"
 
-#: C/atril.xml:120(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:149
 msgid ""
-"The <application>Atril Document Viewer</application> application enables "
-"you to view documents of various formats like Portable Document Format (PDF) "
-"files and PostScript files. <application>Atril Document Viewer</"
-"application> follows Freedesktop.org and MATE standards to provide "
-"integration with Desktop Environment."
+"The <application>Atril Document Viewer</application> application enables you"
+" to view documents of various formats like Portable Document Format (PDF) "
+"files and PostScript files. <application>Atril Document Viewer</application>"
+" follows Freedesktop.org and MATE standards to provide integration with "
+"Desktop Environment."
 msgstr ""
-"<application>Atril-asiakirjakatselimella</application> voit katsoa "
-"asiakirjoja eri tiedostomuodoissa kuten Portable Document Format (PDF) ja "
-"PostScript. <application>Atril-asiakirjakatselin</application> noudattaa "
-"Freedesktop.org- ja Mate-standardeja ja sulautuu sen ansiosta luontevasti "
-"työpöytäympäristöön."
 
-#: C/atril.xml:127(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:156
 msgid "Getting Started"
-msgstr "Aloittaminen"
+msgstr ""
 
-#: C/atril.xml:130(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:159
 msgid "To Start Atril Document Viewer"
-msgstr "Atril-asiakirjakatselimen käynnistäminen"
+msgstr ""
 
-#: C/atril.xml:131(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:160
 msgid ""
 "<application>Atril Document Viewer</application> starts when you open a "
 "document such as a PDF or PostScript file."
 msgstr ""
-"<application>Atril-asiakirjakatselin</application> käynnistyy kun avaat "
-"asiakirjan kuten PDF- tai PostScript-tiedoston."
 
-#: C/atril.xml:132(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:161
 msgid ""
-"Alternatively, you can start <application>Atril Document Viewer</"
-"application> from the command line, with the command: <command>atril</"
-"command>."
+"Alternatively, you can start <application>Atril Document "
+"Viewer</application> from the command line, with the command: "
+"<command>atril</command>."
 msgstr ""
-"Vaihtoehtoisesti voit käynnistää <application>Atril-asiakirjakatselimen</"
-"application> komentoriviltä komennolla: <command>atril</command>."
 
-#: C/atril.xml:137(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:166
 msgid "When You Start Atril Document Viewer"
-msgstr "Kun käynnistät Atril-asiakirjakatselimen"
+msgstr ""
 
-#: C/atril.xml:138(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:167
 msgid ""
 "When you start <application>Atril Document Viewer</application>, the "
 "following window is displayed."
 msgstr ""
-"Kun käynnistät <application>Atril-asiakirjakatselimen</application>, "
-"seuraava ikkuna ilmaantuu näkyviin."
 
-#: C/atril.xml:142(title)
+#. (itstool) path: figure/title
+#: C/index.docbook:171
 msgid "Atril Document Viewer Window"
-msgstr "Atril-asiakirjakatselimen ikkuna"
-
-#: C/atril.xml:149(phrase)
-msgid ""
-"Shows Atril Document Viewer main window. Contains titlebar, menubar, "
-"toolbar and display area. Menubar contains File, Edit, View, Go and Help "
-"menus."
 msgstr ""
-"Näkymä Atril-asiakirjakatselimen pääikkunasta. Ikkuna sisältää "
-"otsikkopalkin, valikkopalkin, työkalupalkin sekä näyttöalueen. Valikkopalkki "
-"sisältää Tiedosto-, Muokkaa-, Näkymä-, Mene- ja Ohje-valikot."
 
-#: C/atril.xml:155(para)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:175
+msgctxt "_"
+msgid ""
+"external ref='figures/atril_start_window.png' "
+"md5='b960ec0ad3ac9b113710e4e449438499'"
+msgstr ""
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:173
+msgid ""
+"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Atril Document "
+"Viewer main window. Contains titlebar, menubar, toolbar and display area. "
+"Menubar contains File, Edit, View, Go and Help menus. </phrase> "
+"</textobject>"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:184
 msgid ""
 "The <application>Atril Document Viewer</application> window contains the "
 "following elements:"
 msgstr ""
-"<application>Atril-asiakirjakatselimen</application> ikkuna sisältää "
-"seuraavat osat:"
 
-#: C/atril.xml:159(term) C/atril.xml:207(para)
+#. (itstool) path: varlistentry/term
+#. (itstool) path: entry/para
+#: C/index.docbook:188 C/index.docbook:236
 msgid "Menubar"
 msgstr "Valikkopalkki"
 
-#: C/atril.xml:161(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:190
 msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
 msgstr ""
-"Valikkopalkin valikot sisältävät kaikki komennot, joita tarvitset "
-"asiakirjojen kanssa työskennellessä <application>Atril-"
-"asiakirjakatselimella</application>."
 
-#: C/atril.xml:165(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:194
 msgid "Toolbar"
 msgstr "Työkalupalkki"
 
-#: C/atril.xml:167(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:196
 msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
 msgstr ""
-"Työkalupalkki sisältää tärkeimmät valikkopalkista löytyvistä komennoista."
 
-#: C/atril.xml:171(term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:200
 msgid "Display area"
-msgstr "Näyttöalue"
+msgstr ""
 
-#: C/atril.xml:173(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:202
 msgid "The display area displays the document."
-msgstr "Asiakirja on näkyvissä näyttöalueella."
+msgstr ""
 
-#: C/atril.xml:187(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:216
 msgid "UI Component"
-msgstr "Käyttöliittymäkomponentti"
+msgstr ""
 
-#: C/atril.xml:189(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:218 C/index.docbook:666
 msgid "Action"
 msgstr "Toiminto"
 
-#: C/atril.xml:194(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:223
 msgid "Window"
-msgstr "Ikkuna"
-
-#: C/atril.xml:198(para)
-msgid ""
-"Drag a file into the <application>Atril Document Viewer</application> "
-"window from another application such as a file manager."
 msgstr ""
-"Vedä tiedosto <application>Atril-asiakirjakatselimen</application> ikkunaan "
-"toisesta sovelluksesta kuten tiedostonhallinnasta."
 
-#: C/atril.xml:201(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:227
+msgid ""
+"Drag a file into the <application>Atril Document Viewer</application> window"
+" from another application such as a file manager."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:230
 msgid "Double-click on the file name in the file manager"
-msgstr "Kaksoisnapsauta tiedostonimeä tiedostonhallinnassa"
-
-#: C/atril.xml:208(para) C/atril.xml:235(para)
-msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></"
-"menuchoice>."
 msgstr ""
-"Valitse <menuchoice><guimenu>Tiedosto</guimenu><guimenuitem>Avaa</"
-"guimenuitem></menuchoice>."
 
-#: C/atril.xml:212(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:237
+msgid ""
+"Choose "
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:241
 msgid "Shortcut keys"
-msgstr "Pikanäppäimet"
+msgstr ""
 
-#: C/atril.xml:213(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:242
 msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
-msgstr "Paina <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
+msgstr ""
 
-#: C/atril.xml:178(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:207
 msgid ""
 "In <application>Atril Document Viewer</application>, you can perform the "
 "same action in several ways. For example, you can open a document in the "
-"following ways: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1\" "
-"rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
-"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
-"tgroup></informaltable>"
+"following ways: <_:informaltable-1/>"
 msgstr ""
-"<application>Atril-asiakirjakatselimessa</application> voit suorittaa "
-"samoja toimintoja useilla tavoilla. Esimerkiksi voit avata asiakirjan "
-"seuraavilla tavoin: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep="
-"\"1\" rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
-"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
-"tgroup></informaltable>"
 
-#: C/atril.xml:219(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:248
 msgid "This manual documents functionality from the menubar."
-msgstr "Tämä käyttöohje opastaa toiminnallisuuden valikkopalkista käsin."
+msgstr ""
 
-#: C/atril.xml:227(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:256
 msgid "Usage"
 msgstr "Käyttö"
 
-#: C/atril.xml:231(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:260
 msgid "To Open A Document"
-msgstr "Asiakirjan avaaminen"
+msgstr ""
 
-#: C/atril.xml:232(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:261
 msgid "To open a document, perform the following steps:"
-msgstr "Tiedosto avataan seuraavasti:"
+msgstr ""
 
-#: C/atril.xml:239(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:264
+msgid ""
+"Choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> "
+"</menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:268
 msgid ""
 "In the <guilabel>Open Document</guilabel> dialog, select the file you want "
 "to open."
 msgstr ""
-"Valitse avattava tiedosto <guilabel>Avaa tiedosto</guilabel> -"
-"valintaikkunassa."
 
-#: C/atril.xml:244(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:273
 msgid ""
-"Click <guibutton>Open</guibutton>. <application>Atril Document Viewer</"
-"application> displays the name of the document in the titlebar of the window."
+"Click <guibutton>Open</guibutton>. <application>Atril Document "
+"Viewer</application> displays the name of the document in the titlebar of "
+"the window."
 msgstr ""
-"Napsauta <guibutton>Avaa</guibutton>. <application>Atril-asiakirjakatselin</"
-"application> näyttää asiakirjan nimen ikkunan otsikkopalkissa."
 
-#: C/atril.xml:249(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:278
 msgid ""
-"To open another document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Open</guimenuitem></menuchoice> again. "
+"To open another document, choose <menuchoice> "
+"<guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. "
 "<application>Atril Document Viewer</application> opens each file in a new "
 "window."
 msgstr ""
-"Avataksesi toisen asiakirjan valitse jälleen <menuchoice><guimenu>Tiedosto</"
-"guimenu><guimenuitem>Avaa</guimenuitem></menuchoice>. <application>Atril-"
-"asiakirjakatselin</application> avaa jokaisen tiedoston uuteen ikkunaan."
 
-#: C/atril.xml:252(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:281
 msgid ""
 "If you try to open a document with format that <application>Atril Document "
 "Viewer</application> does not recognize, the application displays an error "
 "message."
 msgstr ""
-"Mikäli yrität avata <application>Atril-asiakirjakatselimella</application> "
-"asiakirjan, jonka tiedostomuotoa ei tunnisteta, sovellus näyttää "
-"virheilmoituksen."
 
-#: C/atril.xml:258(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:287
 msgid "To Navigate Through a Document"
-msgstr "Asiakirjan selaus"
+msgstr ""
 
-#: C/atril.xml:259(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:288
 msgid "You can navigate through a file as follows:"
-msgstr "Voit selata tiedoston läpi seuraavin tavoin:"
-
-#: C/atril.xml:262(para)
-msgid ""
-"To view the next page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Next Page</guimenuitem></menuchoice>."
 msgstr ""
-"Katsoaksesi seuraavaa sivua, valitse <menuchoice><guimenu>Siirry</"
-"guimenu><guimenuitem>Seuraava sivu</guimenuitem></menuchoice>."
 
-#: C/atril.xml:266(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:291
 msgid ""
-"To view the previous page, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Previous Page</guimenuitem></menuchoice>."
+"To view the next page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Next Page</guimenuitem> </menuchoice>."
 msgstr ""
-"Katsoaksesi edellistä sivua, valitse <menuchoice><guimenu>Siirry</"
-"guimenu><guimenuitem>Edellinen sivu</guimenuitem></menuchoice>."
 
-#: C/atril.xml:270(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:295
 msgid ""
-"To view the first page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>First Page</guimenuitem></menuchoice>."
+"To view the previous page, choose <menuchoice> <guimenu>Go</guimenu> "
+"<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
 msgstr ""
-"Katsoaksesi asiakirjan ensimmäistä sivua, valitse "
-"<menuchoice><guimenu>Siirry</guimenu><guimenuitem>Ensimmäinen sivu</"
-"guimenuitem></menuchoice>."
 
-#: C/atril.xml:274(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:299
 msgid ""
-"To view the last page in the document, choose <menuchoice><guimenu>Go</"
-"guimenu><guimenuitem>Last Page</guimenuitem></menuchoice>."
+"To view the first page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>First Page</guimenuitem> </menuchoice>."
 msgstr ""
-"Katsoaksesi asiakirjan viimeistä sivua, valitse <menuchoice><guimenu>Siirry</"
-"guimenu><guimenuitem>Viimeinen sivu</guimenuitem></menuchoice>."
 
-#: C/atril.xml:278(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:303
+msgid ""
+"To view the last page in the document, choose <menuchoice> "
+"<guimenu>Go</guimenu> <guimenuitem>Last Page</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:307
 msgid ""
 "To view a particular page, enter the page number or page label in the text "
 "box on the toolbar, then press <keycap>Return</keycap>."
 msgstr ""
-"Katsoaksesi tiettyä sivua, syötä sivunumero taikka sivun nimi tekstikenttään "
-"työkalupalkissa ja paina <keycap>Return</keycap>."
 
-#: C/atril.xml:285(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
 msgid "To Scroll a Page"
-msgstr "Sivun selaus"
-
-#: C/atril.xml:286(para)
-msgid ""
-"To display the page contents that are not currently displayed in the display "
-"area, use the following methods:"
 msgstr ""
-"Näyttääksesi sivun sisällöstä sen osan, joka ei juuri nyt näy "
-"näyttöalueessa, käytä seuraavia menetelmiä:"
 
-#: C/atril.xml:289(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
+msgid ""
+"To display the page contents that are not currently displayed in the display"
+" area, use the following methods:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:318
 msgid "Use the arrow keys or space key on the keyboard."
-msgstr "Käytä nuolinäppäimiä tai välilyöntiä näppäimistöltä."
+msgstr ""
 
-#: C/atril.xml:292(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:321
 msgid ""
 "Drag the display area by clicking with the middle mouse button somewhere in "
 "the document and then moving the mouse. For example, to scroll down the "
 "page, drag the display area upwards in the window."
 msgstr ""
-"Vedä näyttöaluetta painamalla hiiren keskimmäinen nappula pohjaan ja "
-"siirtämällä hiirtä vastakkaiseen suuntaan selattavan suunnan kanssa. "
-"Esimerkiksi selataksesi alaspäin vedä näyttöaluetta ylöspäin ikkunassa."
 
-#: C/atril.xml:295(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:324
 msgid "Use the scrollbars on the window."
-msgstr "Käytä ikkunan vierityspalkkeja."
+msgstr ""
 
-#: C/atril.xml:302(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:331
 msgid "To Change the Page Size"
-msgstr "Sivukoon muuttaminen"
-
-#: C/atril.xml:303(para)
-msgid ""
-"You can use the following methods to resize a page in the "
-"<application>Atril Document Viewer</application> display area:"
 msgstr ""
-"Voit käyttää seuraavia tapoja sivukoon muuttamiseksi <application>Atril-"
-"asiakirjakatselimen</application> näyttöalueessa:"
 
-#: C/atril.xml:308(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:332
 msgid ""
-"To increase the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom In</guimenuitem></menuchoice>."
+"You can use the following methods to resize a page in the <application>Atril"
+" Document Viewer</application> display area:"
 msgstr ""
-"Sivukokoa kasvatetaan valitsemalla <menuchoice><guimenu>Näkymä</"
-"guimenu><guimenuitem>Lähennä</guimenuitem></menuchoice>."
 
-#: C/atril.xml:313(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:337
 msgid ""
-"To decrease the page size, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Zoom Out</guimenuitem></menuchoice>."
+"To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
 msgstr ""
-"Sivukokoa pienennetään valitsemalla <menuchoice><guimenu>Näkymä</"
-"guimenu><guimenuitem>Loitonna</guimenuitem></menuchoice>."
 
-#: C/atril.xml:318(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:342
+msgid ""
+"To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:347
 msgid ""
 "To resize a page to have the same width as the <application>Atril Document "
-"Viewer</application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Fit page width</guimenuitem></menuchoice>."
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Fit page width</guimenuitem> "
+"</menuchoice>."
 msgstr ""
-"Sivun leveys muutetaan samaksi kuin <application>Atril-asiakirjakatselimen</"
-"application> näyttöalue valitsemalla <menuchoice><guimenu>Näkymä</"
-"guimenu><guimenuitem>Sovita sivun leveys</guimenuitem></menuchoice>."
 
-#: C/atril.xml:323(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:352
 msgid ""
-"To resize a page to fit within the <application>Atril Document Viewer</"
-"application> display area, choose <menuchoice><guimenu>View</"
-"guimenu><guimenuitem>Best Fit</guimenuitem></menuchoice>."
+"To resize a page to fit within the <application>Atril Document "
+"Viewer</application> display area, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Best Fit</guimenuitem> </menuchoice>."
 msgstr ""
-"Sivun koko sovitetaan <application>Atril-asiakirjakatselimen</application> "
-"näyttöalueeseen valitsemalla <menuchoice><guimenu>Näkymä</"
-"guimenu><guimenuitem>Paras sovitus</guimenuitem></menuchoice>."
 
-#: C/atril.xml:328(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:357
 msgid ""
 "To resize the <application>Atril Document Viewer</application> window to "
-"have the same width and height as the screen, choose "
-"<menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></"
-"menuchoice>. To resize the <application>Atril Document Viewer</application> "
-"window to the original size, click on the <guibutton>Exit Full Screen</"
-"guibutton> button."
+"have the same width and height as the screen, choose <menuchoice> "
+"<guimenu>View</guimenu> <guimenuitem>Full Screen</guimenuitem> "
+"</menuchoice>. To resize the <application>Atril Document "
+"Viewer</application> window to the original size, click on the "
+"<guibutton>Exit Full Screen</guibutton> button."
 msgstr ""
-"Suurentaaksesi <application>Atril-asiakirjakatselimen</application> ikkunan "
-"kokoa ruudun leveyteen ja korkeuteen valitse <menuchoice><guimenu>Näkymä</"
-"guimenu><guimenuitem>Kokoruutu</guimenuitem></menuchoice>. Palauttaaksesi "
-"<application>Atril-asiakirjakatselimen</application> ikkunan alkuperäiseen "
-"kokoon, napsauta <guibutton>Lopeta kokoruutu</guibutton> -painiketta."
 
-#: C/atril.xml:336(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:365
 msgid "To View Pages or Document Structure"
-msgstr "Sivujen ja asiakirjarakenteen katselu"
+msgstr ""
 
-#: C/atril.xml:337(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:366
 msgid "To view bookmarks or pages, perform the following steps:"
 msgstr ""
-"Katsellaksesi kirjanmerkkejä tai tiettyjä sivuja, tee seuraavat toimenpiteet:"
 
-#: C/atril.xml:341(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:370
 msgid ""
-"Choose <menuchoice><guimenu>View</guimenu><guimenuitem>Sidebar</"
-"guimenuitem></menuchoice> or press <keycap>F9</keycap>."
+"Choose <menuchoice> <guimenu>View</guimenu> "
+"<guimenuitem>Sidebar</guimenuitem> </menuchoice> or press "
+"<keycap>F9</keycap>."
 msgstr ""
-"Valitse <menuchoice><guimenu>Näkymä</guimenu><guimenuitem>Sivupaneeli</"
-"guimenuitem></menuchoice> tai paina <keycap>F9</keycap>."
 
-#: C/atril.xml:346(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:375
 msgid ""
 "Use the drop-down list in the side-pane header to select whether to display "
 "document structure or pages in the side pane."
 msgstr ""
-"Valitse sivupaneeliotsikon alasvetoluettelosta näytetäänkö asiakirjarakenne "
-"vaiko sivut sivupaneelissa."
 
-#: C/atril.xml:351(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:380
 msgid ""
 "Use the side-pane scrollbars to display the required item or page in the "
 "side pane."
 msgstr ""
-"Käytä sivupaneelin vierityspalkkia näyttääksesi tarvittavan kohdan tai sivun "
-"sivupaneelissa."
 
-#: C/atril.xml:356(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:385
 msgid ""
 "Click on an entry to navigate to that location in the document. Click on a "
 "page to navigate to that page in the document."
 msgstr ""
-"Napsauta haluamaasi kohtaa siirtyäksesi siihen. Napsuta sivua siirtyäksesi "
-"kyseiselle sivulle asiakirjassa."
 
-#: C/atril.xml:362(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:391
 msgid "To View the Properties of a Document"
-msgstr "Asiakirjan ominaisuuksien katselu"
-
-#: C/atril.xml:363(para)
-msgid ""
-"To view the properties of a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Properties</guimenuitem></menuchoice>."
 msgstr ""
-"Näyttääksesi asiakirjan ominaisuudet valitse <menuchoice><guimenu>Tiedosto</"
-"guimenu><guimenuitem>Ominaisuudet</guimenuitem></menuchoice>."
 
-#: C/atril.xml:369(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:392
 msgid ""
-"The <guilabel>Properties</guilabel> dialog displays all information available"
+"To view the properties of a document, choose <menuchoice> "
+"<guimenu>File</guimenu> <guimenuitem>Properties</guimenuitem> </menuchoice>."
 msgstr ""
-"<guilabel>Ominaisuudet</guilabel>-ikkunassa näkyy kaikki saatavilla oleva "
-"tieto"
 
-#: C/atril.xml:375(title)
+#. (itstool) path: sect2/para
+#: C/index.docbook:398
+msgid ""
+"The <guilabel>Properties</guilabel> dialog displays all information "
+"available"
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:404
 msgid "To Print a Document"
-msgstr "Asiakirjan tulostaminen"
-
-#: C/atril.xml:376(para)
-msgid ""
-"To print a Document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
 msgstr ""
-"Tulostaaksesi asiakirjan valitse <menuchoice><guimenu>Tiedosto</"
-"guimenu><guimenuitem>Tulosta</guimenuitem></menuchoice>."
 
-#: C/atril.xml:380(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:405
+msgid ""
+"To print a Document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Print</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: note/para
+#: C/index.docbook:409
 msgid ""
 "If you cannot choose the <guimenuitem>Print</guimenuitem> menu item, the "
 "author of the document has disabled the print option for this document. To "
@@ -651,594 +669,688 @@ msgid ""
 "the document. See <xref linkend=\"atril-password\"/> for more information "
 "about password-protected files."
 msgstr ""
-"Mikäli <guimenuitem>Tulosta</guimenuitem> ei ole valittavissa valikosta, "
-"asiakirjan tekijä on estänyt tämän asiakirjan tulostamisen. Asiakirja "
-"voidaan tulostaa, jos sitä avattaessa syötetään pääsalasanan. Katso "
-"kappaleesta <xref linkend=\"atril-password\"/> lisätietoa "
-"salasanasuojatuista tiedostoista."
 
-#: C/atril.xml:384(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:413
 msgid ""
 "The <guilabel>Print</guilabel> dialog has the following tabbed sections:"
-msgstr "<guilabel>Tulosta</guilabel>-valintaikkunassa on seuraavat välilehdet:"
+msgstr ""
 
-#: C/atril.xml:390(link) C/atril.xml:406(title)
+#. (itstool) path: listitem/para
+#: C/index.docbook:418
+msgid "<link linkend=\"print-dialog-job\">Job</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:423
+msgid "<link linkend=\"print-dialog-printer\">Printer</link>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:428
+msgid "<link linkend=\"print-dialog-paper\">Paper</link>"
+msgstr ""
+
+#. (itstool) path: sect3/title
+#: C/index.docbook:435
 msgid "Job"
 msgstr "Työ"
 
-#: C/atril.xml:395(link) C/atril.xml:428(title) C/atril.xml:430(guilabel)
-msgid "Printer"
-msgstr "Tulostin"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:437
+msgid "<guilabel>Print range</guilabel>"
+msgstr ""
 
-#: C/atril.xml:400(link) C/atril.xml:522(title)
-msgid "Paper"
-msgstr "Paperi"
-
-#: C/atril.xml:408(guilabel)
-msgid "Print range"
-msgstr "Tulostusalue"
-
-#: C/atril.xml:410(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:439
 msgid ""
 "Select one of the following options to determine how many pages to print:"
 msgstr ""
-"Valitse yksi seuraavista vaihtoehdoista määrittämään kuinka monta sivua "
-"tulostetaan:"
 
-#: C/atril.xml:413(guilabel)
-msgid "All"
-msgstr "Kaikki"
-
-#: C/atril.xml:414(para)
-msgid "Select this option to print all of the pages in the document."
-msgstr "Valitse tämä vaihtoehto kun haluat tulostaa kaikki asiakirjan sivut."
-
-#: C/atril.xml:417(guilabel)
-msgid "Pages From"
-msgstr "Sivuja mistä"
-
-#: C/atril.xml:418(para)
-msgid ""
-"Select this option to print the selected range of pages in the document. Use "
-"the spin boxes to specify the first page and last page of the range."
+#. (itstool) path: listitem/para
+#: C/index.docbook:442
+msgid "<guilabel>All</guilabel>"
 msgstr ""
-"Valitse tämä vaihtoehto tulostaaksesi valitun alueen asiakirjan sivuista. "
-"Määritä ensimmäinen ja viimeinen tulostettava sivu säätimillä."
 
-#: C/atril.xml:432(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:443
+msgid "Select this option to print all of the pages in the document."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:446
+msgid "<guilabel>Pages From</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:447
 msgid ""
-"Use this drop-down list to select the printer to which you want to print the "
-"document."
-msgstr "Valitse alasvetoluettelosta käytettävä tulostin."
+"Select this option to print the selected range of pages in the document. Use"
+" the spin boxes to specify the first page and last page of the range."
+msgstr ""
 
-#: C/atril.xml:434(para)
+#. (itstool) path: sect3/title
+#: C/index.docbook:457
+msgid "Printer"
+msgstr "Tulostin"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:459
+msgid "<guilabel>Printer</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:461
+msgid ""
+"Use this drop-down list to select the printer to which you want to print the"
+" document."
+msgstr ""
+
+#. (itstool) path: note/para
+#: C/index.docbook:463
 msgid ""
 "The <guilabel>Create a PDF document</guilabel> option is not supported in "
 "this version of <application>Atril Document Viewer</application>."
 msgstr ""
-"Tämä versio <application>Atril-asiakirjakatselimesta</application> ei tue "
-"vaihtoehtoa <guilabel>Luo PDF-asiakirja</guilabel>."
 
-#: C/atril.xml:440(guilabel)
-msgid "Settings"
-msgstr "Asetukset"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:469
+msgid "<guilabel>Settings</guilabel>"
+msgstr ""
 
-#: C/atril.xml:442(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:471
 msgid "Use this drop-down list to select the printer settings."
-msgstr "Valitse alasvetoluettelosta tulostimen asetukset."
+msgstr ""
 
-#: C/atril.xml:444(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:473
 msgid ""
 "To configure the printer, click <guibutton>Configure</guibutton>. For "
 "example, you can enable or disable duplex printing, or schedule delayed "
 "printing, if this functionality is supported by the printer."
 msgstr ""
-"Muokataksesi tulostimen asetuksia napsauta <guibutton>Muokkaa</guibutton>. "
-"Voit esimerkiksi ottaa käyttöön tai poistaa käytöstä kaksipuoleisen "
-"tulostuksen taikka ajastaa tulostuksen mikäli tulostin tukee sitä."
 
-#: C/atril.xml:448(guilabel)
-msgid "Location"
-msgstr "Sijainti"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:477
+msgid "<guilabel>Location</guilabel>"
+msgstr ""
 
-#: C/atril.xml:450(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:479
 msgid ""
 "Use this drop-down list to select one of the following print destinations:"
-msgstr "Valitse alasvetoluettelosta yksi seuraavista tulostuskohteista:"
+msgstr ""
 
-#: C/atril.xml:455(guilabel)
-msgid "CUPS"
-msgstr "CUPS"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:484
+msgid "<guilabel>CUPS</guilabel>"
+msgstr ""
 
-#: C/atril.xml:457(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:486
 msgid "Print the document to a CUPS printer."
-msgstr "Tulosta asiakirja CUPS-tulostimella."
+msgstr ""
 
-#: C/atril.xml:461(para)
+#. (itstool) path: note/para
+#: C/index.docbook:490
 msgid ""
 "If the selected printer is a CUPS printer, <guilabel>CUPS</guilabel> is the "
 "only entry in this drop-down list."
 msgstr ""
-"Mikäli valittu tulostin on CUPS-tulostin, <guilabel>CUPS</guilabel> on ainoa "
-"vaihtoehto tässä alasvetoluettelossa."
 
-#: C/atril.xml:468(guilabel)
-msgid "lpr"
-msgstr "lpr"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:497
+msgid "<guilabel>lpr</guilabel>"
+msgstr ""
 
-#: C/atril.xml:470(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:499
 msgid "Print the document to a printer."
-msgstr "Tulosta asiakirja tulostimella."
+msgstr ""
 
-#: C/atril.xml:476(guilabel)
-msgid "File"
-msgstr "Tiedosto"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:505
+msgid "<guilabel>File</guilabel>"
+msgstr ""
 
-#: C/atril.xml:478(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:507
 msgid "Print the document to a PostScript file."
-msgstr "Tulosta asiakirja PostScript-tiedostoon."
+msgstr ""
 
-#: C/atril.xml:481(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:510
 msgid ""
 "Click <guibutton>Save As</guibutton> to display a dialog where you specify "
 "the name and location of the PostScript file."
 msgstr ""
-"Napsauta <guibutton>Tallenna nimellä</guibutton> määrittääksesi PostScript-"
-"tiedoston nimen ja sijainnin tiedostonvalintaikkunassa."
 
-#: C/atril.xml:487(guilabel)
-msgid "Custom"
-msgstr "Mukautettu"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:516
+msgid "<guilabel>Custom</guilabel>"
+msgstr ""
 
-#: C/atril.xml:489(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:518
 msgid "Use the specified command to print the document."
-msgstr "Käytä erillistä komentoa asiakirjan tulostamiseen."
+msgstr ""
 
-#: C/atril.xml:492(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:521
 msgid ""
 "Type the name of the command in the text box. Include all command-line "
 "arguments."
-msgstr "Syötä komento ja käytettävät argumentit tekstikenttään."
+msgstr ""
 
-#: C/atril.xml:500(guilabel)
-msgid "State"
-msgstr "Tila"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:529
+msgid "<guilabel>State</guilabel>"
+msgstr ""
 
-#: C/atril.xml:502(para) C/atril.xml:508(para) C/atril.xml:514(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:531 C/index.docbook:537 C/index.docbook:543
 msgid ""
 "This functionality is not supported in this version of <application>Atril "
 "Document Viewer</application>."
 msgstr ""
-"Tämä versio <application>Atril-asiakirjakatselimesta</application> ei tue "
-"tätä toimintoa."
 
-#: C/atril.xml:506(guilabel)
-msgid "Type"
-msgstr "Tyyppi"
-
-#: C/atril.xml:512(guilabel)
-msgid "Comment"
-msgstr "Kommentti"
-
-#: C/atril.xml:524(guilabel)
-msgid "Paper size"
-msgstr "Paperikoko"
-
-#: C/atril.xml:526(para)
-msgid ""
-"Use this drop-down list to select the size of the paper to which you want to "
-"print the document."
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:535
+msgid "<guilabel>Type</guilabel>"
 msgstr ""
-"Valitse alasvetoluettelosta paperikoko, jolle haluat asiakirjan tulostaa."
 
-#: C/atril.xml:529(guilabel)
-msgid "Width"
-msgstr "Leveys"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:541
+msgid "<guilabel>Comment</guilabel>"
+msgstr ""
 
-#: C/atril.xml:531(para)
+#. (itstool) path: sect3/title
+#: C/index.docbook:551
+msgid "Paper"
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:553
+msgid "<guilabel>Paper size</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:555
+msgid ""
+"Use this drop-down list to select the size of the paper to which you want to"
+" print the document."
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:558
+msgid "<guilabel>Width</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:560
 msgid ""
 "Use this spin box to specify the width of the paper. Use the adjacent drop-"
 "down list to change the measurement unit."
 msgstr ""
-"Määritä paperin leveys tällä säätimellä. Valitse viereistä "
-"alasvetoluettelosta mittayksikkö."
 
-#: C/atril.xml:534(guilabel)
-msgid "Height"
-msgstr "Korkeus"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:563
+msgid "<guilabel>Height</guilabel>"
+msgstr ""
 
-#: C/atril.xml:536(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:565
 msgid "Use this spin box to specify the height of the paper."
-msgstr "Määritä paperin korkeus tällä säätimellä."
+msgstr ""
 
-#: C/atril.xml:539(guilabel)
-msgid "Feed orientation"
-msgstr "Syöttösuunta"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:568
+msgid "<guilabel>Feed orientation</guilabel>"
+msgstr ""
 
-#: C/atril.xml:541(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:570
 msgid ""
 "Use this drop-down list to select the orientation of the paper in the "
 "printer."
-msgstr "Valitse alasvetoluettelosta paperin syöttösuunta tulostimessa."
+msgstr ""
 
-#: C/atril.xml:544(guilabel)
-msgid "Page orientation"
-msgstr "Sivun suunta"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:573
+msgid "<guilabel>Page orientation</guilabel>"
+msgstr ""
 
-#: C/atril.xml:546(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:575
 msgid "Use this drop-down list to select the page orientation."
-msgstr "Valitse alasvetoluettelosta sivun suunta."
+msgstr ""
 
-#: C/atril.xml:549(guilabel)
-msgid "Layout"
-msgstr "Asemointi"
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:578
+msgid "<guilabel>Layout</guilabel>"
+msgstr ""
 
-#: C/atril.xml:551(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:580
 msgid ""
 "Use this drop-down list to select the page layout. A preview of each layout "
 "that you select is displayed in the <guilabel>Preview</guilabel> area."
 msgstr ""
-"Valitse alasvetoluettelosta sivun asemointi. Valittua asemointia voi "
-"tarkastella <guilabel>Esikatselu</guilabel>-ruudussa."
 
-#: C/atril.xml:554(guilabel)
-msgid "Paper Tray"
-msgstr "Paperilokero"
-
-#: C/atril.xml:556(para)
-msgid "Use this drop-down list to select the paper tray."
-msgstr "Valitse alasvetoluettelosta paperilokero"
-
-#: C/atril.xml:566(title)
-msgid "To Copy a Document"
-msgstr "Asiakirjan kopiointi"
-
-#: C/atril.xml:567(para)
-msgid "To copy a file, perform the following steps:"
-msgstr "Tiedosto kopioidaan seuraavasti:"
-
-#: C/atril.xml:571(para)
-msgid ""
-"Choose <menuchoice><guimenu>File</guimenu><guimenuitem>Save a Copy</"
-"guimenuitem></menuchoice>."
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:583
+msgid "<guilabel>Paper Tray</guilabel>"
 msgstr ""
-"Valitse <menuchoice><guimenu>Tiedosto</guimenu><guimenuitem>Tallenna kopio</"
-"guimenuitem></menuchoice>."
 
-#: C/atril.xml:576(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:585
+msgid "Use this drop-down list to select the paper tray."
+msgstr ""
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:595
+msgid "To Copy a Document"
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:596
+msgid "To copy a file, perform the following steps:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:600
+msgid ""
+"Choose <menuchoice> <guimenu>File</guimenu> <guimenuitem>Save a "
+"Copy</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:605
 msgid ""
 "Type the new filename in the <guilabel>Filename</guilabel> text box in the "
 "<guilabel>Save a Copy</guilabel> dialog."
 msgstr ""
-"Kirjoita uusi tiedostonimi <guilabel>Tiedostonimi</guilabel>-tekstikenttään "
-"<guilabel>Tallenna kopio</guilabel> -valintaikkunassa."
 
-#: C/atril.xml:579(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:608
 msgid ""
 "If necessary, specify the location of the copied document. By default, "
 "copies are saved in your home directory."
 msgstr ""
-"Määritä kopioidun asiakirjan sijainti mikäli se on tarpeen. Oletusarvoisesti "
-"kopiot tallennetaan kotihakemistoosi."
 
-#: C/atril.xml:584(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:613
 msgid "Click <guibutton>Save</guibutton>."
-msgstr "Napsauta <guibutton>Tallenna</guibutton>."
+msgstr ""
 
-#: C/atril.xml:593(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:622
 msgid "To Work With Password-Protected Documents"
-msgstr "Työskentely salasanasuojatuilla asiakirjoilla"
+msgstr ""
 
-#: C/atril.xml:594(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:623
 msgid "An author can use the following password levels to protect a document:"
-msgstr "Asiakirjan suojaamiseen voi käyttää seuraavia salasanatasoja:"
+msgstr ""
 
-#: C/atril.xml:599(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:628
 msgid "User password that allows others only to read the document."
-msgstr "Käyttäjäsalasana sallii muiden ainoastaan lukea asiakirjaa."
+msgstr ""
 
-#: C/atril.xml:603(para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:632
 msgid ""
 "Master password that allows others to perform additional actions, such as "
 "print the document."
 msgstr ""
-"Pääsalasana sallii muiden tehdä muita toimintoja kuten tulostaa asiakirjan."
 
-#: C/atril.xml:607(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:636
 msgid ""
 "When you try to open a password-protected document, <application>Atril "
 "Document Viewer</application> displays a security dialog. Type either the "
 "user password or the master password in the <guilabel>Enter document "
-"password</guilabel> text box, then click <guibutton>Open Document</"
-"guibutton>."
+"password</guilabel> text box, then click <guibutton>Open "
+"Document</guibutton>."
 msgstr ""
-"Kun yrität avata salasanasuojatun asiakirjan, <application>Atril-"
-"asiakirjakatselin</application> näyttää turvakyselyn. Syötä joko käyttäjä- "
-"tai pääsalasana <guilabel>Syötä salasana</guilabel> -tekstikenttään ja "
-"napsauta <guibutton>Avaa asiakirja</guibutton>."
 
-#: C/atril.xml:614(title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:643
 msgid "To Close a Document"
-msgstr "Asiakirjan sulkeminen"
-
-#: C/atril.xml:615(para)
-msgid ""
-"To close a document, choose <menuchoice><guimenu>File</"
-"guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
 msgstr ""
-"Sulkeaksesi asiakirjan valitse <menuchoice><guimenu>Tiedosto</"
-"guimenu><guimenuitem>Sulje</guimenuitem</menuchoice>."
 
-#: C/atril.xml:617(para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:644
+msgid ""
+"To close a document, choose <menuchoice> <guimenu>File</guimenu> "
+"<guimenuitem>Close</guimenuitem> </menuchoice>."
+msgstr ""
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:646
 msgid ""
 "If the window is the last <application>Atril Document Viewer</application> "
 "window open, the application exits."
 msgstr ""
-"Mikäli ikkuna on viimeinen <application>Atril-asiakirjakatselimen</"
-"application> avoinna oleva ikkuna, sovellus lopetetaan."
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/atril.xml:0(None)
-msgid "translator-credits"
-msgstr ""
-"Timo Jyrinki <timo.jyrinki@iki.fi>, 2008\n"
-"Tommi Vainikainen <thv@iki.fi>, 2006\n"
-"Flammie Pirinen <flammie@iki.fi>, 2006"
-
-#: C/atril.xml:88(revnumber)
-msgid "Atril Document Viewer Manual V1.1"
-msgstr "Atril-asiakirjakatselimen käyttöohje v1.1"
-
-#: C/atril.xml:89(date)
-msgid "2008-04-05"
-msgstr "2008-04-05"
-
-#: C/atril.xml:91(para)
-msgid "Niels Giesen"
-msgstr "Niels Giesen"
-
-#: C/atril.xml:92(para)
-msgid "Claude Paroz"
-msgstr "Claude Paroz"
-
-#: C/atril.xml:635(title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:655
 msgid "Shortcuts"
-msgstr "Pikanäppäimet"
+msgstr ""
 
-#: C/atril.xml:636(para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:656
 msgid ""
 "Below is a list of all shortcuts present in <application>Atril Document "
 "Viewer</application>:"
 msgstr ""
-"<application>Atril-asiakirjakatselimessa</application> käytettävissä "
-"olevat pikanäppäimet on lueteltu alla:"
 
-#: C/atril.xml:644(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:664
 msgid "Shortcut"
 msgstr "Pikanäppäin"
 
-#: C/atril.xml:651(keycap) C/atril.xml:655(keycap) C/atril.xml:659(keycap)
-#: C/atril.xml:663(keycap) C/atril.xml:667(keycap) C/atril.xml:671(keycap)
-#: C/atril.xml:676(keycap) C/atril.xml:682(keycap) C/atril.xml:701(keycap)
-#: C/atril.xml:747(keycap)
-msgid "Ctrl"
-msgstr "Ctrl"
+#. (itstool) path: entry/para
+#: C/index.docbook:671
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:651(keycap)
-msgid "O"
-msgstr "O"
-
-#: C/atril.xml:652(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:672
 msgid "Open an existing document"
-msgstr "Asiakirjan avaaminen"
+msgstr "Avaa olemassaoleva asiakirja"
 
-#: C/atril.xml:655(keycap)
-msgid "S"
-msgstr "S"
+#. (itstool) path: entry/para
+#: C/index.docbook:675
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:656(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:676
 msgid "Save a copy of the current document"
-msgstr "Asiakirjan kopiointi"
+msgstr "Tallenna kopio tämänhetkisestä asiakirjasta"
 
-#: C/atril.xml:659(keycap)
-msgid "P"
-msgstr "P"
+#. (itstool) path: entry/para
+#: C/index.docbook:679
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:660(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:680
 msgid "Print document"
-msgstr "Asiakirjan tulostaminen"
+msgstr ""
 
-#: C/atril.xml:663(keycap)
-msgid "W"
-msgstr "W"
+#. (itstool) path: entry/para
+#: C/index.docbook:683
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:664(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:684
 msgid "Close window"
-msgstr "Ikkunan sulkeminen"
+msgstr "Sulje ikkuna"
 
-#: C/atril.xml:667(keycap)
-msgid "C"
-msgstr "C"
+#. (itstool) path: entry/para
+#: C/index.docbook:687
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:668(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:688
 msgid "Copy selection"
-msgstr "Kopioi valinta"
+msgstr ""
 
-#: C/atril.xml:671(keycap)
-msgid "A"
-msgstr "A"
+#. (itstool) path: entry/para
+#: C/index.docbook:691
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:672(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:692
 msgid "Select All"
 msgstr "Valitse kaikki"
 
-#: C/atril.xml:676(keycap)
-msgid "F"
-msgstr "F"
+#. (itstool) path: entry/para
+#: C/index.docbook:696
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:677(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:697
 msgid "<keycap>/</keycap> (slash)"
-msgstr "<keycap>/</keycap> (kauttaviiva)"
+msgstr ""
 
-#: C/atril.xml:679(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:699
 msgid "Find a word or phrase in the document"
 msgstr "Etsi sanaa tai lausetta asiakirjasta"
 
-#: C/atril.xml:682(keycap)
-msgid "G"
-msgstr "G"
+#. (itstool) path: entry/para
+#: C/index.docbook:703
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:683(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:704
+msgid "<keycap>F3</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:706
 msgid "Find next"
-msgstr "Etsi seuraava"
+msgstr ""
 
-#: C/atril.xml:687(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:710
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (plus sign)"
 msgstr ""
-"<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (plus-merkki)"
 
-#: C/atril.xml:688(keycap)
-msgid "+"
-msgstr "+"
+#. (itstool) path: entry/para
+#: C/index.docbook:711
+msgid "<keycap>+</keycap>"
+msgstr ""
 
-#: C/atril.xml:689(keycap)
-msgid "="
-msgstr "="
+#. (itstool) path: entry/para
+#: C/index.docbook:712
+msgid "<keycap>=</keycap>"
+msgstr ""
 
-#: C/atril.xml:691(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:714
 msgid "Zoom in"
 msgstr "Lähennä"
 
-#: C/atril.xml:695(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:718
 msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (minus sign)"
 msgstr ""
-"<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (miinus-merkki)"
 
-#: C/atril.xml:696(keycap)
-msgid "-"
-msgstr "-"
+#. (itstool) path: entry/para
+#: C/index.docbook:719
+msgid "<keycap>-</keycap>"
+msgstr ""
 
-#: C/atril.xml:698(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:721
 msgid "Zoom out"
 msgstr "Loitonna"
 
-#: C/atril.xml:701(keycap)
-msgid "R"
-msgstr "R"
+#. (itstool) path: entry/para
+#: C/index.docbook:724
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:702(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:725
 msgid "Reload the document"
-msgstr "Lataa asiakirja uudelleen"
+msgstr "Lataa asiakirja uudestaan"
 
-#: C/atril.xml:706(keycap) C/atril.xml:731(keycap)
-msgid "Page Up"
-msgstr "Page Up"
+#. (itstool) path: entry/para
+#: C/index.docbook:729
+msgid "<keycap>Page Up</keycap>"
+msgstr ""
 
-#: C/atril.xml:707(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:730
 msgid "Go to the previous page"
-msgstr "Mene edelliselle sivulle"
+msgstr "Siirry edelliselle sivulle"
 
-#: C/atril.xml:710(keycap) C/atril.xml:735(keycap)
-msgid "Page Down"
-msgstr "Page Down"
+#. (itstool) path: entry/para
+#: C/index.docbook:733
+msgid "<keycap>Page Down</keycap>"
+msgstr ""
 
-#: C/atril.xml:711(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:734
 msgid "Go to the next page"
-msgstr "Mene seuraavalle sivulle"
+msgstr "Siirry seuraavalle sivulle"
 
-#: C/atril.xml:715(keycap) C/atril.xml:723(keycap)
-msgid "Space"
-msgstr "Välilyönti"
+#. (itstool) path: entry/para
+#: C/index.docbook:738
+msgid "<keycap>Space</keycap>"
+msgstr ""
 
-#: C/atril.xml:716(keycap) C/atril.xml:723(keycap) C/atril.xml:725(keycap)
-#: C/atril.xml:731(keycap) C/atril.xml:735(keycap)
-msgid "Shift"
-msgstr "Vaihto"
+#. (itstool) path: entry/para
+#: C/index.docbook:739
+msgid "<keycombo><keycap>Shift</keycap><keycap>Backspace</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:716(keycap) C/atril.xml:724(keycap)
-msgid "Backspace"
-msgstr "Askelpalautin"
+#. (itstool) path: entry/para
+#: C/index.docbook:740
+msgid "<keycap>Return</keycap>"
+msgstr ""
 
-#: C/atril.xml:717(keycap) C/atril.xml:725(keycap)
-msgid "Return"
-msgstr "Rivinvaihto"
-
-#: C/atril.xml:719(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:742
 msgid "Scroll forward"
-msgstr "Vieritä eteenpäin"
+msgstr ""
 
-#: C/atril.xml:727(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:746
+msgid "<keycombo><keycap>Shift</keycap><keycap>Space</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:747
+msgid "<keycap>Backspace</keycap>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:748
+msgid "<keycombo><keycap>Shift</keycap><keycap>Return</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:750
 msgid "Scroll backward"
-msgstr "Vieritä taaksepäin"
+msgstr ""
 
-#: C/atril.xml:732(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:754
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Up</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:755
 msgid "Go a bunch of pages up"
-msgstr "Mene muutama sivu taaksepäin"
+msgstr ""
 
-#: C/atril.xml:736(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:758
+msgid "<keycombo><keycap>Shift</keycap><keycap>Page Down</keycap></keycombo>"
+msgstr ""
+
+#. (itstool) path: entry/para
+#: C/index.docbook:759
 msgid "Go a bunch of pages down"
-msgstr "Mene muutama sivu eteenpäin"
+msgstr ""
 
-#: C/atril.xml:739(keycap)
-msgid "Home"
-msgstr "Home"
+#. (itstool) path: entry/para
+#: C/index.docbook:762
+msgid "<keycap>Home</keycap>"
+msgstr ""
 
-#: C/atril.xml:740(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:763
 msgid "Go to the first page"
-msgstr "Mene ensimmäiselle sivulle"
+msgstr "Siirry ensimmäiselle sivulle"
 
-#: C/atril.xml:743(keycap)
-msgid "End"
-msgstr "End"
+#. (itstool) path: entry/para
+#: C/index.docbook:766
+msgid "<keycap>End</keycap>"
+msgstr ""
 
-#: C/atril.xml:744(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:767
 msgid "Go to the last page"
-msgstr "Mene viimeiselle sivulle"
+msgstr "Siirry viimeiselle sivulle"
 
-#: C/atril.xml:747(keycap)
-msgid "L"
-msgstr "L"
+#. (itstool) path: entry/para
+#: C/index.docbook:770
+msgid "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
+msgstr ""
 
-#: C/atril.xml:748(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:771
 msgid "Go to page by number or label"
-msgstr "Mene tietylle sivulle numeron tai tai nimen mukaan"
+msgstr ""
 
-#: C/atril.xml:751(keycap)
-msgid "F1"
-msgstr "F1"
+#. (itstool) path: entry/para
+#: C/index.docbook:774
+msgid "<keycap>F1</keycap>"
+msgstr ""
 
-#: C/atril.xml:752(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:775
 msgid "Help"
 msgstr "Ohje"
 
-#: C/atril.xml:755(keycap)
-msgid "F5"
-msgstr "F5"
+#. (itstool) path: entry/para
+#: C/index.docbook:778
+msgid "<keycap>F5</keycap>"
+msgstr ""
 
-#: C/atril.xml:756(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:779
 msgid "Run document as presentation"
-msgstr "Näytä asiakirja esityksenä"
+msgstr ""
 
-#: C/atril.xml:759(keycap)
-msgid "F9"
-msgstr "F9"
+#. (itstool) path: entry/para
+#: C/index.docbook:782
+msgid "<keycap>F9</keycap>"
+msgstr ""
 
-#: C/atril.xml:760(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:783
 msgid "Show or hide the side pane"
 msgstr "Näytä tai piilota sivupaneeli"
 
-#: C/atril.xml:763(keycap)
-msgid "F11"
-msgstr "F11"
+#. (itstool) path: entry/para
+#: C/index.docbook:786
+msgid "<keycap>F11</keycap>"
+msgstr ""
 
-#: C/atril.xml:764(para)
+#. (itstool) path: entry/para
+#: C/index.docbook:787
 msgid "Toggle fullscreen mode"
-msgstr "Kokoruututila"
+msgstr "Vaihda kokoruututilaa"
 
-#~ msgid "Atril Document Viewer"
-#~ msgstr "Atril-asiakirjakatselin"
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "linkki"
 
-#~ msgid "To Open a File"
-#~ msgstr "Tiedoston avaaminen"
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
