@@ -82,7 +82,8 @@ DISTCHECK_CONFIGURE_FLAGS =   \
     --enable-gtk-doc          \
     --disable-caja            \
     --disable-tests           \
-    --disable-silent-rules
+    --disable-silent-rules    \
+    CFLAGS='-Wno-deprecated-declarations'
 
 distuninstallcheck_listfiles = find . -type f -print | grep -v /share/mate/help/ | grep -v \.omf
 
