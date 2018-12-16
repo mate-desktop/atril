@@ -136,8 +136,6 @@ get_document_from_uri (const char        *uri,
 	mime_type = ev_file_get_mime_type (uri, fast, &err);
 
 	if (mime_type == NULL) {
-		g_free (mime_type);
-
 		if (err == NULL) {
 			g_set_error_literal (error,
                                              EV_DOCUMENT_ERROR,
