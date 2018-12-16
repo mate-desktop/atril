@@ -1542,11 +1542,12 @@ PSDataBW(TIFF2PSContext* ctx, TIFF* tif, uint32 w, uint32 h)
 
 	(void) w; (void) h;
 	tf_buf = (unsigned char *) _TIFFmalloc(stripsize);
-        memset(tf_buf, 0, stripsize);
 	if (tf_buf == NULL) {
 		TIFFError(ctx->filename, "No space for scanline buffer");
 		return;
 	}
+
+        memset(tf_buf, 0, stripsize);
 
 #if defined( EXP_ASCII85ENCODER )
 	if ( ctx->ascii85 ) {
