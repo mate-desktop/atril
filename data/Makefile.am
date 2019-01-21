@@ -45,7 +45,7 @@ endif
 # App data file
 #
 @INTLTOOL_XML_NOMERGE_RULE@
-appdatadir = $(datadir)/appdata
+appdatadir = $(datadir)/metainfo
 appdata_in_files = atril.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
