@@ -85,7 +85,6 @@ dnl Specify required versions of dependencies
 CAIRO_REQUIRED=1.10.0
 GLIB_REQUIRED=2.50.0
 GTK_REQUIRED=3.22.0
-WEBKIT_REQUIRED=2.4.3
 LIBSECRET_REQUIRED=0.5
 LIBXML_REQUIRED=2.5.0
 
@@ -591,36 +590,6 @@ AM_CONDITIONAL(ENABLE_XPS, test x$enable_xps = xyes)
 
 dnl ================== End of XPS checks ===================================================
 
-
-dnl ================== EPUB checks ===================================================
-
-AC_ARG_ENABLE(epub,
-	[AS_HELP_STRING([--enable-epub],
-			[Compile with support for epub documents.])],
-	[enable_epub=$enableval],
-	[enable_epub=yes])
-
-have_webkit="no"
-if test "x$enable_epub" = "xyes"; then
-    PKG_CHECK_MODULES(EPUB, webkit2gtk-4.0 >= $WEBKIT_REQUIRED \
-       libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
-    if test "x$have_webkit" = "xno"; then
-       AC_MSG_NOTICE([Webkit2 4.0 not found, trying 3.0])
-       PKG_CHECK_MODULES(EPUB, webkit2gtk-3.0 >= $WEBKIT_REQUIRED \
-          libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
-    fi
-
-    if test "x$have_webkit" = "xyes"; then
-       AC_DEFINE([ENABLE_EPUB], [1], [Enable support for ePub documents.])
-    else
-       AC_MSG_WARN(["ePub support is disabled."])
-    fi
-fi
-
-AM_CONDITIONAL(ENABLE_EPUB, test x$have_webkit = xyes)
-
-dnl ================== End of EPUB checks ===================================================
-
 dnl =================== Mime types list ====================================================
 
 if test "x$enable_pdf" = "xyes" ; then
@@ -646,9 +615,6 @@ if test "x$enable_pixbuf" = "xyes"; then
 fi
 if test "x$enable_xps" = "xyes"; then
     ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}application/oxps;application/vnd.ms-xpsdocument;"
-fi
-if test "x$have_webkit" = "xyes"; then
-	ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}application/epub+zip;"
 fi
 
 AC_SUBST(ATRIL_MIME_TYPES)
@@ -703,8 +669,6 @@ backend/comics/Makefile
 backend/djvu/Makefile
 backend/dvi/Makefile
 backend/dvi/mdvi-lib/Makefile
-backend/epub/Makefile
-backend/epub/minizip/Makefile
 backend/pdf/Makefile
 backend/pixbuf/Makefile
 backend/ps/Makefile
@@ -789,5 +753,4 @@ Configure summary:
     Pixbuf Backend......:    $enable_pixbuf
     Comics Backend......:    $enable_comics
     XPS Backend.........:    $enable_xps
-    ePub Backend........:    $have_webkit
 "

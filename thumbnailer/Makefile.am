@@ -30,7 +30,6 @@ thumbnailer_DATA = $(thumbnailer_in_files:.thumbnailer.in=.thumbnailer)
 atril.thumbnailer: $(thumbnailer_in_files)
 	$(AM_V_GEN)sed \
 		-e "s|\@ATRIL_MIME_TYPES\@|$(ATRIL_MIME_TYPES)|" \
-		-e "s|application/epub+zip;||" \
 		$< > $@
 
 EXTRA_DIST =         	\

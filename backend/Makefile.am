@@ -6,10 +6,6 @@ if ENABLE_PDF
 SUBDIRS += pdf
 endif
 
-if ENABLE_EPUB
-SUBDIRS += epub
-endif
-
 if ENABLE_PS 
 SUBDIRS += ps
 endif

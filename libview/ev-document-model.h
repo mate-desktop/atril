@@ -82,8 +82,6 @@ void             ev_document_model_set_rotation      (EvDocumentModel *model,
 gint             ev_document_model_get_rotation      (EvDocumentModel *model);
 void             ev_document_model_set_inverted_colors (EvDocumentModel *model,
 						      gboolean         inverted_colors);
-void			atril_web_document_set_inverted_colors(EvDocumentModel *model,
-						      gboolean         inverted_colors);
 gboolean       ev_document_model_get_inverted_colors (EvDocumentModel *model);
 void             ev_document_model_set_continuous    (EvDocumentModel *model,
 						      gboolean         continuous);

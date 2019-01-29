@@ -22,7 +22,6 @@ INST_H_SRC_FILES = 			\
 	ev-print-operation.h	        \
 	ev-stock-icons.h		\
 	ev-view.h			\
-	ev-web-view.h		\
 	ev-view-presentation.h
 
 INST_H_FILES = 				\
@@ -48,7 +47,6 @@ libatrilview_la_SOURCES = 			\
 	ev-timeline.c			\
 	ev-transition-animation.c	\
 	ev-view.c			\
-	ev-web-view.c	    \
 	ev-view-accessible.c		\
 	ev-view-marshal.c		\
 	ev-view-cursor.c		\
@@ -71,7 +69,6 @@ libatrilview_la_CFLAGS = \
 	$(LIBVIEW_CFLAGS)	\
 	$(WARN_CFLAGS)		\
 	$(DISABLE_DEPRECATED)	\
-	$(EPUB_CFLAGS)		\
 	$(AM_CFLAGS)
 
 libatrilview_la_LDFLAGS = \
@@ -82,8 +79,7 @@ libatrilview_la_LDFLAGS = \
 
 libatrilview_la_LIBADD = \
 	$(top_builddir)/libdocument/libatrildocument.la \
-	$(LIBVIEW_LIBS)								 \
-	$(EPUB_LIBS)
+	$(LIBVIEW_LIBS)
 
 BUILT_SOURCES = 			\
 	ev-view-marshal.h		\

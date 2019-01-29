@@ -68,6 +68,7 @@ struct _EvSidebarThumbnailsPrivate {
 	EvDocument *document;
 	EvDocumentModel *model;
 	EvThumbsSizeCache *size_cache;
+
 	gint n_pages, pages_done;
 
 	int rotation;
@@ -135,14 +136,8 @@ ev_thumbnails_size_cache_new (EvDocument *document)
 
 		page = ev_document_get_page (document, i);
 
-		if (document->iswebdocument == FALSE ) {
-			ev_document_get_page_size (document, i, &page_width, &page_height);
-		}
-		else {
-			/* Hardcoding these values to a large enough dimesnsion so as to achieve max content without loss in visibility*/
-			page_width = 800;
-			page_height = 1080;
-		}
+		ev_document_get_page_size (document, i, &page_width, &page_height);
+
 		if (!rc) {
 			rc = ev_render_context_new (page, 0, (gdouble)THUMBNAIL_WIDTH / page_width);
 		} else {
@@ -421,12 +416,9 @@ get_scale_for_page (EvSidebarThumbnails *sidebar_thumbnails,
 {
 	EvSidebarThumbnailsPrivate *priv = sidebar_thumbnails->priv;
 	gdouble width;
-	if (priv->document->iswebdocument == TRUE ) {
-		/* Hardcoded for epub documents*/
-		width = 800;
-	} else {
-		ev_document_get_page_size (priv->document, page, &width, NULL);
-	}
+
+	ev_document_get_page_size (priv->document, page, &width, NULL);
+
 	return (gdouble)THUMBNAIL_WIDTH / width;
 }
 
@@ -459,10 +451,6 @@ add_range (EvSidebarThumbnails *sidebar_thumbnails,
 			job = ev_job_thumbnail_new (priv->document,
 						    page, priv->rotation,
 						    get_scale_for_page (sidebar_thumbnails, page));
-
-			if (priv->document->iswebdocument) {
-				ev_job_set_run_mode(job, EV_JOB_RUN_MAIN_LOOP);
-			}
 
 			g_object_set_data_full (G_OBJECT (job), "tree_iter",
 						gtk_tree_iter_copy (&iter),
@@ -898,7 +886,7 @@ thumbnail_job_completed_callback (EvJobThumbnail      *job,
 	GtkTreeIter *iter;
 
 	iter = (GtkTreeIter *) g_object_get_data (G_OBJECT (job), "tree_iter");
-	if (priv->inverted_colors && priv->document->iswebdocument == FALSE)
+	if (priv->inverted_colors)
 		ev_document_misc_invert_pixbuf (job->thumbnail);
 	gtk_list_store_set (priv->list_store,
 			    iter,

@@ -22,8 +22,7 @@ atril_previewer_CFLAGS = \
 	$(PREVIEWER_CFLAGS)			\
         $(WARN_CFLAGS)                          \
         $(DISABLE_DEPRECATED)			\
-	$(AM_CFLAGS)    \
-    $(WEBKIT_CFLAGS)
+	$(AM_CFLAGS)
 
 atril_previewer_LDFLAGS = $(AM_LDFLAGS)
 
@@ -31,8 +30,7 @@ atril_previewer_LDADD = \
 	$(top_builddir)/libdocument/libatrildocument.la	\
 	$(top_builddir)/libview/libatrilview.la		\
 	$(top_builddir)/libmisc/libevmisc.la		\
-	$(PREVIEWER_LIBS)                           \
-    $(WEBKIT_LIBS)
+	$(PREVIEWER_LIBS)
 
 ev-previewer-resources.c: previewer.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir) $(srcdir)/previewer.gresource.xml)
 	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir) --generate-source --c-name ev_previewer $<
