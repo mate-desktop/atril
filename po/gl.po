@@ -5,10 +5,10 @@
 # 
 # Translators:
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # André Rivero Castillo <hab130@gmail.com>, 2018
 # Tasio Leiva <leiva.tasio@gmail.com>, 2018
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-27 21:00+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Tasio Leiva <leiva.tasio@gmail.com>, 2018\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2018\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,11 +143,11 @@ msgstr "o arquivo contedor está estragado"
 
 #: ../backend/epub/epub-document.c:874
 msgid "epub file is invalid or corrupt"
-msgstr "o arquivo epub non é válido ou está estragado"
+msgstr "o ficheiro epub non é válido ou está estragado"
 
 #: ../backend/epub/epub-document.c:884
 msgid "epub file is corrupt, no container"
-msgstr "o arquivo epub está estragado, non hai contedor"
+msgstr "o ficheiro epub está estragado, non hai contedor"
 
 #: ../backend/epub/epub-document.c:969
 msgid "could not parse content manifest"
@@ -155,7 +155,7 @@ msgstr "non foi posíbel analizar o manifesto de contido"
 
 #: ../backend/epub/epub-document.c:978
 msgid "content file is invalid"
-msgstr "o contido do arquivo non é válido"
+msgstr "o contido do ficheiro non é válido"
 
 #: ../backend/epub/epub-document.c:987
 msgid "epub file has no spine"
@@ -163,7 +163,7 @@ msgstr "o ficheiro ePub non ten columna vertebral"
 
 #: ../backend/epub/epub-document.c:996
 msgid "epub file has no manifest"
-msgstr "o arquivo epub carece de manifesto"
+msgstr "o ficheiro epub carece de manifesto"
 
 #: ../backend/epub/epub-document.c:1082
 msgid "Could not set up document tree for loading, some files missing"
@@ -475,7 +475,7 @@ msgstr "6400%"
 
 #: ../data/atril.appdata.xml.in.h:1
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr "Un visor de documentos para o entorno de escritorio MATE"
+msgstr "Un visor de documentos para o contorno de escritorio MATE"
 
 #: ../data/atril.appdata.xml.in.h:2
 msgid ""
@@ -494,7 +494,7 @@ msgstr ""
 " historietas. Cando o documento o permite, tamén permite buscar texto, "
 "copiar texto ao portapapeis, navegación en hipertextos e marcadores de táboa"
 " de contidos</p> <p> Atril é unha bifurcación de Evince e forma parte do "
-"entorno de escritorio Mate. Se queres aprender máis sobre MATE e Atril, "
+"contorno de escritorio Mate. Se queres aprender máis sobre MATE e Atril, "
 "visita a páxina do proxecto. </p>"
 
 #: ../data/atril.desktop.in.in.h:1
@@ -567,7 +567,7 @@ msgstr "Eliminar o ficheiro temporal"
 
 #: ../previewer/ev-previewer.c:36
 msgid "Print settings file"
-msgstr "Ficheiro de configuracións de impresión"
+msgstr "Ficheiro de axustes da impresión"
 
 #: ../previewer/ev-previewer.c:107 ../previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
@@ -622,7 +622,7 @@ msgstr "Reducir o documento"
 
 #: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6387
 msgid "Reset zoom to 100%"
-msgstr "Restablecer o zoom ao 100%"
+msgstr "Restabelecer o zoom ao 100%"
 
 #. translators: Print document currently shown in the Print Preview window
 #. translators: Title of the print dialog
@@ -1322,8 +1322,8 @@ msgstr "Non foi posíbel enviar o documento actual"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d traballo pendente na cola"
+msgstr[1] "%d traballos pendentes na cola"
 
 #: ../shell/ev-window.c:3638
 #, c-format
@@ -1375,7 +1375,11 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"Hai %d traballo de impresión activo. Quere agardar ata que a impresión "
+"remate antes de pechar?"
 msgstr[1] ""
+"Hai %d traballos de impresión activos. Quere agardar ata que a impresión "
+"remate antes de pechar?"
 
 #: ../shell/ev-window.c:3939
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1472,8 +1476,8 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d aparición nesta páxina"
+msgstr[1] "%d aparicións nesta páxina"
 
 #: ../shell/ev-window.c:5633
 msgid "Not found"
@@ -1498,6 +1502,10 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Premendo F7, activase ou desactivase a navegación por cursor de texto. Esta "
+"característica coloca un cursor movíbel nas páxinas de texto, o que le "
+"permite moverse e seleccionar texto co seu teclado. Quere activar a "
+"navegación por cursor de texto?"
 
 #: ../shell/ev-window.c:6004
 msgid "Don't show this message again"
@@ -1599,11 +1607,11 @@ msgstr "Rotar á _dereita"
 
 #: ../shell/ev-window.c:6375
 msgid "Save Current Settings as _Default"
-msgstr "Gardar as configuracións actuais como as _predeterminadas"
+msgstr "Gardar os axustes actuais como os _predeterminados"
 
 #: ../shell/ev-window.c:6386
 msgid "_Reset Zoom"
-msgstr "_Restablecer o zoom"
+msgstr "_Restabelecer o zoom"
 
 #: ../shell/ev-window.c:6389
 msgid "_Reload"
@@ -1679,7 +1687,7 @@ msgstr "Barra de _ferramentas"
 
 #: ../shell/ev-window.c:6486
 msgid "Show or hide the toolbar"
-msgstr "Amosar ou agochar a barra de ferramentas"
+msgstr "Amosar ou agachar a barra de ferramentas"
 
 #: ../shell/ev-window.c:6488
 msgid "Side _Pane"
@@ -1687,7 +1695,7 @@ msgstr "_Panel lateral"
 
 #: ../shell/ev-window.c:6489
 msgid "Show or hide the side pane"
-msgstr "Amosar ou agochar o panel lateral"
+msgstr "Amosar ou agachar o panel lateral"
 
 #: ../shell/ev-window.c:6491
 msgid "_Continuous"
@@ -1835,7 +1843,7 @@ msgstr "Reducir"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6746
 msgid "Reset Zoom"
-msgstr "Restablecer o zoom"
+msgstr "Restabelecer o zoom"
 
 #: ../shell/ev-window.c:6887 ../shell/ev-window.c:6903
 msgid "Unable to launch external application."

@@ -11,11 +11,11 @@
 # Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
 # Milan Milzou <vonfsro@gmail.com>, 2018
 # Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
-# ToMáš Marný, 2018
 # Michal <sinope@seznam.cz>, 2018
 # huskyviking <husky.viking@seznam.cz>, 2018
 # Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
 # Roman Horník <roman.hornik@debian-linux.cz>, 2018
+# ToMáš Marný, 2019
 # 
 #, fuzzy
 msgid ""
@@ -24,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-27 21:00+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2018\n"
+"Last-Translator: ToMáš Marný, 2019\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1310,10 +1310,10 @@ msgstr "Nelze odeslat aktuální dokument"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " %d čekající úloha ve frontě"
+msgstr[1] " %d čekající úlohy ve frontě"
+msgstr[2] " %d čekajících úloh ve frontě"
+msgstr[3] " %d čekajících úloh ve frontě"
 
 #: ../shell/ev-window.c:3638
 #, c-format
@@ -1364,9 +1364,13 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"Je aktivní %d tisková úloha. Odložit uzavření, dokud se tisk neukončí?"
 msgstr[1] ""
+"Jsou aktivní %d tiskové úlohy. Odložit uzavření, dokud se tisk neukončí?"
 msgstr[2] ""
+"There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[3] ""
+"Je aktivních %d tiskových úloh. Odložit uzavření, dokud se tisk neukončí?"
 
 #: ../shell/ev-window.c:3939
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1472,10 +1476,10 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d nález na této stránce"
+msgstr[1] "%d nálezy na této stránce"
+msgstr[2] "%d nálezů na této stránce"
+msgstr[3] "%d nálezů na této stránce"
 
 #: ../shell/ev-window.c:5633
 msgid "Not found"
@@ -1500,6 +1504,9 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Zmáčknutím F7 zapnete/vypnete kurzorovou navigaci. Tato funkce umístí do "
+"textových stránek pohyblivý kurzor, kterým se můžete pomocí klávesnice po "
+"dokumentu pohybovat a vybírat text. Chcete kurzorovou navigaci zapnout?"
 
 #: ../shell/ev-window.c:6004
 msgid "Don't show this message again"
