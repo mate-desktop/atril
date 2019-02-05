@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# ciaran, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# ciaran, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-27 20:50+0200\n"
+"POT-Creation-Date: 2019-02-03 14:51+0100\n"
 "PO-Revision-Date: 2018-03-11 14:34+0000\n"
-"Last-Translator: ciaran, 2018\n"
+"Last-Translator: ciaran, 2019\n"
 "Language-Team: Welsh (https://www.transifex.com/mate/teams/13566/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -230,6 +230,10 @@ msgstr "Heb ei ymgorffori"
 msgid "PDF Documents"
 msgstr "Dogfennau PDF"
 
+#: ../backend/pixbuf/pixbufdocument.atril-backend.in.h:1
+msgid "Images"
+msgstr "Lluniau"
+
 #: ../backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
@@ -247,6 +251,14 @@ msgstr "Dogfennau PostScript"
 #: ../backend/tiff/tiff-document.c:114
 msgid "Invalid document"
 msgstr "Dogfen annilys"
+
+#: ../backend/tiff/tiffdocument.atril-backend.in.h:1
+msgid "Tiff Documents"
+msgstr ""
+
+#: ../backend/xps/xpsdocument.atril-backend.in.h:1
+msgid "XPS Documents"
+msgstr ""
 
 #: ../libdocument/ev-attachment.c:304 ../libdocument/ev-attachment.c:325
 #, c-format
@@ -391,16 +403,16 @@ msgid "Separator"
 msgstr "Gwahanydd"
 
 #. translators: this is the label for toolbar button
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6753
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6771
 msgid "Fit Page"
 msgstr ""
 
 #. translators: this is the label for toolbar button
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6757
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6775
 msgid "Fit Width"
 msgstr "Ffitio'r lled"
 
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6396
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6414
 msgid "Expand Window to Fit"
 msgstr "Ehangu'r ffenestr i ffitio"
 
@@ -480,7 +492,7 @@ msgstr ""
 msgid "Atril Document Viewer"
 msgstr ""
 
-#: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5278
+#: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5296
 #: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
@@ -544,7 +556,7 @@ msgstr ""
 msgid "MATE Document Previewer"
 msgstr ""
 
-#: ../previewer/ev-previewer-window.c:96 ../shell/ev-window.c:3581
+#: ../previewer/ev-previewer-window.c:96 ../shell/ev-window.c:3599
 msgid "Failed to print document"
 msgstr ""
 
@@ -553,45 +565,45 @@ msgstr ""
 msgid "The selected printer '%s' could not be found"
 msgstr ""
 
-#: ../previewer/ev-previewer-window.c:280 ../shell/ev-window.c:6357
+#: ../previewer/ev-previewer-window.c:280 ../shell/ev-window.c:6375
 msgid "_Close"
 msgstr "Ca_u"
 
 #. Go menu
-#: ../previewer/ev-previewer-window.c:283 ../shell/ev-window.c:6403
+#: ../previewer/ev-previewer-window.c:283 ../shell/ev-window.c:6421
 msgid "_Previous Page"
 msgstr "Tudalen _flaenorol"
 
-#: ../previewer/ev-previewer-window.c:284 ../shell/ev-window.c:6404
+#: ../previewer/ev-previewer-window.c:284 ../shell/ev-window.c:6422
 msgid "Go to the previous page"
 msgstr "Mynd i'r dudalen flaenorol"
 
-#: ../previewer/ev-previewer-window.c:286 ../shell/ev-window.c:6406
+#: ../previewer/ev-previewer-window.c:286 ../shell/ev-window.c:6424
 msgid "_Next Page"
 msgstr "Tudalen _nesaf"
 
-#: ../previewer/ev-previewer-window.c:287 ../shell/ev-window.c:6407
+#: ../previewer/ev-previewer-window.c:287 ../shell/ev-window.c:6425
 msgid "Go to the next page"
 msgstr "Mynd i'r dudalen nesaf"
 
 #. View menu
-#: ../previewer/ev-previewer-window.c:289 ../shell/ev-window.c:6383
+#: ../previewer/ev-previewer-window.c:289 ../shell/ev-window.c:6401
 msgid "Zoom _In"
 msgstr ""
 
-#: ../previewer/ev-previewer-window.c:290 ../shell/ev-window.c:6384
+#: ../previewer/ev-previewer-window.c:290 ../shell/ev-window.c:6402
 msgid "Enlarge the document"
 msgstr "Chwyddo'r ddogfen"
 
-#: ../previewer/ev-previewer-window.c:292 ../shell/ev-window.c:6386
+#: ../previewer/ev-previewer-window.c:292 ../shell/ev-window.c:6404
 msgid "Zoom _Out"
 msgstr "Cre_bachu"
 
-#: ../previewer/ev-previewer-window.c:293 ../shell/ev-window.c:6387
+#: ../previewer/ev-previewer-window.c:293 ../shell/ev-window.c:6405
 msgid "Shrink the document"
 msgstr "Lleihau'r ddogfen"
 
-#: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6390
+#: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6408
 msgid "Reset zoom to 100%"
 msgstr ""
 
@@ -601,31 +613,31 @@ msgstr ""
 msgid "Print"
 msgstr "Argraffu"
 
-#: ../previewer/ev-previewer-window.c:301 ../shell/ev-window.c:6353
+#: ../previewer/ev-previewer-window.c:301 ../shell/ev-window.c:6371
 msgid "Print this document"
 msgstr "Argraffu'r ddogfen hon"
 
-#: ../previewer/ev-previewer-window.c:335 ../shell/ev-window.c:6509
+#: ../previewer/ev-previewer-window.c:335 ../shell/ev-window.c:6527
 msgid "Fit Pa_ge"
 msgstr ""
 
-#: ../previewer/ev-previewer-window.c:336 ../shell/ev-window.c:6510
+#: ../previewer/ev-previewer-window.c:336 ../shell/ev-window.c:6528
 msgid "Make the current document fill the window"
 msgstr "Gwneud i'r ddogfen lenwi'r ffenestr"
 
-#: ../previewer/ev-previewer-window.c:338 ../shell/ev-window.c:6512
+#: ../previewer/ev-previewer-window.c:338 ../shell/ev-window.c:6530
 msgid "Fit _Width"
 msgstr ""
 
-#: ../previewer/ev-previewer-window.c:339 ../shell/ev-window.c:6513
+#: ../previewer/ev-previewer-window.c:339 ../shell/ev-window.c:6531
 msgid "Make the current document fill the window width"
 msgstr "Gwneud i'r ddogfen lenwi lled y ffenest"
 
-#: ../previewer/ev-previewer-window.c:537 ../shell/ev-window.c:6666
+#: ../previewer/ev-previewer-window.c:537 ../shell/ev-window.c:6684
 msgid "Page"
 msgstr "Tudalen"
 
-#: ../previewer/ev-previewer-window.c:538 ../shell/ev-window.c:6667
+#: ../previewer/ev-previewer-window.c:538 ../shell/ev-window.c:6685
 msgid "Select Page"
 msgstr "Dewis tudalen"
 
@@ -909,7 +921,7 @@ msgstr "Lansio %s"
 msgid "Find:"
 msgstr "Canfod:"
 
-#: ../shell/eggfindbar.c:327 ../shell/ev-window.c:6370
+#: ../shell/eggfindbar.c:327 ../shell/ev-window.c:6388
 msgid "Find Pre_vious"
 msgstr "Canfod _blaenorol"
 
@@ -917,7 +929,7 @@ msgstr "Canfod _blaenorol"
 msgid "Find previous occurrence of the search string"
 msgstr ""
 
-#: ../shell/eggfindbar.c:335 ../shell/ev-window.c:6368
+#: ../shell/eggfindbar.c:335 ../shell/ev-window.c:6386
 msgid "Find Ne_xt"
 msgstr "Chwilio am y n_esaf"
 
@@ -1141,7 +1153,7 @@ msgid "_Remove Bookmark"
 msgstr ""
 
 #: ../shell/ev-sidebar-bookmarks.c:313 ../shell/ev-window.c:1004
-#: ../shell/ev-window.c:4978
+#: ../shell/ev-window.c:4996
 #, c-format
 msgid "Page %s"
 msgstr "Tudalen %s"
@@ -1263,15 +1275,15 @@ msgstr ""
 msgid "Uploading image (%d%%)"
 msgstr ""
 
-#: ../shell/ev-window.c:3214
-msgid "Save a Copy"
-msgstr "Cadw copi"
+#: ../shell/ev-window.c:3215
+msgid "Save As…"
+msgstr "Cadw Fel..."
 
-#: ../shell/ev-window.c:3275
+#: ../shell/ev-window.c:3293
 msgid "Could not send current document"
 msgstr ""
 
-#: ../shell/ev-window.c:3525
+#: ../shell/ev-window.c:3543
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
@@ -1280,37 +1292,37 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../shell/ev-window.c:3638
+#: ../shell/ev-window.c:3656
 #, c-format
 msgid "Printing job “%s”"
 msgstr ""
 
-#: ../shell/ev-window.c:3815
+#: ../shell/ev-window.c:3833
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
 msgstr ""
 
-#: ../shell/ev-window.c:3819
+#: ../shell/ev-window.c:3837
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
 
-#: ../shell/ev-window.c:3826
+#: ../shell/ev-window.c:3844
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
 msgstr "Cadw copi o'r ddogfen \"%s\" cyn cau?"
 
-#: ../shell/ev-window.c:3845
+#: ../shell/ev-window.c:3863
 msgid "Close _without Saving"
 msgstr "Cau _heb gadw"
 
-#: ../shell/ev-window.c:3849
-msgid "Save a _Copy"
-msgstr "Cadw _copi"
+#: ../shell/ev-window.c:3867 ../shell/ev-window.c:6364
+msgid "_Save As…"
+msgstr ""
 
-#: ../shell/ev-window.c:3918
+#: ../shell/ev-window.c:3936
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
 msgstr ""
@@ -1318,7 +1330,7 @@ msgstr ""
 #. TRANS: the singular form is not really used as n_print_jobs > 1
 #. but some languages distinguish between different plurals forms,
 #. so the ngettext is needed.
-#: ../shell/ev-window.c:3924
+#: ../shell/ev-window.c:3942
 #, c-format
 msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
@@ -1329,42 +1341,42 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../shell/ev-window.c:3939
+#: ../shell/ev-window.c:3957
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr ""
 
-#: ../shell/ev-window.c:3943
+#: ../shell/ev-window.c:3961
 msgid "Cancel _print and Close"
 msgstr "_Diddymu'r argraffu a chau"
 
-#: ../shell/ev-window.c:3947
+#: ../shell/ev-window.c:3965
 msgid "Close _after Printing"
 msgstr "_Cau ar ôl argraffu"
 
-#: ../shell/ev-window.c:4328
+#: ../shell/ev-window.c:4346
 msgid "Running in presentation mode"
 msgstr "Rhedeg ym modd cyflwyno"
 
-#: ../shell/ev-window.c:4393
+#: ../shell/ev-window.c:4411
 msgid "Presentation mode is not supported for ePub documents"
 msgstr "Ni chefnogir modd cyflwyno ar gyfer dogfennau ePub"
 
-#: ../shell/ev-window.c:4707
+#: ../shell/ev-window.c:4725
 msgid "Toolbar Editor"
 msgstr "Golygydd y bar offer"
 
-#: ../shell/ev-window.c:5024
+#: ../shell/ev-window.c:5042
 msgid "There was an error displaying help"
 msgstr ""
 
-#: ../shell/ev-window.c:5274
+#: ../shell/ev-window.c:5292
 #, c-format
 msgid ""
 "Document Viewer\n"
 "Using %s (%s)"
 msgstr ""
 
-#: ../shell/ev-window.c:5309
+#: ../shell/ev-window.c:5327
 msgid ""
 "Atril is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -1372,7 +1384,7 @@ msgid ""
 "version.\n"
 msgstr ""
 
-#: ../shell/ev-window.c:5313
+#: ../shell/ev-window.c:5331
 msgid ""
 "Atril is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -1380,24 +1392,24 @@ msgid ""
 "details.\n"
 msgstr ""
 
-#: ../shell/ev-window.c:5317
+#: ../shell/ev-window.c:5335
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA\n"
 msgstr ""
 
-#: ../shell/ev-window.c:5342
+#: ../shell/ev-window.c:5360
 msgid "Atril"
 msgstr "Atril"
 
-#: ../shell/ev-window.c:5345
+#: ../shell/ev-window.c:5363
 msgid ""
 "© 1996–2009 The Evince authors\n"
 "© 2012–2018 The MATE developers"
 msgstr ""
 
-#: ../shell/ev-window.c:5351
+#: ../shell/ev-window.c:5369
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -1406,7 +1418,7 @@ msgstr ""
 #. TRANS: Sometimes this could be better translated as
 #. "%d hit(s) on this page".  Therefore this string
 #. contains plural cases.
-#: ../shell/ev-window.c:5631
+#: ../shell/ev-window.c:5649
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
@@ -1415,397 +1427,393 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../shell/ev-window.c:5636
+#: ../shell/ev-window.c:5654
 msgid "Not found"
 msgstr "Heb ganfod"
 
-#: ../shell/ev-window.c:5642
+#: ../shell/ev-window.c:5660
 #, c-format
 msgid "%3d%% remaining to search"
 msgstr "%3d%% yn dal i chwilio"
 
-#: ../shell/ev-window.c:5997
+#: ../shell/ev-window.c:6015
 msgid "Enable caret navigation?"
 msgstr ""
 
-#: ../shell/ev-window.c:5999
+#: ../shell/ev-window.c:6017
 msgid "_Enable"
 msgstr ""
 
-#: ../shell/ev-window.c:6002
+#: ../shell/ev-window.c:6020
 msgid ""
 "Pressing F7 turns the caret navigation on or off. This feature places a "
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
 
-#: ../shell/ev-window.c:6007
+#: ../shell/ev-window.c:6025
 msgid "Don't show this message again"
 msgstr ""
 
-#: ../shell/ev-window.c:6332
+#: ../shell/ev-window.c:6350
 msgid "_File"
 msgstr "_Ffeil"
 
-#: ../shell/ev-window.c:6333
+#: ../shell/ev-window.c:6351
 msgid "_Edit"
 msgstr "_Golygu"
 
-#: ../shell/ev-window.c:6334
+#: ../shell/ev-window.c:6352
 msgid "_View"
 msgstr "G_olwg"
 
-#: ../shell/ev-window.c:6335
+#: ../shell/ev-window.c:6353
 msgid "_Go"
 msgstr "_Mynd"
 
-#: ../shell/ev-window.c:6336
+#: ../shell/ev-window.c:6354
 msgid "_Bookmarks"
 msgstr "_Llyfrnodau"
 
-#: ../shell/ev-window.c:6337
+#: ../shell/ev-window.c:6355
 msgid "_Help"
 msgstr "_Cymorth"
 
 #. File menu
-#: ../shell/ev-window.c:6340 ../shell/ev-window.c:6706
+#: ../shell/ev-window.c:6358 ../shell/ev-window.c:6724
 msgid "_Open…"
 msgstr ""
 
-#: ../shell/ev-window.c:6341 ../shell/ev-window.c:6707
+#: ../shell/ev-window.c:6359 ../shell/ev-window.c:6725
 msgid "Open an existing document"
 msgstr "Agor dogfen sydd eisoes yn bodoli"
 
-#: ../shell/ev-window.c:6343
+#: ../shell/ev-window.c:6361
 msgid "Op_en a Copy"
 msgstr ""
 
-#: ../shell/ev-window.c:6344
+#: ../shell/ev-window.c:6362
 msgid "Open a copy of the current document in a new window"
 msgstr ""
 
-#: ../shell/ev-window.c:6346
-msgid "_Save a Copy…"
-msgstr ""
-
-#: ../shell/ev-window.c:6347
+#: ../shell/ev-window.c:6365
 msgid "Save a copy of the current document"
 msgstr "Cadw copi o'r ddogfen bresennol"
 
-#: ../shell/ev-window.c:6349
+#: ../shell/ev-window.c:6367
 msgid "Send _To..."
 msgstr ""
 
-#: ../shell/ev-window.c:6350
+#: ../shell/ev-window.c:6368
 msgid "Send current document by mail, instant message..."
 msgstr ""
 
-#: ../shell/ev-window.c:6352
+#: ../shell/ev-window.c:6370
 msgid "_Print…"
 msgstr "_Argraffu..."
 
-#: ../shell/ev-window.c:6355
+#: ../shell/ev-window.c:6373
 msgid "P_roperties"
 msgstr "P_riodweddau"
 
 #. Edit menu
-#: ../shell/ev-window.c:6361
+#: ../shell/ev-window.c:6379
 msgid "_Copy"
 msgstr "_Copïo"
 
-#: ../shell/ev-window.c:6363
+#: ../shell/ev-window.c:6381
 msgid "Select _All"
 msgstr "Dewis _popeth"
 
-#: ../shell/ev-window.c:6365
+#: ../shell/ev-window.c:6383
 msgid "_Find…"
 msgstr "_Canfod..."
 
-#: ../shell/ev-window.c:6366
+#: ../shell/ev-window.c:6384
 msgid "Find a word or phrase in the document"
 msgstr "Chwilio am air neu eiriau yn y ddogfen"
 
-#: ../shell/ev-window.c:6372
+#: ../shell/ev-window.c:6390
 msgid "T_oolbar"
 msgstr "_Bar offer"
 
-#: ../shell/ev-window.c:6374
+#: ../shell/ev-window.c:6392
 msgid "Rotate _Left"
 msgstr "Cylchdroi i'r _chwith"
 
-#: ../shell/ev-window.c:6376
+#: ../shell/ev-window.c:6394
 msgid "Rotate _Right"
 msgstr "Cylchdroi i'r _dde"
 
-#: ../shell/ev-window.c:6378
+#: ../shell/ev-window.c:6396
 msgid "Save Current Settings as _Default"
 msgstr ""
 
-#: ../shell/ev-window.c:6389
+#: ../shell/ev-window.c:6407
 msgid "_Reset Zoom"
 msgstr ""
 
-#: ../shell/ev-window.c:6392
+#: ../shell/ev-window.c:6410
 msgid "_Reload"
 msgstr "_Ail-lwytho"
 
-#: ../shell/ev-window.c:6393
+#: ../shell/ev-window.c:6411
 msgid "Reload the document"
 msgstr "Ail-lwytho'r ddogfen"
 
-#: ../shell/ev-window.c:6395
+#: ../shell/ev-window.c:6413
 msgid "_Expand Window to Fit"
 msgstr ""
 
-#: ../shell/ev-window.c:6399
+#: ../shell/ev-window.c:6417
 msgid "Auto_scroll"
 msgstr ""
 
-#: ../shell/ev-window.c:6409
+#: ../shell/ev-window.c:6427
 msgid "_First Page"
 msgstr "Tudalen _yntaf"
 
-#: ../shell/ev-window.c:6410
+#: ../shell/ev-window.c:6428
 msgid "Go to the first page"
 msgstr "Mynd i'r dudalen gyntaf"
 
-#: ../shell/ev-window.c:6412
+#: ../shell/ev-window.c:6430
 msgid "_Last Page"
 msgstr "Tudalen _olaf"
 
-#: ../shell/ev-window.c:6413
+#: ../shell/ev-window.c:6431
 msgid "Go to the last page"
 msgstr "Mynd i'r dudalen olaf"
 
 #. Bookmarks menu
-#: ../shell/ev-window.c:6417
+#: ../shell/ev-window.c:6435
 msgid "_Add Bookmark"
 msgstr "_Ychwanegu Llyfrnod"
 
-#: ../shell/ev-window.c:6418
+#: ../shell/ev-window.c:6436
 msgid "Add a bookmark for the current page"
 msgstr ""
 
 #. Help menu
-#: ../shell/ev-window.c:6422
+#: ../shell/ev-window.c:6440
 msgid "_Contents"
 msgstr "_Cynnwys"
 
-#: ../shell/ev-window.c:6425
+#: ../shell/ev-window.c:6443
 msgid "_About"
 msgstr "_Ynghylch"
 
 #. Toolbar-only
-#: ../shell/ev-window.c:6429
+#: ../shell/ev-window.c:6447
 msgid "Leave Fullscreen"
 msgstr "Gadael y sgrin lawn"
 
-#: ../shell/ev-window.c:6430
+#: ../shell/ev-window.c:6448
 msgid "Leave fullscreen mode"
 msgstr "Gadael y sgrin lawn"
 
-#: ../shell/ev-window.c:6432
+#: ../shell/ev-window.c:6450
 msgid "Start Presentation"
 msgstr "Cychwyn cyflwyniad"
 
-#: ../shell/ev-window.c:6433
+#: ../shell/ev-window.c:6451
 msgid "Start a presentation"
 msgstr "Cychwyn cyflwyniad"
 
 #. View Menu
-#: ../shell/ev-window.c:6488
+#: ../shell/ev-window.c:6506
 msgid "_Toolbar"
 msgstr "_Bar Offer"
 
-#: ../shell/ev-window.c:6489
+#: ../shell/ev-window.c:6507
 msgid "Show or hide the toolbar"
 msgstr "Dangos neu guddio'r bar offer"
 
-#: ../shell/ev-window.c:6491
+#: ../shell/ev-window.c:6509
 msgid "Side _Pane"
 msgstr "Bar _ochr"
 
-#: ../shell/ev-window.c:6492
+#: ../shell/ev-window.c:6510
 msgid "Show or hide the side pane"
 msgstr "Dangos neu guddio'r bar ochr"
 
-#: ../shell/ev-window.c:6494
+#: ../shell/ev-window.c:6512
 msgid "_Continuous"
 msgstr "_Parhaol"
 
-#: ../shell/ev-window.c:6495
+#: ../shell/ev-window.c:6513
 msgid "Show the entire document"
 msgstr "Dangos yr holl ddogfen"
 
-#: ../shell/ev-window.c:6497
+#: ../shell/ev-window.c:6515
 msgid "_Dual"
 msgstr "_Deuol"
 
-#: ../shell/ev-window.c:6498
+#: ../shell/ev-window.c:6516
 msgid "Show two pages at once"
 msgstr "Dangos dwy dudalen ar unwaith"
 
-#: ../shell/ev-window.c:6500
+#: ../shell/ev-window.c:6518
 msgid "_Odd pages left"
 msgstr ""
 
-#: ../shell/ev-window.c:6501
+#: ../shell/ev-window.c:6519
 msgid "Show odd pages on the left in dual mode"
 msgstr ""
 
-#: ../shell/ev-window.c:6503
+#: ../shell/ev-window.c:6521
 msgid "_Fullscreen"
 msgstr "_Sgrin lawn"
 
-#: ../shell/ev-window.c:6504
+#: ../shell/ev-window.c:6522
 msgid "Expand the window to fill the screen"
 msgstr "Ehangu'r ffenest i lenwi'r sgrin"
 
-#: ../shell/ev-window.c:6506
+#: ../shell/ev-window.c:6524
 msgid "Pre_sentation"
 msgstr ""
 
-#: ../shell/ev-window.c:6507
+#: ../shell/ev-window.c:6525
 msgid "Run document as a presentation"
 msgstr "Rhedeg y ddogfen fel cyflwyniad"
 
-#: ../shell/ev-window.c:6515
+#: ../shell/ev-window.c:6533
 msgid "Inverted _Colors"
 msgstr ""
 
-#: ../shell/ev-window.c:6516
+#: ../shell/ev-window.c:6534
 msgid "Show page contents with the colors inverted"
 msgstr ""
 
-#: ../shell/ev-window.c:6518
+#: ../shell/ev-window.c:6536
 msgid "Caret _Navigation"
 msgstr ""
 
-#: ../shell/ev-window.c:6519
+#: ../shell/ev-window.c:6537
 msgid "Activate or disable caret-navigation"
 msgstr ""
 
 #. Links
-#: ../shell/ev-window.c:6527
+#: ../shell/ev-window.c:6545
 msgid "_Open Link"
 msgstr "_Agor dolen"
 
-#: ../shell/ev-window.c:6529
+#: ../shell/ev-window.c:6547
 msgid "_Go To"
 msgstr "_Mynd i"
 
-#: ../shell/ev-window.c:6531
+#: ../shell/ev-window.c:6549
 msgid "Open in New _Window"
 msgstr ""
 
-#: ../shell/ev-window.c:6533
+#: ../shell/ev-window.c:6551
 msgid "_Copy Link Address"
 msgstr "_Copïo cyfeiriad y ddolen"
 
-#: ../shell/ev-window.c:6535
+#: ../shell/ev-window.c:6553
 msgid "_Save Image As…"
 msgstr ""
 
-#: ../shell/ev-window.c:6537
+#: ../shell/ev-window.c:6555
 msgid "Copy _Image"
 msgstr ""
 
-#: ../shell/ev-window.c:6539
+#: ../shell/ev-window.c:6557
 msgid "Annotation Properties…"
 msgstr ""
 
-#: ../shell/ev-window.c:6541
+#: ../shell/ev-window.c:6559
 msgid "Remove Annot…"
 msgstr ""
 
-#: ../shell/ev-window.c:6546
+#: ../shell/ev-window.c:6564
 msgid "_Open Attachment"
 msgstr ""
 
-#: ../shell/ev-window.c:6548
+#: ../shell/ev-window.c:6566
 msgid "_Save Attachment As…"
 msgstr ""
 
-#: ../shell/ev-window.c:6680
+#: ../shell/ev-window.c:6698
 msgid "Zoom"
 msgstr "Chwyddo"
 
-#: ../shell/ev-window.c:6682
+#: ../shell/ev-window.c:6700
 msgid "Adjust the zoom level"
 msgstr "Newid lefel y chwyddo"
 
-#: ../shell/ev-window.c:6692
+#: ../shell/ev-window.c:6710
 msgid "Navigation"
 msgstr ""
 
-#: ../shell/ev-window.c:6694
+#: ../shell/ev-window.c:6712
 msgid "Back"
 msgstr "Yn ôl"
 
 #. translators: this is the history action
-#: ../shell/ev-window.c:6697
+#: ../shell/ev-window.c:6715
 msgid "Move across visited pages"
 msgstr ""
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6726
+#: ../shell/ev-window.c:6744
 msgid "Send To"
 msgstr ""
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6732
+#: ../shell/ev-window.c:6750
 msgid "Previous"
 msgstr "Blaenorol"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6737
+#: ../shell/ev-window.c:6755
 msgid "Next"
 msgstr "Nesaf"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6741
+#: ../shell/ev-window.c:6759
 msgid "Zoom In"
 msgstr "Ehangu"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6745
+#: ../shell/ev-window.c:6763
 msgid "Zoom Out"
 msgstr "Crebachu"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6749
+#: ../shell/ev-window.c:6767
 msgid "Reset Zoom"
 msgstr ""
 
-#: ../shell/ev-window.c:6890 ../shell/ev-window.c:6906
+#: ../shell/ev-window.c:6908 ../shell/ev-window.c:6924
 msgid "Unable to launch external application."
 msgstr ""
 
-#: ../shell/ev-window.c:6963
+#: ../shell/ev-window.c:6981
 msgid "Unable to open external link"
 msgstr ""
 
-#: ../shell/ev-window.c:7157
+#: ../shell/ev-window.c:7175
 msgid "Couldn't find appropriate format to save image"
 msgstr ""
 
-#: ../shell/ev-window.c:7189
+#: ../shell/ev-window.c:7207
 msgid "The image could not be saved."
 msgstr ""
 
-#: ../shell/ev-window.c:7221
+#: ../shell/ev-window.c:7239
 msgid "Save Image"
 msgstr "Cadw Delwedd"
 
-#: ../shell/ev-window.c:7359
+#: ../shell/ev-window.c:7377
 msgid "Unable to open attachment"
 msgstr ""
 
-#: ../shell/ev-window.c:7415
+#: ../shell/ev-window.c:7433
 msgid "The attachment could not be saved."
 msgstr ""
 
-#: ../shell/ev-window.c:7460
+#: ../shell/ev-window.c:7478
 msgid "Save Attachment"
 msgstr ""
 

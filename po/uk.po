@@ -10,16 +10,17 @@
 # Oleh, 2018
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Bohdan Kovalchuk <neostanniy@gmail.com>, 2018
-# Микола Ткач <znadibnyk@gmail.com>, 2018
+# dsafsadf <heneral@gmail.com>, 2019
+# Микола Ткач <chistomov@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-27 20:50+0200\n"
+"POT-Creation-Date: 2019-02-03 14:51+0100\n"
 "PO-Revision-Date: 2018-03-11 14:34+0000\n"
-"Last-Translator: Микола Ткач <znadibnyk@gmail.com>, 2018\n"
+"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -240,6 +241,10 @@ msgstr "Не вбудований"
 msgid "PDF Documents"
 msgstr "Документи PDF"
 
+#: ../backend/pixbuf/pixbufdocument.atril-backend.in.h:1
+msgid "Images"
+msgstr "Зображення"
+
 #: ../backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
@@ -257,6 +262,14 @@ msgstr "Документи PostScript"
 #: ../backend/tiff/tiff-document.c:114
 msgid "Invalid document"
 msgstr "Некоректний документ"
+
+#: ../backend/tiff/tiffdocument.atril-backend.in.h:1
+msgid "Tiff Documents"
+msgstr ""
+
+#: ../backend/xps/xpsdocument.atril-backend.in.h:1
+msgid "XPS Documents"
+msgstr ""
 
 #: ../libdocument/ev-attachment.c:304 ../libdocument/ev-attachment.c:325
 #, c-format
@@ -401,16 +414,16 @@ msgid "Separator"
 msgstr "Розділювач"
 
 #. translators: this is the label for toolbar button
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6753
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6771
 msgid "Fit Page"
 msgstr "Сторінка повністю"
 
 #. translators: this is the label for toolbar button
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6757
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6775
 msgid "Fit Width"
 msgstr "За шириною сторінки"
 
-#: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6396
+#: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6414
 msgid "Expand Window to Fit"
 msgstr "Розгорнути вікно за розміром"
 
@@ -498,7 +511,7 @@ msgstr ""
 msgid "Atril Document Viewer"
 msgstr "Переглядач документів Atril"
 
-#: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5278
+#: ../data/atril.desktop.in.in.h:2 ../shell/ev-window.c:5296
 #: ../shell/ev-window-title.c:157
 #, c-format
 msgid "Document Viewer"
@@ -567,7 +580,7 @@ msgstr "Вивести файл з параметрами"
 msgid "MATE Document Previewer"
 msgstr "Перегляд документів у MATE"
 
-#: ../previewer/ev-previewer-window.c:96 ../shell/ev-window.c:3581
+#: ../previewer/ev-previewer-window.c:96 ../shell/ev-window.c:3599
 msgid "Failed to print document"
 msgstr "Не вдається надрукувати документ"
 
@@ -576,45 +589,45 @@ msgstr "Не вдається надрукувати документ"
 msgid "The selected printer '%s' could not be found"
 msgstr "Не знайдено обраної друкарки '%s'"
 
-#: ../previewer/ev-previewer-window.c:280 ../shell/ev-window.c:6357
+#: ../previewer/ev-previewer-window.c:280 ../shell/ev-window.c:6375
 msgid "_Close"
 msgstr "_Закрити"
 
 #. Go menu
-#: ../previewer/ev-previewer-window.c:283 ../shell/ev-window.c:6403
+#: ../previewer/ev-previewer-window.c:283 ../shell/ev-window.c:6421
 msgid "_Previous Page"
 msgstr "_Назад"
 
-#: ../previewer/ev-previewer-window.c:284 ../shell/ev-window.c:6404
+#: ../previewer/ev-previewer-window.c:284 ../shell/ev-window.c:6422
 msgid "Go to the previous page"
 msgstr "Перейти до попередньої сторінки"
 
-#: ../previewer/ev-previewer-window.c:286 ../shell/ev-window.c:6406
+#: ../previewer/ev-previewer-window.c:286 ../shell/ev-window.c:6424
 msgid "_Next Page"
 msgstr "_Вперед"
 
-#: ../previewer/ev-previewer-window.c:287 ../shell/ev-window.c:6407
+#: ../previewer/ev-previewer-window.c:287 ../shell/ev-window.c:6425
 msgid "Go to the next page"
 msgstr "Перейти до наступної сторінки"
 
 #. View menu
-#: ../previewer/ev-previewer-window.c:289 ../shell/ev-window.c:6383
+#: ../previewer/ev-previewer-window.c:289 ../shell/ev-window.c:6401
 msgid "Zoom _In"
 msgstr "З_більшити"
 
-#: ../previewer/ev-previewer-window.c:290 ../shell/ev-window.c:6384
+#: ../previewer/ev-previewer-window.c:290 ../shell/ev-window.c:6402
 msgid "Enlarge the document"
 msgstr "Збільшити розмір сторінки"
 
-#: ../previewer/ev-previewer-window.c:292 ../shell/ev-window.c:6386
+#: ../previewer/ev-previewer-window.c:292 ../shell/ev-window.c:6404
 msgid "Zoom _Out"
 msgstr "З_меншити"
 
-#: ../previewer/ev-previewer-window.c:293 ../shell/ev-window.c:6387
+#: ../previewer/ev-previewer-window.c:293 ../shell/ev-window.c:6405
 msgid "Shrink the document"
 msgstr "Зменшити розмір сторінки"
 
-#: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6390
+#: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6408
 msgid "Reset zoom to 100%"
 msgstr "Скинути збільшення до 100%"
 
@@ -624,31 +637,31 @@ msgstr "Скинути збільшення до 100%"
 msgid "Print"
 msgstr "Друк"
 
-#: ../previewer/ev-previewer-window.c:301 ../shell/ev-window.c:6353
+#: ../previewer/ev-previewer-window.c:301 ../shell/ev-window.c:6371
 msgid "Print this document"
 msgstr "Надрукувати цей документ"
 
-#: ../previewer/ev-previewer-window.c:335 ../shell/ev-window.c:6509
+#: ../previewer/ev-previewer-window.c:335 ../shell/ev-window.c:6527
 msgid "Fit Pa_ge"
 msgstr "Сторінка _повністю"
 
-#: ../previewer/ev-previewer-window.c:336 ../shell/ev-window.c:6510
+#: ../previewer/ev-previewer-window.c:336 ../shell/ev-window.c:6528
 msgid "Make the current document fill the window"
 msgstr "Припасувати документ для відповідности вікну"
 
-#: ../previewer/ev-previewer-window.c:338 ../shell/ev-window.c:6512
+#: ../previewer/ev-previewer-window.c:338 ../shell/ev-window.c:6530
 msgid "Fit _Width"
 msgstr "За _шириною сторінки"
 
-#: ../previewer/ev-previewer-window.c:339 ../shell/ev-window.c:6513
+#: ../previewer/ev-previewer-window.c:339 ../shell/ev-window.c:6531
 msgid "Make the current document fill the window width"
 msgstr "Припасувати документ для відповідности ширині екрану"
 
-#: ../previewer/ev-previewer-window.c:537 ../shell/ev-window.c:6666
+#: ../previewer/ev-previewer-window.c:537 ../shell/ev-window.c:6684
 msgid "Page"
 msgstr "Сторінка"
 
-#: ../previewer/ev-previewer-window.c:538 ../shell/ev-window.c:6667
+#: ../previewer/ev-previewer-window.c:538 ../shell/ev-window.c:6685
 msgid "Select Page"
 msgstr "Вибрати сторінку"
 
@@ -944,7 +957,7 @@ msgstr "Запустити %s"
 msgid "Find:"
 msgstr "Знайти:"
 
-#: ../shell/eggfindbar.c:327 ../shell/ev-window.c:6370
+#: ../shell/eggfindbar.c:327 ../shell/ev-window.c:6388
 msgid "Find Pre_vious"
 msgstr "Знайти _попереднє"
 
@@ -952,7 +965,7 @@ msgstr "Знайти _попереднє"
 msgid "Find previous occurrence of the search string"
 msgstr "Знайти попередній примірник рядка пошуку"
 
-#: ../shell/eggfindbar.c:335 ../shell/ev-window.c:6368
+#: ../shell/eggfindbar.c:335 ../shell/ev-window.c:6386
 msgid "Find Ne_xt"
 msgstr "Зна_йти наступне"
 
@@ -1177,7 +1190,7 @@ msgid "_Remove Bookmark"
 msgstr "_Вилучити Закладку"
 
 #: ../shell/ev-sidebar-bookmarks.c:313 ../shell/ev-window.c:1004
-#: ../shell/ev-window.c:4978
+#: ../shell/ev-window.c:4996
 #, c-format
 msgid "Page %s"
 msgstr "Сторінка %s"
@@ -1301,15 +1314,15 @@ msgstr "Відвантаження вкладення (%d%%)"
 msgid "Uploading image (%d%%)"
 msgstr "Відвантаження зображення (%d%%)"
 
-#: ../shell/ev-window.c:3214
-msgid "Save a Copy"
-msgstr "Зберегти копію"
+#: ../shell/ev-window.c:3215
+msgid "Save As…"
+msgstr "Зберегти як..."
 
-#: ../shell/ev-window.c:3275
+#: ../shell/ev-window.c:3293
 msgid "Could not send current document"
 msgstr "Неможливо відправити поточний документ"
 
-#: ../shell/ev-window.c:3525
+#: ../shell/ev-window.c:3543
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
@@ -1318,12 +1331,12 @@ msgstr[1] "%d очікувані завдання у черзі"
 msgstr[2] "%d очікуваних завдань у черзі"
 msgstr[3] "%d очікуваних завдань у черзі"
 
-#: ../shell/ev-window.c:3638
+#: ../shell/ev-window.c:3656
 #, c-format
 msgid "Printing job “%s”"
 msgstr "Друк завдання «%s»"
 
-#: ../shell/ev-window.c:3815
+#: ../shell/ev-window.c:3833
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
@@ -1331,7 +1344,7 @@ msgstr ""
 "Документ містить заповнені поля форм. Якщо не зберегти копію, зміни буде "
 "втрачено."
 
-#: ../shell/ev-window.c:3819
+#: ../shell/ev-window.c:3837
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
@@ -1339,20 +1352,20 @@ msgstr ""
 "Документ містить нові або змінені нотатки. Якщо не зберегти копію, зміни "
 "буде втрачено."
 
-#: ../shell/ev-window.c:3826
+#: ../shell/ev-window.c:3844
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
 msgstr "Зберегти копію документу «%s» перед закриттям?"
 
-#: ../shell/ev-window.c:3845
+#: ../shell/ev-window.c:3863
 msgid "Close _without Saving"
 msgstr "Закрити _без збереження"
 
-#: ../shell/ev-window.c:3849
-msgid "Save a _Copy"
-msgstr "Зберегти _Копію"
+#: ../shell/ev-window.c:3867 ../shell/ev-window.c:6364
+msgid "_Save As…"
+msgstr ""
 
-#: ../shell/ev-window.c:3918
+#: ../shell/ev-window.c:3936
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
 msgstr "Очікувати завершення завдання на друк «%s» перед закриттям?"
@@ -1360,7 +1373,7 @@ msgstr "Очікувати завершення завдання на друк �
 #. TRANS: the singular form is not really used as n_print_jobs > 1
 #. but some languages distinguish between different plurals forms,
 #. so the ngettext is needed.
-#: ../shell/ev-window.c:3924
+#: ../shell/ev-window.c:3942
 #, c-format
 msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
@@ -1379,37 +1392,37 @@ msgstr[3] ""
 "Існують %d активних завдань друку. Зачекати, поки закінчиться друк перед "
 "закриттям?"
 
-#: ../shell/ev-window.c:3939
+#: ../shell/ev-window.c:3957
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr ""
 "Якщо Ви закриєте вікно, завдання на друк, вставлені у чергу, не будуть "
 "виконані."
 
-#: ../shell/ev-window.c:3943
+#: ../shell/ev-window.c:3961
 msgid "Cancel _print and Close"
 msgstr "Скасувати _друк та закрити"
 
-#: ../shell/ev-window.c:3947
+#: ../shell/ev-window.c:3965
 msgid "Close _after Printing"
 msgstr "Закрити п_ісля друку"
 
-#: ../shell/ev-window.c:4328
+#: ../shell/ev-window.c:4346
 msgid "Running in presentation mode"
 msgstr "Запущено режим презентації"
 
-#: ../shell/ev-window.c:4393
+#: ../shell/ev-window.c:4411
 msgid "Presentation mode is not supported for ePub documents"
 msgstr "Режим презентації не підтримується для документів ePub."
 
-#: ../shell/ev-window.c:4707
+#: ../shell/ev-window.c:4725
 msgid "Toolbar Editor"
 msgstr "Редактор панелі знарядь"
 
-#: ../shell/ev-window.c:5024
+#: ../shell/ev-window.c:5042
 msgid "There was an error displaying help"
 msgstr "Виникла помилка при показі довідки"
 
-#: ../shell/ev-window.c:5274
+#: ../shell/ev-window.c:5292
 #, c-format
 msgid ""
 "Document Viewer\n"
@@ -1418,7 +1431,7 @@ msgstr ""
 "Перегляд документів.\n"
 "Використовує %s (%s)"
 
-#: ../shell/ev-window.c:5309
+#: ../shell/ev-window.c:5327
 msgid ""
 "Atril is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -1430,7 +1443,7 @@ msgstr ""
 "оголошено Free Software Foundation; або версії 2 цієї ліцензії, або (на Ваш "
 "розсуд) будь-якої старшої версії.\n"
 
-#: ../shell/ev-window.c:5313
+#: ../shell/ev-window.c:5331
 msgid ""
 "Atril is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -1441,7 +1454,7 @@ msgstr ""
 "БУДЬ-ЯКИХ ЗАПОРУК; навіть не гарантується ПРИДАТНІСТЬ та ВІДПОВІДНІСТЬ БУДЬ-"
 "ЯКИМ ВИМОГАМ. Докладніше про це дивіться GNU General Public License.\n"
 
-#: ../shell/ev-window.c:5317
+#: ../shell/ev-window.c:5335
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
@@ -1451,11 +1464,11 @@ msgstr ""
 "не сталося, напишіть Free Software Foundation, Inc., 51 Franklin Street, "
 "Fifth Floor, Boston, MA 02110-1301  USA\n"
 
-#: ../shell/ev-window.c:5342
+#: ../shell/ev-window.c:5360
 msgid "Atril"
 msgstr "Atril"
 
-#: ../shell/ev-window.c:5345
+#: ../shell/ev-window.c:5363
 msgid ""
 "© 1996–2009 The Evince authors\n"
 "© 2012–2018 The MATE developers"
@@ -1463,7 +1476,7 @@ msgstr ""
 "© 1996–2009 Автори Evince\n"
 "© 2012–2018 Розробники MATE"
 
-#: ../shell/ev-window.c:5351
+#: ../shell/ev-window.c:5369
 msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
@@ -1473,7 +1486,7 @@ msgstr ""
 #. TRANS: Sometimes this could be better translated as
 #. "%d hit(s) on this page".  Therefore this string
 #. contains plural cases.
-#: ../shell/ev-window.c:5631
+#: ../shell/ev-window.c:5649
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
@@ -1482,397 +1495,396 @@ msgstr[1] "%d знайти на цих сторінках"
 msgstr[2] "%d знайти на цих сторінках"
 msgstr[3] "%d знайти на цих сторінках"
 
-#: ../shell/ev-window.c:5636
+#: ../shell/ev-window.c:5654
 msgid "Not found"
 msgstr "Не знайдено"
 
-#: ../shell/ev-window.c:5642
+#: ../shell/ev-window.c:5660
 #, c-format
 msgid "%3d%% remaining to search"
 msgstr "%3d%% залишається для пошуку"
 
-#: ../shell/ev-window.c:5997
+#: ../shell/ev-window.c:6015
 msgid "Enable caret navigation?"
 msgstr "Чи дозволити навіґацію вказівником?"
 
-#: ../shell/ev-window.c:5999
+#: ../shell/ev-window.c:6017
 msgid "_Enable"
 msgstr "_Дозволити"
 
-#: ../shell/ev-window.c:6002
+#: ../shell/ev-window.c:6020
 msgid ""
 "Pressing F7 turns the caret navigation on or off. This feature places a "
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Натискання клавіші F7 вмикає або вимикає навігаційну клавішу. Ця функція "
+"розміщує рухомий курсор у текстових сторінках, дозволяючи переміщатися та "
+"вибирати текст за допомогою клавіатури. Увімкнути навігацію каретки?"
 
-#: ../shell/ev-window.c:6007
+#: ../shell/ev-window.c:6025
 msgid "Don't show this message again"
 msgstr "Не показувати цього повідомлення знову"
 
-#: ../shell/ev-window.c:6332
+#: ../shell/ev-window.c:6350
 msgid "_File"
 msgstr "_Файл"
 
-#: ../shell/ev-window.c:6333
+#: ../shell/ev-window.c:6351
 msgid "_Edit"
 msgstr "_Зміни"
 
-#: ../shell/ev-window.c:6334
+#: ../shell/ev-window.c:6352
 msgid "_View"
 msgstr "_Перегляд"
 
-#: ../shell/ev-window.c:6335
+#: ../shell/ev-window.c:6353
 msgid "_Go"
 msgstr "Пере_йти"
 
-#: ../shell/ev-window.c:6336
+#: ../shell/ev-window.c:6354
 msgid "_Bookmarks"
 msgstr "_Закладки"
 
-#: ../shell/ev-window.c:6337
+#: ../shell/ev-window.c:6355
 msgid "_Help"
 msgstr "_Допомога"
 
 #. File menu
-#: ../shell/ev-window.c:6340 ../shell/ev-window.c:6706
+#: ../shell/ev-window.c:6358 ../shell/ev-window.c:6724
 msgid "_Open…"
 msgstr "_Відкрити…"
 
-#: ../shell/ev-window.c:6341 ../shell/ev-window.c:6707
+#: ../shell/ev-window.c:6359 ../shell/ev-window.c:6725
 msgid "Open an existing document"
 msgstr "Відрити документ"
 
-#: ../shell/ev-window.c:6343
+#: ../shell/ev-window.c:6361
 msgid "Op_en a Copy"
 msgstr "Відкрити _копію"
 
-#: ../shell/ev-window.c:6344
+#: ../shell/ev-window.c:6362
 msgid "Open a copy of the current document in a new window"
 msgstr "Відкрити копію поточного документу у новому вікні"
 
-#: ../shell/ev-window.c:6346
-msgid "_Save a Copy…"
-msgstr "З_берегти копію…"
-
-#: ../shell/ev-window.c:6347
+#: ../shell/ev-window.c:6365
 msgid "Save a copy of the current document"
 msgstr "Зберегти копію поточного документу"
 
-#: ../shell/ev-window.c:6349
+#: ../shell/ev-window.c:6367
 msgid "Send _To..."
 msgstr "Надіслати _до..."
 
-#: ../shell/ev-window.c:6350
+#: ../shell/ev-window.c:6368
 msgid "Send current document by mail, instant message..."
 msgstr "Надіслати поточний документ поштою, миттєвим повідомленням..."
 
-#: ../shell/ev-window.c:6352
+#: ../shell/ev-window.c:6370
 msgid "_Print…"
 msgstr "Д_рук…"
 
-#: ../shell/ev-window.c:6355
+#: ../shell/ev-window.c:6373
 msgid "P_roperties"
 msgstr "В_ластивости"
 
 #. Edit menu
-#: ../shell/ev-window.c:6361
+#: ../shell/ev-window.c:6379
 msgid "_Copy"
 msgstr "_Копіювати"
 
-#: ../shell/ev-window.c:6363
+#: ../shell/ev-window.c:6381
 msgid "Select _All"
 msgstr "Виді_лити усе"
 
-#: ../shell/ev-window.c:6365
+#: ../shell/ev-window.c:6383
 msgid "_Find…"
 msgstr "З_найти…"
 
-#: ../shell/ev-window.c:6366
+#: ../shell/ev-window.c:6384
 msgid "Find a word or phrase in the document"
 msgstr "Знайти слово чи фразу у документі"
 
-#: ../shell/ev-window.c:6372
+#: ../shell/ev-window.c:6390
 msgid "T_oolbar"
 msgstr "_Панель знарядь"
 
-#: ../shell/ev-window.c:6374
+#: ../shell/ev-window.c:6392
 msgid "Rotate _Left"
 msgstr "Обертати в л_іво"
 
-#: ../shell/ev-window.c:6376
+#: ../shell/ev-window.c:6394
 msgid "Rotate _Right"
 msgstr "Обертати в п_раво"
 
-#: ../shell/ev-window.c:6378
+#: ../shell/ev-window.c:6396
 msgid "Save Current Settings as _Default"
 msgstr "Зробити поточні налаштування типовими"
 
-#: ../shell/ev-window.c:6389
+#: ../shell/ev-window.c:6407
 msgid "_Reset Zoom"
 msgstr "_Скинути Збільшення"
 
-#: ../shell/ev-window.c:6392
+#: ../shell/ev-window.c:6410
 msgid "_Reload"
 msgstr "_Оновити"
 
-#: ../shell/ev-window.c:6393
+#: ../shell/ev-window.c:6411
 msgid "Reload the document"
 msgstr "Оновити документ"
 
-#: ../shell/ev-window.c:6395
+#: ../shell/ev-window.c:6413
 msgid "_Expand Window to Fit"
 msgstr "_Розгорнути вікно за розміром"
 
-#: ../shell/ev-window.c:6399
+#: ../shell/ev-window.c:6417
 msgid "Auto_scroll"
 msgstr "Само_гортання"
 
-#: ../shell/ev-window.c:6409
+#: ../shell/ev-window.c:6427
 msgid "_First Page"
 msgstr "_Початок"
 
-#: ../shell/ev-window.c:6410
+#: ../shell/ev-window.c:6428
 msgid "Go to the first page"
 msgstr "Перейти до першої сторінки"
 
-#: ../shell/ev-window.c:6412
+#: ../shell/ev-window.c:6430
 msgid "_Last Page"
 msgstr "_Кінець"
 
-#: ../shell/ev-window.c:6413
+#: ../shell/ev-window.c:6431
 msgid "Go to the last page"
 msgstr "Перейти до останньої сторінки"
 
 #. Bookmarks menu
-#: ../shell/ev-window.c:6417
+#: ../shell/ev-window.c:6435
 msgid "_Add Bookmark"
 msgstr "_Додати закладку"
 
-#: ../shell/ev-window.c:6418
+#: ../shell/ev-window.c:6436
 msgid "Add a bookmark for the current page"
 msgstr "Додати закладку поточної сторінки"
 
 #. Help menu
-#: ../shell/ev-window.c:6422
+#: ../shell/ev-window.c:6440
 msgid "_Contents"
 msgstr "_Вміст"
 
-#: ../shell/ev-window.c:6425
+#: ../shell/ev-window.c:6443
 msgid "_About"
 msgstr "_Про програму"
 
 #. Toolbar-only
-#: ../shell/ev-window.c:6429
+#: ../shell/ev-window.c:6447
 msgid "Leave Fullscreen"
 msgstr "Вийти з повноекранного режиму"
 
-#: ../shell/ev-window.c:6430
+#: ../shell/ev-window.c:6448
 msgid "Leave fullscreen mode"
 msgstr "Вийти з повноекранного режиму"
 
-#: ../shell/ev-window.c:6432
+#: ../shell/ev-window.c:6450
 msgid "Start Presentation"
 msgstr "Запустити презентацію"
 
-#: ../shell/ev-window.c:6433
+#: ../shell/ev-window.c:6451
 msgid "Start a presentation"
 msgstr "Запустити презентацію"
 
 #. View Menu
-#: ../shell/ev-window.c:6488
+#: ../shell/ev-window.c:6506
 msgid "_Toolbar"
 msgstr "_Панель знарядь"
 
-#: ../shell/ev-window.c:6489
+#: ../shell/ev-window.c:6507
 msgid "Show or hide the toolbar"
 msgstr "Показати чи сховати панель знарядь"
 
-#: ../shell/ev-window.c:6491
+#: ../shell/ev-window.c:6509
 msgid "Side _Pane"
 msgstr "Бі_чна панель"
 
-#: ../shell/ev-window.c:6492
+#: ../shell/ev-window.c:6510
 msgid "Show or hide the side pane"
 msgstr "Показати чи сховати бічну панель"
 
-#: ../shell/ev-window.c:6494
+#: ../shell/ev-window.c:6512
 msgid "_Continuous"
 msgstr "Б_езперервно"
 
-#: ../shell/ev-window.c:6495
+#: ../shell/ev-window.c:6513
 msgid "Show the entire document"
 msgstr "Показувати документ цілком"
 
-#: ../shell/ev-window.c:6497
+#: ../shell/ev-window.c:6515
 msgid "_Dual"
 msgstr "_Дві сторінки"
 
-#: ../shell/ev-window.c:6498
+#: ../shell/ev-window.c:6516
 msgid "Show two pages at once"
 msgstr "Показувати по дві сторінки"
 
-#: ../shell/ev-window.c:6500
+#: ../shell/ev-window.c:6518
 msgid "_Odd pages left"
 msgstr "Не_парні ліворуч"
 
-#: ../shell/ev-window.c:6501
+#: ../shell/ev-window.c:6519
 msgid "Show odd pages on the left in dual mode"
 msgstr "Показувати непарні сторінки ліворуч у режимі по дві сторінки"
 
-#: ../shell/ev-window.c:6503
+#: ../shell/ev-window.c:6521
 msgid "_Fullscreen"
 msgstr "На _увесь екран"
 
-#: ../shell/ev-window.c:6504
+#: ../shell/ev-window.c:6522
 msgid "Expand the window to fill the screen"
 msgstr "Розширити вікно на повний екран"
 
-#: ../shell/ev-window.c:6506
+#: ../shell/ev-window.c:6524
 msgid "Pre_sentation"
 msgstr "_Презентація"
 
-#: ../shell/ev-window.c:6507
+#: ../shell/ev-window.c:6525
 msgid "Run document as a presentation"
 msgstr "Показувати документ як презентацію"
 
-#: ../shell/ev-window.c:6515
+#: ../shell/ev-window.c:6533
 msgid "Inverted _Colors"
 msgstr "Спротилежнити _Кольори"
 
-#: ../shell/ev-window.c:6516
+#: ../shell/ev-window.c:6534
 msgid "Show page contents with the colors inverted"
 msgstr "Показати вміст сторінки у спротилежнених кольорах"
 
-#: ../shell/ev-window.c:6518
+#: ../shell/ev-window.c:6536
 msgid "Caret _Navigation"
 msgstr "Навіґація _Вказівником"
 
-#: ../shell/ev-window.c:6519
+#: ../shell/ev-window.c:6537
 msgid "Activate or disable caret-navigation"
 msgstr "Увімкнути чи вимкнути навіґацію вказівником."
 
 #. Links
-#: ../shell/ev-window.c:6527
+#: ../shell/ev-window.c:6545
 msgid "_Open Link"
 msgstr "_Відкрити посилання"
 
-#: ../shell/ev-window.c:6529
+#: ../shell/ev-window.c:6547
 msgid "_Go To"
 msgstr "Пере_йти"
 
-#: ../shell/ev-window.c:6531
+#: ../shell/ev-window.c:6549
 msgid "Open in New _Window"
 msgstr "Відкрити у новому _вікні"
 
-#: ../shell/ev-window.c:6533
+#: ../shell/ev-window.c:6551
 msgid "_Copy Link Address"
 msgstr "_Копіювати адресу посилання"
 
-#: ../shell/ev-window.c:6535
+#: ../shell/ev-window.c:6553
 msgid "_Save Image As…"
 msgstr "Зберегти зображення _як…"
 
-#: ../shell/ev-window.c:6537
+#: ../shell/ev-window.c:6555
 msgid "Copy _Image"
 msgstr "Копіювати _зображення"
 
-#: ../shell/ev-window.c:6539
+#: ../shell/ev-window.c:6557
 msgid "Annotation Properties…"
 msgstr "Ціхи нотаток…"
 
-#: ../shell/ev-window.c:6541
+#: ../shell/ev-window.c:6559
 msgid "Remove Annot…"
 msgstr "Вилучити аннотацію..."
 
-#: ../shell/ev-window.c:6546
+#: ../shell/ev-window.c:6564
 msgid "_Open Attachment"
 msgstr "_Відкрити вкладення"
 
-#: ../shell/ev-window.c:6548
+#: ../shell/ev-window.c:6566
 msgid "_Save Attachment As…"
 msgstr "З_берегти вкладення як…"
 
-#: ../shell/ev-window.c:6680
+#: ../shell/ev-window.c:6698
 msgid "Zoom"
 msgstr "Припасувати"
 
-#: ../shell/ev-window.c:6682
+#: ../shell/ev-window.c:6700
 msgid "Adjust the zoom level"
 msgstr "Змінити мірило"
 
-#: ../shell/ev-window.c:6692
+#: ../shell/ev-window.c:6710
 msgid "Navigation"
 msgstr "Переміщення"
 
-#: ../shell/ev-window.c:6694
+#: ../shell/ev-window.c:6712
 msgid "Back"
 msgstr "Назад"
 
 #. translators: this is the history action
-#: ../shell/ev-window.c:6697
+#: ../shell/ev-window.c:6715
 msgid "Move across visited pages"
 msgstr "Переміщення відвіданими сторінками"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6726
+#: ../shell/ev-window.c:6744
 msgid "Send To"
 msgstr "Надіслати до"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6732
+#: ../shell/ev-window.c:6750
 msgid "Previous"
 msgstr "Попередня"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6737
+#: ../shell/ev-window.c:6755
 msgid "Next"
 msgstr "Наступне"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6741
+#: ../shell/ev-window.c:6759
 msgid "Zoom In"
 msgstr "Збільшити"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6745
+#: ../shell/ev-window.c:6763
 msgid "Zoom Out"
 msgstr "Зменшити"
 
 #. translators: this is the label for toolbar button
-#: ../shell/ev-window.c:6749
+#: ../shell/ev-window.c:6767
 msgid "Reset Zoom"
 msgstr "Скинути Збільшення"
 
-#: ../shell/ev-window.c:6890 ../shell/ev-window.c:6906
+#: ../shell/ev-window.c:6908 ../shell/ev-window.c:6924
 msgid "Unable to launch external application."
 msgstr "Не вдається запустити зовнішню проґраму."
 
-#: ../shell/ev-window.c:6963
+#: ../shell/ev-window.c:6981
 msgid "Unable to open external link"
 msgstr "Не вдається відкрити зовнішнє посилання"
 
-#: ../shell/ev-window.c:7157
+#: ../shell/ev-window.c:7175
 msgid "Couldn't find appropriate format to save image"
 msgstr "Не вдається знайти відповідний формат для збереження зображення"
 
-#: ../shell/ev-window.c:7189
+#: ../shell/ev-window.c:7207
 msgid "The image could not be saved."
 msgstr "Не вдається зберегти зображення."
 
-#: ../shell/ev-window.c:7221
+#: ../shell/ev-window.c:7239
 msgid "Save Image"
 msgstr "Зберегти зображення"
 
-#: ../shell/ev-window.c:7359
+#: ../shell/ev-window.c:7377
 msgid "Unable to open attachment"
 msgstr "Не вдається відкрити вкладення"
 
-#: ../shell/ev-window.c:7415
+#: ../shell/ev-window.c:7433
 msgid "The attachment could not be saved."
 msgstr "Вкладення зберегти неможливо."
 
-#: ../shell/ev-window.c:7460
+#: ../shell/ev-window.c:7478
 msgid "Save Attachment"
 msgstr "Зберегти вкладення"
 
