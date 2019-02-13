@@ -5318,7 +5318,8 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 	};
 
 	const char *documenters[] = {
-		"Nickolay V. Shmyrev <nshmyrev@yandex.ru>",
+		"MATE Documentation Team",
+		"GNOME Documentation Team",
 		NULL
 	};
 
