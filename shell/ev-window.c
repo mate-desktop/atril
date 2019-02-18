@@ -5298,25 +5298,12 @@ build_comments_string (EvDocument *document)
 	return comments;
 }
 
+#define ABOUT_GROUP "About"
+#define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))
+
 static void
 ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 {
-	const char *authors[] = {
-		"Martin Kretzschmar <m_kretzschmar@gmx.net>",
-		"Jonathan Blandford <jrb@gnome.org>",
-		"Marco Pesenti Gritti <marco@gnome.org>",
-		"Nickolay V. Shmyrev <nshmyrev@yandex.ru>",
-		"Bryan Clark <clarkbw@gnome.org>",
-		"Carlos Garcia Campos <carlosgc@gnome.org>",
-		"Wouter Bolsterlee <wbolster@gnome.org>",
-		"Christian Persch <chpe" "\100" "gnome.org>",
-		"Perberos <perberos@gmail.com>",
-		"Stefano Karapetsas <stefano@karapetsas.com>",
-		"Steve Zesch <stevezesch2@gmail.com>",
-		"Avishkar Gupta <avishkar.gupta.delhi@gmail.com>",
-		NULL
-	};
-
 	const char *documenters[] = {
 		"MATE Documentation Team",
 		"GNOME Documentation Team",
@@ -5337,14 +5324,33 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		   "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA\n")
 	};
 
-	char *license_trans;
-	char *comments;
+	char *license_trans, *comments;
+	GKeyFile *key_file;
+	GBytes *bytes;
+	const guint8 *data;
+	gsize data_len;
+	GError *error = NULL;
+	char **authors;
+	gsize n_authors = 0, i;
+
+	bytes = g_resources_lookup_data ("/org/mate/atril/shell/atril.about", G_RESOURCE_LOOKUP_FLAGS_NONE, &error);
+	g_assert_no_error (error);
+
+	data = g_bytes_get_data (bytes, &data_len);
+	key_file = g_key_file_new ();
+	g_key_file_load_from_data (key_file, (const char *) data, data_len, 0, &error);
+	g_assert_no_error (error);
+
+	authors = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Authors", &n_authors, NULL);
+
+	g_key_file_free (key_file);
+	g_bytes_unref (bytes);
+
+	for (i = 0; i < n_authors; ++i)
+		authors[i] = EMAILIFY (authors[i]);
 
 #ifdef ENABLE_NLS
 	const char **p;
-
-	for (p = authors; *p; ++p)
-		*p = _(*p);
 
 	for (p = documenters; *p; ++p)
 		*p = _(*p);
@@ -5371,6 +5377,7 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		"wrap-license", TRUE,
 		NULL);
 
+	g_strfreev (authors);
 	g_free (comments);
 	g_free (license_trans);
 }
