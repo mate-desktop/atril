@@ -152,6 +152,7 @@ atrild_LDADD=				\
 endif
 
 EXTRA_DIST = \
+	atril.about \
 	atril.css \
 	atril-ui.xml \
 	atril-toolbar.xml \
