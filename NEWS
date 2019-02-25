@@ -1,3 +1,23 @@
+### atril 1.22.0
+
+  * update translations
+  * Add update-authors.pl script which helps to update atril.about
+  * Read authors (updated) from atril.about gresource
+  * Initialize Travis CI support
+  * Update Documenters
+  * [ephy-zoom-control] Avoid deprecated g_type_class_add_private
+  * [ephy-zoom-action] Avoid deprecated g_type_class_add_private
+  * Add pixbuf, tiff and xps TypeDescription to POTFILES.in
+  * eggsmclient: avoid deprecated 'g_type_class_add_private'
+  * move appdata to metainfo directory
+  * message-area: set a11y object name from actual icon name
+  * shell: remove duplicate condition check
+  * tiff: fix possible NULL pointer dereference
+  * pdf: add missing break statement
+  * libdocument: drop useless freeing of NULL pointer
+  * comics: fix incorrect mimetype saying to open and thumbnail all rarfiles
+  * disable deprecation warnings for distcheck
+
 ### atril 1.21.1
 
   * update translations
