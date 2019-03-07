@@ -1,0 +1,141 @@
+# vim: set ts=2 sts=2 sw=2 expandtab :
+dist: xenial
+sudo: required
+language: bash
+services:
+  - docker
+
+before_install:
+  - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
+  - chmod +x docker-build
+
+install:
+  - sudo apt-get install -y python3-pip python3-setuptools
+  - sudo pip3 install --upgrade pip
+  - sudo pip install PyGithub
+  - ./docker-build --name ${DISTRO} --config .travis.yml --install
+
+script:
+  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
+
+env:
+  - DISTRO="archlinux/base"
+  - DISTRO="debian:sid"
+  - DISTRO="fedora:29"
+  - DISTRO="ubuntu:18.10"
+
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/atril
+    - caja
+    - djvulibre
+    - gcc
+    - git
+    - gobject-introspection
+    - intltool
+    - itstool
+    - libgxps
+    - make
+    - mate-common
+    - poppler-glib
+    - texlive-bin
+    - webkit2gtk
+    - which
+    - yelp-tools
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/atril
+    - git
+    - gobject-introspection
+    - intltool
+    - libcaja-extension-dev
+    - libdjvulibre-dev
+    - libgail-3-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libgxps-dev
+    - libkpathsea-dev
+    - libpoppler-glib-dev
+    - libsecret-1-dev
+    - libsm-dev
+    - libspectre-dev
+    - libtiff-dev
+    - libwebkit2gtk-4.0-dev
+    - libx11-dev
+    - libxml2-dev
+    - lsb-release
+    - make
+    - mate-common
+    - xsltproc
+    - yelp-tools
+    - zlib1g-dev
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/atril.git
+    - cairo-gobject-devel
+    - caja-devel
+    - desktop-file-utils
+    - djvulibre-devel
+    - gcc
+    - gcc-c++
+    - git
+    - gobject-introspection-devel
+    - gtk3-devel
+    - libXt-devel
+    - libglade2-devel
+    - libgxps-devel
+    - libjpeg-turbo-devel
+    - libsecret-devel
+    - libspectre-devel
+    - libtiff-devel
+    - make
+    - mate-common
+    - poppler-glib-devel
+    - redhat-rpm-config
+    - texlive-lib-devel
+    - webkitgtk4-devel
+    - yelp-tools
+
+  ubuntu:
+    - git
+    - gobject-introspection
+    - intltool
+    - libcaja-extension-dev
+    - libdjvulibre-dev
+    - libgail-3-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libgxps-dev
+    - libkpathsea-dev
+    - libpoppler-glib-dev
+    - libsecret-1-dev
+    - libsm-dev
+    - libspectre-dev
+    - libtiff-dev
+    - libwebkit2gtk-4.0-dev
+    - libx11-dev
+    - libxml2-dev
+    - lsb-release
+    - make
+    - mate-common
+    - xsltproc
+    - yelp-tools
+    - zlib1g-dev
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+before_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
+  -     bash ./debian.sh
+  - fi
+
+after_scripts:
+  - make distcheck
