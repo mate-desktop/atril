@@ -5362,8 +5362,9 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 
 	gtk_show_about_dialog (
 		GTK_WINDOW (ev_window),
-		"name", _("Atril"),
+		"program-name", _("Atril Document Viewer"),
 		"version", VERSION,
+		"title", _("About Atril Document Viewer"),
 		"copyright", _("Copyright \xc2\xa9 1996–2009 The Evince authors\n"
 		               "Copyright \xc2\xa9 2012–2019 The MATE developers"),
 		"license", license_trans,
