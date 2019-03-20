@@ -5314,14 +5314,14 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		N_("Atril is free software; you can redistribute it and/or modify "
 		   "it under the terms of the GNU General Public License as published by "
 		   "the Free Software Foundation; either version 2 of the License, or "
-		   "(at your option) any later version.\n"),
+		   "(at your option) any later version."),
 		N_("Atril is distributed in the hope that it will be useful, "
 		   "but WITHOUT ANY WARRANTY; without even the implied warranty of "
 		   "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
-		   "GNU General Public License for more details.\n"),
+		   "GNU General Public License for more details."),
 		N_("You should have received a copy of the GNU General Public License "
 		   "along with Atril; if not, write to the Free Software Foundation, Inc., "
-		   "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA\n")
+		   "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA")
 	};
 
 	char *license_trans, *comments;
@@ -5356,8 +5356,7 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		*p = _(*p);
 #endif
 
-	license_trans = g_strconcat (_(license[0]), "\n", _(license[1]), "\n",
-				     _(license[2]), "\n", NULL);
+	license_trans = g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
 	comments = build_comments_string (ev_window->priv->document);
 
