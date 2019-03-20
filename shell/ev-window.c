@@ -5305,8 +5305,8 @@ static void
 ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 {
 	const char *documenters[] = {
-		"MATE Documentation Team",
-		"GNOME Documentation Team",
+		N_("MATE Documentation Team"),
+		N_("GNOME Documentation Team"),
 		NULL
 	};
 
