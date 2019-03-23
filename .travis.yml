@@ -7,7 +7,7 @@ services:
 
 branches:
   except:
-  - gh-pages
+    - gh-pages
 
 before_install:
   - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/travis/travis/docker-build
