@@ -18,6 +18,14 @@ install:
 script:
   - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
 
+deploy:
+  - provider: script
+    script: ./docker-build --verbose --config .travis.yml --release github
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
+
 env:
   - DISTRO="archlinux/base"
   - DISTRO="debian:sid"
@@ -139,3 +147,14 @@ before_scripts:
 
 after_scripts:
   - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: atril-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
