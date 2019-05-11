@@ -119,6 +119,7 @@ requires:
     - caja-devel
     - clang
     - clang-analyzer
+    - cppcheck-htmlreport
     - desktop-file-utils
     - djvulibre-devel
     - gcc
@@ -206,7 +207,9 @@ build_scripts:
 
 after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i https://github.com/${OWNER_NAME}/atril/raw/master/data/icons/16x16/apps/atril.png
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude --force .
+  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/atril/raw/master/data/icons/16x16/apps/atril.png
   - fi
   - make distcheck
 
