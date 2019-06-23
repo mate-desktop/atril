@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # This test opens a password encrypted file and tries to unlock it.
 
@@ -11,18 +11,19 @@ from dogtail.procedural import *
 run('atril', arguments=' '+srcdir+'/test-encrypt.pdf')
 
 # Try an incorrect password first
-focus.dialog('Enter password')
-focus.widget('Password Entry', roleName='password text')
 type('wrong password')
 click('Unlock Document', roleName='push button')
+focus.dialog('Enter password')
 click('Cancel', roleName='push button')
 
 # Try again with the correct password
+focus.application('atril')
 click('Unlock Document', roleName='push button')
-focus.widget('Password Entry', roleName='password text')
+focus.dialog('Enter password')
 type('Foo')
 click('Unlock Document', roleName='push button')
 
 # Close atril
+focus.application('atril')
 click('File', roleName='menu')
 click('Close', roleName='menu item')

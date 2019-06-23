@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # This test tries document reload action.
 
@@ -12,9 +12,11 @@ run('atril', arguments=' '+srcdir+'/test-links.pdf')
 
 # Reload document a few times
 for i in range(1,6):
-	click('View', roleName='menu')
-	click('Reload', roleName='menu item')
+    focus.application('atril')
+    click('View', roleName='menu')
+    click('Reload', roleName='menu item')
 
 # Close atril
+focus.application('atril')
 click('File', roleName='menu')
 click('Close', roleName='menu item')
