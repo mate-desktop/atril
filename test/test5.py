@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # This test tries document reload action.
 
@@ -15,10 +15,11 @@ focus.widget.text = "iii"
 activate()
 
 if focus.widget.text != "III":
-	click('File', roleName='menu')
-	click('Close', roleName='menu item')
-	exit (1)
+    click('File', roleName='menu')
+    click('Close', roleName='menu item')
+    exit (1)
 
 # Close atril
+focus.application('atril')
 click('File', roleName='menu')
 click('Close', roleName='menu item')
