@@ -25,6 +25,7 @@ if os.path.exists(ps_file):
 
 run('atril', arguments=' '+srcdir+'/test-page-labels.pdf')
 
+focus.application('atril')
 click('File', roleName='menu')
 click('Print…', roleName='menu item')
 
