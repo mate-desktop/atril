@@ -11,6 +11,7 @@ from dogtail.procedural import *
 run('atril', arguments=' '+srcdir+'/test-encrypt.pdf')
 
 # Try an incorrect password first
+focus.application('atril')
 type('wrong password')
 click('Unlock Document', roleName='push button')
 focus.dialog('Enter password')
