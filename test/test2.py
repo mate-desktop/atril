@@ -18,7 +18,7 @@ focus.dialog('Enter password')
 click('Cancel', roleName='push button')
 
 # Try again with the correct password
-focus.application('atril')
+focus.frame('test-encrypt.pdf — Password Required')
 click('Unlock Document', roleName='push button')
 focus.dialog('Enter password')
 type('Foo')
