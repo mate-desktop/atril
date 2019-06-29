@@ -43,7 +43,7 @@ static void ev_file_monitor_changed_cb    (GFileMonitor     *monitor,
 					   GFile            *other_file,
 					   GFileMonitorEvent event_type,
 					   EvFileMonitor    *ev_monitor);
-	
+
 #define EV_FILE_MONITOR_GET_PRIVATE(object) \
                 (G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_FILE_MONITOR, EvFileMonitorPrivate))
 
@@ -63,7 +63,7 @@ ev_file_monitor_finalize (GObject *object)
 	EvFileMonitor *ev_monitor = EV_FILE_MONITOR (object);
 
 	ev_file_monitor_timeout_stop (ev_monitor);
-	
+
 	if (ev_monitor->priv->monitor) {
 		g_signal_handlers_disconnect_by_func (ev_monitor->priv->monitor,
 						      ev_file_monitor_changed_cb,
@@ -99,7 +99,7 @@ static gboolean
 timeout_cb (EvFileMonitor *ev_monitor)
 {
 	g_signal_emit (ev_monitor, signals[CHANGED], 0);
-	
+
 	ev_monitor->priv->timeout_id = 0;
 	return FALSE;
 }
@@ -108,7 +108,7 @@ static void
 ev_file_monitor_timeout_start (EvFileMonitor *ev_monitor)
 {
 	ev_file_monitor_timeout_stop (ev_monitor);
-	
+
 	ev_monitor->priv->timeout_id =
 		g_timeout_add_seconds (5, (GSourceFunc)timeout_cb, ev_monitor);
 }
@@ -149,7 +149,7 @@ ev_file_monitor_new (const gchar *uri)
 	EvFileMonitor *ev_monitor;
 	GFile         *file;
 	GError        *error = NULL;
-	
+
 	ev_monitor = EV_FILE_MONITOR (g_object_new (EV_TYPE_FILE_MONITOR, NULL));
 
 	file = g_file_new_for_uri (uri);

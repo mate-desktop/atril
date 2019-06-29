@@ -36,7 +36,7 @@ struct _EvNavigationActionWidget
 struct _EvNavigationActionWidgetClass
 {
 	GtkToggleToolButtonClass parent_class;
-	
+
 	void  (*show_menu) (EvNavigationActionWidget *widget);
 };
 

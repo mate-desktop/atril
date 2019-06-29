@@ -55,12 +55,12 @@ ev_properties_fonts_dispose (GObject *object)
 	EvPropertiesFonts *properties = EV_PROPERTIES_FONTS (object);
 
 	if (properties->fonts_job) {
-		g_signal_handlers_disconnect_by_func (properties->fonts_job, 
-						      job_fonts_finished_cb, 
+		g_signal_handlers_disconnect_by_func (properties->fonts_job,
+						      job_fonts_finished_cb,
 						      properties);
 		ev_job_cancel (properties->fonts_job);
 
-		g_object_unref (properties->fonts_job);		
+		g_object_unref (properties->fonts_job);
 		properties->fonts_job = NULL;
 	}
 
@@ -86,7 +86,7 @@ font_cell_data_func (GtkTreeViewColumn *col, GtkCellRenderer *renderer,
 	gtk_tree_model_get (model, iter,
 			    EV_DOCUMENT_FONTS_COLUMN_NAME, &name,
 			    EV_DOCUMENT_FONTS_COLUMN_DETAILS, &details,
-			    -1);	
+			    -1);
 
 	if (details) {
 		markup = g_strdup_printf ("<b><big>%s</big></b>\n<small>%s</small>",
@@ -96,7 +96,7 @@ font_cell_data_func (GtkTreeViewColumn *col, GtkCellRenderer *renderer,
 	}
 
 	g_object_set (renderer, "markup", markup, NULL);
-	
+
 	g_free (markup);
 	g_free (details);
 	g_free (name);
@@ -112,14 +112,14 @@ ev_properties_fonts_init (EvPropertiesFonts *properties)
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (properties), GTK_ORIENTATION_VERTICAL);
 	gtk_container_set_border_width (GTK_CONTAINER (properties), 12);
 	gtk_box_set_spacing (GTK_BOX (properties), 6);
-	
+
 	swindow = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (swindow),
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
 	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (swindow),
 					     GTK_SHADOW_IN);
-	
+
 	properties->fonts_treeview = gtk_tree_view_new ();
 	gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (properties->fonts_treeview),
 					   FALSE);
@@ -141,7 +141,7 @@ ev_properties_fonts_init (EvPropertiesFonts *properties)
 	gtk_container_add (GTK_CONTAINER (swindow), properties->fonts_treeview);
 	gtk_widget_show (properties->fonts_treeview);
 
-	gtk_box_pack_start (GTK_BOX (properties), swindow, 
+	gtk_box_pack_start (GTK_BOX (properties), swindow,
 			    TRUE, TRUE, 0);
 	gtk_widget_show (swindow);
 

@@ -44,7 +44,7 @@ typedef struct _EvAttachmentPrivate EvAttachmentPrivate;
 
 struct _EvAttachment {
 	GObject base_instance;
-	
+
 	EvAttachmentPrivate *priv;
 };
 

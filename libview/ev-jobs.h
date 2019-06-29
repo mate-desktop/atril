@@ -162,7 +162,7 @@ typedef enum {
 struct _EvJob
 {
 	GObject parent;
-	
+
 	EvDocument *document;
 
 	EvJobRunMode run_mode;
@@ -170,7 +170,7 @@ struct _EvJob
 	guint cancelled : 1;
 	guint finished : 1;
 	guint failed : 1;
-	
+
 	GError *error;
 	GCancellable *cancellable;
 
@@ -183,7 +183,7 @@ struct _EvJobClass
 	GObjectClass parent_class;
 
 	gboolean (*run)         (EvJob *job);
-	
+
 	/* Signals */
 	void     (* cancelled)  (EvJob *job);
 	void     (* finished)   (EvJob *job);

@@ -53,37 +53,37 @@ DVICMDDEF(undefined);
 DVICMDDEF(unexpected);
 
 static const DviCommand dvi_commands[] = {
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
-	set_char, set_char, set_char, set_char, 
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
+	set_char, set_char, set_char, set_char,
 	set_char, set_char, set_char, set_char,	/* 0 - 127 */
 	set_char, set_char, set_char, set_char, /* 128 - 131 */
 	set_rule,				/* 132 */
@@ -122,7 +122,7 @@ static const DviCommand dvi_commands[] = {
 	unexpected,				/* 247 (PRE) */
 	unexpected,				/* 248 (POST) */
 	unexpected,				/* 249 (POST_POST) */
-	undefined, undefined, undefined, 
+	undefined, undefined, undefined,
 	undefined, undefined, undefined		/* 250 - 255 */
 };
 
@@ -172,7 +172,7 @@ static void dummy_dev_set_color(void *a, Ulong b, Ulong c)
 static void dvierr(DviContext *dvi, const char *format, ...)
 {
 	va_list	ap;
-	
+
 	va_start(ap, format);
 	fprintf(stderr, "%s[%d]: Error: ",
 		dvi->filename, dvi->currpage);
@@ -183,7 +183,7 @@ static void dvierr(DviContext *dvi, const char *format, ...)
 static void dviwarn(DviContext *dvi, const char *format, ...)
 {
 	va_list	ap;
-	
+
 	fprintf(stderr, "%s[%d]: Warning: ",
 		dvi->filename, dvi->currpage);
 	va_start(ap, format);
@@ -195,15 +195,15 @@ static void dviwarn(DviContext *dvi, const char *format, ...)
 	((d)->buffer.pos + (n) > (d)->buffer.length)
 
 static int get_bytes(DviContext *dvi, size_t n)
-{	
-	/* 
+{
+	/*
 	 * caller wants to read `n' bytes from dvi->buffer + dvi->pos.
-	 * Make sure there is enough data to satisfy the request 
+	 * Make sure there is enough data to satisfy the request
 	 */
 	if(NEEDBYTES(dvi, n)) {
 		size_t	required;
 		int	newlen;
-		
+
 		if(dvi->buffer.frozen || dvi->in == NULL || feof(dvi->in)) {
 			/* this is EOF */
 			dviwarn(dvi, _("unexpected EOF\n"));
@@ -251,7 +251,7 @@ static int get_bytes(DviContext *dvi, size_t n)
 static int dskip(DviContext *dvi, long offset)
 {
 	ASSERT(offset > 0);
-	
+
 	if(NEEDBYTES(dvi, offset) && get_bytes(dvi, offset) == -1)
 		return -1;
 	dvi->buffer.pos += offset;
@@ -283,8 +283,8 @@ static long dugetn(DviContext *dvi, size_t n)
 {
 	long	val;
 
-	if(NEEDBYTES(dvi, n) && get_bytes(dvi, n) == -1)	
-		return -1;	
+	if(NEEDBYTES(dvi, n) && get_bytes(dvi, n) == -1)
+		return -1;
 	val = mugetn(dvi->buffer.data + dvi->buffer.pos, n);
 	dvi->buffer.pos += n;
 	return val;
@@ -292,8 +292,8 @@ static long dugetn(DviContext *dvi, size_t n)
 
 static long dtell(DviContext *dvi)
 {
-	return dvi->depth ? 
-		dvi->buffer.pos : 
+	return dvi->depth ?
+		dvi->buffer.pos :
 		ftell(dvi->in) - dvi->buffer.length + dvi->buffer.pos;
 }
 
@@ -321,7 +321,7 @@ static void dviprint(DviContext *dvi, const char *command, int sub, const char *
 {
 	int	i;
 	va_list	ap;
-	
+
 	printf("%s: ", dvi->filename);
 	for(i = 0; i < dvi->depth; i++)
 		printf("  ");
@@ -341,7 +341,7 @@ static void dviprint(DviContext *dvi, const char *command, int sub, const char *
 int	mdvi_find_tex_page(DviContext *dvi, int tex_page)
 {
 	int	i;
-	
+
 	for(i = 0; i < dvi->npages; i++)
 		if(dvi->pagemap[i][1] == tex_page)
 			return i;
@@ -373,7 +373,7 @@ static int sort_dvi_down(const void *p1, const void *p2)
 void	mdvi_sort_pages(DviContext *dvi, DviPageSort type)
 {
 	int	(*sortfunc) __PROTO((const void *, const void *));
-	
+
 	switch(type) {
 	case MDVI_PAGE_SORT_UP:
 		sortfunc = sort_up;
@@ -395,7 +395,7 @@ void	mdvi_sort_pages(DviContext *dvi, DviPageSort type)
 		sortfunc = NULL;
 		break;
 	}
-	
+
 	if(sortfunc)
 		qsort(dvi->pagemap, dvi->npages, sizeof(PageNum), sortfunc);
 }
@@ -411,7 +411,7 @@ static DviFontRef *define_font(DviContext *dvi, int op)
 	int	n;
 	char	*name;
 	DviFontRef *ref;
-	
+
 	arg = dugetn(dvi, op - DVI_FNT_DEF1 + 1);
 	checksum = duget4(dvi);
 	scale = duget4(dvi);
@@ -439,7 +439,7 @@ static char *opendvi(const char *name)
 {
 	int	len;
 	char	*file;
-	
+
 	len = strlen(name);
 	/* if file ends with .dvi and it exists, that's it */
 	if(len >= 4 && STREQ(name+len-4, ".dvi")) {
@@ -447,7 +447,7 @@ static char *opendvi(const char *name)
 		if(access(name, R_OK) == 0)
 			return mdvi_strdup(name);
 	}
-		
+
 	/* try appending .dvi */
 	file = mdvi_malloc(len + 5);
 	strcpy(file, name);
@@ -468,7 +468,7 @@ int	mdvi_reload(DviContext *dvi, DviParams *np)
 {
 	DviContext *newdvi;
 	DviParams  *pars;
-	
+
 	/* close our file */
 	if(dvi->in) {
 		fclose(dvi->in);
@@ -476,8 +476,8 @@ int	mdvi_reload(DviContext *dvi, DviParams *np)
 	}
 
 	pars = np ? np : &dvi->params;
-	DEBUG((DBG_DVI, "%s: reloading\n", dvi->filename));	
-	
+	DEBUG((DBG_DVI, "%s: reloading\n", dvi->filename));
+
 	/* load it again */
 	newdvi = mdvi_init_context(pars, dvi->pagesel, dvi->filename);
 	if(newdvi == NULL) {
@@ -508,7 +508,7 @@ int	mdvi_reload(DviContext *dvi, DviParams *np)
 
 	if(dvi->fileid) mdvi_free(dvi->fileid);
 	dvi->fileid = newdvi->fileid;
-		
+
 	dvi->dvi_page_w = newdvi->dvi_page_w;
 	dvi->dvi_page_h = newdvi->dvi_page_h;
 
@@ -517,25 +517,25 @@ int	mdvi_reload(DviContext *dvi, DviParams *np)
 	dvi->npages = newdvi->npages;
 	if(dvi->currpage > dvi->npages-1)
 		dvi->currpage = 0;
-		
+
 	mdvi_free(dvi->stack);
 	dvi->stack = newdvi->stack;
 	dvi->stacksize = newdvi->stacksize;
 
 	/* remove fonts that are not being used anymore */
 	font_free_unused(&dvi->device);
-		
-	mdvi_free(newdvi->filename);		
+
+	mdvi_free(newdvi->filename);
 	mdvi_free(newdvi);
 
 	DEBUG((DBG_DVI, "%s: reload successful\n", dvi->filename));
 	if(dvi->device.refresh)
 		dvi->device.refresh(dvi, dvi->device.device_data);
-	
+
 	return 0;
 }
 
-/* function to change parameters ia DVI context 
+/* function to change parameters ia DVI context
  * The DVI context is modified ONLY if this function is successful */
 int mdvi_configure(DviContext *dvi, DviParamCode option, ...)
 {
@@ -543,12 +543,12 @@ int mdvi_configure(DviContext *dvi, DviParamCode option, ...)
 	int	reset_all;
 	int	reset_font;
 	DviParams np;
-	
+
 	va_start(ap, option);
 
 	reset_font = 0;
 	reset_all  = 0;
-	np = dvi->params; /* structure copy */	
+	np = dvi->params; /* structure copy */
 	while(option != MDVI_PARAM_LAST) {
 		switch(option) {
 		case MDVI_SET_DPI:
@@ -613,7 +613,7 @@ int mdvi_configure(DviContext *dvi, DviParamCode option, ...)
 		option = va_arg(ap, DviParamCode);
 	}
 	va_end(ap);
-	
+
 	/* check that all values make sense */
 	if(np.dpi <= 0 || np.vdpi <= 0)
 		return -1;
@@ -624,11 +624,11 @@ int mdvi_configure(DviContext *dvi, DviParamCode option, ...)
 	if(np.hshrink < 1 || np.vshrink < 1)
 		return -1;
 	if(np.hdrift < 0 || np.vdrift < 0)
-		return -1;	
+		return -1;
 	if(np.fg == np.bg)
 		return -1;
 
-	/* 
+	/*
 	 * If the dpi or the magnification change, we basically have to reload
 	 * the DVI file again from scratch.
 	 */
@@ -650,7 +650,7 @@ int mdvi_configure(DviContext *dvi, DviParamCode option, ...)
 	if(reset_font) {
 		font_reset_chain_glyphs(&dvi->device, dvi->fonts, reset_font);
 	}
-	dvi->params = np;	
+	dvi->params = np;
 	if((reset_font & MDVI_FONTSEL_GLYPH) && dvi->device.refresh) {
 		dvi->device.refresh(dvi, dvi->device.device_data);
 		return 0;
@@ -659,8 +659,8 @@ int mdvi_configure(DviContext *dvi, DviParamCode option, ...)
 	return 1;
 }
 /*
- * Read the initial data from the DVI file. If something is wrong with the 
- * file, we just spit out an error message and refuse to load the file, 
+ * Read the initial data from the DVI file. If something is wrong with the
+ * file, we just spit out an error message and refuse to load the file,
  * without giving any details. This makes sense because DVI files are ok
  * 99.99% of the time, and dvitype(1) can be used to check the other 0.01%.
  */
@@ -677,7 +677,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 
 	/*
 	 * 1. Open the file and initialize the DVI context
-	 */	
+	 */
 
 	filename = opendvi(file);
 	if(filename == NULL) {
@@ -695,13 +695,13 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	dvi->pagemap = NULL;
 	dvi->filename = filename;
 	dvi->stack = NULL;
-	dvi->modtime = get_mtime(fileno(p));	
+	dvi->modtime = get_mtime(fileno(p));
 	dvi->buffer.data = NULL;
 	dvi->pagesel = spec;
 	dvi->in = p; /* now we can use the dget*() functions */
 
-	/* 
-	 * 2. Read the preamble, extract scaling information, and 
+	/*
+	 * 2. Read the preamble, extract scaling information, and
 	 *    setup the DVI parameters.
 	 */
 
@@ -710,7 +710,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	if((arg = fuget1(p)) != DVI_ID) {
 		mdvi_error(_("%s: unsupported DVI format (version %u)\n"),
 			   file, arg);
-		goto error; /* jump to the end of this routine, 
+		goto error; /* jump to the end of this routine,
 			     * where we handle errors */
 	}
 	/* get dimensions */
@@ -721,8 +721,8 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	/* check that these numbers make sense */
 	if(!dvi->num || !dvi->den || !dvi->dvimag)
 		goto bad_dvi;
-	
-	dvi->params.mag = 
+
+	dvi->params.mag =
 		(par->mag > 0 ? par->mag : (double)dvi->dvimag / 1000.0);
 	dvi->params.hdrift  = par->hdrift;
 	dvi->params.vdrift  = par->vdrift;
@@ -764,7 +764,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	fread(dvi->fileid, 1, n, p);
 	dvi->fileid[n] = 0;
 	DEBUG((DBG_DVI, "%s: %s\n", filename, dvi->fileid));
-	
+
 	/*
 	 * 3. Read postamble, extract page information (number of
 	 *    pages, dimensions) and stack depth.
@@ -772,7 +772,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 
 	/* jump to the end of the file */
 	if(fseek(p, (long)-1, SEEK_END) == -1)
-		goto error;	
+		goto error;
 	for(n = 0; (op = fuget1(p)) == DVI_TRAILER; n++)
 		if(fseek(p, (long)-2, SEEK_CUR) < 0)
 			break;
@@ -795,7 +795,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	dvi->npages = fuget2(p);
 	DEBUG((DBG_DVI, "%s: from postamble: stack depth %d, %d page%s\n",
 		filename, dvi->stacksize, dvi->npages, dvi->npages > 1 ? "s" : ""));
-	
+
 	/*
 	 * 4. Process font definitions.
 	 */
@@ -803,7 +803,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	/* process font definitions */
 	dvi->nfonts = 0;
 	dvi->fontmap = NULL;
-	/* 
+	/*
 	 * CAREFUL: here we need to use the dvi->buffer, but it might leave the
 	 * the file cursor in the wrong position after reading fonts (because of
 	 * buffering). It's ok, though, because after the font definitions we read
@@ -812,7 +812,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	 */
 	while((op = duget1(dvi)) != DVI_POST_POST) {
 		DviFontRef *ref;
-		
+
 		if(op == DVI_NOOP)
 			continue;
 		else if(op < DVI_FNT_DEF1 || op > DVI_FNT_DEF4)
@@ -826,7 +826,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 	}
 	/* we don't need the buffer anymore */
 	dreset(dvi);
-	
+
 	if(op != DVI_POST_POST)
 		goto bad_dvi;
 	font_finish_definitions(dvi);
@@ -840,14 +840,14 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 
 	dvi->pagemap = xnalloc(PageNum, dvi->npages);
 	memzero(dvi->pagemap, sizeof(PageNum) * dvi->npages);
-		
+
 	n = dvi->npages - 1;
 	pagecount = n;
 	while(offset != -1) {
 		int	i;
 		PageNum page;
 
-		fseek(p, offset, SEEK_SET);		
+		fseek(p, offset, SEEK_SET);
 		op = fuget1(p);
 		if(op != DVI_BOP || n < 0)
 			goto bad_dvi;
@@ -875,7 +875,7 @@ DviContext *mdvi_init_context(DviParams *par, DviPageSpec *spec, const char *fil
 		DEBUG((DBG_DVI, "%d of %d pages selected\n",
 			dvi->npages - pagecount, dvi->npages));
 		dvi->npages -= pagecount;
-		memmove(dvi->pagemap, &dvi->pagemap[pagecount], 
+		memmove(dvi->pagemap, &dvi->pagemap[pagecount],
 			dvi->npages * sizeof(PageNum));
 	}
 
@@ -934,7 +934,7 @@ void	mdvi_destroy_context(DviContext *dvi)
 		mdvi_free(dvi->buffer.data);
 	if(dvi->color_stack)
 		mdvi_free(dvi->color_stack);
-	
+
 	mdvi_free(dvi);
 }
 
@@ -955,13 +955,13 @@ static int	mdvi_run_macro(DviContext *dvi, Uchar *macro, size_t len)
 	int	opcode;
 	int	oldtop;
 
-	dvi->depth++;	
+	dvi->depth++;
 	push(dvi, DVI_PUSH);
 	dvi->pos.w = 0;
 	dvi->pos.x = 0;
 	dvi->pos.y = 0;
 	dvi->pos.z = 0;
-	
+
 	/* save our state */
 	curr = dvi->currfont;
 	fonts = dvi->fonts;
@@ -982,7 +982,7 @@ static int	mdvi_run_macro(DviContext *dvi, Uchar *macro, size_t len)
 			break;
 	}
 	if(opcode != DVI_EOP)
-		dviwarn(dvi, _("%s: vf macro had errors\n"), 
+		dviwarn(dvi, _("%s: vf macro had errors\n"),
 			curr->ref->fontname);
 	if(dvi->stacktop != oldtop)
 		dviwarn(dvi, _("%s: stack not empty after vf macro\n"),
@@ -1005,7 +1005,7 @@ int	mdvi_dopage(DviContext *dvi, int pageno)
 	int	ppi;
 	int	reloaded = 0;
 
-again:	
+again:
 	if(dvi->in == NULL) {
 		/* try reopening the file */
 		dvi->in = fopen(dvi->filename, "rb");
@@ -1017,7 +1017,7 @@ again:
 		}
 		DEBUG((DBG_FILES, "reopen(%s) -> Ok\n", dvi->filename));
 	}
-	
+
 	/* check if we need to reload the file */
 	if(!reloaded && get_mtime(fileno(dvi->in)) > dvi->modtime) {
 		mdvi_reload(dvi, &dvi->params);
@@ -1025,20 +1025,20 @@ again:
 		reloaded = 1;
 		goto again;
 	}
-	
+
 	if(pageno < 0 || pageno > dvi->npages-1) {
 		mdvi_error(_("%s: page %d out of range\n"),
 			   dvi->filename, pageno);
 		return -1;
 	}
-	
+
 	fseek(dvi->in, (long)dvi->pagemap[pageno][0], SEEK_SET);
 	if((op = fuget1(dvi->in)) != DVI_BOP) {
 		mdvi_error(_("%s: bad offset at page %d\n"),
 			   dvi->filename, pageno+1);
 		return -1;
 	}
-	
+
 	/* skip bop */
 	fseek(dvi->in, (long)44, SEEK_CUR);
 
@@ -1048,7 +1048,7 @@ again:
 	dvi->stacktop = 0;
 	dvi->currpage = pageno;
 	dvi->curr_layer = 0;
-	
+
 	if(dvi->buffer.data && !dvi->buffer.frozen)
 		mdvi_free(dvi->buffer.data);
 
@@ -1062,7 +1062,7 @@ again:
 	/* reset color stack */
 	mdvi_reset_color(dvi);
 #endif
-		
+
 	/* set max horizontal and vertical drift (from dvips) */
 	if(dvi->params.hdrift < 0) {
 		ppi = dvi->params.dpi / dvi->params.hshrink; /* shrunk pixels per inch */
@@ -1085,13 +1085,13 @@ again:
 
 	dvi->params.thinsp   = FROUND(0.025 * dvi->params.dpi / dvi->params.conv);
 	dvi->params.vsmallsp = FROUND(0.025 * dvi->params.vdpi / dvi->params.vconv);
-		
+
 	/* execute all the commands in the page */
 	while((op = duget1(dvi)) != DVI_EOP) {
 		if(dvi_commands[op](dvi, op) < 0)
 			break;
 	}
-	
+
 	fflush(stdout);
 	fflush(stderr);
 	if(op != DVI_EOP)
@@ -1104,7 +1104,7 @@ again:
 static int inline move_vertical(DviContext *dvi, int amount)
 {
 	int	rvv;
-	
+
 	dvi->pos.v += amount;
 	rvv = vpixel_round(dvi, dvi->pos.v);
 	if(!dvi->params.vdrift)
@@ -1113,7 +1113,7 @@ static int inline move_vertical(DviContext *dvi, int amount)
 		return rvv;
 	else {
 		int	newvv;
-		
+
 		newvv = dvi->pos.vv + vpixel_round(dvi, amount);
 		if(rvv - newvv > dvi->params.vdrift)
 			return rvv - dvi->params.vdrift;
@@ -1121,13 +1121,13 @@ static int inline move_vertical(DviContext *dvi, int amount)
 			return rvv + dvi->params.vdrift;
 		else
 			return newvv;
-	}	
+	}
 }
 
 static int inline move_horizontal(DviContext *dvi, int amount)
 {
 	int	rhh;
-	
+
 	dvi->pos.h += amount;
 	rhh = pixel_round(dvi, dvi->pos.h);
 	if(!dvi->params.hdrift)
@@ -1136,7 +1136,7 @@ static int inline move_horizontal(DviContext *dvi, int amount)
 		return rhh;
 	else {
 		int	newhh;
-		
+
 		newhh = dvi->pos.hh + pixel_round(dvi, amount);
 		if(rhh - newhh > dvi->params.hdrift)
 			return rhh - dvi->params.hdrift;
@@ -1144,7 +1144,7 @@ static int inline move_horizontal(DviContext *dvi, int amount)
 			return rhh + dvi->params.hdrift;
 		else
 			return newhh;
-	}	
+	}
 }
 
 static void inline fix_after_horizontal(DviContext *dvi)
@@ -1167,7 +1167,7 @@ static void inline fix_after_horizontal(DviContext *dvi)
 	(b) > 0 ? (b) : -(b), (c)
 
 static void draw_shrink_rule (DviContext *dvi, int x, int y, Uint w, Uint h, int f)
-{		
+{
 	Ulong fg, bg;
 
 	fg = dvi->curr_fg;
@@ -1176,11 +1176,11 @@ static void draw_shrink_rule (DviContext *dvi, int x, int y, Uint w, Uint h, int
 	mdvi_push_color (dvi, fg, bg);
 	dvi->device.draw_rule(dvi, x, y, w, h, f);
 	mdvi_pop_color (dvi);
-	
+
 	return;
 }
 
-/* 
+/*
  * The only commands that actually draw something are:
  *   set_char, set_rule
  */
@@ -1189,7 +1189,7 @@ static void draw_box(DviContext *dvi, DviFontChar *ch)
 {
 	DviGlyph *glyph = NULL;
 	int	x, y, w, h;
-		
+
 	if(!MDVI_GLYPH_UNSET(ch->shrunk.data))
 		glyph = &ch->shrunk;
 	else if(!MDVI_GLYPH_UNSET(ch->grey.data))
@@ -1237,7 +1237,7 @@ static void draw_box(DviContext *dvi, DviFontChar *ch)
 		y = h - y;
 		break;
 	}
-		
+
 	draw_shrink_rule(dvi, dvi->pos.hh - x, dvi->pos.vv - y, w, h, 1);
 }
 
@@ -1248,7 +1248,7 @@ int	set_char(DviContext *dvi, int opcode)
 	int	hh;
 	DviFontChar *ch;
 	DviFont	*font;
-	
+
 	if(opcode < 128)
 		num = opcode;
 	else
@@ -1263,18 +1263,18 @@ int	set_char(DviContext *dvi, int opcode)
 		/* try to display something anyway */
 		ch = FONTCHAR(font, num);
 		if(!glyph_present(ch)) {
-			dviwarn(dvi, 
-			_("requested character %d does not exist in `%s'\n"), 
+			dviwarn(dvi,
+			_("requested character %d does not exist in `%s'\n"),
 				num, font->fontname);
 			return 0;
 		}
 		draw_box(dvi, ch);
 	} else if(dvi->curr_layer <= dvi->params.layer) {
 		if(ISVIRTUAL(font))
-			mdvi_run_macro(dvi, (Uchar *)font->private + 
+			mdvi_run_macro(dvi, (Uchar *)font->private +
 				ch->offset, ch->width);
 		else if(ch->width && ch->height)
-			dvi->device.draw_glyph(dvi, ch, 
+			dvi->device.draw_glyph(dvi, ch,
 				dvi->pos.hh, dvi->pos.vv);
 	}
 	if(opcode >= DVI_PUT1 && opcode <= DVI_PUT4) {
@@ -1292,7 +1292,7 @@ int	set_char(DviContext *dvi, int opcode)
 		dvi->pos.hh = hh;
 		fix_after_horizontal(dvi);
 	}
-	
+
 	return 0;
 }
 
@@ -1300,11 +1300,11 @@ int	set_rule(DviContext *dvi, int opcode)
 {
 	Int32	a, b;
 	int	h, w;
-	
+
 	a = dsget4(dvi);
 	b = dsget4(dvi); w = rule_round(dvi, b);
 	if(a > 0 && b > 0) {
-		h = vrule_round(dvi, a); 
+		h = vrule_round(dvi, a);
 		SHOWCMD((dvi, opcode == DVI_SET_RULE ? "setrule" : "putrule", -1,
 			"width %d, height %d (%dx%d pixels)\n",
 			b, a, w, h));
@@ -1314,11 +1314,11 @@ int	set_rule(DviContext *dvi, int opcode)
 			draw_shrink_rule(dvi,
 					 dvi->pos.hh, dvi->pos.vv - h + 1, w, h, 1);
 		}
-	} else { 
+	} else {
 		SHOWCMD((dvi, opcode == DVI_SET_RULE ? "setrule" : "putrule", -1,
 			"(moving left only, by %d)\n", b));
 	}
-			
+
 	if(opcode == DVI_SET_RULE) {
 		dvi->pos.h  += b;
 		dvi->pos.hh += w;
@@ -1345,7 +1345,7 @@ int	push(DviContext *dvi, int opcode)
 	memcpy(&dvi->stack[dvi->stacktop], &dvi->pos, sizeof(DviState));
 	SHOWCMD((dvi, "push", -1,
 		"level %d: (h=%d,v=%d,w=%d,x=%d,y=%d,z=%d,hh=%d,vv=%d)\n",
-		dvi->stacktop, 
+		dvi->stacktop,
 		dvi->pos.h, dvi->pos.v, dvi->pos.w, dvi->pos.x,
 		dvi->pos.y, dvi->pos.z, dvi->pos.hh, dvi->pos.vv));
 	dvi->stacktop++;
@@ -1361,7 +1361,7 @@ int	pop(DviContext *dvi, int opcode)
 	memcpy(&dvi->pos, &dvi->stack[dvi->stacktop-1], sizeof(DviState));
 	SHOWCMD((dvi, "pop", -1,
 		"level %d: (h=%d,v=%d,w=%d,x=%d,y=%d,z=%d,hh=%d,vv=%d)\n",
-		dvi->stacktop, 
+		dvi->stacktop,
 		dvi->pos.h, dvi->pos.v, dvi->pos.w, dvi->pos.x,
 		dvi->pos.y, dvi->pos.z, dvi->pos.hh, dvi->pos.vv));
 	dvi->stacktop--;
@@ -1372,7 +1372,7 @@ int	move_right(DviContext *dvi, int opcode)
 {
 	Int32	arg;
 	int	h, hh;
-	
+
 	arg = dsgetn(dvi, opcode - DVI_RIGHT1 + 1);
 	h = dvi->pos.h;
 	hh = move_horizontal(dvi, arg);
@@ -1387,7 +1387,7 @@ int	move_down(DviContext *dvi, int opcode)
 {
 	Int32	arg;
 	int	v, vv;
-	
+
 	arg = dsgetn(dvi, opcode - DVI_DOWN1 + 1);
 	v = dvi->pos.v;
 	vv = move_vertical(dvi, arg);
@@ -1401,7 +1401,7 @@ int	move_down(DviContext *dvi, int opcode)
 int	move_w(DviContext *dvi, int opcode)
 {
 	int	h, hh;
-	
+
 	if(opcode != DVI_W0)
 		dvi->pos.w = dsgetn(dvi, opcode - DVI_W0);
 	h = dvi->pos.h;
@@ -1416,13 +1416,13 @@ int	move_w(DviContext *dvi, int opcode)
 int	move_x(DviContext *dvi, int opcode)
 {
 	int	h, hh;
-	
+
 	if(opcode != DVI_X0)
 		dvi->pos.x = dsgetn(dvi, opcode - DVI_X0);
 	h = dvi->pos.h;
 	hh = move_horizontal(dvi, dvi->pos.x);
 	SHOWCMD((dvi, "x", opcode - DVI_X0,
-		"%d h:=%d%c%d=%d, hh:=%d\n", 
+		"%d h:=%d%c%d=%d, hh:=%d\n",
 		dvi->pos.x, DBGSUM(h, dvi->pos.x, dvi->pos.h), hh));
 	dvi->pos.hh = hh;
 	return 0;
@@ -1431,13 +1431,13 @@ int	move_x(DviContext *dvi, int opcode)
 int	move_y(DviContext *dvi, int opcode)
 {
 	int	v, vv;
-	
+
 	if(opcode != DVI_Y0)
 		dvi->pos.y = dsgetn(dvi, opcode - DVI_Y0);
 	v = dvi->pos.v;
 	vv = move_vertical(dvi, dvi->pos.y);
 	SHOWCMD((dvi, "y", opcode - DVI_Y0,
-		"%d h:=%d%c%d=%d, hh:=%d\n", 
+		"%d h:=%d%c%d=%d, hh:=%d\n",
 		dvi->pos.y, DBGSUM(v, dvi->pos.y, dvi->pos.v), vv));
 	dvi->pos.vv = vv;
 	return 0;
@@ -1452,7 +1452,7 @@ int	move_z(DviContext *dvi, int opcode)
 	v = dvi->pos.v;
 	vv = move_vertical(dvi, dvi->pos.z);
 	SHOWCMD((dvi, "z", opcode - DVI_Z0,
-		"%d h:=%d%c%d=%d, hh:=%d\n", 
+		"%d h:=%d%c%d=%d, hh:=%d\n",
 		dvi->pos.z, DBGSUM(v, dvi->pos.z, dvi->pos.v), vv));
 	dvi->pos.vv = vv;
 	return 0;
@@ -1462,7 +1462,7 @@ int	sel_font(DviContext *dvi, int opcode)
 {
 	DviFontRef *ref;
 	int	ndx;
-	
+
 	ndx = opcode - DVI_FNT_NUM0;
 	if(dvi->depth)
 		ref = font_find_flat(dvi, ndx);
@@ -1484,7 +1484,7 @@ int	sel_fontn(DviContext *dvi, int opcode)
 {
 	Int32	arg;
 	DviFontRef *ref;
-	
+
 	arg = dugetn(dvi, opcode - DVI_FNT1 + 1);
 	if(dvi->depth)
 		ref = font_find_flat(dvi, arg);
@@ -1495,7 +1495,7 @@ int	sel_fontn(DviContext *dvi, int opcode)
 		return -1;
 	}
 	SHOWCMD((dvi, "fnt", opcode - DVI_FNT1 + 1,
-		"current font is %s (id %d)\n", 
+		"current font is %s (id %d)\n",
 		ref->ref->fontname, arg));
 	dvi->currfont = ref;
 	return 0;
@@ -1505,7 +1505,7 @@ int	special(DviContext *dvi, int opcode)
 {
 	char	*s;
 	Int32	arg;
-	
+
 	arg = dugetn(dvi, opcode - DVI_XXX1 + 1);
 	if (arg <= 0) {
 		dvierr(dvi, _("malformed special length\n"));
@@ -1525,7 +1525,7 @@ int	def_font(DviContext *dvi, int opcode)
 {
 	DviFontRef *ref;
 	Int32	arg;
-	
+
 	arg = dugetn(dvi, opcode - DVI_FNT_DEF1 + 1);
 	if(dvi->depth)
 		ref = font_find_flat(dvi, arg);

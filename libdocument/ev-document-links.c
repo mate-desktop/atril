@@ -1,6 +1,6 @@
 /* ev-document-links.h
  *  this file is part of atril, a mate document_links viewer
- * 
+ *
  * Copyright (C) 2004 Red Hat, Inc.
  *
  * Author:

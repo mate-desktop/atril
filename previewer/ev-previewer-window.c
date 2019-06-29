@@ -1,4 +1,4 @@
-/* ev-previewer-window.c: 
+/* ev-previewer-window.c:
  *  this file is part of atril, a mate document viewer
  *
  * Copyright (C) 2009 Carlos Garcia Campos <carlosgc@gnome.org>
@@ -235,7 +235,7 @@ ev_previewer_window_enumerate_finished (EvPreviewerWindow *window)
 			     GTK_PRINT_ERROR_GENERAL,
 			     _("The selected printer '%s' could not be found"),
 			     gtk_print_settings_get_printer (window->print_settings));
-				     
+
 		ev_previewer_window_error_dialog_run (window, error);
 		g_error_free (error);
 	}

@@ -27,7 +27,7 @@ static void  ev_navigation_action_widget_init       (EvNavigationActionWidget   
 static void  ev_navigation_action_widget_class_init (EvNavigationActionWidgetClass *action_widget);
 static void ev_navigation_action_widget_toggled (GtkToggleToolButton *toggle);
 static gboolean ev_navigation_action_widget_button_press_event (GtkWidget *widget,
-        	        	        		        GdkEventButton    *event, 
+        	        	        		        GdkEventButton    *event,
         	        	        		        gpointer data);
 
 G_DEFINE_TYPE (EvNavigationActionWidget, ev_navigation_action_widget, GTK_TYPE_TOGGLE_TOOL_BUTTON)
@@ -44,14 +44,14 @@ static void
 ev_navigation_action_widget_init (EvNavigationActionWidget *action_widget)
 {
 	GtkWidget *toggle_button;
-	
+
 	/* It's rather dirty hack but we need a child to connect to
 	 * button press event
 	 */
-		
+
 	toggle_button = gtk_bin_get_child (GTK_BIN (action_widget));
-	
-	g_signal_connect (toggle_button, "button-press-event", 
+
+	g_signal_connect (toggle_button, "button-press-event",
 			  G_CALLBACK (ev_navigation_action_widget_button_press_event),
 		          action_widget);
 	return;
@@ -81,7 +81,7 @@ menu_deactivate_cb (GtkMenuShell      *menu_shell,
          gtk_toggle_tool_button_set_active (GTK_TOGGLE_TOOL_BUTTON (widget), FALSE);
 	 return TRUE;
 }
-	          
+
 static void
 menu_detacher (GtkWidget *widget,
                GtkMenu   *menu)
@@ -97,13 +97,13 @@ ev_navigation_action_widget_set_menu(EvNavigationActionWidget *button, GtkWidget
 
       if (button->menu == GTK_MENU (menu))
 		return;
-	
+
       if (button->menu && gtk_widget_get_visible (GTK_WIDGET (button->menu)))
 	        gtk_menu_shell_deactivate (GTK_MENU_SHELL (button->menu));
 
       if (button->menu) {
-    		g_signal_handlers_disconnect_by_func (button->menu, 
-						menu_deactivate_cb, 
+    		g_signal_handlers_disconnect_by_func (button->menu,
+						menu_deactivate_cb,
 						button);
 		gtk_menu_detach (button->menu);
        }

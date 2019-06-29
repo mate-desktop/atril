@@ -33,7 +33,7 @@ struct _EvMessageAreaPrivate {
 	GtkWidget *image;
 	GtkWidget *label;
 	GtkWidget *secondary_label;
-	
+
 	guint      message_type : 3;
 };
 
@@ -305,7 +305,7 @@ ev_message_area_set_image_from_stock (EvMessageArea *area,
 {
 	g_return_if_fail (EV_IS_MESSAGE_AREA (area));
 	g_return_if_fail (icon_name != NULL);
-	
+
 	gtk_image_set_from_icon_name (GTK_IMAGE (area->priv->image),
 				  icon_name,
 				  GTK_ICON_SIZE_DIALOG);

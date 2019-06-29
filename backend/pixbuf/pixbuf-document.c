@@ -35,7 +35,7 @@ struct _PixbufDocument
 	EvDocument parent_instance;
 
 	GdkPixbuf *pixbuf;
-	
+
 	gchar *uri;
 };
 
@@ -46,7 +46,7 @@ static void pixbuf_document_document_thumbnails_iface_init (EvDocumentThumbnails
 EV_BACKEND_REGISTER_WITH_CODE (PixbufDocument, pixbuf_document,
                    {
 			 EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_THUMBNAILS,
-							 pixbuf_document_document_thumbnails_iface_init)				   
+							 pixbuf_document_document_thumbnails_iface_init)
 		   });
 
 static gboolean
@@ -55,7 +55,7 @@ pixbuf_document_load (EvDocument  *document,
 		      GError     **error)
 {
 	PixbufDocument *pixbuf_document = PIXBUF_DOCUMENT (document);
-	
+
 	gchar *filename;
 	GdkPixbuf *pixbuf;
 
@@ -63,7 +63,7 @@ pixbuf_document_load (EvDocument  *document,
 	filename = g_filename_from_uri (uri, NULL, error);
 	if (!filename)
 		return FALSE;
-	
+
 	pixbuf = gdk_pixbuf_new_from_file (filename, error);
 
 	if (!pixbuf)
@@ -72,7 +72,7 @@ pixbuf_document_load (EvDocument  *document,
 	pixbuf_document->pixbuf = pixbuf;
 	g_free (pixbuf_document->uri);
 	pixbuf_document->uri = g_strdup (uri);
-	
+
 	return TRUE;
 }
 
@@ -83,7 +83,7 @@ pixbuf_document_save (EvDocument  *document,
 {
 	PixbufDocument *pixbuf_document = PIXBUF_DOCUMENT (document);
 
-	return ev_xfer_uri_simple (pixbuf_document->uri, uri, error); 
+	return ev_xfer_uri_simple (pixbuf_document->uri, uri, error);
 }
 
 static int
@@ -117,7 +117,7 @@ pixbuf_document_render (EvDocument      *document,
 		(gdk_pixbuf_get_width (pixbuf_document->pixbuf) * rc->scale) + 0.5,
 		(gdk_pixbuf_get_height (pixbuf_document->pixbuf) * rc->scale) + 0.5,
 		GDK_INTERP_BILINEAR);
-	
+
         rotated_pixbuf = gdk_pixbuf_rotate_simple (scaled_pixbuf, 360 - rc->rotation);
         g_object_unref (scaled_pixbuf);
 
@@ -134,7 +134,7 @@ pixbuf_document_finalize (GObject *object)
 
 	g_object_unref (pixbuf_document->pixbuf);
 	g_free (pixbuf_document->uri);
-	
+
 	G_OBJECT_CLASS (pixbuf_document_parent_class)->finalize (object);
 }
 
@@ -161,10 +161,10 @@ pixbuf_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document,
 	PixbufDocument *pixbuf_document = PIXBUF_DOCUMENT (document);
 	GdkPixbuf *pixbuf, *rotated_pixbuf;
 	gint width, height;
-	
+
 	width = (gint) (gdk_pixbuf_get_width (pixbuf_document->pixbuf) * rc->scale);
 	height = (gint) (gdk_pixbuf_get_height (pixbuf_document->pixbuf) * rc->scale);
-	
+
 	pixbuf = gdk_pixbuf_scale_simple (pixbuf_document->pixbuf,
 					  width, height,
 					  GDK_INTERP_BILINEAR);
@@ -177,7 +177,7 @@ pixbuf_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document,
 
 static void
 pixbuf_document_thumbnails_get_dimensions (EvDocumentThumbnails *document,
-					   EvRenderContext      *rc, 
+					   EvRenderContext      *rc,
 					   gint                 *width,
 					   gint                 *height)
 {

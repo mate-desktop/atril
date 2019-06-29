@@ -41,7 +41,7 @@ typedef struct _EvLayerPrivate EvLayerPrivate;
 
 struct _EvLayer {
 	GObject base_instance;
-	
+
 	EvLayerPrivate *priv;
 };
 

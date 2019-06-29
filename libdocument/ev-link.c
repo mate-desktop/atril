@@ -50,7 +50,7 @@ const gchar *
 ev_link_get_title (EvLink *self)
 {
 	g_return_val_if_fail (EV_IS_LINK (self), NULL);
-	
+
 	return self->priv->title;
 }
 
@@ -58,7 +58,7 @@ EvLinkAction *
 ev_link_get_action (EvLink *self)
 {
 	g_return_val_if_fail (EV_IS_LINK (self), NULL);
-	
+
 	return self->priv->action;
 }
 
@@ -94,10 +94,10 @@ ev_link_set_property (GObject      *object,
 		      GParamSpec   *param_spec)
 {
 	EvLink *self = EV_LINK (object);
-	
+
 	switch (prop_id) {
 	        case PROP_TITLE:
-			self->priv->title = g_value_dup_string (value);	
+			self->priv->title = g_value_dup_string (value);
 			break;
 	        case PROP_ACTION:
 			self->priv->action = g_value_get_pointer (value);

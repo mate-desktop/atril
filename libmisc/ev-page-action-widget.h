@@ -19,7 +19,7 @@
  */
 
 #include <atril-view.h>
- 
+
 #include <gtk/gtk.h>
 
 #define EV_TYPE_PAGE_ACTION_WIDGET (ev_page_action_widget_get_type ())

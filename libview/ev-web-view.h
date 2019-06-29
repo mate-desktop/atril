@@ -54,7 +54,7 @@ void       ev_web_view_reload               (EvWebView          *webview);
 
 void       ev_web_view_reload_page			(EvWebView         *webview,
   		    								 gint               page);
-	
+
 /* Navigation */
 gboolean       ev_web_view_next_page		  (EvWebView         *webview);
 gboolean       ev_web_view_previous_page	  (EvWebView         *webview);
@@ -68,7 +68,7 @@ void     ev_web_view_find_previous             (EvWebView *webview);
 
 void     ev_web_view_find_changed              (EvWebView *webview,
                                                 guint *results,
-                                                gchar *text, 
+                                                gchar *text,
                                                 gboolean case_sensitive);
 
 void     ev_web_view_find_search_changed       (EvWebView *webview);

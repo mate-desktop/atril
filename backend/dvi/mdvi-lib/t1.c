@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-/* 
+/*
  * Type1 font support for MDVI
  *
  * We use T1lib only as a rasterizer, not to draw glyphs.
@@ -37,7 +37,7 @@ typedef struct t1info {
 	struct t1info *next;
 	struct t1info *prev;
 	char	*fontname;	/* (short) name of this font */
-	int	t1id;		/* T1lib's id for this font */	
+	int	t1id;		/* T1lib's id for this font */
 	int	hasmetrics;	/* have we processed this font? */
 	TFMInfo *tfminfo;	/* TFM data is shared */
 	DviFontMapInfo mapinfo;
@@ -47,7 +47,7 @@ typedef struct t1info {
 static void  t1_font_remove __PROTO((T1Info *));
 static int   t1_load_font __PROTO((DviParams *, DviFont *));
 static int   t1_font_get_glyph __PROTO((DviParams *, DviFont *, int));
-static void  t1_font_shrink_glyph 
+static void  t1_font_shrink_glyph
 		__PROTO((DviContext *, DviFont *, DviFontChar *, DviGlyph *));
 static void  t1_free_data __PROTO((DviFont *));
 static void  t1_reset_font __PROTO((DviFont *));
@@ -79,10 +79,10 @@ static int t1lib_ydpi = -1;
 static ListHead t1fonts = {NULL, NULL, 0};
 static DviHashTable t1hash;
 
-/* Type1 fonts need their own `lookup' function. Here is how it works: 
+/* Type1 fonts need their own `lookup' function. Here is how it works:
  * First we try to find the font by its given name. If that fails, we
  * query the font maps. A typical font map entry may contain the line
- * 
+ *
  * ptmr8rn Times-Roman ".82 ExtendFont TeXBase1Encoding ReEncodeFont" <8r.enc <ptmr
  *
  * which means: If you're looking for the font `ptmr8rn' load `Times-Roman'
@@ -112,13 +112,13 @@ char	*t1_lookup_font(const char *name, Ushort *hdpi, Ushort *vdpi)
 		return filename;
 	}
 
-	DEBUG((DBG_TYPE1, "(t1) %s: not found, querying font maps\n", name));	
+	DEBUG((DBG_TYPE1, "(t1) %s: not found, querying font maps\n", name));
 	/* now query the fontmap */
 	if(mdvi_query_fontmap(&info, name) < 0) {
 		/* it's not there either */
 		return NULL;
 	}
-	
+
 	/* check what we got */
 	if(info.fullfile) {
 		DEBUG((DBG_TYPE1, "(t1) %s: found `%s' (cached)\n",
@@ -126,15 +126,15 @@ char	*t1_lookup_font(const char *name, Ushort *hdpi, Ushort *vdpi)
 		/* this is a cached lookup */
 		return mdvi_strdup(info.fullfile);
 	}
-	
+
 	/* no file associated to this font? */
 	if(info.fontfile == NULL)
 		return info.psname ? mdvi_ps_find_font(info.psname) : NULL;
-		
+
 	/* let's extract the extension */
 	ext = file_extension(info.fontfile);
 	if(ext && !STREQ(ext, "pfa") && !STREQ(ext, "pfb")) {
-		DEBUG((DBG_TYPE1, 
+		DEBUG((DBG_TYPE1,
 			"(t1) %s: associated name `%s' is not Type1\n",
 			name, info.fontfile));
 		/* it's not a Type1 font */
@@ -160,7 +160,7 @@ char	*t1_lookup_font(const char *name, Ushort *hdpi, Ushort *vdpi)
 		DEBUG((DBG_TYPE1, "(t1) %s: not found\n", name));
 		return NULL;
 	}
-	
+
 	DEBUG((DBG_TYPE1, "(t1) %s: found as `%s'\n", name, filename));
 	/* got it! let's remember this */
 	mdvi_add_fontmap_file(name, filename);
@@ -178,7 +178,7 @@ static void t1_reset_resolution(int xdpi, int ydpi)
 	nfonts = T1_Get_no_fonts();
 #else
 	nfonts = T1_GetNoFonts();
-#endif	
+#endif
 
 	for(i = 0; i < nfonts; i++)
 		T1_DeleteAllSizes(i);
@@ -186,7 +186,7 @@ static void t1_reset_resolution(int xdpi, int ydpi)
 	if(T1_SetDeviceResolutions((float)xdpi, (float)ydpi) < 0)
 		mdvi_warning(_("(t1) failed to reset device resolution\n"));
 	else
-		DEBUG((DBG_TYPE1, 
+		DEBUG((DBG_TYPE1,
 			"(t1) reset successful, new resolution is (%d, %d)\n",
 			xdpi, ydpi));
 	t1lib_xdpi = xdpi;
@@ -196,7 +196,7 @@ static void t1_reset_resolution(int xdpi, int ydpi)
 static void t1_reset_font(DviFont *font)
 {
 	T1Info *info = (T1Info *)font->private;
-	
+
 	if(info == NULL)
 		return;
 	DEBUG((DBG_FONTS, "(t1) resetting font `%s'\n", font->fontname));
@@ -215,19 +215,19 @@ static void t1_transform_font(T1Info *info)
 			mdvi_warning(_("%s: could not encode font\n"), info->fontname);
 	}
 	if(info->mapinfo.slant) {
-		DEBUG((DBG_TYPE1, "(t1) %s: slanting by %.3f\n", 
+		DEBUG((DBG_TYPE1, "(t1) %s: slanting by %.3f\n",
 			info->fontname,
 			MDVI_FMAP_SLANT(&info->mapinfo)));
-		T1_SlantFont(info->t1id, 
+		T1_SlantFont(info->t1id,
 			MDVI_FMAP_SLANT(&info->mapinfo));
 	}
 	if(info->mapinfo.extend) {
 		DEBUG((DBG_TYPE1, "(t1) %s: extending by %.3f\n",
 			info->fontname,
 			MDVI_FMAP_EXTEND(&info->mapinfo)));
-		T1_ExtendFont(info->t1id, 
+		T1_ExtendFont(info->t1id,
 			MDVI_FMAP_EXTEND(&info->mapinfo));
-	}		
+	}
 }
 
 /* if this function is called, we really need this font */
@@ -257,7 +257,7 @@ static int t1_really_load_font(DviParams *params, DviFont *font, T1Info *info)
 	 * data for it */
 	info->tfminfo = mdvi_ps_get_metrics(info->fontname);
 	if(info->tfminfo == NULL) {
-		DEBUG((DBG_FONTS, 
+		DEBUG((DBG_FONTS,
 			"(t1) %s: no metric data, font ignored\n",
 			info->fontname));
 		goto t1_error;
@@ -274,7 +274,7 @@ static int t1_really_load_font(DviParams *params, DviFont *font, T1Info *info)
 	if(old && old->t1id != -1) {
 		/* let's take advantage of T1lib's font sharing */
 		t1id = T1_CopyFont(old->t1id);
-		DEBUG((DBG_TYPE1, "(t1) %s -> %d (CopyFont)\n", 
+		DEBUG((DBG_TYPE1, "(t1) %s -> %d (CopyFont)\n",
 			info->fontname, t1id));
 		copied = 1;
 	} else {
@@ -287,7 +287,7 @@ static int t1_really_load_font(DviParams *params, DviFont *font, T1Info *info)
 		goto t1_error;
 	info->t1id = t1id;
 
-	/* 
+	/*
 	 * a minor optimization: If the old font in the hash table has
 	 * not been loaded yet, replace it by this one, so we can use
 	 * CopyFont later.
@@ -296,7 +296,7 @@ static int t1_really_load_font(DviParams *params, DviFont *font, T1Info *info)
 		DEBUG((DBG_TYPE1, "(t1) font `%s' exchanged in hash table\n",
 			info->fontname));
 		mdvi_hash_remove(&t1hash, (unsigned char *)old->fontname);
-		mdvi_hash_add(&t1hash, (unsigned char *)info->fontname, 
+		mdvi_hash_add(&t1hash, (unsigned char *)info->fontname,
 			info, MDVI_HASH_UNCHECKED);
 	}
 
@@ -323,7 +323,7 @@ static int t1_really_load_font(DviParams *params, DviFont *font, T1Info *info)
 	/* get the scaled characters metrics */
 	get_tfm_chars(params, font, info->tfminfo, 0);
 	info->hasmetrics = 1;
-	
+
 	DEBUG((DBG_TYPE1, "(t1) font `%s' really-loaded\n", info->fontname));
 	return 0;
 
@@ -331,7 +331,7 @@ t1_error:
 	/* some error does not allows us to use this font. We need to reset
 	 * the font structure, so the font system can try to read this
 	 * font in a different class */
-	
+
 	/* first destroy the private data */
 	t1_font_remove(info);
 	/* now reset all chars -- this is the important part */
@@ -365,7 +365,7 @@ static int init_t1lib(DviParams *params)
 	mdvi_hash_init(&t1hash);
 	DEBUG((DBG_TYPE1, "(t1) t1lib %s initialized -- resolution is (%d, %d), pad is %d bits\n",
 		T1_GetLibIdent(), params->dpi, params->vdpi, T1_GetBitmapPad()));
-	t1lib_initialized = 1;	
+	t1lib_initialized = 1;
 	t1lib_xdpi = params->dpi;
 	t1lib_ydpi = params->vdpi;
 	return 0;
@@ -375,7 +375,7 @@ static int t1_load_font(DviParams *params, DviFont *font)
 {
 	T1Info	*info;
 	int	i;
-				
+
 	if(t1lib_initialized < 0)
 		return -1;
 	else if(t1lib_initialized == 0 && init_t1lib(params) < 0)
@@ -389,7 +389,7 @@ static int t1_load_font(DviParams *params, DviFont *font)
 
 	info = xalloc(T1Info);
 
-	/* 
+	/*
 	 * mark the font as `unregistered' with T1lib. It will
 	 * be added when we actually use it
 	 */
@@ -405,15 +405,15 @@ static int t1_load_font(DviParams *params, DviFont *font)
 	info->mapinfo.extend = 0;
 	info->mapinfo.slant = 0;
 	info->encoding = NULL;
-	
+
 	/* create the hash table if we have not done so yet */
 	if(t1hash.nbucks == 0)
 		mdvi_hash_create(&t1hash, T1_HASH_SIZE);
-	mdvi_hash_add(&t1hash, (unsigned char *) info->fontname, info, MDVI_HASH_UNIQUE);		
+	mdvi_hash_add(&t1hash, (unsigned char *) info->fontname, info, MDVI_HASH_UNIQUE);
 	listh_append(&t1fonts, LIST(info));
 
 	font->private = info;
-		
+
 	/* reset everything */
 	font->chars = xnalloc(DviFontChar, 256);
 	font->loc = 0;
@@ -426,7 +426,7 @@ static int t1_load_font(DviParams *params, DviFont *font)
 		font->chars[i].shrunk.data = NULL;
 		font->chars[i].grey.data = NULL;
 	}
-	
+
 	return 0;
 }
 
@@ -438,7 +438,7 @@ static int t1_load_font(DviParams *params, DviFont *font)
 static inline BITMAP *t1_glyph_bitmap(GLYPH *glyph)
 {
 	int	w, h, pad;
-	
+
 	w = GLYPH_WIDTH(glyph);
 	h = GLYPH_HEIGHT(glyph);
 
@@ -455,12 +455,12 @@ static void t1_font_shrink_glyph(DviContext *dvi, DviFont *font, DviFontChar *ch
 	GLYPH	*glyph;
 	T1Info	*info;
 	T1_TMATRIX matrix;
-	
+
 	info = (T1Info *)font->private;
 	ASSERT(info != NULL);
 
 	DEBUG((DBG_TYPE1, "(t1) shrinking glyph for character %d in `%s' (%d,%d)\n",
-		ch->code, font->fontname, ch->width, ch->height));	
+		ch->code, font->fontname, ch->width, ch->height));
 	size = (double)font->scale / (dvi->params.tfm_conv * 0x100000);
 	size = 72.0 * size / 72.27;
 	matrix.cxx = 1.0/(double)dvi->params.hshrink;
@@ -477,7 +477,7 @@ static void t1_font_shrink_glyph(DviContext *dvi, DviFont *font, DviFontChar *ch
 
 #ifndef NODEBUG
 	if(DEBUGGING(BITMAP_DATA)) {
-		DEBUG((DBG_BITMAP_DATA, 
+		DEBUG((DBG_BITMAP_DATA,
 			"(t1) %s: t1_shrink_glyph(%d): (%dw,%dh,%dx,%dy) -> (%dw,%dh,%dx,%dy)\n",
 			ch->glyph.w, ch->glyph.h, ch->glyph.x, ch->glyph.y,
 			dest->w, dest->h, dest->x, dest->y));
@@ -497,11 +497,11 @@ static int t1_font_get_glyph(DviParams *params, DviFont *font, int code)
 	double	size;
 	T1_TMATRIX matrix;
 	int	dpi;
-	
+
 	ASSERT(info != NULL);
 	if(!info->hasmetrics && t1_really_load_font(params, font, info) < 0)
 		return -1;
-	ch = FONTCHAR(font, code);	
+	ch = FONTCHAR(font, code);
 	if(!ch || !glyph_present(ch))
 		return -1;
 	ch->loaded = 1;
@@ -522,7 +522,7 @@ static int t1_font_get_glyph(DviParams *params, DviFont *font, int code)
 	size = 72.0 * size / 72.27;
 
 	dpi = Max(font->hdpi, font->vdpi);
-	/* we don't want the glyph to be cached twice (once by us, another by 
+	/* we don't want the glyph to be cached twice (once by us, another by
 	 * T1lib), so we use an identity matrix to tell T1lib not to keep the
 	 * glyph around */
 	matrix.cxx = (double)font->hdpi / dpi;
@@ -545,21 +545,21 @@ static int t1_font_get_glyph(DviParams *params, DviFont *font, int code)
 	ch->glyph.w = GLYPH_WIDTH(glyph);
 	ch->glyph.h = GLYPH_HEIGHT(glyph);
 
-	/* let's also fix the glyph's origin 
+	/* let's also fix the glyph's origin
 	 * (which is not contained in the TFM) */
 	ch->x = ch->glyph.x;
 	ch->y = ch->glyph.y;
 	/* let's fix these too */
 	ch->width = ch->glyph.w;
 	ch->height = ch->glyph.h;
-		
+
 	return 0;
 }
 
 static void t1_font_remove(T1Info *info)
 {
 	T1Info	*old;
-	
+
 	/* first remove it from our list */
 	listh_remove(&t1fonts, LIST(info));
 
@@ -567,13 +567,13 @@ static void t1_font_remove(T1Info *info)
 	old = (T1Info *)mdvi_hash_lookup(&t1hash, (unsigned char *)info->fontname);
 	if(old == info) {
 		mdvi_hash_remove(&t1hash, (unsigned char *) info->fontname);
-		/* go through the list and see if there is another 
+		/* go through the list and see if there is another
 		 * font with this name */
 		for(old = (T1Info *)t1fonts.head; old; old = old->next)
 			if(STREQ(old->fontname, info->fontname))
 				break;
 		if(old != NULL)
-			mdvi_hash_add(&t1hash, (unsigned char *) old->fontname, old, 
+			mdvi_hash_add(&t1hash, (unsigned char *) old->fontname, old,
 				MDVI_HASH_UNCHECKED);
 	}
 	/* release our encoding vector */
@@ -603,17 +603,17 @@ static void t1_free_data(DviFont *font)
 	/* called after all the glyphs are destroyed */
 
 	if(font->private == NULL) {
-		/* this is perfectly normal, it just means the font has 
+		/* this is perfectly normal, it just means the font has
 		 * not been requested by MDVI yet */
 		return;
 	}
-	
+
 	/* destroy this data */
 
 	t1_font_remove((T1Info *)font->private);
 	font->private = NULL;
 
-	/* 
+	/*
 	 * if this is the last T1 font, reset the T1 library
 	 * It is important that we do this, because this is will be called
 	 * when the resolution or the magnification changes.
