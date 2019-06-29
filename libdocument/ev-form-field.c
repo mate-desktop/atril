@@ -150,7 +150,7 @@ ev_form_field_text_new (gint                id,
 			EvFormFieldTextType type)
 {
 	EvFormField *field;
-	
+
 	g_return_val_if_fail (id >= 0, NULL);
 	g_return_val_if_fail (type >= EV_FORM_FIELD_TEXT_NORMAL &&
 			      type <= EV_FORM_FIELD_TEXT_FILE_SELECT, NULL);
@@ -188,7 +188,7 @@ ev_form_field_choice_new (gint                  id,
 	g_return_val_if_fail (id >= 0, NULL);
 	g_return_val_if_fail (type >= EV_FORM_FIELD_CHOICE_COMBO &&
 			      type <= EV_FORM_FIELD_CHOICE_LIST, NULL);
-	
+
 	field = EV_FORM_FIELD (g_object_new (EV_TYPE_FORM_FIELD_CHOICE, NULL));
 	field->id = id;
 	EV_FORM_FIELD_CHOICE (field)->type = type;

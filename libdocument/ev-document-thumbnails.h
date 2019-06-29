@@ -45,19 +45,19 @@ struct _EvDocumentThumbnailsInterface {
 
         /* Methods  */
         GdkPixbuf *  (* get_thumbnail)  (EvDocumentThumbnails *document,
-                                         EvRenderContext      *rc, 
+                                         EvRenderContext      *rc,
                                          gboolean              border);
         void         (* get_dimensions) (EvDocumentThumbnails *document,
                                          EvRenderContext      *rc,
                                          gint                 *width,
                                          gint                 *height);
-	
+
 };
 
 GType      ev_document_thumbnails_get_type       (void) G_GNUC_CONST;
 
 GdkPixbuf *ev_document_thumbnails_get_thumbnail  (EvDocumentThumbnails *document,
-                                                  EvRenderContext      *rc, 
+                                                  EvRenderContext      *rc,
                                                   gboolean              border);
 void       ev_document_thumbnails_get_dimensions (EvDocumentThumbnails *document,
                                                   EvRenderContext      *rc,

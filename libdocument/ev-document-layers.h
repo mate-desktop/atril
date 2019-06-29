@@ -1,6 +1,6 @@
 /* ev-document-layers.h
  *  this file is part of atril, a mate document viewer
- * 
+ *
  * Copyright (C) 2008 Carlos Garcia Campos  <carlosgc@gnome.org>
  *
  * Atril is free software; you can redistribute it and/or modify it

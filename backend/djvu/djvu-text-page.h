@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2006 Michael Hofmann <mh21@piware.de>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -46,11 +46,11 @@ struct _DjvuTextLink {
 	miniexp_t pair;
 };
 
-char *			djvu_text_page_copy 		(DjvuTextPage *page, 
+char *			djvu_text_page_copy 		(DjvuTextPage *page,
 		    					 EvRectangle  *rectangle);
 void			djvu_text_page_prepare_search	(DjvuTextPage *page,
 	       		    				 gboolean      case_sensitive);
-void 			djvu_text_page_search 		(DjvuTextPage *page, 
+void 			djvu_text_page_search 		(DjvuTextPage *page,
 		    					 const char    *text,
 							 gboolean       case_sensitive);
 DjvuTextPage*		djvu_text_page_new 		(miniexp_t     text);

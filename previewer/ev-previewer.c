@@ -1,4 +1,4 @@
-/* ev-previewer.c: 
+/* ev-previewer.c:
  *  this file is part of atril, a mate document viewer
  *
  * Copyright (C) 2009 Carlos Garcia Campos <carlosgc@gnome.org>
@@ -103,13 +103,13 @@ main (gint argc, gchar **argv)
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 #endif
-	
+
 	context = g_option_context_new (_("MATE Document Previewer"));
 	g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
 	g_option_context_add_main_entries (context, goption_options, GETTEXT_PACKAGE);
 
 	g_option_context_add_group (context, gtk_get_option_group (TRUE));
-	
+
 	if (!g_option_context_parse (context, &argc, &argv, &error)) {
 		g_warning ("Error parsing command line arguments: %s", error->message);
 		g_error_free (error);
@@ -121,12 +121,12 @@ main (gint argc, gchar **argv)
 
 	if (!filenames) {
 		g_warning ("File argument is required");
-		
+
 		return 1;
 	}
 
 	filename = filenames[0];
-	
+
 	if (!g_file_test (filename, G_FILE_TEST_IS_REGULAR)) {
 		g_warning ("Filename \"%s\" does not exist or is not a regular file", filename);
 
@@ -152,7 +152,7 @@ main (gint argc, gchar **argv)
 	gtk_widget_show (window);
 
 	ev_previewer_load_document (filename, model);
-	
+
 	gtk_main ();
 
 	if (unlink_temp_file)
@@ -163,6 +163,6 @@ main (gint argc, gchar **argv)
 	ev_shutdown ();
 	ev_stock_icons_shutdown ();
 	g_object_unref (model);
-	
+
 	return 0;
 }

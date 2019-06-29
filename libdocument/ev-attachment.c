@@ -57,11 +57,11 @@ GQuark
 ev_attachment_error_quark (void)
 {
 	static GQuark error_quark = 0;
-	
+
 	if (error_quark == 0)
 		error_quark =
 			g_quark_from_static_string ("ev-attachment-error-quark");
-	
+
 	return error_quark;
 }
 
@@ -174,7 +174,7 @@ ev_attachment_class_init (EvAttachmentClass *klass)
 	g_object_class_install_property (g_object_class,
 					 PROP_MTIME,
 					 g_param_spec_ulong ("mtime",
-							     "ModifiedTime", 
+							     "ModifiedTime",
 							     "The attachment modification date",
 							     0, G_MAXULONG, 0,
 							     G_PARAM_WRITABLE |
@@ -202,7 +202,7 @@ ev_attachment_class_init (EvAttachmentClass *klass)
 							       "The attachment data",
 							       G_PARAM_WRITABLE |
 							       G_PARAM_CONSTRUCT_ONLY));
-	
+
 	g_object_class->finalize = ev_attachment_finalize;
 }
 
@@ -296,28 +296,7 @@ ev_attachment_save (EvAttachment *attachment,
 	output_stream = g_file_replace (file, NULL, FALSE, 0, NULL, &ioerror);
 	if (output_stream == NULL) {
 		char *uri;
-		
-		uri = g_file_get_uri (file);
-		g_set_error (error,
-			     EV_ATTACHMENT_ERROR, 
-			     ioerror->code,
-			     _("Couldn't save attachment “%s”: %s"),
-			     uri, 
-			     ioerror->message);
 
-		g_error_free (ioerror);
-		g_free (uri);
-		
-		return FALSE;
-	}
-	
-	written_bytes = g_output_stream_write (G_OUTPUT_STREAM (output_stream),
-					       attachment->priv->data,
-					       attachment->priv->size,
-					       NULL, &ioerror);
-	if (written_bytes == -1) {
-		char *uri;
-		
 		uri = g_file_get_uri (file);
 		g_set_error (error,
 			     EV_ATTACHMENT_ERROR,
@@ -325,7 +304,28 @@ ev_attachment_save (EvAttachment *attachment,
 			     _("Couldn't save attachment “%s”: %s"),
 			     uri,
 			     ioerror->message);
-		
+
+		g_error_free (ioerror);
+		g_free (uri);
+
+		return FALSE;
+	}
+
+	written_bytes = g_output_stream_write (G_OUTPUT_STREAM (output_stream),
+					       attachment->priv->data,
+					       attachment->priv->size,
+					       NULL, &ioerror);
+	if (written_bytes == -1) {
+		char *uri;
+
+		uri = g_file_get_uri (file);
+		g_set_error (error,
+			     EV_ATTACHMENT_ERROR,
+			     ioerror->code,
+			     _("Couldn't save attachment “%s”: %s"),
+			     uri,
+			     ioerror->message);
+
 		g_output_stream_close (G_OUTPUT_STREAM (output_stream), NULL, NULL);
 		g_error_free (ioerror);
 		g_free (uri);
@@ -336,7 +336,7 @@ ev_attachment_save (EvAttachment *attachment,
 	g_output_stream_close (G_OUTPUT_STREAM (output_stream), NULL, NULL);
 
 	return TRUE;
-	
+
 }
 
 static gboolean
@@ -376,12 +376,12 @@ ev_attachment_launch_app (EvAttachment *attachment,
 
 		g_list_free (files);
 		g_error_free (ioerror);
-		
+
 		return FALSE;
 	}
 
 	g_list_free (files);
-	
+
 	return TRUE;
 }
 
@@ -395,7 +395,7 @@ ev_attachment_open (EvAttachment *attachment,
 	gboolean  retval = FALSE;
 
 	g_return_val_if_fail (EV_IS_ATTACHMENT (attachment), FALSE);
-	
+
 	if (!attachment->priv->app) {
 		app_info = g_app_info_get_default_for_type (attachment->priv->mime_type, FALSE);
 		attachment->priv->app = app_info;
@@ -407,7 +407,7 @@ ev_attachment_open (EvAttachment *attachment,
 			     0,
 			     _("Couldn't open attachment “%s”"),
 			     attachment->priv->name);
-		
+
 		return FALSE;
 	}
 

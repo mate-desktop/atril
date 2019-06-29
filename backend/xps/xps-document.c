@@ -513,13 +513,13 @@ xps_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document,
 {
 	GdkPixbuf *thumbnail;
 	cairo_surface_t *surface;
-	
+
 	surface = xps_document_render (EV_DOCUMENT (document), rc);
-	
+
 	thumbnail = ev_document_misc_pixbuf_from_surface (surface);
-	
+
 	cairo_surface_destroy (surface);
-	
+
 	if (border) {
 		GdkPixbuf *tmp_pixbuf = thumbnail;
 
@@ -537,7 +537,7 @@ xps_document_thumbnails_get_dimensions (EvDocumentThumbnails *document,
                                         gint                 *height)
 {
 	gdouble page_width, page_height;
-	
+
 	xps_document_get_page_size (EV_DOCUMENT (document), rc->page,
 	                            &page_width, &page_height);
 

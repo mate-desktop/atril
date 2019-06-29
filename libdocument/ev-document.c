@@ -203,7 +203,7 @@ ev_document_fc_mutex_trylock (void)
  * @error: a #GError location to store an error, or %NULL
  *
  * Loads @document from @uri.
- * 
+ *
  * On failure, %FALSE is returned and @error is filled in.
  * If the document is encrypted, EV_DEFINE_ERROR_ENCRYPTED is returned.
  * If the backend cannot load the specific document, EV_DOCUMENT_ERROR_INVALID
@@ -229,7 +229,7 @@ ev_document_load (EvDocument  *document,
 
 	if ( !g_strcmp0 (ev_file_get_mime_type(uri,TRUE,&err),"application/epub+zip") )
 		document->iswebdocument=TRUE ;
-		
+
 	retval = klass->load (document, uri, &err);
 	if (!retval) {
 		if (err) {
@@ -255,7 +255,7 @@ ev_document_load (EvDocument  *document,
 		priv->uri = g_strdup (uri);
 
 		priv->n_pages = _ev_document_get_n_pages (document);
-		
+
 		for (i = 0; i < priv->n_pages; i++) {
 
 			/*
@@ -263,13 +263,13 @@ ev_document_load (EvDocument  *document,
 			 * We are however geeneralising the scenario by considering epub as a type of web document.
 			 * FIXME: Labels, or bookmarks though, can be done.
 			 */
-			
+
 			EvPage     *page = ev_document_get_page (document, i);
 			gdouble     page_width = 0;
 			gdouble     page_height = 0;
 			EvPageSize *page_size;
 			gchar      *page_label;
-			
+
 			if ( document->iswebdocument == FALSE ) {
 				_ev_document_get_page_size (document, page, &page_width, &page_height);
 			}
@@ -278,7 +278,7 @@ ev_document_load (EvDocument  *document,
 				page_width = 800;
 				page_height= 600;
 			}
-			
+
 			if (i == 0) {
 				priv->uniform_width = page_width;
 				priv->uniform_height = page_height;
@@ -298,9 +298,9 @@ ev_document_load (EvDocument  *document,
 				    priv->uniform_height != page_height)) {
 				/* It's a different page size.  Backfill the array. */
 				int j;
-				
+
 				priv->page_sizes = g_new0 (EvPageSize, priv->n_pages);
-				
+
 				for (j = 0; j < i; j++) {
 					page_size = &(priv->page_sizes[j]);
 					page_size->width = priv->uniform_width;
@@ -361,7 +361,7 @@ ev_document_load (EvDocument  *document,
  * @error: a #GError location to store an error, or %NULL
  *
  * Saves @document to @uri.
- * 
+ *
  * Returns: %TRUE on success, or %FALSE on error with @error filled in
  */
 gboolean
@@ -780,7 +780,7 @@ EvDocumentInfo *
 ev_document_info_copy (EvDocumentInfo *info)
 {
 	EvDocumentInfo *copy;
-	
+
 	g_return_val_if_fail (info != NULL, NULL);
 
 	copy = g_new0 (EvDocumentInfo, 1);
@@ -793,7 +793,7 @@ ev_document_info_copy (EvDocumentInfo *info)
 	copy->creator = g_strdup (info->creator);
 	copy->producer = g_strdup (info->producer);
 	copy->linearized = g_strdup (info->linearized);
-	
+
 	copy->creation_date = info->creation_date;
 	copy->modified_date = info->modified_date;
 	copy->layout = info->layout;

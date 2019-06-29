@@ -176,12 +176,12 @@ build_tree (const DjvuDocument *djvu_document,
 		iter = miniexp_cdr (iter);
 	} else if ( miniexp_length (iter) >= 2 ) {
 		gchar *utf8_title = NULL;
-		
+
 		/* An entry */
 		if (!string_from_miniexp (miniexp_car (iter), &title)) goto unknown_entry;
 		if (!string_from_miniexp (miniexp_cadr (iter), &link_dest)) goto unknown_entry;
 
-		
+
 		if (!g_utf8_validate (title, -1, NULL)) {
 			utf8_title = str_to_utf8 (title);
 			title_markup = g_markup_escape_text (utf8_title, -1);
@@ -190,7 +190,7 @@ build_tree (const DjvuDocument *djvu_document,
 		}
 
 		ev_action = get_djvu_link_action (djvu_document, link_dest, -1);
-		
+
 		if (g_str_has_suffix (link_dest, ".djvu")) {
 			/* FIXME: component file identifiers */
 		} else if (ev_action) {
@@ -236,7 +236,7 @@ get_djvu_hyperlink_area (ddjvu_pageinfo_t *page_info,
 	miniexp_t iter;
 
 	iter = sexp;
-	
+
 	if ((miniexp_car (iter) == miniexp_symbol ("rect") || miniexp_car (iter) == miniexp_symbol ("oval"))
 	    && miniexp_length (iter) == 5) {
 		/* FIXME: get bounding box for (oval) since Atril doesn't support shaped links */
@@ -257,7 +257,7 @@ get_djvu_hyperlink_area (ddjvu_pageinfo_t *page_info,
 		ev_link_mapping->area.y2 = (page_info->height - miny);
 	} else if (miniexp_car (iter) == miniexp_symbol ("poly")
 		   && miniexp_length (iter) >= 5 && miniexp_length (iter) % 2 == 1) {
-		
+
 		/* FIXME: get bounding box since Atril doesn't support shaped links */
 		int minx = G_MAXINT, miny = G_MAXINT;
 		int maxx = G_MININT, maxy = G_MININT;
@@ -287,7 +287,7 @@ get_djvu_hyperlink_area (ddjvu_pageinfo_t *page_info,
 	}
 
 	return TRUE;
-	
+
  unknown_link:
 	g_warning("DjvuLibre error: Unknown hyperlink area %s", miniexp_to_name(miniexp_car(sexp)));
 	return FALSE;
@@ -333,7 +333,7 @@ get_djvu_hyperlink_mapping (DjvuDocument     *djvu_document,
 	if (!ev_action) goto unknown_mapping;
 
 	ev_link_mapping->data = ev_link_new (comment, ev_action);
-			
+
 	return ev_link_mapping;
 
  unknown_mapping:
@@ -356,7 +356,7 @@ djvu_links_has_document_links (EvDocumentLinks *document_links)
 		ddjvu_miniexp_release (djvu_document->d_document, outline);
 		return TRUE;
 	}
-	
+
 	return FALSE;
 }
 
@@ -395,7 +395,7 @@ djvu_links_get_links (EvDocumentLinks *document_links,
 		}
 		ddjvu_miniexp_release (djvu_document->d_document, page_annotations);
 	}
-	
+
 	return ev_mapping_list_new (page, retval, (GDestroyNotify)g_object_unref);
 }
 
@@ -405,13 +405,13 @@ djvu_links_find_link_dest (EvDocumentLinks  *document_links,
 {
 	DjvuDocument *djvu_document = DJVU_DOCUMENT (document_links);
 	EvLinkDest *ev_dest = NULL;
-	
+
 	ev_dest = get_djvu_link_dest (djvu_document, link_name, -1);
 
 	if (!ev_dest) {
 		g_warning ("DjvuLibre error: unknown link destination %s", link_name);
 	}
-	
+
 	return ev_dest;
 }
 
@@ -451,6 +451,6 @@ djvu_links_get_links_model (EvDocumentLinks *document_links)
 
 		ddjvu_miniexp_release (djvu_document->d_document, outline);
 	}
-	
+
 	return model;
 }

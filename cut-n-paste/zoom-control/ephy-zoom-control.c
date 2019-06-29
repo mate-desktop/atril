@@ -72,7 +72,7 @@ combo_changed_cb (GtkComboBox *combo, EphyZoomControl *control)
 
 	if (zoom != control->priv->zoom)
 	{
-		g_signal_emit (control, signals[ZOOM_TO_LEVEL_SIGNAL], 0, zoom);	
+		g_signal_emit (control, signals[ZOOM_TO_LEVEL_SIGNAL], 0, zoom);
 	}
 }
 
@@ -86,7 +86,7 @@ sync_zoom_cb (EphyZoomControl *control, GParamSpec *pspec, gpointer data)
 
 	g_signal_handler_block (p->combo, p->handler_id);
 	gtk_combo_box_set_active (p->combo, index);
-	g_signal_handler_unblock (p->combo, p->handler_id);	
+	g_signal_handler_unblock (p->combo, p->handler_id);
 }
 
 static void
@@ -206,7 +206,7 @@ ephy_zoom_control_init (EphyZoomControl *control)
 
 	p->handler_id = g_signal_connect (p->combo, "changed",
 					  G_CALLBACK (combo_changed_cb), control);
-	
+
 	g_signal_connect_object (control, "notify::zoom",
 				 G_CALLBACK (sync_zoom_cb), NULL, 0);
 	g_signal_connect_object (control, "notify::min-zoom",
@@ -336,6 +336,6 @@ float
 ephy_zoom_control_get_zoom_level (EphyZoomControl *control)
 {
 	g_return_val_if_fail (EPHY_IS_ZOOM_CONTROL (control), 1.0);
-	
+
 	return control->priv->zoom;
 }

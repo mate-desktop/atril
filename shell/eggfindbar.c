@@ -1,18 +1,18 @@
 /* Copyright (C) 2004 Red Hat, Inc.
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License as
  * published by the Free Software Foundation; either version 2 of the
  * License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Library General Public
  * License along with the Mate Library; see the file COPYING.LIB.  If not,
- * write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+ * write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
 
@@ -83,7 +83,7 @@ egg_find_bar_class_init (EggFindBarClass *klass)
   GObjectClass *object_class;
   GtkWidgetClass *widget_class;
   GtkBindingSet *binding_set;
-        
+
   egg_find_bar_parent_class = g_type_class_peek_parent (klass);
 
   object_class = (GObjectClass *)klass;
@@ -96,7 +96,7 @@ egg_find_bar_class_init (EggFindBarClass *klass)
 
   widget_class->show = egg_find_bar_show;
   widget_class->hide = egg_find_bar_hide;
-  
+
   widget_class->grab_focus = egg_find_bar_grab_focus;
 
   find_bar_signals[NEXT] =
@@ -257,7 +257,7 @@ entry_changed_callback (GtkEntry *entry,
   text = g_strdup (gtk_entry_get_text (entry));
 
   egg_find_bar_set_search_string (find_bar, text);
-  
+
   g_free (text);
 }
 
@@ -293,8 +293,8 @@ egg_find_bar_init (EggFindBar *find_bar)
 
   /* Data */
   priv = EGG_FIND_BAR_GET_PRIVATE (find_bar);
-  
-  find_bar->priv = priv;  
+
+  find_bar->priv = priv;
   priv->search_string = NULL;
 
   gtk_toolbar_set_style (GTK_TOOLBAR (find_bar), GTK_TOOLBAR_BOTH_HORIZ);
@@ -302,7 +302,7 @@ egg_find_bar_init (EggFindBar *find_bar)
   /* Find: |_____| */
   item = gtk_tool_item_new ();
   box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  
+
   label = gtk_label_new_with_mnemonic (_("Find:"));
   gtk_widget_set_halign (label, GTK_ALIGN_START);
   gtk_widget_set_hexpand (label, TRUE);
@@ -535,11 +535,11 @@ egg_find_bar_set_search_string  (EggFindBar *find_bar,
   priv = (EggFindBarPrivate *)find_bar->priv;
 
   g_object_freeze_notify (G_OBJECT (find_bar));
-  
+
   if (priv->search_string != search_string)
     {
       char *old;
-      
+
       old = priv->search_string;
 
       if (search_string && *search_string == '\0')
@@ -556,16 +556,16 @@ egg_find_bar_set_search_string  (EggFindBar *find_bar,
            strcmp (old, search_string) != 0))
         {
 	  gboolean not_empty;
-	  
+
           priv->search_string = g_strdup (search_string);
           g_free (old);
-          
+
           gtk_entry_set_text (GTK_ENTRY (priv->find_entry),
                               priv->search_string ?
                               priv->search_string :
                               "");
-	   
-          not_empty = (search_string == NULL) ? FALSE : TRUE;		 
+
+          not_empty = (search_string == NULL) ? FALSE : TRUE;
 
           gtk_widget_set_sensitive (GTK_WIDGET (find_bar->priv->next_button), not_empty);
           gtk_widget_set_sensitive (GTK_WIDGET (find_bar->priv->previous_button), not_empty);
@@ -675,7 +675,7 @@ egg_find_bar_set_status_text (EggFindBar *find_bar,
   g_return_if_fail (EGG_IS_FIND_BAR (find_bar));
 
   priv = (EggFindBarPrivate *)find_bar->priv;
-  
+
   gtk_label_set_text (GTK_LABEL (priv->status_label), text);
   g_object_set (priv->status_separator, "visible", text != NULL && *text != '\0', NULL);
   g_object_set (priv->status_item, "visible", text != NULL && *text !='\0', NULL);

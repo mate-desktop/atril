@@ -40,7 +40,7 @@ typedef struct _EvHistoryClass		EvHistoryClass;
 struct _EvHistory
 {
 	GObject parent;
-	
+
 	/*< private >*/
 	EvHistoryPrivate *priv;
 };
@@ -48,7 +48,7 @@ struct _EvHistory
 struct _EvHistoryClass
 {
 	GObjectClass parent_class;
-	
+
 	void (*changed) (EvHistory *history);
 };
 

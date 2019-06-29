@@ -214,7 +214,7 @@ ev_document_misc_surface_from_pixbuf (GdkPixbuf *pixbuf)
 	gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 	cairo_paint (cr);
 	cairo_destroy (cr);
-	
+
 	return surface;
 }
 
@@ -249,7 +249,7 @@ ev_document_misc_surface_rotate_and_scale (cairo_surface_t *surface,
 
 	width = cairo_image_surface_get_width (surface);
 	height = cairo_image_surface_get_height (surface);
-	
+
 	if (dest_width == width &&
 	    dest_height == height &&
 	    dest_rotation == 0) {
@@ -280,14 +280,14 @@ ev_document_misc_surface_rotate_and_scale (cairo_surface_t *surface,
 			cairo_translate (cr, 0, 0);
 	}
 	cairo_rotate (cr, dest_rotation * G_PI / 180.0);
-	
+
 	if (dest_width != width || dest_height != height) {
 		cairo_pattern_set_filter (cairo_get_source (cr), CAIRO_FILTER_BILINEAR);
 		cairo_scale (cr,
 			     (gdouble)dest_width / width,
 			     (gdouble)dest_height / height);
 	}
-	
+
 	cairo_set_source_surface (cr, surface, 0, 0);
 	cairo_paint (cr);
 	cairo_destroy (cr);

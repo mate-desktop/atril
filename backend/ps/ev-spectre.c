@@ -88,13 +88,13 @@ ps_document_load (EvDocument *document,
 	filename = g_filename_from_uri (uri, NULL, error);
 	if (!filename)
 		return FALSE;
-	
+
 	ps->doc = spectre_document_new ();
 
 	spectre_document_load (ps->doc, filename);
 	if (spectre_document_status (ps->doc)) {
 		gchar *filename_dsp;
-		
+
 		filename_dsp = g_filename_display_name (filename);
 		g_set_error (error,
 			     G_FILE_ERROR,
@@ -262,7 +262,7 @@ ps_document_get_info (EvDocument *document)
 	ps_page = spectre_document_get_page (ps->doc, 0);
 	spectre_page_get_size (ps_page, &width, &height);
 	spectre_page_free (ps_page);
-	
+
 	info->title = g_strdup (spectre_document_get_title (ps->doc));
 	info->format = g_strdup (spectre_document_get_format (ps->doc));
 	info->creator = g_strdup (creator ? creator : spectre_document_get_for (ps->doc));
@@ -300,7 +300,7 @@ ps_document_render (EvDocument      *document,
 	static const cairo_user_data_key_t key;
 
 	ps_page = (SpectrePage *)rc->page->backend_page;
-	
+
 	spectre_page_get_size (ps_page, &width_points, &height_points);
 
 	width = (gint) ((width_points * rc->scale) + 0.5);
@@ -322,7 +322,7 @@ ps_document_render (EvDocument      *document,
 	if (spectre_page_status (ps_page)) {
 		g_warning ("%s", spectre_status_to_string (spectre_page_status (ps_page)));
 		g_free (data);
-		
+
 		return NULL;
 	}
 
@@ -333,7 +333,7 @@ ps_document_render (EvDocument      *document,
 		swidth = width;
 		sheight = height;
 	}
-	
+
 	surface = cairo_image_surface_create_for_data (data,
 						       CAIRO_FORMAT_RGB24,
 						       swidth, sheight,
@@ -365,7 +365,7 @@ ps_document_class_init (PSDocumentClass *klass)
 /* EvDocumentThumbnailsIface */
 static GdkPixbuf *
 ps_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document_thumbnails,
-				      EvRenderContext      *rc, 
+				      EvRenderContext      *rc,
 				      gboolean              border)
 {
 	PSDocument      *ps = PS_DOCUMENT (document_thumbnails);
@@ -377,13 +377,13 @@ ps_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document_thumbnails,
 		g_warning ("Error rendering thumbnail");
 		return NULL;
 	}
-		
+
 	pixbuf = ev_document_misc_pixbuf_from_surface (surface);
 	cairo_surface_destroy (surface);
 
 	if (border) {
 		GdkPixbuf *border_pixbuf;
-		
+
 		border_pixbuf = ev_document_misc_get_thumbnail_frame (-1, -1, pixbuf);
 		g_object_unref (pixbuf);
 		pixbuf = border_pixbuf;
@@ -394,7 +394,7 @@ ps_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document_thumbnails,
 
 static void
 ps_document_thumbnails_get_dimensions (EvDocumentThumbnails *document_thumbnails,
-				       EvRenderContext      *rc, 
+				       EvRenderContext      *rc,
 				       gint                 *width,
 				       gint                 *height)
 {
@@ -420,7 +420,7 @@ ps_document_document_thumbnails_iface_init (EvDocumentThumbnailsInterface *iface
 	iface->get_thumbnail = ps_document_thumbnails_get_thumbnail;
 	iface->get_dimensions = ps_document_thumbnails_get_dimensions;
 }
-	
+
 /* EvFileExporterIface */
 static void
 ps_document_file_exporter_begin (EvFileExporter        *exporter,

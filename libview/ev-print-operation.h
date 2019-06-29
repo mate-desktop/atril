@@ -67,5 +67,5 @@ const gchar      *ev_print_operation_get_status             (EvPrintOperation *o
 gdouble           ev_print_operation_get_progress           (EvPrintOperation *op);
 
 G_END_DECLS
-	
+
 #endif /* __EV_PRINT_OPERATION_H__ */

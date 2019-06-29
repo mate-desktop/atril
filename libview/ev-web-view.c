@@ -64,7 +64,7 @@ struct _EvWebView
 	gchar *hlink;
 };
 
-struct _EvWebViewClass 
+struct _EvWebViewClass
 {
 	WebKitWebViewClass base_class;
 };
@@ -90,7 +90,7 @@ static void
 web_view_update_range_and_current_page (EvWebView *webview)
 {
 	g_return_if_fail(EV_IS_WEB_VIEW(webview));
-	
+
 	if (ev_document_get_n_pages (webview->document) <= 0)
 		return;
 
@@ -114,7 +114,7 @@ ev_web_view_dispose (GObject *object)
 		g_object_unref(webview->model);
 		webview->model = NULL;
 	}
-	
+
 	if (webview->hlink) {
 		g_free(webview->hlink);
 		webview->hlink = NULL;
@@ -150,7 +150,7 @@ ev_web_view_init (EvWebView *webview)
 	webview->search->on_result = -1 ;
 	webview->search->results = NULL;
 	webview->search->search_jump = TRUE ;
-	
+
 	webview->fullscreen = FALSE;
 	webview->inverted_stylesheet = FALSE;
 	webview->hlink = NULL;
@@ -169,7 +169,7 @@ ev_web_view_change_page (EvWebView *webview,
 		         gint    new_page)
 {
 	g_return_if_fail(EV_IS_WEB_VIEW(webview));
-	
+
 	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS(webview->document);
 
 	webview->current_page = new_page;
@@ -225,7 +225,7 @@ ev_web_view_document_changed_cb (EvDocumentModel *model,
 			         EvWebView       *webview)
 {
 	g_return_if_fail(EV_IS_WEB_VIEW(webview));
-	
+
 	EvDocument *document = ev_document_model_get_document (model);
 
 	if (document != webview->document) {
@@ -240,11 +240,11 @@ ev_web_view_document_changed_cb (EvDocumentModel *model,
 		}
 		webview->inverted_stylesheet = FALSE;
 		gint current_page = ev_document_model_get_page(model);
-		
+
 		ev_web_view_change_page (webview, current_page);
-		
+
 	}
-}       
+}
 
 static void
 ev_web_view_inverted_colors_changed_cb (EvDocumentModel *model,
@@ -255,12 +255,12 @@ ev_web_view_inverted_colors_changed_cb (EvDocumentModel *model,
 
 	if (!document || !document->iswebdocument)
 	    return;
-	
+
 	if (ev_document_model_get_inverted_colors(model) == TRUE) {
 		if (document == NULL) {
 			ev_document_model_set_inverted_colors(model,FALSE);
 			return;
-		}		
+		}
 		if (webview->inverted_stylesheet == FALSE) {
 			ev_document_check_add_night_sheet(document);
 			webview->inverted_stylesheet = TRUE;
@@ -334,7 +334,7 @@ ev_web_view_next_page (EvWebView *webview)
 	int page, n_pages;
 
 	g_return_val_if_fail (EV_IS_WEB_VIEW (webview), FALSE);
-	
+
 	if (!webview->document)
 		return FALSE;
 
@@ -383,13 +383,13 @@ ev_web_view_previous_page (EvWebView *webview)
 		EvPage *webpage = ev_document_get_page(webview->document,page);
 		webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)webpage->backend_page);
 		return TRUE;
-	} else {	
+	} else {
 		return FALSE;
 	}
 }
-		
-void 
-ev_web_view_handle_link(EvWebView *webview,EvLink *link) 
+
+void
+ev_web_view_handle_link(EvWebView *webview,EvLink *link)
 {
 	EvLinkAction *action = NULL;
 	EvLinkDest *dest = NULL;
@@ -400,12 +400,12 @@ ev_web_view_handle_link(EvWebView *webview,EvLink *link)
 		return;
 
 	dest = ev_link_action_get_dest(action);
-	
+
 	if (dest == NULL)
 		return;
 
 	dest_type = ev_link_dest_get_dest_type(dest);
-	
+
 	switch(dest_type) {
 		case EV_LINK_DEST_TYPE_PAGE: {
 			ev_document_model_set_page(webview->model,ev_link_dest_get_page(dest));
@@ -426,7 +426,7 @@ ev_web_view_handle_link(EvWebView *webview,EvLink *link)
 			ev_document_model_set_page(webview->model,ev_link_dest_get_page(dest));
 			webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),uri);
 			break;
-			
+
 		default:return;
 		}
 	}
@@ -492,7 +492,7 @@ ev_web_view_find_get_n_results (EvWebView *webview, gint page)
  * @shift: Shift from current page
  *
  * Jumps to the first page that has occurences of searched word.
- * Uses a direction where to look and a shift from current page. 
+ * Uses a direction where to look and a shift from current page.
 **/
 static void
 jump_to_find_page (EvWebView *webview, EvWebViewFindDirection direction, gint shift)
@@ -507,12 +507,12 @@ jump_to_find_page (EvWebView *webview, EvWebViewFindDirection direction, gint sh
 		if (direction == EV_WEB_VIEW_FIND_NEXT)
 			page = webview->current_page + i;
 		else
-			page = webview->current_page - i;		
+			page = webview->current_page - i;
 		page += shift;
 
 		if (page >= n_pages) {
 			page = page - n_pages;
-		} else if (page < 0) 
+		} else if (page < 0)
 			page = page + n_pages;
 
 		if (page == webview->current_page && ev_web_view_find_get_n_results(webview,page) > 0) {
@@ -525,7 +525,7 @@ jump_to_find_page (EvWebView *webview, EvWebViewFindDirection direction, gint sh
 					webview->findoptions |= WEBKIT_FIND_OPTIONS_WRAP_AROUND;
 				else
 					webview->findoptions &= ~WEBKIT_FIND_OPTIONS_WRAP_AROUND;
-				
+
 				webview->findoptions &= ~WEBKIT_FIND_OPTIONS_BACKWARDS;
 			}
 
@@ -550,7 +550,7 @@ jump_to_find_page (EvWebView *webview, EvWebViewFindDirection direction, gint sh
 void
 ev_web_view_find_changed (EvWebView *webview, guint *results, gchar *text,gboolean case_sensitive)
 {
-	webview->search->results = results; 
+	webview->search->results = results;
 	webview->search->on_result = 0;
 	webview->search->search_string = g_strdup(text);
 	webview->search->case_sensitive = case_sensitive;
@@ -563,7 +563,7 @@ ev_web_view_find_changed (EvWebView *webview, guint *results, gchar *text,gboole
 		}
 		jump_to_find_page (webview, EV_WEB_VIEW_FIND_NEXT, 0);
 	}
-}	
+}
 
 void
 ev_web_view_find_next (EvWebView *webview)
@@ -576,7 +576,7 @@ ev_web_view_find_next (EvWebView *webview)
 	if (webview->search->on_result >= n_results) {
 		webview->search->on_result = 0;
 		jump_to_find_page (webview, EV_WEB_VIEW_FIND_NEXT, 1);
-	} 
+	}
 	else {
 		webkit_find_controller_search_next(webview->findcontroller);
 	}
@@ -614,7 +614,7 @@ ev_web_view_find_cancel (EvWebView *webview)
 	webkit_find_controller_search_finish (webview->findcontroller);
 }
 
-void 
+void
 ev_web_view_set_handler(EvWebView *webview,gboolean visible)
 {
 	if (visible) {
@@ -630,7 +630,7 @@ ev_web_view_set_handler(EvWebView *webview,gboolean visible)
 	else {
 		g_signal_handlers_disconnect_by_func(webview,
 											 jump_to_find_results,
-											 NULL);		
+											 NULL);
 		g_signal_handlers_disconnect_by_func(webview,
 		                                     results_counted_cb,
 		                                     NULL);
@@ -704,7 +704,7 @@ ev_web_view_zoom_reset(EvWebView *webview)
 /**
  * ev_web_view_disconnect_handlers
  * @webview : #EvWebView instance
- * 
+ *
  * This function call will disconnect all model signal handlers from the webview, to ensure smooth operation of the Atril-view.
  * Equivalent to function  ev_view_disconnect_handlers in ev-view.c
  */

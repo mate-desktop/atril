@@ -26,14 +26,14 @@
 #include <string.h>
 #include <glib/gi18n.h>
 
-void           
+void
 file_chooser_dialog_add_writable_pixbuf_formats (GtkFileChooser *chooser)
 {
 	GSList *pixbuf_formats = NULL;
 	GSList *iter;
 	GtkFileFilter *filter;
 	int i;
-  
+
 	filter = gtk_file_filter_new();
 	gtk_file_filter_set_name (filter, _("By extension"));
 	g_object_set_data (G_OBJECT(filter), "pixbuf-format", NULL);
@@ -87,7 +87,7 @@ get_gdk_pixbuf_format_by_extension (gchar *uri)
 	for (iter = pixbuf_formats; iter; iter = iter->next) {
 		gchar **extension_list;
 		GdkPixbufFormat *format = iter->data;
-		
+
 		if (gdk_pixbuf_format_is_disabled (format) ||
 	    	    !gdk_pixbuf_format_is_writable (format))
 		            continue;

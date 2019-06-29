@@ -140,24 +140,24 @@ create_menu_item (GtkAction *action)
 
 	for (i = 0; i < n_zoom_levels; i++)
 	{
-		if (zoom_levels[i].level == EPHY_ZOOM_SEPARATOR) 
+		if (zoom_levels[i].level == EPHY_ZOOM_SEPARATOR)
 		{
 			menu_item = gtk_separator_menu_item_new ();
-		} 
-		else 
+		}
+		else
 		{
-			menu_item = gtk_radio_menu_item_new_with_label (group, 
+			menu_item = gtk_radio_menu_item_new_with_label (group,
 									_(zoom_levels[i].name));
 			group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (menu_item));
 
                         gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (menu_item),
                                                         p->zoom == zoom_levels[i].level);
-        
+
                         g_object_set_data (G_OBJECT (menu_item), "zoom-level", GINT_TO_POINTER (i));
                         g_signal_connect_object (G_OBJECT (menu_item), "activate",
                                                 G_CALLBACK (proxy_menu_activate_cb), action, 0);
                 }
-        
+
                 gtk_widget_show (menu_item);
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), menu_item);
 	}
@@ -297,7 +297,7 @@ float
 ephy_zoom_action_get_zoom_level (EphyZoomAction *action)
 {
 	g_return_val_if_fail (EPHY_IS_ZOOM_ACTION (action), 1.0);
-	
+
 	return action->priv->zoom;
 }
 

@@ -33,7 +33,7 @@ typedef struct {
 	gint ymargin;
 
 	gdouble scale;
-	
+
 	Ulong fg;
 	Ulong bg;
 
@@ -102,7 +102,7 @@ dvi_cairo_draw_rule (DviContext *dvi,
 	cairo_device = (DviCairoDevice *) dvi->device.device_data;
 
 	color = cairo_device->fg;
-	
+
 	cairo_save (cairo_device->cr);
 
 	cairo_set_line_width (cairo_device->cr,
@@ -158,7 +158,7 @@ dvi_cairo_draw_ps (DviContext *dvi,
 	spectre_render_context_set_scale (rc,
 					  (double)width / w,
 					  (double)height / h);
-	spectre_document_render_full (psdoc, rc, &data, &row_length);	
+	spectre_document_render_full (psdoc, rc, &data, &row_length);
 	status = spectre_document_status (psdoc);
 
 	spectre_render_context_free (rc);
@@ -168,7 +168,7 @@ dvi_cairo_draw_ps (DviContext *dvi,
 		g_warning ("Error rendering PS document %s: %s\n",
 			   filename, spectre_status_to_string (status));
 		free (data);
-		
+
 		return;
 	}
 
@@ -182,7 +182,7 @@ dvi_cairo_draw_ps (DviContext *dvi,
 	cairo_translate (cairo_device->cr,
 			 x + cairo_device->xmargin,
 			 y + cairo_device->ymargin);
-	cairo_set_source_surface (cairo_device->cr, image, 0, 0); 
+	cairo_set_source_surface (cairo_device->cr, image, 0, 0);
 	cairo_paint (cairo_device->cr);
 
 	cairo_restore (cairo_device->cr);
@@ -215,7 +215,7 @@ dvi_cairo_alloc_colors (void  *device_data,
 		frac = (gamma > 0) ?
 			pow ((double)i / n, 1 / gamma) :
 			1 - pow ((double)(n - i) / n, -gamma);
-		
+
 		color.red = frac * color_fg.red;
 		color.green = frac * color_fg.green;
 		color.blue = frac * color_fg.blue;

@@ -42,7 +42,7 @@ typedef struct _EvPageActionClass		EvPageActionClass;
 struct _EvPageAction
 {
 	GtkAction parent;
-	
+
 	/*< private >*/
 	EvPageActionPrivate *priv;
 };
