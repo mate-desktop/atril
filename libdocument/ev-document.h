@@ -115,7 +115,7 @@ struct _EvDocumentClass
         gboolean	  (* support_synctex) (EvDocument      *document);
 
 	void              (* toggle_night_mode)  (EvDocument      *document,gboolean night);
-	void              (*check_add_night_sheet)(EvDocument      *document);	
+	void              (*check_add_night_sheet)(EvDocument      *document);
 };
 
 GType            ev_document_get_type             (void) G_GNUC_CONST;

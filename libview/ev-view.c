@@ -262,7 +262,7 @@ static EvRectangle *ev_view_find_get_result                  (EvView            
 							      gint                page,
 							      gint                result);
 static void       jump_to_find_result                        (EvView             *view);
-static void       jump_to_find_page                          (EvView             *view, 
+static void       jump_to_find_page                          (EvView             *view,
 							      EvViewFindDirection direction,
 							      gint                shift);
 /*** Selection ***/
@@ -1447,7 +1447,7 @@ location_in_text (EvView  *view,
 
 	if (page == -1)
 		return FALSE;
-	
+
 	region = ev_page_cache_get_text_mapping (view->page_cache, page);
 
 	if (region)
@@ -1479,11 +1479,11 @@ location_in_selected_text (EvView  *view,
 }
 
 static gboolean
-get_doc_point_from_offset (EvView *view, 
-			   gint    page, 
-			   gint    x_offset, 
-			   gint    y_offset, 
-			   gint   *x_new, 
+get_doc_point_from_offset (EvView *view,
+			   gint    page,
+			   gint    x_offset,
+			   gint    y_offset,
+			   gint   *x_new,
 			   gint   *y_new)
 {
         gdouble width, height;
@@ -1504,7 +1504,7 @@ get_doc_point_from_offset (EvView *view,
                 x = width - x_offset;
                 y = height - y_offset;
         } else if (view->rotation == 270) {
-                x = height - y_offset; 
+                x = height - y_offset;
                 y = x_offset;
         } else {
                 g_assert_not_reached ();
@@ -1512,7 +1512,7 @@ get_doc_point_from_offset (EvView *view,
 
 	*x_new = x;
 	*y_new = y;
-	
+
 	return TRUE;
 }
 
@@ -1742,7 +1742,7 @@ goto_xyz_dest (EvView *view, EvLinkDest *dest)
 	EvPoint doc_point;
 	gint page;
 	gdouble zoom, left, top;
-	gboolean change_zoom, change_left, change_top; 
+	gboolean change_zoom, change_left, change_top;
 
 	zoom = ev_link_dest_get_zoom (dest, &change_zoom);
 	page = ev_link_dest_get_page (dest);
@@ -1775,7 +1775,7 @@ goto_dest (EvView *view, EvLinkDest *dest)
 		return;
 
 	current_page = view->current_page;
-	
+
 	type = ev_link_dest_get_dest_type (dest);
 
 	switch (type) {
@@ -1816,7 +1816,7 @@ ev_view_goto_dest (EvView *view, EvLinkDest *dest)
 	type = ev_link_dest_get_dest_type (dest);
 
 	if (type == EV_LINK_DEST_TYPE_NAMED) {
-		EvLinkDest  *dest2;	
+		EvLinkDest  *dest2;
 		const gchar *named_dest;
 
 		named_dest = ev_link_dest_get_named_dest (dest);
@@ -1832,7 +1832,7 @@ ev_view_goto_dest (EvView *view, EvLinkDest *dest)
 
 	goto_dest (view, dest);
 }
-	
+
 void
 ev_view_handle_link (EvView *view, EvLink *link)
 {
@@ -1848,9 +1848,9 @@ ev_view_handle_link (EvView *view, EvLink *link)
 	switch (type) {
 	        case EV_LINK_ACTION_TYPE_GOTO_DEST: {
 			EvLinkDest *dest;
-			
+
 			g_signal_emit (view, signals[SIGNAL_HANDLE_LINK], 0, link);
-		
+
 			dest = ev_link_action_get_dest (action);
 			ev_view_goto_dest (view, dest);
 		}
@@ -1900,7 +1900,7 @@ static char *
 tip_from_action_named (EvLinkAction *action)
 {
 	const gchar *name = ev_link_action_get_name (action);
-	
+
 	if (g_ascii_strcasecmp (name, "FirstPage") == 0) {
 		return g_strdup (_("Go to first page"));
 	} else if (g_ascii_strcasecmp (name, "PrevPage") == 0) {
@@ -1914,7 +1914,7 @@ tip_from_action_named (EvLinkAction *action)
 	} else if (g_ascii_strcasecmp (name, "Find") == 0) {
 		return g_strdup (_("Find"));
 	}
-	
+
 	return NULL;
 }
 
@@ -1929,10 +1929,10 @@ tip_from_link (EvView *view, EvLink *link)
 
 	action = ev_link_get_action (link);
 	title = ev_link_get_title (link);
-	
+
 	if (!action)
 		return title ? g_strdup (title) : NULL;
-		
+
 	type = ev_link_action_get_action_type (action);
 
 	switch (type) {
@@ -1968,7 +1968,7 @@ tip_from_link (EvView *view, EvLink *link)
 				msg = g_strdup (title);
 			break;
 	}
-	
+
 	return msg;
 }
 
@@ -2258,15 +2258,15 @@ ev_view_form_field_text_save (EvView    *view,
 
 	if (!view->document)
 		return;
-	
+
 	field = g_object_get_data (G_OBJECT (widget), "form-field");
-	
+
 	if (field->changed) {
 		EvFormFieldText *field_text = EV_FORM_FIELD_TEXT (field);
 		cairo_region_t  *field_region;
 
 		field_region = ev_view_form_field_get_region (view, field);
-		
+
 		ev_document_forms_form_field_text_set_text (EV_DOCUMENT_FORMS (view->document),
 							    field, field_text->text);
 		field->changed = FALSE;
@@ -2329,7 +2329,7 @@ ev_view_form_field_text_create_widget (EvView      *view,
 			gtk_entry_set_has_frame (GTK_ENTRY (text), FALSE);
 			gtk_entry_set_max_length (GTK_ENTRY (text), field_text->max_len);
 			gtk_entry_set_visibility (GTK_ENTRY (text), !field_text->is_password);
-			
+
 			if (txt) {
 				gtk_entry_set_text (GTK_ENTRY (text), txt);
 				g_free (txt);
@@ -2347,10 +2347,10 @@ ev_view_form_field_text_create_widget (EvView      *view,
 			break;
 	        case EV_FORM_FIELD_TEXT_MULTILINE: {
 			GtkTextBuffer *buffer;
-		
+
 			text = gtk_text_view_new ();
 			buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (text));
-			
+
 			if (txt) {
 				gtk_text_buffer_set_text (buffer, txt, -1);
 				g_free (txt);
@@ -2364,7 +2364,7 @@ ev_view_form_field_text_create_widget (EvView      *view,
 					  field);
 		}
 			break;
-	}			
+	}
 
 	g_object_weak_ref (G_OBJECT (text),
 			   (GWeakNotify)ev_view_form_field_text_save,
@@ -2381,7 +2381,7 @@ ev_view_form_field_choice_save (EvView    *view,
 
 	if (!view->document)
 		return;
-	
+
 	field = g_object_get_data (G_OBJECT (widget), "form-field");
 
 	if (field->changed) {
@@ -2413,10 +2413,10 @@ ev_view_form_field_choice_changed (GtkWidget   *widget,
 				   EvFormField *field)
 {
 	EvFormFieldChoice *field_choice = EV_FORM_FIELD_CHOICE (field);
-	
+
 	if (GTK_IS_COMBO_BOX (widget)) {
 		gint item;
-		
+
 		item = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
 		if (!field_choice->selected_items ||
 		    GPOINTER_TO_INT (field_choice->selected_items->data) != item) {
@@ -2442,7 +2442,7 @@ ev_view_form_field_choice_changed (GtkWidget   *widget,
 		GtkTreeSelection *selection = GTK_TREE_SELECTION (widget);
 		GtkTreeModel     *model;
 		GList            *items, *l;
-		
+
 		items = gtk_tree_selection_get_selected_rows (selection, &model);
 		g_list_free (field_choice->selected_items);
 		field_choice->selected_items = NULL;
@@ -2451,7 +2451,7 @@ ev_view_form_field_choice_changed (GtkWidget   *widget,
 			GtkTreeIter  iter;
 			GtkTreePath *path = (GtkTreePath *)l->data;
 			gint         item;
-			
+
 			gtk_tree_model_get_iter (model, &iter, path);
 			gtk_tree_model_get (model, &iter, 1, &item, -1);
 
@@ -2493,7 +2493,7 @@ ev_view_form_field_choice_create_widget (EvView      *view,
 			field_choice->selected_items = g_list_prepend (field_choice->selected_items,
 								       GINT_TO_POINTER (i));
 		}
-		
+
 		if (item) {
 			gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 			gtk_list_store_set (GTK_LIST_STORE (model), &iter,
@@ -2541,7 +2541,7 @@ ev_view_form_field_choice_create_widget (EvView      *view,
 					view);
 	} else if (field_choice->is_editable) { /* ComboBoxEntry */
 		gchar *text;
-		
+
 		choice = gtk_combo_box_new_with_model_and_entry (model);
 		gtk_combo_box_set_entry_text_column (GTK_COMBO_BOX (choice), 0);
 		text = ev_document_forms_form_field_choice_get_text (EV_DOCUMENT_FORMS (view->document), field);
@@ -2570,7 +2570,7 @@ ev_view_form_field_choice_create_widget (EvView      *view,
 						NULL);
 		gtk_combo_box_set_active (GTK_COMBO_BOX (choice), selected_item);
 		gtk_combo_box_popup (GTK_COMBO_BOX (choice));
-		
+
 		g_signal_connect (choice, "changed",
 				  G_CALLBACK (ev_view_form_field_choice_changed),
 				  field);
@@ -3736,7 +3736,7 @@ ev_view_size_allocate (GtkWidget      *widget,
 		ev_view_size_request (widget, &req);
 		view->internal_size_request = FALSE;
 	}
-	
+
 	view_set_adjustment_values (view, GTK_ORIENTATION_HORIZONTAL);
 	view_set_adjustment_values (view, GTK_ORIENTATION_VERTICAL);
 
@@ -4171,9 +4171,9 @@ get_link_area (EvView       *view,
 
 	x += view->scroll_x;
 	y += view->scroll_y;
-	
+
 	find_page_at_location (view, x, y, &page, &x_offset, &y_offset);
-	
+
 	link_mapping = ev_page_cache_get_link_mapping (view->page_cache, page);
 	ev_view_get_area_from_mapping (view, page,
 				       link_mapping,
@@ -4457,7 +4457,7 @@ ev_view_button_press_event (GtkWidget      *widget,
 		ev_annotation_window_ungrab_focus (window);
 		view->window_child_focus = NULL;
 	}
-	
+
 	view->pressed_button = event->button;
 	view->selection_info.in_drag = FALSE;
 
@@ -4532,7 +4532,7 @@ ev_view_button_press_event (GtkWidget      *widget,
 					ev_view_pend_cursor_blink (view);
 				}
 			}
-		}			
+		}
 			return TRUE;
 		case 2:
 			/* use root coordinates as reference point because
@@ -4550,7 +4550,7 @@ ev_view_button_press_event (GtkWidget      *widget,
 			ev_view_set_focused_element_at_location (view, event->x, event->y);
 			return ev_view_do_popup_menu (view, event->x, event->y);
 	}
-	
+
 	return FALSE;
 }
 
@@ -4599,7 +4599,7 @@ ev_view_drag_data_get (GtkWidget        *widget,
 				pixbuf = ev_document_images_get_image (EV_DOCUMENT_IMAGES (view->document),
 								       view->image_dnd_info.image);
 				ev_document_doc_mutex_unlock ();
-				
+
 				gtk_selection_data_set_pixbuf (selection_data, pixbuf);
 				g_object_unref (pixbuf);
 			}
@@ -4614,7 +4614,7 @@ ev_view_drag_data_get (GtkWidget        *widget,
 				pixbuf = ev_document_images_get_image (EV_DOCUMENT_IMAGES (view->document),
 								       view->image_dnd_info.image);
 				ev_document_doc_mutex_unlock ();
-				
+
 				tmp_uri = ev_image_save_tmp (view->image_dnd_info.image, pixbuf);
 				g_object_unref (pixbuf);
 
@@ -4636,10 +4636,10 @@ ev_view_drag_motion (GtkWidget      *widget,
 		gdk_drag_status (context, 0, time);
 	else
 		gdk_drag_status (context, gdk_drag_context_get_suggested_action (context), time);
-	
+
 	return TRUE;
 }
-		     
+
 static gboolean
 selection_update_idle_cb (EvView *view)
 {
@@ -4653,7 +4653,7 @@ selection_update_idle_cb (EvView *view)
 
 static gboolean
 selection_scroll_timeout_cb (EvView *view)
-{	
+{
 	gint x, y, shift = 0;
 	GtkWidget *widget = GTK_WIDGET (view);
 	GtkAllocation allocation;
@@ -4696,16 +4696,16 @@ ev_view_drag_update_momentum (EvView *view)
 	int i;
 	if (!view->drag_info.in_drag)
 		return FALSE;
-	
+
 	for (i = DRAG_HISTORY - 1; i > 0; i--) {
 		view->drag_info.buffer[i].x = view->drag_info.buffer[i-1].x;
 		view->drag_info.buffer[i].y = view->drag_info.buffer[i-1].y;
 	}
 
 	/* Momentum is a moving average of 10ms granularity over
-	 * the last 100ms with each 10ms stored in buffer. 
+	 * the last 100ms with each 10ms stored in buffer.
 	 */
-	
+
 	view->drag_info.momentum.x = (view->drag_info.buffer[DRAG_HISTORY - 1].x - view->drag_info.buffer[0].x);
 	view->drag_info.momentum.y = (view->drag_info.buffer[DRAG_HISTORY - 1].y - view->drag_info.buffer[0].y);
 
@@ -4835,7 +4835,7 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 			return TRUE;
 		}
 	}
-	
+
 	switch (view->pressed_button) {
 	case 1:
 		/* For the Atril 0.4.x release, we limit selection to un-rotated
@@ -4844,22 +4844,22 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 		if (view->rotation != 0)
 			return FALSE;
 
-		/* Schedule timeout to scroll during selection and additionally 
+		/* Schedule timeout to scroll during selection and additionally
 		 * scroll once to allow arbitrary speed. */
 		if (!view->selection_scroll_id)
 		    view->selection_scroll_id = g_timeout_add (SCROLL_TIME,
 							       (GSourceFunc)selection_scroll_timeout_cb,
 							       view);
-		else 
+		else
 		    selection_scroll_timeout_cb (view);
 
 		view->motion.x = x + view->scroll_x;
 		view->motion.y = y + view->scroll_y;
 
-		/* Queue an idle to handle the motion.  We do this because	
-		 * handling any selection events in the motion could be slower	
-		 * than new motion events reach us.  We always put it in the	
-		 * idle to make sure we catch up and don't visibly lag the	
+		/* Queue an idle to handle the motion.  We do this because
+		 * handling any selection events in the motion could be slower
+		 * than new motion events reach us.  We always put it in the
+		 * idle to make sure we catch up and don't visibly lag the
 		 * mouse. */
 		if (!view->selection_update_id)
 			view->selection_update_id = g_idle_add ((GSourceFunc)selection_update_idle_cb, view);
@@ -4922,7 +4922,7 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 		break;
 	default:
 		ev_view_handle_cursor_over_xy (view, x, y);
-	} 
+	}
 
 	return FALSE;
 }
@@ -5603,7 +5603,7 @@ ev_view_enter_notify_event (GtkWidget *widget, GdkEventCrossing   *event)
 	EvView *view = EV_VIEW (widget);
 
 	ev_view_handle_cursor_over_xy (view, event->x, event->y);
-    
+
 	return FALSE;
 }
 
@@ -6608,7 +6608,7 @@ on_adjustment_value_changed (GtkAdjustment *adjustment,
 
 		ev_view_window_child_move (view, child, child->x + dx, child->y + dy);
 	}
-	
+
 	if (view->pending_resize) {
 		gtk_widget_queue_draw (widget);
 	} else {
@@ -6720,7 +6720,7 @@ ev_view_autoscroll_cb (EvView *view)
 		view->scroll_info.timeout_id = 0;
 		return FALSE;
 	}
-	
+
 	/* Replace 100 with your speed of choice: The lower the faster.
 	 * Replace 3 with another speed of choice: The higher, the faster it accelerated
 	 * 	based on the distance of the starting point from the mouse
@@ -6730,13 +6730,13 @@ ev_view_autoscroll_cb (EvView *view)
 		speed = -pow ((((gdouble)view->scroll_info.start_y - view->scroll_info.last_y) / 100), 3);
 	else
 		speed = pow ((((gdouble)view->scroll_info.last_y - view->scroll_info.start_y) / 100), 3);
-	
+
 	value = gtk_adjustment_get_value (view->vadjustment);
 	value = CLAMP (value + speed, 0,
 		       gtk_adjustment_get_upper (view->vadjustment) -
 		       gtk_adjustment_get_page_size (view->vadjustment));
 	gtk_adjustment_set_value (view->vadjustment, value);
-	
+
 	return TRUE;
 
 }
@@ -6745,12 +6745,12 @@ void
 ev_view_autoscroll_start (EvView *view)
 {
 	gint x, y;
-	
+
 	g_return_if_fail (EV_IS_VIEW (view));
 
 	if (view->scroll_info.autoscrolling)
 		return;
-	
+
 	view->scroll_info.autoscrolling = TRUE;
 	view->scroll_info.timeout_id =
 		g_timeout_add (20, (GSourceFunc)ev_view_autoscroll_cb,
@@ -6764,7 +6764,7 @@ void
 ev_view_autoscroll_stop (EvView *view)
 {
 	gint x, y;
-	
+
 	g_return_if_fail (EV_IS_VIEW (view));
 
 	if (!view->scroll_info.autoscrolling)
@@ -7417,7 +7417,7 @@ jump_to_find_result (EvView *view)
  * @shift: Shift from current page
  *
  * Jumps to the first page that has occurences of searched word.
- * Uses a direction where to look and a shift from current page. 
+ * Uses a direction where to look and a shift from current page.
  *
  */
 static void
@@ -7429,16 +7429,16 @@ jump_to_find_page (EvView *view, EvViewFindDirection direction, gint shift)
 
 	for (i = 0; i < n_pages; i++) {
 		int page;
-		
+
 		if (direction == EV_VIEW_FIND_NEXT)
 			page = view->current_page + i;
 		else
-			page = view->current_page - i;		
+			page = view->current_page - i;
 		page += shift;
-		
+
 		if (page >= n_pages) {
 			page = page - n_pages;
-		} else if (page < 0) 
+		} else if (page < 0)
 			page = page + n_pages;
 
 		if (ev_view_find_get_n_results (view, page) > 0) {
@@ -7459,7 +7459,7 @@ ev_view_find_changed (EvView *view, GList **results, gint page)
 {
 	g_return_if_fail (view->current_page >= 0);
 	view->find_pages = results;
-	
+
 	if (view->jump_to_find_result == TRUE) {
 		jump_to_find_page (view, EV_VIEW_FIND_NEXT, 0);
 		jump_to_find_result (view);
@@ -7602,13 +7602,13 @@ get_selection_page_range (EvView          *view,
 	for (i = start_page; i <= end_page; i++) {
 		GdkRectangle page_area;
 		GtkBorder    border;
-		
+
 		ev_view_get_page_extents (view, i, &page_area, &border);
 		page_area.x -= border.left;
 		page_area.y -= border.top;
 		page_area.width += border.left + border.right;
 		page_area.height += border.top + border.bottom;
-		if (gdk_rectangle_point_in (&page_area, start) || 
+		if (gdk_rectangle_point_in (&page_area, start) ||
 		    gdk_rectangle_point_in (&page_area, stop)) {
 			if (first == -1)
 				first = i;
@@ -7930,7 +7930,7 @@ get_selected_text (EvView *view)
 	}
 
 	ev_document_doc_mutex_unlock ();
-	
+
 	normalized_text = g_utf8_normalize (text->str, text->len, G_NORMALIZE_NFKC);
 	g_string_free (text, TRUE);
 	return normalized_text;
@@ -7975,7 +7975,7 @@ ev_view_primary_get_cb (GtkClipboard     *clipboard,
 	} else if (EV_IS_SELECTION (ev_view->document) &&
 		   ev_view->selection_info.selections) {
 		gchar *text;
-		
+
 		text = get_selected_text (ev_view);
 		if (text) {
 			gtk_selection_data_set_text (selection_data, text, -1);
@@ -8011,7 +8011,7 @@ ev_view_update_primary_selection (EvView *ev_view)
                 gtk_target_list_add_text_targets (target_list, 0);
                 targets = gtk_target_table_new_from_list (target_list, &n_targets);
                 gtk_target_list_unref (target_list);
-                
+
 		if (!gtk_clipboard_set_with_owner (clipboard,
 						   targets, n_targets,
 						   ev_view_primary_get_cb,
@@ -8040,9 +8040,9 @@ ev_view_copy_link_address (EvView       *view,
 			   EvLinkAction *action)
 {
 	clear_link_selected (view);
-	
+
 	ev_view_clipboard_copy (view, ev_link_action_get_uri (action));
-	
+
 	view->link_selected = g_object_ref (action);
 	ev_view_update_primary_selection (view);
 }
@@ -8115,11 +8115,11 @@ ev_view_previous_page (EvView *view)
 
 	return TRUE;
 }
-		
+
 /**
  * ev_view_disconnect_handlers
  * @view: #EvView instance
- * 
+ *
  * Disconnect all signal handlers from the model, to ensure error free operation of the webview,
  * we have an equivalent function for the webview.
  */

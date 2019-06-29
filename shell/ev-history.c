@@ -77,7 +77,7 @@ ev_history_class_init (EvHistoryClass *class)
 
 	object_class->finalize = ev_history_finalize;
 
-	signals[HISTORY_CHANGED] = 
+	signals[HISTORY_CHANGED] =
 		    g_signal_new ("changed",
 		 	          G_OBJECT_CLASS_TYPE (object_class),
 				  G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
@@ -110,13 +110,13 @@ ev_history_add_link (EvHistory *history, EvLink *link)
 	g_object_ref (link);
 	history->priv->links = g_list_append (history->priv->links,
 					      link);
-					      
+
 	if (g_list_length (history->priv->links) > HISTORY_LENGTH) {
 		g_object_unref (G_OBJECT (history->priv->links->data));
-		history->priv->links = g_list_delete_link (history->priv->links, 
+		history->priv->links = g_list_delete_link (history->priv->links,
 							   history->priv->links);
 	}
-	
+
 	g_signal_emit (history, signals[HISTORY_CHANGED], 0);
 }
 

@@ -386,7 +386,7 @@ ev_daemon_application_dbus_register (GApplication    *gapplication,
                 g_object_unref (skeleton);
                 return FALSE;
         }
- 
+
         application->daemon = skeleton;
 
         g_signal_connect (skeleton, "handle-register-document",

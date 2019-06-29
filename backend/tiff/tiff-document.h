@@ -32,7 +32,7 @@ typedef struct _TiffDocument TiffDocument;
 
 GType                 tiff_document_get_type  (void) G_GNUC_CONST;
 G_MODULE_EXPORT GType register_atril_backend (GTypeModule *module);
-     
+
 G_END_DECLS
 
 #endif /* __TIFF_DOCUMENT_H__ */

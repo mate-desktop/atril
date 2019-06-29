@@ -164,7 +164,7 @@ atril_thumbnail_pngenc_get (EvDocument *document, const char *thumbnail, int siz
 	EvPage *page;
 
 	page = ev_document_get_page (document, 0);
-	
+
 	ev_document_get_page_size (document, 0, &width, &height);
 
 	rc = ev_render_context_new (page, 0, size / width);
@@ -172,7 +172,7 @@ atril_thumbnail_pngenc_get (EvDocument *document, const char *thumbnail, int siz
 						       rc, FALSE);
 	g_object_unref (rc);
 	g_object_unref (page);
-	
+
 	if (pixbuf != NULL) {
 		if (gdk_pixbuf_save (pixbuf, thumbnail, "png", NULL, NULL)) {
 			g_object_unref  (pixbuf);
@@ -181,7 +181,7 @@ atril_thumbnail_pngenc_get (EvDocument *document, const char *thumbnail, int siz
 
 		g_object_unref  (pixbuf);
 	}
-	
+
 	return FALSE;
 }
 
@@ -193,9 +193,9 @@ atril_thumbnail_pngenc_get_async (struct AsyncData *data)
 						     data->output,
 						     data->size);
 	ev_document_doc_mutex_unlock ();
-	
+
 	g_idle_add ((GSourceFunc)gtk_main_quit, NULL);
-	
+
 	return NULL;
 }
 
@@ -239,7 +239,7 @@ main (int argc, char *argv[])
 
 		return -1;
 	}
-	
+
 	g_option_context_free (context);
 
 	if (size < 1) {
@@ -275,7 +275,7 @@ main (int argc, char *argv[])
 		struct AsyncData data;
 
 		gtk_init (&argc, &argv);
-		
+
 		data.document = document;
 		data.output = output;
 		data.size = size;
@@ -283,7 +283,7 @@ main (int argc, char *argv[])
 		g_thread_new ("EvThumbnailerAsyncRenderer",
 				(GThreadFunc) atril_thumbnail_pngenc_get_async,
 				&data);
-		
+
 		gtk_main ();
 
 		g_object_unref (document);

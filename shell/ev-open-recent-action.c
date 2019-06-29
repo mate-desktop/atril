@@ -95,7 +95,7 @@ ev_open_recent_action_class_init (EvOpenRecentActionClass *class)
 			      G_SIGNAL_RUN_LAST | G_SIGNAL_ACTION,
 			      G_STRUCT_OFFSET (EvOpenRecentActionClass, item_activated),
 			      NULL, NULL,
-			      g_cclosure_marshal_VOID__STRING, 
+			      g_cclosure_marshal_VOID__STRING,
 			      G_TYPE_NONE, 1,
 			      G_TYPE_STRING);
 }

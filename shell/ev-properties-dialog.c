@@ -66,7 +66,7 @@ ev_properties_dialog_init (EvPropertiesDialog *properties)
 
 	gtk_dialog_add_button (GTK_DIALOG (properties), "gtk-close",
 			       GTK_RESPONSE_CANCEL);
-	gtk_dialog_set_default_response (GTK_DIALOG (properties), 
+	gtk_dialog_set_default_response (GTK_DIALOG (properties),
 			                 GTK_RESPONSE_CANCEL);
 
 	properties->notebook = gtk_notebook_new ();

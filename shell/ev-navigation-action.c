@@ -54,7 +54,7 @@ ev_navigation_action_history_changed (EvHistory *history,
 				      gpointer data)
 {
 	EvNavigationAction *action = EV_NAVIGATION_ACTION (data);
-	
+
 	gtk_action_set_sensitive (GTK_ACTION (action),
 				  ev_history_get_n_links (history) > 0);
 }
@@ -67,7 +67,7 @@ ev_navigation_action_set_history (EvNavigationAction *action,
 
 	g_object_add_weak_pointer (G_OBJECT (action->priv->history),
 				   (gpointer) &action->priv->history);
-	
+
 	g_signal_connect_object (history, "changed",
 				 G_CALLBACK (ev_navigation_action_history_changed),
 				 action, 0);
@@ -81,12 +81,12 @@ activate_menu_item_cb (GtkWidget *widget, EvNavigationAction *action)
 	g_return_if_fail (EV_IS_HISTORY (action->priv->history));
 
 	index = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "index"));
-	
+
 	if (action->priv->history) {
 		EvLink *link;
 
 		link = ev_history_get_link_nth (action->priv->history, index);
-		
+
 		g_signal_emit (action, widget_signals[WIDGET_ACTIVATE_LINK], 0, link);
 	}
 }
@@ -197,7 +197,7 @@ create_menu_item (GtkAction *action)
 	gtk_menu_item_set_submenu (GTK_MENU_ITEM (menu_item), menu);
 
 	gtk_widget_show (menu_item);
-	
+
 	return menu_item;
 }
 

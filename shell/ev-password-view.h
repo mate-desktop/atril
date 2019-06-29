@@ -35,7 +35,7 @@ typedef struct _EvPasswordViewPrivate EvPasswordViewPrivate;
 
 struct _EvPasswordView {
 	GtkViewport parent_instance;
-	
+
 	EvPasswordViewPrivate *priv;
 };
 

@@ -85,7 +85,7 @@ ev_keyring_save_password (const gchar  *uri,
 	unescaped_uri = g_uri_unescape_string (uri, NULL);
 	name = g_strdup_printf (_("Password for document %s"), unescaped_uri);
 	g_free (unescaped_uri);
-	
+
 	retval = secret_password_store_sync (EV_DOCUMENT_PASSWORD_SCHEMA, keyring,
 					     name, password, NULL, NULL,
 					     "type", "document_password",

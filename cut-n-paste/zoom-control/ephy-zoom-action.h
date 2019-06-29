@@ -40,7 +40,7 @@ typedef struct _EphyZoomActionPrivate	EphyZoomActionPrivate;
 struct _EphyZoomAction
 {
 	GtkAction parent;
-	
+
 	/*< private >*/
 	EphyZoomActionPrivate *priv;
 };

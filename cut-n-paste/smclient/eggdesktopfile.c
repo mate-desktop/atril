@@ -17,7 +17,7 @@
  *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; see the file COPYING.LIB. If not,
- * write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+ * write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
  */
 
@@ -1363,7 +1363,7 @@ egg_desktop_file_launch (EggDesktopFile *desktop_file,
 		       EGG_DESKTOP_FILE_ERROR_NOT_LAUNCHABLE,
 		       _("Can't pass document URIs to a 'Type=Link' desktop entry"));
 	  return FALSE;
-	}	  
+	}
 
       if (!parse_link (desktop_file, &app_desktop_file, &documents, error))
 	return FALSE;
@@ -1449,10 +1449,10 @@ egg_set_desktop_file (const char *desktop_file_path)
 
 /**
  * egg_get_desktop_file:
- * 
+ *
  * Gets the application's #EggDesktopFile, as set by
  * egg_set_desktop_file().
- * 
+ *
  * Return value: the #EggDesktopFile, or %NULL if it hasn't been set.
  **/
 EggDesktopFile *
