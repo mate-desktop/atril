@@ -90,7 +90,7 @@ compare_items (gconstpointer a,
 
 static GtkAction *
 find_action (EggToolbarEditor *t,
-	     const char       *name)
+             const char       *name)
 {
   GList *l;
   GtkAction *action = NULL;
@@ -106,7 +106,7 @@ find_action (EggToolbarEditor *t,
 
       tmp = gtk_action_group_get_action (GTK_ACTION_GROUP (l->data), name);
       if (tmp)
-	action = tmp;
+        action = tmp;
     }
 
   return action;
@@ -114,7 +114,7 @@ find_action (EggToolbarEditor *t,
 
 static void
 egg_toolbar_editor_set_ui_manager (EggToolbarEditor *t,
-				   GtkUIManager     *manager)
+                                   GtkUIManager     *manager)
 {
   g_return_if_fail (GTK_IS_UI_MANAGER (manager));
 
@@ -132,8 +132,8 @@ item_added_or_removed_cb (EggToolbarsModel   *model,
 
 static void
 toolbar_removed_cb (EggToolbarsModel   *model,
-	            int                 position,
-	            EggToolbarEditor   *editor)
+                    int                 position,
+                    EggToolbarEditor   *editor)
 {
   update_editor_sheet (editor);
 }
@@ -152,19 +152,19 @@ egg_toolbar_editor_disconnect_model (EggToolbarEditor *t)
 
       if (handler != 0)
         {
-	  if (g_signal_handler_is_connected (model, handler))
-	    {
-	      g_signal_handler_disconnect (model, handler);
-	    }
+          if (g_signal_handler_is_connected (model, handler))
+            {
+              g_signal_handler_disconnect (model, handler);
+            }
 
-	  priv->sig_handlers[i] = 0;
+          priv->sig_handlers[i] = 0;
         }
     }
 }
 
 void
 egg_toolbar_editor_set_model (EggToolbarEditor *t,
-			      EggToolbarsModel *model)
+                              EggToolbarsModel *model)
 {
   EggToolbarEditorPrivate *priv;
 
@@ -187,20 +187,20 @@ egg_toolbar_editor_set_model (EggToolbarEditor *t,
 
   priv->sig_handlers[SIGNAL_HANDLER_ITEM_ADDED] =
     g_signal_connect_object (model, "item_added",
-			     G_CALLBACK (item_added_or_removed_cb), t, 0);
+                             G_CALLBACK (item_added_or_removed_cb), t, 0);
   priv->sig_handlers[SIGNAL_HANDLER_ITEM_REMOVED] =
     g_signal_connect_object (model, "item_removed",
-			     G_CALLBACK (item_added_or_removed_cb), t, 0);
+                             G_CALLBACK (item_added_or_removed_cb), t, 0);
   priv->sig_handlers[SIGNAL_HANDLER_TOOLBAR_REMOVED] =
     g_signal_connect_object (model, "toolbar_removed",
-			     G_CALLBACK (toolbar_removed_cb), t, 0);
+                             G_CALLBACK (toolbar_removed_cb), t, 0);
 }
 
 static void
 egg_toolbar_editor_set_property (GObject      *object,
-				 guint         prop_id,
-				 const GValue *value,
-				 GParamSpec   *pspec)
+                                 guint         prop_id,
+                                 const GValue *value,
+                                 GParamSpec   *pspec)
 {
   EggToolbarEditor *t = EGG_TOOLBAR_EDITOR (object);
 
@@ -217,9 +217,9 @@ egg_toolbar_editor_set_property (GObject      *object,
 
 static void
 egg_toolbar_editor_get_property (GObject    *object,
-				 guint       prop_id,
-				 GValue     *value,
-				 GParamSpec *pspec)
+                                 guint       prop_id,
+                                 GValue     *value,
+                                 GParamSpec *pspec)
 {
   EggToolbarEditor *t = EGG_TOOLBAR_EDITOR (object);
 
@@ -244,21 +244,21 @@ egg_toolbar_editor_class_init (EggToolbarEditorClass *klass)
   object_class->get_property = egg_toolbar_editor_get_property;
 
   g_object_class_install_property (object_class,
-				   PROP_UI_MANAGER,
-				   g_param_spec_object ("ui-manager",
-							"UI-Manager",
-							"UI Manager",
-							GTK_TYPE_UI_MANAGER,
-							G_PARAM_READWRITE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
-							G_PARAM_CONSTRUCT_ONLY));
+                                   PROP_UI_MANAGER,
+                                   g_param_spec_object ("ui-manager",
+                                                        "UI-Manager",
+                                                        "UI Manager",
+                                                        GTK_TYPE_UI_MANAGER,
+                                                        G_PARAM_READWRITE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
+                                                        G_PARAM_CONSTRUCT_ONLY));
  g_object_class_install_property (object_class,
-				  PROP_TOOLBARS_MODEL,
-				  g_param_spec_object ("model",
-						       "Model",
-						       "Toolbars Model",
-						       EGG_TYPE_TOOLBARS_MODEL,
-						       G_PARAM_READWRITE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
-						       G_PARAM_CONSTRUCT));
+                                  PROP_TOOLBARS_MODEL,
+                                  g_param_spec_object ("model",
+                                                       "Model",
+                                                       "Toolbars Model",
+                                                       EGG_TYPE_TOOLBARS_MODEL,
+                                                       G_PARAM_READWRITE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
+                                                       G_PARAM_CONSTRUCT));
 
   GtkWidgetClass *widget_class  = GTK_WIDGET_CLASS (klass);
   gtk_widget_class_set_css_name (widget_class, "EggToolbarEditor");
@@ -290,35 +290,35 @@ egg_toolbar_editor_finalize (GObject *object)
 
 GtkWidget *
 egg_toolbar_editor_new (GtkUIManager *manager,
-			EggToolbarsModel *model)
+                        EggToolbarsModel *model)
 {
   return GTK_WIDGET (g_object_new (EGG_TYPE_TOOLBAR_EDITOR,
-				   "ui-manager", manager,
-				   "model", model,
-				   NULL));
+                                   "ui-manager", manager,
+                                   "model", model,
+                                   NULL));
 }
 
 static void
 drag_begin_cb (GtkWidget          *widget,
-	       GdkDragContext     *context)
+               GdkDragContext     *context)
 {
   gtk_widget_hide (widget);
 }
 
 static void
 drag_end_cb (GtkWidget          *widget,
-	     GdkDragContext     *context)
+             GdkDragContext     *context)
 {
   gtk_widget_show (widget);
 }
 
 static void
 drag_data_get_cb (GtkWidget          *widget,
-		  GdkDragContext     *context,
-		  GtkSelectionData   *selection_data,
-		  guint               info,
-		  guint32             time,
-		  EggToolbarEditor   *editor)
+                  GdkDragContext     *context,
+                  GtkSelectionData   *selection_data,
+                  guint               info,
+                  guint32             time,
+                  EggToolbarEditor   *editor)
 {
   const char *target;
 
@@ -326,8 +326,8 @@ drag_data_get_cb (GtkWidget          *widget,
   g_return_if_fail (target != NULL);
 
   gtk_selection_data_set (selection_data,
-			  gtk_selection_data_get_target (selection_data), 8,
-			  (const guchar *) target, strlen (target));
+                          gtk_selection_data_get_target (selection_data), 8,
+                          (const guchar *) target, strlen (target));
 }
 
 static gchar *
@@ -343,12 +343,12 @@ elide_underscores (const gchar *original)
   for (p = original; *p; p++)
     {
       if (!last_underscore && *p == '_')
-	last_underscore = TRUE;
+        last_underscore = TRUE;
       else
-	{
-	  last_underscore = FALSE;
-	  *q++ = *p;
-	}
+        {
+          last_underscore = FALSE;
+          *q++ = *p;
+        }
     }
 
   *q = '\0';
@@ -365,7 +365,7 @@ set_drag_cursor (GtkWidget *widget)
   screen = gtk_widget_get_screen (widget);
 
   cursor = gdk_cursor_new_for_display (gdk_screen_get_display (screen),
-				       GDK_HAND2);
+                                       GDK_HAND2);
   gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
   g_object_unref (cursor);
 }
@@ -385,7 +385,7 @@ event_box_realize_cb (GtkWidget *widget, GtkImage *icon)
 
       gtk_image_get_stock (icon, &stock_id, NULL);
       pixbuf = gtk_widget_render_icon_pixbuf (widget, stock_id,
-	                                      GTK_ICON_SIZE_LARGE_TOOLBAR);
+                                              GTK_ICON_SIZE_LARGE_TOOLBAR);
       gtk_drag_source_set_icon_pixbuf (widget, pixbuf);
       g_object_unref (pixbuf);
     }
@@ -402,10 +402,10 @@ event_box_realize_cb (GtkWidget *widget, GtkImage *icon)
       icon_theme = gtk_icon_theme_get_for_screen (screen);
 
       if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
-					             &width, &height))
+                                 &width, &height))
         {
-	  width = height = 24;
-	}
+          width = height = 24;
+        }
 
       pixbuf = gtk_icon_theme_load_icon (icon_theme, icon_name,
                                          MIN (width, height), 0, NULL);
@@ -425,9 +425,9 @@ event_box_realize_cb (GtkWidget *widget, GtkImage *icon)
 
 static GtkWidget *
 editor_create_item (EggToolbarEditor *editor,
-		    GtkImage	     *icon,
-		    const char       *label_text,
-		    GdkDragAction     action)
+                    GtkImage         *icon,
+                    const char       *label_text,
+                    GdkDragAction    action)
 {
   GtkWidget *event_box;
   GtkWidget *vbox;
@@ -438,19 +438,19 @@ editor_create_item (EggToolbarEditor *editor,
   gtk_event_box_set_visible_window (GTK_EVENT_BOX (event_box), FALSE);
   gtk_widget_show (event_box);
   gtk_drag_source_set (event_box,
-		       GDK_BUTTON1_MASK,
-		       source_drag_types, G_N_ELEMENTS (source_drag_types), action);
+                       GDK_BUTTON1_MASK,
+                       source_drag_types, G_N_ELEMENTS (source_drag_types), action);
   g_signal_connect (event_box, "drag_data_get",
-		    G_CALLBACK (drag_data_get_cb), editor);
+                    G_CALLBACK (drag_data_get_cb), editor);
   g_signal_connect_after (event_box, "realize",
-		          G_CALLBACK (event_box_realize_cb), icon);
+                          G_CALLBACK (event_box_realize_cb), icon);
 
   if (action == GDK_ACTION_MOVE)
     {
       g_signal_connect (event_box, "drag_begin",
-		        G_CALLBACK (drag_begin_cb), NULL);
+                        G_CALLBACK (drag_begin_cb), NULL);
       g_signal_connect (event_box, "drag_end",
-		        G_CALLBACK (drag_end_cb), NULL);
+                        G_CALLBACK (drag_end_cb), NULL);
     }
 
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
@@ -501,13 +501,13 @@ editor_create_item_from_name (EggToolbarEditor *editor,
       g_object_get (action,
                     "icon-name", &icon_name,
                     "stock-id", &stock_id,
-		    "short-label", &short_label,
-		    NULL);
+                    "short-label", &short_label,
+                    NULL);
 
       /* This is a workaround to catch named icons. */
       if (icon_name)
         icon = gtk_image_new_from_icon_name (icon_name,
-	                                     GTK_ICON_SIZE_LARGE_TOOLBAR);
+                                             GTK_ICON_SIZE_LARGE_TOOLBAR);
       else
         icon = gtk_image_new_from_icon_name (stock_id ? stock_id : "gtk-dnd",
                                              GTK_ICON_SIZE_LARGE_TOOLBAR);
@@ -588,7 +588,7 @@ update_editor_sheet (EggToolbarEditor *editor)
   gtk_grid_set_row_spacing (GTK_GRID (grid), 24);
   gtk_widget_show (grid);
   gtk_drag_dest_set (grid, GTK_DEST_DEFAULT_ALL,
-		     dest_drag_types, G_N_ELEMENTS (dest_drag_types),
+                     dest_drag_types, G_N_ELEMENTS (dest_drag_types),
                      GDK_ACTION_MOVE | GDK_ACTION_COPY);
 
   /* Build two lists of items (one for copying, one for moving). */
