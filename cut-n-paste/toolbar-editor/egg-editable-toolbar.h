@@ -52,42 +52,42 @@ struct _EggEditableToolbarClass
   GtkBoxClass parent_class;
 
   void (* action_request) (EggEditableToolbar *etoolbar,
-			   const char *action_name);
+                           const char *action_name);
 };
 
-GType               egg_editable_toolbar_get_type        (void);
-GtkWidget	   *egg_editable_toolbar_new		 (GtkUIManager         *manager,
-							  const char           *visibility_path);
-GtkWidget	   *egg_editable_toolbar_new_with_model	 (GtkUIManager         *manager,
-							  EggToolbarsModel     *model,
-							  const char           *visibility_path);
-void		    egg_editable_toolbar_set_model       (EggEditableToolbar   *etoolbar,
-							  EggToolbarsModel     *model);
-EggToolbarsModel   *egg_editable_toolbar_get_model       (EggEditableToolbar   *etoolbar);
-GtkUIManager       *egg_editable_toolbar_get_manager     (EggEditableToolbar   *etoolbar);
-void		    egg_editable_toolbar_set_edit_mode	 (EggEditableToolbar   *etoolbar,
-							  gboolean              mode);
-gboolean	    egg_editable_toolbar_get_edit_mode	 (EggEditableToolbar   *etoolbar);
-void		    egg_editable_toolbar_show		 (EggEditableToolbar   *etoolbar,
-							  const char           *name);
-void		    egg_editable_toolbar_hide		 (EggEditableToolbar   *etoolbar,
-							  const char           *name);
-void		    egg_editable_toolbar_set_fixed       (EggEditableToolbar   *etoolbar,
-							  GtkToolbar           *fixed_toolbar);
+GType             egg_editable_toolbar_get_type        (void);
+GtkWidget         *egg_editable_toolbar_new            (GtkUIManager         *manager,
+                                                        const char           *visibility_path);
+GtkWidget         *egg_editable_toolbar_new_with_model (GtkUIManager         *manager,
+                                                        EggToolbarsModel     *model,
+                                                        const char           *visibility_path);
+void              egg_editable_toolbar_set_model       (EggEditableToolbar   *etoolbar,
+                                                        EggToolbarsModel     *model);
+EggToolbarsModel  *egg_editable_toolbar_get_model      (EggEditableToolbar   *etoolbar);
+GtkUIManager      *egg_editable_toolbar_get_manager    (EggEditableToolbar   *etoolbar);
+void              egg_editable_toolbar_set_edit_mode   (EggEditableToolbar   *etoolbar,
+                                                        gboolean              mode);
+gboolean          egg_editable_toolbar_get_edit_mode   (EggEditableToolbar   *etoolbar);
+void              egg_editable_toolbar_show            (EggEditableToolbar   *etoolbar,
+                                                        const char           *name);
+void              egg_editable_toolbar_hide            (EggEditableToolbar   *etoolbar,
+                                                        const char           *name);
+void              egg_editable_toolbar_set_fixed       (EggEditableToolbar   *etoolbar,
+                                                        GtkToolbar           *fixed_toolbar);
 
-GtkWidget *         egg_editable_toolbar_get_selected    (EggEditableToolbar   *etoolbar);
-void                egg_editable_toolbar_set_selected    (EggEditableToolbar   *etoolbar,
-							  GtkWidget            *widget);
+GtkWidget *       egg_editable_toolbar_get_selected    (EggEditableToolbar   *etoolbar);
+void              egg_editable_toolbar_set_selected    (EggEditableToolbar   *etoolbar,
+                                                        GtkWidget            *widget);
 
-void              egg_editable_toolbar_add_visibility    (EggEditableToolbar   *etoolbar,
-							  const char           *path);
+void              egg_editable_toolbar_add_visibility  (EggEditableToolbar   *etoolbar,
+                                                        const char           *path);
 void              egg_editable_toolbar_set_primary_class (EggEditableToolbar *etoolbar,
                                                           gboolean            set,
                                                           const gchar        *path);
 
 /* Private Functions */
 
-GtkWidget 	   *_egg_editable_toolbar_new_separator_image (void);
+GtkWidget         *_egg_editable_toolbar_new_separator_image (void);
 
 G_END_DECLS
 
