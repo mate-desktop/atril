@@ -413,9 +413,11 @@ ev_window_set_action_sensitive (EvWindow   *ev_window,
 		    	        const char *name,
 		  	        gboolean    sensitive)
 {
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	GtkAction *action = gtk_action_group_get_action (ev_window->priv->action_group,
 							 name);
 	gtk_action_set_sensitive (action, sensitive);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 
@@ -635,8 +637,10 @@ ev_window_update_actions (EvWindow *ev_window)
 		float      zoom;
 		float      real_zoom;
 
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		action = gtk_action_group_get_action (ev_window->priv->action_group,
 						      ZOOM_CONTROL_ACTION);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 
 		real_zoom = ev_document_model_get_scale (ev_window->priv->model);
 		real_zoom *= 72.0 / get_screen_dpi (ev_window);
@@ -721,6 +725,7 @@ update_sizing_buttons (EvWindow *window)
 			break;
 	}
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (action_group, "ViewFitPage");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_fit_page), window);
@@ -737,6 +742,8 @@ update_sizing_buttons (EvWindow *window)
 
 	action = gtk_action_group_get_action (window->priv->action_group,
 					      ZOOM_CONTROL_ACTION);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
+
 	if (fit_page) {
 		ephy_zoom_action_set_zoom_level (EPHY_ZOOM_ACTION (action),
 						 EPHY_ZOOM_FIT_PAGE);
@@ -755,11 +762,13 @@ update_chrome_actions (EvWindow *window)
 	GtkActionGroup *action_group = priv->action_group;
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action= gtk_action_group_get_action (action_group, "ViewToolbar");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_view_toolbar_cb), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      (priv->chrome & EV_CHROME_TOOLBAR) != 0);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_view_toolbar_cb), window);
 }
@@ -1684,8 +1693,10 @@ ev_window_setup_document (EvWindow *ev_window)
 	if (ev_window->priv->history)
 		g_object_unref (ev_window->priv->history);
 	ev_window->priv->history = ev_history_new ();
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->action_group, NAVIGATION_ACTION);
-        ev_navigation_action_set_history (EV_NAVIGATION_ACTION (action), ev_window->priv->history);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
+	ev_navigation_action_set_history (EV_NAVIGATION_ACTION (action), ev_window->priv->history);
 
 	if (ev_window->priv->properties) {
 		ev_properties_dialog_set_document (EV_PROPERTIES_DIALOG (ev_window->priv->properties),
@@ -2914,7 +2925,9 @@ ev_window_setup_recent (EvWindow *ev_window)
 						    ev_window->priv->recent_action_group);
 		g_object_unref (ev_window->priv->recent_action_group);
 	}
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	ev_window->priv->recent_action_group = gtk_action_group_new ("RecentFilesActions");
+	G_GNUC_END_IGNORE_DEPRECATIONS;
         g_signal_connect (ev_window->priv->recent_action_group, "connect-proxy",
                           G_CALLBACK (ev_window_recent_action_connect_proxy_cb), NULL);
 
@@ -2949,13 +2962,14 @@ ev_window_setup_recent (EvWindow *ev_window)
                         icon = g_content_type_get_icon (content_type);
                         g_free (content_type);
                 }
-
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		action = g_object_new (GTK_TYPE_ACTION,
 				       "name", action_name,
 				       "label", label,
                                        "gicon", icon,
                                        "always-show-image", TRUE,
 				       NULL);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 
 		g_object_set_data_full (G_OBJECT (action),
 					"gtk-recent-info",
@@ -2966,8 +2980,10 @@ ev_window_setup_recent (EvWindow *ev_window)
 				  G_CALLBACK (ev_window_cmd_recent_file_activate),
 				  (gpointer) ev_window);
 
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_action_group_add_action (ev_window->priv->recent_action_group,
 					     action);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 		g_object_unref (action);
 
 		gtk_ui_manager_add_ui (ev_window->priv->ui_manager,
@@ -4011,8 +4027,10 @@ ev_window_cmd_focus_page_selector (GtkAction *act, EvWindow *window)
 	ev_window_set_action_sensitive (window, "ViewToolbar", FALSE);
 	update_chrome_visibility (window);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group,
 				     	      PAGE_SELECTOR_ACTION);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_page_action_grab_focus (EV_PAGE_ACTION (action));
 }
 
@@ -4042,7 +4060,9 @@ ev_window_cmd_continuous (GtkAction *action, EvWindow *ev_window)
 	gboolean continuous;
 
 	ev_window_stop_presentation (ev_window, TRUE);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	continuous = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_document_model_set_continuous (ev_window->priv->model, continuous);
 }
 
@@ -4052,7 +4072,9 @@ ev_window_cmd_dual (GtkAction *action, EvWindow *ev_window)
 	gboolean dual_page;
 
 	ev_window_stop_presentation (ev_window, TRUE);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	dual_page = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_document_model_set_dual_page (ev_window->priv->model, dual_page);
 }
 
@@ -4061,7 +4083,9 @@ ev_window_cmd_dual_odd_pages_left (GtkAction *action, EvWindow *ev_window)
 {
 	gboolean dual_page_odd_left;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	dual_page_odd_left = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_document_model_set_dual_page_odd_pages_left (ev_window->priv->model,
 							dual_page_odd_left);
 }
@@ -4071,11 +4095,13 @@ ev_window_cmd_view_fit_page (GtkAction *action, EvWindow *ev_window)
 {
 	ev_window_stop_presentation (ev_window, TRUE);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	if (gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action))) {
 		ev_document_model_set_sizing_mode (ev_window->priv->model, EV_SIZING_FIT_PAGE);
 	} else {
 		ev_document_model_set_sizing_mode (ev_window->priv->model, EV_SIZING_FREE);
 	}
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_window_update_actions (ev_window);
 }
 
@@ -4090,11 +4116,13 @@ ev_window_cmd_view_fit_width (GtkAction *action, EvWindow *ev_window)
 {
 	ev_window_stop_presentation (ev_window, TRUE);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	if (gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action))) {
 		ev_document_model_set_sizing_mode (ev_window->priv->model, EV_SIZING_FIT_WIDTH);
 	} else {
 		ev_document_model_set_sizing_mode (ev_window->priv->model, EV_SIZING_FREE);
 	}
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_window_update_actions (ev_window);
 }
 
@@ -4209,11 +4237,13 @@ ev_window_update_fullscreen_action (EvWindow *window)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group, "ViewFullscreen");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_fullscreen), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      ev_document_model_get_fullscreen (window->priv->model));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_fullscreen), window);
 }
@@ -4322,7 +4352,9 @@ ev_window_cmd_view_fullscreen (GtkAction *action, EvWindow *window)
 {
 	gboolean fullscreen;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	fullscreen = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	if (fullscreen) {
 		ev_window_run_fullscreen (window);
 	} else {
@@ -4364,11 +4396,13 @@ ev_window_update_presentation_action (EvWindow *window)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group, "ViewPresentation");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_presentation), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      EV_WINDOW_IS_PRESENTATION (window));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_presentation), window);
 }
@@ -4500,7 +4534,9 @@ ev_window_cmd_view_presentation (GtkAction *action, EvWindow *window)
 {
 	gboolean presentation;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	presentation = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	if (presentation) {
 		ev_window_run_presentation (window);
 	}
@@ -4557,8 +4593,10 @@ ev_window_update_max_min_scale (EvWindow *window)
 	height = (rotation == 0 || rotation == 180) ? min_height : min_width;
 	max_scale = sqrt ((page_cache_mb * 1024 * 1024) / (width * dpi * 4 * height * dpi));
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group,
 					      ZOOM_CONTROL_ACTION);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ephy_zoom_action_set_max_zoom_level (EPHY_ZOOM_ACTION (action), max_scale * dpi);
 
 	ev_document_model_set_min_scale (window->priv->model, MIN_SCALE * dpi);
@@ -4949,7 +4987,9 @@ ev_window_setup_bookmarks (EvWindow *window)
 						    window->priv->bookmarks_action_group);
 		g_object_unref (window->priv->bookmarks_action_group);
 	}
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	window->priv->bookmarks_action_group = gtk_action_group_new ("BookmarksActions");
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	gtk_ui_manager_insert_action_group (window->priv->ui_manager,
 					    window->priv->bookmarks_action_group, -1);
 
@@ -4959,19 +4999,25 @@ ev_window_setup_bookmarks (EvWindow *window)
 	for (l = items; l && l->data; l = g_list_next (l)) {
 		EvBookmark *bm = (EvBookmark *)l->data;
 		GtkAction  *action;
+		const gchar *action_name;
+		const gchar *action_label;
 
 		action = ev_bookmark_action_new (bm);
 		g_signal_connect (action, "activate",
 				  G_CALLBACK (ev_window_cmd_bookmark_activate),
 				  window);
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_action_group_add_action (window->priv->bookmarks_action_group,
 					     action);
 
+		action_name = gtk_action_get_name (action);
+		action_label = gtk_action_get_label (action);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 		gtk_ui_manager_add_ui (window->priv->ui_manager,
 				       window->priv->bookmarks_ui_id,
 				       "/MainMenu/BookmarksMenu/BookmarksItems",
-				       gtk_action_get_label (action),
-				       gtk_action_get_name (action),
+				       action_label,
+				       action_name,
 				       GTK_UI_MANAGER_MENUITEM,
 				       FALSE);
 
@@ -5162,11 +5208,13 @@ ev_window_update_continuous_action (EvWindow *window)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group, "ViewContinuous");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_continuous), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      ev_document_model_get_continuous (window->priv->model));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_continuous), window);
 }
@@ -5203,11 +5251,13 @@ ev_window_update_inverted_colors_action (EvWindow *window)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group, "ViewInvertedColors");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_inverted_colors), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      ev_document_model_get_inverted_colors (window->priv->model));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_view_inverted_colors), window);
 }
@@ -5233,11 +5283,13 @@ ev_window_update_dual_page_action (EvWindow *window)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group, "ViewDual");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_dual), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      ev_document_model_get_dual_page (window->priv->model));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_dual), window);
 }
@@ -5259,11 +5311,13 @@ ev_window_update_dual_page_odd_pages_left_action (EvWindow *window)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group, "ViewDualOddLeft");
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_dual_odd_pages_left), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      ev_document_model_get_dual_page_odd_pages_left (window->priv->model));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_dual_odd_pages_left), window);
 }
@@ -5387,7 +5441,9 @@ ev_window_view_toolbar_cb (GtkAction *action, EvWindow *ev_window)
 {
 	gboolean active;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	active = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	update_chrome_flag (ev_window, EV_CHROME_TOOLBAR, active);
 	update_chrome_visibility (ev_window);
 	if (ev_window->priv->metadata)
@@ -5400,8 +5456,10 @@ ev_window_view_sidebar_cb (GtkAction *action, EvWindow *ev_window)
 	if (EV_WINDOW_IS_PRESENTATION (ev_window))
 		return;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	update_chrome_flag (ev_window, EV_CHROME_SIDEBAR,
 			    gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action)));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	update_chrome_visibility (ev_window);
 }
 
@@ -5424,12 +5482,16 @@ ev_window_sidebar_visibility_changed_cb (EvSidebar  *ev_sidebar,
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->action_group, "ViewSidebar");
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	if (!EV_WINDOW_IS_PRESENTATION (ev_window)) {
 		gboolean visible = gtk_widget_get_visible (GTK_WIDGET (ev_sidebar));
 
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
+		G_GNUC_END_IGNORE_DEPRECATIONS;
 
 		if (ev_window->priv->metadata)
 			ev_metadata_set_boolean (ev_window->priv->metadata, "sidebar_visibility",
@@ -5477,6 +5539,7 @@ view_menu_link_popup (EvWindow *ev_window,
 		}
 	}
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 					      "OpenLink");
 	gtk_action_set_visible (action, show_external);
@@ -5492,6 +5555,7 @@ view_menu_link_popup (EvWindow *ev_window,
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 					      "OpenLinkNewWindow");
 	gtk_action_set_visible (action, show_internal);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static void
@@ -5512,6 +5576,7 @@ view_menu_image_popup (EvWindow  *ev_window,
 
 	show_image = (ev_window->priv->image != NULL);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 					      "SaveImageAs");
 	gtk_action_set_visible (action, show_image);
@@ -5519,6 +5584,7 @@ view_menu_image_popup (EvWindow  *ev_window,
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 					      "CopyImage");
 	gtk_action_set_visible (action, show_image);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static void
@@ -5534,6 +5600,7 @@ view_menu_annot_popup (EvWindow     *ev_window,
 		g_object_unref (ev_window->priv->annot);
 	ev_window->priv->annot = (annot) ? g_object_ref (annot) : NULL;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 					      "AnnotProperties");
 	gtk_action_set_visible (action, (annot != NULL && EV_IS_ANNOTATION_MARKUP (annot)));
@@ -5544,6 +5611,7 @@ view_menu_annot_popup (EvWindow     *ev_window,
 	action = gtk_action_group_get_action (ev_window->priv->view_popup_action_group,
 	                                      "RemoveAnnot");
 	gtk_action_set_visible (action, (annot != NULL && can_remove_annots));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	if (annot && EV_IS_ANNOTATION_ATTACHMENT (annot)) {
 		EvAttachment *attachment;
@@ -5563,6 +5631,7 @@ view_menu_annot_popup (EvWindow     *ev_window,
 		}
 	}
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->attachment_popup_action_group,
 					      "OpenAttachment");
 	gtk_action_set_visible (action, show_annot);
@@ -5570,6 +5639,7 @@ view_menu_annot_popup (EvWindow     *ev_window,
 	action = gtk_action_group_get_action (ev_window->priv->attachment_popup_action_group,
 					      "SaveAttachmentAs");
 	gtk_action_set_visible (action, show_annot);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static gboolean
@@ -6694,6 +6764,7 @@ register_custom_actions (EvWindow *window, GtkActionGroup *group)
 				  window->priv->model);
 	g_signal_connect (action, "activate_link",
 			  G_CALLBACK (activate_link_cb), window);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	gtk_action_group_add_action (group, action);
 	g_object_unref (action);
 
@@ -6735,6 +6806,7 @@ register_custom_actions (EvWindow *window, GtkActionGroup *group)
 			  G_CALLBACK (ev_window_open_recent_action_item_activated),
 			  window);
 	gtk_action_group_add_action (group, action);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_object_unref (action);
 }
 
@@ -6743,6 +6815,7 @@ set_action_properties (GtkActionGroup *action_group)
 {
 	GtkAction *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (action_group, "FileSendTo");
 	/*translators: this is the label for toolbar button*/
 	g_object_set (action, "short_label", _("Send To"), NULL);
@@ -6780,6 +6853,7 @@ set_action_properties (GtkActionGroup *action_group)
 
 	action = gtk_action_group_get_action (action_group, "LeaveFullscreen");
 	g_object_set (action, "is-important", TRUE, NULL);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static void
@@ -6794,7 +6868,9 @@ sidebar_widget_model_set (EvSidebarLinks *ev_sidebar_links,
 		      "model", &model,
 		      NULL);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (ev_window->priv->action_group, PAGE_SELECTOR_ACTION);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_page_action_set_links_model (EV_PAGE_ACTION (action), model);
 	g_object_unref (model);
 }
@@ -7762,6 +7838,7 @@ ev_window_init (EvWindow *ev_window)
 	gtk_container_add (GTK_CONTAINER (ev_window), ev_window->priv->main_box);
 	gtk_widget_show (ev_window->priv->main_box);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action_group = gtk_action_group_new ("MenuActions");
 	ev_window->priv->action_group = action_group;
 	gtk_action_group_set_translation_domain (action_group, NULL);
@@ -7770,6 +7847,7 @@ ev_window_init (EvWindow *ev_window)
 	gtk_action_group_add_toggle_actions (action_group, toggle_entries,
 					     G_N_ELEMENTS (toggle_entries),
 					     ev_window);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	set_action_properties (action_group);
 	register_custom_actions (ev_window, action_group);
 
@@ -7781,21 +7859,25 @@ ev_window_init (EvWindow *ev_window)
 		gtk_ui_manager_get_accel_group (ev_window->priv->ui_manager);
 	gtk_window_add_accel_group (GTK_WINDOW (ev_window), accel_group);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action_group = gtk_action_group_new ("ViewPopupActions");
 	ev_window->priv->view_popup_action_group = action_group;
 	gtk_action_group_set_translation_domain (action_group, NULL);
 	gtk_action_group_add_actions (action_group, view_popup_entries,
 				      G_N_ELEMENTS (view_popup_entries),
 				      ev_window);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	gtk_ui_manager_insert_action_group (ev_window->priv->ui_manager,
 					    action_group, 0);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action_group = gtk_action_group_new ("AttachmentPopupActions");
 	ev_window->priv->attachment_popup_action_group = action_group;
 	gtk_action_group_set_translation_domain (action_group, NULL);
 	gtk_action_group_add_actions (action_group, attachment_popup_entries,
 				      G_N_ELEMENTS (attachment_popup_entries),
 				      ev_window);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	gtk_ui_manager_insert_action_group (ev_window->priv->ui_manager,
 					    action_group, 0);
 
