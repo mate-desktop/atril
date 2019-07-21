@@ -104,7 +104,9 @@ find_action (EggToolbarEditor *t,
     {
       GtkAction *tmp;
 
+      G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
       tmp = gtk_action_group_get_action (GTK_ACTION_GROUP (l->data), name);
+      G_GNUC_END_IGNORE_DEPRECATIONS;
       if (tmp)
         action = tmp;
     }
