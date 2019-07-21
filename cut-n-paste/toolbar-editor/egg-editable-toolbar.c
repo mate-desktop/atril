@@ -166,7 +166,9 @@ find_action (EggEditableToolbar *etoolbar,
     {
       GtkAction *tmp;
 
+      G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
       tmp = gtk_action_group_get_action (GTK_ACTION_GROUP (l->data), name);
+      G_GNUC_END_IGNORE_DEPRECATIONS;
       if (tmp)
         action = tmp;
     }
@@ -205,6 +207,7 @@ drag_begin_cb (GtkWidget          *widget,
 
   gtk_widget_hide (widget);
 
+  G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
   action = gtk_activatable_get_related_action (GTK_ACTIVATABLE (widget));
 
   if (action == NULL) return;
@@ -218,6 +221,7 @@ drag_begin_cb (GtkWidget          *widget,
                                          gtk_action_get_name (action),
                                          flags);
     }
+  G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static void
@@ -232,6 +236,7 @@ drag_end_cb (GtkWidget          *widget,
     {
       gtk_widget_show (widget);
 
+      G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
       action = gtk_activatable_get_related_action (GTK_ACTIVATABLE (widget));
 
       if (action == NULL) return;
@@ -245,6 +250,7 @@ drag_end_cb (GtkWidget          *widget,
                                              gtk_action_get_name (action),
                                              flags);
         }
+      G_GNUC_END_IGNORE_DEPRECATIONS;
     }
 }
 
@@ -543,7 +549,9 @@ configure_item_tooltip (GtkToolItem *item)
 {
   GtkAction *action;
 
+  G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
   action = gtk_activatable_get_related_action (GTK_ACTIVATABLE (item));
+  G_GNUC_END_IGNORE_DEPRECATIONS;
 
   if (action != NULL)
     {
@@ -623,6 +631,7 @@ create_item_from_action (EggEditableToolbar *etoolbar,
       GtkAction *action = find_action (etoolbar, name);
       if (action == NULL) return NULL;
 
+      G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
       item = GTK_TOOL_ITEM (gtk_action_create_tool_item (action));
 
       /* Normally done on-demand by the GtkUIManager, but no
@@ -630,6 +639,7 @@ create_item_from_action (EggEditableToolbar *etoolbar,
        */
       gtk_action_set_accel_group
         (action, gtk_ui_manager_get_accel_group(etoolbar->priv->manager));
+      G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 
       g_signal_connect_object (action, "notify::sensitive",
                                G_CALLBACK (action_sensitive_cb), item, 0);
