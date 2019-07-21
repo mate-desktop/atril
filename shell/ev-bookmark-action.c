@@ -37,7 +37,9 @@ struct _EvBookmarkActionClass {
         GtkActionClass base_class;
 };
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 G_DEFINE_TYPE (EvBookmarkAction, ev_bookmark_action, GTK_TYPE_ACTION)
+G_GNUC_END_IGNORE_DEPRECATIONS;
 
 static void
 ev_bookmark_action_init (EvBookmarkAction *action)
@@ -86,11 +88,13 @@ ev_bookmark_action_new (EvBookmark *bookmark)
         g_return_val_if_fail (bookmark->title != NULL, NULL);
 
         name = g_strdup_printf ("EvBookmark%u", bookmark->page);
+        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
         action = GTK_ACTION (g_object_new (EV_TYPE_BOOKMARK_ACTION,
                                            "name", name,
                                            "label", bookmark->title,
                                            "page", bookmark->page,
                                            NULL));
+        G_GNUC_END_IGNORE_DEPRECATIONS;
         g_free (name);
 
         return action;
