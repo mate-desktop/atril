@@ -49,7 +49,9 @@ enum
 
 static guint signals[N_SIGNALS] = {0, };
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 G_DEFINE_TYPE (EvPageAction, ev_page_action, GTK_TYPE_ACTION)
+G_GNUC_END_IGNORE_DEPRECATIONS;
 
 #define EV_PAGE_ACTION_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_PAGE_ACTION, EvPageActionPrivate))
 
@@ -96,7 +98,9 @@ connect_proxy (GtkAction *action, GtkWidget *proxy)
 					 proxy, 0);
 	}
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	GTK_ACTION_CLASS (ev_page_action_parent_class)->connect_proxy (action, proxy);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static void
@@ -187,7 +191,9 @@ ev_page_action_grab_focus (EvPageAction *page_action)
 {
 	GSList *proxies;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	proxies = gtk_action_get_proxies (GTK_ACTION (page_action));
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	for (; proxies != NULL; proxies = proxies->next) {
 		EvPageActionWidget *proxy;
 
@@ -208,7 +214,9 @@ static void
 ev_page_action_class_init (EvPageActionClass *class)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (class);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	GtkActionClass *action_class = GTK_ACTION_CLASS (class);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	object_class->dispose = ev_page_action_dispose;
 	object_class->set_property = ev_page_action_set_property;
