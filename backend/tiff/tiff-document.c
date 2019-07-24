@@ -268,12 +268,13 @@ tiff_document_render (EvDocument      *document,
 		return NULL;
 	}
 
-	bytes = height * rowstride;
-	if (bytes / rowstride != height) {
+	if (height >= INT_MAX / rowstride) {
 		g_warning("Overflow while rendering document.");
 		/* overflow */
 		return NULL;
 	}
+
+	bytes = height * rowstride;
 
 	pixels = g_try_malloc (bytes);
 	if (!pixels) {
@@ -356,15 +357,17 @@ tiff_document_render_pixbuf (EvDocument      *document,
 	if (width <= 0 || height <= 0)
 		return NULL;
 
-	rowstride = width * 4;
-	if (rowstride / 4 != width)
+
+	if (width >= INT_MAX / 4)
 		/* overflow */
 		return NULL;
 
-	bytes = height * rowstride;
-	if (bytes / rowstride != height)
+	rowstride = width * 4;
+
+	if (height >= INT_MAX / rowstride)
 		/* overflow */
 		return NULL;
+	bytes = height * rowstride;
 
 	pixels = g_try_malloc (bytes);
 	if (!pixels)
