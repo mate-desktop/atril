@@ -146,6 +146,7 @@ ev_previewer_window_zoom_reset (GtkAction         *action,
 	ev_view_zoom_reset (window->view);
 }
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 static void
 ev_previewer_window_zoom_fit_page (GtkToggleAction   *action,
 				   EvPreviewerWindow *window)
@@ -163,6 +164,7 @@ ev_previewer_window_zoom_fit_width (GtkToggleAction   *action,
 					   gtk_toggle_action_get_active (action) ?
 					   EV_SIZING_FIT_WIDTH : EV_SIZING_FREE);
 }
+G_GNUC_END_IGNORE_DEPRECATIONS;
 
 static void
 ev_previewer_window_action_page_activated (GtkAction         *action,
@@ -179,8 +181,10 @@ ev_previewer_window_focus_page_selector (GtkAction         *action,
 {
 	GtkAction *page_action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	page_action = gtk_action_group_get_action (window->action_group,
 						   "PageSelector");
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	ev_page_action_grab_focus (EV_PAGE_ACTION (page_action));
 }
 
@@ -345,8 +349,10 @@ view_focus_changed (GtkWidget         *widget,
 		    GdkEventFocus     *event,
 		    EvPreviewerWindow *window)
 {
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	if (window->accels_group)
 		gtk_action_group_set_sensitive (window->accels_group, event->in);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	return FALSE;
 }
@@ -359,22 +365,26 @@ view_sizing_mode_changed (EvDocumentModel   *model,
 	EvSizingMode sizing_mode = ev_document_model_get_sizing_mode (model);
 	GtkAction   *action;
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->action_group, "ViewFitPage");
 	g_signal_handlers_block_by_func (action,
 					 G_CALLBACK (ev_previewer_window_zoom_fit_page),
 					 window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      sizing_mode == EV_SIZING_FIT_PAGE);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func (action,
 					   G_CALLBACK (ev_previewer_window_zoom_fit_page),
 					   window);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->action_group, "ViewFitWidth");
 	g_signal_handlers_block_by_func (action,
 					 G_CALLBACK (ev_previewer_window_zoom_fit_width),
 					 window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      sizing_mode == EV_SIZING_FIT_WIDTH);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func (action,
 					   G_CALLBACK (ev_previewer_window_zoom_fit_width),
 					   window);
@@ -392,8 +402,10 @@ ev_previewer_window_set_document (EvPreviewerWindow *window,
 	g_signal_connect (model, "notify::sizing-mode",
 			  G_CALLBACK (view_sizing_mode_changed),
 			  window);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	gtk_action_group_set_sensitive (window->action_group, TRUE);
 	gtk_action_group_set_sensitive (window->accels_group, TRUE);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
 static void
@@ -403,8 +415,10 @@ ev_previewer_window_connect_action_accelerators (EvPreviewerWindow *window)
 
 	gtk_ui_manager_ensure_update (window->ui_manager);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	actions = gtk_action_group_list_actions (window->action_group);
 	g_list_foreach (actions, (GFunc)gtk_action_connect_accelerator, NULL);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_list_free (actions);
 }
 
@@ -522,6 +536,7 @@ ev_previewer_window_constructor (GType                  type,
 				  G_CALLBACK (ev_previewer_window_set_document),
 				  window);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	window->action_group = gtk_action_group_new ("PreviewerActions");
 	gtk_action_group_set_translation_domain (window->action_group, NULL);
 	gtk_action_group_add_actions (window->action_group, action_entries,
@@ -531,6 +546,7 @@ ev_previewer_window_constructor (GType                  type,
 					     G_N_ELEMENTS (toggle_action_entries),
 					     window);
 	gtk_action_group_set_sensitive (window->action_group, FALSE);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	action = g_object_new (EV_TYPE_PAGE_ACTION,
 			       "name", "PageSelector",
@@ -543,6 +559,7 @@ ev_previewer_window_constructor (GType                  type,
 	g_signal_connect (action, "activate_link",
 			  G_CALLBACK (ev_previewer_window_action_page_activated),
 			  window);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	gtk_action_group_add_action (window->action_group, action);
 	g_object_unref (action);
 
@@ -551,6 +568,7 @@ ev_previewer_window_constructor (GType                  type,
 				      G_N_ELEMENTS (accel_entries),
 				      window);
 	gtk_action_group_set_sensitive (window->accels_group, FALSE);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	window->ui_manager = gtk_ui_manager_new ();
 	gtk_ui_manager_insert_action_group (window->ui_manager,
