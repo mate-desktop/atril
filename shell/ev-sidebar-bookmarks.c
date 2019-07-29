@@ -493,11 +493,13 @@ ev_sidebar_bookmarks_init (EvSidebarBookmarks *sidebar_bookmarks)
         gtk_widget_show (GTK_WIDGET (sidebar_bookmarks));
 
         /* Popup menu */
+        G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
         priv->action_group = gtk_action_group_new ("BookmarsPopupActions");
         gtk_action_group_set_translation_domain (priv->action_group, NULL);
         gtk_action_group_add_actions (priv->action_group, popup_entries,
                                       G_N_ELEMENTS (popup_entries),
                                       sidebar_bookmarks);
+        G_GNUC_END_IGNORE_DEPRECATIONS;
         priv->ui_manager = gtk_ui_manager_new ();
         gtk_ui_manager_insert_action_group (priv->ui_manager,
                                             priv->action_group, 0);
