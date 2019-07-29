@@ -50,7 +50,7 @@ stamp-eggmarshalers.h: eggmarshalers.list
 eggmarshalers.c: stamp-eggmarshalers.c
 	@true
 stamp-eggmarshalers.c: eggmarshalers.list
-	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=_egg_marshal $(srcdir)/eggmarshalers.list --header --body > eggmarshalers.c \
+	$(AM_V_GEN)$(GLIB_GENMARSHAL) --prefix=_egg_marshal $(srcdir)/eggmarshalers.list --body --prototypes > eggmarshalers.c \
 	&& echo timestamp > $(@F)
 
 eggtypebuiltins.c: stamp-eggtypebuiltins.c
