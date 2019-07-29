@@ -189,6 +189,12 @@ variables:
     -enable-checker alpha.core.FixedAddr
     -enable-checker security.insecureAPI.strcpy"'
 
+before_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     egrep -lRZ 'G_GNUC_BEGIN_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_BEGIN_IGNORE_DEPRECATIONS/ /g'
+  -     egrep -lRZ 'G_GNUC_END_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_END_IGNORE_DEPRECATIONS/ /g'
+  - fi
+
 build_scripts:
   - if [ ${DISTRO_NAME} == "debian" ];then
   -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
