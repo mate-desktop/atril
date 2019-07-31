@@ -752,17 +752,43 @@ ev_view_presentation_goto_entry_grab_focus (EvViewPresentation *pview)
 }
 
 static void
+monitor_get_dimesions (EvViewPresentation *pview,
+		       gint     *width,
+		       gint     *height)
+{
+	GdkDisplay  *display;
+	GdkWindow   *gdk_window;
+	GdkMonitor  *monitor;
+	GdkRectangle geometry;
+
+	*width = 0;
+	*height = 0;
+
+	display = gtk_widget_get_display (GTK_WIDGET (pview));
+	gdk_window = gtk_widget_get_window (GTK_WIDGET (pview));
+
+	if (gdk_window) {
+		monitor = gdk_display_get_monitor_at_window (display,
+							     gdk_window);
+		gdk_monitor_get_workarea (monitor, &geometry);
+		*width = geometry.width;
+		*height = geometry.height;
+	}
+}
+
+static void
 ev_view_presentation_goto_window_send_key_event (EvViewPresentation *pview,
 						 GdkEvent           *event)
 {
 	GdkEventKey *new_event;
-	GdkScreen   *screen;
+	gint        monitor_width;
+	gint        monitor_height;
 
 	/* Move goto window off screen */
-	screen = gtk_widget_get_screen (GTK_WIDGET (pview));
+	monitor_get_dimesions (pview, &monitor_width, &monitor_height);
 	gtk_window_move (GTK_WINDOW (pview->goto_window),
-			 WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) + 1,
-			 HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) + 1);
+			 monitor_width + 1,
+			 monitor_height + 1);
 	gtk_widget_show (pview->goto_window);
 
 	new_event = (GdkEventKey *) gdk_event_copy (event);
