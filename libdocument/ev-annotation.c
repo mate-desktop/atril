@@ -565,8 +565,11 @@ ev_annotation_set_color (EvAnnotation   *annot,
     g_return_val_if_fail (EV_IS_ANNOTATION (annot), FALSE);
 
     ev_annotation_get_color (annot, &annot_color);
-    if (color == NULL || gdk_color_equal (color, &annot_color))
-        return FALSE;
+    if (color == NULL ||
+        ((color->red == annot_color.red) &&
+        (color->green == annot_color.green) &&
+        (color->blue == annot_color.blue)))
+            return FALSE;
 
     rgba.red = color->red / 65535.;
     rgba.green = color->green / 65535.;
