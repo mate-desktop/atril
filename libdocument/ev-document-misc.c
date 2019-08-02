@@ -339,16 +339,20 @@ ev_document_misc_invert_pixbuf (GdkPixbuf *pixbuf)
 }
 
 gdouble
-ev_document_misc_get_screen_dpi (GdkScreen *screen, GdkMonitor *monitor)
+ev_document_misc_get_monitor_dpi (GdkMonitor *monitor)
 {
+	GdkRectangle geometry;
+	int s;
 	gdouble dp, di;
 
+	gdk_monitor_get_geometry (monitor, &geometry);
+	s = gdk_monitor_get_scale_factor (monitor);
+
 	/*diagonal in pixels*/
-	dp = hypot (WidthOfScreen (gdk_x11_screen_get_xscreen (screen)), HeightOfScreen (gdk_x11_screen_get_xscreen (screen)));
+	dp = hypot (geometry.width * s, geometry.height * s);
 
 	/*diagonal in inches*/
 	di = hypot (gdk_monitor_get_width_mm(monitor), gdk_monitor_get_height_mm (monitor)) / 25.4;
-	di /= gdk_monitor_get_scale_factor (monitor);
 
 	return (dp / di);
 }
