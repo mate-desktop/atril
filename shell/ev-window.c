@@ -395,17 +395,17 @@ static gchar *caja_sendto = NULL;
 G_DEFINE_TYPE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
 static gdouble
-get_screen_dpi (EvWindow *window)
+get_monitor_dpi (EvWindow *ev_window)
 {
-	GdkScreen  *screen;
+	GdkWindow  *window;
 	GdkMonitor *monitor;
 	GdkDisplay *display;
 
-	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	display = gdk_screen_get_display (screen);
-	monitor = gdk_display_get_primary_monitor (display);
+	window = gtk_widget_get_window (GTK_WIDGET (ev_window));
+	display = gdk_window_get_display (window);
+	monitor = gdk_display_get_monitor_at_window (display, window);
 
-	return ev_document_misc_get_screen_dpi (screen, monitor);
+	return ev_document_misc_get_monitor_dpi (monitor);
 }
 
 static void
@@ -643,7 +643,7 @@ ev_window_update_actions (EvWindow *ev_window)
 		G_GNUC_END_IGNORE_DEPRECATIONS;
 
 		real_zoom = ev_document_model_get_scale (ev_window->priv->model);
-		real_zoom *= 72.0 / get_screen_dpi (ev_window);
+		real_zoom *= 72.0 / get_monitor_dpi (ev_window);
 		zoom = ephy_zoom_get_nearest_zoom_level (real_zoom);
 
 		ephy_zoom_action_set_zoom_level (EPHY_ZOOM_ACTION (action), zoom);
@@ -1307,7 +1307,7 @@ setup_model_from_metadata (EvWindow *window)
 	/* Zoom */
 	if (ev_document_model_get_sizing_mode (window->priv->model) == EV_SIZING_FREE) {
 		if (ev_metadata_get_double (window->priv->metadata, "zoom", &zoom)) {
-			zoom *= get_screen_dpi (window) / 72.0;
+			zoom *= get_monitor_dpi (window) / 72.0;
 			ev_document_model_set_scale (window->priv->model, zoom);
 		}
 	}
@@ -4586,7 +4586,7 @@ ev_window_update_max_min_scale (EvWindow *window)
 		return;
 
 	page_cache_mb = g_settings_get_uint (window->priv->settings, GS_PAGE_CACHE_SIZE);
-	dpi = get_screen_dpi (window) / 72.0;
+	dpi = get_monitor_dpi (window) / 72.0;
 
 	ev_document_get_min_page_size (window->priv->document, &min_width, &min_height);
 	width = (rotation == 0 || rotation == 180) ? min_width : min_height;
@@ -4811,7 +4811,7 @@ ev_window_cmd_edit_save_settings (GtkAction *action, EvWindow *ev_window)
 	if (sizing_mode == EV_SIZING_FREE) {
 		gdouble zoom = ev_document_model_get_scale (model);
 
-		zoom *= 72.0 / get_screen_dpi (ev_window);
+		zoom *= 72.0 / get_monitor_dpi (ev_window);
 		g_settings_set_double (settings, "zoom", zoom);
 	}
 	g_settings_set_boolean (settings, "show-toolbar",
@@ -5198,7 +5198,7 @@ ev_window_zoom_changed_cb (EvDocumentModel *model, GParamSpec *pspec, EvWindow *
 		gdouble zoom;
 
 		zoom = ev_document_model_get_scale (model);
-		zoom *= 72.0 / get_screen_dpi (ev_window);
+		zoom *= 72.0 / get_monitor_dpi (ev_window);
 		ev_metadata_set_double (ev_window->priv->metadata, "zoom", zoom);
 	}
 }
@@ -5989,7 +5989,7 @@ zoom_control_changed_cb (EphyZoomAction *action,
 
 	if (mode == EV_SIZING_FREE) {
 		ev_document_model_set_scale (ev_window->priv->model,
-					     zoom * get_screen_dpi (ev_window) / 72.0);
+					     zoom * get_monitor_dpi (ev_window) / 72.0);
 	}
 }
 

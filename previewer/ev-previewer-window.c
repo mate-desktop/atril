@@ -68,17 +68,17 @@ enum {
 G_DEFINE_TYPE (EvPreviewerWindow, ev_previewer_window, GTK_TYPE_WINDOW)
 
 static gdouble
-get_screen_dpi (EvPreviewerWindow *window)
+get_monitor_dpi (EvPreviewerWindow *window)
 {
-	GdkScreen  *screen;
+	GdkWindow  *gdk_window;
 	GdkMonitor *monitor;
 	GdkDisplay *display;
 
-	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	display = gdk_screen_get_display (screen);
-	monitor = gdk_display_get_primary_monitor (display);
+	gdk_window = gtk_widget_get_window (GTK_WIDGET (window));
+	display = gdk_window_get_display (gdk_window);
+	monitor = gdk_display_get_monitor_at_window (display, gdk_window);
 
-	return ev_document_misc_get_screen_dpi (screen, monitor);
+	return ev_document_misc_get_monitor_dpi (monitor);
 }
 
 #if GTKUNIXPRINT_ENABLED
@@ -528,7 +528,7 @@ ev_previewer_window_constructor (GType                  type,
 										 construct_params);
 	window = EV_PREVIEWER_WINDOW (object);
 
-	dpi = get_screen_dpi (window);
+	dpi = get_monitor_dpi (window);
 	ev_document_model_set_min_scale (window->model, MIN_SCALE * dpi / 72.0);
 	ev_document_model_set_max_scale (window->model, MAX_SCALE * dpi / 72.0);
 	ev_document_model_set_sizing_mode (window->model, EV_SIZING_FIT_WIDTH);

@@ -94,17 +94,17 @@ send_focus_change (GtkWidget *widget,
 }
 
 static gdouble
-get_screen_dpi (EvAnnotationWindow *window)
+get_monitor_dpi (EvAnnotationWindow *window)
 {
-	GdkScreen  *screen;
+	GdkWindow  *gdk_window;
 	GdkMonitor *monitor;
 	GdkDisplay *display;
 
-	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	display = gdk_screen_get_display (screen);
-	monitor = gdk_display_get_primary_monitor (display);
+	gdk_window = gtk_widget_get_window (GTK_WIDGET (window));
+	display = gdk_window_get_display (gdk_window);
+	monitor = gdk_display_get_monitor_at_window (display, gdk_window);
 
-	return ev_document_misc_get_screen_dpi (screen, monitor);
+	return ev_document_misc_get_monitor_dpi (monitor);
 }
 
 static void
@@ -459,7 +459,7 @@ ev_annotation_window_constructor (GType                  type,
 	rect = &window->rect;
 
 	/* Rectangle is at doc resolution (72.0) */
-	scale = get_screen_dpi (window) / 72.0;
+	scale = get_monitor_dpi (window) / 72.0;
 	gtk_window_resize (GTK_WINDOW (window),
 			   (gint)((rect->x2 - rect->x1) * scale),
 			   (gint)((rect->y2 - rect->y1) * scale));

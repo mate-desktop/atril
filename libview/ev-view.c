@@ -494,18 +494,19 @@ is_dual_page (EvView   *view,
 
 	switch (view->page_layout) {
 	case EV_PAGE_LAYOUT_AUTOMATIC: {
-		GdkScreen    *screen;
-		GdkMonitor *monitor;
-		GdkDisplay *display;
+		GdkWindow    *window;
+		GdkMonitor   *monitor;
+		GdkDisplay   *display;
 		double        scale;
 		double        doc_width;
 		double        doc_height;
 		GtkAllocation allocation;
 
-		screen = gtk_widget_get_screen (GTK_WIDGET (view));
-		display = gdk_screen_get_display (screen);
-		monitor = gdk_display_get_primary_monitor (display);
-		scale = ev_document_misc_get_screen_dpi (screen, monitor) / 72.0;
+		window = gtk_widget_get_window (GTK_WIDGET (view));
+		display = gdk_window_get_display (window);
+		monitor = gdk_display_get_monitor_at_window (display, window);
+
+		scale = ev_document_misc_get_monitor_dpi (monitor) / 72.0;
 
 		ev_document_get_max_page_size (view->document, &doc_width, &doc_height);
 		gtk_widget_get_allocation (GTK_WIDGET (view), &allocation);
@@ -7105,8 +7106,6 @@ zoom_for_size_automatic (GdkScreen *screen,
 			 int        target_width,
 			 int        target_height)
 {
-	GdkMonitor *monitor;
-	GdkDisplay *display;
 	double fit_width_scale;
 	double scale;
 
@@ -7118,11 +7117,15 @@ zoom_for_size_automatic (GdkScreen *screen,
 		fit_height_scale = zoom_for_size_fit_height (doc_width, doc_height, target_width, target_height);
 		scale = MIN (fit_width_scale, fit_height_scale);
 	} else {
-		double actual_scale;
+		double actual_scale, resolution;
 
-		display = gdk_screen_get_display (screen);
-		monitor = gdk_display_get_primary_monitor (display);
-		actual_scale = ev_document_misc_get_screen_dpi (screen, monitor) / 72.0;
+		resolution = gdk_screen_get_resolution (screen);
+		if (resolution == -1) {
+			GdkDisplay *display = gdk_screen_get_display (screen);
+			GdkMonitor *monitor = gdk_display_get_primary_monitor (display);
+			resolution = ev_document_misc_get_monitor_dpi (monitor);
+		}
+		actual_scale = resolution / 72.0;
 		scale = MIN (fit_width_scale, actual_scale);
 	}
 
