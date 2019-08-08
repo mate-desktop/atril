@@ -402,9 +402,13 @@ get_monitor_dpi (EvWindow *ev_window)
 	GdkDisplay *display;
 
 	window = gtk_widget_get_window (GTK_WIDGET (ev_window));
-	display = gdk_window_get_display (window);
-	monitor = gdk_display_get_monitor_at_window (display, window);
-
+	if (window) {
+		display = gdk_window_get_display (window);
+		monitor = gdk_display_get_monitor_at_window (display, window);
+	} else {
+		display = gdk_display_get_default();
+		monitor = gdk_display_get_primary_monitor (display);
+	}
 	return ev_document_misc_get_monitor_dpi (monitor);
 }
 
