@@ -41,14 +41,12 @@ struct _EvHistoryPrivate
 static void ev_history_init       (EvHistory *history);
 static void ev_history_class_init (EvHistoryClass *class);
 
-G_DEFINE_TYPE (EvHistory, ev_history, G_TYPE_OBJECT)
-
-#define EV_HISTORY_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_HISTORY, EvHistoryPrivate))
+G_DEFINE_TYPE_WITH_PRIVATE (EvHistory, ev_history, G_TYPE_OBJECT)
 
 static void
 ev_history_init (EvHistory *history)
 {
-	history->priv = EV_HISTORY_GET_PRIVATE (history);
+	history->priv = ev_history_get_instance_private (history);
 
 	history->priv->links = NULL;
 }
@@ -85,8 +83,6 @@ ev_history_class_init (EvHistoryClass *class)
 				  NULL, NULL,
 				  g_cclosure_marshal_VOID__VOID,
 				  G_TYPE_NONE, 0);
-
-	g_type_class_add_private (object_class, sizeof (EvHistoryPrivate));
 }
 
 #define HISTORY_LENGTH   7
