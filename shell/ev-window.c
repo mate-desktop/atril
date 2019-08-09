@@ -241,9 +241,6 @@ struct _EvWindowPrivate {
 	GtkWidget *ask_caret_navigation_check;
 };
 
-#define EV_WINDOW_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_WINDOW, EvWindowPrivate))
-
 #define EV_WINDOW_IS_PRESENTATION(w) (w->priv->presentation_view != NULL)
 
 #define PAGE_SELECTOR_ACTION	"PageSelector"
@@ -392,7 +389,7 @@ static void    zoom_control_changed_cb                 (EphyZoomAction *action,
 
 static gchar *caja_sendto = NULL;
 
-G_DEFINE_TYPE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
+G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
 static gdouble
 get_screen_dpi (EvWindow *window)
@@ -6415,8 +6412,6 @@ ev_window_class_init (EvWindowClass *ev_window_class)
 	widget_class->drag_data_received = ev_window_drag_data_received;
 
 	caja_sendto = g_find_program_in_path ("caja-sendto");
-
-	g_type_class_add_private (g_object_class, sizeof (EvWindowPrivate));
 }
 
 /* Normal items */
@@ -7790,7 +7785,7 @@ ev_window_init (EvWindow *ev_window)
 	g_signal_connect (ev_window, "window_state_event",
 			  G_CALLBACK (window_state_event_cb), NULL);
 
-	ev_window->priv = EV_WINDOW_GET_PRIVATE (ev_window);
+	ev_window->priv = ev_window_get_instance_private (ev_window);
 
 #ifdef ENABLE_DBUS
 	connection = g_application_get_dbus_connection (g_application_get_default ());
