@@ -44,12 +44,10 @@ static void ev_navigation_action_init       (EvNavigationAction *action);
 static void ev_navigation_action_class_init (EvNavigationActionClass *class);
 
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-G_DEFINE_TYPE (EvNavigationAction, ev_navigation_action, GTK_TYPE_ACTION)
+G_DEFINE_TYPE_WITH_PRIVATE (EvNavigationAction, ev_navigation_action, GTK_TYPE_ACTION)
 G_GNUC_END_IGNORE_DEPRECATIONS;
 
 #define MAX_LABEL_LENGTH 48
-
-#define EV_NAVIGATION_ACTION_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_NAVIGATION_ACTION, EvNavigationActionPrivate))
 
 static void
 ev_navigation_action_history_changed (EvHistory *history,
@@ -212,7 +210,7 @@ create_menu_item (GtkAction *action)
 static void
 ev_navigation_action_init (EvNavigationAction *action)
 {
-	action->priv = EV_NAVIGATION_ACTION_GET_PRIVATE (action);
+	action->priv = ev_navigation_action_get_instance_private (action);
 }
 
 static void
@@ -252,6 +250,4 @@ ev_navigation_action_class_init (EvNavigationActionClass *class)
 					       g_cclosure_marshal_VOID__OBJECT,
 					       G_TYPE_NONE, 1,
 					       G_TYPE_OBJECT);
-
-	g_type_class_add_private (object_class, sizeof (EvNavigationActionPrivate));
 }
