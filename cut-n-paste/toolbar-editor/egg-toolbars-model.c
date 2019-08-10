@@ -55,8 +55,6 @@ typedef struct
 
 static guint signals[LAST_SIGNAL] = { 0 };
 
-#define EGG_TOOLBARS_MODEL_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EGG_TYPE_TOOLBARS_MODEL, EggToolbarsModelPrivate))
-
 struct EggToolbarsModelPrivate
 {
   GNode *toolbars;
@@ -64,7 +62,7 @@ struct EggToolbarsModelPrivate
   GHashTable *flags;
 };
 
-G_DEFINE_TYPE (EggToolbarsModel, egg_toolbars_model, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (EggToolbarsModel, egg_toolbars_model, G_TYPE_OBJECT)
 
 static xmlDocPtr
 egg_toolbars_model_to_xml (EggToolbarsModel *model)
@@ -778,14 +776,12 @@ egg_toolbars_model_class_init (EggToolbarsModelClass *klass)
 		  G_STRUCT_OFFSET (EggToolbarsModelClass, toolbar_changed),
 		  NULL, NULL, g_cclosure_marshal_VOID__INT,
 		  G_TYPE_NONE, 1, G_TYPE_INT);
-
-  g_type_class_add_private (object_class, sizeof (EggToolbarsModelPrivate));
 }
 
 static void
 egg_toolbars_model_init (EggToolbarsModel *model)
 {
-  model->priv =EGG_TOOLBARS_MODEL_GET_PRIVATE (model);
+  model->priv =egg_toolbars_model_get_instance_private (model);
 
   model->priv->toolbars = g_node_new (NULL);
   model->priv->flags = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
