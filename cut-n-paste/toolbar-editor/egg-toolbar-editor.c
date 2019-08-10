@@ -55,8 +55,6 @@ enum
   SIGNAL_HANDLER_LIST_SIZE  /* Array size */
 };
 
-#define EGG_TOOLBAR_EDITOR_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EGG_TYPE_TOOLBAR_EDITOR, EggToolbarEditorPrivate))
-
 struct EggToolbarEditorPrivate
 {
   GtkUIManager *manager;
@@ -71,7 +69,7 @@ struct EggToolbarEditorPrivate
   gulong     sig_handlers[SIGNAL_HANDLER_LIST_SIZE];
 };
 
-G_DEFINE_TYPE (EggToolbarEditor, egg_toolbar_editor, GTK_TYPE_BOX);
+G_DEFINE_TYPE_WITH_PRIVATE (EggToolbarEditor, egg_toolbar_editor, GTK_TYPE_BOX);
 
 static gint
 compare_items (gconstpointer a,
@@ -264,8 +262,6 @@ egg_toolbar_editor_class_init (EggToolbarEditorClass *klass)
 
   GtkWidgetClass *widget_class  = GTK_WIDGET_CLASS (klass);
   gtk_widget_class_set_css_name (widget_class, "EggToolbarEditor");
-
-  g_type_class_add_private (object_class, sizeof (EggToolbarEditorPrivate));
 }
 
 static void
@@ -660,7 +656,7 @@ egg_toolbar_editor_init (EggToolbarEditor *t)
 {
   gtk_orientable_set_orientation (GTK_ORIENTABLE (t), GTK_ORIENTATION_VERTICAL);
 
-  t->priv = EGG_TOOLBAR_EDITOR_GET_PRIVATE (t);
+  t->priv = egg_toolbar_editor_get_instance_private (t);
 
   t->priv->manager = NULL;
   t->priv->actions_list = NULL;
