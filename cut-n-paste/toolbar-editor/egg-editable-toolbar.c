@@ -57,8 +57,6 @@ enum
 
 static guint egg_editable_toolbar_signals[LAST_SIGNAL] = { 0 };
 
-#define EGG_EDITABLE_TOOLBAR_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EGG_TYPE_EDITABLE_TOOLBAR, EggEditableToolbarPrivate))
-
 struct _EggEditableToolbarPrivate
 {
   GtkUIManager *manager;
@@ -84,7 +82,7 @@ struct _EggEditableToolbarPrivate
   gchar *primary_name;
 };
 
-G_DEFINE_TYPE (EggEditableToolbar, egg_editable_toolbar, GTK_TYPE_BOX);
+G_DEFINE_TYPE_WITH_PRIVATE (EggEditableToolbar, egg_editable_toolbar, GTK_TYPE_BOX);
 
 static int
 get_dock_position (EggEditableToolbar *etoolbar,
@@ -1410,7 +1408,7 @@ egg_editable_toolbar_init (EggEditableToolbar *etoolbar)
 
   gtk_orientable_set_orientation (GTK_ORIENTABLE (etoolbar), GTK_ORIENTATION_VERTICAL);
 
-  priv = etoolbar->priv = EGG_EDITABLE_TOOLBAR_GET_PRIVATE (etoolbar);
+  priv = etoolbar->priv = egg_editable_toolbar_get_instance_private (etoolbar);
 
   priv->save_hidden = TRUE;
 
@@ -1692,8 +1690,6 @@ egg_editable_toolbar_class_init (EggEditableToolbarClass *klass)
                                                          "Edit Mode",
                                                          FALSE,
                                                          G_PARAM_READWRITE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
-
-  g_type_class_add_private (object_class, sizeof (EggEditableToolbarPrivate));
 }
 
 GtkWidget *
