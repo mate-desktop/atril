@@ -50,10 +50,8 @@ enum
 static guint signals[N_SIGNALS] = {0, };
 
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-G_DEFINE_TYPE (EvPageAction, ev_page_action, GTK_TYPE_ACTION)
+G_DEFINE_TYPE_WITH_PRIVATE (EvPageAction, ev_page_action, GTK_TYPE_ACTION)
 G_GNUC_END_IGNORE_DEPRECATIONS;
-
-#define EV_PAGE_ACTION_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), EV_TYPE_PAGE_ACTION, EvPageActionPrivate))
 
 enum {
 	PROP_0,
@@ -207,7 +205,7 @@ ev_page_action_grab_focus (EvPageAction *page_action)
 static void
 ev_page_action_init (EvPageAction *page)
 {
-	page->priv = EV_PAGE_ACTION_GET_PRIVATE (page);
+	page->priv = ev_page_action_get_instance_private (page);
 }
 
 static void
@@ -242,6 +240,4 @@ ev_page_action_class_init (EvPageActionClass *class)
 							      "Current Links Model",
 							      GTK_TYPE_TREE_MODEL,
 							      G_PARAM_READWRITE));
-
-	g_type_class_add_private (object_class, sizeof (EvPageActionPrivate));
 }
