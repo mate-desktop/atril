@@ -208,12 +208,12 @@ build_scripts:
   -     scan-build $CHECKERS --keep-cc -o html-report make
   - fi
   - if [ ${DISTRO_NAME} == "debian" ];then
-  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude --force .
+  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude --force -D__cplusplus .
   - fi
 
 after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude --force .
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude --force -D__cplusplus .
   -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
   -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/atril/raw/master/data/icons/16x16/apps/atril.png
   - fi
