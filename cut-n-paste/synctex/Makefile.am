@@ -1,10 +1,15 @@
+NULL =
+
 noinst_LTLIBRARIES = libsynctex.la
 
-libsynctex_la_SOURCES = 	\
+libsynctex_la_SOURCES =			\
 	synctex_parser.c		\
-	synctex_parser.h 	\
-	synctex_parser_utils.h   \
-	synctex_parser_utils.c
+	synctex_parser.h		\
+	synctex_parser_advanced.h	\
+	synctex_parser_utils.c		\
+	synctex_parser_utils.h		\
+	synctex_version.h		\
+	$(NULL)
 
 libsynctex_la_CPPFLAGS = \
 	-DSYNCTEX_VERBOSE=0 \

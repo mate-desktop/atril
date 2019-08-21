@@ -1,16 +1,15 @@
-/*
-Copyright (c) 2008, 2009, 2010, 2011 jerome DOT laurens AT u-bourgogne DOT fr
+/* 
+ Copyright (c) 2008-2017 jerome DOT laurens AT u-bourgogne DOT fr
+ 
+ This file is part of the __SyncTeX__ package.
+ 
+ [//]: # (Latest Revision: Fri Jul 14 16:20:41 UTC 2017)
+ [//]: # (Version: 1.21)
+ 
+ See `synctex_parser_readme.md` for more details
+ 
+ ## License
 
-This file is part of the SyncTeX package.
-
-Latest Revision: Tue Jun 14 08:23:30 UTC 2011
-
-Version: 1.18
-
-See synctex_parser_readme.txt for more details
-
-License:
---------
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without
@@ -32,23 +31,29 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE
 
-Except as contained in this notice, the name of the copyright holder
-shall not be used in advertising or otherwise to promote the sale,
-use or other dealings in this Software without prior written
+Except as contained in this notice, the name of the copyright holder  
+shall not be used in advertising or otherwise to promote the sale,  
+use or other dealings in this Software without prior written  
 authorization from the copyright holder.
 
 */
+
+#ifndef SYNCTEX_PARSER_UTILS_H
+#define SYNCTEX_PARSER_UTILS_H
 
 /*  The utilities declared here are subject to conditional implementation.
  *  All the operating system special stuff goes here.
  *  The problem mainly comes from file name management: path separator, encoding...
  */
 
-#	define synctex_bool_t int
-#	define synctex_YES -1
+#include "synctex_version.h"
+
+typedef int synctex_bool_t;
+#	define synctex_YES (0==0)
+#	define synctex_NO (0==1)
+
 #	define synctex_ADD_QUOTES -1
 #	define synctex_COMPRESS -1
-#	define synctex_NO 0
 #	define synctex_DONT_ADD_QUOTES 0
 #	define synctex_DONT_COMPRESS 0
 
@@ -68,27 +73,32 @@ extern "C" {
 #       define SYNCTEX_CASE_SENSITIVE_PATH 1
 #		define SYNCTEX_IS_PATH_SEPARATOR(c) ('/' == c)
 #	endif
-
+    
 #	if defined(_WIN32) || defined(__OS2__)
 #		define SYNCTEX_IS_DOT(c) ('.' == c)
 #	else
 #		define SYNCTEX_IS_DOT(c) ('.' == c)
 #	endif
-
+    
 #	if SYNCTEX_CASE_SENSITIVE_PATH
 #		define SYNCTEX_ARE_PATH_CHARACTERS_EQUAL(left,right) (left != right)
 #	else
 #		define SYNCTEX_ARE_PATH_CHARACTERS_EQUAL(left,right) (toupper(left) != toupper(right))
 #	endif
-
+    
 /*  This custom malloc functions initializes to 0 the newly allocated memory.
  *  There is no bzero function on windows. */
 void *_synctex_malloc(size_t size);
 
+/*  To balance _synctex_malloc.
+ *  ptr might be NULL.   */
+void _synctex_free(void * ptr);
+
 /*  This is used to log some informational message to the standard error stream.
  *  On Windows, the stderr stream is not exposed and another method is used.
  *	The return value is the number of characters printed.	*/
-int _synctex_error(const char * reason,...);
+    int _synctex_error(const char * reason,...);
+    int _synctex_debug(const char * reason,...);
 
 /*  strip the last extension of the given string, this string is modified!
  *  This function depends on the OS because the path separator may differ.
@@ -144,9 +154,10 @@ int _synctex_get_name(const char * output, const char * build_directory, char **
 const char * _synctex_get_io_mode_name(synctex_io_mode_t io_mode);
 
 synctex_bool_t synctex_ignore_leading_dot_slash_in_path(const char ** name);
-
+    
 #ifdef __cplusplus
 }
 #endif
 
 #endif
+#endif /* SYNCTEX_PARSER_UTILS_H */
