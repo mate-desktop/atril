@@ -5827,7 +5827,6 @@ draw_one_page (EvView       *view,
 		cairo_surface_t *selection_surface = NULL;
 		gint offset_x, offset_y;
 		cairo_region_t *region = NULL;
-		double device_scale_x = 1, device_scale_y = 1;
 
 		page_surface = ev_pixbuf_cache_get_surface (view->pixbuf_cache, page);
 
@@ -5839,8 +5838,6 @@ draw_one_page (EvView       *view,
 
 			return;
 		}
-
-		cairo_surface_get_device_scale (page_surface, &device_scale_x, &device_scale_y);
 
 		if (page == current_page)
 			ev_view_set_loading (view, FALSE);
