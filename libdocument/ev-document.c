@@ -54,7 +54,7 @@ struct _EvDocumentPrivate
 	EvPageSize     *page_sizes;
 	EvDocumentInfo *info;
 
-	synctex_scanner_t synctex_scanner;
+	synctex_scanner_p synctex_scanner;
 };
 
 static gint            _ev_document_get_n_pages     (EvDocument *document);
@@ -417,7 +417,7 @@ ev_document_synctex_backward_search (EvDocument *document,
                                      gfloat      y)
 {
         EvSourceLink *result = NULL;
-        synctex_scanner_t scanner;
+        synctex_scanner_p scanner;
 
         g_return_val_if_fail (EV_IS_DOCUMENT (document), NULL);
 
@@ -426,10 +426,10 @@ ev_document_synctex_backward_search (EvDocument *document,
                 return NULL;
 
         if (synctex_edit_query (scanner, page_index + 1, x, y) > 0) {
-                synctex_node_t node;
+                synctex_node_p node;
 
                 /* We assume that a backward search returns either zero or one result_node */
-                node = synctex_next_result (scanner);
+                node = synctex_scanner_next_result (scanner);
                 if (node != NULL) {
                         const gchar *filename;
 
@@ -462,7 +462,7 @@ ev_document_synctex_forward_search (EvDocument   *document,
 				    EvSourceLink *link)
 {
         EvMapping        *result = NULL;
-        synctex_scanner_t scanner;
+        synctex_scanner_p scanner;
 
         g_return_val_if_fail (EV_IS_DOCUMENT (document), NULL);
 
@@ -470,11 +470,11 @@ ev_document_synctex_forward_search (EvDocument   *document,
         if (!scanner)
                 return NULL;
 
-        if (synctex_display_query (scanner, link->filename, link->line, link->col) > 0) {
-                synctex_node_t node;
+        if (synctex_display_query (scanner, link->filename, link->line, link->col, 0) > 0) {
+                synctex_node_p node;
                 gint           page;
 
-                if ((node = synctex_next_result (scanner))) {
+                if ((node = synctex_scanner_next_result (scanner))) {
                         result = g_new (EvMapping, 1);
 
                         page = synctex_node_page (node) - 1;
