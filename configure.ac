@@ -88,6 +88,7 @@ GTK_REQUIRED=3.22.0
 WEBKIT_REQUIRED=2.4.3
 LIBSECRET_REQUIRED=0.5
 LIBXML_REQUIRED=2.5.0
+SYNCTEX_REQUIRED=1.21
 
 AC_SUBST([GLIB_REQUIRED])
 AC_SUBST([GTK_REQUIRED])
@@ -357,6 +358,19 @@ AC_SUBST([GIRDIR])
 AC_SUBST([GIRTYPELIBDIR])
 
 AM_CONDITIONAL([ENABLE_INTROSPECTION],[test "$enable_introspection" = "yes"])
+
+dnl ================== libsynctex ===========================================
+
+PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=system, has_synctex=internal)
+
+dnl not found? use internal code copy.
+if test "x$has_synctex" = "xinternal"; then
+	SYNCTEX_LIBS="\$(top_builddir)/cut-n-paste/synctex/libsynctex.la"
+	SYNCTEX_CFLAGS="-I\$(top_srcdir)/cut-n-paste/synctex"
+fi
+AC_SUBST(SYNCTEX_LIBS)
+AC_SUBST(SYNCTEX_CFLAGS)
+AM_CONDITIONAL(USE_INTERNAL_SYNCTEX, test x$has_synctex = xinternal)
 
 dnl ================== portability checks ===========================================
 
@@ -773,4 +787,6 @@ Configure summary:
     Comics Backend......:    $enable_comics
     XPS Backend.........:    $enable_xps
     ePub Backend........:    $have_webkit
+
+    SyncTeX.............:    $has_synctex
 "

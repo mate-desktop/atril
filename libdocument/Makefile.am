@@ -102,7 +102,7 @@ libatrildocument_la_CPPFLAGS = \
 
 libatrildocument_la_CFLAGS = \
 	$(LIBDOCUMENT_CFLAGS)			\
-	-I$(top_srcdir)/cut-n-paste/synctex	\
+	$(SYNCTEX_CFLAGS)			\
 	$(WARN_CFLAGS)				\
 	$(DISABLE_DEPRECATED)			\
 	$(AM_CFLAGS)
@@ -116,7 +116,7 @@ libatrildocument_la_LDFLAGS = \
 libatrildocument_la_LIBADD = \
 	$(LIBDOCUMENT_LIBS)	\
 	$(GMODULE_LIBS)		\
-	$(top_builddir)/cut-n-paste/synctex/libsynctex.la \
+	$(SYNCTEX_LIBS)		\
 	$(ZLIB_LIBS)
 
 
