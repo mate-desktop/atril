@@ -9,9 +9,9 @@
 # Elvis M. Lukšić <meluksic@yahoo.com>, 2018
 # Tedo Vrbanec <tedo.vrbanec@gmail.com>, 2018
 # Ivan Branimir Škorić <ivanskrc123@gmail.com>, 2018
-# stemd <stemdd@gmail.com>, 2018
 # Andrej Ostrek <andrejostrek@gmail.com>, 2018
 # Ivica  Kolić <ikoli@yahoo.com>, 2019
+# stemd <stemdd@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-20 09:21+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>, 2019\n"
+"Last-Translator: stemd <stemdd@gmail.com>, 2019\n"
 "Language-Team: Croatian (https://www.transifex.com/mate/teams/13566/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,7 +166,7 @@ msgstr "epub datoteka nema manifesta"
 
 #: ../backend/epub/epub-document.c:1082
 msgid "Could not set up document tree for loading, some files missing"
-msgstr ""
+msgstr "Ne mogu učitati dokument, neke datoteke nedostaju"
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
@@ -262,11 +262,11 @@ msgstr "Neispravan dokument"
 
 #: ../backend/tiff/tiffdocument.atril-backend.in.h:1
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Tiff dokumenti"
 
 #: ../backend/xps/xpsdocument.atril-backend.in.h:1
 msgid "XPS Documents"
-msgstr ""
+msgstr "XPS dokumenti"
 
 #: ../libdocument/ev-attachment.c:304 ../libdocument/ev-attachment.c:325
 #, c-format
@@ -414,7 +414,7 @@ msgstr "Rezdjelnik"
 #. translators: this is the label for toolbar button
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:49 ../shell/ev-window.c:6775
 msgid "Fit Page"
-msgstr ""
+msgstr "Prikaz cijele stranice"
 
 #. translators: this is the label for toolbar button
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:50 ../shell/ev-window.c:6779
@@ -539,19 +539,23 @@ msgstr "URI direktorija koji je posljednji korišten za spremanje fotografije."
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "Veličina međuspremnika stranice u MiB"
 
 #: ../data/org.mate.Atril.gschema.xml.h:8
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
 msgstr ""
+"Najveća veličina koja će biti rabljena za međuspremnik renderiranih "
+"stranica, što ograničava najveći nivo povećavanja stranice."
 
 #: ../data/org.mate.Atril.gschema.xml.h:9
 msgid ""
 "Show a dialog to confirm that the user wants to activate the caret "
 "navigation."
 msgstr ""
+"Prikaži dijalog za potvrdu da korisnik želi aktivirati navigaciju strelicama"
+" tipkovnice."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -614,7 +618,7 @@ msgstr "Smanji dokument"
 
 #: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6412
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Vrati pogled stranice na 100 %"
 
 #. translators: Print document currently shown in the Print Preview window
 #. translators: Title of the print dialog
@@ -677,7 +681,7 @@ msgstr "Ključne riječi:"
 
 #: ../properties/ev-properties-view.c:65
 msgid "Producer:"
-msgstr ""
+msgstr "Producent:"
 
 #: ../properties/ev-properties-view.c:66
 msgid "Creator:"
@@ -728,7 +732,7 @@ msgstr "Nijedan"
 #. * it isn't default:mm or default:inch it will not work
 #: ../properties/ev-properties-view.c:221
 msgid "default:mm"
-msgstr ""
+msgstr "pretpostavljeno:mm"
 
 #: ../properties/ev-properties-view.c:265
 #, c-format
@@ -804,7 +808,7 @@ msgstr "Vaš raspon za ispis ne sadrži niti jednu stranicu"
 
 #: ../libview/ev-print-operation.c:1900
 msgid "Page Scaling:"
-msgstr ""
+msgstr "Uvećanje stranice:"
 
 #: ../libview/ev-print-operation.c:1907
 msgid "Shrink to Printable Area"
@@ -858,19 +862,19 @@ msgstr "Neuspjeli ispis stranice %d: %s"
 
 #: ../libview/ev-view-accessible.c:43
 msgid "Scroll Up"
-msgstr ""
+msgstr "Pomicanje gore"
 
 #: ../libview/ev-view-accessible.c:44
 msgid "Scroll Down"
-msgstr ""
+msgstr "Pomicanje dolje"
 
 #: ../libview/ev-view-accessible.c:50
 msgid "Scroll View Up"
-msgstr ""
+msgstr "Pomicanje pregleda gore"
 
 #: ../libview/ev-view-accessible.c:51
 msgid "Scroll View Down"
-msgstr ""
+msgstr "Pomicanje pregleda dolje"
 
 #: ../libview/ev-view-accessible.c:128
 msgid "Document View"
@@ -954,7 +958,7 @@ msgstr "Osjetljivo na velika i mala slova"
 
 #: ../shell/eggfindbar.c:349
 msgid "Toggle case sensitive search"
-msgstr ""
+msgstr "Uključi razliku između traženja malih i velikih slova"
 
 #: ../shell/ev-annotation-properties-dialog.c:96
 msgid "Icon:"
@@ -990,7 +994,7 @@ msgstr "Umetni"
 
 #: ../shell/ev-annotation-properties-dialog.c:109
 msgid "Cross"
-msgstr ""
+msgstr "Križić"
 
 #: ../shell/ev-annotation-properties-dialog.c:110
 msgid "Circle"
@@ -1002,7 +1006,7 @@ msgstr "Nepoznato"
 
 #: ../shell/ev-annotation-properties-dialog.c:136
 msgid "Annotation Properties"
-msgstr ""
+msgstr "Svojstva bilješki"
 
 #: ../shell/ev-annotation-properties-dialog.c:167
 msgid "Color:"
@@ -1119,7 +1123,7 @@ msgstr "Uvjeti upotrebe"
 
 #: ../shell/ev-properties-license.c:140
 msgid "Text License"
-msgstr ""
+msgstr "Licencija teksta"
 
 #: ../shell/ev-properties-license.c:146
 msgid "Further Information"
@@ -1131,11 +1135,11 @@ msgstr "Dodaj"
 
 #: ../shell/ev-sidebar-annotations.c:209
 msgid "Add text annotation"
-msgstr ""
+msgstr "Dodaj bilješku"
 
 #: ../shell/ev-sidebar-annotations.c:346
 msgid "Document contains no annotations"
-msgstr ""
+msgstr "Dokument ne sadrži bilješke"
 
 #: ../shell/ev-sidebar-annotations.c:378
 #, c-format
@@ -1144,7 +1148,7 @@ msgstr "Stranica %d"
 
 #: ../shell/ev-sidebar-annotations.c:519
 msgid "Annotations"
-msgstr ""
+msgstr "Bilješke"
 
 #: ../shell/ev-sidebar-attachments.c:697
 msgid "Attachments"
@@ -1194,7 +1198,7 @@ msgstr "Kazalo"
 
 #: ../shell/ev-sidebar-thumbnails.c:1039
 msgid "Thumbnails"
-msgstr ""
+msgstr "Sličice"
 
 #: ../shell/ev-window.c:1001
 #, c-format
@@ -1333,7 +1337,7 @@ msgstr "Zatvori prozor bez spremanja"
 
 #: ../shell/ev-window.c:3866 ../shell/ev-window.c:6368
 msgid "_Save As…"
-msgstr ""
+msgstr "_Snimi kao..."
 
 #: ../shell/ev-window.c:3935
 #, c-format
@@ -1420,10 +1424,13 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Trebali ste primiti primjerak GNU-ove opće javne licencije uz ovaj program;\n"
+"ako niste, pišite na adresu Free Software Foundation, Inc., 51 Franklin Street,\n"
+"Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../shell/ev-window.c:5367
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "O Atril pregledniku dokumenata"
 
 #: ../shell/ev-window.c:5368
 msgid ""
@@ -1480,7 +1487,7 @@ msgstr ""
 
 #: ../shell/ev-window.c:6019
 msgid "Enable caret navigation?"
-msgstr ""
+msgstr "Omogući navigaciju strelicama tipkovnice"
 
 #: ../shell/ev-window.c:6021
 msgid "_Enable"
@@ -1593,7 +1600,7 @@ msgstr "Spremi trenutne postavke kao _uobičajene"
 
 #: ../shell/ev-window.c:6411
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Resetiraj uvećanje stranice"
 
 #: ../shell/ev-window.c:6414
 msgid "_Reload"
@@ -1681,7 +1688,7 @@ msgstr "Prikaži ili sakrij bočni prozor"
 
 #: ../shell/ev-window.c:6516
 msgid "_Continuous"
-msgstr ""
+msgstr "_Kontinuirani prikaz"
 
 #: ../shell/ev-window.c:6517
 msgid "Show the entire document"
@@ -1689,7 +1696,7 @@ msgstr "Pokaži cijeli dokument"
 
 #: ../shell/ev-window.c:6519
 msgid "_Dual"
-msgstr ""
+msgstr "_Dvije stranice po širini zaslona"
 
 #: ../shell/ev-window.c:6520
 msgid "Show two pages at once"
@@ -1697,11 +1704,11 @@ msgstr "Pokaži dvije stranice odjednom"
 
 #: ../shell/ev-window.c:6522
 msgid "_Odd pages left"
-msgstr ""
+msgstr "_Neparne stranice lijevo"
 
 #: ../shell/ev-window.c:6523
 msgid "Show odd pages on the left in dual mode"
-msgstr ""
+msgstr "Prikaži neparne stranice u prikazu dvije stranice na lijevoj strani"
 
 #: ../shell/ev-window.c:6525
 msgid "_Fullscreen"
@@ -1709,7 +1716,7 @@ msgstr "_Cijeli zaslon"
 
 #: ../shell/ev-window.c:6526
 msgid "Expand the window to fill the screen"
-msgstr ""
+msgstr "Povećaj prozor na cijeli zaslon"
 
 #: ../shell/ev-window.c:6528
 msgid "Pre_sentation"
@@ -1721,7 +1728,7 @@ msgstr "Pokreni dokument kao prezentaciju"
 
 #: ../shell/ev-window.c:6537
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "Invertirane _Boje"
 
 #: ../shell/ev-window.c:6538
 msgid "Show page contents with the colors inverted"
@@ -1825,7 +1832,7 @@ msgstr "Umanji"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6771
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Poništi uvećanje"
 
 #: ../shell/ev-window.c:6912 ../shell/ev-window.c:6928
 msgid "Unable to launch external application."
