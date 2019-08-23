@@ -1,3 +1,66 @@
+### atril 1.23.1
+
+  * update translations
+  * tx: sync with transifex
+  * Travis CI: 'cppcheck' with '-D__cplusplus'
+  * ev-view: Remove unused variables and assignment
+  * ev-page-action: avoid 'g_type_class_add_private'
+  * tiff: Handle failure from TIFFReadRGBAImageOriented
+  * view-presentation: Use monitor instead of screen
+  * shell: Use monitor instead of screen to determine window size
+  * ev-link: avoid 'g_type_class_add_private'
+  * ev-document: avoid 'g_type_class_add_private'
+  * ev-link-action: avoid 'g_type_class_add_private'
+  * ev-attachment: avoid 'g_type_class_add_private'
+  * ev-image: avoid 'g_type_class_add_private'
+  * ev-layer: avoid 'g_type_class_add_private'
+  * ev-link-dest: avoid 'g_type_class_add_private'
+  * ev-transition-effect: avoid 'g_type_class_add_private'
+  * egg-editable-toolbar: avoid 'g_type_class_add_private'
+  * egg-toolbar-editor: avoid 'g_type_class_add_private'
+  * egg-toolbars-model: avoid 'g_type_class_add_private'
+  * ev-link-accessible: avoid 'g_type_class_add_private'
+  * ev-timeline: avoid 'g_type_class_add_private'
+  * ev-form-field-accessible: avoid 'g_type_class_add_private'
+  * ev-image-accessible: avoid 'g_type_class_add_private'
+  * ev-transition-animation: avoid 'g_type_class_add_private'
+  * ev-page-accessible: avoid 'g_type_class_add_private'
+  * ev-view-accessible: avoid 'g_type_class_add_private'
+  * ev-sidebar-bookmarks: avoid 'g_type_class_add_private'
+  * ev-history: avoid 'g_type_class_add_private'
+  * ev-sidebar-layers: avoid 'g_type_class_add_private'
+  * eggfindbar: avoid 'g_type_class_add_private'
+  * ev-sidebar-links: avoid 'g_type_class_add_private'
+  * ev-sidebar-thumbnails: avoid 'g_type_class_add_private'
+  * ev-sidebar: avoid 'g_type_class_add_private'
+  * ev-sidebar-attachments: avoid 'g_type_class_add_private'
+  * ev-sidebar-annotations: avoid 'g_type_class_add_private'
+  * ev-progress-message-area: avoid 'g_type_class_add_private'
+  * ev-password-view: avoid 'g_type_class_add_private'
+  * ev-window: avoid 'g_type_class_add_private'
+  * ev-navigation-action: avoid 'g_type_class_add_private'
+  * ev-file-monitor: avoid 'g_type_class_add_private'
+  * ev-message-area: avoid 'g_type_class_add_private'
+  * shell: fix get_monitor_dpi when widget’s window is not realized
+  * DPI: compute monitor resolution or get screen resolution
+  * prevent segfaults when no document loaded
+  * require GLib 2.54.0
+  * Fix build warning on marshalling
+  * previewer-window: suppress GtkAction warnings
+  * sidebar-bookmarks: suppress GtkAction warnings
+  * ev-window: suppress GtkAction warnings
+  * ev-open-recent-action: suppress GtkAction warnings
+  * ev-navigation-action: suppress GtkAction warnings
+  * ev-bookmark-action: suppress GtkAction warnings
+  * ev-page-action: suppress GtkAction warnings
+  * egg-toolbar-editor: suppress GtkAction warnings
+  * egg-editable-toolbar: suppress GtkAction warnings
+  * egg-toolbar-editor{c/h}: tabs to spaces
+  * egg-editable-toolbar{c/h}: tabs to spaces
+  * ephy-zoom-action: suppress GtkAction warnings
+  * document: Replace deprecated gdk_color_equal
+  * Fix buffer overflow in backend/tiff-document.c
+
 ### atril 1.23.0
 
   * update translations
