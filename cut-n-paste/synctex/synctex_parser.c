@@ -83,6 +83,11 @@
  *  First level objects are sheets and forms, containing boxes, glues, kerns...
  *  The third tree allows to browse leaves according to tag and line.
  */
+
+#ifndef _GNU_SOURCE
+    #define _GNU_SOURCE
+#endif
+
 #   if defined(SYNCTEX_USE_LOCAL_HEADER)
 #       include "synctex_parser_local.h"
 #   else
