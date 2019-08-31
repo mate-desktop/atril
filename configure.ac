@@ -361,16 +361,14 @@ AM_CONDITIONAL([ENABLE_INTROSPECTION],[test "$enable_introspection" = "yes"])
 
 dnl ================== libsynctex ===========================================
 
-PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=system, has_synctex=internal)
+PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=yes, has_synctex=no)
 
 dnl not found? use internal code copy.
-if test "x$has_synctex" = "xinternal"; then
-	SYNCTEX_LIBS="\$(top_builddir)/cut-n-paste/synctex/libsynctex.la"
-	SYNCTEX_CFLAGS="-I\$(top_srcdir)/cut-n-paste/synctex"
+if test "x$has_synctex" = "xno"; then
+        AC_MSG_ERROR("SyncTeX support is disabled since library version $SYNCTEX_REQUIRED or newer not found")
 fi
 AC_SUBST(SYNCTEX_LIBS)
 AC_SUBST(SYNCTEX_CFLAGS)
-AM_CONDITIONAL(USE_INTERNAL_SYNCTEX, test x$has_synctex = xinternal)
 
 dnl ================== portability checks ===========================================
 
@@ -706,7 +704,6 @@ cut-n-paste/Makefile
 cut-n-paste/smclient/Makefile
 cut-n-paste/toolbar-editor/Makefile
 cut-n-paste/zoom-control/Makefile
-cut-n-paste/synctex/Makefile
 data/atril.desktop.in
 data/Makefile
 data/icons/Makefile
