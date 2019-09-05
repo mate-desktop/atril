@@ -1387,7 +1387,7 @@ monitor_get_dimesions (EvWindow *ev_window,
 static void
 setup_document_from_metadata (EvWindow *window)
 {
-	gint    page, n_pages;
+	gint    n_pages;
 	gint    width;
 	gint    height;
 	gdouble width_ratio;
@@ -1402,7 +1402,6 @@ setup_document_from_metadata (EvWindow *window)
 	 * since closing it on the last page most likely means the
 	 * user was finished reading the document. In that case, reopening should
 	 * show the first page. */
-	page = ev_document_model_get_page (window->priv->model);
 	n_pages = ev_document_get_n_pages (window->priv->document);
 
 	if (ev_metadata_get_int (window->priv->metadata, "window_width", &width) &&
