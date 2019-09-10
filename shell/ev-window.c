@@ -6601,7 +6601,7 @@ static const GtkActionEntry entries[] = {
 /* Toggle items */
 static const GtkToggleActionEntry toggle_entries[] = {
 	/* View Menu */
-	{ "ViewToolbar", NULL, N_("_Toolbar"), NULL,
+	{ "ViewToolbar", NULL, N_("_Toolbar"), "t",
 	  N_("Show or hide the toolbar"),
 	  G_CALLBACK (ev_window_view_toolbar_cb), TRUE },
         { "ViewSidebar", "gtk-index", N_("Side _Pane"), "F9",
