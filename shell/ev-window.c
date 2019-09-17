@@ -6613,7 +6613,7 @@ static const GtkToggleActionEntry toggle_entries[] = {
         { "ViewDual", EV_STOCK_VIEW_DUAL, N_("_Dual"), "d",
 	  N_("Show two pages at once"),
 	  G_CALLBACK (ev_window_cmd_dual), FALSE },
-	{ "ViewDualOddLeft", NULL, N_("_Odd pages left"), NULL,
+	{ "ViewDualOddLeft", NULL, N_("_Odd pages left"), "o",
 	  N_("Show odd pages on the left in dual mode"),
 	  G_CALLBACK (ev_window_cmd_dual_odd_pages_left), FALSE },
         { "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "F11",
