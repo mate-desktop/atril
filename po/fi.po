@@ -10,6 +10,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Eslam Ali <talvikahvi@gmail.com>, 2019
 # Ammuu5, 2019
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-22 23:29+0100\n"
 "PO-Revision-Date: 2019-03-11 11:43+0000\n"
-"Last-Translator: Ammuu5, 2019\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019\n"
 "Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -149,7 +150,7 @@ msgstr "ePub-tiedosto on korruptoitunut, ei säiliömuotoa"
 
 #: ../backend/epub/epub-document.c:969
 msgid "could not parse content manifest"
-msgstr ""
+msgstr "Sisältöluetteloa ei voi tulkita"
 
 #: ../backend/epub/epub-document.c:978
 msgid "content file is invalid"
@@ -157,15 +158,17 @@ msgstr "sisältötiedosto on virheellinen"
 
 #: ../backend/epub/epub-document.c:987
 msgid "epub file has no spine"
-msgstr ""
+msgstr "epub-tiedostolla ei ole rakennetta"
 
 #: ../backend/epub/epub-document.c:996
 msgid "epub file has no manifest"
-msgstr ""
+msgstr "EPUB-tiedostossa ei ole luetteloa"
 
 #: ../backend/epub/epub-document.c:1082
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
+"Asiakirjojen hakemistopuuta ei voitu määrittää lataamista varten, jotkin "
+"tiedostot puuttuvat"
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
@@ -261,11 +264,11 @@ msgstr "Virheellinen asiakirja"
 
 #: ../backend/tiff/tiffdocument.atril-backend.in.h:1
 msgid "Tiff Documents"
-msgstr ""
+msgstr "TIFF-dokumentit"
 
 #: ../backend/xps/xpsdocument.atril-backend.in.h:1
 msgid "XPS Documents"
-msgstr ""
+msgstr "XPS-dokumentit"
 
 #: ../libdocument/ev-attachment.c:304 ../libdocument/ev-attachment.c:325
 #, c-format
@@ -422,7 +425,7 @@ msgstr "Sovita leveyteen"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:51 ../shell/ev-window.c:6418
 msgid "Expand Window to Fit"
-msgstr ""
+msgstr "Laajenna ikkuna sopivaksi"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
@@ -525,31 +528,36 @@ msgstr "Automaattisesti uudelleenlataa asiakirja"
 
 #: ../data/org.mate.Atril.gschema.xml.h:4
 msgid "Whether the document is automatically reloaded on file change."
-msgstr ""
+msgstr "Ladataanko asiakirja automaattisesti uudelleen tiedoston muuttuessa."
 
 #: ../data/org.mate.Atril.gschema.xml.h:5
 msgid "The URI of the directory last used to open or save a document."
 msgstr ""
+"Asiakirjan avaamiseen tai tallentamiseen viimeksi käytetty hakemiston URI."
 
 #: ../data/org.mate.Atril.gschema.xml.h:6
 msgid "The URI of the directory last used to save a picture."
-msgstr ""
+msgstr "Kuvan tallentamiseen viimeksi käytetyn hakemiston URI."
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "Sivun välimuistin koko MiB"
 
 #: ../data/org.mate.Atril.gschema.xml.h:8
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
 msgstr ""
+"Enimmäiskoko, jota käytetään muokattujen sivujen välimuistiin, rajoittaa "
+"zoomauksen suurinta tasoa."
 
 #: ../data/org.mate.Atril.gschema.xml.h:9
 msgid ""
 "Show a dialog to confirm that the user wants to activate the caret "
 "navigation."
 msgstr ""
+"Näytä valintaikkuna, jolla varmistetaan, että käyttäjä haluaa aktivoida "
+"caret-navigoinnin."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -626,7 +634,7 @@ msgstr "Tulosta tämä asiakirja"
 
 #: ../previewer/ev-previewer-window.c:335 ../shell/ev-window.c:6531
 msgid "Fit Pa_ge"
-msgstr ""
+msgstr "Sovita si_vu"
 
 #: ../previewer/ev-previewer-window.c:336 ../shell/ev-window.c:6532
 msgid "Make the current document fill the window"
@@ -634,7 +642,7 @@ msgstr "Sovita nykyinen asiakirja ikkunan kokoiseksi"
 
 #: ../previewer/ev-previewer-window.c:338 ../shell/ev-window.c:6534
 msgid "Fit _Width"
-msgstr ""
+msgstr "Sovita _leveyteen"
 
 #: ../previewer/ev-previewer-window.c:339 ../shell/ev-window.c:6535
 msgid "Make the current document fill the window width"
@@ -758,7 +766,7 @@ msgstr "Atrilin ominaisuudet"
 
 #: ../properties/libatril-properties-page.caja-extension.in.h:2
 msgid "Shows details for Atril documents"
-msgstr ""
+msgstr "Näyttää Atril-asiakirjojen tiedot"
 
 #: ../libmisc/ev-page-action-widget.c:68
 #, c-format
@@ -993,7 +1001,7 @@ msgstr "Kappale"
 
 #: ../shell/ev-annotation-properties-dialog.c:108
 msgid "Insert"
-msgstr ""
+msgstr "Lisää"
 
 #: ../shell/ev-annotation-properties-dialog.c:109
 msgid "Cross"
@@ -1029,7 +1037,7 @@ msgstr "Läpinäkymätön"
 
 #: ../shell/ev-annotation-properties-dialog.c:208
 msgid "Initial window state:"
-msgstr ""
+msgstr "Aloitusikkuna:"
 
 #: ../shell/ev-annotation-properties-dialog.c:214
 msgid "Open"
@@ -1214,6 +1222,8 @@ msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
 msgstr ""
+"Esitystilaan ei voi siirtyä ePub-dokumenteilla, vaan käytä koko näytön "
+"tilaa."
 
 #: ../shell/ev-window.c:1740
 msgid "The document contains no pages"
@@ -1225,7 +1235,7 @@ msgstr "Asiakirja sisältää vain tyhjiä sivuja"
 
 #: ../shell/ev-window.c:1782
 msgid "Presentation mode is not supported for ePub documents."
-msgstr ""
+msgstr "Esitystila ei ole tuettu ePub-asiakirjoissa."
 
 #: ../shell/ev-window.c:1976 ../shell/ev-window.c:2144
 msgid "Unable to open document"
@@ -1299,7 +1309,7 @@ msgstr "Tallenna nimellä…"
 
 #: ../shell/ev-window.c:3292
 msgid "Could not send current document"
-msgstr ""
+msgstr "Nykyistä asiakirjaa ei voitu lähettää"
 
 #: ../shell/ev-window.c:3542
 #, c-format
@@ -1318,12 +1328,16 @@ msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
 msgstr ""
+"Asiakirja sisältää täytetyt lomakekentät. Jos et tallenna kopiota, muutokset"
+" menetetään pysyvästi."
 
 #: ../shell/ev-window.c:3836
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
+"Asiakirja sisältää uusia tai muokattuja merkintöjä. Jos et tallenna kopiota,"
+" muutokset menetetään pysyvästi."
 
 #: ../shell/ev-window.c:3843
 #, c-format
@@ -1336,7 +1350,7 @@ msgstr "Sulje _ilman tallennusta"
 
 #: ../shell/ev-window.c:3866 ../shell/ev-window.c:6368
 msgid "_Save As…"
-msgstr ""
+msgstr "_Tallenna nimellä..."
 
 #: ../shell/ev-window.c:3935
 #, c-format
@@ -1373,7 +1387,7 @@ msgstr "Suoritus esitystilassa"
 
 #: ../shell/ev-window.c:4410
 msgid "Presentation mode is not supported for ePub documents"
-msgstr ""
+msgstr "Esitystila ei ole tuettu ePub-asiakirjoissa"
 
 #: ../shell/ev-window.c:4724
 msgid "Toolbar Editor"
@@ -1394,11 +1408,11 @@ msgstr ""
 
 #: ../shell/ev-window.c:5308
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "MATE-dokumentointitiimi"
 
 #: ../shell/ev-window.c:5309
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "GNOME-dokumentointitiimi"
 
 #: ../shell/ev-window.c:5314
 msgid ""
@@ -1463,7 +1477,7 @@ msgstr "%3d %% haettavasta jäljellä"
 
 #: ../shell/ev-window.c:6019
 msgid "Enable caret navigation?"
-msgstr ""
+msgstr "Ota käyttöön caret-navigointi?"
 
 #: ../shell/ev-window.c:6021
 msgid "_Enable"
@@ -1475,6 +1489,9 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Näppäin F7 kääntää caret-navigoinnin päälle tai pois päältä. Tämä ominaisuus"
+" asettaa kohdistimen tekstisivuihin, jolloin voit liikkua ja valita tekstiä "
+"näppäimistöllä. Haluatko ottaa käyttöön caret-navigoinnin?"
 
 #: ../shell/ev-window.c:6029
 msgid "Don't show this message again"
@@ -1531,7 +1548,7 @@ msgstr "Lähetä _..."
 
 #: ../shell/ev-window.c:6372
 msgid "Send current document by mail, instant message..."
-msgstr ""
+msgstr "Lähetä nykyinen asiakirja sähköpostitse, pikaviestinä ..."
 
 #: ../shell/ev-window.c:6374
 msgid "_Print…"
@@ -1576,7 +1593,7 @@ msgstr "Tallenna nykyiset asetukset _oletusarvoiksi"
 
 #: ../shell/ev-window.c:6411
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Palauta zoomaus"
 
 #: ../shell/ev-window.c:6414
 msgid "_Reload"
@@ -1588,7 +1605,7 @@ msgstr "Lataa asiakirja uudestaan"
 
 #: ../shell/ev-window.c:6417
 msgid "_Expand Window to Fit"
-msgstr ""
+msgstr "_Laajenna ikkuna sopivaksi"
 
 #: ../shell/ev-window.c:6421
 msgid "Auto_scroll"
@@ -1680,11 +1697,11 @@ msgstr "Näytä kaksi sivua kerrallaan"
 
 #: ../shell/ev-window.c:6522
 msgid "_Odd pages left"
-msgstr ""
+msgstr "_Parittomat sivut jäljellä"
 
 #: ../shell/ev-window.c:6523
 msgid "Show odd pages on the left in dual mode"
-msgstr ""
+msgstr "Näytä paritomat sivut vasemmalla kaksoistilassa"
 
 #: ../shell/ev-window.c:6525
 msgid "_Fullscreen"
@@ -1704,7 +1721,7 @@ msgstr "Näytä asiakirja esityksenä"
 
 #: ../shell/ev-window.c:6537
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "Käänteiset_värit"
 
 #: ../shell/ev-window.c:6538
 msgid "Show page contents with the colors inverted"
@@ -1712,11 +1729,11 @@ msgstr "Näytä sivun sisältö käänteisillä väreillä"
 
 #: ../shell/ev-window.c:6540
 msgid "Caret _Navigation"
-msgstr ""
+msgstr "Caret-navigointi"
 
 #: ../shell/ev-window.c:6541
 msgid "Activate or disable caret-navigation"
-msgstr ""
+msgstr "Aktivoi tai poista caret-navigointi?"
 
 #. Links
 #: ../shell/ev-window.c:6549
@@ -1749,7 +1766,7 @@ msgstr "Merkinnän ominaisuudet…"
 
 #: ../shell/ev-window.c:6563
 msgid "Remove Annot…"
-msgstr ""
+msgstr "Poista merkintä…"
 
 #: ../shell/ev-window.c:6568
 msgid "_Open Attachment"
@@ -1808,7 +1825,7 @@ msgstr "Loitonna"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6771
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Nollaa zoomaus"
 
 #: ../shell/ev-window.c:6912 ../shell/ev-window.c:6928
 msgid "Unable to launch external application."
@@ -1857,7 +1874,7 @@ msgstr "MATEn asiakirjakatselin"
 
 #: ../shell/main.c:66
 msgid "The page label of the document to display."
-msgstr ""
+msgstr "Näytettävän sivun asiakirjan nimike."
 
 #: ../shell/main.c:66
 msgid "PAGE"
@@ -1865,7 +1882,7 @@ msgstr "SIVU"
 
 #: ../shell/main.c:67
 msgid "The page number of the document to display."
-msgstr ""
+msgstr "Näytettävän asiakirjan sivunumero."
 
 #: ../shell/main.c:67
 msgid "NUMBER"
@@ -1877,7 +1894,7 @@ msgstr "Suorita atril kokoruututilassa"
 
 #: ../shell/main.c:69
 msgid "Named destination to display."
-msgstr ""
+msgstr "Nimetty kohde näytettäväksi."
 
 #: ../shell/main.c:69
 msgid "DEST"

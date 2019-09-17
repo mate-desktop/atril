@@ -20,6 +20,8 @@
 # Tubuntu <tubuntu@testimonium.be>, 2019
 # Charles Monzat <c.monzat@laposte.net>, 2019
 # Étienne Deparis <etienne@depar.is>, 2019
+# Frédéric MASSOT <frederic@juliana-multimedia.com>, 2019
+# David D, 2019
 # 
 #, fuzzy
 msgid ""
@@ -28,7 +30,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-22 23:29+0100\n"
 "PO-Revision-Date: 2019-03-11 11:43+0000\n"
-"Last-Translator: Étienne Deparis <etienne@depar.is>, 2019\n"
+"Last-Translator: David D, 2019\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -277,11 +279,11 @@ msgstr "Document non valide"
 
 #: ../backend/tiff/tiffdocument.atril-backend.in.h:1
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Documents Tiff"
 
 #: ../backend/xps/xpsdocument.atril-backend.in.h:1
 msgid "XPS Documents"
-msgstr ""
+msgstr "Documents XPS"
 
 #: ../libdocument/ev-attachment.c:304 ../libdocument/ev-attachment.c:325
 #, c-format
@@ -1382,7 +1384,7 @@ msgstr "Fermer _sans enregistrer"
 
 #: ../shell/ev-window.c:3866 ../shell/ev-window.c:6368
 msgid "_Save As…"
-msgstr ""
+msgstr "_Enregistrer sous..."
 
 #: ../shell/ev-window.c:3935
 #, c-format
@@ -1446,7 +1448,7 @@ msgstr "Équipe de documentation MATE"
 
 #: ../shell/ev-window.c:5309
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "Équipe de Documentation GNOME"
 
 #: ../shell/ev-window.c:5314
 msgid ""
@@ -1455,6 +1457,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril est un logiciel libre ; vous pouvez le redistribuer et/ou le modifier "
+"selon les termes de la Licence Publique Générale GNU, telle que publiée par "
+"la Free Software Foundation ; version 2 de la licence, ou (à votre "
+"discrétion) toute version ultérieure."
 
 #: ../shell/ev-window.c:5318
 msgid ""
@@ -1463,6 +1469,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril est distribué dans l'espoir qu'il sera utile, mais SANS AUCUNE "
+"GARANTIE ; sans même la garantie implicite de VALEUR MARCHANDE ou "
+"D'ADÉQUATION À UN BESOIN PARTICULIER. Pour plus de détails, voir la Licence "
+"Publique Générale GNU."
 
 #: ../shell/ev-window.c:5322
 msgid ""
@@ -1470,16 +1480,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Un exemplaire de la Licence Publique Générale GNU doit être fourni avec "
+"Atril ; si ce n'est pas le cas, écrivez à la Free Software Foundation, Inc.,"
+" 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: ../shell/ev-window.c:5367
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "À propos du visionneur de documents Atril"
 
 #: ../shell/ev-window.c:5368
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"© 1996–2009 Les auteurs de Evince\n"
+"© 2012–2019 Les développeurs de MATE"
 
 #: ../shell/ev-window.c:5375
 msgid "translator-credits"
@@ -1532,6 +1547,10 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"L'appui sur F7 enclenche ou arrête la navigation au clavier. Cette "
+"fonctionnalité place un curseur mobile sur les pages de texte, vous "
+"permettant de vous déplacer ou de sélectionner du texte à l'aide de votre "
+"clavier. Souhaitez-vous activer la navigation au clavier ?"
 
 #: ../shell/ev-window.c:6029
 msgid "Don't show this message again"

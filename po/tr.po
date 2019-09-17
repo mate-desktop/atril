@@ -13,8 +13,9 @@
 # ismet asan <ismetasan70@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # tarakbumba <tarakbumba@gmail.com>, 2019
-# Butterfly <gokhanlnx@gmail.com>, 2019
 # mauron, 2019
+# Cenk Yıldızlı <goncagul@national.shitposting.agency>, 2019
+# Butterfly <gokhanlnx@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-22 23:29+0100\n"
 "PO-Revision-Date: 2019-03-11 11:43+0000\n"
-"Last-Translator: mauron, 2019\n"
+"Last-Translator: Butterfly <gokhanlnx@gmail.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1325,8 +1326,8 @@ msgstr "Güncel belge gönderilemedi"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " %d sırada bekleyen görev"
+msgstr[1] "%d sırada bekleyen görev"
 
 #: ../shell/ev-window.c:3655
 #, c-format
@@ -1377,7 +1378,11 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"%d adet etkin yazdırma işi var. Kapatmadan önce yazdırma bitmesi beklensin "
+"mi?"
 msgstr[1] ""
+"%d adet etkin yazdırma işi var. Kapatmadan önce yazdırma bitmesi beklensin "
+"mi?"
 
 #: ../shell/ev-window.c:3956
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1432,6 +1437,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril özgür yazılımdır; onu Özgür Yazılım Vakfı tarafından yayınlanan GNU "
+"Genel Kamu Lisansı 2. sürüm ya da (tercihen) güncel bir sürümünün şartları "
+"altında yeniden dağıtabilir ya da değiştirebilirsiniz."
 
 #: ../shell/ev-window.c:5318
 msgid ""
@@ -1440,6 +1448,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril faydalı olacağı umularak dağıtılmaktadır, fakat HİÇBİR GARANTİSİ "
+"YOKTUR; hatta ÜRÜN DEĞERİ ya da BİR AMACA UYGUNLUK gibi garantiler de "
+"vermez.  Lütfen GNU Genel Kamu Lisansını daha fazla detay için inceleyin."
 
 #: ../shell/ev-window.c:5322
 msgid ""
@@ -1447,16 +1458,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"GNU Genel Kamu Lisansınının bir kopyasını Atril ile birlikte almış "
+"olmalıydınız; aksi halde bu adrese yazılı olarak bildirin: Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: ../shell/ev-window.c:5367
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Atril Belge Görüntüleyici Hakkında"
 
 #: ../shell/ev-window.c:5368
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Tüm hakkı saklıdır © 1996–2009 Evince yazarları\n"
+"Tüm hakkı saklıdır © 2012–2019 MATE geliştiricileri "
 
 #: ../shell/ev-window.c:5375
 msgid "translator-credits"
@@ -1479,8 +1495,8 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Bu sayfada %d bulundu"
+msgstr[1] "Bu sayfada %d bulundu"
 
 #: ../shell/ev-window.c:5658
 msgid "Not found"
