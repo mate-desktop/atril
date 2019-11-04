@@ -1,6 +1,7 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS =       \
+    po          \
     cut-n-paste \
     data        \
     libdocument \
@@ -9,7 +10,6 @@ SUBDIRS =       \
     libmisc     \
     properties  \
     shell       \
-    po          \
     help
 
 if ENABLE_TESTS
@@ -39,24 +39,14 @@ header_DATA = \
     $(NULL)
 
 # Applications 
-
-intltool_extra = intltool-extract.in intltool-merge.in intltool-update.in
-
 EXTRA_DIST =            \
-    $(intltool_extra)   \
     $(header_DATA)      \
     autogen.sh
 
-DISTCLEANFILES =        \
-    intltool-extract    \
-    intltool-merge      \
-    intltool-update
+DISTCLEANFILES =
 
 MAINTAINERCLEANFILES =       \
     ChangeLog                \
-    intltool-extract         \
-    intltool-merge           \
-    intltool-update          \
     $(srcdir)/INSTALL        \
     $(srcdir)/aclocal.m4     \
     $(srcdir)/autoscan.log   \

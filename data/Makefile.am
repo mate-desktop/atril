@@ -21,13 +21,13 @@ ui_DATA =				\
 # Desktop file
 #
 
-@INTLTOOL_DESKTOP_RULE@
-
 DESKTOP_IN_FILES= atril.desktop.in.in
 DESKTOP_FILES= $(DESKTOP_IN_FILES:.desktop.in.in=.desktop)
 
 desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
+$(desktop_DATA): $(DESKTOP_IN_FILES)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 #
 # DBus servide file
@@ -44,10 +44,11 @@ endif
 #
 # App data file
 #
-@INTLTOOL_XML_NOMERGE_RULE@
 appdatadir = $(datadir)/metainfo
 appdata_in_files = atril.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+$(appdata_DATA): $(appdata_in_files)
+	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 #
 # GSettings schema
