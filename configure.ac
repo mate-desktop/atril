@@ -68,12 +68,13 @@ dnl FIXME: remove this when required gtk+ >= 2.19.7
 DISABLE_DEPRECATED=
 AC_SUBST([DISABLE_DEPRECATED])
 
-IT_PROG_INTLTOOL([0.50.1])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+AM_GNU_GETTEXT([external])
 
 GETTEXT_PACKAGE=atril
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Gettext package])
-AM_GLIB_GNU_GETTEXT
 
 m4_pattern_allow([AM_V_GEN])dnl Make autoconf not complain about the rule below
 EV_INTLTOOL_ATRIL_BACKEND_RULE='%.atril-backend:   %.atril-backend.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; $(AM_V_GEN) LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@'
@@ -744,7 +745,7 @@ libview/Makefile
 Makefile
 po/Makefile.in
 previewer/Makefile
-properties/libatril-properties-page.caja-extension.in
+properties/libatril-properties-page.caja-extension.desktop.in
 properties/Makefile
 shell/Makefile
 test/Makefile

@@ -22,13 +22,14 @@ libpdfdocument_la_LIBADD =				\
 	$(CAIRO_PDF_LIBS)				\
 	$(CAIRO_PS_LIBS)
 
-backend_in_files = pdfdocument.atril-backend.in
-backend_DATA = $(backend_in_files:.atril-backend.in=.atril-backend)
+backend_in_files = pdfdocument.atril-backend.desktop.in
+backend_DATA = $(backend_in_files:.atril-backend.desktop.in=.atril-backend)
 
 EXTRA_DIST = $(backend_in_files)
 
 CLEANFILES = $(backend_DATA)
 
-@EV_INTLTOOL_ATRIL_BACKEND_RULE@
+$(backend_DATA): $(backend_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=TypeDescription --template $< -d $(top_srcdir)/po -o $@
 
 -include $(top_srcdir)/git.mk

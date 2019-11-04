@@ -19,13 +19,13 @@ libxpsdocument_la_LIBADD =                             \
         $(BACKEND_LIBS)                 \
         $(GXPS_LIBS)
 
-backend_in_files = xpsdocument.atril-backend.in
-backend_DATA = $(backend_in_files:.atril-backend.in=.atril-backend)
+backend_in_files = xpsdocument.atril-backend.desktop.in
+backend_DATA = $(backend_in_files:.atril-backend.desktop.in=.atril-backend)
+$(backend_DATA): $(backend_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=TypeDescription --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST = $(backend_in_files)
 
 CLEANFILES = $(backend_DATA)
-
-@EV_INTLTOOL_ATRIL_BACKEND_RULE@
 
 -include $(top_srcdir)/git.mk
