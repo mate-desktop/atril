@@ -70,7 +70,6 @@ requires:
     - gcc
     - git
     - gobject-introspection
-    - intltool
     - itstool
     - libgxps
     - make
@@ -84,12 +83,12 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/atril
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - git
     - gobject-introspection
-    - intltool
     - libcaja-extension-dev
     - libdjvulibre-dev
     - libgail-3-dev
@@ -144,11 +143,11 @@ requires:
     - yelp-tools
 
   ubuntu:
+    - autopoint
     - clang
     - clang-tools
     - git
     - gobject-introspection
-    - intltool
     - libcaja-extension-dev
     - libdjvulibre-dev
     - libgail-3-dev
