@@ -137,6 +137,7 @@ static void
 ev_document_init (EvDocument *document)
 {
 	document->priv = ev_document_get_instance_private (document);
+	document->synctex_version = SYNCTEX_VERSION_STRING;
 
 	/* Assume all pages are the same size until proven otherwise */
 	document->priv->uniform = TRUE;

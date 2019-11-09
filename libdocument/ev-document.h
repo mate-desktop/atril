@@ -84,7 +84,8 @@ struct _EvDocument
 	 * Since we can only access the members of this structure from the window frontend,
 	 * we need a flag to detemine whether to replace the atril-view with a web-view.
 	 */
-	gboolean	iswebdocument;
+	gboolean iswebdocument;
+	const gchar *synctex_version;
 };
 
 struct _EvDocumentClass

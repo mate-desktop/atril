@@ -5368,8 +5368,8 @@ build_comments_string (EvDocument *document)
 
 	if (document && ev_document_get_backend_info (document, &info)) {
 		comments = g_strdup_printf (
-			_("Document Viewer\nUsing %s (%s)"),
-			info.name, info.version);
+			_("Document Viewer\nUsing %s (%s)\nand SyncTeX %s"),
+			info.name, info.version, document->synctex_version);
 	} else {
 		comments = g_strdup_printf (
 			_("Document Viewer"));
