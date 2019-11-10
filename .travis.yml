@@ -198,10 +198,6 @@ before_scripts:
   - fi
 
 build_scripts:
-  - if [ ${DISTRO_NAME} == "debian" ];then
-  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
-  -     bash ./debian.sh
-  - fi
   - ./autogen.sh
   - scan-build $CHECKERS ./configure
   - if [ $CPU_COUNT -gt 1 ]; then
