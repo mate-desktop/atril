@@ -40,9 +40,6 @@ struct _EvNavigationActionPrivate
 	EvHistory *history;
 };
 
-static void ev_navigation_action_init       (EvNavigationAction *action);
-static void ev_navigation_action_class_init (EvNavigationActionClass *class);
-
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 G_DEFINE_TYPE_WITH_PRIVATE (EvNavigationAction, ev_navigation_action, GTK_TYPE_ACTION)
 G_GNUC_END_IGNORE_DEPRECATIONS;

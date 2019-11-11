@@ -30,9 +30,6 @@ enum {
 	N_SIGNALS
 };
 
-static void ev_open_recent_action_init       (EvOpenRecentAction      *action);
-static void ev_open_recent_action_class_init (EvOpenRecentActionClass *class);
-
 static guint action_signals[N_SIGNALS] = { 0 };
 
 G_GNUC_BEGIN_IGNORE_DEPRECATIONS;

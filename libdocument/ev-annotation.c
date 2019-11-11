@@ -66,7 +66,6 @@ struct _EvAnnotationAttachmentClass {
 	EvAnnotationClass parent_class;
 };
 
-static void ev_annotation_markup_default_init          (EvAnnotationMarkupInterface *iface);
 static void ev_annotation_text_markup_iface_init       (EvAnnotationMarkupInterface *iface);
 static void ev_annotation_attachment_markup_iface_init (EvAnnotationMarkupInterface *iface);
 

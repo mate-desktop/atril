@@ -22,17 +22,6 @@
 #include <config.h>
 #include "ev-form-field.h"
 
-static void ev_form_field_init                 (EvFormField               *field);
-static void ev_form_field_class_init           (EvFormFieldClass          *klass);
-static void ev_form_field_text_init            (EvFormFieldText           *field_text);
-static void ev_form_field_text_class_init      (EvFormFieldTextClass      *klass);
-static void ev_form_field_button_init          (EvFormFieldButton         *field_button);
-static void ev_form_field_button_class_init    (EvFormFieldButtonClass    *klass);
-static void ev_form_field_choice_init          (EvFormFieldChoice         *field_choice);
-static void ev_form_field_choice_class_init    (EvFormFieldChoiceClass    *klass);
-static void ev_form_field_signature_init       (EvFormFieldSignature      *field_choice);
-static void ev_form_field_signature_class_init (EvFormFieldSignatureClass *klass);
-
 G_DEFINE_ABSTRACT_TYPE (EvFormField, ev_form_field, G_TYPE_OBJECT)
 G_DEFINE_TYPE (EvFormFieldText, ev_form_field_text, EV_TYPE_FORM_FIELD)
 G_DEFINE_TYPE (EvFormFieldButton, ev_form_field_button, EV_TYPE_FORM_FIELD)

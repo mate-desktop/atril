@@ -210,8 +210,6 @@ static void       on_adjustment_value_changed                (GtkAdjustment     
 /*** GObject ***/
 static void       ev_view_finalize                           (GObject            *object);
 static void       ev_view_dispose                            (GObject          *object);
-static void       ev_view_class_init                         (EvViewClass        *class);
-static void       ev_view_init                               (EvView             *view);
 
 /*** Zoom and sizing ***/
 static double   zoom_for_size_fit_width	 		     (gdouble doc_width,

@@ -38,9 +38,6 @@ struct _EvHistoryPrivate
 	GList *links;
 };
 
-static void ev_history_init       (EvHistory *history);
-static void ev_history_class_init (EvHistoryClass *class);
-
 G_DEFINE_TYPE_WITH_PRIVATE (EvHistory, ev_history, G_TYPE_OBJECT)
 
 static void

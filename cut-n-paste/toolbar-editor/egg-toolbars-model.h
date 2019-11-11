@@ -111,7 +111,6 @@ struct EggToolbarsItemType
                          const char          *data);
 };
 
-GType		  egg_tb_model_flags_get_type       (void);
 GType		  egg_toolbars_model_get_type       (void);
 EggToolbarsModel *egg_toolbars_model_new	    (void);
 gboolean          egg_toolbars_model_load_names     (EggToolbarsModel *model,

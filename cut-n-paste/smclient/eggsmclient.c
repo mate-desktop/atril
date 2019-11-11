@@ -25,8 +25,6 @@
 #include "eggsmclient.h"
 #include "eggsmclient-private.h"
 
-EggSMClient *egg_sm_client_xsmp_new (void);
-
 static void egg_sm_client_debug_handler (const char *log_domain,
 					 GLogLevelFlags log_level,
 					 const char *message,

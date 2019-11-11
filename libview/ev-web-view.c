@@ -81,8 +81,6 @@ static void       ev_web_view_page_changed_cb               (EvDocumentModel    
 static void       ev_web_view_dispose                       (GObject             *object);
 
 static void       ev_web_view_finalize						(GObject             *object);
-static void       ev_web_view_class_init                    (EvWebViewClass      *klass);
-static void       ev_web_view_init                          (EvWebView           *webview);
 
 G_DEFINE_TYPE (EvWebView, ev_web_view, WEBKIT_TYPE_WEB_VIEW)
 
