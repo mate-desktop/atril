@@ -62,9 +62,6 @@ struct _EvModule {
 
 typedef GType (*EvModuleRegisterFunc) (GTypeModule *);
 
-static void ev_module_init       (EvModule *action);
-static void ev_module_class_init (EvModuleClass *class);
-
 G_DEFINE_TYPE (EvModule, ev_module, G_TYPE_TYPE_MODULE)
 
 static gboolean

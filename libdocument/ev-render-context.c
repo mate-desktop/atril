@@ -20,10 +20,6 @@
 #include <config.h>
 #include "ev-render-context.h"
 
-static void ev_render_context_init       (EvRenderContext      *rc);
-static void ev_render_context_class_init (EvRenderContextClass *class);
-
-
 G_DEFINE_TYPE (EvRenderContext, ev_render_context, G_TYPE_OBJECT);
 
 static void ev_render_context_init (EvRenderContext *rc) { /* Do Nothing */ }

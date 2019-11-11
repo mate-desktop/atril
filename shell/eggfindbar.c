@@ -60,7 +60,6 @@ static void egg_find_bar_set_property  (GObject        *object,
                                         GParamSpec     *pspec);
 static void egg_find_bar_show          (GtkWidget *widget);
 static void egg_find_bar_hide          (GtkWidget *widget);
-void egg_find_bar_grab_focus    (GtkWidget *widget);
 
 G_DEFINE_TYPE_WITH_PRIVATE (EggFindBar, egg_find_bar, GTK_TYPE_TOOLBAR);
 

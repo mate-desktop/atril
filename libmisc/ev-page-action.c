@@ -37,10 +37,6 @@ struct _EvPageActionPrivate
 	GtkTreeModel *model;
 };
 
-
-static void ev_page_action_init       (EvPageAction *action);
-static void ev_page_action_class_init (EvPageActionClass *class);
-
 enum
 {
 	ACTIVATE_LINK,

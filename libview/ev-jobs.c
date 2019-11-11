@@ -49,33 +49,6 @@
 #include <glib/gi18n-lib.h>
 #include <unistd.h>
 
-static void ev_job_init                   (EvJob                 *job);
-static void ev_job_class_init             (EvJobClass            *class);
-static void ev_job_links_init             (EvJobLinks            *job);
-static void ev_job_links_class_init       (EvJobLinksClass       *class);
-static void ev_job_attachments_init       (EvJobAttachments      *job);
-static void ev_job_attachments_class_init (EvJobAttachmentsClass *class);
-static void ev_job_annots_init            (EvJobAnnots           *job);
-static void ev_job_annots_class_init      (EvJobAnnotsClass      *class);
-static void ev_job_render_init            (EvJobRender           *job);
-static void ev_job_render_class_init      (EvJobRenderClass      *class);
-static void ev_job_page_data_init         (EvJobPageData         *job);
-static void ev_job_page_data_class_init   (EvJobPageDataClass    *class);
-static void ev_job_thumbnail_init         (EvJobThumbnail        *job);
-static void ev_job_thumbnail_class_init   (EvJobThumbnailClass   *class);
-static void ev_job_load_init              (EvJobLoad	         *job);
-static void ev_job_load_class_init 	      (EvJobLoadClass	     *class);
-static void ev_job_save_init              (EvJobSave             *job);
-static void ev_job_save_class_init        (EvJobSaveClass        *class);
-static void ev_job_find_init              (EvJobFind             *job);
-static void ev_job_find_class_init        (EvJobFindClass        *class);
-static void ev_job_layers_init            (EvJobLayers           *job);
-static void ev_job_layers_class_init      (EvJobLayersClass      *class);
-static void ev_job_export_init            (EvJobExport           *job);
-static void ev_job_export_class_init      (EvJobExportClass      *class);
-static void ev_job_print_init             (EvJobPrint            *job);
-static void ev_job_print_class_init       (EvJobPrintClass       *class);
-
 enum {
 	CANCELLED,
 	FINISHED,

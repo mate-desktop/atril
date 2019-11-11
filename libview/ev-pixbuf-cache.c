@@ -81,8 +81,6 @@ enum
 
 static guint signals[N_SIGNALS] = {0, };
 
-static void          ev_pixbuf_cache_init       (EvPixbufCache      *pixbuf_cache);
-static void          ev_pixbuf_cache_class_init (EvPixbufCacheClass *pixbuf_cache);
 static void          ev_pixbuf_cache_finalize   (GObject            *object);
 static void          ev_pixbuf_cache_dispose    (GObject            *object);
 static void          job_finished_cb            (EvJob              *job,

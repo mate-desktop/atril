@@ -46,10 +46,6 @@ enum
 	PROP_MAX_ZOOM
 };
 
-
-static void ephy_zoom_action_init       (EphyZoomAction *action);
-static void ephy_zoom_action_class_init (EphyZoomActionClass *class);
-
 enum
 {
 	ZOOM_TO_LEVEL_SIGNAL,

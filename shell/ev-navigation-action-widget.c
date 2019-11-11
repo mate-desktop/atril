@@ -23,8 +23,6 @@
 #include <glib/gi18n.h>
 #include <string.h>
 
-static void  ev_navigation_action_widget_init       (EvNavigationActionWidget      *action_widget);
-static void  ev_navigation_action_widget_class_init (EvNavigationActionWidgetClass *action_widget);
 static void ev_navigation_action_widget_toggled (GtkToggleToolButton *toggle);
 static gboolean ev_navigation_action_widget_button_press_event (GtkWidget *widget,
         	        	        		        GdkEventButton    *event,

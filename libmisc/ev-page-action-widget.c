@@ -28,10 +28,6 @@
 #include "ev-page-action.h"
 #include "ev-page-action-widget.h"
 
-/* Widget we pass back */
-static void  ev_page_action_widget_init       (EvPageActionWidget      *action_widget);
-static void  ev_page_action_widget_class_init (EvPageActionWidgetClass *action_widget);
-
 enum
 {
 	WIDGET_ACTIVATE_LINK,
