@@ -789,13 +789,12 @@ view_update_range_and_current_page (EvView *view)
 		ev_view_check_cursor_blink (view);
 	}
 
-	#define PAGE_CACHE_NUMBER  10
 	ev_page_cache_set_page_range (view->page_cache,
-				      MAX(view->start_page - PAGE_CACHE_NUMBER, 0),
-				      MIN(view->end_page + PAGE_CACHE_NUMBER, ev_document_get_n_pages (view->document) - 1));
+				      view->start_page,
+				      view->end_page);
 	ev_pixbuf_cache_set_page_range (view->pixbuf_cache,
-					MAX(view->start_page - PAGE_CACHE_NUMBER, 0),
-					MIN(view->end_page + PAGE_CACHE_NUMBER, ev_document_get_n_pages (view->document) - 1),
+					view->start_page,
+					view->end_page,
 					view->selection_info.selections);
 	if (view->accessible)
 		ev_view_accessible_set_page_range (EV_VIEW_ACCESSIBLE (view->accessible),
