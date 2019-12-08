@@ -9,7 +9,6 @@
 # Mario Verdin <jmvl1303@gmail.com>, 2019
 # seacat <seacat.linux@gmail.com>, 2019
 # Lluís Tusquellas <lutusq@gmail.com>, 2019
-# elio <micta2003@hotmail.com>, 2019
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2019
 # difusion, 2019
 # Miguel de Dios Matias <tres.14159@gmail.com>, 2019
@@ -43,13 +42,13 @@ msgstr ""
 msgid ""
 "Error launching the command “%s” in order to decompress the comic book: %s"
 msgstr ""
-"Se ha producido un error al iniciar la orden «%s» para descomprimir el libro"
-" de cómics: %s"
+"Se ha producido un error al iniciar la orden «%s» para descomprimir el "
+"cómic: %s"
 
 #: ../backend/comics/comics-document.c:222
 #, c-format
 msgid "The command “%s” failed at decompressing the comic book."
-msgstr "La orden «%s» no ha podido descomprimir el libro de cómics."
+msgstr "La orden «%s» no ha podido descomprimir el cómic."
 
 #: ../backend/comics/comics-document.c:231
 #, c-format
@@ -59,14 +58,14 @@ msgstr "La orden «%s» no ha finalizado normalmente."
 #: ../backend/comics/comics-document.c:459
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr "No es un tipo MIME de Libro de cómics: %s"
+msgstr "No es el tipo MIME de un cómic: %s"
 
 #: ../backend/comics/comics-document.c:466
 msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr ""
-"No se puede encontrar una orden apropiado para descomprimir este tipo de "
-"libro de cómics"
+"No se puede encontrar una orden apropiada para descomprimir este tipo de "
+"cómics"
 
 #: ../backend/comics/comics-document.c:540 ../backend/epub/epub-document.c:632
 #: ../libdocument/ev-document-factory.c:143
@@ -100,7 +99,7 @@ msgstr "Error %s"
 
 #: ../backend/comics/comicsdocument.atril-backend.in.h:1
 msgid "Comic Books"
-msgstr "Libros de cómics"
+msgstr "Cómics"
 
 #: ../backend/djvu/djvu-document.c:173
 msgid "DjVu document has incorrect format"
@@ -136,11 +135,11 @@ msgstr "no se ha podido obtener el nombre del archivo"
 
 #: ../backend/epub/epub-document.c:778
 msgid "could not open archive"
-msgstr "no se ha podido abrir el archivador"
+msgstr "No se ha podido abrir el archivador"
 
 #: ../backend/epub/epub-document.c:794 ../backend/epub/epub-document.c:810
 msgid "could not extract archive"
-msgstr "no se ha podido extraer el archivador"
+msgstr "No se ha podido extraer el archivador"
 
 #: ../backend/epub/epub-document.c:842 ../backend/epub/epub-document.c:925
 msgid "could not retrieve container file"
@@ -232,7 +231,7 @@ msgstr "TrueType (CID)"
 
 #: ../backend/pdf/ev-poppler.cc:920
 msgid "Unknown font type"
-msgstr "Tipo de letra en formato desconocido"
+msgstr "Tipografía con formato desconocido"
 
 #: ../backend/pdf/ev-poppler.cc:946
 msgid "No name"
@@ -467,7 +466,7 @@ msgstr "150 %"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:59
 msgid "175%"
-msgstr "175 %"
+msgstr "175%"
 
 #: ../cut-n-paste/zoom-control/ephy-zoom.h:60
 msgid "200%"
@@ -513,12 +512,12 @@ msgid ""
 " home page. </p>"
 msgstr ""
 "<p> Atril es un visor de documentos sencillo. Puede mostrar e imprimir "
-"documentos en PostScript (PS), PostScript encapsulado (EPS), DJVU, DVI, XPS "
-"y PDF, así como archivadores de cómics. Cuando el documento lo admita, "
-"también permite buscar en el texto, copiarlo en el portapapeles y navegar "
-"mediante hiperenlaces y marcadores de secciones. </p> <p> Atril es una "
-"bifurcación de Evince y es parte del entorno de escritorio MATE. Para saber "
-"más sobre MATE y Atril, visite el sitio web del proyecto. </p>"
+"documentos PostScript (PS), PostScript encapsulado (EPS), DJVU, DVI, XPS y "
+"PDF, así como archivadores de cómic. Cuando el documento lo admita, también "
+"permite buscar en el texto, copiarlo en el portapapeles y navegar mediante "
+"hiperenlaces y marcadores de secciones. </p> <p> Atril es una bifurcación de"
+" Evince y es parte del entorno de escritorio MATE. Para saber más sobre MATE"
+" y Atril, visite el sitio web del proyecto. </p>"
 
 #: ../data/atril.desktop.in.in.h:1 ../shell/ev-window.c:5365
 msgid "Atril Document Viewer"
@@ -1454,7 +1453,7 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
-"Atril es software libre: puede redistribuirlo y/o modificarlo bajo los "
+"Atril es software libre: puede redistribuirlo y/o modificarlo según los "
 "términos de la Licencia Pública General de GNU publicada por la Free "
 "Software Foundation; ya sea la versión 2 de la Licencia o (a su elección) "
 "cualquier versión posterior."
@@ -1466,10 +1465,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Atril se distribuye con la esperanza de que será útil, pero SIN NINGUNA "
+"Atril se distribuye con la esperanza de que sea útil, pero SIN NINGUNA "
 "GARANTÍA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD "
 "PARA UN PROPÓSITO PARTICULAR. Consulte la Licencia Pública General de GNU "
-"para más detalles."
+"para obtener más detalles."
 
 #: ../shell/ev-window.c:5322
 msgid ""
@@ -1477,8 +1476,8 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
-"Debería haber recibido una copia de la Licencia Pública General de GNU junto"
-" con Atril; si no es así, escriba a la Free Software Foundation, Inc., 51 "
+"Debería haber recibido una copia de la Licencia Pública General de GNU con "
+"Atril; si no es así, escriba a la Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../shell/ev-window.c:5367
@@ -1496,6 +1495,7 @@ msgstr ""
 #: ../shell/ev-window.c:5375
 msgid "translator-credits"
 msgstr ""
+"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
 "Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"

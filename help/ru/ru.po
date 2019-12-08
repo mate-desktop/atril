@@ -5,7 +5,7 @@
 # Артур Мальцев <arturiosboss@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Aleksey Kabanov <ak099@mail.ru>, 2019
-# monsta <monsta@inbox.ru>, 2019
+# Vlad Orlov <monsta@inbox.ru>, 2019
 # Alex Putz, 2019
 # Olesya Gerasimenko <gammaray@basealt.ru>, 2019
 # 
@@ -62,7 +62,7 @@ msgstr ""
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:25
 msgid "Atril Document Viewer Manual"
-msgstr ""
+msgstr "Руководство по работе с просмотрщиком документов Atril"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:27
@@ -83,7 +83,7 @@ msgstr "<year>2019</year> <holder>Проект документирования 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:36
 msgid "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
-msgstr ""
+msgstr "<year>2005</year> <holder>Николай В. Шмырёв</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:40
@@ -214,6 +214,8 @@ msgid ""
 "<firstname>MATE Documentation Project</firstname> <surname/> "
 "<affiliation><orgname>MATE Desktop</orgname></affiliation>"
 msgstr ""
+"<firstname>Проект документирования MATE</firstname> <surname/> "
+"<affiliation><orgname>Рабочий стол MATE</orgname></affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:70
@@ -231,6 +233,9 @@ msgid ""
 " <orgname>GNOME Documentation Project</orgname> <address> "
 "<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
 msgstr ""
+"<firstname>Николай В. </firstname> <surname>Шмырёв</surname> <affiliation> "
+"<orgname>Проект документирования GNOME</orgname> <address> "
+"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:103
@@ -243,6 +248,8 @@ msgid ""
 "<revnumber>Atril Document Viewer Manual V1.2</revnumber> <date>July "
 "2015</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>Руководство по работе с просмотрщиком документов Atril, версия "
+"1.2</revnumber> <date>Июль 2015 г.</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:111
@@ -260,11 +267,13 @@ msgid ""
 "<revnumber>Atril Document Viewer Manual V1.1</revnumber> "
 "<date>2008-04-05</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>Руководство по работе с просмотрщиком документов Atril, версия "
+"1.1</revnumber> <date>2008-04-05</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:120
 msgid "Nickolay V. Shmyrev"
-msgstr ""
+msgstr "Николай В. Шмырёв"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:116
@@ -272,11 +281,15 @@ msgid ""
 "<revnumber>Atril Document Viewer Manual V1.0</revnumber> "
 "<date>2005-04-06</date> <_:revdescription-1/>"
 msgstr ""
+"<revnumber>Руководство по работе с просмотрщиком документов Atril, версия "
+"1.0</revnumber> <date>2006-04-06</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:126
 msgid "This manual describes version 1.10.1 of Atril Document Viewer"
 msgstr ""
+"В этом руководстве описана работа с просмотрщиком документов Atril версии "
+"1.10.1"
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:129
@@ -290,11 +303,15 @@ msgid ""
 "application or this manual, follow the directions in the <ulink url=\"help"
 ":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
+"Чтобы сообщить об ошибке или внести предложение, связанное с просмотрщиком "
+"документов Atril или этим руководством, следуйте инструкциям на <ulink "
+"url=\"help:mate-user-guide/feedback\" type=\"help\">странице обратной связи "
+"MATE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:136
 msgid "<primary>Atril Document Viewer</primary>"
-msgstr ""
+msgstr "<primary>Просмотрщик документов Atril</primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:139
@@ -315,6 +332,11 @@ msgid ""
 " follows Freedesktop.org and MATE standards to provide integration with "
 "Desktop Environment."
 msgstr ""
+"<application>Просмотрщик документов Atril</application> позволяет "
+"просматривать документы различных форматов, в том числе файлы Portable "
+"Document Format (PDF) и файлы PostScript. <application>Просмотрщик "
+"документов Atril</application> соответствует стандартам Freedesktop.org и "
+"MATE, что обеспечивает интеграцию со средой рабочего стола."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:156
@@ -324,7 +346,7 @@ msgstr "Начало работы"
 #. (itstool) path: sect2/title
 #: C/index.docbook:159
 msgid "To Start Atril Document Viewer"
-msgstr ""
+msgstr "Запуск просмотрщика документов Atril"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:160
@@ -332,6 +354,8 @@ msgid ""
 "<application>Atril Document Viewer</application> starts when you open a "
 "document such as a PDF or PostScript file."
 msgstr ""
+"<application>Просмотрщик документов Atril</application> запускается при "
+"открытии документа в формате PDF или файла PostScript."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:161
@@ -340,11 +364,14 @@ msgid ""
 "Viewer</application> from the command line, with the command: "
 "<command>atril</command>."
 msgstr ""
+"Кроме того, <application>просмотрщик документов Atril</application> можно "
+"запустить из командной строки. Используйте для этого следующую команду: "
+"<command>atril</command>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:166
 msgid "When You Start Atril Document Viewer"
-msgstr ""
+msgstr "При запуске просмотрщика документов Atril"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:167
@@ -352,11 +379,13 @@ msgid ""
 "When you start <application>Atril Document Viewer</application>, the "
 "following window is displayed."
 msgstr ""
+"При запуске <application>просмотрщика документов Atril</application> "
+"отображается следующее окно."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:171
 msgid "Atril Document Viewer Window"
-msgstr ""
+msgstr "Окно просмотрщика документов Atril"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -369,6 +398,8 @@ msgid ""
 "external ref='figures/atril_start_window.png' "
 "md5='475a06bdb579c94e4f07d99ae3098e9c'"
 msgstr ""
+"external ref='figures/atril_start_window.png' "
+"md5='475a06bdb579c94e4f07d99ae3098e9c'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:173
@@ -379,6 +410,11 @@ msgid ""
 "Menubar contains File, Edit, View, Go and Help menus. </phrase> "
 "</textobject>"
 msgstr ""
+"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Главное окно "
+"просмотрщика документов. Содержит строку заголовка, строку меню, панель "
+"инструментов и область отображения. Строка меню содержит меню «Файл», "
+"«Правка», «Вид», «Переход» и «Справка». </phrase> </textobject>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:184
@@ -386,6 +422,8 @@ msgid ""
 "The <application>Atril Document Viewer</application> window contains the "
 "following elements:"
 msgstr ""
+"Окно <application>просмотрщика документов Atril</application> содержит "
+"следующие элементы:"
 
 #. (itstool) path: varlistentry/term
 #. (itstool) path: entry/para
@@ -399,6 +437,9 @@ msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
 msgstr ""
+"Меню в строке меню содержат все команды, которые требуются пользователю для "
+"работы с документами в <application>просмотрщике документов "
+"Atril</application>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:194
@@ -411,6 +452,8 @@ msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
 msgstr ""
+"Панель инструментов содержит ряд команд, которые также доступны в строке "
+"меню."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:200
@@ -443,6 +486,9 @@ msgid ""
 "Drag a file into the <application>Atril Document Viewer</application> window"
 " from another application such as a file manager."
 msgstr ""
+"Перетащите файл в окно <application>просмотрщика документов "
+"Atril</application> из другого приложения (например, из файлового "
+"менеджера)."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:230
@@ -475,6 +521,9 @@ msgid ""
 "same action in several ways. For example, you can open a document in the "
 "following ways: <_:informaltable-1/>"
 msgstr ""
+"В <application>просмотрщике документов Atril</application> одно и то же "
+"действие можно выполнить несколькими способами. Например, можно открыть "
+"документ следующим образом: <_:informaltable-1/>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:248
@@ -511,6 +560,8 @@ msgid ""
 "In the <guilabel>Open Document</guilabel> dialog, select the file you want "
 "to open."
 msgstr ""
+"В диалоге <guilabel>Открыть документ</guilabel> выберите файл, который "
+"следует открыть."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:273
@@ -519,6 +570,9 @@ msgid ""
 "Viewer</application> displays the name of the document in the titlebar of "
 "the window."
 msgstr ""
+"Нажмите кнопку <guibutton>Открыть</guibutton>. <application>Просмотрщик "
+"документов Atril</application> отобразит название документа в строке "
+"заголовка окна."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:278
@@ -528,6 +582,10 @@ msgid ""
 "<application>Atril Document Viewer</application> opens each file in a new "
 "window."
 msgstr ""
+"Чтобы открыть другой документ, снова выберите <menuchoice> "
+"<guimenu>Файл</guimenu><guimenuitem>Открыть</guimenuitem> </menuchoice>. "
+"<application>Просмотрщик документов Atril</application> открывает каждый "
+"файл в отдельном окне."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:281
@@ -536,16 +594,18 @@ msgid ""
 "Viewer</application> does not recognize, the application displays an error "
 "message."
 msgstr ""
+"При попытке открыть документ, формат которого <application>просмотрщик "
+"документов Atril</application> не распознаёт, появится сообщение об ошибке."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:287
 msgid "To Navigate Through a Document"
-msgstr ""
+msgstr "Перемещение по документу"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:288
 msgid "You can navigate through a file as follows:"
-msgstr ""
+msgstr "Можно перемещаться по файлу следующим образом:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:291
@@ -553,6 +613,8 @@ msgid ""
 "To view the next page, choose <menuchoice> <guimenu>Go</guimenu> "
 "<guimenuitem>Next Page</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы просмотреть следующую страницу, выберите <menuchoice> "
+"<guimenu>Переход</guimenu> <guimenuitem>Вперёд</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:295
@@ -560,6 +622,8 @@ msgid ""
 "To view the previous page, choose <menuchoice> <guimenu>Go</guimenu> "
 "<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы просмотреть предыдущую страницу, выберите <menuchoice> "
+"<guimenu>Переход</guimenu> <guimenuitem>Назад</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:299
@@ -567,6 +631,8 @@ msgid ""
 "To view the first page in the document, choose <menuchoice> "
 "<guimenu>Go</guimenu> <guimenuitem>First Page</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы просмотреть первую страницу документа, выберите <menuchoice> "
+"<guimenu>Переход</guimenu> <guimenuitem>Начало</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:303
@@ -574,6 +640,8 @@ msgid ""
 "To view the last page in the document, choose <menuchoice> "
 "<guimenu>Go</guimenu> <guimenuitem>Last Page</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы просмотреть последнюю страницу документа, выберите <menuchoice> "
+"<guimenu>Переход</guimenu> <guimenuitem>Конец</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:307
@@ -581,11 +649,13 @@ msgid ""
 "To view a particular page, enter the page number or page label in the text "
 "box on the toolbar, then press <keycap>Return</keycap>."
 msgstr ""
+"Чтобы просмотреть определённую страницу, введите её номер или метку в "
+"текстовом поле на панели инструментов и нажмите <keycap>Ввод</keycap>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:314
 msgid "To Scroll a Page"
-msgstr ""
+msgstr "Прокрутка страницы"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:315
@@ -593,11 +663,13 @@ msgid ""
 "To display the page contents that are not currently displayed in the display"
 " area, use the following methods:"
 msgstr ""
+"Чтобы просмотреть содержимое страницы, которое в данный момент находится вне"
+" области отображения, сделайте следующее:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:318
 msgid "Use the arrow keys or space key on the keyboard."
-msgstr ""
+msgstr "Используйте клавиши со стрелками или клавишу «Пробел» на клавиатуре."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:321
@@ -606,6 +678,10 @@ msgid ""
 "the document and then moving the mouse. For example, to scroll down the "
 "page, drag the display area upwards in the window."
 msgstr ""
+"Перетащите область отображения — щёлкните в любом месте документа средней "
+"кнопкой мыши и перемещайте мышь, удерживая эту кнопку нажатой. Например, "
+"чтобы прокрутить страницу вниз, в окне следует перетащить область "
+"отображения вверх."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:324
@@ -615,7 +691,7 @@ msgstr "Используйте полосы прокрутки окна."
 #. (itstool) path: sect2/title
 #: C/index.docbook:331
 msgid "To Change the Page Size"
-msgstr ""
+msgstr "Изменение размера страницы"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:332
@@ -623,6 +699,8 @@ msgid ""
 "You can use the following methods to resize a page in the <application>Atril"
 " Document Viewer</application> display area:"
 msgstr ""
+"Изменить размер страницы в области отображения <application>просмотрщика "
+"документов Atril</application> можно следующими способами:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:337
@@ -630,6 +708,8 @@ msgid ""
 "To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
 "<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы увеличить размер страницы, выберите <menuchoice> "
+"<guimenu>Вид</guimenu> <guimenuitem>Увеличить</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:342
@@ -637,6 +717,8 @@ msgid ""
 "To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
 "<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы уменьшить размер страницы, выберите <menuchoice> "
+"<guimenu>Вид</guimenu> <guimenuitem>Уменьшить</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:347
@@ -646,6 +728,10 @@ msgid ""
 "<guimenu>View</guimenu> <guimenuitem>Fit page width</guimenuitem> "
 "</menuchoice>."
 msgstr ""
+"Чтобы изменить размер страницы, установив для неё ширину, совпадающую с "
+"шириной области отображения <application>просмотрщика документов "
+"Atril</application>, выберите <menuchoice> <guimenu>Вид</guimenu> "
+"<guimenuitem>По ширине страницы</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:352
@@ -654,6 +740,10 @@ msgid ""
 "Viewer</application> display area, choose <menuchoice> "
 "<guimenu>View</guimenu> <guimenuitem>Best Fit</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы изменить размер страницы, уместив её в пределах области отображения "
+"<application>просмотрщика документов Atril</application>, выберите "
+"<menuchoice> <guimenu>Вид</guimenu> <guimenuitem>Уместить в "
+"окне</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:357
@@ -665,16 +755,22 @@ msgid ""
 "Viewer</application> window to the original size, click on the "
 "<guibutton>Exit Full Screen</guibutton> button."
 msgstr ""
+"Чтобы изменить размер окна <application>просмотрщика документов "
+"Atril</application> на соответствующий ширине и высоте экрана, выберите "
+"<menuchoice> <guimenu>Вид</guimenu> <guimenuitem>Полноэкранный "
+"режим</guimenuitem> </menuchoice>. Чтобы восстановить исходный размер окна "
+"<application>просмотрщика документов Atril</application>, нажмите кнопку "
+"<guibutton>Выйти из полноэкранного режима</guibutton>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:365
 msgid "To View Pages or Document Structure"
-msgstr ""
+msgstr "Просмотр страниц или структуры документа"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:366
 msgid "To view bookmarks or pages, perform the following steps:"
-msgstr ""
+msgstr "Чтобы просмотреть закладки или страницы, сделайте следующее:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:370
@@ -683,6 +779,8 @@ msgid ""
 "<guimenuitem>Sidebar</guimenuitem> </menuchoice> or press "
 "<keycap>F9</keycap>."
 msgstr ""
+"Выберите <menuchoice> <guimenu>Вид</guimenu> <guimenuitem>Боковая "
+"панель</guimenuitem> </menuchoice> или нажмите <keycap>F9</keycap>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:375
@@ -690,6 +788,8 @@ msgid ""
 "Use the drop-down list in the side-pane header to select whether to display "
 "document structure or pages in the side pane."
 msgstr ""
+"В раскрывающемся списке заголовка боковой панели можно выбрать, что следует "
+"отображать в боковой панели — структуру документа или страницы."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:380
@@ -697,6 +797,8 @@ msgid ""
 "Use the side-pane scrollbars to display the required item or page in the "
 "side pane."
 msgstr ""
+"Используйте полосы прокрутки боковой панели, чтобы отобразить в боковой "
+"панели нужный элемент или страницу."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:385
@@ -704,11 +806,13 @@ msgid ""
 "Click on an entry to navigate to that location in the document. Click on a "
 "page to navigate to that page in the document."
 msgstr ""
+"Щёлкните по элементу, чтобы перейти к соответствующему месту документа. "
+"Щёлкните по странице, чтобы перейти к соответствующей странице документа."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:391
 msgid "To View the Properties of a Document"
-msgstr ""
+msgstr "Просмотр свойств документа"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:392
@@ -716,6 +820,8 @@ msgid ""
 "To view the properties of a document, choose <menuchoice> "
 "<guimenu>File</guimenu> <guimenuitem>Properties</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы просмотреть свойства документа, выберите <menuchoice> "
+"<guimenu>Файл</guimenu> <guimenuitem>Свойства</guimenuitem> </menuchoice>."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:398
@@ -723,11 +829,13 @@ msgid ""
 "The <guilabel>Properties</guilabel> dialog displays all information "
 "available"
 msgstr ""
+"В диалоге <guilabel>Свойства</guilabel> отображается вся доступная "
+"информация."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:404
 msgid "To Print a Document"
-msgstr ""
+msgstr "Печать документа"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:405
@@ -735,6 +843,8 @@ msgid ""
 "To print a Document, choose <menuchoice> <guimenu>File</guimenu> "
 "<guimenuitem>Print</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы отправить документ на печать, выберите <menuchoice> "
+"<guimenu>Файл</guimenu> <guimenuitem>Печать</guimenuitem> </menuchoice>."
 
 #. (itstool) path: note/para
 #: C/index.docbook:409
@@ -745,27 +855,34 @@ msgid ""
 "the document. See <xref linkend=\"atril-password\"/> for more information "
 "about password-protected files."
 msgstr ""
+"Если элемент меню <guimenuitem>Печать</guimenuitem> недоступен для выбора, "
+"это означает, что автор документа отключил опцию печати для этого документа."
+" Чтобы включить опцию печати, при открытии документа необходимо ввести "
+"основной пароль. Более подробные сведения о файлах, которые защищены "
+"паролем, доступны в разделе <xref linkend=\"atril-password\"/>."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:413
 msgid ""
 "The <guilabel>Print</guilabel> dialog has the following tabbed sections:"
 msgstr ""
+"В диалоге <guilabel>Печать</guilabel> на вкладках содержатся следующие "
+"разделы:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:418
 msgid "<link linkend=\"print-dialog-job\">Job</link>"
-msgstr ""
+msgstr "<link linkend=\"print-dialog-job\">Задание</link>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:423
 msgid "<link linkend=\"print-dialog-printer\">Printer</link>"
-msgstr ""
+msgstr "<link linkend=\"print-dialog-printer\">Принтер</link>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:428
 msgid "<link linkend=\"print-dialog-paper\">Paper</link>"
-msgstr ""
+msgstr "<link linkend=\"print-dialog-paper\">Бумага</link>"
 
 #. (itstool) path: sect3/title
 #: C/index.docbook:435
@@ -775,28 +892,30 @@ msgstr "Должность"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:437
 msgid "<guilabel>Print range</guilabel>"
-msgstr ""
+msgstr "<guilabel>Диапазон</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:439
 msgid ""
 "Select one of the following options to determine how many pages to print:"
 msgstr ""
+"Выберите один из следующих вариантов, чтобы определить, сколько страниц "
+"напечатать:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:442
 msgid "<guilabel>All</guilabel>"
-msgstr ""
+msgstr "<guilabel>Все страницы</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:443
 msgid "Select this option to print all of the pages in the document."
-msgstr ""
+msgstr "Выберите этот вариант, чтобы напечатать все страницы документа."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:446
 msgid "<guilabel>Pages From</guilabel>"
-msgstr ""
+msgstr "<guilabel>Страницы</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:447
@@ -804,6 +923,9 @@ msgid ""
 "Select this option to print the selected range of pages in the document. Use"
 " the spin boxes to specify the first page and last page of the range."
 msgstr ""
+"Выберите этот вариант, чтобы напечатать выбранный диапазон страниц "
+"документа. Используйте счётчики для указания первой и последней страниц "
+"диапазона."
 
 #. (itstool) path: sect3/title
 #: C/index.docbook:457
@@ -813,7 +935,7 @@ msgstr "Принтер"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:459
 msgid "<guilabel>Printer</guilabel>"
-msgstr ""
+msgstr "<guilabel>Принтер</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:461
@@ -821,6 +943,8 @@ msgid ""
 "Use this drop-down list to select the printer to which you want to print the"
 " document."
 msgstr ""
+"Выберите в этом раскрывающемся списке принтер, на котором следует "
+"распечатать документ."
 
 #. (itstool) path: note/para
 #: C/index.docbook:463
@@ -828,16 +952,19 @@ msgid ""
 "The <guilabel>Create a PDF document</guilabel> option is not supported in "
 "this version of <application>Atril Document Viewer</application>."
 msgstr ""
+"Параметр <guilabel>Создать документ в формате PDF</guilabel> не "
+"поддерживается в этой версии <application>просмотрщика документов "
+"Atril</application>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:469
 msgid "<guilabel>Settings</guilabel>"
-msgstr ""
+msgstr "<guilabel>Параметры</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:471
 msgid "Use this drop-down list to select the printer settings."
-msgstr ""
+msgstr "Выберите параметры принтера в этом раскрывающемся списке."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:473
@@ -846,6 +973,10 @@ msgid ""
 "example, you can enable or disable duplex printing, or schedule delayed "
 "printing, if this functionality is supported by the printer."
 msgstr ""
+"Чтобы настроить принтер, нажмите кнопку <guibutton>Настроить</guibutton>. "
+"Например, можно включить или отключить двухстороннюю печать или "
+"запланировать отложенную печать, если принтер поддерживает соответствующую "
+"функцию."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:477
@@ -857,16 +988,17 @@ msgstr "<guilabel>Расположение</guilabel>"
 msgid ""
 "Use this drop-down list to select one of the following print destinations:"
 msgstr ""
+"Выберите одно из следующих расположений печати в этом раскрывающемся списке:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:484
 msgid "<guilabel>CUPS</guilabel>"
-msgstr ""
+msgstr "<guilabel>CUPS</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:486
 msgid "Print the document to a CUPS printer."
-msgstr ""
+msgstr "Напечатать документ на принтере CUPS."
 
 #. (itstool) path: note/para
 #: C/index.docbook:490
@@ -874,26 +1006,28 @@ msgid ""
 "If the selected printer is a CUPS printer, <guilabel>CUPS</guilabel> is the "
 "only entry in this drop-down list."
 msgstr ""
+"Если выбранный принтер поддерживает CUPS, в раскрывающемся списке будет "
+"только один вариант — <guilabel>CUPS</guilabel>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:497
 msgid "<guilabel>lpr</guilabel>"
-msgstr ""
+msgstr "<guilabel>lpr</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:499
 msgid "Print the document to a printer."
-msgstr ""
+msgstr "Напечатать документ на принтере."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:505
 msgid "<guilabel>File</guilabel>"
-msgstr ""
+msgstr "<guilabel>Файл</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:507
 msgid "Print the document to a PostScript file."
-msgstr ""
+msgstr "Напечатать документ в файл PostScript."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:510
@@ -901,16 +1035,18 @@ msgid ""
 "Click <guibutton>Save As</guibutton> to display a dialog where you specify "
 "the name and location of the PostScript file."
 msgstr ""
+"Нажмите кнопку <guibutton>Сохранить как</guibutton>, чтобы открыть диалог, в"
+" котором можно указать название и расположение файла PostScript."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:516
 msgid "<guilabel>Custom</guilabel>"
-msgstr ""
+msgstr "<guilabel>Другое</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:518
 msgid "Use the specified command to print the document."
-msgstr ""
+msgstr "Используйте указанную команду для печати документа."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:521
@@ -918,11 +1054,13 @@ msgid ""
 "Type the name of the command in the text box. Include all command-line "
 "arguments."
 msgstr ""
+"Введите название команды в текстовом поле. Включите все необходимые "
+"аргументы командной строки."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:529
 msgid "<guilabel>State</guilabel>"
-msgstr ""
+msgstr "<guilabel>Состояние</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:531 C/index.docbook:537 C/index.docbook:543
@@ -930,6 +1068,8 @@ msgid ""
 "This functionality is not supported in this version of <application>Atril "
 "Document Viewer</application>."
 msgstr ""
+"Эта функция не поддерживается в этой версии <application>просмотрщика "
+"документов Atril</application>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:535
@@ -939,17 +1079,17 @@ msgstr "<guilabel>Тип</guilabel>"
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:541
 msgid "<guilabel>Comment</guilabel>"
-msgstr ""
+msgstr "<guilabel>Комментарий</guilabel>"
 
 #. (itstool) path: sect3/title
 #: C/index.docbook:551
 msgid "Paper"
-msgstr ""
+msgstr "Бумага"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:553
 msgid "<guilabel>Paper size</guilabel>"
-msgstr ""
+msgstr "<guilabel>Размер бумаги</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:555
@@ -957,11 +1097,13 @@ msgid ""
 "Use this drop-down list to select the size of the paper to which you want to"
 " print the document."
 msgstr ""
+"Выберите в этом раскрывающемся списке размер бумаги, который следует "
+"использовать для печати документа."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:558
 msgid "<guilabel>Width</guilabel>"
-msgstr ""
+msgstr "<guilabel>Ширина</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:560
@@ -969,21 +1111,23 @@ msgid ""
 "Use this spin box to specify the width of the paper. Use the adjacent drop-"
 "down list to change the measurement unit."
 msgstr ""
+"Используйте этот счётчик для указания ширины бумаги. В расположенном рядом "
+"раскрывающемся списке можно изменить единицы измерения."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:563
 msgid "<guilabel>Height</guilabel>"
-msgstr ""
+msgstr "<guilabel>Высота</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:565
 msgid "Use this spin box to specify the height of the paper."
-msgstr ""
+msgstr "Используйте этот счётчик для указания высоты бумаги."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:568
 msgid "<guilabel>Feed orientation</guilabel>"
-msgstr ""
+msgstr "<guilabel>Ориентация бумаги</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:570
@@ -991,21 +1135,24 @@ msgid ""
 "Use this drop-down list to select the orientation of the paper in the "
 "printer."
 msgstr ""
+"Используйте этот раскрывающийся список для задания ориентации бумаги в "
+"принтере."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:573
 msgid "<guilabel>Page orientation</guilabel>"
-msgstr ""
+msgstr "<guilabel>Ориентация страницы</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:575
 msgid "Use this drop-down list to select the page orientation."
 msgstr ""
+"Используйте этот раскрывающийся список для задания ориентации страниц."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:578
 msgid "<guilabel>Layout</guilabel>"
-msgstr ""
+msgstr "<guilabel>Расположение</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:580
@@ -1013,26 +1160,29 @@ msgid ""
 "Use this drop-down list to select the page layout. A preview of each layout "
 "that you select is displayed in the <guilabel>Preview</guilabel> area."
 msgstr ""
+"Используйте этот раскрывающийся список для выбора расположения страниц. "
+"Предварительный просмотр результата выполняется в области "
+"<guilabel>Предварительный просмотр</guilabel>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:583
 msgid "<guilabel>Paper Tray</guilabel>"
-msgstr ""
+msgstr "<guilabel>Лоток для бумаги</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:585
 msgid "Use this drop-down list to select the paper tray."
-msgstr ""
+msgstr "Выберите лоток для бумаги в этом раскрывающемся списке."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:595
 msgid "To Copy a Document"
-msgstr ""
+msgstr "Копирование документа"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:596
 msgid "To copy a file, perform the following steps:"
-msgstr ""
+msgstr "Чтобы скопировать файл, сделайте следующее:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:600
@@ -1040,6 +1190,8 @@ msgid ""
 "Choose <menuchoice> <guimenu>File</guimenu> <guimenuitem>Save a "
 "Copy</guimenuitem> </menuchoice>."
 msgstr ""
+"Выберите <menuchoice> <guimenu>Файл</guimenu> <guimenuitem>Сохранить "
+"копию</guimenuitem> </menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:605
@@ -1047,6 +1199,8 @@ msgid ""
 "Type the new filename in the <guilabel>Filename</guilabel> text box in the "
 "<guilabel>Save a Copy</guilabel> dialog."
 msgstr ""
+"Введите новое имя файла в текстовом поле <guilabel>Имя</guilabel> "
+"диалогового окна<guilabel>Сохранить копию</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:608
@@ -1054,6 +1208,8 @@ msgid ""
 "If necessary, specify the location of the copied document. By default, "
 "copies are saved in your home directory."
 msgstr ""
+"При необходимости можно указать расположение копии документа. По умолчанию "
+"копии сохраняются в вашем домашнем каталоге."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:613
@@ -1063,17 +1219,19 @@ msgstr "Нажмите кнопку <guibutton>Сохранить</guibutton>."
 #. (itstool) path: sect2/title
 #: C/index.docbook:622
 msgid "To Work With Password-Protected Documents"
-msgstr ""
+msgstr "Работа с документами, защищёнными паролем"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:623
 msgid "An author can use the following password levels to protect a document:"
-msgstr ""
+msgstr "Автор может применить следующие уровни защиты документа:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:628
 msgid "User password that allows others only to read the document."
 msgstr ""
+"Пароль пользователя, который позволяет другим пользователям только чтение "
+"документа."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:632
@@ -1081,6 +1239,8 @@ msgid ""
 "Master password that allows others to perform additional actions, such as "
 "print the document."
 msgstr ""
+"Основной пароль, который позволяет другим пользователям выполнение "
+"дополнительных действий, например печать документа."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:636
@@ -1091,11 +1251,16 @@ msgid ""
 "password</guilabel> text box, then click <guibutton>Open "
 "Document</guibutton>."
 msgstr ""
+"При попытке открыть защищённый паролем документ <application>просмотрщик "
+"документов Atril</application> отображает диалог безопасности. Введите либо "
+"пароль пользователя, либо основной пароль в текстовом поле <guilabel>Введите"
+" пароль</guilabel>, затем нажмите кнопку <guibutton>Открыть "
+"документ</guibutton>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:643
 msgid "To Close a Document"
-msgstr ""
+msgstr "Закрытие документа"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:644
@@ -1103,6 +1268,8 @@ msgid ""
 "To close a document, choose <menuchoice> <guimenu>File</guimenu> "
 "<guimenuitem>Close</guimenuitem> </menuchoice>."
 msgstr ""
+"Чтобы закрыть документ, выберите <menuchoice> <guimenu>Файл</guimenu> "
+"<guimenuitem>Закрыть</guimenuitem> </menuchoice>."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:646
@@ -1110,6 +1277,8 @@ msgid ""
 "If the window is the last <application>Atril Document Viewer</application> "
 "window open, the application exits."
 msgstr ""
+"Если текущее окно является последним окном <application>просмотрщика "
+"документов Atril</application>, будет выполнен выход из приложения."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:655
@@ -1122,6 +1291,8 @@ msgid ""
 "Below is a list of all shortcuts present in <application>Atril Document "
 "Viewer</application>:"
 msgstr ""
+"Далее приводится список всех комбинаций клавиш <application>просмотрщика "
+"документов Atril</application>:"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:664
@@ -1300,12 +1471,12 @@ msgstr "<keycombo><keycap>Shift</keycap><keycap>Backspace</keycap></keycombo>"
 #. (itstool) path: entry/para
 #: C/index.docbook:740
 msgid "<keycap>Return</keycap>"
-msgstr ""
+msgstr "<keycap>Ввод</keycap>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:742
 msgid "Scroll forward"
-msgstr ""
+msgstr "Прокрутить вперёд"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:746
@@ -1320,12 +1491,12 @@ msgstr "<keycap>Backspace</keycap>"
 #. (itstool) path: entry/para
 #: C/index.docbook:748
 msgid "<keycombo><keycap>Shift</keycap><keycap>Return</keycap></keycombo>"
-msgstr ""
+msgstr "<keycombo><keycap>Shift</keycap><keycap>Ввод</keycap></keycombo>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:750
 msgid "Scroll backward"
-msgstr ""
+msgstr "Прокрутить назад"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:754
@@ -1335,7 +1506,7 @@ msgstr "<keycombo><keycap>Shift</keycap><keycap>Page Up</keycap></keycombo>"
 #. (itstool) path: entry/para
 #: C/index.docbook:755
 msgid "Go a bunch of pages up"
-msgstr ""
+msgstr "Перейти на несколько страниц выше"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:758
@@ -1345,7 +1516,7 @@ msgstr "<keycombo><keycap>Shift</keycap><keycap>Page Down</keycap></keycombo>"
 #. (itstool) path: entry/para
 #: C/index.docbook:759
 msgid "Go a bunch of pages down"
-msgstr ""
+msgstr "Перейти на несколько страниц ниже"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:762
@@ -1375,7 +1546,7 @@ msgstr "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
 #. (itstool) path: entry/para
 #: C/index.docbook:771
 msgid "Go to page by number or label"
-msgstr ""
+msgstr "Перейти к странице по номеру или метке"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:774

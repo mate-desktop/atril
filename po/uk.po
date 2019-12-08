@@ -692,7 +692,7 @@ msgstr "Ключові слова:"
 
 #: ../properties/ev-properties-view.c:65
 msgid "Producer:"
-msgstr "Проґрама:"
+msgstr "Програма:"
 
 #: ../properties/ev-properties-view.c:66
 msgid "Creator:"
@@ -1117,7 +1117,7 @@ msgstr "Запам'ятати назав_жди"
 
 #: ../shell/ev-properties-dialog.c:62
 msgid "Properties"
-msgstr "Властивости"
+msgstr "Властивості"
 
 #: ../shell/ev-properties-dialog.c:94
 msgid "General"
@@ -1380,9 +1380,13 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"Завдання %d друку активне. Зачекати, поки друк закінчиться перед закриттям?"
 msgstr[1] ""
+"Завдання %d друку активні. Зачекати, поки друк закінчиться перед закриттям?"
 msgstr[2] ""
+"Завдань %d друку активні. Зачекати, поки друк закінчиться перед закриттям?"
 msgstr[3] ""
+"Завдань %d друку активні. Зачекати, поки друк закінчиться перед закриттям?"
 
 #: ../shell/ev-window.c:3956
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1438,6 +1442,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril - безкоштовне програмне забезпечення; ви можете розповсюджувати його "
+"та/або змінювати відповідно до умов Загальної публічної ліцензії GNU, "
+"оголошених Фундацією вільного програмного забезпечення; або версії 2 "
+"Ліцензії, або (за вашим бажанням) будь-якої пізнішої версії."
 
 #: ../shell/ev-window.c:5318
 msgid ""
@@ -1453,6 +1461,9 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Ви мали отримати копію Генеральної публічної ліцензії GNU разом з Atril; "
+"якщо ні, пишіть до Фундації вільного програмного забезпечення, Inc., "
+"Франклін Стріт, 51, П'ятий поверх, Бостон, MA 02110-1301 США"
 
 #: ../shell/ev-window.c:5367
 msgid "About Atril Document Viewer"
@@ -1463,6 +1474,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Авторське право © 1996–2009 Автори Evince\n"
+"Авторське право © 2012–2019 Розробники MATE"
 
 #: ../shell/ev-window.c:5375
 msgid "translator-credits"
@@ -1478,10 +1491,10 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d знайдено на цій сторінці"
+msgstr[1] "%d знайдено на цих сторінках"
+msgstr[2] "%d знайдено на цих сторінках"
+msgstr[3] "%d знайдено на цих сторінках"
 
 #: ../shell/ev-window.c:5658
 msgid "Not found"

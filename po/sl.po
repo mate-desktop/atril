@@ -11,6 +11,7 @@
 # Damir Jerovšek <jierro@windowslive.com>, 2019
 # Damir Mevkić <damir.mevkic@gmail.com>, 2019
 # jetomit <timotej.lazar@araneo.si>, 2019
+# Arnold Marko <arnold.marko@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-22 23:29+0100\n"
 "PO-Revision-Date: 2019-03-11 11:43+0000\n"
-"Last-Translator: jetomit <timotej.lazar@araneo.si>, 2019\n"
+"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -137,7 +138,7 @@ msgstr "Ne morem odpreti meta datoteko"
 
 #: ../backend/epub/epub-document.c:864
 msgid "container file is corrupt"
-msgstr ""
+msgstr "datoteka zabojnika je okvarjena"
 
 #: ../backend/epub/epub-document.c:874
 msgid "epub file is invalid or corrupt"
@@ -145,7 +146,7 @@ msgstr "epub datoteka je neveljavna ali pokvarjena"
 
 #: ../backend/epub/epub-document.c:884
 msgid "epub file is corrupt, no container"
-msgstr ""
+msgstr "epub datoteka je okvarjena"
 
 #: ../backend/epub/epub-document.c:969
 msgid "could not parse content manifest"
@@ -157,15 +158,17 @@ msgstr "Vsebinska datoteka je neveljavna."
 
 #: ../backend/epub/epub-document.c:987
 msgid "epub file has no spine"
-msgstr ""
+msgstr "epub datoteka nima hrbtenice"
 
 #: ../backend/epub/epub-document.c:996
 msgid "epub file has no manifest"
-msgstr ""
+msgstr "epub datoteka nima manifesta"
 
 #: ../backend/epub/epub-document.c:1082
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
+"Nisem mogel vzpostaviti drevesne strukture za nalaganje, ker manjkajo "
+"nekatere datoteke"
 
 #: ../backend/epub/epubdocument.atril-backend.in.h:1
 msgid "epub Documents"
@@ -261,11 +264,11 @@ msgstr "Neveljaven dokument"
 
 #: ../backend/tiff/tiffdocument.atril-backend.in.h:1
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Tiff dokumenti"
 
 #: ../backend/xps/xpsdocument.atril-backend.in.h:1
 msgid "XPS Documents"
-msgstr ""
+msgstr "XPS dokumenti"
 
 #: ../libdocument/ev-attachment.c:304 ../libdocument/ev-attachment.c:325
 #, c-format
@@ -529,10 +532,13 @@ msgstr "Ali se dokument samodejno osveži pri spremembi dokumenta."
 #: ../data/org.mate.Atril.gschema.xml.h:5
 msgid "The URI of the directory last used to open or save a document."
 msgstr ""
+"URI povezava mape, ki je bila nazadnje uporabljena za odpiranje ali "
+"shranjevanje dokumenta."
 
 #: ../data/org.mate.Atril.gschema.xml.h:6
 msgid "The URI of the directory last used to save a picture."
 msgstr ""
+"URI povezava mape, ki je bila nazadnje uproabljena za shranjevanje slike."
 
 #: ../data/org.mate.Atril.gschema.xml.h:7
 msgid "Page cache size in MiB"
@@ -543,12 +549,16 @@ msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
 msgstr ""
+"Največja velikost, ki bo uporabljena za medpomnilnik izrisanih strani. Omeji"
+" največjo stopnjo povečave."
 
 #: ../data/org.mate.Atril.gschema.xml.h:9
 msgid ""
 "Show a dialog to confirm that the user wants to activate the caret "
 "navigation."
 msgstr ""
+"Prikaži dialog za potrditev, da uporabnik želi vklopiti navigacijo z "
+"brskalko."
 
 #: ../previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -611,7 +621,7 @@ msgstr "Skrči dokument"
 
 #: ../previewer/ev-previewer-window.c:296 ../shell/ev-window.c:6412
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Ponastavi povečavo na 100%"
 
 #. translators: Print document currently shown in the Print Preview window
 #. translators: Title of the print dialog
@@ -1213,6 +1223,8 @@ msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
 msgstr ""
+"Ne morem vstopiti v predstavitveni način z ePub dokumenti. Uporabite "
+"celozaslonski način."
 
 #: ../shell/ev-window.c:1740
 msgid "The document contains no pages"
@@ -1224,7 +1236,7 @@ msgstr "Dokument vsebuje le prazne strani"
 
 #: ../shell/ev-window.c:1782
 msgid "Presentation mode is not supported for ePub documents."
-msgstr ""
+msgstr "Predstavitveni način za ePub dokumente ni podprt."
 
 #: ../shell/ev-window.c:1976 ../shell/ev-window.c:2144
 msgid "Unable to open document"
@@ -1341,7 +1353,7 @@ msgstr "Zapri _brez shranjevanja"
 
 #: ../shell/ev-window.c:3866 ../shell/ev-window.c:6368
 msgid "_Save As…"
-msgstr ""
+msgstr "_Shrani kot..."
 
 #: ../shell/ev-window.c:3935
 #, c-format
@@ -1381,7 +1393,7 @@ msgstr "Izvajanje v predstavitvenem načinu"
 
 #: ../shell/ev-window.c:4410
 msgid "Presentation mode is not supported for ePub documents"
-msgstr ""
+msgstr "Predstavitveni način ni podprt za ePub dokumente"
 
 #: ../shell/ev-window.c:4724
 msgid "Toolbar Editor"
@@ -1402,11 +1414,11 @@ msgstr ""
 
 #: ../shell/ev-window.c:5308
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "MATE skupina za dokumente"
 
 #: ../shell/ev-window.c:5309
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "GNOME skupina za dokumente"
 
 #: ../shell/ev-window.c:5314
 msgid ""
@@ -1415,6 +1427,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril je prost program; lahko ga razširjate in/ali spreminjate pod pogoji "
+"licence GNU General Public License, kot jo je objavila organizacija Free "
+"Software Foundation; bodisi pod različico 2 ali (po vašem mnenju) katerokoli"
+" kasnejšo različico."
 
 #: ../shell/ev-window.c:5318
 msgid ""
@@ -1423,6 +1439,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril se razširja v upanju, da bo koristen, vendar BREZ KAKRŠNEGAKOLI "
+"JAMSTVA; tudi brez posrednega jamstva CENOVNE VREDNOSTI ali PRIMERNOSTI ZA "
+"DOLOČENO UPORABO. Za več podrobnosti si oglejte GNU General Public License."
 
 #: ../shell/ev-window.c:5322
 msgid ""
@@ -1430,16 +1449,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Skupaj s programom bi morali prejeti kopijo GNU Splošnega javnega "
+"dovoljenja. V primeru, da je niste, pišite na Free Software Foundation, "
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA"
 
 #: ../shell/ev-window.c:5367
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "O programu Atril pregledovalnik dokumentov"
 
 #: ../shell/ev-window.c:5368
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"© 1996–2009 Avtorji programa Evince \n"
+"© 2012–2016 Razvijalci okolja MATE"
 
 #: ../shell/ev-window.c:5375
 msgid "translator-credits"
@@ -1480,6 +1504,9 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Pritisk na F7 vklopi ali izklopi navigacijo z brskalko. Ta funkcija na stran"
+" z besedilom postavi premakljiv kurzor, ki omogoča premikanje in izbiranje "
+"teksta s tipkovnico. Ali bi radi vklopili navigacijo z brskalko?"
 
 #: ../shell/ev-window.c:6029
 msgid "Don't show this message again"
@@ -1581,7 +1608,7 @@ msgstr "Shrani trenutne nastavitve kot _privzete"
 
 #: ../shell/ev-window.c:6411
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "Ponastav_i povečavo"
 
 #: ../shell/ev-window.c:6414
 msgid "_Reload"
@@ -1689,7 +1716,7 @@ msgstr "_Lihe strani na levi"
 
 #: ../shell/ev-window.c:6523
 msgid "Show odd pages on the left in dual mode"
-msgstr ""
+msgstr "Prikaži lihe strani na levi v dvojnem načinu"
 
 #: ../shell/ev-window.c:6525
 msgid "_Fullscreen"
@@ -1813,7 +1840,7 @@ msgstr "Oddalji"
 #. translators: this is the label for toolbar button
 #: ../shell/ev-window.c:6771
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Ponastavi povečavo"
 
 #: ../shell/ev-window.c:6912 ../shell/ev-window.c:6928
 msgid "Unable to launch external application."
@@ -1882,7 +1909,7 @@ msgstr "Zaženi atril v celozaslonskem načinu"
 
 #: ../shell/main.c:69
 msgid "Named destination to display."
-msgstr ""
+msgstr "Poimenovan cilj za prikaz."
 
 #: ../shell/main.c:69
 msgid "DEST"
