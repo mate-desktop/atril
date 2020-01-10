@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2019-11-11 09:31+0100\n"
+"POT-Creation-Date: 2020-01-10 10:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -319,32 +319,32 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:223
+#: cut-n-paste/smclient/eggsmclient.c:221
 msgid "Disable connection to session manager"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:226
+#: cut-n-paste/smclient/eggsmclient.c:224
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:226 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/eggsmclient.c:224 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:229
+#: cut-n-paste/smclient/eggsmclient.c:227
 msgid "Specify session management ID"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:229
+#: cut-n-paste/smclient/eggsmclient.c:227
 msgid "ID"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:250
+#: cut-n-paste/smclient/eggsmclient.c:248
 msgid "Session management options:"
 msgstr ""
 
-#: cut-n-paste/smclient/eggsmclient.c:251
+#: cut-n-paste/smclient/eggsmclient.c:249
 msgid "Show session management options"
 msgstr ""
 
@@ -724,12 +724,12 @@ msgstr ""
 msgid "Shows details for Atril documents"
 msgstr ""
 
-#: libmisc/ev-page-action-widget.c:68
+#: libmisc/ev-page-action-widget.c:64
 #, c-format
 msgid "(%d of %d)"
 msgstr ""
 
-#: libmisc/ev-page-action-widget.c:70
+#: libmisc/ev-page-action-widget.c:66
 #, c-format
 msgid "of %d"
 msgstr ""
@@ -813,7 +813,7 @@ msgstr ""
 msgid "Page Handling"
 msgstr ""
 
-#: libview/ev-jobs.c:1753
+#: libview/ev-jobs.c:1726
 #, c-format
 msgid "Failed to print page %d: %s"
 msgstr ""
@@ -846,67 +846,67 @@ msgstr ""
 msgid "End of presentation. Click to exit."
 msgstr ""
 
-#: libview/ev-view.c:1906
+#: libview/ev-view.c:1903
 msgid "Go to first page"
 msgstr ""
 
-#: libview/ev-view.c:1908
+#: libview/ev-view.c:1905
 msgid "Go to previous page"
 msgstr ""
 
-#: libview/ev-view.c:1910
+#: libview/ev-view.c:1907
 msgid "Go to next page"
 msgstr ""
 
-#: libview/ev-view.c:1912
+#: libview/ev-view.c:1909
 msgid "Go to last page"
 msgstr ""
 
-#: libview/ev-view.c:1914
+#: libview/ev-view.c:1911
 msgid "Go to page"
 msgstr ""
 
-#: libview/ev-view.c:1916
+#: libview/ev-view.c:1913
 msgid "Find"
 msgstr ""
 
-#: libview/ev-view.c:1944
+#: libview/ev-view.c:1941
 #, c-format
 msgid "Go to page %s"
 msgstr ""
 
-#: libview/ev-view.c:1950
+#: libview/ev-view.c:1947
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr ""
 
-#: libview/ev-view.c:1953
+#: libview/ev-view.c:1950
 #, c-format
 msgid "Go to file “%s”"
 msgstr ""
 
-#: libview/ev-view.c:1961
+#: libview/ev-view.c:1958
 #, c-format
 msgid "Launch %s"
 msgstr ""
 
-#: shell/eggfindbar.c:302
+#: shell/eggfindbar.c:301
 msgid "Find:"
 msgstr ""
 
-#: shell/eggfindbar.c:327
+#: shell/eggfindbar.c:326
 msgid "Find previous occurrence of the search string"
 msgstr ""
 
-#: shell/eggfindbar.c:335
+#: shell/eggfindbar.c:334
 msgid "Find next occurrence of the search string"
 msgstr ""
 
-#: shell/eggfindbar.c:342
+#: shell/eggfindbar.c:341
 msgid "Case Sensitive"
 msgstr ""
 
-#: shell/eggfindbar.c:345
+#: shell/eggfindbar.c:344
 msgid "Toggle case sensitive search"
 msgstr ""
 
@@ -996,7 +996,7 @@ msgstr ""
 msgid "Loading…"
 msgstr ""
 
-#: shell/ev-open-recent-action.c:74
+#: shell/ev-open-recent-action.c:71
 msgid "Open a recently used document"
 msgstr ""
 
@@ -1327,7 +1327,8 @@ msgstr ""
 #, c-format
 msgid ""
 "Document Viewer\n"
-"Using %s (%s)"
+"Using %s (%s)\n"
+"and SyncTeX %s"
 msgstr ""
 
 #: shell/ev-window.c:5388
@@ -1368,7 +1369,7 @@ msgstr ""
 #: shell/ev-window.c:5448
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
-"Copyright © 2012–2019 The MATE developers"
+"Copyright © 2012–2020 The MATE developers"
 msgstr ""
 
 #: shell/ev-window.c:5455
