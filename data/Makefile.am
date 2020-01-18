@@ -23,8 +23,8 @@ ui_DATA =				\
 
 @INTLTOOL_DESKTOP_RULE@
 
-DESKTOP_IN_FILES= atril.desktop.in.in
-DESKTOP_FILES= $(DESKTOP_IN_FILES:.desktop.in.in=.desktop)
+DESKTOP_IN_FILES = atril.desktop.in
+DESKTOP_FILES = $(DESKTOP_IN_FILES:.desktop.in=.desktop)
 
 desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
