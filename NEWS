@@ -1,3 +1,30 @@
+### atril 1.23.2
+
+  * update translations
+  * Fix atril.desktop file
+  * Fix memory leak ev_sidebar_thumbnails_document_changed_cb()
+  * pdf: Fix memory leak when adding new text annotations
+  * Update Copyright year
+  * libview: fixing memory leak
+  * Revert "First page should not reloaded"
+  * avoid redundant redeclarations
+  * libview: Reset `pressed_button` when starting Drag and Drop
+  * show SyncTeX version in about dialog
+  * add hint for translators
+  * migrate from intltool to gettext
+  * Added accelerator 'o' for toggling Odd Pages Left.
+  * Added accelerator 't' for toggling visibility of the toolbar.
+  * remove 'synctex' internally, work with external library instead
+  * remove -Wunused-but-set-variable warning
+  * ephy-zoom-control.c:274:20: warning: variable ‘tool_item_class’ set but not used [-Wunused-but-set-
+  * build: require webkit2gtk-4.0 >= 2.6.0
+  * build: drop fallback check for webkit2gtk-3.0
+  * End the va_list before returning from _synctex_merge_strings
+  * build: Use synctex system library if available
+  * Remove synctex warning
+  * Bump synctex to 1.21
+  * fixed greek translation for user guide
+
 ### atril 1.23.1
 
   * update translations
