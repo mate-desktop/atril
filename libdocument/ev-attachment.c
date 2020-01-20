@@ -38,8 +38,8 @@ enum
 struct _EvAttachmentPrivate {
 	gchar                   *name;
 	gchar                   *description;
-	GTime                    mtime;
-	GTime                    ctime;
+	gint64                   mtime;
+	gint64                   ctime;
 	gsize                    size;
 	gchar                   *data;
 	gchar                   *mime_type;
@@ -217,8 +217,8 @@ ev_attachment_init (EvAttachment *attachment)
 EvAttachment *
 ev_attachment_new (const gchar *name,
 		   const gchar *description,
-		   GTime        mtime,
-		   GTime        ctime,
+		   gint64       mtime,
+		   gint64       ctime,
 		   gsize        size,
 		   gpointer     data)
 {
@@ -252,7 +252,7 @@ ev_attachment_get_description (EvAttachment *attachment)
 	return attachment->priv->description;
 }
 
-GTime
+gint64
 ev_attachment_get_modification_date (EvAttachment *attachment)
 {
 	g_return_val_if_fail (EV_IS_ATTACHMENT (attachment), 0);
@@ -260,7 +260,7 @@ ev_attachment_get_modification_date (EvAttachment *attachment)
 	return attachment->priv->mtime;
 }
 
-GTime
+gint64
 ev_attachment_get_creation_date (EvAttachment *attachment)
 {
 	g_return_val_if_fail (EV_IS_ATTACHMENT (attachment), 0);

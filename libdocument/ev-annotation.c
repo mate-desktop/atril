@@ -454,7 +454,7 @@ ev_annotation_get_modified (EvAnnotation *annot)
  * @modified: string with the last modification date.
  *
  * Set the last modification date of @annot to @modified. To
- * set the last modification date using a #GTime, use
+ * set the last modification date using a #gint64, use
  * ev_annotation_set_modified_from_time() instead. You can monitor
  * changes to the last modification date by connecting to the
  * notify::modified signal on @annot.
@@ -482,7 +482,7 @@ ev_annotation_set_modified (EvAnnotation *annot,
 /**
  * ev_annotation_set_modified_from_time:
  * @annot: an #EvAnnotation
- * @utime: a #GTime
+ * @utime: a #gint64
  *
  * Set the last modification date of @annot to @utime.  You can
  * monitor changes to the last modification date by connectin to the
@@ -493,7 +493,7 @@ ev_annotation_set_modified (EvAnnotation *annot,
  */
 gboolean
 ev_annotation_set_modified_from_time (EvAnnotation *annot,
-				      GTime         utime)
+				      gint64        utime)
 {
 	gchar *modified;
 

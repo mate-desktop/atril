@@ -84,7 +84,7 @@ GLIB_GSETTINGS
 
 dnl Specify required versions of dependencies
 CAIRO_REQUIRED=1.14.0
-GLIB_REQUIRED=2.54.0
+GLIB_REQUIRED=2.62.0
 GTK_REQUIRED=3.22.0
 WEBKIT_REQUIRED=2.6.0
 LIBSECRET_REQUIRED=0.5
@@ -643,8 +643,6 @@ if test "x$have_webkit" = "xyes"; then
 fi
 
 AC_SUBST(ATRIL_MIME_TYPES)
-
-AC_CHECK_FUNC(localtime_r, AC_DEFINE(HAVE_LOCALTIME_R, 1, [Defines if localtime_r is available on your system]))
 
 # *****************
 # Help files
