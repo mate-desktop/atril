@@ -63,7 +63,7 @@ void             ev_document_misc_invert_pixbuf  (GdkPixbuf       *pixbuf);
 
 gdouble          ev_document_misc_get_monitor_dpi (GdkMonitor *monitor);
 
-gchar           *ev_document_misc_format_date (GTime utime);
+gchar           *ev_document_misc_format_date (gint64 utime);
 
 void             ev_document_misc_get_pointer_position (GtkWidget *widget,
 							gint      *x,

@@ -23,6 +23,7 @@
 #include <string.h>
 #include <math.h>
 
+#include <glib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
@@ -359,25 +360,17 @@ ev_document_misc_get_monitor_dpi (GdkMonitor *monitor)
 
 /* Returns a locale specific date and time representation */
 gchar *
-ev_document_misc_format_date (GTime utime)
+ev_document_misc_format_date (gint64 utime)
 {
-	time_t time = (time_t) utime;
-	char s[256];
-	const char fmt_hack[] = "%c";
-	size_t len;
-#ifdef HAVE_LOCALTIME_R
-	struct tm t;
-	if (time == 0 || !localtime_r (&time, &t)) return NULL;
-	len = strftime (s, sizeof (s), fmt_hack, &t);
-#else
-	struct tm *t;
-	if (time == 0 || !(t = localtime (&time)) ) return NULL;
-	len = strftime (s, sizeof (s), fmt_hack, t);
-#endif
+	GDateTime *date_time;
+	gchar     *result = NULL;
 
-	if (len == 0 || s[0] == '\0') return NULL;
-
-	return g_locale_to_utf8 (s, -1, NULL, NULL, NULL);
+	date_time = g_date_time_new_from_unix_local (utime);
+	if (date_time != NULL) {
+		result = g_date_time_format (date_time, "%c");
+		g_date_time_unref (date_time);
+	}
+	return result;
 }
 
 void

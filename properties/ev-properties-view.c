@@ -342,12 +342,12 @@ ev_properties_view_set_info (EvPropertiesView *properties, const EvDocumentInfo 
 	if (info->fields_mask & EV_DOCUMENT_INFO_CREATOR) {
 		set_property (properties, GTK_GRID (grid), CREATOR_PROPERTY, info->creator, &row);
 	}
-	if (info->fields_mask & EV_DOCUMENT_INFO_CREATION_DATE) {
+	if ((info->fields_mask & EV_DOCUMENT_INFO_CREATION_DATE) && (info->creation_date > 0)) {
 		text = ev_document_misc_format_date (info->creation_date);
 		set_property (properties, GTK_GRID (grid), CREATION_DATE_PROPERTY, text, &row);
 		g_free (text);
 	}
-	if (info->fields_mask & EV_DOCUMENT_INFO_MOD_DATE) {
+	if ((info->fields_mask & EV_DOCUMENT_INFO_MOD_DATE) && (info->modified_date > 0)) {
 		text = ev_document_misc_format_date (info->modified_date);
 		set_property (properties, GTK_GRID (grid), MOD_DATE_PROPERTY, text, &row);
 		g_free (text);

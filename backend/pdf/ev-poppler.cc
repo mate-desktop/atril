@@ -667,11 +667,12 @@ pdf_document_get_info (EvDocument *document)
 		      "permissions", &permissions,
 		      "creator", &(info->creator),
 		      "producer", &(info->producer),
-		      "creation-date", &(info->creation_date),
-		      "mod-date", &(info->modified_date),
 		      "linearized", &linearized,
 		      "metadata", &metadata,
 		      NULL);
+
+	info->creation_date = (gint64) poppler_document_get_creation_date (PDF_DOCUMENT (document)->document);
+	info->modified_date = (gint64) poppler_document_get_modification_date (PDF_DOCUMENT (document)->document);
 
 	if (metadata != NULL) {
 		pdf_document_parse_metadata (metadata, info);
