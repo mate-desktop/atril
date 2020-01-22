@@ -32,7 +32,7 @@ static gboolean finished = TRUE;
 
 static gint size = THUMBNAIL_SIZE;
 static gboolean time_limit = TRUE;
-static const gchar **file_arguments;
+static char **file_arguments = NULL;
 
 static const GOptionEntry goption_options[] = {
 	{ "size", 's', 0, G_OPTION_ARG_INT, &size, NULL, "SIZE" },
@@ -227,15 +227,17 @@ main (int argc, char *argv[])
 		g_error_free (error);
 		print_usage (context);
 		g_option_context_free (context);
+		if (file_arguments)
+			g_strfreev (file_arguments);
 
 		return -1;
 	}
 
-	input = file_arguments ? file_arguments[0] : NULL;
-	output = input ? file_arguments[1] : NULL;
-	if (!input || !output) {
+	if (file_arguments == NULL || g_strv_length (file_arguments) != 2) {
 		print_usage (context);
 		g_option_context_free (context);
+		if (file_arguments)
+			g_strfreev (file_arguments);
 
 		return -1;
 	}
@@ -244,14 +246,18 @@ main (int argc, char *argv[])
 
 	if (size < 1) {
 		g_printerr ("Size cannot be smaller than 1 pixel\n");
+		g_strfreev (file_arguments);
+
 		return -1;
 	}
 
 	input = file_arguments[0];
 	output = file_arguments[1];
 
-        if (!ev_init ())
+        if (!ev_init ()) {
+		g_strfreev (file_arguments);
                 return -1;
+	}
 
 	file = g_file_new_for_commandline_arg (input);
 	document = atril_thumbnailer_get_document (file);
@@ -259,12 +265,16 @@ main (int argc, char *argv[])
 
 	if (!document) {
 		ev_shutdown ();
+		g_strfreev (file_arguments);
+
 		return -2;
 	}
 
 	if (!EV_IS_DOCUMENT_THUMBNAILS (document)) {
 		g_object_unref (document);
 		ev_shutdown ();
+		g_strfreev (file_arguments);
+
 		return -2;
 	}
 
@@ -288,6 +298,7 @@ main (int argc, char *argv[])
 
 		g_object_unref (document);
 		ev_shutdown ();
+		g_strfreev (file_arguments);
 
 		return data.success ? 0 : -2;
 	}
@@ -295,12 +306,15 @@ main (int argc, char *argv[])
 	if (!atril_thumbnail_pngenc_get (document, output, size)) {
 		g_object_unref (document);
 		ev_shutdown ();
+		g_strfreev (file_arguments);
+
 		return -2;
 	}
 
         time_monitor_stop ();
 	g_object_unref (document);
         ev_shutdown ();
+	g_strfreev (file_arguments);
 
 	return 0;
 }
