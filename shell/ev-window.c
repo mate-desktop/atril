@@ -7736,6 +7736,8 @@ ev_window_emit_doc_loaded (EvWindow *window)
         ev_atril_window_emit_document_loaded (window->priv->skeleton, window->priv->uri);
 }
 
+
+#ifdef ENABLE_SYNCTEX
 static gboolean
 handle_sync_view_cb (EvAtrilWindow        *object,
                      GDBusMethodInvocation *invocation,
@@ -7756,6 +7758,7 @@ handle_sync_view_cb (EvAtrilWindow        *object,
 
 	return TRUE;
 }
+#endif
 #endif /* ENABLE_DBUS */
 
 static gboolean
@@ -7816,9 +7819,11 @@ ev_window_init (EvWindow *ev_window)
                                                       ev_window->priv->dbus_object_path,
                                                       &error)) {
                         ev_window->priv->skeleton = skeleton;
+#ifdef ENABLE_SYNCTEX
                         g_signal_connect (skeleton, "handle-sync-view",
                                           G_CALLBACK (handle_sync_view_cb),
                                           ev_window);
+#endif
                 } else {
                         g_printerr ("Failed to register bus object %s: %s\n",
 			            ev_window->priv->dbus_object_path, error->message);

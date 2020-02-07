@@ -361,15 +361,25 @@ AC_SUBST([GIRTYPELIBDIR])
 AM_CONDITIONAL([ENABLE_INTROSPECTION],[test "$enable_introspection" = "yes"])
 
 dnl ================== libsynctex ===========================================
+AC_ARG_ENABLE([synctex],
+  [AS_HELP_STRING([--disable-synctex], [Disable support for synctex])],
+  [],
+  [enable_synctex=yes])
 
-PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=yes, has_synctex=no)
 
-dnl not found? use internal code copy.
-if test "x$has_synctex" = "xno"; then
-        AC_MSG_ERROR("SyncTeX support is disabled since library version $SYNCTEX_REQUIRED or newer not found")
+if test "$enable_synctex" = "yes"; then
+  AC_DEFINE([ENABLE_SYNCTEX],[1],[Define if synctex support is enabled])
+  PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=yes, has_synctex=no)
+  dnl not found? use internal code copy.
+  if test "x$has_synctex" = "xno"; then
+          AC_MSG_ERROR("SyncTeX support is disabled since library version $SYNCTEX_REQUIRED or newer not found")
+  fi
+  AC_SUBST(SYNCTEX_LIBS)
+  AC_SUBST(SYNCTEX_CFLAGS)
 fi
-AC_SUBST(SYNCTEX_LIBS)
-AC_SUBST(SYNCTEX_CFLAGS)
+
+AM_CONDITIONAL([ENABLE_SYNCTEX], [test "$enable_synctex" = "yes"])
+
 
 dnl ================== portability checks ===========================================
 
@@ -776,6 +786,7 @@ Configure summary:
     Tests...............:    $enable_tests
 
     PDF Backend.........:    $enable_pdf
+    Synctex enabled.....:    $enable_synctex
     PostScript Backend..:    $enable_ps
     TIFF Backend........:    $enable_tiff
     DJVU Backend........:    $enable_djvu
@@ -784,6 +795,4 @@ Configure summary:
     Comics Backend......:    $enable_comics
     XPS Backend.........:    $enable_xps
     ePub Backend........:    $have_webkit
-
-    SyncTeX.............:    $has_synctex
 "
