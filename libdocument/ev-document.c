@@ -25,7 +25,9 @@
 #include <string.h>
 
 #include "ev-document.h"
+#ifdef ENABLE_SYNCTEX
 #include "synctex_parser.h"
+#endif
 #include "ev-file-helpers.h"
 
 typedef struct _EvPageSize
@@ -53,8 +55,9 @@ struct _EvDocumentPrivate
 	gchar         **page_labels;
 	EvPageSize     *page_sizes;
 	EvDocumentInfo *info;
-
+#ifdef ENABLE_SYNCTEX
 	synctex_scanner_p synctex_scanner;
+#endif
 };
 
 static gint            _ev_document_get_n_pages     (EvDocument *document);
@@ -124,12 +127,12 @@ ev_document_finalize (GObject *object)
 		ev_document_info_free (document->priv->info);
 		document->priv->info = NULL;
 	}
-
+#ifdef ENABLE_SYNCTEX
 	if (document->priv->synctex_scanner) {
 		synctex_scanner_free (document->priv->synctex_scanner);
 		document->priv->synctex_scanner = NULL;
 	}
-
+#endif
 	G_OBJECT_CLASS (ev_document_parent_class)->finalize (object);
 }
 
@@ -137,8 +140,9 @@ static void
 ev_document_init (EvDocument *document)
 {
 	document->priv = ev_document_get_instance_private (document);
+#ifdef ENABLE_SYNCTEX
 	document->synctex_version = SYNCTEX_VERSION_STRING;
-
+#endif
 	/* Assume all pages are the same size until proven otherwise */
 	document->priv->uniform = TRUE;
 	/* Assume that the document is not a web document*/
@@ -336,6 +340,7 @@ ev_document_load (EvDocument  *document,
 		}
 
 		priv->info = _ev_document_get_info (document);
+#ifdef ENABLE_SYNCTEX
 		if (_ev_document_support_synctex (document)) {
 			gchar *filename;
 
@@ -346,6 +351,7 @@ ev_document_load (EvDocument  *document,
 				g_free (filename);
 			}
 		}
+#endif
 	}
 
 	return retval;
@@ -388,6 +394,7 @@ _ev_document_support_synctex (EvDocument *document)
 	return klass->support_synctex ? klass->support_synctex (document) : FALSE;
 }
 
+#ifdef ENABLE_SYNCTEX
 gboolean
 ev_document_has_synctex (EvDocument *document)
 {
@@ -492,6 +499,7 @@ ev_document_synctex_forward_search (EvDocument   *document,
 
         return result;
 }
+#endif /* ENABLE_SYNCTEX */
 
 static gint
 _ev_document_get_n_pages (EvDocument  *document)
