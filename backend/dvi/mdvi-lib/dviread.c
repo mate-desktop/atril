@@ -1101,7 +1101,7 @@ again:
 	return 0;
 }
 
-static int inline move_vertical(DviContext *dvi, int amount)
+inline static int move_vertical(DviContext *dvi, int amount)
 {
 	int	rvv;
 
@@ -1124,7 +1124,7 @@ static int inline move_vertical(DviContext *dvi, int amount)
 	}
 }
 
-static int inline move_horizontal(DviContext *dvi, int amount)
+inline static int move_horizontal(DviContext *dvi, int amount)
 {
 	int	rhh;
 
@@ -1147,7 +1147,7 @@ static int inline move_horizontal(DviContext *dvi, int amount)
 	}
 }
 
-static void inline fix_after_horizontal(DviContext *dvi)
+inline static void fix_after_horizontal(DviContext *dvi)
 {
 	int	rhh;
 
