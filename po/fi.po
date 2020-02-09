@@ -11,6 +11,7 @@
 # nomen omen, 2018
 # Ammuu5, 2019
 # Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019
+# Teemu Piippo <crimsondusk64@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019\n"
+"Last-Translator: Teemu Piippo <crimsondusk64@gmail.com>, 2020\n"
 "Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1285,8 +1286,8 @@ msgstr "Nykyistä asiakirjaa ei voitu lähettää"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d työ jonossa"
+msgstr[1] "%d työtä jonossa"
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1334,7 +1335,9 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"%d tulostustyö on aktiivinen. Odotetaanko tulostuksen valmistumista?"
 msgstr[1] ""
+"%d tulostustyötä on aktiivisena. Odotetaanko tulostusten valmistumista?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1426,8 +1429,8 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d löytynyt tältä sivulta"
+msgstr[1] "%d löytynyt tältä sivulta"
 
 #: shell/ev-window.c:5754
 msgid "Not found"
