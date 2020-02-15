@@ -2190,7 +2190,7 @@ set_uri_mtime (GFile        *source,
 	       EvWindow     *ev_window)
 {
 	GFileInfo *info;
-	gint      utime = -1;
+	gint64     utime = -1;
 
 	info = g_file_query_info_finish (source, async_result, NULL);
 	if (info) {
