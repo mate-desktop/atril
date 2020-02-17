@@ -1,0 +1,171 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/atril
+    - clang
+    - caja
+    - djvulibre
+    - gcc
+    - git
+    - gobject-introspection
+    - itstool
+    - libgxps
+    - make
+    - mate-common
+    - poppler-glib
+    - texlive-bin
+    - webkit2gtk
+    - which
+    - yelp-tools
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/atril
+    - autopoint
+    - clang
+    - clang-tools
+    - cppcheck
+    - git
+    - gobject-introspection
+    - libcaja-extension-dev
+    - libdjvulibre-dev
+    - libgail-3-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libgxps-dev
+    - libkpathsea-dev
+    - libsynctex-dev
+    - libpoppler-glib-dev
+    - libsecret-1-dev
+    - libsm-dev
+    - libspectre-dev
+    - libtiff-dev
+    - libwebkit2gtk-4.0-dev
+    - libx11-dev
+    - libxml2-dev
+    - lsb-release
+    - make
+    - mate-common
+    - xsltproc
+    - yelp-tools
+    - zlib1g-dev
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/atril.git
+    - cairo-gobject-devel
+    - caja-devel
+    - clang
+    - clang-analyzer
+    - cppcheck-htmlreport
+    - desktop-file-utils
+    - djvulibre-devel
+    - gcc
+    - gcc-c++
+    - git
+    - gobject-introspection-devel
+    - gtk3-devel
+    - libXt-devel
+    - libglade2-devel
+    - libgxps-devel
+    - libjpeg-turbo-devel
+    - libsecret-devel
+    - libspectre-devel
+    - libtiff-devel
+    - make
+    - mate-common
+    - poppler-glib-devel
+    - redhat-rpm-config
+    - texlive-lib-devel
+    - webkitgtk4-devel
+    - yelp-tools
+
+  ubuntu:
+    - autopoint
+    - clang
+    - clang-tools
+    - git
+    - gobject-introspection
+    - libcaja-extension-dev
+    - libdjvulibre-dev
+    - libgail-3-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libgxps-dev
+    - libkpathsea-dev
+    - libsynctex-dev
+    - libpoppler-glib-dev
+    - libsecret-1-dev
+    - libsm-dev
+    - libspectre-dev
+    - libtiff-dev
+    - libwebkit2gtk-4.0-dev
+    - libx11-dev
+    - libxml2-dev
+    - lsb-release
+    - make
+    - mate-common
+    - xsltproc
+    - yelp-tools
+    - zlib1g-dev
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security -Wredundant-decls"
+  - 'CHECKERS="
+    -enable-checker deadcode.DeadStores
+    -enable-checker alpha.deadcode.UnreachableCode
+    -enable-checker alpha.core.CastSize
+    -enable-checker alpha.core.CastToStruct
+    -enable-checker alpha.core.IdenticalExpr
+    -enable-checker alpha.core.SizeofPtr
+    -enable-checker alpha.security.ArrayBoundV2
+    -enable-checker alpha.security.MallocOverflow
+    -enable-checker alpha.security.ReturnPtrRange
+    -enable-checker alpha.unix.SimpleStream
+    -enable-checker alpha.unix.cstring.BufferOverlap
+    -enable-checker alpha.unix.cstring.NotNullTerminated
+    -enable-checker alpha.unix.cstring.OutOfBounds
+    -enable-checker alpha.core.FixedAddr
+    -enable-checker security.insecureAPI.strcpy"'
+
+before_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     egrep -lRZ 'G_GNUC_BEGIN_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_BEGIN_IGNORE_DEPRECATIONS/ /g'
+  -     egrep -lRZ 'G_GNUC_END_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_END_IGNORE_DEPRECATIONS/ /g'
+  - fi
+
+build_scripts:
+  - ./autogen.sh
+  - scan-build $CHECKERS ./configure
+  - if [ $CPU_COUNT -gt 1 ]; then
+  -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
+  - else
+  -     scan-build $CHECKERS --keep-cc -o html-report make
+  - fi
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude --force -D__cplusplus .
+  - fi
+
+after_scripts:
+  - if [ ${DISTRO_NAME} == "fedora" ];then
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude --force -D__cplusplus .
+  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+  -   ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/atril/raw/master/data/icons/16x16/apps/atril.png
+  - fi
+  - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: atril-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
+    notify_servers:
+      - https://release.mate-desktop.org/release
