@@ -5365,16 +5365,15 @@ ev_window_dual_mode_odd_pages_left_changed_cb (EvDocumentModel *model,
 static char *
 build_comments_string (EvDocument *document)
 {
-	gchar *comments = NULL;
+	gchar *comments;
 	EvDocumentBackendInfo info;
 
 	if (document && ev_document_get_backend_info (document, &info)) {
 		comments = g_strdup_printf (
-			_("Document Viewer\nUsing %s (%s)\nand SyncTeX %s"),
-			info.name, info.version, document->synctex_version);
+			_("Atril is a simple multi-page document viewer,\npowered by SyncTex %s and %s %s."),
+			document->synctex_version, info.name, info.version);
 	} else {
-		comments = g_strdup_printf (
-			_("Document Viewer"));
+		comments = g_strdup (_("Atril is a simple multi-page document viewer."));
 	}
 
 	return comments;
