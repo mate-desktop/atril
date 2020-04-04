@@ -21,6 +21,7 @@ script:
 deploy:
   - provider: script
     script: ./docker-build --verbose --config .build.yml --release github
+    skip_cleanup: true
     on:
       tags: true
       condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
