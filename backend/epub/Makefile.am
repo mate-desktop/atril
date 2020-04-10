@@ -7,8 +7,8 @@ AM_CPPFLAGS = 		       			\
 	-DMATELOCALEDIR=\"$(datadir)/locale\"	\
 	-DATRIL_COMPILATION			\
 	$(BACKEND_CFLAGS)			\
-	$(WARN_CXXFLAGS)			\
-	$(EPUB_CFLAGS)			\
+	$(WARN_CFLAGS)				\
+	$(EPUB_CFLAGS)				\
 	$(DISABLE_DEPRECATED)
 
 backend_LTLIBRARIES = libepubdocument.la
