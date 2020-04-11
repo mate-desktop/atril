@@ -942,17 +942,6 @@ link_present_on_page(const gchar* link,const gchar *page_uri)
 	}
 }
 
-static void
-check_add_page_numbers(linknode *listdata, contentListNode *comparenode)
-{
-    if (link_present_on_page(listdata->pagelink, comparenode->value)) {
-		listdata->page = comparenode->index - 1;
-	}
-    if (listdata->children != NULL) {
-        g_list_foreach(listdata->children,(GFunc)check_add_page_numbers,comparenode);
-    }
-}
-
 static GList*
 setup_document_content_list(const gchar* content_uri, GError** error,gchar *documentdir)
 {
