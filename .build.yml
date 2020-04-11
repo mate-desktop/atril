@@ -150,15 +150,18 @@ before_scripts:
   - make install
 
 build_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     export CFLAGS+=" -Wsign-compare -Wunused-parameter"
+  -     export CXXFLAGS+=" -Wsign-compare -Wunused"
+  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude --force -D__cplusplus .
+  - fi
+
   - ./autogen.sh
   - scan-build $CHECKERS ./configure --enable-compile-warnings=maximum --enable-cxx-warnings=maximum
   - if [ $CPU_COUNT -gt 1 ]; then
   -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
   - else
   -     scan-build $CHECKERS --keep-cc -o html-report make
-  - fi
-  - if [ ${DISTRO_NAME} == "debian" ];then
-  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude --force -D__cplusplus .
   - fi
 
 after_scripts:
