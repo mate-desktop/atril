@@ -2889,7 +2889,6 @@ pdf_document_annotations_remove_annotation (EvDocumentAnnotations *document_anno
         PopplerAnnot  *poppler_annot;
         EvMappingList *mapping_list;
         EvMapping     *annot_mapping;
-        GList         *list;
 
         poppler_annot = POPPLER_ANNOT (g_object_get_data (G_OBJECT (annot), "poppler-annot"));
         pdf_document = PDF_DOCUMENT (document_annotations);
