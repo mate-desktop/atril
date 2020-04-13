@@ -499,7 +499,7 @@ xml_get_pointer_to_node(xmlChar* parserfor,
                         xmlChar*  attributename,
                         xmlChar* attributevalue )
 {
-    xmlNodePtr topchild,children ;
+    xmlNodePtr topchild;
 
     xmlretval = NULL ;
 
@@ -1330,7 +1330,6 @@ epub_document_get_info(EvDocument *document)
 	gchar* infofile ;
 	xmlNodePtr metanode ;
 	GString* buffer ;
-	gchar* archive_dir = epub_document->tmp_archive_dir;
 
 	GString* containerpath = g_string_new(epub_document->tmp_archive_dir);
 	g_string_append_printf(containerpath,"/META-INF/container.xml");
@@ -1506,10 +1505,10 @@ add_night_sheet(contentListNode *listdata,gchar *sheet)
     set_xml_root_node(NULL);
     xmlNodePtr head = xml_get_pointer_to_node((xmlChar*)"head",NULL,NULL);
 
-    xmlNodePtr link = xmlNewTextChild(head,NULL,(xmlChar*)"link",NULL);
-    xmlAttrPtr href = xmlNewProp(link,(xmlChar*)"href",(xmlChar*)sheeturi);
-    xmlAttrPtr rel = xmlNewProp(link,(xmlChar*)"rel",(xmlChar*)"alternate stylesheet");
-    xmlAttrPtr class =  xmlNewProp(link,(xmlChar*)"class",(xmlChar*)"night");
+    xmlNodePtr link = xmlNewTextChild (head, NULL, (xmlChar*) "link", NULL);
+    xmlNewProp (link, (xmlChar*) "href", (xmlChar*) sheeturi);
+    xmlNewProp (link, (xmlChar*) "rel", (xmlChar*) "alternate stylesheet");
+    xmlNewProp (link, (xmlChar*) "class", (xmlChar*) "night");
 
     xmlSaveFormatFile (listdata->value, xmldocument, 0);
     xml_free_doc();
@@ -1657,7 +1656,6 @@ static void
 epub_document_add_mathJax(gchar* containeruri,gchar* documentdir)
 {
 	gchar *containerfilename= g_filename_from_uri(containeruri,NULL,NULL);
-	const gchar *backenddir = ev_backends_manager_get_backends_dir();
 	GString *mathjaxdir = g_string_new("/usr/share/javascript/mathjax");
 
 	gchar *mathjaxref = g_filename_to_uri(mathjaxdir->str,NULL,NULL);
