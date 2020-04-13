@@ -435,7 +435,7 @@ xml_get_data_from_node      (xmlNodePtr node,
                              xmlChar* attributename);
 
 static void
-xml_free_doc();
+xml_free_doc                (void);
 
 static void
 free_tree_nodes             (gpointer data);
