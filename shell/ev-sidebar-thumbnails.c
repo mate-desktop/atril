@@ -581,8 +581,6 @@ ev_sidebar_thumbnails_fill_model (EvSidebarThumbnails *sidebar_thumbnails)
 	EvSidebarThumbnailsPrivate *priv = sidebar_thumbnails->priv;
 	GtkTreeIter iter;
 	int i;
-	gint prev_width = -1;
-	gint prev_height = -1;
 
 	for (i = 0; i < sidebar_thumbnails->priv->n_pages; i++) {
 		gchar     *page_label;
@@ -593,16 +591,11 @@ ev_sidebar_thumbnails_fill_model (EvSidebarThumbnails *sidebar_thumbnails)
 		page_label = ev_document_get_page_label (priv->document, i);
 		page_string = g_markup_printf_escaped ("<i>%s</i>", page_label);
 		ev_thumbnails_size_cache_get_size (sidebar_thumbnails->priv->size_cache, i,
-						  sidebar_thumbnails->priv->rotation,
-						  &width, &height);
-		if (!loading_icon || (width != prev_width && height != prev_height)) {
-			loading_icon =
-				ev_sidebar_thumbnails_get_loading_icon (sidebar_thumbnails,
-									width, height);
-		}
+						   sidebar_thumbnails->priv->rotation,
+						   &width, &height);
 
-		prev_width = width;
-		prev_height = height;
+		loading_icon = ev_sidebar_thumbnails_get_loading_icon (sidebar_thumbnails,
+								       width, height);
 
 		gtk_list_store_append (priv->list_store, &iter);
 		gtk_list_store_set (priv->list_store, &iter,

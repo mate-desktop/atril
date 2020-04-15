@@ -194,7 +194,7 @@ set_property (EvPropertiesView *properties,
 		gtk_label_set_markup (GTK_LABEL (label), markup);
 		g_free (markup);
 	} else {
-		valid_text = make_valid_utf8 (text ? text : "");
+		valid_text = make_valid_utf8 (text);
 		gtk_label_set_text (GTK_LABEL (label), valid_text);
 		g_free (valid_text);
 	}
