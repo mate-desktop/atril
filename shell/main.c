@@ -80,10 +80,11 @@ static const GOptionEntry goption_options[] =
 static gboolean
 launch_previewer (void)
 {
-	GString *cmd_str;
-	gchar   *cmd;
-	gboolean retval = FALSE;
-	GError  *error = NULL;
+	GString  *cmd_str;
+	gchar    *cmd;
+	GAppInfo *app;
+	gboolean  retval = FALSE;
+	GError   *error = NULL;
 
 	/* Rebuild the command line, ignoring options
 	 * not supported by the previewer and taking only
@@ -112,15 +113,11 @@ launch_previewer (void)
 
 	cmd = g_string_free (cmd_str, FALSE);
 
-	if (!error) {
-		GAppInfo *app;
+	app = g_app_info_create_from_commandline (cmd, NULL, 0, &error);
 
-		app = g_app_info_create_from_commandline (cmd, NULL, 0, &error);
-
-		if (app != NULL) {
-			retval = g_app_info_launch (app, NULL, NULL, &error);
-			g_object_unref (app);
-		}
+	if (app != NULL) {
+		retval = g_app_info_launch (app, NULL, NULL, &error);
+		g_object_unref (app);
 	}
 
 	if (error) {

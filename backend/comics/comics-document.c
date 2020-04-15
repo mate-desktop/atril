@@ -764,7 +764,7 @@ comics_document_render_pixbuf (EvDocument      *document,
 			if (bytes > 0) {
 				gdk_pixbuf_loader_write (loader, buf, bytes,
 				NULL);
-			} else if (bytes <= 0) {
+			} else {
 				close (outpipe);
 				gdk_pixbuf_loader_close (loader, NULL);
 				outpipe = -1;
