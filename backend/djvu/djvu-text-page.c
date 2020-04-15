@@ -43,8 +43,8 @@ djvu_text_page_selection_process (DjvuTextPage *page,
 		char *token_text = (char *) miniexp_to_str (miniexp_nth (5, p));
 		if (page->text) {
 			char *new_text =
-			    g_strjoin (delimit & 2 ? "\n" :
-			    	       delimit & 1 ? " " : NULL,
+			    g_strjoin ((delimit & 2) ? "\n" :
+			    	       (delimit & 1) ? " " : NULL,
 				       page->text, token_text,
 				       NULL);
 			g_free (page->text);
