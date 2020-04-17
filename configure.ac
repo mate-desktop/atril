@@ -758,6 +758,11 @@ AC_OUTPUT
 echo "
 Configure summary:
 
+    prefix..............:    ${prefix}
+    compiler............:    ${CC}
+    cflags..............:    ${CFLAGS}
+    warning flags.......:    ${WARN_CFLAGS}
+
     GTK+ Unix Print.....:    $with_gtk_unix_print
     Keyring Support.....:    $with_keyring
     DBUS Support........:    $enable_dbus
