@@ -165,9 +165,9 @@ fi
  # SM client
  # *********
 
-PKG_CHECK_MODULES([SMCLIENT],[gtk+-3.0 gthread-2.0 sm >= 1.0.0])
-AC_SUBST([SMCLIENT_CFLAGS])
-AC_SUBST([SMCLIENT_LIBS])
+PKG_CHECK_MODULES([LIBEGG],[gtk+-3.0 gthread-2.0 sm >= 1.0.0])
+AC_SUBST([LIBEGG_CFLAGS])
+AC_SUBST([LIBEGG_LIBS])
 
 # ***
 
@@ -701,6 +701,7 @@ backend/tiff/Makefile
 backend/xps/Makefile
 cut-n-paste/Makefile
 cut-n-paste/smclient/Makefile
+cut-n-paste/smclient/libegg/Makefile
 cut-n-paste/toolbar-editor/Makefile
 cut-n-paste/zoom-control/Makefile
 data/atril.desktop.in
