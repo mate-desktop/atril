@@ -109,7 +109,7 @@ atril_LDFLAGS = $(AM_LDFLAGS)
 atril_LDADD=										\
 	$(top_builddir)/cut-n-paste/zoom-control/libephyzoom.la				\
 	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la			\
-	$(top_builddir)/cut-n-paste/smclient/libsmclient.la				\
+	$(top_builddir)/cut-n-paste/smclient/libegg.la				\
 	$(top_builddir)/properties/libevproperties.la					\
 	$(top_builddir)/libdocument/libatrildocument.la					\
 	$(top_builddir)/libview/libatrilview.la						\
