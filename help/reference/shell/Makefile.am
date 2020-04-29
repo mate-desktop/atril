@@ -116,7 +116,7 @@ FILTER_OUT = \
 GTKDOC_LIBS = \
 	$(top_builddir)/cut-n-paste/zoom-control/libephyzoom.la		\
 	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la	\
-	$(top_builddir)/cut-n-paste/smclient/libsmclient.la		\
+	$(top_builddir)/cut-n-paste/smclient/libegg/libegg.la		\
 	$(top_builddir)/properties/libevproperties.la			\
 	$(top_builddir)/libdocument/libatrildocument.la			\
 	$(top_builddir)/libview/libatrilview.la				\
