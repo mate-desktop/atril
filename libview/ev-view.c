@@ -3210,6 +3210,8 @@ ev_view_remove_annotation (EvView       *view,
         g_object_unref (annot);
 }
 
+#ifdef HAVE_SYNCTEX
+
 static gboolean
 ev_view_synctex_backward_search (EvView *view,
 				 gdouble x,
@@ -3235,6 +3237,8 @@ ev_view_synctex_backward_search (EvView *view,
 
 	return FALSE;
 }
+
+#endif /* HAVE_SYNCTEX */
 
 /* Caret navigation */
 #define CURSOR_ON_MULTIPLIER 2
@@ -4078,8 +4082,10 @@ ev_view_draw (GtkWidget      *widget,
 			show_annotation_windows (view, i);
 		if (page_ready && view->focused_element)
 			draw_focus (view, cr, i, &clip_rect);
+#ifdef HAVE_SYNCTEX
 		if (page_ready && view->synctex_result)
 			highlight_forward_search_results (view, cr, i);
+#endif /* HAVE_SYNCTEX */
 	}
 
 	if (GTK_WIDGET_CLASS (ev_view_parent_class)->draw)
@@ -4473,8 +4479,10 @@ ev_view_button_press_event (GtkWidget      *widget,
 			EvMapping *link;
 			gint page;
 
+#ifdef HAVE_SYNCTEX
 			if (event->state & GDK_CONTROL_MASK)
 				return ev_view_synctex_backward_search (view, event->x , event->y);
+#endif /* HAVE_SYNCTEX */
 
 			if (EV_IS_SELECTION (view->document) && view->selection_info.selections) {
 				if (event->type == GDK_3BUTTON_PRESS) {
@@ -4516,11 +4524,13 @@ ev_view_button_press_event (GtkWidget      *widget,
 				ev_view_remove_all (view);
 				_ev_view_set_focused_element (view, NULL, -1);
 
+#ifdef HAVE_SYNCTEX
 				if (view->synctex_result) {
 					g_free (view->synctex_result);
 					view->synctex_result = NULL;
 					gtk_widget_queue_draw (widget);
 				}
+#endif /* HAVE_SYNCTEX */
 
 				if (EV_IS_SELECTION (view->document))
 					start_selection_for_event (view, event);
@@ -5673,6 +5683,8 @@ highlight_find_results (EvView *view, cairo_t *cr, int page)
         }
 }
 
+#ifdef HAVE_SYNCTEX
+
 static void
 highlight_forward_search_results (EvView *view, cairo_t *cr, int page)
 {
@@ -5693,6 +5705,8 @@ highlight_forward_search_results (EvView *view, cairo_t *cr, int page)
 	cairo_stroke (cr);
 	cairo_restore (cr);
 }
+
+#endif /* HAVE_SYNCTEX */
 
 static void
 draw_surface (cairo_t 	      *cr,
@@ -5896,10 +5910,12 @@ ev_view_finalize (GObject *object)
 	}
 	clear_link_selected (view);
 
+#ifdef HAVE_SYNCTEX
 	if (view->synctex_result) {
 		g_free (view->synctex_result);
 		view->synctex_result = NULL;
 	}
+#endif
 
 	if (view->image_dnd_info.image)
 		g_object_unref (view->image_dnd_info.image);
@@ -7522,6 +7538,8 @@ ev_view_find_cancel (EvView *view)
 	view->find_pages = NULL;
 }
 
+#ifdef HAVE_SYNCTEX
+
 /*** Synctex ***/
 void
 ev_view_highlight_forward_search (EvView       *view,
@@ -7549,6 +7567,9 @@ ev_view_highlight_forward_search (EvView       *view,
 	ensure_rectangle_is_visible (view, &view_rect);
 	gtk_widget_queue_draw (GTK_WIDGET (view));
 }
+
+
+#endif /* HAVE_SYNCTEX */
 
 /*** Selections ***/
 static gboolean

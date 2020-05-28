@@ -362,12 +362,26 @@ AM_CONDITIONAL([ENABLE_INTROSPECTION],[test "$enable_introspection" = "yes"])
 
 dnl ================== libsynctex ===========================================
 
-PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=yes, has_synctex=no)
+AC_ARG_ENABLE(synctex,
+    [AS_HELP_STRING([--disable-synctex],
+                    [Disable the support of synctex])],
+    [enable_synctex=$enableval],
+    [enable_synctex=yes])
 
-dnl not found? use internal code copy.
-if test "x$has_synctex" = "xno"; then
+if test "x$enable_synctex" = "xyes"; then
+    PKG_CHECK_MODULES(SYNCTEX, [synctex >= $SYNCTEX_REQUIRED], has_synctex=yes, has_synctex=no)
+    if test "x$has_synctex" = "xno"; then
         AC_MSG_ERROR("SyncTeX support is disabled since library version $SYNCTEX_REQUIRED or newer not found")
+    fi
+else
+    has_synctex=no
 fi
+
+AM_CONDITIONAL(HAVE_SYNCTEX, test x$synctex = xyes)
+if test "x$have_spectre" = "xyes"; then
+   AC_DEFINE([HAVE_SYNCTEX], [1], [Have libsynctex])
+fi
+
 AC_SUBST(SYNCTEX_LIBS)
 AC_SUBST(SYNCTEX_CFLAGS)
 

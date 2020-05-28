@@ -85,7 +85,9 @@ struct _EvDocument
 	 * we need a flag to detemine whether to replace the atril-view with a web-view.
 	 */
 	gboolean iswebdocument;
+#ifdef HAVE_SYNCTEX
 	const gchar *synctex_version;
+#endif
 };
 
 struct _EvDocumentClass
@@ -113,7 +115,9 @@ struct _EvDocumentClass
         EvDocumentInfo  * (* get_info)        (EvDocument      *document);
         gboolean          (* get_backend_info)(EvDocument      *document,
                                                EvDocumentBackendInfo *info);
+#ifdef HAVE_SYNCTEX
         gboolean	  (* support_synctex) (EvDocument      *document);
+#endif
 
 	void              (* toggle_night_mode)  (EvDocument      *document,gboolean night);
 	void              (*check_add_night_sheet)(EvDocument      *document);
@@ -169,6 +173,8 @@ gboolean         ev_document_has_text_page_labels (EvDocument      *document);
 gboolean         ev_document_find_page_by_label   (EvDocument      *document,
 						   const gchar     *page_label,
 						   gint            *page_index);
+
+#ifdef HAVE_SYNCTEX
 gboolean	 ev_document_has_synctex 	  (EvDocument      *document);
 
 EvSourceLink    *ev_document_synctex_backward_search
@@ -180,6 +186,8 @@ EvSourceLink    *ev_document_synctex_backward_search
 EvMapping       *ev_document_synctex_forward_search
                                                   (EvDocument      *document,
 						   EvSourceLink    *source_link);
+
+#endif /* HAVE_SYNCTEX */
 
 gint             ev_rect_cmp                      (EvRectangle     *a,
 					           EvRectangle     *b);

@@ -102,10 +102,13 @@ libatrildocument_la_CPPFLAGS = \
 
 libatrildocument_la_CFLAGS = \
 	$(LIBDOCUMENT_CFLAGS)			\
-	$(SYNCTEX_CFLAGS)			\
 	$(WARN_CFLAGS)				\
 	$(DISABLE_DEPRECATED)			\
 	$(AM_CFLAGS)
+
+if HAVE_SYNCTEX
+libatrildocument_la_CFLAGS += $(SYNCTEX_CFLAGS)
+endif
 
 libatrildocument_la_LDFLAGS = \
 	-version-info $(EV_DOCUMENT_LT_VERSION_INFO)	\
@@ -116,8 +119,11 @@ libatrildocument_la_LDFLAGS = \
 libatrildocument_la_LIBADD = \
 	$(LIBDOCUMENT_LIBS)	\
 	$(GMODULE_LIBS)		\
-	$(SYNCTEX_LIBS)		\
 	$(ZLIB_LIBS)
+
+if HAVE_SYNCTEX
+libatrildocument_la_LIBADD += $(SYNCTEX_LIBS)
+endif
 
 
 BUILT_SOURCES = 			\

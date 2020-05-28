@@ -5362,6 +5362,8 @@ ev_window_dual_mode_odd_pages_left_changed_cb (EvDocumentModel *model,
 					 ev_document_model_get_dual_page_odd_pages_left (model));
 }
 
+#ifdef HAVE_SYNCTEX
+
 static char *
 build_comments_string (EvDocument *document)
 {
@@ -5378,6 +5380,8 @@ build_comments_string (EvDocument *document)
 
 	return comments;
 }
+
+#endif /* HAVE_SYNCTEX */
 
 #define ABOUT_GROUP "About"
 #define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))
@@ -5405,7 +5409,10 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		   "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA")
 	};
 
-	char *license_trans, *comments;
+	char *license_trans;
+#ifdef HAVE_SYNCTEX
+	char *comments;
+#endif /* HAVE_SYNCTEX */
 	GKeyFile *key_file;
 	GBytes *bytes;
 	const guint8 *data;
@@ -5435,11 +5442,13 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 
 	for (p = documenters; *p; ++p)
 		*p = _(*p);
-#endif
+#endif /* ENABLE_NLS */
 
 	license_trans = g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
+#ifdef HAVE_SYNCTEX
 	comments = build_comments_string (ev_window->priv->document);
+#endif /* HAVE_SYNCTEX */
 
 	gtk_show_about_dialog (
 		GTK_WINDOW (ev_window),
@@ -5450,7 +5459,11 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		               "Copyright \xc2\xa9 2012–2020 The MATE developers"),
 		"license", license_trans,
 		"website", "https://mate-desktop.org/",
+#ifdef HAVE_SYNCTEX
 		"comments", comments,
+#else
+		"comments", _("Atril is a simple multi-page document viewer."),
+#endif /* HAVE_SYNCTEX */
 		"authors", authors,
 		"documenters", documenters,
 		"translator-credits", _("translator-credits"),
@@ -5459,7 +5472,9 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		NULL);
 
 	g_strfreev (authors);
+#ifdef HAVE_SYNCTEX
 	g_free (comments);
+#endif /* HAVE_SYNCTEX */
 	g_free (license_trans);
 }
 
@@ -7744,6 +7759,7 @@ handle_sync_view_cb (EvAtrilWindow        *object,
                      guint                  timestamp,
                      EvWindow              *window)
 {
+#ifdef HAVE_SYNCTEX
 	if (window->priv->document && ev_document_has_synctex (window->priv->document)) {
 		EvSourceLink link;
 		link.filename = (char *) source_file;
@@ -7751,6 +7767,7 @@ handle_sync_view_cb (EvAtrilWindow        *object,
 		ev_view_highlight_forward_search (EV_VIEW (window->priv->view), &link);
 		gtk_window_present_with_time (GTK_WINDOW (window), timestamp);
 	}
+#endif /* HAVE_SYNCTEX */
 
 	ev_atril_window_complete_sync_view (object, invocation);
 
