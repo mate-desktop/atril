@@ -68,7 +68,9 @@ static void            _ev_document_get_page_size   (EvDocument *document,
 static gchar          *_ev_document_get_page_label  (EvDocument *document,
 						     EvPage     *page);
 static EvDocumentInfo *_ev_document_get_info        (EvDocument *document);
+#ifdef ENABLE_SYNCTEX
 static gboolean        _ev_document_support_synctex (EvDocument *document);
+#endif
 
 static GMutex ev_doc_mutex;
 static GMutex ev_fc_mutex;
@@ -386,6 +388,8 @@ ev_document_get_page (EvDocument *document,
 	return klass->get_page (document, index);
 }
 
+
+#ifdef ENABLE_SYNCTEX
 static gboolean
 _ev_document_support_synctex (EvDocument *document)
 {
@@ -394,7 +398,6 @@ _ev_document_support_synctex (EvDocument *document)
 	return klass->support_synctex ? klass->support_synctex (document) : FALSE;
 }
 
-#ifdef ENABLE_SYNCTEX
 gboolean
 ev_document_has_synctex (EvDocument *document)
 {
