@@ -177,12 +177,14 @@ static void       ev_view_remove_all                         (EvView            
 static AtkObject *ev_view_get_accessible                     (GtkWidget *widget);
 
 /*** Drawing ***/
+#if ENABLE_SYNCTEX
 static void       highlight_find_results                     (EvView             *view,
 							      cairo_t            *cr,
 							      int                 page);
 static void       highlight_forward_search_results           (EvView             *view,
 							      cairo_t            *cr,
 							      int                 page);
+#endif
 static void       draw_one_page                              (EvView             *view,
 							      gint                page,
 							      cairo_t            *cr,
@@ -4074,8 +4076,10 @@ ev_view_draw (GtkWidget      *widget,
 
 		if (page_ready && should_draw_caret_cursor (view, i))
 			draw_caret_cursor (view, cr);
+#ifdef ENABLE_SYNCTEX
 		if (page_ready && view->find_pages && view->highlight_find_results)
 			highlight_find_results (view, cr, i);
+#endif
 		if (page_ready && EV_IS_DOCUMENT_ANNOTATIONS (view->document))
 			show_annotation_windows (view, i);
 		if (page_ready && view->focused_element)
@@ -5654,6 +5658,7 @@ draw_rubberband (EvView             *view,
 }
 
 
+#ifdef ENABLE_SYNCTEX
 static void
 highlight_find_results (EvView *view, cairo_t *cr, int page)
 {
@@ -5698,6 +5703,7 @@ highlight_forward_search_results (EvView *view, cairo_t *cr, int page)
 	cairo_stroke (cr);
 	cairo_restore (cr);
 }
+#endif
 
 static void
 draw_surface (cairo_t 	      *cr,
@@ -6497,7 +6503,9 @@ ev_view_init (EvView *view)
 	view->page_layout = EV_PAGE_LAYOUT_SINGLE;
 	view->pending_scroll = SCROLL_TO_KEEP_POSITION;
 	view->jump_to_find_result = TRUE;
+#ifdef ENABLE_SYNCTEX
 	view->highlight_find_results = FALSE;
+#endif
 	view->caret_enabled = FALSE;
 	view->cursor_page = 0;
 	view->zoom_center_x = -1;
@@ -7517,7 +7525,9 @@ ev_view_find_search_changed (EvView *view)
 void
 ev_view_find_set_highlight_search (EvView *view, gboolean value)
 {
+#ifdef ENABLE_SYNCTEX
 	view->highlight_find_results = value;
+#endif
 	gtk_widget_queue_draw (GTK_WIDGET (view));
 }
 
