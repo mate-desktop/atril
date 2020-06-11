@@ -362,9 +362,12 @@ AM_CONDITIONAL([ENABLE_INTROSPECTION],[test "$enable_introspection" = "yes"])
 
 dnl ================== libsynctex ===========================================
 AC_ARG_ENABLE([synctex],
-  [AS_HELP_STRING([--disable-synctex], [Disable support for synctex])],
-  [],
-  [enable_synctex=yes])
+  [--enable-synctex  enable support for synctex)],
+  [case "${enableval}" in
+    yes) synctex=true ;;
+    no)  synctex=false;;
+    *) AC_MSG_ERROR([bad value ${enableval} for --enable-synctex]) ;;
+  esac],[enable_synctex=yes])
 
 
 if test "$enable_synctex" = "yes"; then
