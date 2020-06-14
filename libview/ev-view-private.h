@@ -125,9 +125,7 @@ struct _EvView {
 	GList **find_pages;
 	gint find_result;
 	gboolean jump_to_find_result;
-#ifdef ENABLE_SYNCTEX
 	gboolean highlight_find_results;
-#endif
 	EvDocumentModel *model;
 	EvPixbufCache *pixbuf_cache;
 	gsize pixbuf_cache_size;
