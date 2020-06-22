@@ -15,15 +15,16 @@
 # Beniamin Pawlus <kupwzywcu@o2.pl>, 2018
 # Jan Bońkowski <bonkowskijan@gmail.com>, 2018
 # Darek Witkowski, 2018
-# Lukasz Kaminski <inactive+elpikej@transifex.com>, 2018
+# 161bd750cc8572440963b84e861d7973_ed8d533 <cbd6230593fe094da208a2693be73f8f_459393>, 2018
 # Michal Kaptur <kaptur.michal@gmail.com>, 2018
 # Marcin Mikołajczak <me@mkljczk.pl>, 2018
-# Dominik Adrian Grzywak, 2018
 # emariusek <wisniowy@g.pl>, 2019
 # Paweł Bandura <gawelx@gmail.com>, 2019
 # Przemek P <ppjg@dami.pl>, 2019
 # Marcin GTriderXC <gtriderxc@yahoo.com>, 2019
 # pietrasagh <pietrasagh@gmail.com>, 2019
+# Daniel Tokarzewski <bezimo@gmail.com>, 2020
+# Dominik Adrian Grzywak, 2020
 # 
 msgid ""
 msgstr ""
@@ -31,7 +32,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: pietrasagh <pietrasagh@gmail.com>, 2019\n"
+"Last-Translator: Dominik Adrian Grzywak, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -495,6 +496,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril jest prostą wielostronicową przeglądarką dokumentów. Może wyświetlać "
+"oraz drukować pliki PostScript (PS), Encapsulated PostScript (EPS), DJVU, "
+"DVI, XPS and Portable Document Format (PDF), jak również pliki archiwa "
+"komików. Gdy obsługiwany dokument na to pozwala, program umożliwia "
+"wyszukiwanie tekstu, kopiowanie do schowka, nawigację po hiperłączach, oraz "
+"nawigację po zakładkach."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -502,6 +509,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril jest forkiem Evince'a i częścią środowiska MATE Desktop Environment. "
+"Jeśli chcesz dowiedzieć się więcej o MATE i Atril, odwiedź stronę główną "
+"projektu."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -517,13 +527,13 @@ msgstr "Wyświetlanie wielostronicowych dokumentów"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1398,6 +1408,9 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Przeglądarka dokumentów\n"
+"Używa %s (%s)\n"
+"oraz SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1452,6 +1465,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Prawa autorskie © 1996–2009 autorzy Evince\n"
+"Prawa autorskie © 2012–2020 twórcy MATE "
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"

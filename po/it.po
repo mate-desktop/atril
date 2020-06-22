@@ -8,11 +8,9 @@
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # LuKePicci <luca.piccirillo@gmail.com>, 2018
-# Davide Quattrocchi <davide.quattrocchi@outlook.com>, 2018
 # Marco Bartolucci <nap.84@live.it>, 2018
 # Emanuele Antonio Faraone <emanueleant03@gmail.com>, 2018
 # Marco Z. <minaz666@gmail.com>, 2018
-# Simone Centonze <mypythonit@gmail.com>, 2018
 # l3nn4rt, 2018
 # Dario Di Nucci <linkin88mail@gmail.com>, 2019
 # Giuseppe Pignataro <rogepix@gmail.com>, 2019
@@ -53,7 +51,7 @@ msgstr "Il comando \"%s\" non è terminato normalmente."
 #: backend/comics/comics-document.c:459
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr "Non è un tipo MIME di fumetti: %s"
+msgstr "Non è un tipo MIME di fumetto: %s"
 
 #: backend/comics/comics-document.c:466
 msgid ""
@@ -144,7 +142,7 @@ msgstr "impossibile aprire file contenitore"
 
 #: backend/epub/epub-document.c:864
 msgid "container file is corrupt"
-msgstr "file contenitore corrotto"
+msgstr "il file contenitore è corrotto"
 
 #: backend/epub/epub-document.c:874
 msgid "epub file is invalid or corrupt"
@@ -152,7 +150,7 @@ msgstr "il file epub è invalido o corrotto"
 
 #: backend/epub/epub-document.c:884
 msgid "epub file is corrupt, no container"
-msgstr "il file epub è corrotto, nessun container"
+msgstr "il file epub è corrotto, nessun contenitore"
 
 #: backend/epub/epub-document.c:969
 msgid "could not parse content manifest"
@@ -164,7 +162,7 @@ msgstr "contenuto del file non valido"
 
 #: backend/epub/epub-document.c:987
 msgid "epub file has no spine"
-msgstr "il file epub non ha una struttura spine"
+msgstr "il file epub non ha un dorso"
 
 #: backend/epub/epub-document.c:996
 msgid "epub file has no manifest"
@@ -412,7 +410,7 @@ msgstr "Adatta la pagina"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6876
 msgid "Fit Width"
-msgstr "Larghezza"
+msgstr "Adatta larghezza"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6512
 msgid "Expand Window to Fit"
@@ -494,8 +492,8 @@ msgstr ""
 "Atril è un semplice visualizzatore di documenti multi-pagina. Può mostrare e"
 " stampare file PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, "
 "XPS and Portable Document Format (PDF), così come archivi di fumetti. "
-"Permette anche di ricercare testi, copiarli, navigare ipertesti e l'indice, "
-"se ciò è permesso dal documento."
+"Permette anche di ricercare testi, copiarli, navigare gli ipertesti e "
+"l'indice, se ciò è permesso dal documento."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -509,7 +507,7 @@ msgstr ""
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
 msgid "Document Viewer"
-msgstr "Visualizzatore documenti"
+msgstr "Visualizzatore di documenti"
 
 #: data/atril.desktop.in.in:5
 msgid "View multi-page documents"
@@ -574,7 +572,7 @@ msgid ""
 "navigation."
 msgstr ""
 "Mostra all'utente la richiesta di conferma per attivare la navigazione con "
-"cursore."
+"il cursore."
 
 #: previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -582,7 +580,7 @@ msgstr "Elimina il file temporaneo"
 
 #: previewer/ev-previewer.c:36
 msgid "Print settings file"
-msgstr "File con impostazioni di stampa"
+msgstr "Stampa il file con le impostazioni di stampa"
 
 #: previewer/ev-previewer.c:107 previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
@@ -607,7 +605,7 @@ msgstr "Pagina pr_ecedente"
 
 #: previewer/ev-previewer-window.c:288 shell/ev-window.c:6520
 msgid "Go to the previous page"
-msgstr "Va alla pagina precedente"
+msgstr "Vai alla pagina precedente"
 
 #: previewer/ev-previewer-window.c:290 shell/ev-window.c:6522
 msgid "_Next Page"
@@ -615,7 +613,7 @@ msgstr "Pagina s_uccessiva"
 
 #: previewer/ev-previewer-window.c:291 shell/ev-window.c:6523
 msgid "Go to the next page"
-msgstr "Va alla pagina successiva"
+msgstr "Vai alla pagina successiva"
 
 #: previewer/ev-previewer-window.c:293 shell/ev-window.c:6499
 msgid "Zoom _In"
@@ -704,11 +702,11 @@ msgstr "Creatore:"
 
 #: properties/ev-properties-view.c:67
 msgid "Created:"
-msgstr "Creazione:"
+msgstr "Creato:"
 
 #: properties/ev-properties-view.c:68
 msgid "Modified:"
-msgstr "Modifica:"
+msgstr "Modificato:"
 
 #: properties/ev-properties-view.c:69
 msgid "Number of Pages:"
@@ -879,11 +877,11 @@ msgstr "Scorri giù"
 
 #: libview/ev-view-accessible.c:50
 msgid "Scroll View Up"
-msgstr "Scorre la vista in su"
+msgstr "Scorre la vista verso l'alto"
 
 #: libview/ev-view-accessible.c:51
 msgid "Scroll View Down"
-msgstr "Scorre la vista in giù"
+msgstr "Scorre la vista verso il basso"
 
 #: libview/ev-view-accessible.c:128
 msgid "Document View"
@@ -899,23 +897,23 @@ msgstr "Fine della presentazione. Fai clic per uscire."
 
 #: libview/ev-view.c:1903
 msgid "Go to first page"
-msgstr "Va alla prima pagina"
+msgstr "Vai alla prima pagina"
 
 #: libview/ev-view.c:1905
 msgid "Go to previous page"
-msgstr "Va alla pagina precedente"
+msgstr "Vai alla pagina precedente"
 
 #: libview/ev-view.c:1907
 msgid "Go to next page"
-msgstr "Va alla pagina successiva"
+msgstr "Vai alla pagina successiva"
 
 #: libview/ev-view.c:1909
 msgid "Go to last page"
-msgstr "Va all'ultima pagina"
+msgstr "Vai all'ultima pagina"
 
 #: libview/ev-view.c:1911
 msgid "Go to page"
-msgstr "Va alla pagina"
+msgstr "Vai alla pagina"
 
 #: libview/ev-view.c:1913
 msgid "Find"
@@ -924,17 +922,17 @@ msgstr "Trova"
 #: libview/ev-view.c:1941
 #, c-format
 msgid "Go to page %s"
-msgstr "Va a pagina %s"
+msgstr "Vai a pagina %s"
 
 #: libview/ev-view.c:1947
 #, c-format
 msgid "Go to %s on file “%s”"
-msgstr "Va a %s nel file \"%s\""
+msgstr "Vai a %s nel file \"%s\""
 
 #: libview/ev-view.c:1950
 #, c-format
 msgid "Go to file “%s”"
-msgstr "Va al file \"%s\""
+msgstr "Vai al file \"%s\""
 
 #: libview/ev-view.c:1958
 #, c-format
@@ -947,7 +945,7 @@ msgstr "Trova:"
 
 #: shell/eggfindbar.c:326
 msgid "Find previous occurrence of the search string"
-msgstr "Trova la precedente occorrenza della stringa di ricerca"
+msgstr "Trova l'occorrenza precedente della stringa di ricerca"
 
 #: shell/eggfindbar.c:334
 msgid "Find next occurrence of the search string"
@@ -955,7 +953,7 @@ msgstr "Trova la successiva occorrenza della stringa di ricerca"
 
 #: shell/eggfindbar.c:341
 msgid "Case Sensitive"
-msgstr "Maiuscole/minuscole"
+msgstr "Rispetta maiuscole/minuscole"
 
 #: shell/eggfindbar.c:344
 msgid "Toggle case sensitive search"
@@ -1049,7 +1047,7 @@ msgstr "Caricamento…"
 
 #: shell/ev-open-recent-action.c:71
 msgid "Open a recently used document"
-msgstr "Apre un documento usato di recente"
+msgstr "Apri un documento usato di recente"
 
 #: shell/ev-password-view.c:135
 msgid ""
@@ -1157,15 +1155,15 @@ msgstr "Allegati"
 
 #: shell/ev-sidebar-bookmarks.c:155
 msgid "_Open Bookmark"
-msgstr "_Apri Segnalibro"
+msgstr "_Apri segnalibro"
 
 #: shell/ev-sidebar-bookmarks.c:157
 msgid "_Rename Bookmark"
-msgstr "_Rinomina Segnalibro"
+msgstr "_Rinomina segnalibro"
 
 #: shell/ev-sidebar-bookmarks.c:159
 msgid "_Remove Bookmark"
-msgstr "_Rimuovi Segnalibro"
+msgstr "_Rimuovi segnalibro"
 
 #: shell/ev-sidebar-bookmarks.c:314 shell/ev-window.c:1014
 #: shell/ev-window.c:5067
@@ -1317,7 +1315,7 @@ msgid ""
 "Document contains form fields that have been filled out. If you don't save a"
 " copy, changes will be permanently lost."
 msgstr ""
-"Il documento contiene campi che sono stati compilati. Se non si salvi una "
+"Il documento contiene campi che sono stati compilati. Se non si salva una "
 "copia del documento, le modifiche verranno perse per sempre."
 
 #: shell/ev-window.c:3878
@@ -1325,8 +1323,8 @@ msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
-"Il documento contiene annotazioni nuove o modificate. Se non salvi una copia"
-" del documento, le modifiche verranno persi per sempre."
+"Il documento contiene annotazioni nuove o modificate. Se non si salva una "
+"copia del documento, le modifiche verranno perse per sempre."
 
 #: shell/ev-window.c:3885
 #, c-format
@@ -1493,7 +1491,7 @@ msgstr ""
 
 #: shell/ev-window.c:6125
 msgid "Don't show this message again"
-msgstr "_Non mostrare di nuovo questo messaggio"
+msgstr "_Non mostrare più questo messaggio"
 
 #: shell/ev-window.c:6448
 msgid "_File"
@@ -1541,7 +1539,7 @@ msgstr "Salva una copia del documento attuale"
 
 #: shell/ev-window.c:6465
 msgid "Send _To..."
-msgstr "Invia_A..."
+msgstr "Invia _a..."
 
 #: shell/ev-window.c:6466
 msgid "Send current document by mail, instant message..."
@@ -1633,7 +1631,7 @@ msgstr "Va all'ultima pagina"
 
 #: shell/ev-window.c:6533
 msgid "_Add Bookmark"
-msgstr "A_ggiungi Segnalibro"
+msgstr "A_ggiungi segnalibro"
 
 #: shell/ev-window.c:6534
 msgid "Add a bookmark for the current page"
@@ -1721,7 +1719,7 @@ msgstr "Mostra il documento come una presentazione"
 
 #: shell/ev-window.c:6631
 msgid "Inverted _Colors"
-msgstr "_Colori Invertiti"
+msgstr "_Colori invertiti"
 
 #: shell/ev-window.c:6632
 msgid "Show page contents with the colors inverted"
@@ -1817,7 +1815,7 @@ msgstr "Riduci"
 
 #: shell/ev-window.c:6868
 msgid "Reset Zoom"
-msgstr "Riprisitina Zoom"
+msgstr "Riprisitina zoom"
 
 #: shell/ev-window.c:7012 shell/ev-window.c:7028
 msgid "Unable to launch external application."

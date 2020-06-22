@@ -6,7 +6,6 @@
 # Translators:
 # Arif Budiman <arifpedia@gmail.com>, 2018
 # Hatta.z, 2018
-# hpiece 8 <hpiece8@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
 # Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2018
@@ -16,6 +15,7 @@
 # Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
 # Ibnu Daru Aji, 2019
 # Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2019
+# Chotibul Studio <chotibulstudio@gmail.com>, 2020
 # Andika Triwidada <andika@gmail.com>, 2020
 # 
 msgid ""
@@ -473,11 +473,11 @@ msgstr "6400%"
 #: data/atril.appdata.xml.in:7 data/atril.desktop.in.in:3
 #: shell/ev-window.c:5445
 msgid "Atril Document Viewer"
-msgstr "Atril Document Viewer"
+msgstr "Atril Penampil Dokumen"
 
 #: data/atril.appdata.xml.in:8
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr "Penampil dokumen untuk lingkungan desktop MATE."
+msgstr "Penampil Dokumen untuk lingkungan desktop MATE."
 
 #: data/atril.appdata.xml.in:10
 msgid ""
@@ -487,6 +487,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril adalah penampil dokumen multi halaman sederhana. Atril dapat "
+"menampilkan dan mencetak berkas dengan tipe PostScript (PS), Encapsulated "
+"PostScript (EPS), DJVU, DVI, XPS, dan Portable Document Format (PDF), maupun"
+" berkas-berkas arsip buku komik. Ketika didukung oleh dokumen, Atril juga "
+"dapat mencari, menyalin teks ke papan klip, navigasi hypertext, dan markah "
+"daftar isi."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -494,6 +500,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril adalah fork dari Evince dan bagian dari Lingkungan Desktop MATE. Bila "
+"Anda ingin tahu lebih jauh tentang MATE dan Atril, harap kunjungi laman "
+"proyek."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -515,7 +524,7 @@ msgstr "atril"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;dokumen;penampil;pdf;dvi;ps;xps;tiff;pixbuf;djvu;komik;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -572,7 +581,7 @@ msgstr "Cetak berkas pengaturan"
 
 #: previewer/ev-previewer.c:107 previewer/ev-previewer.c:141
 msgid "MATE Document Previewer"
-msgstr "Penampil Dokumen MATE"
+msgstr "Pratinjau Dokumen MATE"
 
 #: previewer/ev-previewer-window.c:96 shell/ev-window.c:3640
 msgid "Failed to print document"
@@ -621,7 +630,7 @@ msgstr "Memperkecil tampilan dokumen"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6506
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Atur ulang zum ke 100%"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1321
 msgid "Print"
@@ -1141,15 +1150,15 @@ msgstr "Lampiran"
 
 #: shell/ev-sidebar-bookmarks.c:155
 msgid "_Open Bookmark"
-msgstr "_Buka Penanda Tautan"
+msgstr "_Buka Markah"
 
 #: shell/ev-sidebar-bookmarks.c:157
 msgid "_Rename Bookmark"
-msgstr "_Ganti Nama Penanda Tautan"
+msgstr "_Ganti Nama Markah"
 
 #: shell/ev-sidebar-bookmarks.c:159
 msgid "_Remove Bookmark"
-msgstr "_Hapus Penanda Tautan"
+msgstr "_Hapus Markah"
 
 #: shell/ev-sidebar-bookmarks.c:314 shell/ev-window.c:1014
 #: shell/ev-window.c:5067
@@ -1167,7 +1176,7 @@ msgstr "_Hapus"
 
 #: shell/ev-sidebar-bookmarks.c:606
 msgid "Bookmarks"
-msgstr "Penanda Tautan"
+msgstr "Markah"
 
 #: shell/ev-sidebar-layers.c:441
 msgid "Layers"
@@ -1183,7 +1192,7 @@ msgstr "Indeks"
 
 #: shell/ev-sidebar-thumbnails.c:1035
 msgid "Thumbnails"
-msgstr "Miniatur"
+msgstr "Gambar Mini"
 
 #: shell/ev-window.c:1011
 #, c-format
@@ -1288,7 +1297,7 @@ msgstr "Tidak dapat mengirim dokumen saat ini"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] ""
+msgstr[0] "%d pekerjaan tertunda dalam antrian"
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1322,7 +1331,7 @@ msgstr "Tutup _tanpa Menyimpan"
 
 #: shell/ev-window.c:3908 shell/ev-window.c:6462
 msgid "_Save As…"
-msgstr ""
+msgstr "_Simpan Sebagai…"
 
 #: shell/ev-window.c:3977
 #, c-format
@@ -1336,6 +1345,8 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"Ada %d pekerjaan cetak aktif. Tunggu sampai pencetakan berhenti sebelum "
+"menutup?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1347,7 +1358,7 @@ msgstr "Batal _Mencetak dan Keluar"
 
 #: shell/ev-window.c:4006
 msgid "Close _after Printing"
-msgstr "Tutup _setelah Mencetak"
+msgstr "Tutup setel_ah Mencetak"
 
 #: shell/ev-window.c:4403
 msgid "Running in presentation mode"
@@ -1372,14 +1383,17 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Penampil Dokumen\n"
+"Memakai %s (%s)\n"
+"dan SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "Tim Dokumentasi MATE"
 
 #: shell/ev-window.c:5389
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "Tim Dokumentasi GNOME"
 
 #: shell/ev-window.c:5394
 msgid ""
@@ -1388,6 +1402,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril merupakan perangkat lunak bebas; Anda bisa mendistribusikan kembali "
+"dan/atau memodifikasinya dibawah ketentuan Lisensi Publik Umum GNU yang "
+"diterbitkan oleh Yayasan Perangkat Lunak Bebas; baik versi 2 dari Lisensi, "
+"atau (sesuai pilihan Anda) versi yang lebih baru."
 
 #: shell/ev-window.c:5398
 msgid ""
@@ -1396,6 +1414,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril didistribusikan dengan harapan akan bermanfaat, tetapi TANPA GARANSI "
+"APAPUN; bahkan tanpa jaminan tersirat mengenai KELAYAKAN JUAL atau "
+"KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat Lisensi Publik Umum GNU untuk detail"
+" lebih lanjut."
 
 #: shell/ev-window.c:5402
 msgid ""
@@ -1403,16 +1425,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Anda seharusnya telah menerima salinan Lisensi Publik Umum GNU bersama "
+"dengan Atril; jika tidak, tulis ke Free Software Foundation, Inc., Jalan "
+"Franklin No. 51, Lantai Lima, Boston, MA 02110-1301 USA"
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Tentang Penampil Dokumen Atril"
 
 #: shell/ev-window.c:5448
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Hak Cipta © 1996–2009 Penulis Evince\n"
+"Hak Cipta © 2012–2020 Pengembang MATE"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1421,13 +1448,14 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020."
 
 #: shell/ev-window.c:5749
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
+msgstr[0] "%d ditemukan di halaman ini"
 
 #: shell/ev-window.c:5754
 msgid "Not found"
@@ -1452,6 +1480,10 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Menekan F7 mengaktifkan/menonaktifkan navigasi caret. Fitur ini menempatkan "
+"kursor yang dapat berpindah pada halaman teks, memungkinkan Anda untuk "
+"berpindah dan memilih teks dengan papan ketik Anda. Apakah Anda hendak "
+"mengaktifkan navigasi caret?"
 
 #: shell/ev-window.c:6125
 msgid "Don't show this message again"
@@ -1471,15 +1503,15 @@ msgstr "_Tampilan"
 
 #: shell/ev-window.c:6451
 msgid "_Go"
-msgstr "_Jalan"
+msgstr "_Ke"
 
 #: shell/ev-window.c:6452
 msgid "_Bookmarks"
-msgstr "_Penanda Tautan"
+msgstr "_Markah"
 
 #: shell/ev-window.c:6453
 msgid "_Help"
-msgstr "_Bantuan"
+msgstr "B_antuan"
 
 #: shell/ev-window.c:6456 shell/ev-window.c:6823
 msgid "_Open…"
@@ -1523,7 +1555,7 @@ msgstr "_Salin"
 
 #: shell/ev-window.c:6479
 msgid "Select _All"
-msgstr "Pilih _Semua"
+msgstr "Pilih Semu_a"
 
 #: shell/ev-window.c:6481
 msgid "_Find…"
@@ -1543,15 +1575,15 @@ msgstr "Cari Se_belumnya"
 
 #: shell/ev-window.c:6488
 msgid "T_oolbar"
-msgstr "Bilah_ Alat"
+msgstr "Bilah _Alat"
 
 #: shell/ev-window.c:6490
 msgid "Rotate _Left"
-msgstr "Putar _Kiri"
+msgstr "Putar K_iri"
 
 #: shell/ev-window.c:6492
 msgid "Rotate _Right"
-msgstr "Putar _Kanan"
+msgstr "Putar K_anan"
 
 #: shell/ev-window.c:6494
 msgid "Save Current Settings as _Default"
@@ -1559,7 +1591,7 @@ msgstr "Simpan Setelan Kini sebagai _Bawaan"
 
 #: shell/ev-window.c:6505
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Atur Ulang Zum"
 
 #: shell/ev-window.c:6508
 msgid "_Reload"
@@ -1607,7 +1639,7 @@ msgstr "_Isi"
 
 #: shell/ev-window.c:6541
 msgid "_About"
-msgstr "_Tentang"
+msgstr "Tent_ang"
 
 #: shell/ev-window.c:6545
 msgid "Leave Fullscreen"
@@ -1627,7 +1659,7 @@ msgstr "Memulai presentasi"
 
 #: shell/ev-window.c:6604
 msgid "_Toolbar"
-msgstr "_Bilah Alat"
+msgstr "Bilah Ala_t"
 
 #: shell/ev-window.c:6605
 msgid "Show or hide the toolbar"
@@ -1635,7 +1667,7 @@ msgstr "Menampilkan atau menyembunyikan bilah alat"
 
 #: shell/ev-window.c:6607
 msgid "Side _Pane"
-msgstr "Panel _Samping"
+msgstr "_Panel Sisi"
 
 #: shell/ev-window.c:6608
 msgid "Show or hide the side pane"
@@ -1683,7 +1715,7 @@ msgstr "Jalankan dokumen sebagai suatu presentasi"
 
 #: shell/ev-window.c:6631
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "_Warna Terbalik"
 
 #: shell/ev-window.c:6632
 msgid "Show page contents with the colors inverted"
@@ -1727,7 +1759,7 @@ msgstr "Properti Anotasi…"
 
 #: shell/ev-window.c:6657
 msgid "Remove Annot…"
-msgstr "Hapus Annotasi…"
+msgstr "Hapus Anotasi…"
 
 #: shell/ev-window.c:6662
 msgid "_Open Attachment"
@@ -1779,7 +1811,7 @@ msgstr "Perkecil Tampilan"
 
 #: shell/ev-window.c:6868
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Atur Ulang Zum"
 
 #: shell/ev-window.c:7012 shell/ev-window.c:7028
 msgid "Unable to launch external application."

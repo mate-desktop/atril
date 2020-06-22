@@ -6,9 +6,9 @@
 # Translators:
 # brennus <jonas.ska@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018
 # Audrius Meskauskas, 2018
 # Moo, 2019
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Moo, 2019\n"
+"Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020\n"
 "Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -476,6 +476,11 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril yra paprasta dokumentų žiūryklė. Ji gali rodyti ir spausdinti "
+"PostScript (PS), Uždarus PostScript (EPS), DJVU, DVI, XPS ir Portable "
+"Document Format (PDF) failus, o taip pat komiksų archyvų failus. Kuomet tai "
+"palaiko dokumentas, programa leidžia atlikti teksto paiešką, kopijuoti "
+"tekstą į iškarpinę ir palaiko hiperteksto naršymą bei turinio žymes. "
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -483,6 +488,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril yra Evince atšaka ir MATE dabalaukio aplinkos dalis. Jei norite "
+"sužinoti daugiau apie MATE ir Atril, prašom apsilankyti projekto "
+"tinklalapyje. "
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -498,13 +506,13 @@ msgstr "Peržiūrėti kelių puslapių dokumentams"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;dokumentų;žiūryklė;pdf;dvi;ps;xps;tiff;pixbuf;djvu;komiksai;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1381,6 +1389,9 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Dokumentų žiūryklė.\n"
+"Naudojama %s (%s)\n"
+"ir SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1397,6 +1408,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril yra laisva programinė įranga; galite ją platinti ir / ar modifikuoti "
+"GNU bendrosios viešosios licencijos sąlygomis, kurios paskelbtos Laisvosios "
+"programinės įrangos fondo; 2-osios arba (savo pasirinkimu) bet kurios "
+"vėlesnės licencijos versijos sąlygomis."
 
 #: shell/ev-window.c:5398
 msgid ""
@@ -1405,6 +1420,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril yra platinama tikintis, kad ji bus naudinga, bet NETEIKIANT JOKIŲ "
+"GARANTIJŲ; netgi be numanomų PARDAVIMO arba TINKAMUMO KONKREČIAM TIKSLUI "
+"garantijų. Dėl išsamesnės informacijos žiūrėkite GNU bendrąją viešąją "
+"licenciją."
 
 #: shell/ev-window.c:5402
 msgid ""
@@ -1412,16 +1431,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su Atril; "
+"jeigu negavote, rašykite The Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA 02110-1301  USA"
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Apie Atril dokumentų žiūryklę"
 
 #: shell/ev-window.c:5448
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Autorių teisės © 1996–2009 Evince autoriai\n"
+"Autorių teisės © 2012–2020 MATE kūrėjai"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"

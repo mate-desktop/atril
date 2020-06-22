@@ -11,7 +11,6 @@
 # Laurent Napias <tamplan+transifex@free.fr>, 2018
 # mauron, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Scoubidou <david.vantyghem@free.fr>, 2018
 # Nicolas Dobigeon <dobigeon@gmail.com>, 2018
 # Benjamin Teissier <enatheme@enatheme.org>, 2018
 # yoplait <yoplait@tememe.org>, 2018
@@ -19,9 +18,10 @@
 # Guillaume Fayard <guillaume2.fayard@wanadoo.fr>, 2018
 # Tubuntu <tubuntu@testimonium.be>, 2019
 # Charles Monzat <c.monzat@laposte.net>, 2019
-# Étienne Deparis <etienne@depar.is>, 2019
 # Frédéric MASSOT <frederic@juliana-multimedia.com>, 2019
 # David D, 2019
+# Étienne Deparis <etienne@depar.is>, 2020
+# Laurent Napias, 2020
 # 
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: David D, 2019\n"
+"Last-Translator: Laurent Napias, 2020\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +59,7 @@ msgstr "La commande « %s » ne s'est pas terminée normalement."
 #: backend/comics/comics-document.c:459
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr "Le type MIME ne correspond pas à une bande dessinée : %s"
+msgstr "Le type MIME ne correspond pas à une bande dessinée : %s"
 
 #: backend/comics/comics-document.c:466
 msgid ""
@@ -316,7 +316,7 @@ msgstr "Impossible de créer un fichier temporaire : %s"
 #: libdocument/ev-file-helpers.c:309
 #, c-format
 msgid "Failed to create a temporary directory: %s"
-msgstr "Impossible de créer un dossier temporaire : %s"
+msgstr "Impossible de créer un dossier temporaire : %s"
 
 #: cut-n-paste/smclient/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
@@ -339,7 +339,7 @@ msgstr "L'application n'accepte pas les documents en ligne de commande"
 #: cut-n-paste/smclient/eggdesktopfile.c:1166
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Option de lancement non reconnue : %d"
+msgstr "Option de lancement non reconnue : %d"
 
 #: cut-n-paste/smclient/eggdesktopfile.c:1364
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
@@ -498,6 +498,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril est un lecteur simple de documents multipages. Il permet d'afficher et"
+" imprimer des fichiers au format PostScript (PS), Encapsulated PostScript "
+"(EPS), DJVU, DVI, XPS et Portable Document Format (PDF), ainsi que les "
+"fichiers d'archive comic book. Lorque le document le permet, il permet la "
+"recherche de texte, la copie de texte vers le presse-papier, la navigation "
+"hypertextuelle et des favoris en table-de-contenus."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -505,6 +511,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril a divergé de Evince et fait partie de l'environnement de bureau MATE. "
+"Si vous désirez en savoir plus à propos de MATE et Atril, veuillez visiter "
+"la page du projet."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -520,13 +529,13 @@ msgstr "Afficher des documents multipages"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1402,6 +1411,9 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Visionneur de documents\n"
+"Utilise %s (%s)\n"
+"et SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1454,6 +1466,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"© 1996–2009 Les auteurs de Evince\n"
+"© 2012–2020 Les développeurs de MATE"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1518,7 +1532,7 @@ msgstr "_Fichier"
 
 #: shell/ev-window.c:6449
 msgid "_Edit"
-msgstr "_Editer"
+msgstr "Éditio_n"
 
 #: shell/ev-window.c:6450
 msgid "_View"
@@ -1526,7 +1540,7 @@ msgstr "_Affichage"
 
 #: shell/ev-window.c:6451
 msgid "_Go"
-msgstr "A_ller à"
+msgstr "_Navigation"
 
 #: shell/ev-window.c:6452
 msgid "_Bookmarks"
@@ -1534,7 +1548,7 @@ msgstr "_Favoris"
 
 #: shell/ev-window.c:6453
 msgid "_Help"
-msgstr "_Aide"
+msgstr "Aid_e"
 
 #: shell/ev-window.c:6456 shell/ev-window.c:6823
 msgid "_Open…"

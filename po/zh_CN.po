@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Cravix <dr.neemous@gmail.com>, 2018
-# 玉堂白鹤 <yjwork@qq.com>, 2018
 # 775405984, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Wylmer Wang, 2018
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Dianjin Wang <1132321739qq@gmail.com>, 2018
-# liushuyu011 <liushuyu011@gmail.com>, 2018
+# shuyu liu <liushuyu011@gmail.com>, 2018
 # Mingye Wang <arthur200126@gmail.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2019
 # CNAmira <forucial@icloud.com>, 2019
 # Wenbin Lv <wenbin816@gmail.com>, 2019
+# 玉堂白鹤 <yjwork@qq.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2019\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -481,13 +481,16 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+" Atril 是一个简易的多页文档阅读器。它可以显示并打印 PostScript (PS), Encapsulated PostScript "
+"(EPS), DJVU, DVI, XPS 以及移动文档格式 (PDF) "
+"文件，以及漫画归档文件。如果文档支持，它亦可以进行文本搜索，复制文本到剪贴板，超文本浏览以及基于内容目录的书签标记。"
 
 #: data/atril.appdata.xml.in:18
 msgid ""
 "Atril is a fork of Evince and part of the MATE Desktop Environment. If you "
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
-msgstr ""
+msgstr "Atril 为 MATE 桌面环境的一部分，是 Evince 的复刻。想了解更多 MATE 及 Atril 的信息，请访问项目主页。"
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -503,13 +506,13 @@ msgstr "查看多页文档"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;文档;阅读;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1350,6 +1353,9 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"文档查看器\n"
+"使用 %s (%s)\n"
+"和 SyncTeX"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1397,6 +1403,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"版权所有 © 1996–2009 Evince 作者\n"
+"版权所有 © 2012–2020 MATE 开发者"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
