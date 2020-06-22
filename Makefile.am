@@ -41,7 +41,8 @@ header_DATA = \
 # Applications 
 EXTRA_DIST =            \
     $(header_DATA)      \
-    autogen.sh
+    autogen.sh          \
+    README.md
 
 DISTCLEANFILES =
 
