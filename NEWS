@@ -1,5 +1,32 @@
 ### atril 1.25.0
 
+  * sync with transifex
+  * [ci] fix release tarball on travis CI failed
+  * Re-enable highlight_find_results
+  * Use ENABLE_SYNCTEX in libdocument/Makefile.am
+  * Improved detection of --enable/disable synctex option
+  * Fix -Wunused-function warnings caused by --enable-synctex=no
+  * Make synctex optional
+  * add git.mk to generate .gitignore
+  * use git submodule for cut-n-paste/smclient
+  * djvu-text-page: Fix cppcheck [clarifyCalculation] warnings
+  * ev-window: expand the comment on about dialog
+  * build: silent build warnings for distcheck
+  * build: update configure summary
+  * Fix cppcheck [knownConditionTrueFalse] warnings
+  * Remove strict-prototypes warning
+  * ev-window/epub-document: remove unused functions
+  * ev-poppler: remove unused variable
+  * epub-document: Remove unused-variable warning
+  * build: do not override the default value for MATE_COMPILE_WARNINGS
+  * epub backend: build with WARN_CFLAGS instead WARN_CXXFLAGS
+  * Migrate to README.md and fix links
+  * build: set compiler warning level to yes
+  * dviread: ‘inline’ is not at beginning of declaration
+  * Update authors
+  * Use int64_t for g_date_time_to_unix even word size is 32-bit wide
+  * thumbnailer: fix typo in the option description
+
 ### atril 1.24.0
 
   * update translations
