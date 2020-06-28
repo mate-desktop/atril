@@ -165,7 +165,7 @@ fi
  # SM client
  # *********
 
-PKG_CHECK_MODULES([LIBEGG],[gtk+-3.0 gthread-2.0 sm >= 1.0.0])
+PKG_CHECK_MODULES([LIBEGG],[glib-2.0 gtk+-3.0 gthread-2.0 sm >= 1.0.0 ice])
 AC_SUBST([LIBEGG_CFLAGS])
 AC_SUBST([LIBEGG_LIBS])
 
