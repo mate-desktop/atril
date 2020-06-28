@@ -10,7 +10,7 @@ Atril Requirements
 
 * [Poppler](https://poppler.freedesktop.org/) for PDF viewing
 
-* [GhostScript](https://www.ghostscript.com/) for PostScript viewing 
+* [GhostScript](https://www.ghostscript.com/) for PostScript viewing
 
 Atril Optional Backend Libraries
 ==================================================
@@ -24,3 +24,11 @@ Atril Requirements to Run Tests
 ==================================================
 * [python-dogtail](https://gitlab.com/dogtail/dogtail)
 * [python-pyatspi2](https://download.gnome.org/sources/pyatspi/)
+* git installed on your system
+
+Atril Compilation
+==================================================
+* git submodule init
+* git submodule update --remote --recursive
+* ./autogen.sh
+* make
