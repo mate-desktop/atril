@@ -641,14 +641,14 @@ get_selection_colors (EvView *view, GdkColor *text, GdkColor *base)
         _ev_view_get_selection_colors (view, &bg, &fg);
 
         text->pixel = 0;
-        text->red = CLAMP ((guint) (fg.red * 65535), 0, 65535);
-        text->green = CLAMP ((guint) (fg.green * 65535), 0, 65535);
-        text->blue = CLAMP ((guint) (fg.blue * 65535), 0, 65535);
+        text->red = (guint16) (fg.red * G_MAXUINT16);
+        text->green = (guint16) (fg.green * G_MAXUINT16);
+        text->blue = (guint16) (fg.blue * G_MAXUINT16);
 
         base->pixel = 0;
-        base->red = CLAMP ((guint) (bg.red * 65535), 0, 65535);
-        base->green = CLAMP ((guint) (bg.green * 65535), 0, 65535);
-        base->blue = CLAMP ((guint) (bg.blue * 65535), 0, 65535);
+        base->red = (guint16) (bg.red * G_MAXUINT16);
+        base->green = (guint16) (bg.green * G_MAXUINT16);
+        base->blue = (guint16) (bg.blue * G_MAXUINT16);
 }
 
 static void
