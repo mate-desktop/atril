@@ -1095,18 +1095,18 @@ ev_link_from_action (PdfDocument   *pdf_document,
 			break;
 	        case POPPLER_ACTION_GOTO_DEST: {
 			EvLinkDest *dest;
-			
+
 			dest = ev_link_dest_from_dest (pdf_document, action->goto_dest.dest);
 			ev_action = ev_link_action_new_dest (dest);
 		}
 			break;
 	        case POPPLER_ACTION_GOTO_REMOTE: {
 			EvLinkDest *dest;
-			
+
 			dest = ev_link_dest_from_dest (pdf_document, action->goto_remote.dest);
-			ev_action = ev_link_action_new_remote (dest, 
+			ev_action = ev_link_action_new_remote (dest,
 							       action->goto_remote.file_name);
-			
+
 		}
 			break;
 	        case POPPLER_ACTION_LAUNCH:
@@ -1170,19 +1170,24 @@ ev_link_from_action (PdfDocument   *pdf_document,
 	        case POPPLER_ACTION_JAVASCRIPT:
 			unimplemented_action = "POPPLER_ACTION_JAVASCRIPT";
 			break;
+#if POPPLER_CHECK_VERSION(0,90,0)
+		case POPPLER_ACTION_RESET_FORM:
+			unimplemented_action = "POPPLER_ACTION_RESET_FORM";
+			break;
+#endif /* POPPLER_CHECK_VERSION(0,90,0) */
 	        case POPPLER_ACTION_UNKNOWN:
 			unimplemented_action = "POPPLER_ACTION_UNKNOWN";
 	}
-	
+
 	if (unimplemented_action) {
 		g_warning ("Unimplemented action: %s, please post a bug report "
 			   "on Atril bug tracker (https://github.com/mate-desktop/atril/issues) "
 			   "with a testcase.", unimplemented_action);
 	}
-	
+
 	link = ev_link_new (action->any.title, ev_action);
-	
-	return link;	
+
+	return link;
 }
 
 static void
