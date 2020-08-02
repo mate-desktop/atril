@@ -90,7 +90,7 @@ static CacheJobInfo *find_job_cache             (EvPixbufCache      *pixbuf_cach
 static gboolean      new_selection_surface_needed(EvPixbufCache      *pixbuf_cache,
 						  CacheJobInfo       *job_info,
 						  gint                page,
-						  gfloat              scale);
+						  gdouble             scale);
 
 
 /* These are used for iterating through the prev and next arrays */
@@ -337,7 +337,7 @@ job_finished_cb (EvJob         *job,
 static void
 check_job_size_and_unref (EvPixbufCache *pixbuf_cache,
 			  CacheJobInfo  *job_info,
-			  gfloat         scale)
+			  gdouble        scale)
 {
 	gint width, height;
 	gint device_scale;
@@ -619,7 +619,7 @@ find_job_cache (EvPixbufCache *pixbuf_cache,
 
 static void
 ev_pixbuf_cache_clear_job_sizes (EvPixbufCache *pixbuf_cache,
-				 gfloat         scale)
+				 gdouble        scale)
 {
 	int i;
 
@@ -659,7 +659,7 @@ add_job (EvPixbufCache  *pixbuf_cache,
 	 gint            height,
 	 gint            page,
 	 gint            rotation,
-	 gfloat          scale,
+	 gdouble         scale,
 	 EvJobPriority   priority)
 {
 	job_info->device_scale = get_device_scale (pixbuf_cache);
@@ -699,7 +699,7 @@ add_job_if_needed (EvPixbufCache *pixbuf_cache,
 		   CacheJobInfo  *job_info,
 		   gint           page,
 		   gint           rotation,
-		   gfloat         scale,
+		   gdouble        scale,
 		   EvJobPriority  priority)
 {
 	gint device_scale = get_device_scale (pixbuf_cache);
@@ -739,7 +739,7 @@ add_job_if_needed (EvPixbufCache *pixbuf_cache,
 static void
 add_prev_jobs_if_needed (EvPixbufCache *pixbuf_cache,
                          gint           rotation,
-                         gfloat         scale)
+                         gdouble        scale)
 {
         CacheJobInfo *job_info;
         int page;
@@ -758,7 +758,7 @@ add_prev_jobs_if_needed (EvPixbufCache *pixbuf_cache,
 static void
 add_next_jobs_if_needed (EvPixbufCache *pixbuf_cache,
                          gint           rotation,
-                         gfloat         scale)
+                         gdouble        scale)
 {
         CacheJobInfo *job_info;
         int page;
@@ -777,7 +777,7 @@ add_next_jobs_if_needed (EvPixbufCache *pixbuf_cache,
 static void
 ev_pixbuf_cache_add_jobs_if_needed (EvPixbufCache *pixbuf_cache,
 				    gint           rotation,
-				    gfloat         scale)
+				    gdouble        scale)
 {
 	CacheJobInfo *job_info;
 	int page;
@@ -913,7 +913,7 @@ static gboolean
 new_selection_surface_needed (EvPixbufCache *pixbuf_cache,
 			      CacheJobInfo  *job_info,
 			      gint           page,
-			      gfloat         scale)
+			      gdouble        scale)
 {
 	if (job_info->selection)
 		return job_info->selection_scale != scale;
@@ -924,7 +924,7 @@ static gboolean
 new_selection_region_needed (EvPixbufCache *pixbuf_cache,
                              CacheJobInfo  *job_info,
                              gint           page,
-                             gfloat         scale)
+                             gdouble        scale)
 {
 	if (job_info->selection_region)
 		return job_info->selection_region_scale != scale;
@@ -935,7 +935,7 @@ static void
 clear_selection_surface_if_needed (EvPixbufCache *pixbuf_cache,
                                    CacheJobInfo  *job_info,
                                    gint           page,
-                                   gfloat         scale)
+                                   gdouble        scale)
 {
 	if (new_selection_surface_needed (pixbuf_cache, job_info, page, scale)) {
 		if (job_info->selection)
@@ -949,7 +949,7 @@ static void
 clear_selection_region_if_needed (EvPixbufCache *pixbuf_cache,
                                   CacheJobInfo  *job_info,
                                   gint           page,
-                                  gfloat         scale)
+                                  gdouble        scale)
 {
 	if (new_selection_region_needed (pixbuf_cache, job_info, page, scale)) {
 		if (job_info->selection_region)
@@ -1022,7 +1022,7 @@ ev_pixbuf_cache_style_changed (EvPixbufCache *pixbuf_cache)
 cairo_surface_t *
 ev_pixbuf_cache_get_selection_surface (EvPixbufCache   *pixbuf_cache,
                                        gint             page,
-                                       gfloat           scale)
+                                       gdouble          scale)
 {
 	CacheJobInfo *job_info;
 
@@ -1092,7 +1092,7 @@ ev_pixbuf_cache_get_selection_surface (EvPixbufCache   *pixbuf_cache,
 cairo_region_t *
 ev_pixbuf_cache_get_selection_region (EvPixbufCache *pixbuf_cache,
                                       gint           page,
-                                      gfloat         scale)
+                                      gdouble        scale)
 {
 	CacheJobInfo *job_info;
 

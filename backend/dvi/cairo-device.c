@@ -216,10 +216,10 @@ dvi_cairo_alloc_colors (void  *device_data,
 			pow ((double)i / n, 1 / gamma) :
 			1 - pow ((double)(n - i) / n, -gamma);
 
-		color.red = frac * color_fg.red;
-		color.green = frac * color_fg.green;
-		color.blue = frac * color_fg.blue;
-		alpha = frac * 0xFF;
+		color.red = (guint16)(frac * color_fg.red);
+		color.green = (guint16)(frac * color_fg.green);
+		color.blue = (guint16)(frac * color_fg.blue);
+		alpha = (unsigned int)(frac * 0xFF);
 
 		pixels[i] = (alpha << 24) + (color.red << 16) + (color.green << 8) + color.blue;
 	}
@@ -332,8 +332,8 @@ mdvi_cairo_device_render (DviContext* dvi)
 	if (cairo_device->cr)
 		cairo_destroy (cairo_device->cr);
 
-	page_width = dvi->dvi_page_w * dvi->params.conv + 2 * cairo_device->xmargin;
-	page_height = dvi->dvi_page_h * dvi->params.vconv + 2 * cairo_device->ymargin;
+	page_width = (int)(dvi->dvi_page_w * dvi->params.conv + 2 * cairo_device->xmargin);
+	page_height = (int)(dvi->dvi_page_h * dvi->params.vconv + 2 * cairo_device->ymargin);
 
 	surface = cairo_image_surface_create (CAIRO_FORMAT_ARGB32,
                                               page_width, page_height);

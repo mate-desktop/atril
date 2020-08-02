@@ -545,7 +545,7 @@ ev_view_accessible_is_doc_rect_showing (EvViewAccessible *accessible,
 	EvView *view;
 	GdkRectangle view_rect;
 	GtkAllocation allocation;
-	gint x, y;
+	gdouble x, y;
 	gboolean hidden;
 
 	view = EV_VIEW (gtk_accessible_get_widget (GTK_ACCESSIBLE (accessible)));

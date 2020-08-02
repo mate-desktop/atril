@@ -49,19 +49,19 @@ struct _EphyZoomActionClass
 {
 	GtkActionClass parent_class;
 
-	void (* zoom_to_level)	(EphyZoomAction *action, float level);
+	void (* zoom_to_level)	(EphyZoomAction *action, double level);
 };
 
 GType	ephy_zoom_action_get_type	    (void) G_GNUC_CONST;
 
 void	ephy_zoom_action_set_zoom_level	    (EphyZoomAction *action,
-					     float           zoom);
-float	ephy_zoom_action_get_zoom_level	    (EphyZoomAction *action);
+					     double          zoom);
+double	ephy_zoom_action_get_zoom_level	    (EphyZoomAction *action);
 
 void    ephy_zoom_action_set_min_zoom_level (EphyZoomAction *action,
-					     float           zoom);
+					     double          zoom);
 void    ephy_zoom_action_set_max_zoom_level (EphyZoomAction *action,
-					     float           zoom);
+					     double          zoom);
 
 G_END_DECLS
 

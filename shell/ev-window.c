@@ -381,7 +381,7 @@ static void 	ev_window_emit_doc_loaded		(EvWindow	  *window);
 static void     ev_window_setup_bookmarks               (EvWindow         *window);
 
 static void    zoom_control_changed_cb                 (EphyZoomAction *action,
-                                                         float           zoom,
+                                                         double           zoom,
                                                          EvWindow       *ev_window);
 
 static gchar *caja_sendto = NULL;
@@ -632,8 +632,8 @@ ev_window_update_actions (EvWindow *ev_window)
 	sizing_mode = ev_document_model_get_sizing_mode (ev_window->priv->model);
 	if (has_pages && sizing_mode != EV_SIZING_FIT_WIDTH && sizing_mode != EV_SIZING_FIT_PAGE) {
 		GtkAction *action;
-		float      zoom;
-		float      real_zoom;
+		double     zoom;
+		double     real_zoom;
 
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		action = gtk_action_group_get_action (ev_window->priv->action_group,
@@ -5940,7 +5940,7 @@ find_bar_visibility_changed_cb (EggFindBar *find_bar,
 
 static void
 zoom_control_changed_cb (EphyZoomAction *action,
-			 float           zoom,
+			 double           zoom,
 			 EvWindow       *ev_window)
 {
 	EvSizingMode mode;

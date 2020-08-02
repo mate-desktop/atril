@@ -64,10 +64,10 @@ ev_image_accessible_get_extents (AtkComponent *atk_component,
 	EvRectangle atk_rect;
 
 	ev_image_accessible_get_atk_rect (ATK_OBJECT (atk_component), coord_type, &atk_rect);
-	*x = atk_rect.x1;
-	*y = atk_rect.y1;
-	*width = atk_rect.x2 - atk_rect.x1;
-	*height = atk_rect.y2 - atk_rect.y1;
+	*x = (int)atk_rect.x1;
+	*y = (int)atk_rect.y1;
+	*width = (int)(atk_rect.x2 - atk_rect.x1);
+	*height = (int)(atk_rect.y2 - atk_rect.y1);
 }
 
 static void
@@ -98,8 +98,8 @@ ev_image_accessible_get_image_size (AtkImage *atk_image,
 	EvRectangle atk_rect;
 
 	ev_image_accessible_get_atk_rect (ATK_OBJECT (atk_image), ATK_XY_WINDOW, &atk_rect);
-	*width = atk_rect.x2 - atk_rect.x1;
-	*height = atk_rect.y2 - atk_rect.y1;
+	*width = (int)(atk_rect.x2 - atk_rect.x1);
+	*height = (int)(atk_rect.y2 - atk_rect.y1);
 }
 
 static void
@@ -111,8 +111,8 @@ ev_image_accessible_get_image_position (AtkImage     *atk_image,
 	EvRectangle atk_rect;
 
 	ev_image_accessible_get_atk_rect (ATK_OBJECT (atk_image), ATK_XY_WINDOW, &atk_rect);
-	*x = atk_rect.x1;
-	*y = atk_rect.y1;
+	*x = (int)atk_rect.x1;
+	*y = (int)atk_rect.y1;
 }
 
 static AtkStateSet *

@@ -286,8 +286,8 @@ ev_sidebar_attachments_button_press (EvSidebarAttachments *ev_attachbar,
 				EvAttachment *attachment;
 
 				attachment = ev_sidebar_attachments_get_attachment_at_pos (ev_attachbar,
-											   event->x,
-											   event->y);
+											   (int)(event->x + 0.5),
+											   (int)(event->y + 0.5));
 				if (!attachment)
 					return FALSE;
 
@@ -307,7 +307,9 @@ ev_sidebar_attachments_button_press (EvSidebarAttachments *ev_attachbar,
 			}
 			break;
 	        case 3:
-			return ev_sidebar_attachments_popup_menu_show (ev_attachbar, event->x, event->y);
+			return ev_sidebar_attachments_popup_menu_show (ev_attachbar,
+			                                               (int)(event->x + 0.5),
+			                                               (int)(event->y + 0.5));
 	}
 
 	return FALSE;

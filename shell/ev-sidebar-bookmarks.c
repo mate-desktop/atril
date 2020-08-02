@@ -367,7 +367,10 @@ ev_sidebar_bookmarks_button_press (GtkWidget          *widget,
         if (event->button != 3)
                 return FALSE;
 
-        return ev_sidebar_bookmarks_popup_menu_show (sidebar_bookmarks, event->x, event->y, FALSE);
+        return ev_sidebar_bookmarks_popup_menu_show (sidebar_bookmarks,
+	                                             (int)event->x,
+	                                             (int)event->y,
+	                                             FALSE);
 }
 
 static gboolean

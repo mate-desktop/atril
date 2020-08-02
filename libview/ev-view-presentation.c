@@ -252,7 +252,7 @@ ev_view_presentation_transition_start (EvViewPresentation *pview)
 							     pview->current_page);
 	if (duration >= 0) {
 		        pview->trans_timeout_id =
-				g_timeout_add_seconds (duration,
+				g_timeout_add_seconds ((int)(duration + 0.5),
 						       (GSourceFunc) transition_next_page,
 						       pview);
 	}

@@ -329,8 +329,8 @@ djvu_document_render (EvDocument      *document,
 	while (!ddjvu_page_decoding_done (d_page))
 		djvu_handle_events(djvu_document, TRUE, NULL);
 
-	page_width = ddjvu_page_get_width (d_page) * rc->scale * SCALE_FACTOR + 0.5;
-	page_height = ddjvu_page_get_height (d_page) * rc->scale * SCALE_FACTOR + 0.5;
+	page_width = ddjvu_page_get_width (d_page) * rc->scale * SCALE_FACTOR;
+	page_height = ddjvu_page_get_height (d_page) * rc->scale * SCALE_FACTOR;
 
 	switch (rc->rotation) {
 	        case 90:
@@ -356,14 +356,15 @@ djvu_document_render (EvDocument      *document,
 	}
 
 	surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24,
-					      page_width, page_height);
+	                                      (int)page_width,
+	                                      (int)page_height);
 	rowstride = cairo_image_surface_get_stride (surface);
 	pixels = (gchar *)cairo_image_surface_get_data (surface);
 
 	prect.x = 0;
 	prect.y = 0;
-	prect.w = page_width;
-	prect.h = page_height;
+	prect.w = (unsigned int)page_width;
+	prect.h = (unsigned int)page_height;
 	rrect = prect;
 
 	ddjvu_page_set_rotation (d_page, rotation);

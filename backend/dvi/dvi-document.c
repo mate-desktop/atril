@@ -177,10 +177,10 @@ dvi_document_render (EvDocument      *document,
 			 (int)((dvi_document->params->hshrink - 1) / rc->scale) + 1,
 			 (int)((dvi_document->params->vshrink - 1) / rc->scale) + 1);
 
-	required_width = dvi_document->base_width * rc->scale + 0.5;
-	required_height = dvi_document->base_height * rc->scale + 0.5;
-	proposed_width = dvi_document->context->dvi_page_w * dvi_document->context->params.conv;
-	proposed_height = dvi_document->context->dvi_page_h * dvi_document->context->params.vconv;
+	required_width = (int)(dvi_document->base_width * rc->scale);
+	required_height = (int)(dvi_document->base_height * rc->scale);
+	proposed_width = (int)(dvi_document->context->dvi_page_w * dvi_document->context->params.conv);
+	proposed_height = (int)(dvi_document->context->dvi_page_h * dvi_document->context->params.vconv);
 
 	if (required_width >= proposed_width)
 	    xmargin = (required_width - proposed_width) / 2;
@@ -295,11 +295,11 @@ dvi_document_thumbnails_get_thumbnail (EvDocumentThumbnails *document,
 	mdvi_setpage (dvi_document->context, rc->page->index);
 
 	mdvi_set_shrink (dvi_document->context,
-			  (int)dvi_document->base_width * dvi_document->params->hshrink / thumb_width,
-			  (int)dvi_document->base_height * dvi_document->params->vshrink / thumb_height);
+			  (int)(dvi_document->base_width * dvi_document->params->hshrink / thumb_width),
+			  (int)(dvi_document->base_height * dvi_document->params->vshrink / thumb_height));
 
-	proposed_width = dvi_document->context->dvi_page_w * dvi_document->context->params.conv;
-	proposed_height = dvi_document->context->dvi_page_h * dvi_document->context->params.vconv;
+	proposed_width = (int)(dvi_document->context->dvi_page_w * dvi_document->context->params.conv);
+	proposed_height = (int)(dvi_document->context->dvi_page_h * dvi_document->context->params.vconv);
 
 	if (border) {
 	 	mdvi_cairo_device_set_margins (&dvi_document->context->device,
@@ -422,15 +422,15 @@ dvi_document_file_exporter_iface_init (EvFileExporterInterface *iface)
 #define RGB2ULONG(r,g,b) ((0xFF<<24)|(r<<16)|(g<<8)|(b))
 
 static gboolean
-hsb2rgb (float h, float s, float v, guchar *red, guchar *green, guchar *blue)
+hsb2rgb (gdouble h, gdouble s, gdouble v, guchar *red, guchar *green, guchar *blue)
 {
-        float f, p, q, t, r, g, b;
+        gdouble f, p, q, t, r, g, b;
         int i;
 
         s /= 100;
         v /= 100;
         h /= 60;
-        i = floor (h);
+        i = (int)h;
         if (i == 6)
                 i = 0;
         else if ((i > 6) || (i < 0))
@@ -466,9 +466,9 @@ hsb2rgb (float h, float s, float v, guchar *red, guchar *green, guchar *blue)
 		b = q;
 	}
 
-        *red   = (guchar)floor(r * 255.0);
-        *green = (guchar)floor(g * 255.0);
-        *blue  = (guchar)floor(b * 255.0);
+        *red   = (guchar)(r * 255.0);
+        *green = (guchar)(g * 255.0);
+        *blue  = (guchar)(b * 255.0);
 
         return TRUE;
 }
@@ -507,9 +507,9 @@ dvi_document_do_color_special (DviContext *dvi, const char *prefix, const char *
 
 			parse_color (tmp + 4, rgb, 3);
 
-                        red = 255 * rgb[0];
-                        green = 255 * rgb[1];
-                        blue = 255 * rgb[2];
+                        red   = (guchar)(rgb[0] * 255.0);
+                        green = (guchar)(rgb[1] * 255.0);
+                        blue  = (guchar)(rgb[2] * 255.0);
 
                         mdvi_push_color (dvi, RGB2ULONG (red, green, blue), 0xFFFFFFFF);
                 } else if (!strncmp ("hsb", tmp, 4)) {
@@ -537,9 +537,9 @@ dvi_document_do_color_special (DviContext *dvi, const char *prefix, const char *
                         if (b < 0.0)
                                 b = 0.0;
 
-			red = r * 255 + 0.5;
-			green = g * 255 + 0.5;
-			blue = b * 255 + 0.5;
+			red   = (guchar)(r * 255.0);
+			green = (guchar)(g * 255.0);
+			blue  = (guchar)(b * 255.0);
 
                         mdvi_push_color (dvi, RGB2ULONG (red, green, blue), 0xFFFFFFFF);
 		} else if (!strncmp ("gray ", tmp, 5)) {
@@ -548,7 +548,7 @@ dvi_document_do_color_special (DviContext *dvi, const char *prefix, const char *
 
 			parse_color (tmp + 5, &gray, 1);
 
-			rgb = gray * 255 + 0.5;
+			rgb = (guchar)(gray * 255.0);
 
 			mdvi_push_color (dvi, RGB2ULONG (rgb, rgb, rgb), 0xFFFFFFFF);
                 } else {
@@ -557,9 +557,9 @@ dvi_document_do_color_special (DviContext *dvi, const char *prefix, const char *
                         if (gdk_color_parse (tmp, &color)) {
 				guchar red, green, blue;
 
-				red = color.red * 255 / 65535.;
-				green = color.green * 255 / 65535.;
-				blue = color.blue * 255 / 65535.;
+				red   = (guchar)(color.red   * 255.0 / 65535.0);
+				green = (guchar)(color.green * 255.0 / 65535.0);
+				blue  = (guchar)(color.blue  * 255.0 / 65535.0);
 
                                 mdvi_push_color (dvi, RGB2ULONG (red, green, blue), 0xFFFFFFFF);
 			}

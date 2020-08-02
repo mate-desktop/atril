@@ -92,7 +92,7 @@ compare_mappings (EvMapping *a, EvMapping *b)
 	dy = a->area.y1 - b->area.y1;
 	dx = a->area.x1 - b->area.x1;
 
-	return ABS (dy) > 10 ? dy : dx;
+	return ABS (dy) > 10 ? (int)dy : (int)dx;
 }
 
 static void
@@ -1197,10 +1197,10 @@ ev_page_accessible_get_extents (AtkComponent *atk_component,
 	doc_rect.y2 = page_area.y + page_area.height;
 	_transform_doc_rect_to_atk_rect (self->priv->view_accessible, self->priv->page, &doc_rect, &atk_rect, coord_type);
 
-	*x = atk_rect.x1;
-	*y = atk_rect.y1;
-	*width = atk_rect.x2 - atk_rect.x1;
-	*height = atk_rect.y2 - atk_rect.y1;
+	*x = (int)atk_rect.x1;
+	*y = (int)atk_rect.y1;
+	*width = (int)(atk_rect.x2 - atk_rect.x1);
+	*height = (int)(atk_rect.y2 - atk_rect.y1);
 }
 
 static void

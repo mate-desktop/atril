@@ -536,9 +536,9 @@ ev_annotation_get_color (EvAnnotation *annot,
     ev_annotation_get_rgba (annot, &rgba);
 
     color->pixel = 0;
-    color->red = CLAMP (rgba.red * 65535. + 0.5, 0, 65535);
-    color->green = CLAMP (rgba.green * 65535. + 0.5, 0, 65535);
-    color->blue = CLAMP (rgba.blue * 65535. + 0.5, 0, 65535);
+    color->red   = (guint16)(rgba.red   * 65535.0);
+    color->green = (guint16)(rgba.green * 65535.0);
+    color->blue  = (guint16)(rgba.blue  * 65535.0);
 }
 
 /**

@@ -170,8 +170,8 @@ tiff_document_get_resolution (TiffDocument *tiff_document,
 	    TIFFGetField (tiff_document->tiff, TIFFTAG_YRESOLUTION, &y)) {
 		if (TIFFGetFieldDefaulted (tiff_document->tiff, TIFFTAG_RESOLUTIONUNIT, &unit)) {
 			if (unit == RESUNIT_CENTIMETER) {
-				x *= 2.54;
-				y *= 2.54;
+				x *= 2.54f;
+				y *= 2.54f;
 			}
 		}
 	}
@@ -202,10 +202,9 @@ tiff_document_get_page_size (EvDocument *document,
 	TIFFGetField (tiff_document->tiff, TIFFTAG_IMAGEWIDTH, &w);
 	TIFFGetField (tiff_document->tiff, TIFFTAG_IMAGELENGTH, &h);
 	tiff_document_get_resolution (tiff_document, &x_res, &y_res);
-	h = h * (x_res / y_res);
 
-	*width = w;
-	*height = h;
+	*width = (gfloat)w;
+	*height = (gfloat)h * (x_res / y_res);
 
 	pop_handlers ();
 }
@@ -316,8 +315,8 @@ tiff_document_render (EvDocument      *document,
 	}
 
 	rotated_surface = ev_document_misc_surface_rotate_and_scale (surface,
-								     (width * rc->scale) + 0.5,
-								     (height * rc->scale * (x_res / y_res)) + 0.5,
+								     (gint)(width * rc->scale),
+								     (gint)(height * rc->scale * (x_res / y_res)),
 								     rc->rotation);
 	cairo_surface_destroy (surface);
 
@@ -391,8 +390,8 @@ tiff_document_render_pixbuf (EvDocument      *document,
 	pop_handlers ();
 
 	scaled_pixbuf = gdk_pixbuf_scale_simple (pixbuf,
-						 width * rc->scale,
-						 height * rc->scale * (x_res / y_res),
+						 (int)((gdouble)width * rc->scale),
+						 (int)((gdouble)height * rc->scale * (x_res / y_res)),
 						 GDK_INTERP_BILINEAR);
 	g_object_unref (pixbuf);
 

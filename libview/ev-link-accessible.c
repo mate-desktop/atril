@@ -389,10 +389,10 @@ ev_link_accessible_get_extents (AtkComponent *atk_component,
 	view_accessible = ev_page_accessible_get_view_accessible (self->priv->page);
 	page = ev_page_accessible_get_page (self->priv->page);
 	_transform_doc_rect_to_atk_rect (view_accessible, page, &self->priv->area, &atk_rect, coord_type);
-	*x = atk_rect.x1;
-	*y = atk_rect.y1;
-	*width = atk_rect.x2 - atk_rect.x1;
-	*height = atk_rect.y2 - atk_rect.y1;
+	*x = (int)atk_rect.x1;
+	*y = (int)atk_rect.y1;
+	*width = (int)(atk_rect.x2 - atk_rect.x1);
+	*height = (int)(atk_rect.y2 - atk_rect.y1);
 }
 
 static gboolean

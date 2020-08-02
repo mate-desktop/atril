@@ -267,8 +267,8 @@ ps_document_get_info (EvDocument *document)
 	info->format = g_strdup (spectre_document_get_format (ps->doc));
 	info->creator = g_strdup (creator ? creator : spectre_document_get_for (ps->doc));
 	info->n_pages = spectre_document_get_n_pages (ps->doc);
-	info->paper_width  = width / 72.0f * 25.4f;
-	info->paper_height = height / 72.0f * 25.4f;
+	info->paper_width  = (float)width / 72.0f * 25.4f;
+	info->paper_height = (float)height / 72.0f * 25.4f;
 
 	return info;
 }

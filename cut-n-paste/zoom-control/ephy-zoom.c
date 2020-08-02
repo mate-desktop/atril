@@ -25,10 +25,10 @@
 #include <math.h>
 
 guint
-ephy_zoom_get_zoom_level_index (float level)
+ephy_zoom_get_zoom_level_index (double level)
 {
 	guint i;
-	float previous, current, mean;
+	double previous, current, mean;
 
 	/* Handle our options at the beginning of the list. */
 	if (level == EPHY_ZOOM_FIT_PAGE) {
@@ -55,8 +55,8 @@ ephy_zoom_get_zoom_level_index (float level)
 }
 
 
-float
-ephy_zoom_get_changed_zoom_level (float level, gint steps)
+static double
+ephy_zoom_get_changed_zoom_level (double level, gint steps)
 {
 	guint index;
 
@@ -64,7 +64,8 @@ ephy_zoom_get_changed_zoom_level (float level, gint steps)
 	return zoom_levels[CLAMP(index + steps, 3, n_zoom_levels - 1)].level;
 }
 
-float	ephy_zoom_get_nearest_zoom_level (float level)
+double
+ephy_zoom_get_nearest_zoom_level (double level)
 {
 	return ephy_zoom_get_changed_zoom_level (level, 0);
 }

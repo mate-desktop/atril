@@ -438,12 +438,12 @@ ev_view_get_height_to_page (EvView *view,
 
 	if (height) {
 		h = cache->height_to_page[page];
-		*height = (gint)(h * view->scale + 0.5);
+		*height = (gint)(h * view->scale);
     }
 
 	if (dual_height) {
 		dh = cache->dual_height_to_page[page];
-		*dual_height = (gint)(dh * view->scale + 0.5);
+		*dual_height = (gint)(dh * view->scale);
 	}
 }
 
@@ -659,20 +659,17 @@ view_set_adjustment_values (EvView         *view,
 	gtk_adjustment_set_lower (adjustment, 0);
 	gtk_adjustment_set_upper (adjustment, upper);
 
-	/*
-	 * We add 0.5 to the values before to average out our rounding errors.
-	 */
 	switch (view->pending_scroll) {
     	        case SCROLL_TO_KEEP_POSITION:
     	        case SCROLL_TO_FIND_LOCATION:
-			new_value = CLAMP (upper * factor + 0.5, 0, upper - page_size);
+			new_value = CLAMP ((int)(upper * factor), 0, (int)(upper - page_size));
 			gtk_adjustment_set_value (adjustment, (int)new_value);
 			break;
     	        case SCROLL_TO_PAGE_POSITION:
 			ev_view_scroll_to_page_position (view, orientation);
 			break;
     	        case SCROLL_TO_CENTER:
-			new_value = CLAMP (upper * factor - zoom_center + 0.5, 0, upper - page_size);
+			new_value = CLAMP ((int)(upper * factor - zoom_center), 0, (int)(upper - page_size));
 			if (orientation == GTK_ORIENTATION_HORIZONTAL)
 				view->zoom_center_x = -1.0;
 			else
@@ -704,10 +701,10 @@ view_update_range_and_current_page (EvView *view)
 		if (!(view->vadjustment && view->hadjustment))
 			return;
 
-		current_area.x = gtk_adjustment_get_value (view->hadjustment);
-		current_area.width = gtk_adjustment_get_page_size (view->hadjustment);
-		current_area.y = gtk_adjustment_get_value (view->vadjustment);
-		current_area.height = gtk_adjustment_get_page_size (view->vadjustment);
+		current_area.x = (int)gtk_adjustment_get_value (view->hadjustment);
+		current_area.width = (int)gtk_adjustment_get_page_size (view->hadjustment);
+		current_area.y = (int)gtk_adjustment_get_value (view->vadjustment);
+		current_area.height = (int)gtk_adjustment_get_page_size (view->vadjustment);
 
 		for (i = 0; i < ev_document_get_n_pages (view->document); i++) {
 
@@ -890,10 +887,10 @@ compute_scroll_increment (EvView        *view,
 	_ev_view_transform_view_rect_to_doc_rect (view, &rect, &page_area, &doc_rect);
 
 	/* Convert the doc rectangle into a GdkRectangle */
-	rect.x = doc_rect.x1;
-	rect.y = doc_rect.y1;
-	rect.width = doc_rect.x2 - doc_rect.x1;
-	rect.height = MAX (1, doc_rect.y2 - doc_rect.y1);
+	rect.x = (int)doc_rect.x1;
+	rect.y = (int)doc_rect.y1;
+	rect.width = (int)(doc_rect.x2 - doc_rect.x1);
+	rect.height = MAX (1, (int)(doc_rect.y2 - doc_rect.y1));
 	region = cairo_region_create_rectangle (&rect);
 
 	cairo_region_intersect (region, text_region);
@@ -907,8 +904,8 @@ compute_scroll_increment (EvView        *view,
 		rc = ev_render_context_new (ev_page, view->rotation, view->scale);
 		g_object_unref (ev_page);
 		/* Get the selection region to know the height of the line */
-		doc_rect.x1 = doc_rect.x2 = rect.x + 0.5;
-		doc_rect.y1 = doc_rect.y2 = rect.y + 0.5;
+		doc_rect.x1 = doc_rect.x2 = rect.x;
+		doc_rect.y1 = doc_rect.y2 = rect.y;
 
 		ev_document_doc_mutex_lock ();
 		sel_region = ev_selection_get_selection_region (EV_SELECTION (view->document),
@@ -1056,10 +1053,10 @@ ensure_rectangle_is_visible (EvView *view, GdkRectangle *rect)
 	adj_value = gtk_adjustment_get_value (adjustment);
 
 	if (rect->y < adj_value) {
-		value = MAX (gtk_adjustment_get_lower (adjustment), rect->y - MARGIN);
+		value = MAX ((int)gtk_adjustment_get_lower (adjustment), rect->y - MARGIN);
 		gtk_adjustment_set_value (view->vadjustment, value);
 	} else if (rect->y + rect->height > adj_value + allocation.height) {
-		value = MIN (gtk_adjustment_get_upper (adjustment), rect->y + rect->height -
+		value = MIN ((int)gtk_adjustment_get_upper (adjustment), rect->y + rect->height -
 			     allocation.height + MARGIN);
 		gtk_adjustment_set_value (view->vadjustment, value);
 	}
@@ -1068,10 +1065,10 @@ ensure_rectangle_is_visible (EvView *view, GdkRectangle *rect)
 	adj_value = gtk_adjustment_get_value (adjustment);
 
 	if (rect->x < adj_value) {
-		value = MAX (gtk_adjustment_get_lower (adjustment), rect->x - MARGIN);
+		value = MAX ((int)gtk_adjustment_get_lower (adjustment), rect->x - MARGIN);
 		gtk_adjustment_set_value (view->hadjustment, value);
 	} else if (rect->x + rect->height > adj_value + allocation.width) {
-		value = MIN (gtk_adjustment_get_upper (adjustment), rect->x + rect->width -
+		value = MIN ((int)gtk_adjustment_get_upper (adjustment), rect->x + rect->width -
 			     allocation.width + MARGIN);
 		gtk_adjustment_set_value (view->hadjustment, value);
 	}
@@ -1105,8 +1102,8 @@ _get_page_size_for_scale_and_rotation (EvDocument *document,
 
 	ev_document_get_page_size (document, page, &w, &h);
 
-	width = (gint)(w * scale + 0.5);
-	height = (gint)(h * scale + 0.5);
+	width = (gint)(w * scale);
+	height = (gint)(h * scale);
 
 	if (page_width)
 		*page_width = (rotation == 0 || rotation == 180) ? width : height;
@@ -1138,8 +1135,8 @@ ev_view_get_max_page_size (EvView *view,
 
 	ev_document_get_max_page_size (view->document, &w, &h);
 
-	width = (gint)(w * view->scale + 0.5);
-	height = (gint)(h * view->scale + 0.5);
+	width = (gint)(w * view->scale);
+	height = (gint)(h * view->scale);
 
 	if (max_width)
 		*max_width = (view->rotation == 0 || view->rotation == 180) ? width : height;
@@ -1341,10 +1338,10 @@ _ev_view_transform_doc_point_to_view_point (EvView   *view,
 
 	ev_view_get_page_extents (view, page, &page_area, &border);
 
-	view_x = CLAMP (x * view->scale, 0, page_area.width);
-	view_y = CLAMP (y * view->scale, 0, page_area.height);
-	view_point->x = view_x + page_area.x;
-	view_point->y = view_y + page_area.y;
+	view_x = CLAMP ((int)(x * view->scale), 0, page_area.width);
+	view_y = CLAMP ((int)(y * view->scale), 0, page_area.height);
+	view_point->x = (int)(view_x + page_area.x);
+	view_point->y = (int)(view_y + page_area.y);
 }
 
 void
@@ -1386,10 +1383,10 @@ _ev_view_transform_doc_rect_to_view_rect (EvView       *view,
 
 	ev_view_get_page_extents (view, page, &page_area, &border);
 
-	view_rect->x = x * view->scale + page_area.x;
-	view_rect->y = y * view->scale + page_area.y;
-	view_rect->width = w * view->scale;
-	view_rect->height = h * view->scale;
+	view_rect->x = (int)(x * view->scale + page_area.x);
+	view_rect->y = (int)(y * view->scale + page_area.y);
+	view_rect->width = (int)(w * view->scale);
+	view_rect->height = (int)(h * view->scale);
 }
 
 static void
@@ -1421,8 +1418,8 @@ find_page_at_location (EvView  *view,
 		    (y >= page_area.y + border.top) &&
 		    (y < page_area.y + page_area.height - border.bottom)) {
 			*page = i;
-			*x_offset = x - (page_area.x + border.left);
-			*y_offset = y - (page_area.y + border.top);
+			*x_offset = (int)(x - (page_area.x + border.left));
+			*y_offset = (int)(y - (page_area.y + border.top));
 			return;
 		}
 	}
@@ -1447,7 +1444,9 @@ location_in_text (EvView  *view,
 	region = ev_page_cache_get_text_mapping (view->page_cache, page);
 
 	if (region)
-		return cairo_region_contains_point (region, x_offset / view->scale, y_offset / view->scale);
+		return cairo_region_contains_point (region,
+		                                    (int)(x_offset / view->scale),
+		                                    (int)(y_offset / view->scale));
 	else
 		return FALSE;
 }
@@ -1482,32 +1481,32 @@ get_doc_point_from_offset (EvView *view,
 			   gint   *x_new,
 			   gint   *y_new)
 {
-        gdouble width, height;
+        gdouble width, height, x_offset_d, y_offset_d;
 	double x, y;
 
 	get_doc_page_size (view, page, &width, &height);
 
-	x_offset = x_offset / view->scale;
-	y_offset = y_offset / view->scale;
+	x_offset_d = (double)x_offset / view->scale;
+	y_offset_d = (double)y_offset / view->scale;
 
         if (view->rotation == 0) {
-                x = x_offset;
-                y = y_offset;
+                x = x_offset_d;
+                y = y_offset_d;
         } else if (view->rotation == 90) {
-                x = y_offset;
-                y = width - x_offset;
+                x = y_offset_d;
+                y = width - x_offset_d;
         } else if (view->rotation == 180) {
-                x = width - x_offset;
-                y = height - y_offset;
+                x = width - x_offset_d;
+                y = height - y_offset_d;
         } else if (view->rotation == 270) {
-                x = height - y_offset;
-                y = x_offset;
+                x = height - y_offset_d;
+                y = x_offset_d;
         } else {
                 g_assert_not_reached ();
         }
 
-	*x_new = x;
-	*y_new = y;
+	*x_new = (int)x;
+	*y_new = (int)y;
 
 	return TRUE;
 }
@@ -3345,7 +3344,7 @@ get_caret_cursor_area (EvView       *view,
 	gtk_style_context_get_style (gtk_widget_get_style_context (GTK_WIDGET (view)),
 				     "cursor-aspect-ratio", &cursor_aspect_ratio,
 				     NULL);
-	stem_width = area->height * cursor_aspect_ratio + 1;
+	stem_width = (int)(area->height * cursor_aspect_ratio + 1);
 	area->x -= (stem_width / 2);
 	area->width = stem_width;
 
@@ -4255,8 +4254,8 @@ start_selection_for_event (EvView         *view,
 {
 	clear_selection (view);
 
-	view->selection_info.start.x = event->x + view->scroll_x;
-	view->selection_info.start.y = event->y + view->scroll_y;
+	view->selection_info.start.x = (int)(event->x + view->scroll_x);
+	view->selection_info.start.y = (int)(event->y + view->scroll_y);
 
 	switch (event->type) {
 	        case GDK_2BUTTON_PRESS:
@@ -4310,8 +4309,8 @@ _ev_view_get_caret_cursor_offset_at_doc_point (EvView *view,
 
 						/* If there's a previous line, check distances */
 
-						dx1 = doc_x - last->x2;
-						dx2 = rect->x1 - doc_x;
+						dx1 = (int)(doc_x - last->x2);
+						dx2 = (int)(rect->x1 - doc_x);
 
 						if (dx1 < dx2)
 							offset = last_line_offset;
@@ -4485,8 +4484,8 @@ ev_view_button_press_event (GtkWidget      *widget,
 				} else if (event->state & GDK_SHIFT_MASK) {
 					GdkPoint end_point;
 
-					end_point.x = event->x + view->scroll_x;
-					end_point.y = event->y + view->scroll_y;
+					end_point.x = (int)(event->x + view->scroll_x);
+					end_point.y = (int)(event->y + view->scroll_y);
 					extend_selection (view, &view->selection_info.start, &end_point);
 				} else if (location_in_selected_text (view,
 							       event->x + view->scroll_x,
@@ -4513,8 +4512,8 @@ ev_view_button_press_event (GtkWidget      *widget,
 				view->image_dnd_info.image = g_object_ref (image);
 				view->image_dnd_info.in_drag = TRUE;
 
-				view->image_dnd_info.start.x = event->x + view->scroll_x;
-				view->image_dnd_info.start.y = event->y + view->scroll_y;
+				view->image_dnd_info.start.x = (int)(event->x + view->scroll_x);
+				view->image_dnd_info.start.y = (int)(event->y + view->scroll_y);
 			} else {
 				ev_view_remove_all (view);
 				_ev_view_set_focused_element (view, NULL, -1);
@@ -4538,8 +4537,8 @@ ev_view_button_press_event (GtkWidget      *widget,
 		case 2:
 			/* use root coordinates as reference point because
 			 * scrolling changes window relative coordinates */
-			view->drag_info.start.x = event->x_root;
-			view->drag_info.start.y = event->y_root;
+			view->drag_info.start.x = (int)event->x_root;
+			view->drag_info.start.y = (int)event->y_root;
 			view->drag_info.hadj = gtk_adjustment_get_value (view->hadjustment);
 			view->drag_info.vadj = gtk_adjustment_get_value (view->vadjustment);
 
@@ -4547,7 +4546,7 @@ ev_view_button_press_event (GtkWidget      *widget,
 			ev_view_set_focused_element_at_location (view, event->x, event->y);
 			return TRUE;
 		case 3:
-			view->scroll_info.start_y = event->y;
+			view->scroll_info.start_y = (int)event->y;
 			ev_view_set_focused_element_at_location (view, event->x, event->y);
 			return ev_view_do_popup_menu (view, event->x, event->y);
 	}
@@ -4722,8 +4721,8 @@ ev_view_scroll_drag_release (EvView *view)
 	gdouble h_upper, v_upper;
 	GtkAllocation allocation;
 
-	view->drag_info.momentum.x /= 1.2;
-	view->drag_info.momentum.y /= 1.2; /* Alter these constants to change "friction" */
+	view->drag_info.momentum.x = (int)(view->drag_info.momentum.x / 1.2);
+	view->drag_info.momentum.y = (int)(view->drag_info.momentum.y / 1.2); /* Alter these constants to change "friction" */
 
 	gtk_widget_get_allocation (GTK_WIDGET (view), &allocation);
 
@@ -4783,8 +4782,8 @@ ev_view_motion_notify_event (GtkWidget      *widget,
         if (event->is_hint || event->window != bin_window) {
 	    ev_document_misc_get_pointer_position (widget, &x, &y);
         } else {
-	    x = event->x;
-	    y = event->y;
+	    x = (int)event->x;
+	    y = (int)event->y;
 	}
 
 	if (view->scroll_info.autoscrolling) {
@@ -4804,8 +4803,8 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 			gtk_drag_begin_with_coordinates (widget, target_list,
 					                 GDK_ACTION_COPY,
 					                 1, (GdkEvent *)event,
-					                 event->x,
-					                 event->y);
+					                 (int)event->x,
+					                 (int)event->y);
 
 			view->selection_info.in_drag = FALSE;
 			view->pressed_button = -1;
@@ -4827,8 +4826,8 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 			gtk_drag_begin_with_coordinates (widget, target_list,
 					                 GDK_ACTION_COPY,
 					                 1, (GdkEvent *)event,
-					                 event->x,
-					                 event->y);
+					                 (int)event->x,
+					                 (int)event->y);
 
 			view->image_dnd_info.in_drag = FALSE;
 			view->pressed_button = -1;
@@ -4876,16 +4875,16 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 			start = gtk_drag_check_threshold (widget,
 							  view->drag_info.start.x,
 							  view->drag_info.start.y,
-							  event->x_root,
-							  event->y_root);
+							  (int)event->x_root,
+							  (int)event->y_root);
 			view->drag_info.in_drag = start;
 			view->drag_info.drag_timeout_id = g_timeout_add (10,
 				(GSourceFunc)ev_view_drag_update_momentum, view);
 			/* Set 100 to choose how long it takes to build up momentum */
 			/* Clear out previous momentum info: */
 			for (i = 0; i < DRAG_HISTORY; i++) {
-				view->drag_info.buffer[i].x = event->x;
-				view->drag_info.buffer[i].y = event->y;
+				view->drag_info.buffer[i].x = (int)event->x;
+				view->drag_info.buffer[i].y = (int)event->y;
 			}
 			view->drag_info.momentum.x = 0;
 			view->drag_info.momentum.y = 0;
@@ -4896,11 +4895,11 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 			gdouble dhadj_value, dvadj_value;
 			GtkAllocation allocation;
 
-			view->drag_info.buffer[0].x = event->x;
-			view->drag_info.buffer[0].y = event->y;
+			view->drag_info.buffer[0].x = (int)event->x;
+			view->drag_info.buffer[0].y = (int)event->y;
 
-			dx = event->x_root - view->drag_info.start.x;
-			dy = event->y_root - view->drag_info.start.y;
+			dx = (int)(event->x_root - view->drag_info.start.x);
+			dy = (int)(event->y_root - view->drag_info.start.y);
 
 			gtk_widget_get_allocation (widget, &allocation);
 
@@ -4968,19 +4967,19 @@ ev_view_button_release_event (GtkWidget      *widget,
 
 	if (view->adding_annot && view->pressed_button == 1) {
 		view->adding_annot = FALSE;
-		ev_view_handle_cursor_over_xy (view, event->x, event->y);
+		ev_view_handle_cursor_over_xy (view, (int)event->x, (int)event->y);
 		view->pressed_button = -1;
 
 		ev_view_create_annotation (view,
 					   view->adding_annot_type,
-					   event->x + view->scroll_x,
-					   event->y + view->scroll_y);
+					   (int)(event->x + view->scroll_x),
+					   (int)(event->y + view->scroll_y));
 
 		return FALSE;
 	}
 
 	if (view->pressed_button == 2) {
-		ev_view_handle_cursor_over_xy (view, event->x, event->y);
+		ev_view_handle_cursor_over_xy (view, (int)event->x, (int)event->y);
 	}
 
 	view->pressed_button = -1;
@@ -5605,7 +5604,7 @@ ev_view_enter_notify_event (GtkWidget *widget, GdkEventCrossing   *event)
 {
 	EvView *view = EV_VIEW (widget);
 
-	ev_view_handle_cursor_over_xy (view, event->x, event->y);
+	ev_view_handle_cursor_over_xy (view, (int)event->x, (int)event->y);
 
 	return FALSE;
 }
@@ -5729,8 +5728,8 @@ draw_surface (cairo_t 	      *cr,
 					  CAIRO_FILTER_FAST);
 		cairo_scale (cr, scale_x, scale_y);
 
-		offset_x /= scale_x;
-		offset_y /= scale_y;
+		offset_x = (int)(offset_x / scale_x);
+		offset_y = (int)(offset_y / scale_y);
 	}
 
 	cairo_surface_set_device_offset (surface,

@@ -41,7 +41,7 @@ struct _EphyZoomControlClass
 	GtkToolItemClass parent_class;
 
 	/* signals */
-	void (*zoom_to_level) 	(EphyZoomControl *control, float level);
+	void (*zoom_to_level) 	(EphyZoomControl *control, double level);
 };
 
 struct _EphyZoomControl
@@ -54,9 +54,9 @@ struct _EphyZoomControl
 
 GType	ephy_zoom_control_get_type	 (void);
 
-void	ephy_zoom_control_set_zoom_level (EphyZoomControl *control, float zoom);
+void	ephy_zoom_control_set_zoom_level (EphyZoomControl *control, double zoom);
 
-float	ephy_zoom_control_get_zoom_level (EphyZoomControl *control);
+double	ephy_zoom_control_get_zoom_level (EphyZoomControl *control);
 
 G_END_DECLS
 

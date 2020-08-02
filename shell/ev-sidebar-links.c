@@ -355,8 +355,8 @@ button_press_cb (GtkWidget *treeview,
 
 	if (event->button == 3) {
 	        if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (treeview),
-        	                                   event->x,
-                	                           event->y,
+        	                                   (int)event->x,
+                	                           (int)event->y,
 	                                           &path,
         	                                   NULL, NULL, NULL)) {
 			gtk_tree_view_set_cursor (GTK_TREE_VIEW (treeview),

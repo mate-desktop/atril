@@ -41,7 +41,7 @@ static const
 struct
 {
 	gchar *name;
-	float level;
+	double level;
 }
 
 zoom_levels[] =
@@ -72,11 +72,9 @@ static const guint n_zoom_levels = G_N_ELEMENTS (zoom_levels);
 #define ZOOM_IN		(-1.0)
 #define ZOOM_OUT	(-2.0)
 
-guint	ephy_zoom_get_zoom_level_index	 (float level);
+guint	ephy_zoom_get_zoom_level_index	 (double level);
 
-float	ephy_zoom_get_changed_zoom_level (float level, gint steps);
-
-float	ephy_zoom_get_nearest_zoom_level (float level);
+double	ephy_zoom_get_nearest_zoom_level (double level);
 
 G_END_DECLS
 

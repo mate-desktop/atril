@@ -307,8 +307,8 @@ move_item_cb (GtkAction          *action,
                                    GDK_ACTION_MOVE,
                                    1,
                                    event,
-                                   event->motion.x,
-                                   event->motion.y);
+                                   (int)event->motion.x,
+                                   (int)event->motion.y);
   gdk_event_free (event);
   gtk_target_list_unref (list);
 }
