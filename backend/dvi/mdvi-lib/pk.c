@@ -50,7 +50,6 @@
 #define PK_PRE    247
 
 #define PK_DYN_F(x)	(((x) >> 4) & 0xf)
-#define PK_PACKED(x)	(PK_DYN_F(x) != 14)
 
 static int pk_load_font __PROTO((DviParams *, DviFont *));
 static int pk_font_get_glyph __PROTO((DviParams *, DviFont *, int));

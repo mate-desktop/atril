@@ -361,8 +361,6 @@ ev_print_operation_update_status (EvPrintOperation *op,
 /* Export interface */
 #define EV_TYPE_PRINT_OPERATION_EXPORT         (ev_print_operation_export_get_type())
 #define EV_PRINT_OPERATION_EXPORT(object)      (G_TYPE_CHECK_INSTANCE_CAST((object), EV_TYPE_PRINT_OPERATION_EXPORT, EvPrintOperationExport))
-#define EV_PRINT_OPERATION_EXPORT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), EV_TYPE_PRINT_OPERATION_EXPORT, EvPrintOperationExportClass))
-#define EV_IS_PRINT_OPERATION_EXPORT(object)   (G_TYPE_CHECK_INSTANCE_TYPE((object), EV_TYPE_PRINT_OPERATION_EXPORT))
 
 typedef struct _EvPrintOperationExport      EvPrintOperationExport;
 typedef struct _EvPrintOperationExportClass EvPrintOperationExportClass;
@@ -1508,8 +1506,6 @@ ev_print_operation_export_class_init (EvPrintOperationExportClass *klass)
 /* Print to cairo interface */
 #define EV_TYPE_PRINT_OPERATION_PRINT         (ev_print_operation_print_get_type())
 #define EV_PRINT_OPERATION_PRINT(object)      (G_TYPE_CHECK_INSTANCE_CAST((object), EV_TYPE_PRINT_OPERATION_PRINT, EvPrintOperationPrint))
-#define EV_PRINT_OPERATION_PRINT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), EV_TYPE_PRINT_OPERATION_PRINT, EvPrintOperationPrintClass))
-#define EV_IS_PRINT_OPERATION_PRINT(object)   (G_TYPE_CHECK_INSTANCE_TYPE((object), EV_TYPE_PRINT_OPERATION_PRINT))
 
 typedef struct _EvPrintOperationPrint      EvPrintOperationPrint;
 typedef struct _EvPrintOperationPrintClass EvPrintOperationPrintClass;

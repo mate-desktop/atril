@@ -257,7 +257,6 @@ struct _EvWindowPrivate {
 
 #ifdef ENABLE_DBUS
 #define EV_WINDOW_DBUS_OBJECT_PATH "/org/mate/atril/Window/%d"
-#define EV_WINDOW_DBUS_INTERFACE   "org.mate.atril.Window"
 #endif
 
 #define GS_SCHEMA_NAME           "org.mate.Atril"
@@ -278,8 +277,6 @@ struct _EvWindowPrivate {
 #define EV_PRINT_SETTINGS_FILE  "print-settings"
 #define EV_PRINT_SETTINGS_GROUP "Print Settings"
 #define EV_PAGE_SETUP_GROUP     "Page Setup"
-
-#define EV_TOOLBARS_FILENAME "atril-toolbar.xml"
 
 #define MIN_SCALE 0.05409
 
