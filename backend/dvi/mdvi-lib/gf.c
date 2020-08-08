@@ -29,7 +29,6 @@
 
 #define GF_PAINT0	0
 #define GF_PAINT1	64
-#define GF_PAINT2	65
 #define GF_PAINT3	66
 #define GF_BOC		67
 #define GF_BOC1		68
@@ -39,7 +38,6 @@
 #define GF_SKIP2	72
 #define GF_SKIP3	73
 #define GF_NEW_ROW_0	74
-#define GF_NEW_ROW_1	75
 #define GF_NEW_ROW_MAX	238
 #define GF_XXX1		239
 #define GF_XXX2		240

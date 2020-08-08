@@ -48,7 +48,6 @@ typedef struct {
 #define HSCALE	10
 #define VSCALE	11
 #define ANGLE	12
-#define CLIP	13
 
 void	epsf_special __PROTO((DviContext *dvi, char *prefix, char *arg));
 

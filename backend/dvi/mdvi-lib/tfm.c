@@ -71,9 +71,6 @@ DviFontInfo afm_font_info = {
 	NULL
 };
 
-#define TYPENAME(font)	\
-	((font)->search.info ? (font)->search.info : "none")
-
 /*
  * Although it does not seem that way, this conversion is independent of the
  * shrinking factors, within roundoff (that's because `conv' and `vconv'

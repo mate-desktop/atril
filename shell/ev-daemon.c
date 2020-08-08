@@ -35,7 +35,6 @@
 #include "ev-daemon-gdbus-generated.h"
 
 #define EV_DBUS_DAEMON_NAME             "org.mate.atril.Daemon"
-#define EV_DBUS_DAEMON_INTERFACE_NAME   "org.mate.atril.Daemon"
 #define EV_DBUS_DAEMON_OBJECT_PATH      "/org/mate/atril/Daemon"
 
 #define EV_DBUS_WINDOW_INTERFACE_NAME   "org.mate.atril.Window"
@@ -47,10 +46,6 @@
 
 #define EV_TYPE_DAEMON_APPLICATION              (ev_daemon_application_get_type ())
 #define EV_DAEMON_APPLICATION(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), EV_TYPE_DAEMON_APPLICATION, EvDaemonApplication))
-#define EV_DAEMON_APPLICATION_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), EV_TYPE_DAEMON_APPLICATION, EvDaemonApplicationClass))
-#define EV_IS_DAEMON_APPLICATION(object)        (G_TYPE_CHECK_INSTANCE_TYPE ((object), EV_TYPE_DAEMON_APPLICATION))
-#define EV_IS_DAEMON_APPLICATION_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), EV_TYPE_DAEMON_APPLICATION))
-#define EV_DAEMON_APPLICATION_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), EV_TYPE_DAEMON_APPLICATION, EvDaemonApplicationClass))
 
 typedef struct _EvDaemonApplication        EvDaemonApplication;
 typedef struct _EvDaemonApplicationClass   EvDaemonApplicationClass;

@@ -50,7 +50,6 @@
 #include <config.h>
 #include "mdvi.h"
 
-#define HAVE_PROTOTYPES 1
 #include <kpathsea/tex-file.h>
 #include <kpathsea/tex-glyph.h>
 

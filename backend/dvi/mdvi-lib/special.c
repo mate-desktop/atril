@@ -151,8 +151,6 @@ int	mdvi_unregister_special(const char *prefix)
 	return 0;
 }
 
-#define IS_PREFIX_DELIMITER(x)	(strchr(" \t\n:=", (x)) != NULL)
-
 int	mdvi_do_special(DviContext *dvi, char *string)
 {
 	char	*prefix;

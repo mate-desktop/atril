@@ -307,13 +307,8 @@ static void dreset(DviContext *dvi)
 	dvi->buffer.pos = 0;
 }
 
-#define dsget1(d)	dsgetn((d), 1)
-#define dsget2(d)	dsgetn((d), 2)
-#define dsget3(d)	dsgetn((d), 3)
 #define dsget4(d)	dsgetn((d), 4)
 #define duget1(d)	dugetn((d), 1)
-#define duget2(d)	dugetn((d), 2)
-#define duget3(d)	dugetn((d), 3)
 #define duget4(d)	dugetn((d), 4)
 
 #ifndef NODEBUG
