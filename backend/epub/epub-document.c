@@ -181,8 +181,18 @@ epub_document_check_hits(EvDocumentFind *document_find,
 {
 	gchar *filepath = g_filename_from_uri((gchar*)page->backend_page,NULL,NULL);
 	htmlDocPtr htmldoc =  xmlParseFile(filepath);
-	htmlNodePtr htmltag = xmlDocGetRootElement(htmldoc);
-	int count=0;
+    if (htmldoc == NULL) {
+        g_free(filepath);
+        return 0;
+    }
+    htmlNodePtr htmltag = xmlDocGetRootElement(htmldoc);
+    if (htmltag == NULL) {
+        g_free(filepath);
+        xmlFreeDoc (htmldoc);
+        return 0;
+    }
+
+    int count=0;
 	htmlNodePtr bodytag = htmltag->xmlChildrenNode;
 
 	while ( xmlStrcmp(bodytag->name,(xmlChar*)"body") ) {
