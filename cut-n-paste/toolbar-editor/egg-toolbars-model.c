@@ -597,7 +597,12 @@ egg_toolbars_model_load_toolbars (EggToolbarsModel *model,
     return FALSE;
   }
   root = xmlDocGetRootElement (doc);
-
+  if (root == NULL)
+  {
+    g_warning ("Failed to get root element");
+    xmlFreeDoc (doc);
+    return FALSE;
+  }
   parse_toolbars (model, root->children);
 
   xmlFreeDoc (doc);
@@ -627,6 +632,8 @@ egg_toolbars_model_load_toolbars_from_resource (EggToolbarsModel *model,
     g_error ("Failed to load XML data from resource %s", path);
 
   root = xmlDocGetRootElement (doc);
+  if (root == NULL)
+    g_error ("Failed to get root element");
   parse_toolbars (model, root->children);
 
   xmlFreeDoc (doc);
@@ -691,6 +698,12 @@ egg_toolbars_model_load_names (EggToolbarsModel *model,
     return FALSE;
   }
   root = xmlDocGetRootElement (doc);
+  if (root == NULL)
+  {
+    g_warning ("Failed to get root element");
+    xmlFreeDoc (doc);
+    return FALSE;
+  }
 
   parse_names (model, root->children);
 
@@ -721,6 +734,8 @@ egg_toolbars_model_load_names_from_resource (EggToolbarsModel *model,
     g_error ("Failed to load XML data from resource %s", path);
 
   root = xmlDocGetRootElement (doc);
+  if (root == NULL)
+    g_error ("Failed to get root element");
   parse_names (model, root->children);
 
   xmlFreeDoc (doc);
