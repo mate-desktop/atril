@@ -265,7 +265,7 @@ epub_document_make_tree_entry(linknode* ListData,LinksCBStruct* UserData)
     link = ev_link_new((gchar*)ListData->linktext,ev_action);
 
     gtk_tree_store_append (GTK_TREE_STORE (UserData->model), &tree_iter,(UserData->parent));
-    title_markup = g_strdup((gchar*)ListData->linktext);
+    title_markup = g_markup_escape_text ((gchar*)ListData->linktext, -1);
 
     gtk_tree_store_set (GTK_TREE_STORE (UserData->model), &tree_iter,
                         EV_DOCUMENT_LINKS_COLUMN_MARKUP, title_markup,
