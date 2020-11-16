@@ -18,13 +18,12 @@ which mate-autogen || {
 }
 
 which yelp-build || {
-    echo "You need to install yelp-tools" 
+    echo "You need to install yelp-tools"
     exit 1
 }
 
 REQUIRED_AUTOMAKE_VERSION=1.10
 REQUIRED_GTK_DOC_VERSION=1.13
-USE_MATE2_MACROS=1
 
 . mate-autogen
 
