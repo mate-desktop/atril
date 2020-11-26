@@ -384,8 +384,7 @@ ev_document_factory_add_filters (GtkWidget *chooser, EvDocument *document)
 		}
 	}
 
-	g_list_foreach (all_types, (GFunc)g_free, NULL);
-	g_list_free (all_types);
+	g_list_free_full (all_types, g_free);
 
 	filter = gtk_file_filter_new ();
 	gtk_file_filter_set_name (filter, _("All Files"));
