@@ -101,7 +101,6 @@ GTKDOC_CFLAGS = \
 	-DATRILDATADIR=\"$(pkgdatadir)\"		\
 	-DMATEDATADIR=\"$(datadir)\"			\
 	-DMATELOCALEDIR=\"$(datadir)/locale\"		\
-	-DMATEICONDIR=\""$(datadir)/pixmaps"\" 	\
 	-DATRIL_COMPILATION				\
 	$(SHELL_CFLAGS)					\
 	$(WARN_CFLAGS)					\
