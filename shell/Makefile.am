@@ -12,7 +12,6 @@ AM_CPPFLAGS=							\
 	-I$(top_builddir)/libview				\
 	-I$(top_srcdir)/libmisc					\
 	-I$(top_srcdir)/properties				\
-	-DMATEICONDIR=\""$(datadir)/pixmaps"\" 		\
 	-DBINDIR=\""$(bindir)"\"				\
 	-DLIBEXECDIR=\""$(libexecdir)"\"			\
 	-DATRIL_COMPILATION					\
