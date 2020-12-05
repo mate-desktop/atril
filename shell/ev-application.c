@@ -606,9 +606,11 @@ ev_application_open_uri_in_window (EvApplication  *application,
 
 	gdk_window = gtk_widget_get_window (GTK_WIDGET (ev_window));
 
-	if (timestamp <= 0)
-		timestamp = gdk_x11_get_server_time (gdk_window);
-	gdk_x11_window_set_user_time (gdk_window, timestamp);
+	if (GDK_IS_X11_WINDOW (gdk_window)) {
+		if (timestamp <= 0)
+			timestamp = gdk_x11_get_server_time (gdk_window);
+		gdk_x11_window_set_user_time (gdk_window, timestamp);
+	}
 
 	gtk_window_present (GTK_WINDOW (ev_window));
 }
@@ -697,9 +699,11 @@ ev_application_open_window (EvApplication *application,
 
 	gdk_window = gtk_widget_get_window (GTK_WIDGET (new_window));
 
-	if (timestamp <= 0)
-		timestamp = gdk_x11_get_server_time (gdk_window);
-	gdk_x11_window_set_user_time (gdk_window, timestamp);
+	if (GDK_IS_X11_WINDOW (gdk_window)) {
+		if (timestamp <= 0)
+			timestamp = gdk_x11_get_server_time (gdk_window);
+		gdk_x11_window_set_user_time (gdk_window, timestamp);
+	}
 
 	gtk_window_present (GTK_WINDOW (new_window));
 }
