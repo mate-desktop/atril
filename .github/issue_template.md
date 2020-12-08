@@ -16,4 +16,4 @@
 #### Linux Distribution
 
 
-#### link to downstream report of your Distribution
+#### Link to bugreport report of your Distribution (requirement)
