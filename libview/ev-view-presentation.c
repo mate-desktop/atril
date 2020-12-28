@@ -425,7 +425,7 @@ ev_view_presentation_update_current_page (EvViewPresentation *pview,
 {
 	gint jump;
 
-	if (page < 0 || page >= ev_document_get_n_pages (pview->document))
+	if (page >= ev_document_get_n_pages (pview->document))
 		return;
 
 	ev_view_presentation_animation_cancel (pview);
