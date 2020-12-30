@@ -612,7 +612,18 @@ ev_job_render_run (EvJob *job)
 	rc = ev_render_context_new (ev_page, job_render->rotation, job_render->scale);
 	g_object_unref (ev_page);
 
-	job_render->surface = ev_document_render (job->document, rc);
+	if ((job_render->surface = ev_document_render (job->document, rc)) == NULL) {
+		ev_document_fc_mutex_unlock ();
+		ev_document_doc_mutex_unlock ();
+		g_object_unref (rc);
+		ev_job_failed (job,
+		               EV_DOCUMENT_ERROR,
+		               EV_DOCUMENT_ERROR_INVALID,
+		               _("Failed to render page %d"),
+		               job_render->page);
+		return FALSE;
+	}
+
 	/* If job was cancelled during the page rendering,
 	 * we return now, so that the thread is finished ASAP
 	 */
