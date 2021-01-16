@@ -5444,7 +5444,7 @@ ev_window_cmd_help_about (GtkAction *action, EvWindow *ev_window)
 		"version", VERSION,
 		"title", _("About Atril Document Viewer"),
 		"copyright", _("Copyright \xc2\xa9 1996–2009 The Evince authors\n"
-		               "Copyright \xc2\xa9 2012–2020 The MATE developers"),
+		               "Copyright \xc2\xa9 2012–2021 The MATE developers"),
 		"license", license_trans,
 		"website", "https://mate-desktop.org/",
 		"comments", comments,
