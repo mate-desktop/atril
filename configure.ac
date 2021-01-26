@@ -40,7 +40,13 @@ m4_define([ev_binary_version], [ev_document_lt_current])
 # *****************************************************************************
 
 AC_PREREQ([2.57])
-AC_INIT([atril], [ev_version], [https://mate-desktop.org/], [atril])
+
+AC_INIT([atril],
+        [ev_version],
+        [https://github.com/mate-desktop/atril/issues],
+        [atril],
+        [https://mate-desktop.org])
+
 AM_INIT_AUTOMAKE([1.10 foreign tar-ustar dist-xz no-dist-gzip check-news])
 
 AC_CONFIG_HEADERS([config.h])
@@ -717,6 +723,7 @@ cut-n-paste/smclient/Makefile
 cut-n-paste/smclient/libegg/Makefile
 cut-n-paste/toolbar-editor/Makefile
 cut-n-paste/zoom-control/Makefile
+data/atril.appdata.xml.in
 data/atril.desktop.in
 data/Makefile
 data/icons/Makefile
