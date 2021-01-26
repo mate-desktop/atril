@@ -14,24 +14,23 @@ man_MANS=atril.1
 #
 
 uidir = $(pkgdatadir)
-ui_DATA =				\
+ui_DATA = \
 	hand-open.png
 
 #
 # Desktop file
 #
 
-DESKTOP_IN_FILES = atril.desktop.in
-DESKTOP_FILES = $(DESKTOP_IN_FILES:.desktop.in=.desktop)
-
 desktopdir = $(datadir)/applications
-desktop_DATA = $(DESKTOP_FILES)
-$(desktop_DATA): $(DESKTOP_IN_FILES)
+desktop_in_files = atril.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+$(desktop_DATA): $(desktop_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 #
 # DBus servide file
 #
+
 if ENABLE_DBUS
 servicedir = $(datadir)/dbus-1/services
 service_in_files = org.mate.atril.Daemon.service.in
@@ -44,8 +43,10 @@ endif
 #
 # App data file
 #
+
 appdatadir = $(datadir)/metainfo
-appdata_in_files = atril.appdata.xml.in
+appdata_in_in_files = atril.appdata.xml.in.in
+appdata_in_files = $(appdata_in_in_files:.appdata.xml.in.in=.appdata.xml.in)
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 $(appdata_DATA): $(appdata_in_files)
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
@@ -53,13 +54,13 @@ $(appdata_DATA): $(appdata_in_files)
 #
 # GSettings schema
 #
+
 gsettings_SCHEMAS = org.mate.Atril.gschema.xml
 
 .PRECIOUS: $(gsettings_SCHEMAS)
 
 # include the appropriate makefile rules for schema handling
 @GSETTINGS_RULES@
-
 
 #
 # GTK icon cache
@@ -79,18 +80,18 @@ update-icon-cache:
 	        echo "***   $(gtk_update_icon_cache)"; \
 	        fi
 
-
 #
 # Extra files to be included in the tarball
 #
 
 EXTRA_DIST =					\
-	$(ui_DATA)				\
-	$(DESKTOP_IN_FILES)			\
-	$(appdata_in_files)			\
+	$(appdata_in_in_files)			\
+	$(desktop_in_files)			\
 	$(gsettings_SCHEMAS)			\
-	org.mate.atril.Daemon.service.in	\
 	$(man_MANS)				\
+	$(service_in_files)			\
+	$(ui_DATA)				\
+	org.mate.atril.Daemon.service.in	\
 	$(NULL)
 
 #
@@ -98,10 +99,13 @@ EXTRA_DIST =					\
 #
 
 CLEANFILES = \
-	atril.appdata.xml
+	$(appdata_DATA)		\
+	$(desktop_DATA)		\
+	$(service_DATA)		\
+	$(NULL)
 
 DISTCLEANFILES = \
-	$(DESKTOP_FILES)	\
-	$(service_DATA)
+	$(appdata_in_files)	\
+	$(NULL)
 
 -include $(top_srcdir)/git.mk
