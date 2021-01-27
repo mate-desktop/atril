@@ -772,6 +772,9 @@ AC_OUTPUT
 echo "
 Configure summary:
 
+    ${PACKAGE_STRING}
+    `echo $PACKAGE_STRING | sed "s/./=/g"`
+
     prefix..............:    ${prefix}
     compiler............:    ${CC}
     cflags..............:    ${CFLAGS}
