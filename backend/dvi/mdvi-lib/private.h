@@ -16,8 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 #ifndef _MDVI_PRIVATE_H
-#define _MDVI_PRIVATE_H 1
 
+#include <config.h>
+#include <glib/gi18n-lib.h>
+
+#define _MDVI_PRIVATE_H 1
 #define HAVE_PROTOTYPES 1
 
 #if STDC_HEADERS
@@ -44,15 +47,6 @@
 #define ISSP(p)		(*(p) == ' ' || *(p) == '\t')
 #define SKIPSP(p)	while(ISSP(p)) p++
 #define SKIPNSP(p)	while(*(p) && !ISSP(p)) p++
-
-#ifdef ENABLE_NLS
-#include <libintl.h>
-#define _(x)	gettext(x)
-#define _G(x)	x
-#else
-#define _(x)	x
-#define _G(x)	x
-#endif /* ENABLE_NLS */
 
 #if defined (__i386__) && defined (__GNUC__) && __GNUC__ >= 2
 #define	_BREAKPOINT()		do { __asm__ __volatile__ ("int $03"); } while(0)
