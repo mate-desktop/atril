@@ -27,6 +27,9 @@
 #ifndef EV_DOCUMENT_H
 #define EV_DOCUMENT_H
 
+#include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include <glib-object.h>
 #include <glib.h>
 #include <gmodule.h>
@@ -277,10 +280,6 @@ register_atril_backend (GTypeModule *module)					\
 		(GInstanceInitFunc) backend_name##_init				\
 	};									\
 										\
-	/* Initialise the i18n stuff */						\
-	bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);			\
-	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");			\
-                                                                                \
 	g_define_type_id = g_type_module_register_type (module,		        \
 					                EV_TYPE_DOCUMENT,	\
 					                #BackendName,		\

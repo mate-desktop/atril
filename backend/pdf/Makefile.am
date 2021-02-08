@@ -30,6 +30,10 @@ EXTRA_DIST = $(backend_in_files)
 CLEANFILES = $(backend_DATA)
 
 $(backend_DATA): $(backend_in_files)
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=TypeDescription --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp -f $< $@
+endif
 
 -include $(top_srcdir)/git.mk

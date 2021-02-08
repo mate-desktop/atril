@@ -25,7 +25,11 @@ desktopdir = $(datadir)/applications
 desktop_in_files = atril.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 $(desktop_DATA): $(desktop_in_files)
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp -f $< $@
+endif
 
 #
 # DBus servide file
@@ -49,7 +53,11 @@ appdata_in_in_files = atril.appdata.xml.in.in
 appdata_in_files = $(appdata_in_in_files:.appdata.xml.in.in=.appdata.xml.in)
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 $(appdata_DATA): $(appdata_in_files)
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp -f $< $@
+endif
 
 #
 # GSettings schema
