@@ -37,7 +37,9 @@ libmdvi_la_SOURCES = \
 	tfmfile.c    \
 	tt.c	     \
 	util.c	     \
-	vf.c         
+	vf.c
 
+libmdvi_la_LIBADD = $(GLIB_LIBS)
+libmdvi_la_CFLAGS = $(GLIB_CFLAGS)
 
 -include $(top_srcdir)/git.mk

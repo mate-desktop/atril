@@ -17,6 +17,8 @@
  */
 
 #include <config.h>
+#include <glib/gi18n-lib.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -30,14 +32,14 @@
 #include "private.h"
 
 static char *const messages[] = {
-	_G("Ooops!"),
-	_G("Aieeeee!!"),
-	_G("Ouch!"),
-	_G("Houston, we have a problem"),
-	_G("3.. 2.. 1.. BOOM!"),
-	_G("I'm history"),
-	_G("I'm going down"),
-	_G("I smell a rat")
+	N_("Ooops!"),
+	N_("Aieeeee!!"),
+	N_("Ouch!"),
+	N_("Houston, we have a problem"),
+	N_("3.. 2.. 1.. BOOM!"),
+	N_("I'm history"),
+	N_("I'm going down"),
+	N_("I smell a rat")
 };
 #define NMSGS	(sizeof(messages) / sizeof(char *))
 
@@ -139,7 +141,7 @@ void	mdvi_crash(const char *format, ...)
 	va_start(ap, format);
 	fprintf(stderr, "%s: %s: ",
 		program_name,
-		gettext(messages[(int)time(NULL) % NMSGS]));
+		_(messages[(int)time(NULL) % NMSGS]));
 	vfprintf(stderr, format, ap);
 #ifndef __GNUC__
 	/* let's be portable */
