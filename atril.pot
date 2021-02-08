@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.25.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-01-16 10:50+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
+"POT-Creation-Date: 2021-02-08 15:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,6 +94,442 @@ msgstr ""
 
 #: backend/dvi/dvidocument.atril-backend.desktop.in:4
 msgid "DVI Documents"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:209
+msgid "unexpected EOF\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:425
+#, c-format
+msgid "could not load font `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:479
+#, c-format
+msgid "could not reload `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:704
+#, c-format
+msgid "%s: unsupported DVI format (version %u)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:864
+msgid "no pages selected\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:897
+#, c-format
+msgid "%s: File corrupted, or not a DVI file\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:978
+#, c-format
+msgid "%s: vf macro had errors\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:981
+#, c-format
+msgid "%s: stack not empty after vf macro\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1006
+#, c-format
+msgid "%s: could not reopen file (%s)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1023
+#, c-format
+msgid "%s: page %d out of range\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1030
+#, c-format
+msgid "%s: bad offset at page %d\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1093
+msgid "stack not empty at end of page\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1250
+msgid "no default font set yet\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1260
+#, c-format
+msgid "requested character %d does not exist in `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1333
+msgid "enlarging stack\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1351
+msgid "stack underflow\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
+#, c-format
+msgid "font %d is not defined\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1504
+msgid "malformed special length\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1531
+#, c-format
+msgid "font %d is not defined in postamble\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1543
+#, c-format
+msgid "unexpected opcode %d\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/dviread.c:1549
+#, c-format
+msgid "undefined opcode %d\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/font.c:474
+#, c-format
+msgid "%s: no fonts defined\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/fontmap.c:590
+#, c-format
+msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/fontmap.c:757
+#, c-format
+msgid "%s: could not load fontmap\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/fontmap.c:771
+#, c-format
+msgid "%s: could not set as default encoding\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/fontmap.c:850
+#, c-format
+msgid "encoding vector `%s' is in use\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/gf.c:111
+#, c-format
+msgid "GF: invalid opcode %d in character %d\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/gf.c:209
+#, c-format
+msgid "(gf) Character %d: invalid opcode %d\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/gf.c:225
+#, c-format
+msgid "(gf) character %d has an incorrect bounding box\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/gf.c:288
+#, c-format
+msgid "%s: bad checksum (expected %u, found %u)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/gf.c:324
+#, c-format
+msgid "%s: junk in postamble\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/gf.c:361
+#, c-format
+msgid "%s: File corrupted, or not a GF file\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pagesel.c:212
+#, c-format
+msgid "invalid page specification `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pagesel.c:232
+msgid "garbage after DVI page specification ignored\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pagesel.c:260
+msgid "more than 10 counters in page specification\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pagesel.c:262
+msgid "garbage after TeX page specification ignored\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/paper.c:104 backend/dvi/mdvi-lib/paper.c:111
+msgid "custom"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:309
+msgid "Bad PK file: More bits than required\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:363
+#, c-format
+msgid "%s: checksum mismatch (expected %u, got %u)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:420
+#, c-format
+msgid "%s: unexpected preamble\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:477
+#, c-format
+msgid "%s: unexpected charcode (%d)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:512
+#, c-format
+msgid "%s: unexpected end of file (no postamble)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:518
+msgid "invalid PK file! (junk in postamble)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/pk.c:535
+#, c-format
+msgid "%s: File corrupted, or not a PK file\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/special.c:241
+#, c-format
+msgid "%s: tried to pop top level layer\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/sp-epsf.c:150
+#, c-format
+msgid "%s: malformed value for key `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/sp-epsf.c:161
+#, c-format
+msgid "%s: unknown key `%s' ignored\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/sp-epsf.c:166
+#, c-format
+msgid "%s: no argument for key `%s', using defaults\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/sp-epsf.c:170
+#, c-format
+msgid "%s: argument `%s' ignored for key `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/t1.c:187
+msgid "(t1) failed to reset device resolution\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/t1.c:215
+#, c-format
+msgid "%s: could not encode font\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tfm.c:175
+#, c-format
+msgid "%s: Checksum mismatch (got %u, expected %u)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tfmfile.c:91
+#, c-format
+msgid "%s: Error reading AFM data\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tfmfile.c:182
+#, c-format
+msgid "Warning: TFM file `%s' has suspicious size\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:512
+#, c-format
+msgid "%s: font coding scheme truncated to 40 bytes\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tfmfile.c:292 backend/dvi/mdvi-lib/tfmfile.c:590
+#, c-format
+msgid "%s: File corrupted, or not a TFM file\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:151
+#, c-format
+msgid "(tt) %s: could not load face: %s\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:159
+#, c-format
+msgid "(tt) %s: could not create face: %s\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:168
+#, c-format
+msgid "(tt) %s: could not create glyph: %s\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:201
+#, c-format
+msgid "(tt) %s: no acceptable map found, using #0\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:214
+#, c-format
+msgid "(tt) %s: could not set resolution: %s\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:221
+#, c-format
+msgid "(tt) %s: could not set point size: %s\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:240
+#, c-format
+msgid "(tt) %s: could not load PS name table\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:265
+#, c-format
+msgid "%s: no encoding vector found, expect bad output\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/tt.c:325
+#, c-format
+msgid "(tt) %s: no font metric data\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:35
+msgid "Ooops!"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:36
+msgid "Aieeeee!!"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:37
+msgid "Ouch!"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:38
+msgid "Houston, we have a problem"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:39
+msgid "3.. 2.. 1.. BOOM!"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:40
+msgid "I'm history"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:41
+msgid "I'm going down"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:42
+msgid "I smell a rat"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:151
+msgid "Crashing"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:161
+#, c-format
+msgid "%s: Error: "
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:168
+msgid "Error"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:177
+#, c-format
+msgid "%s: Warning: "
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
+msgid "Warning"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:193
+#, c-format
+msgid "%s: Fatal: "
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:200
+msgid "Fatal"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:214
+#, c-format
+msgid "out of memory allocating %u bytes\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:224
+msgid "attempted to reallocate with zero size\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:227
+#, c-format
+msgid "failed to reallocate %u bytes\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:236
+msgid "attempted to callocate 0 members\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:238
+#, c-format
+msgid "attempted to callocate %u members with size 0\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:242
+#, c-format
+msgid "failed to allocate %ux%u bytes\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/util.c:250
+msgid "attempted to free NULL pointer\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/vf.c:82
+#, c-format
+msgid "%s: Checksum mismatch (expected %u, got %u)\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/vf.c:130
+#, c-format
+msgid "(vf) %s: could not load font `%s'\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/vf.c:170
+#, c-format
+msgid "(vf) %s: unexpected character %d\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/vf.c:186
+#, c-format
+msgid "(vf) %s: character %d redefined\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/vf.c:209
+#, c-format
+msgid "(vf) %s: no postamble\n"
+msgstr ""
+
+#: backend/dvi/mdvi-lib/vf.c:235
+#, c-format
+msgid "%s: File corrupted, or not a VF file.\n"
 msgstr ""
 
 #: backend/epub/epub-document.c:659
@@ -381,15 +817,15 @@ msgstr ""
 msgid "Separator"
 msgstr ""
 
-#: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6856
+#: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6861
 msgid "Fit Page"
 msgstr ""
 
-#: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6860
+#: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6865
 msgid "Fit Width"
 msgstr ""
 
-#: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6496
+#: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6501
 msgid "Expand Window to Fit"
 msgstr ""
 
@@ -449,16 +885,16 @@ msgstr ""
 msgid "6400%"
 msgstr ""
 
-#: data/atril.appdata.xml.in:7 data/atril.desktop.in.in:3
-#: shell/ev-window.c:5443
+#: data/atril.appdata.xml.in.in:7 data/atril.desktop.in.in:3
+#: shell/ev-window.c:5447
 msgid "Atril Document Viewer"
 msgstr ""
 
-#: data/atril.appdata.xml.in:8
+#: data/atril.appdata.xml.in.in:8
 msgid "A Document Viewer for the MATE desktop environment"
 msgstr ""
 
-#: data/atril.appdata.xml.in:10
+#: data/atril.appdata.xml.in.in:10
 msgid ""
 "Atril is a simple multi-page document viewer. It can display and print "
 "PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, XPS and Portable "
@@ -467,7 +903,7 @@ msgid ""
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
 
-#: data/atril.appdata.xml.in:18
+#: data/atril.appdata.xml.in.in:18
 msgid ""
 "Atril is a fork of Evince and part of the MATE Desktop Environment. If you "
 "would like to know more about MATE and Atril, please visit the project's "
@@ -535,11 +971,11 @@ msgstr ""
 msgid "Print settings file"
 msgstr ""
 
-#: previewer/ev-previewer.c:107 previewer/ev-previewer.c:141
+#: previewer/ev-previewer.c:107 previewer/ev-previewer.c:143
 msgid "MATE Document Previewer"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:96 shell/ev-window.c:3639
+#: previewer/ev-previewer-window.c:96 shell/ev-window.c:3642
 msgid "Failed to print document"
 msgstr ""
 
@@ -548,43 +984,43 @@ msgstr ""
 msgid "The selected printer '%s' could not be found"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:284 shell/ev-window.c:6457
+#: previewer/ev-previewer-window.c:284 shell/ev-window.c:6462
 msgid "_Close"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:287 shell/ev-window.c:6503
+#: previewer/ev-previewer-window.c:287 shell/ev-window.c:6508
 msgid "_Previous Page"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:288 shell/ev-window.c:6504
+#: previewer/ev-previewer-window.c:288 shell/ev-window.c:6509
 msgid "Go to the previous page"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:290 shell/ev-window.c:6506
+#: previewer/ev-previewer-window.c:290 shell/ev-window.c:6511
 msgid "_Next Page"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:291 shell/ev-window.c:6507
+#: previewer/ev-previewer-window.c:291 shell/ev-window.c:6512
 msgid "Go to the next page"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:293 shell/ev-window.c:6483
+#: previewer/ev-previewer-window.c:293 shell/ev-window.c:6488
 msgid "Zoom _In"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:294 shell/ev-window.c:6484
+#: previewer/ev-previewer-window.c:294 shell/ev-window.c:6489
 msgid "Enlarge the document"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:296 shell/ev-window.c:6486
+#: previewer/ev-previewer-window.c:296 shell/ev-window.c:6491
 msgid "Zoom _Out"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:297 shell/ev-window.c:6487
+#: previewer/ev-previewer-window.c:297 shell/ev-window.c:6492
 msgid "Shrink the document"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:300 shell/ev-window.c:6490
+#: previewer/ev-previewer-window.c:300 shell/ev-window.c:6495
 msgid "Reset zoom to 100%"
 msgstr ""
 
@@ -592,31 +1028,31 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:305 shell/ev-window.c:6453
+#: previewer/ev-previewer-window.c:305 shell/ev-window.c:6458
 msgid "Print this document"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:339 shell/ev-window.c:6609
+#: previewer/ev-previewer-window.c:339 shell/ev-window.c:6614
 msgid "Fit Pa_ge"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:340 shell/ev-window.c:6610
+#: previewer/ev-previewer-window.c:340 shell/ev-window.c:6615
 msgid "Make the current document fill the window"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:342 shell/ev-window.c:6612
+#: previewer/ev-previewer-window.c:342 shell/ev-window.c:6617
 msgid "Fit _Width"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:343 shell/ev-window.c:6613
+#: previewer/ev-previewer-window.c:343 shell/ev-window.c:6618
 msgid "Make the current document fill the window width"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:553 shell/ev-window.c:6766
+#: previewer/ev-previewer-window.c:553 shell/ev-window.c:6771
 msgid "Page"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:554 shell/ev-window.c:6767
+#: previewer/ev-previewer-window.c:554 shell/ev-window.c:6772
 msgid "Select Page"
 msgstr ""
 
@@ -709,12 +1145,21 @@ msgstr ""
 msgid "%s, Landscape (%s)"
 msgstr ""
 
-#: properties/libatril-properties-page.caja-extension.desktop.in:5
+#: properties/libatril-properties-page.caja-extension.desktop.in.in:5
 msgid "Atril properties"
 msgstr ""
 
-#: properties/libatril-properties-page.caja-extension.desktop.in:6
+#: properties/libatril-properties-page.caja-extension.desktop.in.in:6
 msgid "Shows details for Atril documents"
+msgstr ""
+
+#: properties/libatril-properties-page.caja-extension.desktop.in.in:10
+msgid ""
+"Copyright (C) 2000, 2001 Eazel Inc.\n"
+"Copyright (C) 2003 Andrew Sobala <aes@gnome.org>\n"
+"Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Copyright (C) 2005 Red Hat, Inc\n"
+"Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
 
 #: libmisc/ev-page-action-widget.c:64
@@ -746,10 +1191,6 @@ msgstr ""
 
 #: libview/ev-print-operation.c:1237
 msgid "Invalid page selection"
-msgstr ""
-
-#: libview/ev-print-operation.c:1238
-msgid "Warning"
 msgstr ""
 
 #: libview/ev-print-operation.c:1240
@@ -1113,7 +1554,7 @@ msgid "_Remove Bookmark"
 msgstr ""
 
 #: shell/ev-sidebar-bookmarks.c:314 shell/ev-window.c:1011
-#: shell/ev-window.c:5066
+#: shell/ev-window.c:5070
 #, c-format
 msgid "Page %s"
 msgstr ""
@@ -1243,49 +1684,49 @@ msgstr ""
 msgid "Could not send current document"
 msgstr ""
 
-#: shell/ev-window.c:3583
+#: shell/ev-window.c:3585
 #, c-format
-msgid "%d pending job in queue"
-msgid_plural "%d pending jobs in queue"
+msgid "%lu pending job in queue"
+msgid_plural "%lu pending jobs in queue"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/ev-window.c:3696
+#: shell/ev-window.c:3699
 #, c-format
 msgid "Printing job “%s”"
 msgstr ""
 
-#: shell/ev-window.c:3873
+#: shell/ev-window.c:3876
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a "
 "copy, changes will be permanently lost."
 msgstr ""
 
-#: shell/ev-window.c:3877
+#: shell/ev-window.c:3880
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
 
-#: shell/ev-window.c:3884
+#: shell/ev-window.c:3887
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
 msgstr ""
 
-#: shell/ev-window.c:3903
+#: shell/ev-window.c:3906
 msgid "Close _without Saving"
 msgstr ""
 
-#: shell/ev-window.c:3907 shell/ev-window.c:6446
+#: shell/ev-window.c:3910 shell/ev-window.c:6451
 msgid "_Save As…"
 msgstr ""
 
-#: shell/ev-window.c:3976
+#: shell/ev-window.c:3979
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
 msgstr ""
 
-#: shell/ev-window.c:3982
+#: shell/ev-window.c:3986
 #, c-format
 msgid "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
@@ -1293,54 +1734,54 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/ev-window.c:3997
+#: shell/ev-window.c:4001
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr ""
 
-#: shell/ev-window.c:4001
+#: shell/ev-window.c:4005
 msgid "Cancel _print and Close"
 msgstr ""
 
-#: shell/ev-window.c:4005
+#: shell/ev-window.c:4009
 msgid "Close _after Printing"
 msgstr ""
 
-#: shell/ev-window.c:4402
+#: shell/ev-window.c:4406
 msgid "Running in presentation mode"
 msgstr ""
 
-#: shell/ev-window.c:4469
+#: shell/ev-window.c:4473
 msgid "Presentation mode is not supported for ePub documents"
 msgstr ""
 
-#: shell/ev-window.c:4787
+#: shell/ev-window.c:4791
 msgid "Toolbar Editor"
 msgstr ""
 
-#: shell/ev-window.c:5112
+#: shell/ev-window.c:5116
 msgid "There was an error displaying help"
 msgstr ""
 
-#: shell/ev-window.c:5370
+#: shell/ev-window.c:5374
 #, c-format
 msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
 
-#: shell/ev-window.c:5373
+#: shell/ev-window.c:5377
 msgid "Atril is a simple multi-page document viewer."
 msgstr ""
 
-#: shell/ev-window.c:5386
+#: shell/ev-window.c:5390
 msgid "MATE Documentation Team"
 msgstr ""
 
-#: shell/ev-window.c:5387
+#: shell/ev-window.c:5391
 msgid "GNOME Documentation Team"
 msgstr ""
 
-#: shell/ev-window.c:5392
+#: shell/ev-window.c:5396
 msgid ""
 "Atril is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -1348,7 +1789,7 @@ msgid ""
 "version."
 msgstr ""
 
-#: shell/ev-window.c:5396
+#: shell/ev-window.c:5400
 msgid ""
 "Atril is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -1356,415 +1797,415 @@ msgid ""
 "details."
 msgstr ""
 
-#: shell/ev-window.c:5400
+#: shell/ev-window.c:5404
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
 
-#: shell/ev-window.c:5445
+#: shell/ev-window.c:5449
 msgid "About Atril Document Viewer"
 msgstr ""
 
-#: shell/ev-window.c:5446
+#: shell/ev-window.c:5450
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
 
-#: shell/ev-window.c:5453
+#: shell/ev-window.c:5457
 msgid "translator-credits"
 msgstr ""
 
-#: shell/ev-window.c:5747
+#: shell/ev-window.c:5752
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/ev-window.c:5752
+#: shell/ev-window.c:5757
 msgid "Not found"
 msgstr ""
 
-#: shell/ev-window.c:5758
+#: shell/ev-window.c:5763
 #, c-format
 msgid "%3d%% remaining to search"
 msgstr ""
 
-#: shell/ev-window.c:6113
+#: shell/ev-window.c:6118
 msgid "Enable caret navigation?"
 msgstr ""
 
-#: shell/ev-window.c:6115
+#: shell/ev-window.c:6120
 msgid "_Enable"
 msgstr ""
 
-#: shell/ev-window.c:6118
+#: shell/ev-window.c:6123
 msgid ""
 "Pressing F7 turns the caret navigation on or off. This feature places a "
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
 
-#: shell/ev-window.c:6123
+#: shell/ev-window.c:6128
 msgid "Don't show this message again"
 msgstr ""
 
-#: shell/ev-window.c:6432
+#: shell/ev-window.c:6437
 msgid "_File"
 msgstr ""
 
-#: shell/ev-window.c:6433
+#: shell/ev-window.c:6438
 msgid "_Edit"
 msgstr ""
 
-#: shell/ev-window.c:6434
+#: shell/ev-window.c:6439
 msgid "_View"
 msgstr ""
 
-#: shell/ev-window.c:6435
+#: shell/ev-window.c:6440
 msgid "_Go"
 msgstr ""
 
-#: shell/ev-window.c:6436
+#: shell/ev-window.c:6441
 msgid "_Bookmarks"
 msgstr ""
 
-#: shell/ev-window.c:6437
+#: shell/ev-window.c:6442
 msgid "_Help"
 msgstr ""
 
-#: shell/ev-window.c:6440 shell/ev-window.c:6807
+#: shell/ev-window.c:6445 shell/ev-window.c:6812
 msgid "_Open…"
 msgstr ""
 
-#: shell/ev-window.c:6441 shell/ev-window.c:6808
+#: shell/ev-window.c:6446 shell/ev-window.c:6813
 msgid "Open an existing document"
 msgstr ""
 
-#: shell/ev-window.c:6443
+#: shell/ev-window.c:6448
 msgid "Op_en a Copy"
 msgstr ""
 
-#: shell/ev-window.c:6444
+#: shell/ev-window.c:6449
 msgid "Open a copy of the current document in a new window"
 msgstr ""
 
-#: shell/ev-window.c:6447
+#: shell/ev-window.c:6452
 msgid "Save a copy of the current document"
 msgstr ""
 
-#: shell/ev-window.c:6449
+#: shell/ev-window.c:6454
 msgid "Send _To..."
 msgstr ""
 
-#: shell/ev-window.c:6450
+#: shell/ev-window.c:6455
 msgid "Send current document by mail, instant message..."
 msgstr ""
 
-#: shell/ev-window.c:6452
+#: shell/ev-window.c:6457
 msgid "_Print…"
 msgstr ""
 
-#: shell/ev-window.c:6455
+#: shell/ev-window.c:6460
 msgid "P_roperties"
 msgstr ""
 
-#: shell/ev-window.c:6461
+#: shell/ev-window.c:6466
 msgid "_Copy"
 msgstr ""
 
-#: shell/ev-window.c:6463
+#: shell/ev-window.c:6468
 msgid "Select _All"
 msgstr ""
 
-#: shell/ev-window.c:6465
+#: shell/ev-window.c:6470
 msgid "_Find…"
 msgstr ""
 
-#: shell/ev-window.c:6466
+#: shell/ev-window.c:6471
 msgid "Find a word or phrase in the document"
 msgstr ""
 
-#: shell/ev-window.c:6468
+#: shell/ev-window.c:6473
 msgid "Find Ne_xt"
 msgstr ""
 
-#: shell/ev-window.c:6470
+#: shell/ev-window.c:6475
 msgid "Find Pre_vious"
 msgstr ""
 
-#: shell/ev-window.c:6472
+#: shell/ev-window.c:6477
 msgid "T_oolbar"
 msgstr ""
 
-#: shell/ev-window.c:6474
+#: shell/ev-window.c:6479
 msgid "Rotate _Left"
 msgstr ""
 
-#: shell/ev-window.c:6476
+#: shell/ev-window.c:6481
 msgid "Rotate _Right"
 msgstr ""
 
-#: shell/ev-window.c:6478
+#: shell/ev-window.c:6483
 msgid "Save Current Settings as _Default"
 msgstr ""
 
-#: shell/ev-window.c:6489
+#: shell/ev-window.c:6494
 msgid "_Reset Zoom"
 msgstr ""
 
-#: shell/ev-window.c:6492
+#: shell/ev-window.c:6497
 msgid "_Reload"
 msgstr ""
 
-#: shell/ev-window.c:6493
+#: shell/ev-window.c:6498
 msgid "Reload the document"
 msgstr ""
 
-#: shell/ev-window.c:6495
+#: shell/ev-window.c:6500
 msgid "_Expand Window to Fit"
 msgstr ""
 
-#: shell/ev-window.c:6499
+#: shell/ev-window.c:6504
 msgid "Auto_scroll"
 msgstr ""
 
-#: shell/ev-window.c:6509
+#: shell/ev-window.c:6514
 msgid "_First Page"
 msgstr ""
 
-#: shell/ev-window.c:6510
+#: shell/ev-window.c:6515
 msgid "Go to the first page"
 msgstr ""
 
-#: shell/ev-window.c:6512
+#: shell/ev-window.c:6517
 msgid "_Last Page"
 msgstr ""
 
-#: shell/ev-window.c:6513
+#: shell/ev-window.c:6518
 msgid "Go to the last page"
 msgstr ""
 
-#: shell/ev-window.c:6517
+#: shell/ev-window.c:6522
 msgid "_Add Bookmark"
 msgstr ""
 
-#: shell/ev-window.c:6518
+#: shell/ev-window.c:6523
 msgid "Add a bookmark for the current page"
 msgstr ""
 
-#: shell/ev-window.c:6522
+#: shell/ev-window.c:6527
 msgid "_Contents"
 msgstr ""
 
-#: shell/ev-window.c:6525
+#: shell/ev-window.c:6530
 msgid "_About"
 msgstr ""
 
-#: shell/ev-window.c:6529
+#: shell/ev-window.c:6534
 msgid "Leave Fullscreen"
 msgstr ""
 
-#: shell/ev-window.c:6530
+#: shell/ev-window.c:6535
 msgid "Leave fullscreen mode"
 msgstr ""
 
-#: shell/ev-window.c:6532
+#: shell/ev-window.c:6537
 msgid "Start Presentation"
 msgstr ""
 
-#: shell/ev-window.c:6533
+#: shell/ev-window.c:6538
 msgid "Start a presentation"
 msgstr ""
 
-#: shell/ev-window.c:6588
+#: shell/ev-window.c:6593
 msgid "_Toolbar"
 msgstr ""
 
-#: shell/ev-window.c:6589
+#: shell/ev-window.c:6594
 msgid "Show or hide the toolbar"
 msgstr ""
 
-#: shell/ev-window.c:6591
+#: shell/ev-window.c:6596
 msgid "Side _Pane"
 msgstr ""
 
-#: shell/ev-window.c:6592
+#: shell/ev-window.c:6597
 msgid "Show or hide the side pane"
 msgstr ""
 
-#: shell/ev-window.c:6594
+#: shell/ev-window.c:6599
 msgid "_Continuous"
 msgstr ""
 
-#: shell/ev-window.c:6595
+#: shell/ev-window.c:6600
 msgid "Show the entire document"
 msgstr ""
 
-#: shell/ev-window.c:6597
+#: shell/ev-window.c:6602
 msgid "_Dual"
 msgstr ""
 
-#: shell/ev-window.c:6598
+#: shell/ev-window.c:6603
 msgid "Show two pages at once"
 msgstr ""
 
-#: shell/ev-window.c:6600
+#: shell/ev-window.c:6605
 msgid "_Odd pages left"
 msgstr ""
 
-#: shell/ev-window.c:6601
+#: shell/ev-window.c:6606
 msgid "Show odd pages on the left in dual mode"
 msgstr ""
 
-#: shell/ev-window.c:6603
+#: shell/ev-window.c:6608
 msgid "_Fullscreen"
 msgstr ""
 
-#: shell/ev-window.c:6604
+#: shell/ev-window.c:6609
 msgid "Expand the window to fill the screen"
 msgstr ""
 
-#: shell/ev-window.c:6606
+#: shell/ev-window.c:6611
 msgid "Pre_sentation"
 msgstr ""
 
-#: shell/ev-window.c:6607
+#: shell/ev-window.c:6612
 msgid "Run document as a presentation"
 msgstr ""
 
-#: shell/ev-window.c:6615
+#: shell/ev-window.c:6620
 msgid "Inverted _Colors"
 msgstr ""
 
-#: shell/ev-window.c:6616
+#: shell/ev-window.c:6621
 msgid "Show page contents with the colors inverted"
 msgstr ""
 
-#: shell/ev-window.c:6618
+#: shell/ev-window.c:6623
 msgid "Caret _Navigation"
 msgstr ""
 
-#: shell/ev-window.c:6619
+#: shell/ev-window.c:6624
 msgid "Activate or disable caret-navigation"
 msgstr ""
 
-#: shell/ev-window.c:6627
+#: shell/ev-window.c:6632
 msgid "_Open Link"
 msgstr ""
 
-#: shell/ev-window.c:6629
+#: shell/ev-window.c:6634
 msgid "_Go To"
 msgstr ""
 
-#: shell/ev-window.c:6631
+#: shell/ev-window.c:6636
 msgid "Open in New _Window"
 msgstr ""
 
-#: shell/ev-window.c:6633
+#: shell/ev-window.c:6638
 msgid "_Copy Link Address"
 msgstr ""
 
-#: shell/ev-window.c:6635
+#: shell/ev-window.c:6640
 msgid "_Save Image As…"
 msgstr ""
 
-#: shell/ev-window.c:6637
+#: shell/ev-window.c:6642
 msgid "Copy _Image"
 msgstr ""
 
-#: shell/ev-window.c:6639
+#: shell/ev-window.c:6644
 msgid "Annotation Properties…"
 msgstr ""
 
-#: shell/ev-window.c:6641
+#: shell/ev-window.c:6646
 msgid "Remove Annot…"
 msgstr ""
 
-#: shell/ev-window.c:6646
+#: shell/ev-window.c:6651
 msgid "_Open Attachment"
 msgstr ""
 
-#: shell/ev-window.c:6648
+#: shell/ev-window.c:6653
 msgid "_Save Attachment As…"
 msgstr ""
 
-#: shell/ev-window.c:6781
+#: shell/ev-window.c:6786
 msgid "Zoom"
 msgstr ""
 
-#: shell/ev-window.c:6783
+#: shell/ev-window.c:6788
 msgid "Adjust the zoom level"
 msgstr ""
 
-#: shell/ev-window.c:6793
+#: shell/ev-window.c:6798
 msgid "Navigation"
 msgstr ""
 
-#: shell/ev-window.c:6795
+#: shell/ev-window.c:6800
 msgid "Back"
 msgstr ""
 
-#: shell/ev-window.c:6798
+#: shell/ev-window.c:6803
 msgid "Move across visited pages"
 msgstr ""
 
-#: shell/ev-window.c:6829
+#: shell/ev-window.c:6834
 msgid "Send To"
 msgstr ""
 
-#: shell/ev-window.c:6835
+#: shell/ev-window.c:6840
 msgid "Previous"
 msgstr ""
 
-#: shell/ev-window.c:6840
+#: shell/ev-window.c:6845
 msgid "Next"
 msgstr ""
 
-#: shell/ev-window.c:6844
+#: shell/ev-window.c:6849
 msgid "Zoom In"
 msgstr ""
 
-#: shell/ev-window.c:6848
+#: shell/ev-window.c:6853
 msgid "Zoom Out"
 msgstr ""
 
-#: shell/ev-window.c:6852
+#: shell/ev-window.c:6857
 msgid "Reset Zoom"
 msgstr ""
 
-#: shell/ev-window.c:6996 shell/ev-window.c:7012
+#: shell/ev-window.c:7001 shell/ev-window.c:7017
 msgid "Unable to launch external application."
 msgstr ""
 
-#: shell/ev-window.c:7069
+#: shell/ev-window.c:7074
 msgid "Unable to open external link"
 msgstr ""
 
-#: shell/ev-window.c:7263
+#: shell/ev-window.c:7268
 msgid "Couldn't find appropriate format to save image"
 msgstr ""
 
-#: shell/ev-window.c:7295
+#: shell/ev-window.c:7300
 msgid "The image could not be saved."
 msgstr ""
 
-#: shell/ev-window.c:7327
+#: shell/ev-window.c:7332
 msgid "Save Image"
 msgstr ""
 
-#: shell/ev-window.c:7465
+#: shell/ev-window.c:7470
 msgid "Unable to open attachment"
 msgstr ""
 
-#: shell/ev-window.c:7521
+#: shell/ev-window.c:7526
 msgid "The attachment could not be saved."
 msgstr ""
 
-#: shell/ev-window.c:7566
+#: shell/ev-window.c:7571
 msgid "Save Attachment"
 msgstr ""
 
