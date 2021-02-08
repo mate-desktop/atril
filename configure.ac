@@ -74,9 +74,10 @@ dnl FIXME: remove this when required gtk+ >= 2.19.7
 DISABLE_DEPRECATED=
 AC_SUBST([DISABLE_DEPRECATED])
 
+AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
-AM_GNU_GETTEXT([external])
+AM_CONDITIONAL([USE_NLS], [test "x${USE_NLS}" = "xyes"])
 
 GETTEXT_PACKAGE=AC_PACKAGE_NAME
 AC_SUBST(GETTEXT_PACKAGE)
@@ -796,6 +797,7 @@ Configure summary:
     Gtk-Doc Support.....:    $enable_gtk_doc
     Debug mode..........:    $enable_debug
     GObj. Introspection.:    $enable_introspection
+    Use NLS.............:    ${USE_NLS}
     Tests...............:    $enable_tests
 
     PDF Backend.........:    $enable_pdf

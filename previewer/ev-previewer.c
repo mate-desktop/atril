@@ -102,10 +102,12 @@ main (gint argc, gchar **argv)
 	bindtextdomain (GETTEXT_PACKAGE, ev_get_locale_dir());
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
-#endif
+#endif /* ENABLE_NLS */
 
 	context = g_option_context_new (_("MATE Document Previewer"));
+#ifdef ENABLE_NLS
 	g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 	g_option_context_add_main_entries (context, goption_options, GETTEXT_PACKAGE);
 
 	g_option_context_add_group (context, gtk_get_option_group (TRUE));

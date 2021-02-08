@@ -38,8 +38,7 @@ ev_get_locale_dir (void)
 /**
  * ev_init:
  *
- * Initializes the atril document library, and binds the atril
- * gettext domain.
+ * Initializes the atril document library.
  *
  * You must call this before calling any other function in the atril
  * document library.
@@ -53,10 +52,6 @@ ev_init (void)
 
         if (ev_init_count++ > 0)
                 return have_backends;
-
-	/* set up translation catalog */
-	bindtextdomain (GETTEXT_PACKAGE, ev_get_locale_dir ());
-	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
         _ev_debug_init ();
         _ev_file_helpers_init ();

@@ -1,7 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS =       \
-    po          \
     cut-n-paste \
     data        \
     libdocument \
@@ -11,6 +10,10 @@ SUBDIRS =       \
     properties  \
     shell       \
     help
+
+if USE_NLS
+    SUBDIRS += po
+endif
 
 if ENABLE_TESTS
     SUBDIRS += test
@@ -38,7 +41,7 @@ header_DATA = \
     atril-view.h \
     $(NULL)
 
-# Applications 
+# Applications
 EXTRA_DIST =            \
     $(header_DATA)      \
     autogen.sh          \
