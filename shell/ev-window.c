@@ -3580,9 +3580,12 @@ ev_window_print_update_pending_jobs_message (EvWindow *ev_window,
 	}
 
 	if (n_jobs > 1) {
-		text = g_strdup_printf (ngettext ("%d pending job in queue",
-						  "%d pending jobs in queue",
-						  n_jobs - 1), n_jobs - 1);
+		gulong n = (gulong) (n_jobs - 1);
+		text = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+		                                     "%lu pending job in queue",
+		                                     "%lu pending jobs in queue",
+		                                     n),
+		                        n);
 	}
 
 	ev_message_area_set_secondary_text (EV_MESSAGE_AREA (ev_window->priv->message_area),
@@ -3979,12 +3982,13 @@ ev_window_check_print_queue (EvWindow *ev_window)
 		/* TRANS: the singular form is not really used as n_print_jobs > 1
 			  but some languages distinguish between different plurals forms,
 			  so the ngettext is needed. */
-		text = g_strdup_printf (ngettext("There is %d print job active. "
-						 "Wait until print finishes before closing?",
-						 "There are %d print jobs active. "
-						 "Wait until print finishes before closing?",
-						 n_print_jobs),
-					n_print_jobs);
+		text = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+		                                     "There is %d print job active. "
+		                                     "Wait until print finishes before closing?",
+		                                     "There are %d print jobs active. "
+		                                     "Wait until print finishes before closing?",
+		                                     (gulong) n_print_jobs),
+		                        n_print_jobs);
 	}
 
 	markup = g_strdup_printf ("<b>%s</b>", text);
@@ -5744,10 +5748,11 @@ ev_window_update_find_status_message (EvWindow *ev_window)
 			/* TRANS: Sometimes this could be better translated as
 			   "%d hit(s) on this page".  Therefore this string
 			   contains plural cases. */
-			message = g_strdup_printf (ngettext ("%d found on this page",
-							     "%d found on this page",
-							     n_results),
-						   n_results);
+			message = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+			                                        "%d found on this page",
+			                                        "%d found on this page",
+			                                        (gulong) n_results),
+			                           n_results);
 		} else {
 			message = g_strdup (_("Not found"));
 		}
