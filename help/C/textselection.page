@@ -1,0 +1,39 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="textselection">
+
+  <info>
+    <link type="guide" xref="index#faq"/>
+    <desc>When you copy text, the text that is pasted might be different from what you had selected.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Why didn't the text I selected copy properly?</title>
+
+
+<p>
+If you highlight and copy text from a document using Atril and then paste it into another
+application, the formatting may alter.  It may also contain different characters than the original selection. This often happens when copying text from a PDF document with multiple columns.
+</p>
+
+
+ <p>
+  This problem happens because of how some document formats handle text.
+  The actual text in the document is stored differently from the way it is
+  displayed. This may result in a copy that does not appear as expected.
+ </p>
+
+ <p>
+  Unfortunately, there is no real way of fixing this problem. Copying
+  less text at a time, or copying the text into a text editor (like <app>pluma</app>) may minimize the problem.
+  </p>
+
+</page>

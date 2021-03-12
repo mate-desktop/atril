@@ -1,0 +1,89 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="bookmarks">
+
+  <info>
+    <link type="guide" xref="index#annotations"/>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email its:translate="no">tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+    </credit>
+
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+    <desc>You can use annotations like bookmarks.</desc>
+  </info>
+
+<title>Bookmarks</title>
+
+  <p>You can add, rename and delete bookmarks using the <app>Document
+  Viewer</app>.</p>
+
+  <p>When you open a file, you should have a side pane on the left side of the window.
+  If you do not have a visible side pane, click
+  <guiseq><gui style="menuitem">View</gui>
+  <gui style="menuitem">Sidepane</gui></guiseq>, or press the <key>F9</key> key on the keyboard.</p>
+
+  <p>At the bottom of this side pane, select the <gui style="button">Bookmarks</gui>
+  from the drop-down list.</p>
+
+  <links type="section"/>
+
+<section id="create">
+  <title>Create a bookmark</title>
+
+  <steps>
+    <item>
+      <p>In the PDF document itself, navigate to the page to which you would
+      like to add the bookmark.</p>
+    </item>
+    <item>
+      <p>In the side pane, select <gui style="button">Bookmarks</gui>
+  from the drop-down list.</p>
+    </item>
+    <item>
+      <p>Press the <gui style="button">+</gui> button at the bottom of the side
+      pane. The default name of the bookmark you just added is the page number
+      of the document.</p>
+    </item>
+    <item>
+      <p>The bookmark is now listed in the bookmarks list.</p>
+    </item>
+  </steps>
+
+</section>
+
+<section id="rename">
+  <title>Rename a bookmark</title>
+
+  <steps>
+    <item><p>In the side pane, select <gui style="button">Bookmarks</gui>
+  from the drop-down list.</p></item>
+    <item><p>Select the bookmark in the side pane.</p></item>
+    <item><p>Click on the bookmark name.</p></item>
+    <item><p>Enter the new name.</p></item>
+    <item><p>Press <key>Enter</key>.</p></item>
+  </steps>
+
+</section>
+
+<section id="delete">
+  <title>Delete a bookmark</title>
+
+  <steps>
+   <item><p>In the side pane, select <gui style="button">Bookmarks</gui>
+  from the drop-down list.</p></item>
+   <item><p>Press the <gui style="button">-</gui> button at the bottom of the side pane.</p></item>
+  </steps>
+
+</section>
+
+</page>
