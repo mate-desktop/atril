@@ -1,0 +1,61 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="commandline">
+
+  <info>
+    <link type="guide" xref="index#advanced"/>
+    <title type="sort">Command line</title>
+    <desc>The <cmd>atril</cmd> command can open any number of files, at specific pages and in various modes.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="editor">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+<title>The command line</title>
+<p>
+To start<app>Atril</app> from the command line, type <cmd>atril</cmd>. You
+can open a specific file by typing the filename after the atril command:
+</p>
+
+<screen>atril file.pdf</screen>
+<p>
+You can open multiple files by typing the filenames after the atril command, separating the filenames by a space:
+</p>
+<screen>atril file1.pdf file2.pdf</screen>
+<p>
+Atril also supports the handling of files on the web.  For example, after the atril command you can give the location of a file on the web:
+</p>
+<section id="open">
+    <title>Opening a document at a specific page</title>
+    <p>
+    You can use<cmd>--page-label</cmd> switch to open a document at a
+    specific page. For example, to open a document to page 3, you would type:
+    </p>
+    <screen>atril --page-label=3 file.pdf</screen>
+    <p>
+    The page label should be in the same format as the page number displayed in
+   <app>Atril</app> header bar.
+    </p>
+</section>
+<section id="fullsreen">
+    <title>Opening a document in fullscreen mode</title>
+    <screen>atril --fullscreen file.pdf</screen>
+</section>
+<section id="presentation">
+    <title>Opening a document in presentation mode</title>
+    <screen>atril --presentation file.pdf</screen>
+</section>
+<section id="preview">
+    <title>Opening a document in preview mode</title>
+    <screen>atril --preview file.pdf</screen>
+</section>
+</page>

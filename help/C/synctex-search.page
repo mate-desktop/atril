@@ -1,0 +1,69 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="synctex-search">
+
+  <info>
+    <link type="guide" xref="index#synctex" group="fifth"/>
+    <desc>Flip between Atril and <app>pluma</app>.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Search with SyncTeX</title>
+<p>
+   After you <link xref="synctex-compile">compile your TeX file with SyncTeX</link>, you will be able to search.  SyncTeX even supports forward and backward search from an included file.
+</p>
+
+<section id="forward-search">
+    <title>Forward search: from TeX to PDF (from <app>pluma</app> to Atril)</title>
+     <p>
+     Forward search allows you to click on a specific section of TeX source code, and jump to the associated position in the PDF.  To perform forward search:
+ </p>
+<steps>
+<item>
+<p>
+  Click on a line in the TeX file.
+</p>
+</item>
+<item>
+<p>
+  In <app>pluma</app>, click <guiseq><gui>Tools</gui> <gui>Forward Search</gui></guiseq>. The corresponding line in the PDF will be outlined in red.
+</p>
+<p>
+Alternatively, you can press <keyseq><key>Ctrl</key><key>Alt</key><key>F</key></keyseq>, or <keyseq><key>Ctrl</key>left click</keyseq>. The corresponding line in the PDF will be outlined in red.
+</p>
+</item>
+</steps>
+<note>
+<p>
+   If the corresponding PDF file is not open, performing a forward search will open the PDF in Atril.
+</p>
+</note>
+<p>
+ If you have a complex project with several TeX files you can put
+</p>
+<code>% mainfile: mainfile.tex</code>
+<p>
+either in the first or last three lines of each included TeX file, and forward search will work. Backward search should always work, even if you don't add the modeline.
+</p>
+
+</section>
+
+<section id="backward-search">
+    <title>Backward search: from PDF to TeX (from Atril to <app>pluma</app>)</title>
+     <p>
+ Backward search allows you to click on a specific line in the PDF file, and jump to the associated line in the TeX source code.
+</p>
+<p>
+You can perform a backward search by pressing <keyseq><key>Ctrl</key>left click</keyseq> in Atril. The corresponding line in the TeX source code will be highlighted.
+     </p>
+</section>
+
+</page>

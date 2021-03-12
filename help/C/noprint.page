@@ -1,0 +1,76 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:if="http://projectmallard.org/if/1.0/"
+      type="topic" style="task"
+      id="noprint">
+
+  <info>
+    <link type="guide" xref="index#printing"/>
+    <desc>The author may have put printing restrictions on the document.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>I can't print a document</title>
+<section id="why">
+ <title>Possible reasons for printing failure</title>
+<p>A document might not print because of:</p>
+ <list>
+  <item><p>Printer problems or, </p></item>
+  <item><p>PDF printing restrictions.</p></item>
+ </list>
+</section>
+
+<section id="printer-problems">
+  <title>Printer problems</title>
+  <p>
+  There are many reasons why your printer might not be working. For example, it
+  could be out of paper or ink, or unplugged or damaged.
+  </p>
+  <p>
+  You might want to check your printer configuration in the Control Centre.
+  </p>
+</section>
+
+<section id="pdf-restrictions">
+  <title>PDF printing restrictions</title>
+  <p>
+  Some PDF documents have a setting which prevents you from printing them.
+  Authors can set this printing restriction when they write a document.
+  Atril overrides this restriction by default, but you may want to check
+  that it hasn't been disabled:
+  </p>
+
+  <note style="important">
+    <p>You need to have <app>dconf Editor</app> installed on your computer to
+    change this setting.</p>
+  </note>
+
+  <steps>
+    <item>
+      <p>Open <gui>dconf Editor</gui>.</p>
+    </item>
+    <item>
+      <p>Browse to <sys>/org/mate/atril</sys>.</p>
+    </item>
+    <item>
+      <p>
+      Make sure that the <gui>override-restrictions</gui> option is checked.
+      </p>
+    </item>
+    <item>
+      <p>
+      Go back to<app>Atril</app> and try to print the document again.
+      </p>
+    </item>
+  </steps>
+</section>
+
+</page>

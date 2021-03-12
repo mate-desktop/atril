@@ -1,0 +1,50 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="formats">
+
+  <info>
+    <link type="guide" xref="index#pres"/>
+    <link type="seealso" xref="convertpdf"/>
+    <link type="seealso" xref="convertPostScript"/>
+    <link type="seealso" xref="convertSVG"/>
+    <desc>PDF, PostScript and many others are.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Supported formats</title>
+
+<p>
+Atril supports the following formats:
+</p>
+<list>
+ <item><p>Comic Book Archive (.cbr and .cbz)</p></item>
+ <item><p>Device Independent file format (.dvi)</p></item>
+ <item><p>DjVu (.djvu, .djv)</p></item>
+ <item><p>Open XML Paper Specification (.oxps, .xps)</p></item>
+ <item><p>Portable Document Format (.pdf)</p></item>
+ <item><p>PostScript (.ps)</p></item>
+</list>
+<note>
+<p>
+In some Linux distributions, not all formats are supported by default, so you might not be able to view all the formats listed above.
+</p>
+<p>
+Support for a format is called a <em>backend</em>.  If you get the error "Unable to Open Document", you may wish to check whether the backend package for the format is installed.
+</p>
+</note>
+
+
+
+</page>

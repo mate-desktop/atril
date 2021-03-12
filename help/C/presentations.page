@@ -1,0 +1,82 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="presentations">
+
+  <info>
+    <link type="guide" xref="index#pres"/>
+    <desc>How to play presentations.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Anna Philips</name>
+      <email>anna.cs.au@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Presentations</title>
+<section id="start-presentation">
+<title>Starting a presentation</title>
+<p>To start a presentation:</p>
+<steps>
+ <item>
+  <p><link xref="opening">Open a file</link></p>
+ </item>
+ <item>
+   <p>Press <gui style="menuitem">View</gui> and select
+   <gui style="menuitem">Presentation</gui> (or press <key>F5</key>).</p>
+  <p>
+   The presentation will be displayed full screen.
+  </p>
+ </item>
+</steps>
+</section>
+<section id="present">
+ <title>
+  Moving through a presentation
+ </title>
+ <p>
+  Use the <key>spacebar</key>, <key>&#8594;</key>, <key>&#8595;</key>, or left mouse click to go to the next slide.
+ </p>
+ <p>
+  Use the <key>&#8592;</key>, <key>&#8593;</key> or right mouse click to go to the previous slide.
+ </p>
+ <note style = "tip">
+  <p>
+   You can also use the scroll wheel to move back and forth through the presentation.
+  </p>
+ </note>
+ <p>
+  Use <key>Esc</key> to exit the presentation.
+ </p>
+</section>
+
+<section id="blank-screen">
+<title>Showing a blank screen</title>
+<p>Press <key>B</key> or <key>.</key> to show a black screen.</p>
+<p>Press <key>W</key> to show a white screen.</p>
+<p>Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the
+slide.</p>
+</section>
+
+<section id="file-formats">
+<title>Supported presentation file formats</title>
+<p>
+The following file formats can be used for presentations:
+</p>
+<list>
+ <item><p>Comic Book Archive (.cbr and .cbz)</p></item>
+ <item><p>Device Independent file format (.dvi)</p></item>
+ <item><p>DjVu (.djvu, .djv)</p></item>
+ <item><p>Open Document Presentation (.odp)</p></item>
+ <item><p>Portable Document Format (.pdf)</p></item>
+ <item><p>PostScript (.ps)</p></item>
+</list>
+</section>
+</page>

@@ -1,0 +1,55 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="synctex-support">
+
+  <info>
+    <link type="guide" xref="index#synctex" group="second"/>
+    <desc>How to add support for SyncTeX.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Germán Poo-Caamaño</name>
+      <email>gpoo@mate.org</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Set-up SyncTeX</title>
+<p>
+The following packages need to be installed in order to add support for SyncTeX:
+</p>
+<list>
+  <item>
+    <p>
+      A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>.
+    </p>
+  </item>
+  <item>
+    <p>
+      A text editor with SyncTeX support, such as <app>pluma</app> with pluma-plugins installed.
+    </p>
+  </item>
+</list>
+
+<p>
+  In <app>pluma</app>, enable the SyncTeX Plugin:
+</p>
+<steps>
+   <item>
+    <p>
+     Click <guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Plugins</gui></guiseq> tab.
+    </p>
+   </item>
+   <item>
+    <p>
+     Check <gui>SyncTeX</gui>.
+    </p>
+   </item>
+</steps>
+</page>

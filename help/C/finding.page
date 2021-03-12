@@ -1,0 +1,64 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic" style="task"
+      id="finding">
+
+  <info>
+    <link type="guide" xref="index#reading"/>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email its:translate="no">philbull@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Anna Philips</name>
+      <email its:translate="no">anna.cs.au@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+    </credit>
+
+    <include href="legal-unported.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Search for a word or phrase in a document.</desc>
+  </info>
+
+  <title>Find text in a document</title>
+
+  <steps>
+    <item>
+      <p>Click
+      <guiseq><gui style="menuitem">Edit</gui>
+      <gui style="menuitem">Find</gui></guiseq> or
+      <keyseq><key>Ctrl</key><key>F</key></keyseq> or
+      <key>/</key> to display a
+      search box.</p>
+    </item>
+    <item>
+      <p>Start typing into the search box and the search will start
+      automatically.</p>
+    </item>
+    <item>
+      <p>Use the <gui>Find Previous</gui> and <gui>Find Next</gui> buttons to move to the previous
+      or next search result.</p>
+    </item>
+    <item>
+      <p>To hide the search bar, click anywhere in the window
+      again or press <key>Esc</key>.</p>
+    </item>
+  </steps>
+
+  <note style="tip">
+    <p>To filter words by case, you can press the <gui>Case Sensitive</gui>
+    button.</p>
+
+  </note>
+  <p>If the word or phrase that you searched for appears in the document at least once, you will be shown how many times the search result appears on the current page.</p>
+
+  <note>
+    <p>Only PDF documents are searchable. Some PDF documents are not
+    searchable because their text is encoded in the document as an image.</p>
+  </note>
+
+</page>
