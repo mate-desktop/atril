@@ -1,0 +1,76 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide" style="task"
+      id="annotations">
+
+  <info>
+    <link type="guide" xref="index#annotations"/>
+    <desc>How to create and customize annotations.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany@antopolski.com</email>
+    </credit>
+    <credit type="author">
+      <name>Andre Klapper</name>
+      <email>ak-47@gmx.net</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Adding annotations</title>
+<p>
+  An annotation is a note or comment added to a PDF document.  You can add annotations using Atril.
+</p>
+<p>
+  When you open a file, you should have a side pane on the left side of the window.
+  If you do not have a visible side pane, click
+  <guiseq><gui style="menuitem">View</gui>
+  <gui style="menuitem">Sidepane</gui></guiseq>
+  or press the <key>F9</key> key on the keyboard.
+</p>
+
+<p>
+ At the top of the side pane, the buttons in the Combo Box <gui>Thumbnails</gui>, <gui>Index</gui>, <gui>Annotations</gui> and <gui>Bookmarks</gui> let you choose what to display in the side pane. (Some options may not be available for some documents).
+</p>
+<p>
+ To create an annotation:
+</p>
+<steps>
+ <item>
+  <p>
+    Select the <gui style="button">Annotations</gui> button from the Combo Box:
+  </p>
+ </item>
+ <item>
+  <p>
+   Click on the <gui style="button">Add</gui> button to add a text annotation.
+  </p>
+ </item>
+ <item>
+  <p>
+   Click on the spot in the document window you would like to add the annotation to.  Your <em>annotation</em> window will open.
+  </p>
+ </item>
+ <item>
+  <p>
+    Type your text into the <em>annotation</em> window.
+  </p>
+   <note>
+    <p>
+     You can resize the note by clicking and holding the left mouse button on one of the bottom corners of the note, and moving it around.
+    </p>
+   </note>
+ </item>
+ <item>
+  <p>
+    Close the note by clicking on the <gui>x</gui> in the top corner of the note.
+  </p>
+ </item>
+</steps>
+
+
+</page>

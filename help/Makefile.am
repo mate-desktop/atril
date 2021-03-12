@@ -3,8 +3,9 @@ SUBDIRS = reference
 @YELP_HELP_RULES@
 
 HELP_ID = atril
-HELP_FILES = index.docbook legal.xml
-HELP_MEDIA = figures/atril_start_window.png
+HELP_FILES = index.page legal.xml
+HELP_MEDIA = figures/atril.png \
+	figures/atril-trail.png
 
 # Add linguas to be ignored, e.g. IGNORE_HELP_LINGUAS = ca de es fr
 IGNORE_HELP_LINGUAS =

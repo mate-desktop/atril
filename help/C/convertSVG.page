@@ -1,0 +1,55 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="convertSVG">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <desc>You can convert a document to SVG by "printing" it to a file.</desc>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Phil Bull</name>
+      <email>philbull@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Anna Philips</name>
+      <email>anna.cs.au@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+
+  </info>
+
+<title>Converting a document to SVG</title>
+<p>
+You can convert documents of the following format types to SVG files:
+</p>
+<list>
+ <item><p>Portable Document Format (.pdf)</p></item>
+</list>
+<p>
+This works by opening the file in <app>Atril</app> and "printing" the document as an SVG file.
+</p>
+<steps>
+    <item>
+      <p> Go to
+      <guiseq><gui style="menuitem">File</gui>
+      <gui style="menuitem">Print</gui></guiseq>
+      and
+      select <gui>Print</gui> or press
+      <keyseq><key>Ctrl</key><key>P</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>
+      Select <gui>Print to File</gui> and choose SVG as the
+      <gui>Output format</gui>.
+      </p>
+    </item>
+    <item>
+      <p>
+      Choose a name and folder in which to save the file, then click <gui>Print</gui>.
+      The SVG file will be saved in the folder you chose.
+      </p>
+    </item>
+</steps>
+</page>

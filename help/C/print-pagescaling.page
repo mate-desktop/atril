@@ -1,0 +1,57 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide" style="task"
+      id="print-pagescaling">
+
+  <info>
+    <link type="guide" xref="printing"/>
+    <revision pkgversion="1.25" version="0.1" date="2021-03-13" status="final"/>
+    <credit type="author">
+      <name>Ekaterina Gerasimova</name>
+      <email its:translate="no">kittykat3756@gmail.com</email>
+      <years>2015</years>
+    </credit>
+
+    <include href="legal-unported.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Shrink or expand the document to fit the paper size.</desc>
+  </info>
+
+  <title>Scale page for printing</title>
+
+  <p>If you want to change the paper size of your document (for example, print
+  a US Letter-sized PDF on A4 paper), you can change the printing format for
+  the document.</p>
+
+  <steps>
+    <item>
+      <p>Open the menu at the top-right of the window, then select
+      <gui style="menuitem">Print…</gui>.</p>
+    </item>
+    <item>
+      <p>Select the <gui style="tab">Page Handling</gui> tab.</p>
+    </item>
+    <item>
+      <p>Choose a <em>Page Scaling</em> from the drop-down list.</p>
+      <list>
+        <item>
+          <p><em>None</em>: do not perform page scaling.</p>
+        </item>
+        <item>
+          <p><em>Shrink to Printable Area</em>: document pages larger than the
+          printable area are reduced to fit the printable area of the printer
+          page.</p>
+        </item>
+        <item>
+          <p><em>Fit to Printable Area</em>: document pages are enlarged or
+          reduced as required to fit the printable area of the printer
+          page.</p>
+        </item>
+      </list>
+    </item>
+    <item>
+      <p>Click <gui>Print</gui> to print your document.</p>
+    </item>
+  </steps>
+
+</page>
