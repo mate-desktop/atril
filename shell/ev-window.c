@@ -6434,12 +6434,12 @@ ev_window_class_init (EvWindowClass *ev_window_class)
 
 /* Normal items */
 static const GtkActionEntry entries[] = {
-	{ "File", NULL, N_("_File") },
-        { "Edit", NULL, N_("_Edit") },
-	{ "View", NULL, N_("_View") },
-        { "Go", NULL, N_("_Go") },
-	{ "Bookmarks", NULL, N_("_Bookmarks") },
-	{ "Help", NULL, N_("_Help") },
+	{ "File",      NULL, N_("_File"),      NULL, NULL, NULL },
+	{ "Edit",      NULL, N_("_Edit"),      NULL, NULL, NULL },
+	{ "View",      NULL, N_("_View"),      NULL, NULL, NULL },
+	{ "Go",        NULL, N_("_Go"),        NULL, NULL, NULL },
+	{ "Bookmarks", NULL, N_("_Bookmarks"), NULL, NULL, NULL },
+	{ "Help",      NULL, N_("_Help"),      NULL, NULL, NULL },
 
 	/* File menu */
 	{ "FileOpen", "document-open", N_("_Open…"), "<control>O",
