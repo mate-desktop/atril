@@ -1,3 +1,15 @@
+### atril 1.24.1
+
+  * update translations
+  * epub backend: Escape link text to display & in index content
+  * Fix segfault on empty navMap
+  * build: silent build warnings for distcheck
+  * epub backend: build with WARN_CFLAGS instead WARN_CXXFLAGS
+  * build: set compiler warning level to yes
+  * Update authors
+  * thumbnailer: fix typo in the option description
+  * Use int64_t for g_date_time_to_unix even word size is 32-bit wide
+
 ### atril 1.24.0
 
   * update translations
