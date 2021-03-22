@@ -4,27 +4,29 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Hilding Kåstad <hilding.kastad@gmail.com>, 2018
-# Kristoffer Grundström <hamnisdude@gmail.com>, 2018
-# 6a42dd6e7ca9a813693714b0d9aa1ad8, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# crash <d.ubuntu@gmail.com>, 2018
-# Patrik Nilsson <asavartzeth@gmail.com>, 2018
-# cb445fb3dfd1fe3c2b9f58ac5638f478, 2018
-# Daniel Gullbransen <daniel@llama.nu>, 2018
-# Claes-Göran Nydahl <goldug@gmail.com>, 2018
-# Henrik Mattsson-Mårn <h@reglage.net>, 2019
-# Tobias Lekare <lekare@linux.com>, 2019
-# Philip Andersen <renegadevi@codeofmagi.net>, 2019
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Hilding Kåstad <hilding.kastad@gmail.com>, 2020
+# Kristoffer Grundström <lovaren@gmail.com>, 2020
+# 6a42dd6e7ca9a813693714b0d9aa1ad8, 2020
+# Henrik Mattsson-Mårn <h@reglage.net>, 2020
+# crash <d.ubuntu@gmail.com>, 2020
+# Patrik Nilsson <asavartzeth@gmail.com>, 2020
+# cb445fb3dfd1fe3c2b9f58ac5638f478, 2020
+# Daniel Gullbransen, 2020
+# Claes-Göran Nydahl <goldug@gmail.com>, 2020
+# Tobias Lekare <lekare@linux.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# eckeman <eckeman@zoho.com>, 2020
+# Philip Andersen <renegadevi@codeofmagi.net>, 2020
+# Luna Jernberg <bittin@cafe8bitar.se>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Philip Andersen <renegadevi@codeofmagi.net>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2020\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -488,6 +490,11 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril är en flersidig dokumentvisare. Den kan visa och skriva ut PostScript "
+"(PS), Encapsulated PostScript (EPS), DJVU, DVI, XPS och Portable Document "
+"Format (PDF) filer, samt arkivfiler av serietidningar. Om det stöds av "
+"dokumentet går det även att kopiera text till utklipp, använda "
+"länknavigering och bokmärken från innehållsförteckningen."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -495,6 +502,8 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril är en avgrening av Evince och är en del av skrivbordsmiljön MATE. Om "
+"du vill veta mer om MATE och Atril, besök gärna projektets hemsida."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -510,13 +519,13 @@ msgstr "Visa dokument med flera sidor"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;dokument;visare;pdf;dvi;ps;xps;tiff;pixbuf;djvu;serier;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1292,8 +1301,8 @@ msgstr "Kunde inte skicka nuvarande dokument"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] "%d jobb i kö"
-msgstr[1] "%d jobb i kö"
+msgstr[0] ""
+msgstr[1] ""
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1341,11 +1350,7 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
-"Det finns %d aktiva utskriftsjobb. Avvakta med stängning tills utskriften är"
-" slutförd?"
 msgstr[1] ""
-"Det finns %d aktiva utskriftsjobb. Avvakta med stängning tills utskriften är"
-" slutförd?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1383,14 +1388,17 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Dokumentvisare\n"
+"Använder %s (%s)\n"
+"och SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "MATE Documentation Team"
 
 #: shell/ev-window.c:5389
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "GNOME Documentation Team"
 
 #: shell/ev-window.c:5394
 msgid ""
@@ -1399,6 +1407,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril är fri programvara. Du kan distribuera det och/eller modifiera det "
+"under villkoren i GNU General Public License, publicerad av Free Software "
+"Foundation, antingen version 2 eller (om du så vill) någon senare version."
 
 #: shell/ev-window.c:5398
 msgid ""
@@ -1407,6 +1418,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril distribueras i hopp om att det ska vara användbart UTAN NÅGON SOM "
+"HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET eller "
+"LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License för "
+"ytterligare information"
 
 #: shell/ev-window.c:5402
 msgid ""
@@ -1414,16 +1429,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Du bör ha fått en kopia av GNU General Public License tillsammans med Atril."
+" Om inte, skriv till Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Om Atril Dokumentvisare"
 
 #: shell/ev-window.c:5448
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"© 1996–2009 Evince upphovsmännen \n"
+"© 2012–2017 MATE-utvecklarna"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1433,8 +1453,8 @@ msgstr "Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "%d hittades på denna sida"
-msgstr[1] "%d hittades på denna sida"
+msgstr[0] ""
+msgstr[1] ""
 
 #: shell/ev-window.c:5754
 msgid "Not found"

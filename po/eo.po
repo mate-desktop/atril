@@ -4,19 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Robin van der Vliet <info@robinvandervliet.nl>, 2018
-# Sergey Potapov <inactive+greyblake@transifex.com>, 2018
-# Michael Moroni <michaelmoroni@disroot.org>, 2018
-# fenris <fenris@folksprak.org>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Robin van der Vliet <info@robinvandervliet.nl>, 2020
+# 9a7df1f0a3f5f4de7c0fff80f6fa8bdc_64f795c <c0e0e9e34d0b00c2c039f4b25af104bd_91457>, 2020
+# Michael Moroni <michaelmoroni@disroot.org>, 2020
+# fenris <fenris@folksprak.org>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Warut Bunprasert <warutbun92@gmail.com>, 2020
+# kristjan <kristjan.schmidt@googlemail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: kristjan <kristjan.schmidt@googlemail.com>, 2020\n"
 "Language-Team: Esperanto (https://www.transifex.com/mate/teams/13566/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +112,7 @@ msgstr "DVI-dokumentoj"
 
 #: backend/epub/epub-document.c:649
 msgid "Not an ePub document"
-msgstr ""
+msgstr "Ne estas la dokumento ePub"
 
 #: backend/epub/epub-document.c:750
 msgid "could not retrieve filename"
@@ -118,7 +120,7 @@ msgstr ""
 
 #: backend/epub/epub-document.c:778
 msgid "could not open archive"
-msgstr ""
+msgstr "ne eblis malfermi arkivon"
 
 #: backend/epub/epub-document.c:794 backend/epub/epub-document.c:810
 msgid "could not extract archive"
@@ -519,7 +521,7 @@ msgstr ""
 
 #: data/org.mate.Atril.gschema.xml:17
 msgid "Automatically reload the document"
-msgstr ""
+msgstr "Aŭtomate reŝargi la dokumenton "
 
 #: data/org.mate.Atril.gschema.xml:18
 msgid "Whether the document is automatically reloaded on file change."
@@ -972,7 +974,7 @@ msgstr ""
 
 #: shell/ev-annotation-properties-dialog.c:167
 msgid "Color:"
-msgstr ""
+msgstr "Koloro:"
 
 #: shell/ev-annotation-properties-dialog.c:177
 msgid "Style:"
@@ -1093,7 +1095,7 @@ msgstr ""
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
-msgstr ""
+msgstr "Aldoni"
 
 #: shell/ev-sidebar-annotations.c:207
 msgid "Add text annotation"
@@ -1106,7 +1108,7 @@ msgstr ""
 #: shell/ev-sidebar-annotations.c:374
 #, c-format
 msgid "Page %d"
-msgstr ""
+msgstr "Paĝo %d"
 
 #: shell/ev-sidebar-annotations.c:515
 msgid "Annotations"
@@ -1140,7 +1142,7 @@ msgstr "_Aldoni"
 
 #: shell/ev-sidebar-bookmarks.c:480
 msgid "_Remove"
-msgstr ""
+msgstr "_Forigi"
 
 #: shell/ev-sidebar-bookmarks.c:606
 msgid "Bookmarks"
@@ -1294,7 +1296,7 @@ msgstr "Fermi _sen konservado"
 
 #: shell/ev-window.c:3908 shell/ev-window.c:6462
 msgid "_Save As…"
-msgstr ""
+msgstr "Kon_servi kiel..."
 
 #: shell/ev-window.c:3977
 #, c-format
@@ -1421,7 +1423,7 @@ msgstr ""
 
 #: shell/ev-window.c:6117
 msgid "_Enable"
-msgstr ""
+msgstr "Ŝ_alti"
 
 #: shell/ev-window.c:6120
 msgid ""
@@ -1480,7 +1482,7 @@ msgstr "Konservi kaj kopii la aktualan dokumenton"
 
 #: shell/ev-window.c:6465
 msgid "Send _To..."
-msgstr ""
+msgstr "Sendi _al..."
 
 #: shell/ev-window.c:6466
 msgid "Send current document by mail, instant message..."
@@ -1536,7 +1538,7 @@ msgstr ""
 
 #: shell/ev-window.c:6505
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Reagordi zomon"
 
 #: shell/ev-window.c:6508
 msgid "_Reload"
@@ -1576,7 +1578,7 @@ msgstr "_Aldoni legosignon"
 
 #: shell/ev-window.c:6534
 msgid "Add a bookmark for the current page"
-msgstr ""
+msgstr "Aldoni legosignon al la aktuala paĝo"
 
 #: shell/ev-window.c:6538
 msgid "_Contents"
@@ -1736,7 +1738,7 @@ msgstr "Moviĝi inter vizititaj paĝoj"
 
 #: shell/ev-window.c:6845
 msgid "Send To"
-msgstr ""
+msgstr "Sendi al"
 
 #: shell/ev-window.c:6851
 msgid "Previous"
@@ -1756,11 +1758,11 @@ msgstr "Malzomi"
 
 #: shell/ev-window.c:6868
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Reagordi zomon"
 
 #: shell/ev-window.c:7012 shell/ev-window.c:7028
 msgid "Unable to launch external application."
-msgstr ""
+msgstr "Ne eblas lanĉi ekteran aplikaĵon."
 
 #: shell/ev-window.c:7085
 msgid "Unable to open external link"

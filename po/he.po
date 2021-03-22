@@ -4,21 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2018
-# Edward Sawyer <saoded@gmail.com>, 2018
-# shy tzedaka <shaytzedaka123@gmail.com>, 2018
-# haxoc c11 <haxoc112@disroot.org>, 2018
-# James Walker (Ya'aqov), 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# בר בוכובזה <bokovzabox@gmail.com>, 2019
+# Edward Sawyer <saoded@gmail.com>, 2020
+# James Walker (Ya'aqov), 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# בר בוכובזה <bokovzabox@gmail.com>, 2020
+# haxoc c11 <haxoc112@disroot.org>, 2020
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2020
+# shy tzedaka <shaytzedaka123@gmail.com>, 2020
+# Omeritzics Games <omeritzicschwartz@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: בר בוכובזה <bokovzabox@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Omeritzics Games <omeritzicschwartz@gmail.com>, 2020\n"
 "Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgstr "סוג MIME לא ידוע"
 
 #: backend/comics/comics-document.c:567
 msgid "File corrupted"
-msgstr "File corrupted"
+msgstr "קובץ פגום"
 
 #: backend/comics/comics-document.c:580
 msgid "No files in archive"
@@ -87,7 +88,7 @@ msgstr "ספרי קומיקס"
 
 #: backend/djvu/djvu-document.c:173
 msgid "DjVu document has incorrect format"
-msgstr "פורמט המסמך DjVu לא תקין"
+msgstr "מתכונת המסמך DjVu לא תקינה"
 
 #: backend/djvu/djvu-document.c:250
 msgid ""
@@ -109,7 +110,7 @@ msgstr "מסמכי DVI"
 
 #: backend/epub/epub-document.c:649
 msgid "Not an ePub document"
-msgstr "זהו לא קובץ ePub"
+msgstr "אין זה קובץ ePub"
 
 #: backend/epub/epub-document.c:750
 msgid "could not retrieve filename"
@@ -141,7 +142,7 @@ msgstr "קובץ ה־ePub הוא שגוי או פגום"
 
 #: backend/epub/epub-document.c:884
 msgid "epub file is corrupt, no container"
-msgstr ""
+msgstr "קובץ ה־epub פגום, אין גוף מכיל"
 
 #: backend/epub/epub-document.c:969
 msgid "could not parse content manifest"
@@ -157,7 +158,7 @@ msgstr "לקובץ ה־epub אין שִדרה"
 
 #: backend/epub/epub-document.c:996
 msgid "epub file has no manifest"
-msgstr "לקובץ epub אין שטר מטען (מניפסט)"
+msgstr "לקובץ ה־epub אין שטר מטען (מניפסט)"
 
 #: backend/epub/epub-document.c:1082
 msgid "Could not set up document tree for loading, some files missing"
@@ -255,11 +256,11 @@ msgstr "מסמך לא תקין"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:4
 msgid "Tiff Documents"
-msgstr ""
+msgstr "מסמכי Tiff"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:5
 msgid "XPS Documents"
-msgstr ""
+msgstr "מסמכי XPS"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
@@ -467,7 +468,7 @@ msgstr "מציג המסמכים Atril"
 
 #: data/atril.appdata.xml.in:8
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr ""
+msgstr "מציג מסמכים לסביבת שולחן העבודה Mate"
 
 #: data/atril.appdata.xml.in:10
 msgid ""
@@ -1008,7 +1009,7 @@ msgstr "סגירה"
 #: shell/ev-keyring.c:86
 #, c-format
 msgid "Password for document %s"
-msgstr "ססמה עבור המסמך %s"
+msgstr "סיסמה עבור המסמך %s"
 
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:255
@@ -1023,7 +1024,7 @@ msgstr "פתיחת מסמך שהיה בשימוש לאחרונה"
 msgid ""
 "This document is locked and can only be read by entering the correct "
 "password."
-msgstr "מסמך זה נעול, ויש צורך בססמה כדי לקרוא אותו."
+msgstr "מסמך זה נעול, ויש צורך בסיסמה כדי לקרוא אותו."
 
 #: shell/ev-password-view.c:144 shell/ev-password-view.c:260
 msgid "_Unlock Document"
@@ -1031,29 +1032,29 @@ msgstr "_שחרור המסמך"
 
 #: shell/ev-password-view.c:252
 msgid "Enter password"
-msgstr "יש להזין ססמה"
+msgstr "יש להזין סיסמה"
 
 #: shell/ev-password-view.c:288
 #, c-format
 msgid ""
 "The document “%s” is locked and requires a password before it can be opened."
-msgstr "המסמך “%s” נעול ונדרשת ססמה כדי לפתוח אותו."
+msgstr "המסמך “%s” נעול ונדרשת סיסמה כדי לפתוח אותו."
 
 #: shell/ev-password-view.c:291
 msgid "Password required"
-msgstr "נדרשת ססמה"
+msgstr "נדרשת סיסמה"
 
 #: shell/ev-password-view.c:321
 msgid "_Password:"
-msgstr "ססמה:"
+msgstr "_סיסמה:"
 
 #: shell/ev-password-view.c:353
 msgid "Forget password _immediately"
-msgstr "ה_תעלמות מהססמה מידית"
+msgstr "ה_תעלמות מהסיסמה מידית"
 
 #: shell/ev-password-view.c:365
 msgid "Remember password until you _log out"
-msgstr "שמירת הססמה _עד לניתוק"
+msgstr "שמירת הסיסמה _עד לניתוק"
 
 #: shell/ev-password-view.c:377
 msgid "Remember _forever"
@@ -1302,7 +1303,7 @@ msgstr "_סגירה ללא שמירה"
 
 #: shell/ev-window.c:3908 shell/ev-window.c:6462
 msgid "_Save As…"
-msgstr ""
+msgstr "שמירה _בשם..."
 
 #: shell/ev-window.c:3977
 #, c-format
@@ -1358,11 +1359,11 @@ msgstr ""
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "צוות התיעוד של MATE"
 
 #: shell/ev-window.c:5389
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "צוות התיעוד של GNOME"
 
 #: shell/ev-window.c:5394
 msgid ""
@@ -1797,7 +1798,7 @@ msgstr "שמירת צרופה"
 #: shell/ev-window-title.c:170
 #, c-format
 msgid "%s — Password Required"
-msgstr "%s — נדרשת ססמה"
+msgstr "%s — נדרשת סיסמה"
 
 #: shell/ev-utils.c:38
 msgid "By extension"

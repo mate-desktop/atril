@@ -4,12 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alexander Jansen <bornxlo@gmail.com>, 2018
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Allan Nordhøy <epost@anotheragency.no>, 2019
-# b84df44fb72862b85bae7a669218c6c2, 2019
-# 87d96f43665dd9fb55eba4603e184cae, 2019
+# 87d96f43665dd9fb55eba4603e184cae, 2020
+# Alexander Jansen <bornxlo@gmail.com>, 2020
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2020
+# Kim Malmo <berencamlost@msn.com>, 2020
+# b84df44fb72862b85bae7a669218c6c2, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Allan Nordhøy <epost@anotheragency.no>, 2020
 # Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020
 # 
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2020\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -52,8 +53,7 @@ msgstr "Ikke en MIME-type for en tegneserie: %s"
 msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr ""
-"Kan ikke finne en passende kommando for å dekomprimere denne typen "
-"tegneserien"
+"Fant ikke en passende kommando som kan dekomprimere denne typen tegneserien"
 
 #: backend/comics/comics-document.c:540 backend/epub/epub-document.c:632
 #: libdocument/ev-document-factory.c:143 libdocument/ev-document-factory.c:286
@@ -174,7 +174,7 @@ msgstr "epub-dokumenter"
 
 #: backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
-msgstr "Dette arbeidet er Public Domain"
+msgstr "Dette verket er i offentlig eie (public domain)"
 
 #: backend/pdf/ev-poppler.cc:773 backend/pdf/ev-poppler.cc:779
 msgid "Yes"
@@ -502,7 +502,7 @@ msgstr ""
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
 msgid "Document Viewer"
-msgstr "Dokumentframviser"
+msgstr "Dokumentfremviser"
 
 #: data/atril.desktop.in.in:5
 msgid "View multi-page documents"
@@ -586,7 +586,7 @@ msgstr "Klarte ikke å skrive ut dokumentet"
 #: previewer/ev-previewer-window.c:240
 #, c-format
 msgid "The selected printer '%s' could not be found"
-msgstr "Valgt skriver, «%s», ble ikke funnet"
+msgstr "Fant ikke den valgte skriveren «%s»"
 
 #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6473
 msgid "_Close"
@@ -937,11 +937,11 @@ msgstr "Finn:"
 
 #: shell/eggfindbar.c:326
 msgid "Find previous occurrence of the search string"
-msgstr "Finn forrige oppføring av søkestrengen"
+msgstr "Finn forrige forekomst av søkestrengen"
 
 #: shell/eggfindbar.c:334
 msgid "Find next occurrence of the search string"
-msgstr "Finn neste oppøring av søkestrengen"
+msgstr "Finn neste forekomst av søkestrengen"
 
 #: shell/eggfindbar.c:341
 msgid "Case Sensitive"
@@ -1046,8 +1046,7 @@ msgid ""
 "This document is locked and can only be read by entering the correct "
 "password."
 msgstr ""
-"Dette dokumentet er låst og kan kun leses etter å ha oppgitt korrekt "
-"passord."
+"Dette dokumentet er låst og kan kun leses etter å ha oppgitt riktig passord."
 
 #: shell/ev-password-view.c:144 shell/ev-password-view.c:260
 msgid "_Unlock Document"
@@ -1093,7 +1092,7 @@ msgstr "Generelt"
 
 #: shell/ev-properties-dialog.c:104
 msgid "Fonts"
-msgstr "Skrifter"
+msgstr "Skrift"
 
 #: shell/ev-properties-dialog.c:117
 msgid "Document License"
@@ -1106,7 +1105,7 @@ msgstr "Skrifttype"
 #: shell/ev-properties-fonts.c:163
 #, c-format
 msgid "Gathering font information… %3d%%"
-msgstr "Samler informasjon om skrifter… %3d%%"
+msgstr "Samler informasjon om skrifter … %3d%%"
 
 #: shell/ev-properties-license.c:134
 msgid "Usage terms"
@@ -1460,8 +1459,8 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "Fant %d i denne siden"
-msgstr[1] "Fant %d i denne siden"
+msgstr[0] "Fant %d på denne siden"
+msgstr[1] "Fant %d på denne siden"
 
 #: shell/ev-window.c:5754
 msgid "Not found"
@@ -1596,7 +1595,7 @@ msgstr "Lagre nåværende innstillinger som _forvalg"
 
 #: shell/ev-window.c:6505
 msgid "_Reset Zoom"
-msgstr "Nullstill _zoom"
+msgstr "Nullstill forst_ørring"
 
 #: shell/ev-window.c:6508
 msgid "_Reload"
@@ -1644,7 +1643,7 @@ msgstr "_Innhold"
 
 #: shell/ev-window.c:6541
 msgid "_About"
-msgstr "Om"
+msgstr "_Om"
 
 #: shell/ev-window.c:6545
 msgid "Leave Fullscreen"
@@ -1752,7 +1751,7 @@ msgstr "_Kopier lenkeadressen"
 
 #: shell/ev-window.c:6651
 msgid "_Save Image As…"
-msgstr "Lagre bilde _som…"
+msgstr "Lagre bilde _som …"
 
 #: shell/ev-window.c:6653
 msgid "Copy _Image"

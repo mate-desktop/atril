@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alert Aleksandar, 2018
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019
+# Alert Aleksandar, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -253,11 +254,11 @@ msgstr "Неисправан документ"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:4
 msgid "Tiff Documents"
-msgstr ""
+msgstr "ТИФФ документи"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:5
 msgid "XPS Documents"
-msgstr ""
+msgstr "ИксПС документи"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
@@ -475,6 +476,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Атрил је једноставан вишестранични прегледач докумената. Може приказивати и "
+"штампати датотеке Постскрипта (PS), Угнежденог Постскрипта (EPS), DJVU-а, "
+"DVI-а, XPS-а и Формата преносивог документа (PDF), као и датотеке "
+"архивираних стрипова. Када документ то подржава, такође омогућава тражење "
+"текста, умножавање текста у оставу, навигацију хипертекста и обележиваче "
+"садржаја."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -482,6 +489,8 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Атрил је исцепак Евинса и део окружења Мејтове радне површи. Ако желите да "
+"знате више о Мејту и Атрилу, посетите матичну страницу пројекта."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -497,13 +506,13 @@ msgstr "Прегледајте вишестраничне документе"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "Мејт;документ;прегледач;пдф;дви;пс;икспс;тифф;пиксбуф;дјву;стрип;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -611,7 +620,7 @@ msgstr "Умањите документ"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6506
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Врати увеличање на 100%"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1321
 msgid "Print"
@@ -1281,9 +1290,9 @@ msgstr "Не могу да пошаљем текући документ"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d заказани посао је на чекању"
+msgstr[1] "%d заказана посла је на чекању"
+msgstr[2] "%d заказаних послова је на чекању"
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1317,7 +1326,7 @@ msgstr "Затвори _без чувања"
 
 #: shell/ev-window.c:3908 shell/ev-window.c:6462
 msgid "_Save As…"
-msgstr ""
+msgstr "_Сачувај као…"
 
 #: shell/ev-window.c:3977
 #, c-format
@@ -1331,8 +1340,14 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"Имате %d активно задужење за штампу. Да сачекам док се не заврши штампање "
+"пре затварања?"
 msgstr[1] ""
+"Имате %d активна задужења за штампу. Да сачекам док се не заврши штампање "
+"пре затварања?"
 msgstr[2] ""
+"Имате %d активних задужења за штампу. Да сачекам док се не заврши штампање "
+"пре затварања?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1370,14 +1385,17 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Прегледач докумената\n"
+"користећи „%s“ (%s)\n"
+"и SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
-msgstr "Тим документације Гнома"
+msgstr "Тим документације Мејта"
 
 #: shell/ev-window.c:5389
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "Тим Гномове документације"
 
 #: shell/ev-window.c:5394
 msgid ""
@@ -1386,6 +1404,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Атрил је слободан софтвер; можете га прослеђивати и/или мењати под условима "
+"Гнуове опште јавне лиценце коју је објавила Задужбина слободног софтвера; "
+"било верзије 2 лиценце или (по вашем избору) било које новије верзије."
 
 #: shell/ev-window.c:5398
 msgid ""
@@ -1394,6 +1415,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Атрил се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ ГАРАНЦИЈЕ; "
+"чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ"
+" НАМЕНИ. Погледајте ГНУ Општу јавну лиценцу за више детаља."
 
 #: shell/ev-window.c:5402
 msgid ""
@@ -1401,16 +1425,21 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Требали сте да добијете примерак Опште јавне лиценце уз Атрил; ако нисте, "
+"пишите Задужбини слободног софтвера на адресу: Free Software Foundation, "
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA"
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "О Атрилу прегледачу докумената"
 
 #: shell/ev-window.c:5448
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Ауторска права © 1996–2009 Аутори Евинса\n"
+"Ауторска права © 2012–2020 Програмери Мејта"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1420,9 +1449,9 @@ msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d погодак на овој страници"
+msgstr[1] "%d поготка на овој страници"
+msgstr[2] "%d погодака на овој страници"
 
 #: shell/ev-window.c:5754
 msgid "Not found"
@@ -1447,6 +1476,9 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Притисак тастера „F7“ ће укључити/искључити преглед уметком. Ова могућност "
+"поставља курсор унутар Интернет страница и омогућава вам да листате садржај "
+"помоћу тастатуре. Да ли желите да укључите преглед са уметком?"
 
 #: shell/ev-window.c:6125
 msgid "Don't show this message again"
@@ -1554,7 +1586,7 @@ msgstr "Сачувај подешавања као _основна"
 
 #: shell/ev-window.c:6505
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "Вра_ти увећање"
 
 #: shell/ev-window.c:6508
 msgid "_Reload"
@@ -1678,7 +1710,7 @@ msgstr "Покрените документ као презентацију"
 
 #: shell/ev-window.c:6631
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "Обрнуте _боје"
 
 #: shell/ev-window.c:6632
 msgid "Show page contents with the colors inverted"
@@ -1774,7 +1806,7 @@ msgstr "Умањите"
 
 #: shell/ev-window.c:6868
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Врати увећање"
 
 #: shell/ev-window.c:7012 shell/ev-window.c:7028
 msgid "Unable to launch external application."

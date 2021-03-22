@@ -4,12 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# zubr139, 2018
-# Oleh, 2018
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
-# Bohdan Kovalchuk <neostanniy@gmail.com>, 2018
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# zubr139, 2020
+# 8368efb4263ae7005ba7cc0c0f943bdd_16f29c1, 2020
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2020
+# Bohdan Kovalchuk <neostanniy@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Микола Ткач <chistomov@gmail.com>, 2020
 # 
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
 "Last-Translator: Микола Ткач <chistomov@gmail.com>, 2020\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -481,6 +482,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril — простий багатосторінковий переглядач документів. Він може показувати"
+" й друкувати файли PostScript (PS), Encapsulated PostScript (EPS), DJVU, "
+"DVI, XPS і Portable Document Format (PDF), а також архіви коміксів. Він "
+"також дозволяє шукати текст, копіювати його до буферу обміну, виконувати "
+"гіпертекстову навіґацію й встановлювати закладки вмісту, якщо це "
+"підтримується документом."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -1290,10 +1297,10 @@ msgstr "Неможливо відправити поточний докумен�
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] "%d очікуване завдання у черзі"
-msgstr[1] "%d очікувані завдання у черзі"
-msgstr[2] "%d очікуваних завдань у черзі"
-msgstr[3] "%d очікуваних завдань у черзі"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1341,13 +1348,9 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
-"Є %d активне задання друку. Зачекати до завершення друку перед закриттям?"
 msgstr[1] ""
-"Є %d активні завдання друку. Зачекати до завершення друку перед закриттям?"
 msgstr[2] ""
-"Є %d активних завдань друку. Зачекати до завершення друку перед закриттям?"
 msgstr[3] ""
-"Є %d активних завдань друку. Зачекати до завершення друку перед закриттям?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1386,6 +1389,10 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+" \n"
+"Перегляд документів\n"
+"Використовує %s (%s)\n"
+"та SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1414,10 +1421,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Atril розповсюджується зі сподіванням, що буде корисним, але без будь-яких "
-"запорук; навіть без неявної запоруки придатности до продажу чи придатности "
-"для КОНКРЕТНОЇ МЕТИ. Докладніше про це можна дізнатися з загальної публічної"
-" ліцензії GNU."
+"Atril розповсюджується зі сподіванням, що програма буде корисною, але без "
+"будь-яких запорук; навіть без неявної запоруки придатности до продажу чи "
+"придатности для КОНКРЕТНОЇ МЕТИ. Докладніше про це можна дізнатися з "
+"загальної публічної ліцензії GNU."
 
 #: shell/ev-window.c:5402
 msgid ""
@@ -1438,22 +1445,24 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Авторське право © 1996–2009 Автори Evince\n"
+"Авторське право © 2012–2020 Розробники MATE"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
-"Микола Ткач <znadibnyk@gmail.com>,\n"
+"Микола Ткач <Stuartlittle1970@gmail.com>,\n"
 "Oleh Tsyupka <myr4yk@gmail.com>"
 
 #: shell/ev-window.c:5749
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "%d знайти на цій сторінці"
-msgstr[1] "%d знайти на цих сторінках"
-msgstr[2] "%d знайти на цих сторінках"
-msgstr[3] "%d знайти на цих сторінках"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: shell/ev-window.c:5754
 msgid "Not found"
@@ -1480,7 +1489,7 @@ msgid ""
 msgstr ""
 "Натискання клавіші F7 вмикає або вимикає навігаційну клавішу. Ця функція "
 "розміщує рухомий вказівник у текстових сторінках, дозволяючи переміщатися та"
-" вибирати текст за допомогою набірниці. Увімкнути навігацію каретки?"
+" вибирати текст за допомогою клавіатури. Увімкнути навігацію каретки?"
 
 #: shell/ev-window.c:6125
 msgid "Don't show this message again"
@@ -1792,7 +1801,7 @@ msgstr "Надіслати до"
 
 #: shell/ev-window.c:6851
 msgid "Previous"
-msgstr "Попередня"
+msgstr "Попереднє"
 
 #: shell/ev-window.c:6856
 msgid "Next"

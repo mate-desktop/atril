@@ -4,22 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Marko Šterman <marko.chamillionaire@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Damir Jerovšek <jierro@windowslive.com>, 2018
-# worm <thewormhole@gmail.com>, 2018
-# Helena S <ele@tutamail.com>, 2018
-# Damir Mevkić <damir.mevkic@gmail.com>, 2019
-# jetomit <timotej.lazar@araneo.si>, 2019
-# Arnold Marko <arnold.marko@gmail.com>, 2019
+# Marko Šterman <marko.chamillionaire@gmail.com>, 2020
+# worm <thewormhole@gmail.com>, 2020
+# Damir Mevkić <damir.mevkic@gmail.com>, 2020
+# jetomit <timotej.lazar@araneo.si>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Damir Jerovšek <jierro@windowslive.com>, 2020
+# Arnold Marko <arnold.marko@gmail.com>, 2020
+# Helena S <ele@tutamail.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -511,7 +512,7 @@ msgstr "Poglejte večstranske dokumente"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr "atril"
+msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -1293,9 +1294,9 @@ msgstr "Trenutnega dokumenta ni bilo mogoče poslati"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] "%dopravilo v čakalni vrsti"
-msgstr[1] "%dopravili v čakalni vrsti"
-msgstr[2] "%dopravila v čakalni vrsti"
+msgstr[0] "%d opravilo v čakalni vrsti"
+msgstr[1] "%d opravili v čakalni vrsti"
+msgstr[2] "%d opravila v čakalni vrsti"
 msgstr[3] "%d opravil v čakalni vrsti"
 
 #: shell/ev-window.c:3697
@@ -1344,16 +1345,17 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
-"Tiska se %d dokument. Ali naj počakam, da se tiskanje konča, preden zaprem?"
+"V vrsti je %d pripravljen dokument za tiskanje. Ali želite počakati, da se "
+"natisnejo vsi dokumenti?"
 msgstr[1] ""
-"Tiskata se %d dokumenta. Ali naj počakam, da se tiskanje konča, preden "
-"zaprem?"
+"V vrsti sta %d pripravljena dokumenta za tiskanje. Ali želite počakati, da "
+"se natisnejo vsi dokumenti?"
 msgstr[2] ""
-"Tiskajo se %d dokumenti. Ali naj počakam, da se tiskanje konča, preden "
-"zaprem?"
+"V vrsti so %d pripravljeni dokument za tiskanje. Ali želite počakati, da se "
+"natisnejo vsi dokumenti?"
 msgstr[3] ""
-"Tiska se %d dokumentov. Ali naj počakam, da se tiskanje konča, preden "
-"zaprem?"
+"V vrsti je %d pripravljenih dokumentov za tiskanje. Ali želite počakati, da "
+"se natisnejo vsi dokumenti?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1391,6 +1393,9 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Pregledovalnik dokomentov\n"
+"Uporaba %s(%s)\n"
+"in SyncTeX (sinhronizacija)%s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1442,6 +1447,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Avtorske pravice © 1996–2009 Avtorji programa Evince\n"
+"Avtorske pravice © 2012–2020 Razvijalci okolja MATE"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1451,9 +1458,9 @@ msgstr "zasluge-prevajalcev"
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "%d zadetek na tej strani"
-msgstr[1] "%d zadetka na tej strani"
-msgstr[2] "%d zadetki na tej strani"
+msgstr[0] "%dzadetek na tej strani"
+msgstr[1] "%dzadetka na tej strani"
+msgstr[2] "%dzadetki na tej strani"
 msgstr[3] "%d zadetkov na tej strani"
 
 #: shell/ev-window.c:5754

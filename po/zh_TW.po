@@ -4,19 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Walter Cheuk <wwycheuk@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 趙惟倫 <bluebat@member.fsf.org>, 2018
-# Hsiu-Ming Chang <cges30901@gmail.com>, 2019
+# Walter Cheuk <wwycheuk@gmail.com>, 2020
+# 趙惟倫 <bluebat@member.fsf.org>, 2020
 # 黃柏諺 <s8321414@gmail.com>, 2020
+# Hsiu-Ming Chang <cges30901@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# byStarTW (pan93412) <pan93412@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: byStarTW (pan93412) <pan93412@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,12 +34,12 @@ msgstr "執行指令「%s」以將漫畫書解壓縮時發生錯誤：%s"
 #: backend/comics/comics-document.c:222
 #, c-format
 msgid "The command “%s” failed at decompressing the comic book."
-msgstr "將漫畫書解壓縮時指令「%s」失敗。"
+msgstr "指令「%s」解壓縮漫畫書失敗。"
 
 #: backend/comics/comics-document.c:231
 #, c-format
 msgid "The command “%s” did not end normally."
-msgstr "指令「%s」沒有正常的結束。"
+msgstr "指令「%s」不正常結束。"
 
 #: backend/comics/comics-document.c:459
 #, c-format
@@ -48,7 +49,7 @@ msgstr "並非漫畫書 MIME 類型：%s"
 #: backend/comics/comics-document.c:466
 msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
-msgstr "找不到合適的指令可將這個類型的漫畫書解壓縮"
+msgstr "找不到合適的指令以將這個類型的漫畫書解壓縮"
 
 #: backend/comics/comics-document.c:540 backend/epub/epub-document.c:632
 #: libdocument/ev-document-factory.c:143 libdocument/ev-document-factory.c:286
@@ -66,7 +67,7 @@ msgstr "壓縮檔中沒有檔案"
 #: backend/comics/comics-document.c:619
 #, c-format
 msgid "No images found in archive %s"
-msgstr "在文件 %s 中找不到圖片"
+msgstr "找不到任何存在封存檔 %s 的圖片。"
 
 #: backend/comics/comics-document.c:866 backend/epub/epub-document.c:1782
 #, c-format
@@ -90,7 +91,7 @@ msgstr "DjVu 文件有不正確的格式"
 msgid ""
 "The document is composed of several files. One or more of these files cannot"
 " be accessed."
-msgstr "此文件由多個檔案組成。其中一個或更多的檔案無法存取。"
+msgstr "此文件由多個檔案組成。其中一個或以上的檔案無法存取。"
 
 #: backend/djvu/djvudocument.atril-backend.desktop.in:4
 msgid "DjVu Documents"
@@ -110,23 +111,23 @@ msgstr "並非 ePub 文件"
 
 #: backend/epub/epub-document.c:750
 msgid "could not retrieve filename"
-msgstr "無法擷取檔案名稱"
+msgstr "無法取得檔案名稱"
 
 #: backend/epub/epub-document.c:778
 msgid "could not open archive"
-msgstr "無法開啟壓縮檔"
+msgstr "無法開啟封存檔"
 
 #: backend/epub/epub-document.c:794 backend/epub/epub-document.c:810
 msgid "could not extract archive"
-msgstr "無法解開壓縮檔"
+msgstr "無法解開封存檔"
 
 #: backend/epub/epub-document.c:842 backend/epub/epub-document.c:925
 msgid "could not retrieve container file"
-msgstr "無法擷取容器檔"
+msgstr "無法取得容器檔案"
 
 #: backend/epub/epub-document.c:854
 msgid "could not open container file"
-msgstr "無法開啟容器檔"
+msgstr "無法開啟容器檔案"
 
 #: backend/epub/epub-document.c:864
 msgid "container file is corrupt"
@@ -1267,7 +1268,7 @@ msgstr "無法傳送目前的文件"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] "在佇列中有 %d 個擱置中的工作"
+msgstr[0] ""
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1310,7 +1311,7 @@ msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
-msgstr[0] "有 %d 個活躍的列印工作。在關閉前等待列印完成嗎？"
+msgstr[0] ""
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1413,7 +1414,7 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "在此頁找到 %d 個"
+msgstr[0] ""
 
 #: shell/ev-window.c:5754
 msgid "Not found"

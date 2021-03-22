@@ -4,23 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Pavol Šimo <palo.simo@gmail.com>, 2018
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Juraj Oravec, 2018
-# Michal Slovák <michalslovak2@hotmail.com>, 2018
-# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018
-# Dušan Kazik <prescott66@gmail.com>, 2019
-# Tibor Kaputa <tibbbi2@gmail.com>, 2019
-# Vendelín Slezák <klaykap@yandex.com>, 2019
+# Vendelín Slezák <klaykap@yandex.com>, 2020
+# Pavol Šimo <palo.simo@gmail.com>, 2020
+# Michal Slovák <michalslovak2@hotmail.com>, 2020
+# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# 32442f8bc5cc500b59f161d95078a28a_525ed04, 2020
+# Tibor Kaputa <tibbbi2@gmail.com>, 2020
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2020
+# Dušan Kazik <prescott66@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Error launching the command “%s” in order to decompress the comic book: %s"
-msgstr "Pri rozbaľovaní (príkazom %s) knihy komiksov %s nastala chyba"
+msgstr "Chyba pri spustení príkazu „%s“ na rozbalenie knihy komiksov: „%s“"
 
 #: backend/comics/comics-document.c:222
 #, c-format
@@ -85,7 +85,7 @@ msgstr "Chyba %s"
 
 #: backend/comics/comicsdocument.atril-backend.desktop.in:4
 msgid "Comic Books"
-msgstr "Vtipné knihy"
+msgstr "Komiksové knihy"
 
 #: backend/djvu/djvu-document.c:173
 msgid "DjVu document has incorrect format"
@@ -261,11 +261,11 @@ msgstr "Neplatný dokument"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:4
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Dokumenty Tiff"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:5
 msgid "XPS Documents"
-msgstr ""
+msgstr "Dokumenty XPS"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
@@ -506,13 +506,13 @@ msgstr "Zobraziť viac-stranové dokumenty"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;dokument;prehliadač;pdf;dvi;ps;xps;tiff;pixbuf;djvu;komiksy;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -620,7 +620,7 @@ msgstr "Zmenšiť dokument"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6506
 msgid "Reset zoom to 100%"
-msgstr "Obnoviť zoom na 100 %"
+msgstr "Obnoviť priblíženie na 100 %"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1321
 msgid "Print"
@@ -1289,7 +1289,7 @@ msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
 msgstr[0] "%d čakajúca úloha vo fronte"
 msgstr[1] "%d čakajúce úlohy vo fronte"
-msgstr[2] "%d čakajúcich úloh vo fronte"
+msgstr[2] "%d čakajúcej úlohy vo fronte"
 msgstr[3] "%d čakajúcich úloh vo fronte"
 
 #: shell/ev-window.c:3697
@@ -1324,7 +1324,7 @@ msgstr "Zatvoriť _bez uloženia"
 
 #: shell/ev-window.c:3908 shell/ev-window.c:6462
 msgid "_Save As…"
-msgstr ""
+msgstr "_Uložiť ako…"
 
 #: shell/ev-window.c:3977
 #, c-format
@@ -1338,13 +1338,13 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
-"Je aktívna %d tlačová úloha. Čakať na dokončenie tlače pred zatvorením?"
+"Je aktívna %d tlačová úloha. Čakať pred zavretím na dokončenie tlače?"
 msgstr[1] ""
-"Sú aktívne %d tlačové úlohy. Čakať na dokončenie tlače pred zatvorením?"
+"Sú aktívne %d tlačové úlohy. Čakať pred zavretím na dokončenie tlače?"
 msgstr[2] ""
-"Je aktívnych %d tlačových úloh. Čakať na dokončenie tlače pred zatvorením?"
+"Je aktívnych %d tlačových úloh. Čakať pred zavretím na dokončenie tlače?"
 msgstr[3] ""
-"Je aktívnych %d tlačových úloh. Čakať na dokončenie tlače pred zatvorením?"
+"Je aktívnych %d tlačových úloh. Čakať pred zavretím na dokončenie tlače?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1415,13 +1415,15 @@ msgstr ""
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "O prehliadači dokumentov Atril"
 
 #: shell/ev-window.c:5448
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Autorské práva © 1996–2009 Autori aplikácie Evince\n"
+"Autorské práva © 2012–2020 Vývojári prostredia MATE"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1430,16 +1432,16 @@ msgstr ""
 "Marcel Telka <marcel@telka.sk>\n"
 "Tibor Kaputa <tibbbi2@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>\n"
-"Vendelín Slezák <klaykap@yandex.com>"
+"Ján Ďanovský <dagsoftware@yahoo.com>"
 
 #: shell/ev-window.c:5749
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "%d zhoda na tejto strane"
-msgstr[1] "%d zhody na tejto strane"
-msgstr[2] "%d zhod na tejto strane"
-msgstr[3] "%d zhod na tejto strane"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: shell/ev-window.c:5754
 msgid "Not found"
@@ -1483,7 +1485,7 @@ msgstr "_Upraviť"
 
 #: shell/ev-window.c:6450
 msgid "_View"
-msgstr "Z_obrazenie"
+msgstr "Z_obraziť"
 
 #: shell/ev-window.c:6451
 msgid "_Go"
@@ -1491,11 +1493,11 @@ msgstr "_Prejsť"
 
 #: shell/ev-window.c:6452
 msgid "_Bookmarks"
-msgstr "_Záložky"
+msgstr "Zá_ložky"
 
 #: shell/ev-window.c:6453
 msgid "_Help"
-msgstr "_Pomocník"
+msgstr "_Nápoveda"
 
 #: shell/ev-window.c:6456 shell/ev-window.c:6823
 msgid "_Open…"
@@ -1575,7 +1577,7 @@ msgstr "Uložiť aktuálne nastavenia ako pre_dvolené"
 
 #: shell/ev-window.c:6505
 msgid "_Reset Zoom"
-msgstr "_Obnoviť zoom"
+msgstr "_Obnoviť priblíženie"
 
 #: shell/ev-window.c:6508
 msgid "_Reload"
@@ -1619,7 +1621,7 @@ msgstr "Pridať záložku pre aktuálnu stranu"
 
 #: shell/ev-window.c:6538
 msgid "_Contents"
-msgstr "Ob_sah"
+msgstr "_Pomocník"
 
 #: shell/ev-window.c:6541
 msgid "_About"

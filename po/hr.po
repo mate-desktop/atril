@@ -4,22 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tomislav Krznar <tomislav.krznar@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Elvis M. Lukšić <meluksic@yahoo.com>, 2018
-# Tedo Vrbanec <tedo.vrbanec@gmail.com>, 2018
-# Ivan Branimir Škorić <ivanskrc123@gmail.com>, 2018
-# Andrej Ostrek <andrejostrek@gmail.com>, 2018
-# Ivica  Kolić <ikoli@yahoo.com>, 2019
-# stemd <stemdd@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Elvis M. Lukšić <meluksic@yahoo.com>, 2020
+# Tedo Vrbanec <tedo.vrbanec@gmail.com>, 2020
+# Ivan Branimir Škorić <ivanskrc123@gmail.com>, 2020
+# Andrej Ostrek <andrejostrek@gmail.com>, 2020
+# stemd <stemdd@gmail.com>, 2020
+# Ivica  Kolić <ikoli@yahoo.com>, 2020
+# Tomislav Krznar <tomislav.krznar@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: stemd <stemdd@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>, 2020\n"
 "Language-Team: Croatian (https://www.transifex.com/mate/teams/13566/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,7 +111,7 @@ msgstr "DVI dokumenti"
 
 #: backend/epub/epub-document.c:649
 msgid "Not an ePub document"
-msgstr "NIje  ePub dokument"
+msgstr "Nije  ePub dokument"
 
 #: backend/epub/epub-document.c:750
 msgid "could not retrieve filename"
@@ -171,7 +171,7 @@ msgstr "epub dokumenti"
 
 #: backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
-msgstr "Ovaj rad je u javnoj domeni"
+msgstr "Ovaj rad je javno vlasništvo"
 
 #: backend/pdf/ev-poppler.cc:773 backend/pdf/ev-poppler.cc:779
 msgid "Yes"
@@ -240,12 +240,12 @@ msgstr "Slike"
 #: backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
-msgstr "Neuspjelo očitavanje dokmenta “%s”"
+msgstr "Neuspjelo učitavanje dokumenta “%s”"
 
 #: backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr "Neuspjelo spremanje dokmenta “%s”"
+msgstr "Neuspjelo spremanje dokumenta “%s”"
 
 #: backend/ps/psdocument.atril-backend.desktop.in:5
 msgid "PostScript Documents"
@@ -266,17 +266,17 @@ msgstr "XPS dokumenti"
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
 msgid "Couldn't save attachment “%s”: %s"
-msgstr "NIsam mogao spremiti privitak “%s”: %s"
+msgstr "Nisam mogao spremiti privitak “%s”: %s"
 
 #: libdocument/ev-attachment.c:368
 #, c-format
 msgid "Couldn't open attachment “%s”: %s"
-msgstr "NIsam mogao otvoriti privitak “%s”: %s"
+msgstr "Nisam mogao otvoriti privitak “%s”: %s"
 
 #: libdocument/ev-attachment.c:403
 #, c-format
 msgid "Couldn't open attachment “%s”"
-msgstr "NIsam mogao otvoriti privitak “%s”"
+msgstr "Nisam mogao otvoriti privitak “%s”"
 
 #: libdocument/ev-document-factory.c:168
 #, c-format
@@ -299,7 +299,7 @@ msgstr "Neuspjelo kreiranje privremene datoteke: %s"
 #: libdocument/ev-file-helpers.c:309
 #, c-format
 msgid "Failed to create a temporary directory: %s"
-msgstr "Nesuspjelo kreiranje privremenog direktorija: %s"
+msgstr "Neuspjelo kreiranje privremenog direktorija: %s"
 
 #: cut-n-paste/smclient/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
@@ -389,11 +389,11 @@ msgstr "_Izbriši alatnu traku"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1478
 msgid "Remove the selected toolbar"
-msgstr "Ukloni odabranu altnu traku"
+msgstr "Ukloni odabranu alatnu traku"
 
 #: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:484
 msgid "Separator"
-msgstr "Rezdjelnik"
+msgstr "Razdjelnik"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6872
 msgid "Fit Page"
@@ -401,7 +401,7 @@ msgstr "Prikaz cijele stranice"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6876
 msgid "Fit Width"
-msgstr "Pristajanje dužine stranice"
+msgstr "Prikaz stranice punom širinom zaslona"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6512
 msgid "Expand Window to Fit"
@@ -470,7 +470,7 @@ msgstr "Atril preglednik dokumenata"
 
 #: data/atril.appdata.xml.in:8
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr "Preglednik dokumenata za MATE radno okruženje"
+msgstr "Preglednik dokumenata MATE radnoga okruženja"
 
 #: data/atril.appdata.xml.in:10
 msgid ""
@@ -480,6 +480,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril je jednostavan preglednih dokumenata od više stranica. Može prikazati "
+"i ispisati sljedeće vrste datoteka: PostScript (PS), enkapsulirani "
+"PostScript (EPS), DJVU, DVI, XPS i prenosivi oblik dokumenata (PDF). Također"
+" podržava i arhivske datoteke stripova. Ako dokument to podržava, moguće je "
+"pretraživanje teksta, kopiranje teksta u spremnik, navigacija putem "
+"hiperteksta i knjižne oznake u sadržaju."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -502,7 +508,7 @@ msgstr "Pogledaj višestranične dokumente"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -783,7 +789,7 @@ msgstr "Upozorenje"
 
 #: libview/ev-print-operation.c:1242
 msgid "Your print range selection does not include any pages"
-msgstr "Vaš raspon za ispis ne sadrži niti jednu stranicu"
+msgstr "Odabrani raspon ispisa ne sadrži niti jednu stranicu"
 
 #: libview/ev-print-operation.c:1900
 msgid "Page Scaling:"
@@ -861,11 +867,11 @@ msgstr "Pogled dokumenta"
 
 #: libview/ev-view-presentation.c:729
 msgid "Jump to page:"
-msgstr "Skoči na stranicu:"
+msgstr "Idi na stranicu:"
 
 #: libview/ev-view-presentation.c:1062
 msgid "End of presentation. Click to exit."
-msgstr "Kraj prezentacije.Klik za izlaz."
+msgstr "Kraj prezentacije. Klik za izlaz."
 
 #: libview/ev-view.c:1903
 msgid "Go to first page"
@@ -1076,7 +1082,7 @@ msgstr "Fontovi"
 
 #: shell/ev-properties-dialog.c:117
 msgid "Document License"
-msgstr "Licenca dokumenta"
+msgstr "Licencija dokumenta"
 
 #: shell/ev-properties-fonts.c:136
 msgid "Font"
@@ -1122,7 +1128,7 @@ msgstr "Bilješke"
 
 #: shell/ev-sidebar-attachments.c:693
 msgid "Attachments"
-msgstr "Privici"
+msgstr "Privitci"
 
 #: shell/ev-sidebar-bookmarks.c:155
 msgid "_Open Bookmark"
@@ -1657,15 +1663,15 @@ msgstr "_Kontinuirani prikaz"
 
 #: shell/ev-window.c:6611
 msgid "Show the entire document"
-msgstr "Pokaži cijeli dokument"
+msgstr "Prikaži cijeli dokument"
 
 #: shell/ev-window.c:6613
 msgid "_Dual"
-msgstr "_Dvije stranice po širini zaslona"
+msgstr "_Dvije stranice"
 
 #: shell/ev-window.c:6614
 msgid "Show two pages at once"
-msgstr "Pokaži dvije stranice odjednom"
+msgstr "Prikaži dvije stranice odjednom"
 
 #: shell/ev-window.c:6616
 msgid "_Odd pages left"

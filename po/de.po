@@ -4,27 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Xpistian <xpistianbecker2@web.de>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Moritz Bruder <muesli4@gmail.com>, 2018
-# Joachim Braun <joachim.braun@mail.ru>, 2018
-# Robert Orzanna <robert@orzanna.de>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# nautilusx, 2018
-# Tobias Bannert <tobannert@gmail.com>, 2019
-# Christian Spaan, 2019
-# Ettore Atalan <atalanttore@googlemail.com>, 2019
-# Julian Rüger <jr98@gmx.net>, 2019
-# Stefan Kadow <git17@ska67.de>, 2019
-# Marcel Artz <email@marcel-artz.de>, 2019
+# Xpistian <xpistianbecker2@web.de>, 2020
+# Marcel Artz <email@marcel-artz.de>, 2020
+# Ettore Atalan <atalanttore@googlemail.com>, 2020
+# Tobias Bannert <tobannert@gmail.com>, 2020
+# Joachim Braun <joachim.braun@mail.ru>, 2020
+# Robert Orzanna <robert@orzanna.de>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Julian Rüger <jr98@gmx.net>, 2020
+# Christian Spaan, 2020
+# nautilusx, 2020
+# Stefan Kadow <git17@ska67.de>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Lothar Serra Mari <rootfather@scummvm.org>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Marcel Artz <email@marcel-artz.de>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Lothar Serra Mari <rootfather@scummvm.org>, 2020\n"
 "Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -513,13 +514,13 @@ msgstr "Mehrseitige Dokumente anzeigen"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;Dokument;Betrachter,pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -730,7 +731,7 @@ msgstr "Papiergröße:"
 
 #: properties/ev-properties-view.c:193 libview/ev-print-operation.c:1906
 msgid "None"
-msgstr "Keine"
+msgstr "Kein"
 
 #: properties/ev-properties-view.c:221
 msgid "default:mm"
@@ -1304,8 +1305,8 @@ msgstr "Aktuelles Dokument konnte nicht gesendet werden"
 #, c-format
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
-msgstr[0] "%d ausstehender Auftrag in Warteschlange"
-msgstr[1] "%d ausstehende Aufträge in Warteschlange"
+msgstr[0] "%d ausstehender Auftrag in der Warteschlange"
+msgstr[1] "%d ausstehende Aufträge in der Warteschlange"
 
 #: shell/ev-window.c:3697
 #, c-format
@@ -1410,6 +1411,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril ist freie Software. Sie können es unter den Bedingungen der GNU "
+"General Public License, wie von der Free Software Foundation veröffentlicht,"
+" weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder"
+" (nach Ihrer Option) jeder späteren Version."
 
 #: shell/ev-window.c:5398
 msgid ""
@@ -1418,6 +1423,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Die Veröffentlichung von Atril erfolgt in der Hoffnung, daß es Ihnen von "
+"Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite "
+"Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. "
+"Details finden Sie in der GNU General Public License. "
 
 #: shell/ev-window.c:5402
 msgid ""
@@ -1425,6 +1434,9 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Sie sollten ein Exemplar der GNU General Public License zusammen mit diesem "
+"Programm erhalten haben. Falls nicht, schreiben Sie der Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
@@ -1435,6 +1447,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Copyright © 1996–2009 Die Evince-Autoren\n"
+"Copyright © 2012–2020 Die MATE-Entwickler"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1445,14 +1459,15 @@ msgstr ""
 "Hendrik Richter\n"
 "Christian Kirbach\n"
 "Wolfgang Stoeggl\n"
-"Tobias Bannert"
+"Tobias Bannert\n"
+"Marcel Artz"
 
 #: shell/ev-window.c:5749
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] "%d Mal auf dieser Seite gefunden"
-msgstr[1] "%d Mal auf dieser Seite gefunden"
+msgstr[0] ""
+msgstr[1] ""
 
 #: shell/ev-window.c:5754
 msgid "Not found"
@@ -1496,7 +1511,7 @@ msgstr "_Bearbeiten"
 
 #: shell/ev-window.c:6450
 msgid "_View"
-msgstr "_Ansicht"
+msgstr "_Darstellung"
 
 #: shell/ev-window.c:6451
 msgid "_Go"

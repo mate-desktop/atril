@@ -4,27 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Emre <fthsrh17@gmail.com>, 2018
-# Yasin Uysal <yasinuysal22@outlook.com>, 2018
-# Ali Orhun Akkirman <divercans@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Mehmet, 2018
-# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2018
-# ismet asan <ismetasan70@gmail.com>, 2018
-# Yaşar Çiv <yasarciv@protonmail.com>, 2018
-# tarakbumba <tarakbumba@gmail.com>, 2019
-# Sabri Ünal <yakushabb@gmail.com>, 2019
-# mauron, 2019
-# Cenk Yıldızlı <goncagul@national.shitposting.agency>, 2019
-# Butterfly <gokhanlnx@gmail.com>, 2019
+# Emre <fthsrh17@gmail.com>, 2020
+# Yasin Uysal <yasinuysal22@outlook.com>, 2020
+# Ali Orhun Akkirman <divercans@gmail.com>, 2020
+# Yaşar Çiv <yasarciv@protonmail.com>, 2020
+# tarakbumba <tarakbumba@gmail.com>, 2020
+# Mehmet, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2020
+# ismet asan <ismetasan70@gmail.com>, 2020
+# Sabri Ünal <yakushabb@gmail.com>, 2020
+# 0d1bdb3b9a0d4e8f77bc854af8bf3dfc_e6913f4, 2020
+# mauron, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Butterfly <gokhanlnx@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Butterfly <gokhanlnx@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: Butterfly <gokhanlnx@gmail.com>, 2020\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -357,15 +358,15 @@ msgstr "Ortam yönetici ID belirtin"
 
 #: cut-n-paste/smclient/eggsmclient.c:227
 msgid "ID"
-msgstr "Kimlik No"
+msgstr "No"
 
 #: cut-n-paste/smclient/eggsmclient.c:248
 msgid "Session management options:"
-msgstr "Oturum yönetimi seçenekleri:"
+msgstr "Ortam yönetimi seçenekleri:"
 
 #: cut-n-paste/smclient/eggsmclient.c:249
 msgid "Show session management options"
-msgstr "Oturumm yönetimi seçeneklerini göster"
+msgstr "Ortam yönetimi seçeneklerini göster"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:984
 #, c-format
@@ -485,6 +486,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril basit bir çok sayfalı belge görüntüleyicisidir. PostScript (PS), "
+"Encapsulated Postcript (EPS), DJVU, DVİ, XPS ve Taşınabilir Belge Biçimi "
+"(Portable Document Format, PDF) dosyaları ile çizgi roman arşiv dosyalarını "
+"görüntüleyebilir ve yazdırabilir. Belge tarafından desteklendiğinde metin "
+"aramaya, panoya metin kopyalamaya, bağlantı metni ile gezinmeye ve "
+"içindekiler favorilerini yönetmeye olanak sağlar."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -492,6 +499,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril, bir Evince çatallamasıdır ve MATE masaüstü ortamının bir parçasıdır. "
+"MATE ve Atril hakkında daha fazla bilgi edinmek isterseniz, lütfen projenin "
+"ana sayfasını ziyaret ediniz."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -507,13 +517,13 @@ msgstr "Çok sayfalı belgeleri göster"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;belge;görüntüleyici;pdf;ps;xps;tiff;pixbuf;djvu;çizgi;roman;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1338,11 +1348,11 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
-"Etkin %d yazdırma görevi var. Kapatmadan önce baskı tamamlanıncaya kadar "
-"beklensin mi?"
+"%d adet etkin yazdırma işi var. Kapatmadan önce yazdırma bitmesi beklensin "
+"mi?"
 msgstr[1] ""
-"Etkin %d yazdırma görevi var. Kapatmadan önce baskı tamamlanıncaya kadar "
-"beklensin mi?"
+"%d adet etkin yazdırma işi var. Kapatmadan önce yazdırma bitmesi beklensin "
+"mi?"
 
 #: shell/ev-window.c:3998
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1380,6 +1390,9 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Belge Görüntüleyici\n"
+"%s (%s) ve\n"
+"SyncTeX %s kullanıyor"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1417,9 +1430,9 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
-"GNU Genel Kamu Lisansını Atril ile birlikte almış olmalısınız; Aksi halde bu"
-" adrese yazılı olarak bildirin: Free Software Foundation, Inc., 51 Franklin "
-"Street, Fifth Floor, Boston, MA 02110-1301 USA"
+"GNU Genel Kamu Lisansınının bir kopyasını Atril ile birlikte almış "
+"olmalıydınız; aksi halde bu adrese yazılı olarak bildirin: Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: shell/ev-window.c:5447
 msgid "About Atril Document Viewer"
@@ -1430,6 +1443,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Tüm hakkı saklıdır © 1996–2009 Evince yazarları\n"
+"Tüm hakkı saklıdır © 2012–2020 MATE geliştiricileri "
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
@@ -1441,7 +1456,7 @@ msgstr ""
 "Muhammet Kara <muhammet.k@gmail.com>, 2011.\n"
 "MATE projesine katkıda bulunanlar:\n"
 "hsngrms <dead-bodies-everywhere@hotmail.com>, 2012\n"
-"mauron, 2012, 2013, 2014, 2018\n"
+"mauron, 2012, 2013, 2014, 2015, 2016, 2017, 2018\n"
 "Atilla Öntaş <tarakbumba@gmail.com>, 2014\n"
 "Emre FIRAT <emrefirat93@gmail.com>, 2013, 2014, 2015"
 

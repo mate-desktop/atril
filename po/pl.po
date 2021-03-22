@@ -4,34 +4,36 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wiktor Jezioro <wikjezioro@op.pl>, 2018
-# Piotr Drąg <piotrdrag@gmail.com>, 2018
-# Piotr Strębski <strebski@gmail.com>, 2018
-# Bogusław B. <penknife1@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Marcin Kralka <marcink96@gmail.com>, 2018
-# Kajetan Rosiak <roskaj@gmail.com>, 2018
-# Krzysztof Kokot <kokot300@gmail.com>, 2018
-# Beniamin Pawlus <kupwzywcu@o2.pl>, 2018
-# Jan Bońkowski <bonkowskijan@gmail.com>, 2018
-# Darek Witkowski, 2018
-# Lukasz Kaminski <inactive+elpikej@transifex.com>, 2018
-# Michal Kaptur <kaptur.michal@gmail.com>, 2018
-# Marcin Mikołajczak <me@mkljczk.pl>, 2018
-# Dominik Adrian Grzywak, 2018
-# emariusek <wisniowy@g.pl>, 2019
-# Paweł Bandura <gawelx@gmail.com>, 2019
-# Przemek P <ppjg@dami.pl>, 2019
-# Marcin GTriderXC <gtriderxc@yahoo.com>, 2019
-# pietrasagh <pietrasagh@gmail.com>, 2019
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Dominik Adrian Grzywak, 2020
+# emariusek <wisniowy@g.pl>, 2020
+# Wiktor Jezioro <wikjezioro@op.pl>, 2020
+# Piotr Drąg <piotrdrag@gmail.com>, 2020
+# Piotr Strębski <strebski@gmail.com>, 2020
+# Bogusław B. <penknife1@gmail.com>, 2020
+# Marcin Kralka <marcink96@gmail.com>, 2020
+# Kajetan Rosiak <roskaj@gmail.com>, 2020
+# Paweł Bandura <gawelx@gmail.com>, 2020
+# Krzysztof Kokot <kokot300@gmail.com>, 2020
+# Beniamin Pawlus <kupwzywcu@o2.pl>, 2020
+# Jan Bońkowski <bonkowskijan@gmail.com>, 2020
+# 161bd750cc8572440963b84e861d7973_ed8d533 <cbd6230593fe094da208a2693be73f8f_459393>, 2020
+# Michal Kaptur <kaptur.michal@gmail.com>, 2020
+# Marcin Mikołajczak <me@mkljczk.pl>, 2020
+# Przemek P <ppjg@dami.pl>, 2020
+# pietrasagh <kowalik.piotr@pm.me>, 2020
+# Daniel Tokarzewski <bezimo@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Darek Witkowski, 2020
+# No Ne, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: pietrasagh <pietrasagh@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: No Ne, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -420,7 +422,7 @@ msgstr "Dopasuj do szerokości"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6512
 msgid "Expand Window to Fit"
-msgstr "Rozszerz Okno w celu dopasowania"
+msgstr "Rozszerz okno w celu dopasowania"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
@@ -495,6 +497,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril jest prostą wielostronicową przeglądarką dokumentów. Może wyświetlać "
+"oraz drukować pliki PostScript (PS), Encapsulated PostScript (EPS), DJVU, "
+"DVI, XPS and Portable Document Format (PDF), jak również pliki archiwa "
+"komików. Gdy obsługiwany dokument na to pozwala, program umożliwia "
+"wyszukiwanie tekstu, kopiowanie do schowka, nawigację po hiperłączach, oraz "
+"nawigację po zakładkach."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -502,6 +510,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril jest forkiem Evince'a i częścią środowiska MATE Desktop Environment. "
+"Jeśli chcesz dowiedzieć się więcej o MATE i Atril, odwiedź stronę główną "
+"projektu."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -517,13 +528,13 @@ msgstr "Wyświetlanie wielostronicowych dokumentów"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;dokument;przeglądarka;pdf;dvi;ps;xps;tiff;pixbuf;djvu;komiksy;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -595,7 +606,7 @@ msgstr "Nie można odnaleźć wybranej drukarki \"%s\""
 
 #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6473
 msgid "_Close"
-msgstr "Za_mknij"
+msgstr "_Zamknij"
 
 #: previewer/ev-previewer-window.c:287 shell/ev-window.c:6519
 msgid "_Previous Page"
@@ -1301,7 +1312,7 @@ msgstr "Nie można było przesłać bieżącego dokumentu"
 msgid "%d pending job in queue"
 msgid_plural "%d pending jobs in queue"
 msgstr[0] "%d oczekujące zadanie w kolejce"
-msgstr[1] "%d oczekujących zadań w kolejce"
+msgstr[1] "%d oczekujące zadania w kolejce"
 msgstr[2] "%d oczekujących zadań w kolejce"
 msgstr[3] "%d oczekujących zadań w kolejce"
 
@@ -1354,7 +1365,7 @@ msgstr[0] ""
 "Jest %d aktywne zadanie wydruku. Poczekać na ukończenie wydruku przed "
 "zamknięciem?"
 msgstr[1] ""
-"Jest %d aktywnych zadań wydruku. Poczekać na ukończenie wydruku przed "
+"Są %d aktywne zadania wydruku. Poczekać na ukończenie wydruku przed "
 "zamknięciem?"
 msgstr[2] ""
 "Jest %d aktywnych zadań wydruku. Poczekać na ukończenie wydruku przed "
@@ -1398,10 +1409,13 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Przeglądarka dokumentów\n"
+"Używa %s (%s)\n"
+"oraz SyncTeX %s"
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
-msgstr "MATE Documentation Team"
+msgstr "Zespół dokumentacji MATE"
 
 #: shell/ev-window.c:5389
 msgid "GNOME Documentation Team"
@@ -1452,21 +1466,29 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Prawa autorskie © 1996–2009 autorzy Evince\n"
+"Prawa autorskie © 2012–2020 programiści MATE"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
 msgstr ""
-"Tłumacze środowiska MATE, 2013-2014, 2016-2018\n"
+"Tłumacze środowiska MATE, 2014-2020\n"
 "\n"
-"Tomasz Bielecki, 2005\n"
-"Paweł Marciniak, 2007"
+"Zbigniew Chyla, 2002-2003\n"
+"Artur Flinta, 2003-2005\n"
+"Wadim Dziedzic, 2007-2009\n"
+"Tomasz Dominikowski, 2008-2009\n"
+"Joanna Mazgaj, 2009\n"
+"Piotr Drąg, 2010\n"
+"Aviary.pl, 2007-2010\n"
+"Daniel Tokarzewski, 2020"
 
 #: shell/ev-window.c:5749
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
 msgstr[0] "%d wystąpienie na tej stronie"
-msgstr[1] "%d wystąpień na tej stronie"
+msgstr[1] "%d wystąpienia na tej stronie"
 msgstr[2] "%d wystąpień na tej stronie"
 msgstr[3] "%d wystąpień na tej stronie"
 
@@ -1508,7 +1530,7 @@ msgstr "_Plik"
 
 #: shell/ev-window.c:6449
 msgid "_Edit"
-msgstr "_Modyfikuj"
+msgstr "_Edycja"
 
 #: shell/ev-window.c:6450
 msgid "_View"
@@ -1524,7 +1546,7 @@ msgstr "_Zakładki"
 
 #: shell/ev-window.c:6453
 msgid "_Help"
-msgstr "P_omoc"
+msgstr "_Pomoc"
 
 #: shell/ev-window.c:6456 shell/ev-window.c:6823
 msgid "_Open…"
@@ -1616,7 +1638,7 @@ msgstr "Wczytuje ponownie bieżący dokument"
 
 #: shell/ev-window.c:6511
 msgid "_Expand Window to Fit"
-msgstr "_Rozszerz Okno w celu dopasowania"
+msgstr "_Rozszerz okno w celu dopasowania"
 
 #: shell/ev-window.c:6515
 msgid "Auto_scroll"

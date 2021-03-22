@@ -1,16 +1,17 @@
+# 
 # Translators:
-# Dušan Kazik <prescott66@gmail.com>, 2018
-# Tibor Kaputa <tibbbi2@gmail.com>, 2018
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Vendelín Slezák <klaykap@yandex.com>, 2018
+# Dušan Kazik <prescott66@gmail.com>, 2020
+# Tibor Kaputa <tibbbi2@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Vendelín Slezák <klaykap@yandex.com>, 2020
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2018\n"
+"PO-Revision-Date: 2020-02-14 11:21+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,12 +26,13 @@ msgstr ""
 "Stanislav Višňovský\n"
 "Marcel Telka <marcel@telka.sk>\n"
 "Tibor Kaputa <tibbbi2@gmail.com>\n"
-"Dušan Kazik <prescott66@gmail.com>"
+"Dušan Kazik <prescott66@gmail.com>\n"
+"Ján Ďanovský <dagsoftware@yahoo.com>"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:25
 msgid "Atril Document Viewer Manual"
-msgstr "Príručka Atril Prehliadač dokumentov"
+msgstr "Príručka Prehliadač dokumentov Atril"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:27
@@ -151,14 +153,14 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
 " POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"V ŽIADNOM PRÍPADE A ZA ŽIADNYCH PRÁVNYCH TEÓRIÍ, ČI ÚMYSELNÉ UBLÍŽENIE(AJ Z "
-"NEDBANLIVOSTI), ZMLUVOU, ALEBO INAK SA AUTOR, POČIATOČNÝ SPISOVATEĽ, VŠETCI "
-"PRISPIEVATELIA, DISTRIBÚTOR DOKUMENTU ALEBO JEHO MODIFIKOVANIEJ VERZIE, "
+"V ŽIADNOM PRÍPADE A ZA ŽIADNYCH PRÁVNYCH TEÓRIÍ, ČI ÚMYSELNÉ UBLÍŽENIE (AJ Z"
+" NEDBANLIVOSTI), ZMLUVOU, ALEBO INAK SA AUTOR, POČIATOČNÝ SPISOVATEĽ, VŠETCI"
+" PRISPIEVATELIA, DISTRIBÚTOR DOKUMENTU ALEBO JEHO MODIFIKOVANEJ VERZIE, "
 "ALEBO DODÁVATEĽ AKEJKOĽVEK STRANY,  NEZODPOVEDÁ ŽIADNEJ OSOBE ZA AKÉKOĽVEK "
 "PRIAME, NEPRIAME, ZVLÁŠTNE, NÁHODNÉ, ALEBO VYPLÝVAJÚCE ŠKODY AKÉHOKOĽVEK "
 "CHARAKTERU,  AKO OBMEDZENIA, STRATA DOBRÉHO MENA, PRERUŠENIE PRÁCE, ZLYHANIE"
 " POČÍTAČA ČI PORUCHY, ALEBO AKÉKOĽVEK INÉ ŠKODY A STRATY KTORÉ VZNIKNÚ, "
-"ALEBO SA BUDÚ VZŤAHOVAŤ NA POUŽÍVANIE TOHOTO DOKUMENTU ČI ZMENENÝCH VERZÍ "
+"ALEBO SA BUDÚ VZŤAHOVAŤ NA POUŽÍVANIE TOHOTO DOKUMENTU ČI ZMENENÝCH VERZIÍ "
 "TOHTO DOKUMENTU AJ KEĎ STRANA BOLA INFORMOVANÁ O MOŽNOSTI TAKÝCHTO ŠKÔD."
 
 #. (itstool) path: legalnotice/para
@@ -313,8 +315,8 @@ msgid ""
 "<application>Atril Document Viewer</application> starts when you open a "
 "document such as a PDF or PostScript file."
 msgstr ""
-"<application>Prehliadač dokumentov Atril</application> sa automaticky "
-"naštartuje keď chcete otvoriť PDF, PostScript a im podobné súbory."
+"<application>Prehliadač dokumentov Atril </application> sa automaticky "
+"naštartuje keď chcete otvoriť PDF súbor,  PostScript a im podobné súbory."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:161
@@ -367,10 +369,10 @@ msgid ""
 "</textobject>"
 msgstr ""
 "<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Ukazuje hlavné okno "
-"Prehliadača dokumentov Atril v ktorom je menu, panel nástrojov a zobrazovací"
-" priestor. V menu je na výber Súbor, Upraviť, Zobraziť, Ísť a "
-"Pomoc.</phrase> </textobject>"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Zobrazuje hlavné okno "
+"Prehliadača dokumentov Atril v ktorom je panel menu, panel nástrojov a "
+"zobrazovací priestor. Panel menu obsahuje podmenu Súbor, Upraviť, Zobraziť, "
+"Prejsť a Nápoveda.</phrase> </textobject>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:184
@@ -385,7 +387,7 @@ msgstr ""
 #. (itstool) path: entry/para
 #: C/index.docbook:188 C/index.docbook:236
 msgid "Menubar"
-msgstr "Ponuka"
+msgstr "Panel menu"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:190
@@ -393,8 +395,8 @@ msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
 msgstr ""
-"V ponuke nájdete všetky veci ktoré potrebujete na prácu s dokumentom v "
-"<application>Prehliadači dokumentov Atril </application>."
+"Menu v paneli menu obsahujú všetky príkazy, ktoré potrebujete na prácu s "
+"dokumentami v <application>Prehliadači dokumentov Atril</application>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:194
@@ -406,7 +408,7 @@ msgstr "Panel nástrojov"
 msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
-msgstr "V paneli nástrojov sú niektoré príkazy z Ponuky."
+msgstr "Panel nástrojov obsahuje len niektoré príkazy z menu."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:200
@@ -554,7 +556,7 @@ msgid ""
 "<guimenuitem>Next Page</guimenuitem> </menuchoice>."
 msgstr ""
 "Na zobrazenie nasledujúcej stránky vyberte <menuchoice> "
-"<guimenu>Ísť</guimenu> <guimenuitem>Ďaľšia stránka</guimenuitem> "
+"<guimenu>Prejsť</guimenu> <guimenuitem>Nasledujúca strana</guimenuitem> "
 "</menuchoice>."
 
 #. (itstool) path: listitem/para
@@ -564,7 +566,7 @@ msgid ""
 "<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
 msgstr ""
 "Na zobrazenie predchádzajúcej stránky vyberte <menuchoice> "
-"<guimenu>Ísť</guimenu> <guimenuitem>Predchodzia stránka</guimenuitem> "
+"<guimenu>Prejsť</guimenu> <guimenuitem>Predchádajúca strana</guimenuitem> "
 "</menuchoice>."
 
 #. (itstool) path: listitem/para
@@ -1389,7 +1391,7 @@ msgstr "<keycap>F1</keycap>"
 #. (itstool) path: entry/para
 #: C/index.docbook:775
 msgid "Help"
-msgstr "Pomocník"
+msgstr "Nápoveda"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:778

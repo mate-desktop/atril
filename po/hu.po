@@ -4,24 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Márton Fazekas <zseliakiraly@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# István Szőllősi <szollosi.istv4n@gmail.com>, 2018
-# Ferenc Teknős <teknos.ferenc@gmail.com>, 2018
-# Falu <info@falu.me>, 2018
-# Zoltán Rápolthy <real_zolee@hotmail.com>, 2018
-# Rezső Páder <rezso@rezso.net>, 2019
-# KAMI KAMI <kami911@gmail.com>, 2019
-# Balázs Meskó <meskobalazs@gmail.com>, 2019
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Márton Fazekas <zseliakiraly@gmail.com>, 2020
+# Rezső Páder <rezso@rezso.net>, 2020
+# István Szőllősi <szollosi.istv4n@gmail.com>, 2020
+# Ferenc Teknős <teknos.ferenc@gmail.com>, 2020
+# Falu <info@falu.me>, 2020
+# Balázs Meskó <meskobalazs@mailbox.org>, 2020
+# Zoltán Rápolthy <real_zolee@hotmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# KAMI KAMI <kami911@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.23.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 10:49+0100\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Balázs Meskó <meskobalazs@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:16+0000\n"
+"Last-Translator: KAMI KAMI <kami911@gmail.com>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -481,6 +482,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Az Atril egy egyszerű több-oldalas dokumentum megjelenítő. Meg tud "
+"jeleníteni és ki tud nyomtatni PostScript (PS), Encapsulated PostScript "
+"(EPS), DJVU, DVI, XPS és Portable Document Format (PDF) fájlokat, valamint "
+"képregény archívum fájlokat. Ha a dokumentum támogatja, lehetőség van szöveg"
+" keresésére, vágólapra másolásra, hypertext navigációra és tartalomjegyzék "
+"könyvjelzőkre."
 
 #: data/atril.appdata.xml.in:18
 msgid ""
@@ -488,6 +495,8 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Az Atril az Evince forkja, és a MATE asztali környezet része. További "
+"információk a MATE-ról és az Atril-ról a projekt honlapján találhatóak."
 
 #: data/atril.desktop.in.in:4 shell/ev-window.c:5375
 #: shell/ev-window-title.c:157
@@ -503,13 +512,14 @@ msgstr "Többoldalas dokumentumok megjelenítése"
 #: data/atril.desktop.in.in:12
 #: properties/libatril-properties-page.caja-extension.desktop.in:4
 msgid "atril"
-msgstr ""
+msgstr "atril"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 msgstr ""
+"MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;dokumentum;nézegető;megjelenítő;képregény;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1376,6 +1386,10 @@ msgid ""
 "Using %s (%s)\n"
 "and SyncTeX %s"
 msgstr ""
+"Dokumentum-megjelenítő\n"
+"%s (%s) és SyncTeX %s\n"
+"használatával\n"
+" "
 
 #: shell/ev-window.c:5388
 msgid "MATE Documentation Team"
@@ -1428,18 +1442,20 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Copyright © 1996–2009 Az Evince szerzői\n"
+"Copyright © 2012–2020 A MATE fejlesztői"
 
 #: shell/ev-window.c:5455
 msgid "translator-credits"
 msgstr ""
 "Dvornik László<dvornik at mate dot hu>\n"
 "Kelemen Gábor<kelemeng at mate dot hu>\n"
-"Tímár András<timar at mate dot hu>\n"
 "Kalman „KAMI” Szalai<kami911 at gmail dot com>\n"
 "Falu<info at falu dot me>\n"
 "Rezső Páder<rezso at rezso dot net>\n"
 "Zoltán Rápolthy<real_zolee at hotmail dot com>\n"
-"Meskó Balázs <mesko dot balazs at fsf dot hu>"
+"Meskó Balázs <mesko dot balazs at fsf dot hu>\n"
+"Tímár András<timar at mate dot hu>"
 
 #: shell/ev-window.c:5749
 #, c-format
