@@ -14,13 +14,14 @@
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # George Silva <algoritmo.linux@gmail.com>, 2019
 # gustavo s, 2020
+# Josué Teodoro Moreira <jteodomo@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-10 10:49+0100\n"
+"POT-Creation-Date: 2021-01-16 10:50+0100\n"
 "PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: gustavo s, 2020\n"
+"Last-Translator: Josué Teodoro Moreira <jteodomo@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +73,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:32
-msgid "<year>2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2021</year> <holder>MATE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -330,6 +331,11 @@ msgid ""
 " follows Freedesktop.org and MATE standards to provide integration with "
 "Desktop Environment."
 msgstr ""
+"O aplicativo de visualização de documentos Atril te permite visualizar "
+"documentos de vários formatos como arquivos PDF (Formato de Documento "
+"Portátil) e arquivos PostScript. O visualizador de documentos Atril segue os"
+" padrões de Freedesktop.org e MATE para providenciar  integração com o "
+"ambiente de área de trabalho."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:156
@@ -372,6 +378,8 @@ msgid ""
 "When you start <application>Atril Document Viewer</application>, the "
 "following window is displayed."
 msgstr ""
+"Quando você inicia o <application>visualizador de documentos "
+"Atril</application>, a seguinte janela é exibida."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:171
@@ -401,6 +409,11 @@ msgid ""
 "Menubar contains File, Edit, View, Go and Help menus. </phrase> "
 "</textobject>"
 msgstr ""
+"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
+"format=\"PNG\"/></imageobject><textobject><phrase>Mostra a janela principal "
+"do visualizador de documentos Atril. Contém barra de título, barra de menu, "
+"barra de ferramentas e área de exibição. A barra de menu contém menus de "
+"arquivo, editar, ver, ir e ajuda.</phrase></textobject>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:184
@@ -408,6 +421,8 @@ msgid ""
 "The <application>Atril Document Viewer</application> window contains the "
 "following elements:"
 msgstr ""
+"O </application>visualizador de documentos Atril</application> janela contém"
+" os seguintes elementos:"
 
 #. (itstool) path: varlistentry/term
 #. (itstool) path: entry/para
@@ -421,6 +436,9 @@ msgid ""
 "The menus on the menubar contain all of the commands that you need to work "
 "with documents in <application>Atril Document Viewer</application>."
 msgstr ""
+"Os menus na barra de menu contém todos os comandos que você necessita para "
+"trabalhar com documentos no <application>Visualizador de documentos "
+"Atril</application>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:194
@@ -433,6 +451,8 @@ msgid ""
 "The toolbar contains a subset of the commands that you can access from the "
 "menubar."
 msgstr ""
+"a barra de ferramentas contém um sub conjunto de todos os comandos que você "
+"pode acessar da barra de menu."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:200
@@ -465,6 +485,9 @@ msgid ""
 "Drag a file into the <application>Atril Document Viewer</application> window"
 " from another application such as a file manager."
 msgstr ""
+"Arraste um arquivo de outro aplicativo como o gerenciador de arquivos para "
+"dentro da janela do <application>visualizador de documentos Atril "
+"</application>. "
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:230
@@ -498,6 +521,9 @@ msgid ""
 "same action in several ways. For example, you can open a document in the "
 "following ways: <_:informaltable-1/>"
 msgstr ""
+"No <application>Visualizador de documentos Atril</application>, você pode "
+"realizar a mesma ação de várias formas. Por exemplo, você pode abrir um "
+"documento das seguintes maneiras: <_:informaltable-1/>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:248
@@ -534,6 +560,8 @@ msgid ""
 "In the <guilabel>Open Document</guilabel> dialog, select the file you want "
 "to open."
 msgstr ""
+"No janela de diálogo <guilabel>Abrir documento</guilabel>, selecione o "
+"arquivo que você quer abrir."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:273
@@ -542,6 +570,9 @@ msgid ""
 "Viewer</application> displays the name of the document in the titlebar of "
 "the window."
 msgstr ""
+"Clique <guibutton>abrir</guibutton>. O <application>Visualizador de "
+"documentos Atril</application>exibe o nome do documento na barra de título "
+"da janela."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:278
@@ -551,6 +582,10 @@ msgid ""
 "<application>Atril Document Viewer</application> opens each file in a new "
 "window."
 msgstr ""
+"Para abrir outro documento, escolha "
+"<menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>Novamente."
+" O <application>Visualizador de documentos Atril</application> abre cada "
+"arquivo em uma nova janela."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:281
@@ -559,6 +594,9 @@ msgid ""
 "Viewer</application> does not recognize, the application displays an error "
 "message."
 msgstr ""
+"Se você tentar abrir um documento com um formato que o "
+"<application>Visualizador de documentos Atril </application>não reconhece, o"
+" aplicativo exibe uma mensagem de erro."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:287
@@ -615,6 +653,9 @@ msgid ""
 "To view a particular page, enter the page number or page label in the text "
 "box on the toolbar, then press <keycap>Return</keycap>."
 msgstr ""
+"Para ver uma página em particular, insira o número da página ou o rótulo da "
+"página na caixa de texto na barra de ferramentas, depois pressione "
+"<keycap>Enter</keycap>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:314
@@ -627,6 +668,8 @@ msgid ""
 "To display the page contents that are not currently displayed in the display"
 " area, use the following methods:"
 msgstr ""
+"Para mostrar os conteúdos da página que não estão sendo mostrados na tela no"
+" momento, use os seguintes métodos:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:318
@@ -640,6 +683,9 @@ msgid ""
 "the document and then moving the mouse. For example, to scroll down the "
 "page, drag the display area upwards in the window."
 msgstr ""
+"Arraste a área da tela clicando com o botão do meio do mouse em qualquer "
+"lugar no documento e depois mova o mouse. Por exemplo, para descer a página,"
+" arraste a área da tela para cima na janela."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:324
@@ -657,6 +703,8 @@ msgid ""
 "You can use the following methods to resize a page in the <application>Atril"
 " Document Viewer</application> display area:"
 msgstr ""
+"Você pode usar os seguites métodos para redimensionar uma página na área de "
+"tela do <application>Visualizador de documentos Atril</application> "
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:337
@@ -664,6 +712,8 @@ msgid ""
 "To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
 "<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
 msgstr ""
+"Para aumentar o tamanho da página, escolha entre "
+"<menuchoice><guimenu>Ver</guimenu><guimenuitem>Ampliar</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:342
@@ -671,6 +721,9 @@ msgid ""
 "To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
 "<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
 msgstr ""
+"Para reduzir o tamanho da página, selecione "
+"<menuchoice><guimenu>Ver</guimenu><guimenuitem> "
+"Reduzir</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:347
@@ -708,7 +761,7 @@ msgstr "Para visualizar páginas ou estrutura do documento"
 #. (itstool) path: sect2/para
 #: C/index.docbook:366
 msgid "To view bookmarks or pages, perform the following steps:"
-msgstr ""
+msgstr "Para ver bookmarks ou páginas, siga os seguintes passos:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:370
@@ -738,6 +791,8 @@ msgid ""
 "Click on an entry to navigate to that location in the document. Click on a "
 "page to navigate to that page in the document."
 msgstr ""
+"Clique numa entrada para navegar para um lugar no documento. Clique em uma "
+"página para navegar para a mesma no documento."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:391
@@ -816,6 +871,7 @@ msgstr "<guilabel>Intervalo de impressão</guilabel>"
 msgid ""
 "Select one of the following options to determine how many pages to print:"
 msgstr ""
+"Selecione uma das seguintes opções para determinar quantas páginas imprimir."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:442
@@ -825,7 +881,7 @@ msgstr "<guilabel>Todos</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:443
 msgid "Select this option to print all of the pages in the document."
-msgstr ""
+msgstr "Selecionar essa opção para imprimir todas as páginas do documento."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:446
@@ -952,6 +1008,8 @@ msgid ""
 "Type the name of the command in the text box. Include all command-line "
 "arguments."
 msgstr ""
+"Escrever o nome do comando na caixa de texto. Incluir todos os argumentos de"
+" comando de linha."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:529
@@ -964,6 +1022,8 @@ msgid ""
 "This functionality is not supported in this version of <application>Atril "
 "Document Viewer</application>."
 msgstr ""
+"Essa funcionalidade não é suportada nessa versão do "
+"<application></application>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:535
