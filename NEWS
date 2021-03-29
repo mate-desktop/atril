@@ -1,3 +1,39 @@
+### atril 1.25.1
+
+  * update translations
+  * update help
+  * caja extension: Update copyright year
+  * dvi: use glib i18n macros
+  * i18n: use g_dngettext instead of ngettext
+  * build: allow users to disable gettext support (--disable-nls)
+  * build: Use PACKAGE_URL variable
+  * build: display package name and version in configure summary
+  * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
+  * Remove warning -Wtype-limits
+  * Update copyright to 2021
+  * Check whether the document page failed to render
+  * ps backend: do not silence the warnings when rendering the page
+  * Support non-X11 windowing systems
+  * build: remove legacy variable MATEICONDIR
+  * ev-document-factory: use g_list_free_full
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * epub backend: Escape link text to display & in index content
+  * ev-poppler: 'POPPLER_ACTION_RESET_FORM' not handled in switch [-Wswitch]
+  * ev-window: fix interval (guint milliseconds) in g_timeout_add_full
+  * epub-document: improve code-style
+  * ev-sidebar-attachments: do not add add a Gtk_Container
+  * check return value of xmlDocGetRootElement call if is NULL
+  * ev-pixbuf-cache: Remove -Wtype-limits warnings
+  * Remove unused macros
+  * Change spaces to tab
+  * Make sure attachments window fills entire sidebar
+  * ev-poppler: remove warning about no previous declaration
+  * Fix segfault on empty navMap
+  * ev-properties-dialog: Add on_notebook_scroll_event
+  * update mate-submodules
+  * Add compilation help
+  * build: Add ice & glib-2.0 modules in PKG_CHECK_MODULES(LIBEGG)
+
 ### atril 1.25.0
 
   * sync with transifex
