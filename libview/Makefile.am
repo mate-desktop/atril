@@ -141,7 +141,7 @@ AtrilView-$(EV_API_VERSION).gir: libatrilview.la Makefile $(INST_H_FILES) $(filt
 	--include=GdkPixbuf-2.0 \
 	--include=Gtk-3.0 \
 	--include=AtrilDocument-$(EV_API_VERSION) \
-	--library=atrilview \
+	--library=libatrilview.la \
 	--libtool="$(LIBTOOL)" \
 	--output $@ \
 	--pkg atril-document-$(EV_API_VERSION) \
