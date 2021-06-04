@@ -1787,6 +1787,14 @@ ev_window_set_document (EvWindow *ev_window, EvDocument *document)
 		ev_view_disconnect_handlers(EV_VIEW(ev_window->priv->view));
 		g_object_unref(ev_window->priv->view);
 		ev_window->priv->view = NULL;
+
+		if (ev_window->priv->webview == NULL)
+		{
+			ev_window->priv->webview = ev_web_view_new();
+			ev_web_view_set_model(EV_WEB_VIEW(ev_window->priv->webview),ev_window->priv->model);
+			ev_web_view_reload(EV_WEB_VIEW(ev_window->priv->webview));
+		}
+
 		gtk_container_add (GTK_CONTAINER (ev_window->priv->scrolled_window),
 				   ev_window->priv->webview);
 		gtk_widget_show(ev_window->priv->webview);
@@ -8089,9 +8097,8 @@ ev_window_init (EvWindow *ev_window)
 
 	ev_window->priv->view = ev_view_new ();
 
-#if ENABLE_EPUB /*The webview, we won't add it now but it will replace the atril-view if a web(epub) document is encountered.*/
-	ev_window->priv->webview = ev_web_view_new();
-	ev_web_view_set_model(EV_WEB_VIEW(ev_window->priv->webview),ev_window->priv->model);
+#if ENABLE_EPUB /* The webview is created in ev_window_set_document only if the document is a webdocument. */
+	ev_window->priv->webview = NULL;
 #endif
 	page_cache_mb = g_settings_get_uint (ev_window_ensure_settings (ev_window),
 					     GS_PAGE_CACHE_SIZE);
