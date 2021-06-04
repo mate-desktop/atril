@@ -72,6 +72,9 @@ void		ev_view_zoom		  (EvView         *view,
 /* Find */
 void            ev_view_find_next                 (EvView         *view);
 void            ev_view_find_previous             (EvView         *view);
+void            ev_view_find_set_result           (EvView         *view,
+						   gint            page,
+						   gint            result);
 void            ev_view_find_search_changed       (EvView         *view);
 void     	ev_view_find_set_highlight_search (EvView         *view,
 						   gboolean        value);

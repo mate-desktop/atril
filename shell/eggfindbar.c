@@ -39,7 +39,6 @@ struct _EggFindBarPrivate
   GtkWidget *find_entry;
   GtkWidget *status_label;
 
-  gulong set_focus_handler;
   guint case_sensitive : 1;
 };
 
@@ -90,9 +89,6 @@ egg_find_bar_class_init (EggFindBarClass *klass)
   object_class->get_property = egg_find_bar_get_property;
 
   object_class->finalize = egg_find_bar_finalize;
-
-  widget_class->show = egg_find_bar_show;
-  widget_class->hide = egg_find_bar_hide;
 
   widget_class->grab_focus = egg_find_bar_grab_focus;
 
@@ -254,27 +250,6 @@ entry_changed_callback (GtkEntry *entry,
   egg_find_bar_set_search_string (find_bar, text);
 
   g_free (text);
-}
-
-static void
-set_focus_cb (GtkWidget *window,
-	      GtkWidget *widget,
-	      EggFindBar *bar)
-{
-  GtkWidget *wbar = GTK_WIDGET (bar);
-
-  while (widget != NULL && widget != wbar)
-    {
-      widget = gtk_widget_get_parent (widget);
-    }
-
-  /* if widget == bar, the new focus widget is in the bar, so we
-   * don't deactivate.
-   */
-  if (widget != wbar)
-    {
-      g_signal_emit (bar, find_bar_signals[CLOSE], 0);
-    }
 }
 
 static void
@@ -441,46 +416,6 @@ egg_find_bar_get_property (GObject    *object,
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
     }
-}
-
-static void
-egg_find_bar_show (GtkWidget *widget)
-{
-  EggFindBar *bar = EGG_FIND_BAR (widget);
-  EggFindBarPrivate *priv = bar->priv;
-
-  GTK_WIDGET_CLASS (egg_find_bar_parent_class)->show (widget);
-
-  if (priv->set_focus_handler == 0)
-    {
-      GtkWidget *toplevel;
-
-      toplevel = gtk_widget_get_toplevel (widget);
-
-      priv->set_focus_handler =
-	g_signal_connect (toplevel, "set-focus",
-			  G_CALLBACK (set_focus_cb), bar);
-    }
-}
-
-static void
-egg_find_bar_hide (GtkWidget *widget)
-{
-  EggFindBar *bar = EGG_FIND_BAR (widget);
-  EggFindBarPrivate *priv = bar->priv;
-
-  if (priv->set_focus_handler != 0)
-    {
-      GtkWidget *toplevel;
-
-      toplevel = gtk_widget_get_toplevel (widget);
-
-      g_signal_handlers_disconnect_by_func
-	(toplevel, (void (*)) G_CALLBACK (set_focus_cb), bar);
-      priv->set_focus_handler = 0;
-    }
-
-  GTK_WIDGET_CLASS (egg_find_bar_parent_class)->hide (widget);
 }
 
 void
