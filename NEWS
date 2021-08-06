@@ -1,3 +1,14 @@
+### atril 1.26.0
+
+  * update translations
+  * ev-window.c: only create a EvWebView if needed
+  * ev-sidebar-links: Optimize reverse link lookup for a page
+  * introspection: Fix bogus --library arguments.
+  * libdocument: remove _ev_g_mkdtemp function
+  * epub: declaration of ‘uL’ shadows a previous local [-Wshadow]
+  * ev-window: missing initializer for a field of ‘GtkActionEntry’
+  * epub: fix typo
+
 ### atril 1.25.1
 
   * update translations
