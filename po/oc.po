@@ -8,7 +8,6 @@
 # Cédric Valmary <cvalmary@yahoo.fr>, 2019
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
 # Quentin PAGÈS, 2021
-# Wolfgang Ulbrich <mate@raveit.de>, 2021
 # 
 msgid ""
 msgstr ""
@@ -16,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2021-02-08 15:30+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2021\n"
+"Last-Translator: Quentin PAGÈS, 2021\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +94,7 @@ msgid ""
 "The document is composed of several files. One or more of these files cannot"
 " be accessed."
 msgstr ""
-"Lo document es de mantun fichièr. L’accès au n o mai d’un d’aqueles es "
+"Lo document es de mantun fichièr. L’accès a un o mai d’aqueles fichièr es "
 "impossible."
 
 #: backend/djvu/djvudocument.atril-backend.desktop.in:4
@@ -127,7 +126,7 @@ msgstr "recargament impossible de « %s »\n"
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr "%s : format DVI pas pres en cargar (version %u)\n"
+msgstr "%s : format DVI pas pres en carga (version %u)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
@@ -654,7 +653,7 @@ msgstr "Tipe de poliça desconegut"
 
 #: backend/pdf/ev-poppler.cc:947
 msgid "No name"
-msgstr "Pas de nom"
+msgstr "Cap de nom"
 
 #: backend/pdf/ev-poppler.cc:955
 msgid "Embedded subset"
@@ -662,7 +661,7 @@ msgstr "Sosensemble integrat"
 
 #: backend/pdf/ev-poppler.cc:957
 msgid "Embedded"
-msgstr "Enfichat"
+msgstr "Integrat"
 
 #: backend/pdf/ev-poppler.cc:959
 msgid "Not embedded"
@@ -1062,11 +1061,11 @@ msgstr "Reïnicializar lo zoom a 100%"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1319
 msgid "Print"
-msgstr "Estampar"
+msgstr "Imprimir"
 
 #: previewer/ev-previewer-window.c:305 shell/ev-window.c:6458
 msgid "Print this document"
-msgstr "Estampar lo document"
+msgstr "Imprimir lo document"
 
 #: previewer/ev-previewer-window.c:339 shell/ev-window.c:6614
 msgid "Fit Pa_ge"
@@ -1183,7 +1182,7 @@ msgstr "%s, païsatge (%s)"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:5
 msgid "Atril properties"
-msgstr "Propietats Atril"
+msgstr "Proprietats Atril"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:6
 msgid "Shows details for Atril documents"
@@ -1264,9 +1263,9 @@ msgstr ""
 "\n"
 "• Pas cap : las paginas son pas redimensionadas.\n"
 "\n"
-"• Reduire segon la zòna imprimibla : las paginas mai grandas que la zòna imprimibla son reduitas per correspondre a la zòna imprimibla de l'imprimenta.\n"
+"• Reduire segon la zòna imprimibla : las paginas mai grandas que la zòna imprimibla son reduchas per correspondre a la zòna imprimibla de l'imprimenta.\n"
 "\n"
-"• Ajustar segon la zòna imprimibla : las paginas son reduitas o agrandidas per fin de correspondre al pus juste a la zòna imprimibla de l'imprimenta.\n"
+"• Ajustar segon la zòna imprimibla : las paginas son reduchas o agrandidas per fin de correspondre al pus juste a la zòna imprimibla de l'imprimenta.\n"
 
 #: libview/ev-print-operation.c:1919
 msgid "Auto Rotate and Center"
@@ -1301,7 +1300,7 @@ msgstr "Gestion de las paginas"
 #: libview/ev-jobs.c:622
 #, c-format
 msgid "Failed to render page %d"
-msgstr "Compaginacion fracassada%d"
+msgstr "Compaginacion fracassada %d"
 
 #: libview/ev-jobs.c:1737
 #, c-format
@@ -1398,7 +1397,7 @@ msgstr "Respectar la cassa"
 
 #: shell/eggfindbar.c:344
 msgid "Toggle case sensitive search"
-msgstr "Bascula la sensibilitat a la cassa de la recèrca"
+msgstr "Bascular la sensibilitat a la cassa de la recèrca"
 
 #: shell/ev-annotation-properties-dialog.c:96
 msgid "Icon:"
@@ -1446,7 +1445,7 @@ msgstr "Desconegut"
 
 #: shell/ev-annotation-properties-dialog.c:136
 msgid "Annotation Properties"
-msgstr "Propietats d’anotacion"
+msgstr "Proprietats d’anotacion"
 
 #: shell/ev-annotation-properties-dialog.c:167
 msgid "Color:"
@@ -1479,7 +1478,7 @@ msgstr "Tampar"
 #: shell/ev-keyring.c:86
 #, c-format
 msgid "Password for document %s"
-msgstr "Mot de pas pel document %s"
+msgstr "Senhal pel document %s"
 
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:255
@@ -1527,15 +1526,15 @@ msgstr "Doblidar _immediatament lo senhal"
 
 #: shell/ev-password-view.c:365
 msgid "Remember password until you _log out"
-msgstr "Memorizar lo senhal fins a la tampadura de session"
+msgstr "Memorizar lo senhal fins a la _tampadura de session"
 
 #: shell/ev-password-view.c:377
 msgid "Remember _forever"
-msgstr "Memorizar per totjorn"
+msgstr "Memorizar per _totjorn"
 
 #: shell/ev-properties-dialog.c:120
 msgid "Properties"
-msgstr "Propietats"
+msgstr "Proprietats"
 
 #: shell/ev-properties-dialog.c:158
 msgid "General"
@@ -1568,7 +1567,7 @@ msgstr "Licéncia del tèxt"
 
 #: shell/ev-properties-license.c:146
 msgid "Further Information"
-msgstr "Mai d’informacion"
+msgstr "Mai d’informacions"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1824,7 +1823,7 @@ msgstr "Lo mòde presentacion es pas pres en carga pels documents ePub"
 
 #: shell/ev-window.c:4791
 msgid "Toolbar Editor"
-msgstr "_Barra d'edicion"
+msgstr "Barra d'edicion"
 
 #: shell/ev-window.c:5116
 msgid "There was an error displaying help"
@@ -1979,7 +1978,7 @@ msgstr "Dob_rir una còpia"
 
 #: shell/ev-window.c:6449
 msgid "Open a copy of the current document in a new window"
-msgstr "Dobrís una còpia del document actual dins una fenèstra novèla"
+msgstr "Dobrir una còpia del document actual dins una fenèstra novèla"
 
 #: shell/ev-window.c:6452
 msgid "Save a copy of the current document"
@@ -1987,7 +1986,7 @@ msgstr "Enregistrar una còpia del document actual"
 
 #: shell/ev-window.c:6454
 msgid "Send _To..."
-msgstr "Mandar a..."
+msgstr "Mandar _a..."
 
 #: shell/ev-window.c:6455
 msgid "Send current document by mail, instant message..."
@@ -2007,7 +2006,7 @@ msgstr "_Copiar"
 
 #: shell/ev-window.c:6468
 msgid "Select _All"
-msgstr "Seleccionar un fichièr"
+msgstr "_Tot seleccionar"
 
 #: shell/ev-window.c:6470
 msgid "_Find…"
@@ -2191,7 +2190,7 @@ msgstr "_Anar a"
 
 #: shell/ev-window.c:6636
 msgid "Open in New _Window"
-msgstr "Dobrir dins una fenèstra novèla"
+msgstr "Dobrir dins una _fenèstra novèla"
 
 #: shell/ev-window.c:6638
 msgid "_Copy Link Address"
@@ -2207,7 +2206,7 @@ msgstr "Copiar l'_imatge"
 
 #: shell/ev-window.c:6644
 msgid "Annotation Properties…"
-msgstr "Propietats d’anotacion…"
+msgstr "Proprietats d’anotacion…"
 
 #: shell/ev-window.c:6646
 msgid "Remove Annot…"
@@ -2219,7 +2218,7 @@ msgstr "_Dobrir lo fichièr junt"
 
 #: shell/ev-window.c:6653
 msgid "_Save Attachment As…"
-msgstr "Enregistrar lo fichièr junt jos…"
+msgstr "_Enregistrar lo fichièr junt jos…"
 
 #: shell/ev-window.c:6786
 msgid "Zoom"
@@ -2231,7 +2230,7 @@ msgstr "Ajustar lo nivèl de zoom"
 
 #: shell/ev-window.c:6798
 msgid "Navigation"
-msgstr "Navegacion"
+msgstr "Navigacion"
 
 #: shell/ev-window.c:6800
 msgid "Back"
@@ -2356,4 +2355,4 @@ msgstr "CADENA"
 
 #: shell/main.c:76
 msgid "[FILE…]"
-msgstr "[FICHIÈR...]"
+msgstr "[FICHIÈR…]"

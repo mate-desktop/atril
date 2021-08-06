@@ -1,16 +1,15 @@
 # 
 # Translators:
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# André Rivero Castillo <hab130@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 10:50+0100\n"
+"POT-Creation-Date: 2021-03-29 20:47+0200\n"
 "PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019\n"
+"Last-Translator: André Rivero Castillo <hab130@gmail.com>, 2021\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,1398 +24,3107 @@ msgstr ""
 "Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Proxecto Trasno <proxecto@trasno.gal>"
 
-#. (itstool) path: articleinfo/title
-#: C/index.docbook:25
-msgid "Atril Document Viewer Manual"
-msgstr "Manual do visor de documentos Atril"
+#. (itstool) path: info/desc
+#: C/annotation-properties.page:7
+msgid "How to customize the author, color, style or icon of an annotation."
+msgstr ""
 
-#. (itstool) path: abstract/para
-#: C/index.docbook:27
+#. (itstool) path: credit/name
+#: C/annotation-properties.page:10 C/annotations-disabled.page:10
+#: C/annotations-navigate.page:10 C/annotations.page:11
+#: C/annotations-save.page:10 C/bookmarks.page:10 C/bug-filing.page:10
+#: C/commandline.page:15 C/develop.page:10 C/documentation.page:9
+#: C/duplex-npages.page:11 C/forms.page:10 C/forms-saving.page:12
+#: C/index.page:16 C/introduction.page:10 C/openerror.page:11
+#: C/opening.page:12 C/print-booklet.page:11 C/shortcuts.page:15
+#: C/singlesided-npages.page:11 C/synctex-beamer.page:10
+#: C/synctex-compile.page:10 C/synctex-editors.page:10 C/synctex.page:10
+#: C/synctex-search.page:10 C/synctex-support.page:10 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr ""
+
+#. (itstool) path: license/p
+#: C/annotation-properties.page:14 C/annotations-disabled.page:14
+#: C/annotations-navigate.page:14 C/annotations.page:19
+#: C/annotations-save.page:18 C/bookmarks.page:19 C/bug-filing.page:14
+#: C/commandline.page:19 C/convertpdf.page:18 C/convertPostScript.page:18
+#: C/convertSVG.page:18 C/default-settings.page:14 C/develop.page:15
+#: C/documentation.page:14 C/duplex-npages.page:15 C/editing.page:14
+#: C/formats.page:21 C/forms.page:14 C/forms-saving.page:20
+#: C/invert-colors.page:21 C/noprint.page:16 C/openerror.page:15
+#: C/presentations.page:18 C/print-2sided.page:15 C/print-booklet.page:15
+#: C/printing.page:20 C/reload.page:17 C/shortcuts.page:40
+#: C/singlesided-npages.page:15 C/synctex-beamer.page:14
+#: C/synctex-compile.page:14 C/synctex-editors.page:14 C/synctex.page:14
+#: C/synctex-search.page:14 C/synctex-support.page:18 C/textselection.page:14
+#: C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/annotation-properties.page:18
+msgid "Customize annotations"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotation-properties.page:22
+msgid "Right click on the annotation icon in the document."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotation-properties.page:27
+msgid "Select <gui>Annotation Properties…</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotation-properties.page:32
 msgid ""
-"The Atril Document Viewer application enables you to view documents of "
-"various formats like Portable Document Format (PDF) files and PostScript "
-"files"
-msgstr ""
-"O visor de documentos Atril permítelle ver documentos de varios formatos "
-"coma ficheiros Portable Document Fromat (PDF) ou ficheiros PostScript"
-
-#. (itstool) path: articleinfo/copyright
-#: C/index.docbook:32
-msgid "<year>2021</year> <holder>MATE Documentation Project</holder>"
+"In the <gui>Annotation Properties</gui> window, you can change the author, "
+"color, style and icon of your note."
 msgstr ""
 
-#. (itstool) path: articleinfo/copyright
-#: C/index.docbook:36
-msgid "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
-msgstr "<year>2005</year> <holder>Nickolay V. Shmyrev</holder>"
-
-#. (itstool) path: articleinfo/copyright
-#: C/index.docbook:40
-msgid "<year>2004</year> <holder>Sun Microsystems</holder>"
-msgstr "<year>2004</year> <holder>Sun Microsystems</holder>"
-
-#. (itstool) path: publisher/publishername
-#. (itstool) path: revdescription/para
-#: C/index.docbook:53 C/index.docbook:104
-msgid "MATE Documentation Project"
-msgstr "Proxecto de documentación do MATE"
-
-#. (itstool) path: publisher/publishername
-#. (itstool) path: revdescription/para
-#: C/index.docbook:56 C/index.docbook:113 C/index.docbook:121
-msgid "GNOME Documentation Project"
-msgstr "Proxecto de documentación do GNOME"
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:2
+#. (itstool) path: note/p
+#: C/annotation-properties.page:36
 msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"The annotation properties will be applied to the note for which you made the"
+" changes only. Each note can have a different set of properties."
 msgstr ""
-"Autorízase a copia, distribución e/ou modificación deste documento baixo os "
-"termos da Licenza de Documentación Libre de GNU (GFDL), versión 1.1 ou "
-"calquera outra versión posterior publicada pola Free Software Foundation sen"
-" seccións invariantes, sen textos de cuberta e sen textos de cuberta "
-"traseira. Pode atopar unha copia da GFDL nesta <ulink type=\"help\" "
-"url=\"help:fdl\">ligazón</ulink> ou no ficheiro COPYING-DOCS distribuído con"
-" este manual."
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:12 C/legal.xml:12
+#. (itstool) path: section/title
+#: C/annotation-properties.page:45
+msgid "Can I permanently change the default annotation properties?"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/annotation-properties.page:46
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
+"The default annotation properties (author, colour, style and icon) can only "
+"be changed on a particular note as stated above. So if you want all icons "
+"for your notes to be <gui>red</gui> instead of <gui>yellow</gui>, you will "
+"have to change the default from <gui>yellow</gui> to <gui>red</gui> "
+"individually on each note. There is no way to save different default "
+"settings for annotation properties, at this time."
 msgstr ""
-"Este manual forma parte da colección de manuais MATE distribuídos baixo a "
-"licenza GFDL. Se quere distribuír este manual separadamente da colección, "
-"pode facelo engadindo unha copia da licenza ao manual, tal e como está "
-"descrito na sección 6 da licenza."
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:19 C/legal.xml:19
+#. (itstool) path: credit/name
+#: C/annotations-delete.page:11
+msgid "David King"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/annotations-delete.page:17
+msgid "Delete annotations from a PDF document."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/annotations-delete.page:20
+msgid "Removing annotations"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/annotations-delete.page:22
 msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
+"An annotation is a note or comment added to a PDF document. You can remove "
+"annotations that you or other people have added."
 msgstr ""
-"Moitos dos nomes utilizados polas empresas para distinguir os seus produtos "
-"e servizos son reivindicados como marcas comerciais. Cando estes nomes "
-"aparecen en calquera documentación de MATE e os membros do Proxecto de "
-"documentación de MATE son conscientes das marcas rexistradas, os nomes están"
-" en letras maiúsculas ou maiúsculas iniciais."
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:35 C/legal.xml:35
+#. (itstool) path: item/p
+#: C/annotations-delete.page:27
 msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+"View a page that has an annotation. If you are not sure which pages have "
+"annotations, find them in the <link xref=\"annotations-navigate\">annotation"
+" side pane</link>."
 msgstr ""
-"O DOCUMENTO FORNÉCESE «TAL E COMO É», SEN GARANTÍA DE NINGÚN TIPO, NIN "
-"EXPLÍCITA NIN IMPLÍCITA INCLUÍNDO, SEN LIMITACIÓN, GARANTÍA DE QUE O "
-"DOCUMENTO OU VERSIÓN MODIFICADA DESTE CAREZA DE DEFECTOS COMERCIAIS, SEXA "
-"AXEITADO A UN FIN CONCRETO OU INCUMPRA ALGUNHA NORMATIVA. TODO O RISCO "
-"RELATIVO Á CALIDADE, PRECISIÓN E UTILIDADE DO DOCUMENTO OU A SÚA VERSIÓN "
-"MODIFICADA RECAE EN VOSTEDE. SE CALQUERA DOCUMENTO OU VERSIÓN MODIFICADA "
-"DAQUEL RESULTARA DEFECTUOSO EN CALQUERA ASPECTO, VOSTEDE (E NON O REDACTOR "
-"INICIAL, AUTOR OU COLABORADOR) ASUMIRÁ OS CUSTOS DE TODA REPARACIÓN, "
-"MANTEMENTO OU CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA É UNHA PARTE "
-"ESENCIAL DESTA LICENZA. NON SE AUTORIZA O USO DE NINGÚN DOCUMENTO NIN "
-"VERSIÓN MODIFICADA DESTE POLO PRESENTE, SALVO DENTRO DO CUMPRIMENTO DA "
-"RENUNCIA; E"
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:55 C/legal.xml:55
+#. (itstool) path: item/p
+#: C/annotations-delete.page:32
 msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
+"Right-click on the annotation icon in the document, and click <gui "
+"style=\"menuitem\">Remove Annotation</gui>."
 msgstr ""
-"BAIXO NINGUNHA CIRCUNSTANCIA NIN BAIXO NINGUNHA TEORÍA LEGAL, SEXA POR ERRO "
-"(INCLUÍNDO NEGLIXENCIA), CONTRATO OU DE ALGÚN OUTRO MODO, O AUTOR, O "
-"ESCRITOR INICIAL, CALQUERA COLABORADOR, OU CALQUERA DISTRIBUIDOR DO "
-"DOCUMENTO OU VERSIÓN MODIFICADA DO DOCUMENTO, OU CALQUERA PROVEDOR DE "
-"CALQUERA DESAS PARTES, SERÁ RESPONSÁBEL ANTE NINGUNHA PERSOA POR NINGÚN DANO"
-" DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL OU DERIVADO DE NINGÚN TIPO, "
-"INCLUÍNDO, SEN LIMITACIÓN DANOS POR PERDA DE MERCANCÍAS, PARO TÉCNICO, FALLO"
-" INFORMÁTICO OU MAL FUNCIONAMENTO OU CALQUERA OUTRO POSÍBEL DANO OU PERDAS "
-"DERIVADAS OU RELACIONADAS CO USO DO DOCUMENTO OU AS SÚAS VERSIÓNS "
-"MODIFICADAS, AÍNDA QUE DITA PARTE TEÑA SIDO INFORMADA DA POSIBILIDADE DE QUE"
-" SE PRODUCISEN DITOS DANOS."
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:28 C/legal.xml:28
+#. (itstool) path: item/p
+#: C/annotations-delete.page:36
 msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
+"Save the changes to a new document by clicking <gui "
+"style=\"menuitem\">File</gui>, followed by <gui style=\"menuitem\">Save "
+"As…</gui>."
 msgstr ""
-"O DOCUMENTO E AS VERSIÓNS MODIFICADAS DO DOCUMENTO FORNÉCENSE BAIXO OS "
-"TERMOS DA LICENZA LIBRE DE DOCUMENTACIÓN DE GNU CO ACORDO ADICIONAL "
-"DE:<_:orderedlist-1/>"
 
-#. (itstool) path: authorgroup/author
-#: C/index.docbook:65
+#. (itstool) path: info/desc
+#: C/annotations-disabled.page:7
+msgid "Annotations can only be added to PDF files."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/annotations-disabled.page:17
+msgid "Can't add annotations?"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/annotations-disabled.page:18
 msgid ""
-"<firstname>MATE Documentation Project</firstname> <surname/> "
-"<affiliation><orgname>MATE Desktop</orgname></affiliation>"
+"Annotations can only be added to PDF files. If your file is of a format "
+"other than PDF, the option to add annotations will be greyed out (disabled)."
 msgstr ""
 
-#. (itstool) path: authorgroup/author
-#: C/index.docbook:70
+#. (itstool) path: info/desc
+#: C/annotations-navigate.page:7
+msgid "How to navigate to annotations."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/annotations-navigate.page:19
+msgid "Annotation navigation"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/annotations-navigate.page:20
 msgid ""
-"<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
-"<affiliation><orgname>Sun Microsystems</orgname></affiliation>"
+"If you have created annotations on your document, you can use the side pane "
+"to display the list of all the annotations in the document. The list "
+"indicates the type, page number and author of the annotation."
 msgstr ""
-"<firstname>Sun</firstname> <surname>Equipo de documentación do "
-"GNOME</surname> <affiliation><orgname>Sun "
-"Microsystems</orgname></affiliation>"
 
-#. (itstool) path: authorgroup/author
-#: C/index.docbook:75
+#. (itstool) path: info/desc
+#: C/annotations.page:8
+msgid "How to create and customize annotations."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/annotations.page:15 C/shortcuts.page:31
+msgid "Andre Klapper"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/annotations.page:24
+msgid "Adding annotations"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/annotations.page:25
 msgid ""
-"<firstname>Nickolay V. </firstname> <surname>Shmyrev</surname> <affiliation>"
-" <orgname>GNOME Documentation Project</orgname> <address> "
-"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
+"An annotation is a note or comment added to a PDF document. You can add "
+"annotations using Atril."
 msgstr ""
-"<firstname>Nickolay V. </firstname> <surname>Shmyrev</surname> <affiliation>"
-" <orgname>Proxecto de documentación do GNOME</orgname> <address> "
-"<email>nshmyrev@yandex.ru</email> </address> </affiliation>"
 
-#. (itstool) path: revdescription/para
-#: C/index.docbook:103
-msgid "MATE Documentation Team"
-msgstr " Equipo de documentación do MATE "
-
-#. (itstool) path: revhistory/revision
-#: C/index.docbook:99
+#. (itstool) path: page/p
+#: C/annotations.page:28
 msgid ""
-"<revnumber>Atril Document Viewer Manual V1.2</revnumber> <date>July "
-"2015</date> <_:revdescription-1/>"
+"When you open a file, you should have a side pane on the left side of the "
+"window. If you do not have a visible side pane, click <guiseq><gui "
+"style=\"menuitem\">View</gui> <gui "
+"style=\"menuitem\">Sidepane</gui></guiseq> or press the <key>F9</key> key on"
+" the keyboard."
 msgstr ""
-"<revnumber>Manual do visor de documentos Atril V1.2</revnumber> <date>xullo "
-"2015</date> <_:revdescription-1/>"
 
-#. (itstool) path: revdescription/para
-#: C/index.docbook:111
-msgid "Niels Giesen"
-msgstr "Niels Giesen"
-
-#. (itstool) path: revdescription/para
-#: C/index.docbook:112
-msgid "Claude Paroz"
-msgstr "Claude Paroz"
-
-#. (itstool) path: revhistory/revision
-#: C/index.docbook:107
+#. (itstool) path: page/p
+#: C/annotations.page:36
 msgid ""
-"<revnumber>Atril Document Viewer Manual V1.1</revnumber> "
-"<date>2008-04-05</date> <_:revdescription-1/>"
+"At the top of the side pane, the items in the drop-down list "
+"<gui>Thumbnails</gui>, <gui>Index</gui>, <gui>Annotations</gui> and "
+"<gui>Bookmarks</gui> let you choose what to display in the side pane. (Some "
+"options may not be available for some documents)."
 msgstr ""
-"<revnumber>Manual do visor de documentos Atril V1.1</revnumber> "
-"<date>05-04-2008</date> <_:revdescription-1/>"
 
-#. (itstool) path: revdescription/para
-#: C/index.docbook:120
-msgid "Nickolay V. Shmyrev"
-msgstr "Nickolay V. Shmyrev"
+#. (itstool) path: page/p
+#: C/annotations.page:39
+msgid "To create an annotation:"
+msgstr ""
 
-#. (itstool) path: revhistory/revision
-#: C/index.docbook:116
+#. (itstool) path: item/p
+#: C/annotations.page:44
+msgid "Select <gui style=\"button\">Annotations</gui> from the drop-down list:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotations.page:49
+msgid "Click on <gui style=\"button\">Add</gui> to add a text annotation."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotations.page:54
 msgid ""
-"<revnumber>Atril Document Viewer Manual V1.0</revnumber> "
-"<date>2005-04-06</date> <_:revdescription-1/>"
+"Click on the spot in the document window you would like to add the "
+"annotation to. Your <em>annotation</em> window will open."
 msgstr ""
-"<revnumber>Manual do visor de documentos Atril V1.0</revnumber> "
-"<date>06-04-2005</date> <_:revdescription-1/>"
 
-#. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:126
-msgid "This manual describes version 1.10.1 of Atril Document Viewer"
-msgstr "Este manual describe a versión 1.10.1 do visor de documentos Atril"
+#. (itstool) path: item/p
+#: C/annotations.page:59
+msgid "Type your text into the <em>annotation</em> window."
+msgstr ""
 
-#. (itstool) path: legalnotice/title
-#: C/index.docbook:129
-msgid "Feedback"
-msgstr "Comentarios"
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:130
+#. (itstool) path: note/p
+#: C/annotations.page:63
 msgid ""
-"To report a bug or make a suggestion regarding the Atril Document Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"You can resize the note by clicking and holding the left mouse button on one"
+" of the bottom corners of the note, and moving it around."
 msgstr ""
 
-#. (itstool) path: article/indexterm
-#: C/index.docbook:136
-msgid "<primary>Atril Document Viewer</primary>"
-msgstr "<primary>Visor de documentos Atril</primary>"
-
-#. (itstool) path: article/indexterm
-#: C/index.docbook:139
-msgid "<primary>atril</primary>"
+#. (itstool) path: item/p
+#: C/annotations.page:69
+msgid ""
+"Close the note by clicking on the <gui>x</gui> in the top corner of the "
+"note."
 msgstr ""
 
-#. (itstool) path: sect1/title
-#: C/index.docbook:148
+#. (itstool) path: info/desc
+#: C/annotations-save.page:7
+msgid "How to save your annotations."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/annotations-save.page:14
+msgid "Shobha Tyagi"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/annotations-save.page:21
+msgid "Save a copy of an annotated PDF"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/annotations-save.page:22
+msgid ""
+"To save a copy of your annotated PDF for future viewing using "
+"<app>Atril</app> or any other PDF viewer <em>that supports annotations</em>:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotations-save.page:29
+msgid "Click <guiseq><gui>File</gui><gui>Save As…</gui></guiseq>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/annotations-save.page:34
+msgid ""
+"Choose a name and folder in which to save the file, then click "
+"<gui>Save</gui>. The PDF will be saved in the folder you chose."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/annotations-save.page:40
+msgid ""
+"Annotations are added according to the PDF specification. Therefore, most "
+"PDF readers should be able to read them. Adobe Reader is known to work."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/bookmarks.page:14 C/finding.page:18 C/formats.page:17 C/opening.page:16
+#: C/password.page:14 C/print-differentsize.page:14
+#: C/print-pagescaling.page:10
+msgid "Ekaterina Gerasimova"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/bookmarks.page:22
+msgid "You can use annotations like bookmarks."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/bookmarks.page:25
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#. (itstool) path: page/p
+#: C/bookmarks.page:27
+msgid ""
+"You can add, rename and delete bookmarks using the <app>Document "
+"Viewer</app>."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bookmarks.page:30
+msgid ""
+"When you open a file, you should have a side pane on the left side of the "
+"window. If you do not have a visible side pane, click <guiseq><gui "
+"style=\"menuitem\">View</gui> <gui "
+"style=\"menuitem\">Sidepane</gui></guiseq>, or press the <key>F9</key> key "
+"on the keyboard."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bookmarks.page:35
+msgid ""
+"At the bottom of this side pane, select the <gui "
+"style=\"button\">Bookmarks</gui> from the drop-down list."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/bookmarks.page:41
+msgid "Create a bookmark"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:45
+msgid ""
+"In the PDF document itself, navigate to the page to which you would like to "
+"add the bookmark."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:49 C/bookmarks.page:68 C/bookmarks.page:82
+msgid ""
+"In the side pane, select <gui style=\"button\">Bookmarks</gui> from the "
+"drop-down list."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:53
+msgid ""
+"Press the <gui style=\"button\">+</gui> button at the bottom of the side "
+"pane. The default name of the bookmark you just added is the page number of "
+"the document."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:58
+msgid "The bookmark is now listed in the bookmarks list."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/bookmarks.page:65
+msgid "Rename a bookmark"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:70
+msgid "Select the bookmark in the side pane."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:71
+msgid "Click on the bookmark name."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:72
+msgid "Enter the new name."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:73
+msgid "Press <key>Enter</key>."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/bookmarks.page:79
+msgid "Delete a bookmark"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/bookmarks.page:84
+msgid ""
+"Press the <gui style=\"button\">-</gui> button at the bottom of the side "
+"pane."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/bug-filing.page:7
+msgid "How and where to report problems."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "File a bug against Atril"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:19
+msgid ""
+"Atril is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://github.com/mate-"
+"desktop/atril/issues\"/>."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:22
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:25
+msgid ""
+"To participate you need an account which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to register so you can "
+"receive updates by e-mail about the status of your bug. If you don't already"
+" have an account, just click on the <gui>Sign in / Register</gui> link to "
+"create one."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:28
+msgid "Once you have an account, log in, and click on <gui>New issue</gui>."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:31
+msgid ""
+"Fill in the Title and Description sections and click <gui>Submit "
+"Issue</gui>."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:34
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it"
+" is being dealt with."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/commandline.page:7
+msgctxt "sort"
+msgid "Command line"
+msgstr "Liña de ordes"
+
+#. (itstool) path: info/desc
+#: C/commandline.page:8
+msgid ""
+"The <cmd>atril</cmd> command can open any number of files, at specific pages"
+" and in various modes."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/commandline.page:11 C/convertpdf.page:10 C/convertPostScript.page:10
+#: C/convertSVG.page:10 C/editing.page:10 C/finding.page:10 C/formats.page:13
+#: C/index.page:12 C/invert-colors.page:13 C/movingaround.page:10
+#: C/noprint.page:12 C/password.page:10 C/presentations.page:10
+#: C/print-2sided.page:11 C/print-differentsize.page:10 C/printing.page:12
+#: C/reload.page:13 C/shortcuts.page:11 C/textselection.page:10
+msgid "Phil Bull"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/commandline.page:23
+msgid "The command line"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/commandline.page:24
+msgid ""
+"To start<app>Atril</app> from the command line, type <cmd>atril</cmd>. You "
+"can open a specific file by typing the filename after the atril command:"
+msgstr ""
+
+#. (itstool) path: page/screen
+#: C/commandline.page:29
+#, no-wrap
+msgid "atril file.pdf"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/commandline.page:30
+msgid ""
+"You can open multiple files by typing the filenames after the atril command,"
+" separating the filenames by a space:"
+msgstr ""
+
+#. (itstool) path: page/screen
+#: C/commandline.page:33
+#, no-wrap
+msgid "atril file1.pdf file2.pdf"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/commandline.page:34
+msgid ""
+"Atril also supports the handling of files on the web. For example, after the"
+" atril command you can give the location of a file on the web:"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/commandline.page:38
+msgid "Opening a document at a specific page"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/commandline.page:39
+msgid ""
+"You can use<cmd>--page-label</cmd> switch to open a document at a specific "
+"page. For example, to open a document to page 3, you would type:"
+msgstr ""
+
+#. (itstool) path: section/screen
+#: C/commandline.page:43
+#, no-wrap
+msgid "atril --page-label=3 file.pdf"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/commandline.page:44
+msgid ""
+"The page label should be in the same format as the page number displayed in "
+"<app>Atril</app> header bar."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/commandline.page:50
+msgid "Opening a document in fullscreen mode"
+msgstr ""
+
+#. (itstool) path: section/screen
+#: C/commandline.page:51
+#, no-wrap
+msgid "atril --fullscreen file.pdf"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/commandline.page:54
+msgid "Opening a document in presentation mode"
+msgstr ""
+
+#. (itstool) path: section/screen
+#: C/commandline.page:55
+#, no-wrap
+msgid "atril --presentation file.pdf"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/commandline.page:58
+msgid "Opening a document in preview mode"
+msgstr ""
+
+#. (itstool) path: section/screen
+#: C/commandline.page:59
+#, no-wrap
+msgid "atril --preview file.pdf"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/convertpdf.page:7
+msgid "You can convert a document to PDF by \"printing\" it to a file."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/convertpdf.page:14 C/convertPostScript.page:14 C/convertSVG.page:14
+#: C/finding.page:14 C/forms-saving.page:16 C/invert-colors.page:17
+#: C/movingaround.page:14 C/presentations.page:14 C/printing.page:16
+msgid "Anna Philips"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/convertpdf.page:23
+msgid "Converting a document to PDF"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/convertpdf.page:25
+msgid ""
+"You can convert documents of the following format types into PDF format:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertpdf.page:29 C/formats.page:33 C/presentations.page:75
+#: C/printing.page:47
+msgid "Device Independent file format (.dvi)"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertpdf.page:30 C/formats.page:37 C/presentations.page:79
+#: C/printing.page:50
+msgid "PostScript (.ps)"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/convertpdf.page:32
+msgid ""
+"This works by opening the file in <app>Atril</app> and \"printing\" the "
+"document as a PDF file."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertpdf.page:37 C/forms-saving.page:56
+msgid ""
+"Go to <guiseq><gui style=\"menuitem\">File</gui> <gui "
+"style=\"menuitem\">Print</gui></guiseq> and select <gui>Print</gui> or press"
+" <keyseq><key>Ctrl</key><key>P</key></keyseq> on your keyboard."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertpdf.page:45 C/forms-saving.page:65
+msgid ""
+"Select <gui>Print to File</gui> and choose PDF as the <gui>Output "
+"format</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertpdf.page:51
+msgid ""
+"Choose a name and folder in which to save the file, then click "
+"<gui>Print</gui>. The PDF will be saved in the folder you chose."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/convertpdf.page:58
+msgid ""
+"You can't select text in PostScript or .dvi files, but you usually can do "
+"this in PDF files. Converting .dvi or PostScript files to PDF will not make "
+"the text selectable. This is because the text itself isn't stored in the "
+"file (it's just an image of what the text looks like), so there is no way to"
+" recover it and put it in the PDF. You can use <em>Optical Character "
+"Recognition</em> (OCR) software to extract the text from files if you need "
+"to."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/convertPostScript.page:7
+msgid "You can convert a document to PostScript."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/convertPostScript.page:23
+msgid "Converting a document to PostScript"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/convertPostScript.page:25
+msgid ""
+"You can convert documents of the following format types to PostScript files:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertPostScript.page:29 C/formats.page:34 C/presentations.page:76
+#: C/printing.page:48
+msgid "DjVu (.djvu, .djv)"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertPostScript.page:30 C/convertSVG.page:28 C/formats.page:36
+#: C/presentations.page:78 C/printing.page:49
+msgid "Portable Document Format (.pdf)"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertPostScript.page:31 C/printing.page:51
+msgid "Tagged Image File Format (.tiff, .tif)"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/convertPostScript.page:33
+msgid ""
+"This works by opening the file in <app>Atril</app> and \"printing\" the "
+"document as a PostScript file."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertPostScript.page:38
+msgid ""
+"Go to <guiseq><gui style=\"menuitem\">File</gui> <gui "
+"style=\"menuitem\">Print</gui></guiseq> and select <gui>Print</gui> or press"
+" <keyseq><key>Ctrl</key><key>P</key></keyseq> and go to the "
+"<gui>General</gui> tab."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertPostScript.page:47
+msgid ""
+"Select <gui>Print to File</gui> and choose PostScript as the <gui>Output "
+"format</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertPostScript.page:53
+msgid ""
+"Choose a name and folder in which to save the file, then click "
+"<gui>Print</gui>. The PostScript file will be saved in the folder you chose."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/convertSVG.page:7
+msgid "You can convert a document to SVG by \"printing\" it to a file."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/convertSVG.page:23
+msgid "Converting a document to SVG"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/convertSVG.page:24
+msgid "You can convert documents of the following format types to SVG files:"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/convertSVG.page:30
+msgid ""
+"This works by opening the file in <app>Atril</app> and \"printing\" the "
+"document as an SVG file."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertSVG.page:35
+msgid ""
+"Go to <guiseq><gui style=\"menuitem\">File</gui> <gui "
+"style=\"menuitem\">Print</gui></guiseq> and select <gui>Print</gui> or press"
+" <keyseq><key>Ctrl</key><key>P</key></keyseq>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertSVG.page:43
+msgid ""
+"Select <gui>Print to File</gui> and choose SVG as the <gui>Output "
+"format</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/convertSVG.page:49
+msgid ""
+"Choose a name and folder in which to save the file, then click "
+"<gui>Print</gui>. The SVG file will be saved in the folder you chose."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/default-settings.page:7
+msgid "Save current settings as default for new documents."
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/default-settings.page:10
+msgid "Sindhu S"
+msgstr "Sindhu S"
+
+#. (itstool) path: page/title
+#: C/default-settings.page:19
+msgid "Change default settings"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/default-settings.page:21
+msgid ""
+"When a document is opened for the first time, default settings, such as zoom"
+" and page view preferences, are applied. Any changes you make to these "
+"settings are saved for the document."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/default-settings.page:24
+msgid ""
+"You can save the settings which you are currently using as default for all "
+"new documents by pressing <gui style=\"menuitem\">Edit</gui> and selecting "
+"<gui style=\"menuitem\">Save Current Settings as Default</gui>."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/default-settings.page:29
+msgid ""
+"The new default settings do not override settings of previously opened "
+"documents, they are applied only to documents opened for the first time."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/develop.page:7
+msgid "Improve <app>Atril</app>."
+msgstr ""
+
+#. (itstool) path: credit/years
+#: C/develop.page:12 C/documentation.page:11 C/translate.page:12
+msgid "2011"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"Atril is developed and maintained by a volunteer community. You are welcome "
+"to participate."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://mate-"
+"desktop.org/development/\">help develop</link> Atril, create a <link "
+"href=\"https://github.com/mate-desktop/atril\">Pull Request</link>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/documentation.page:6
+msgid "Contact the Documentation Team."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/documentation.page:18
+msgid "Help write documentation"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/documentation.page:20
+msgid ""
+"Atrils documentation is maintained by a volunteer community. You are welcome"
+" to participate."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/documentation.page:23
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us and create a <link href=\"https://github.com/mate-desktop/atril\">Pull "
+"Request</link>."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/documentation.page:25
+msgid ""
+"Our <link href=\"https://mate-desktop.org/development/\">website</link> "
+"contains useful information."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/duplex-npages.page:8 C/singlesided-npages.page:8
+msgid "Print a booklet with n pages."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/duplex-npages.page:20 C/singlesided-npages.page:20
+msgid "n-page booklet"
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/duplex-npages.page:22 C/singlesided-npages.page:22
+msgid "<em>n</em> is a multiple of 4."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/duplex-npages.page:27
+msgid ""
+"If the number of pages in your PDF document is not a multiple of 4, you "
+"should add the appropriate number of blank pages (1,2 or 3) to make it a "
+"multiple of 4. To do so, you can:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:33 C/singlesided-npages.page:32
+msgid "Create a blank PDF using <app>LibreOffice Writer</app>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:38 C/singlesided-npages.page:37
+msgid ""
+"Merge the blank pages with your PDF document using <app>PDF-Shuffler</app> "
+"placing the blank pages at the end."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:47 C/print-2sided.page:28
+#: C/print-differentsize.page:33 C/singlesided-npages.page:48
+#: C/singlesided-npages.page:95
+msgid ""
+"Go to <guiseq><gui style=\"menuitem\">File</gui><gui "
+"style=\"menuitem\">Print</gui></guiseq> and press the <gui "
+"style=\"button\">Print</gui> button."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:52 C/singlesided-npages.page:53
+msgid "Choose the <gui>General</gui> tab."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:55 C/singlesided-npages.page:56
+msgid "Under <em>Range</em>, choose <gui>Pages</gui>."
+msgstr ""
+
+#. (itstool) path: item/item
+#: C/duplex-npages.page:61 C/singlesided-npages.page:62
+msgid ""
+"n, 1, 2, n-1, n-2, 3, 4, n-3, n-4, 5, 6, n-5, n-6, 7, 8, n-7, n-8, 9, 10, "
+"n-9, n-10, 11, 12, n-11..."
+msgstr ""
+
+#. (itstool) path: item/item
+#: C/duplex-npages.page:62 C/singlesided-npages.page:63
+msgid "...until you have typed n-number of pages."
+msgstr ""
+
+#. (itstool) path: tree/item
+#: C/duplex-npages.page:59 C/singlesided-npages.page:60
+msgid "Type the numbers of the pages in this order: <_:item-1/> <_:item-2/>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:67 C/singlesided-npages.page:68
+#: C/singlesided-npages.page:100
+msgid "Choose the <gui>Page Setup</gui> tab."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:70
+msgid ""
+"Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short "
+"Edge (Flip)</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:73
+msgid "In the <gui>Pages per side</gui> option, select <gui>2</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:76 C/singlesided-npages.page:77
+msgid "In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/duplex-npages.page:81 C/printing.page:38 C/singlesided-npages.page:85
+#: C/singlesided-npages.page:108
+msgid "Click <gui>Print</gui>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/editing.page:7
+msgid "You can't use Atril to edit files."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/editing.page:19
+msgid "Can I edit documents in the document viewer?"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/editing.page:22
+msgid ""
+"Atril can't be used to make changes to documents. You need to use the "
+"appropriate editing application for the type of file you want to change."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/editing.page:28
+msgid ""
+"PDF and PostScript (.ps) files are not usually intended to be edited, but "
+"PDF editing software is available. Try <app>LibreOffice Draw</app> or "
+"<app>Okular</app>, for example. Furthermore, <app>pdfarranger</app> allows "
+"rearranging or removing pages and merging files."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/finding.page:24
+msgid "Search for a word or phrase in a document."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/finding.page:27
+msgid "Find text in a document"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/finding.page:31
+msgid ""
+"Click <guiseq><gui style=\"menuitem\">Edit</gui> <gui "
+"style=\"menuitem\">Find</gui></guiseq> or "
+"<keyseq><key>Ctrl</key><key>F</key></keyseq> or <key>/</key> to display a "
+"search box."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/finding.page:39
+msgid ""
+"Start typing into the search box and the search will start automatically."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/finding.page:43
+msgid ""
+"Use the <gui>Find Previous</gui> and <gui>Find Next</gui> buttons to move to"
+" the previous or next search result."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/finding.page:47
+msgid ""
+"To hide the search bar, click anywhere in the window again or press "
+"<key>Esc</key>."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/finding.page:53
+msgid ""
+"To filter words by case, you can press the <gui>Case Sensitive</gui> button."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/finding.page:57
+msgid ""
+"If the word or phrase that you searched for appears in the document at least"
+" once, you will be shown how many times the search result appears on the "
+"current page."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/finding.page:60
+msgid ""
+"Only PDF documents are searchable. Some PDF documents are not searchable "
+"because their text is encoded in the document as an image."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/formats.page:10
+msgid "PDF, PostScript and many others are."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/formats.page:26
+msgid "Supported formats"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/formats.page:28
+msgid "Atril supports the following formats:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/formats.page:32 C/presentations.page:74
+msgid "Comic Book Archive (.cbr and .cbz)"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/formats.page:35
+msgid "Open XML Paper Specification (.oxps, .xps)"
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/formats.page:40
+msgid ""
+"In some Linux distributions, not all formats are supported by default, so "
+"you might not be able to view all the formats listed above."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/formats.page:43
+msgid ""
+"Support for a format is called a <em>backend</em>. If you get the error "
+"\"Unable to Open Document\", you may wish to check whether the backend "
+"package for the format is installed."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/forms.page:7
+msgid "Working with fillable forms."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/forms.page:19
+msgid "Forms"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/forms.page:20
+msgid ""
+"When filling out an interactive form, you can navigate from field to field "
+"by clicking on a field with your mouse. When you are finished filling out a "
+"text field, press <key>Enter</key>."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/forms.page:24
+msgid ""
+"You can make a selection in a scrollable list box by clicking on the list "
+"box and scrolling to your choice with your mouse."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/forms.page:28
+msgid ""
+"There may be some parts of a form that you may need to fill out by hand "
+"<em>after</em> you print the form. For example, you might have to circle "
+"certain things, or sign the form in one or more places. If you wish to do "
+"this electronically, you may want to try <link "
+"href=\"http://www.g-loaded.eu/2008/05/03/how-to-annotate-pdf-files-in-linux-"
+"using-xournal/\">Xournal</link>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/forms-saving.page:7
+msgid ""
+"Make sure you save the form, otherwise all of the information you entered "
+"will be lost."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/forms-saving.page:24
+msgid "Saving a form"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/forms-saving.page:26
+msgid ""
+"After you have filled it out, you may wish to save your form in one of two "
+"ways:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/forms-saving.page:31
+msgid ""
+"To save a copy that can be edited in the future (form remains interactive):"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/forms-saving.page:36
+msgid ""
+"Go to <guiseq><gui style=\"menuitem\">File</gui> <gui "
+"style=\"menuitem\">Print</gui></guiseq> and select <gui>Save As…</gui> or "
+"press <keyseq><key>Ctrl</key><key>S</key></keyseq> on your keyboard."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/forms-saving.page:44
+msgid ""
+"Choose a name and folder to save the file in, then click <gui>Save</gui>. "
+"The PDF will be saved in the folder you chose."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/forms-saving.page:51
+msgid ""
+"To save a copy that can no longer be edited (for example, to e-mail the form"
+" or submit it on-line):"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/forms-saving.page:71
+msgid ""
+"Choose a name and folder to save the file in, then click <gui>Print</gui>. "
+"The PDF will be saved in the folder you chose."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/forms-saving.page:81
+msgid "Copies of encrypted files can't be saved or printed."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Atril"
+msgstr "Atril"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Atril"
+msgstr "Atril"
+
+#. (itstool) path: info/desc
+#: C/index.page:22
+msgid ""
+"<app>Atril</app> is made for viewing PDF documents. Learn how to get started"
+" with <app>Atril</app> and its features."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/index.page:27
+msgid "<_:media-1/> Atril Help"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:33
+msgid "Reading documents"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Presentations and other supported formats"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:41
+msgid "Printing"
+msgstr "Imprimindo"
+
+#. (itstool) path: section/title
+#: C/index.page:45
+msgid "Annotations and bookmarks"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:49
+msgid "Interactive forms"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:53
+msgid "Frequently asked questions"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:57
+msgid "Advanced"
+msgstr "Avanzado"
+
+#. (itstool) path: section/title
+#: C/index.page:61
+msgid "Tips and tricks"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:65
+msgid "SyncTeX"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:70
+msgid "Get involved"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/introduction.page:16
+msgid "Introduction to <em>Atril - The MATE Document Viewer</em>."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/introduction.page:19
 msgid "Introduction"
 msgstr "Introdución"
 
-#. (itstool) path: sect1/para
-#: C/index.docbook:149
+#. (itstool) path: page/p
+#: C/introduction.page:21
 msgid ""
-"The <application>Atril Document Viewer</application> application enables you"
-" to view documents of various formats like Portable Document Format (PDF) "
-"files and PostScript files. <application>Atril Document Viewer</application>"
-" follows Freedesktop.org and MATE standards to provide integration with "
-"Desktop Environment."
+"<app>Atril</app> is a document viewer. See <link xref=\"formats\"/> for a "
+"list of file types you can view."
 msgstr ""
 
-#. (itstool) path: sect1/title
-#: C/index.docbook:156
-msgid "Getting Started"
-msgstr "Comezando"
+#. (itstool) path: info/desc
+#: C/invert-colors.page:8
+msgid "Inverting the colors can make it easier to read some text."
+msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:159
-msgid "To Start Atril Document Viewer"
-msgstr "Para iniciar o visor de documentos Atril"
+#. (itstool) path: page/title
+#: C/invert-colors.page:26
+msgid "Invert colors on a page"
+msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:160
+#. (itstool) path: page/p
+#: C/invert-colors.page:29
 msgid ""
-"<application>Atril Document Viewer</application> starts when you open a "
-"document such as a PDF or PostScript file."
+"To swap black for white, white for black, and so on, go to the <gui "
+"style=\"menuitem\">View</gui> menu and select <gui style=\"menuitem\">Invert"
+" Colours</gui> (or press <keyseq><key>Ctrl</key><key>I</key></keyseq>)."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:161
+#. (itstool) path: note/p
+#: C/invert-colors.page:32
 msgid ""
-"Alternatively, you can start <application>Atril Document "
-"Viewer</application> from the command line, with the command: "
-"<command>atril</command>."
+"Doing this can make it easier to read text, especially in the case of "
+"certain kinds of visual impairment."
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:166
-msgid "When You Start Atril Document Viewer"
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:167
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "Licenza"
+
+#. (itstool) path: page/p
+#: C/license.page:12
 msgid ""
-"When you start <application>Atril Document Viewer</application>, the "
-"following window is displayed."
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0"
+" Unported license."
 msgstr ""
 
-#. (itstool) path: figure/title
-#: C/index.docbook:171
-msgid "Atril Document Viewer Window"
-msgstr "Xanela do visor de documentos Atril"
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr ""
 
-#. (itstool) path: imageobject/imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:175
-msgctxt "_"
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr ""
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr ""
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/license.page:39
 msgid ""
-"external ref='figures/atril_start_window.png' "
-"md5='475a06bdb579c94e4f07d99ae3098e9c'"
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use"
+" of the work)."
 msgstr ""
-"external ref='figures/atril_start_window.png' "
-"md5='475a06bdb579c94e4f07d99ae3098e9c'"
 
-#. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:173
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/license.page:47
 msgid ""
-"<imageobject><imagedata fileref=\"figures/atril_start_window.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Atril Document "
-"Viewer main window. Contains titlebar, menubar, toolbar and display area. "
-"Menubar contains File, Edit, View, Go and Help menus. </phrase> "
-"</textobject>"
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:184
+#. (itstool) path: page/p
+#: C/license.page:53
 msgid ""
-"The <application>Atril Document Viewer</application> window contains the "
-"following elements:"
+"For the full text of the license, see the <link "
+"href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#. (itstool) path: entry/para
-#: C/index.docbook:188 C/index.docbook:236
-msgid "Menubar"
-msgstr "Barra de menú"
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 United States License"
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:190
+#. (itstool) path: license/p
+#: C/legal.xml:3 C/legal-unported.xml:4
+msgid "This work is licensed under a <_:link-1/>."
+msgstr ""
+
+#. (itstool) path: license/p
+#: C/legal.xml:6
 msgid ""
-"The menus on the menubar contain all of the commands that you need to work "
-"with documents in <application>Atril Document Viewer</application>."
+"As a special exception, the copyright holders give you permission to copy, "
+"modify, and distribute the example code contained in this document under the"
+" terms of your choosing, without restriction."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:194
-msgid "Toolbar"
-msgstr "Barra de ferramentas"
+#. (itstool) path: p/link
+#: C/legal-unported.xml:5
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:196
+#. (itstool) path: info/desc
+#: C/movingaround.page:20
+msgid "Navigating, scrolling and zooming."
+msgstr ""
+
+#. (itstool) path: page/title
+#. (itstool) path: section/title
+#: C/movingaround.page:23 C/shortcuts.page:82
+msgid "Moving around a document"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/movingaround.page:25
 msgid ""
-"The toolbar contains a subset of the commands that you can access from the "
-"menubar."
+"You can move around each page of a document by any of the following methods:"
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:200
-msgid "Display area"
-msgstr "Amosar a área"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:202
-msgid "The display area displays the document."
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:216
-msgid "UI Component"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:218 C/index.docbook:666
-msgid "Action"
-msgstr "Acción"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:223
-msgid "Window"
-msgstr "Xanela"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:227
+#. (itstool) path: item/p
+#: C/movingaround.page:30
 msgid ""
-"Drag a file into the <application>Atril Document Viewer</application> window"
-" from another application such as a file manager."
+"Scrolling up and down using the mouse wheel. To move around a page just by "
+"moving the mouse:"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:230
-msgid "Double-click on the file name in the file manager"
+#. (itstool) path: item/p
+#: C/movingaround.page:34
+msgid "Right-click the page and select <gui>Autoscroll</gui>."
 msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:237
+#. (itstool) path: item/p
+#: C/movingaround.page:37
 msgid ""
-"Choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
+"Move the mouse pointer towards the bottom of the window to scroll down; it "
+"will scroll faster depending on how far down the window you go."
 msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:241
-msgid "Shortcut keys"
-msgstr "Atallos de teclado"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:242
-msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
+#. (itstool) path: item/p
+#: C/movingaround.page:42
+msgid "To stop autoscrolling, click anywhere in the document."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:207
+#. (itstool) path: item/p
+#: C/movingaround.page:47
+msgid "Using the scroll bar on the document window."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:50
+msgid "Using the up and down arrow keys of your keyboard."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:53
 msgid ""
-"In <application>Atril Document Viewer</application>, you can perform the "
-"same action in several ways. For example, you can open a document in the "
-"following ways: <_:informaltable-1/>"
+"Dragging the page around with your mouse, as if you are grabbing it. To do "
+"this:"
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:248
-msgid "This manual documents functionality from the menubar."
-msgstr ""
-
-#. (itstool) path: sect1/title
-#: C/index.docbook:256
-msgid "Usage"
-msgstr "Uso"
-
-#. (itstool) path: sect2/title
-#: C/index.docbook:260
-msgid "To Open A Document"
-msgstr "Para abrir un documento"
-
-#. (itstool) path: sect2/para
-#: C/index.docbook:261
-msgid "To open a document, perform the following steps:"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:264
+#. (itstool) path: item/p
+#: C/movingaround.page:57
 msgid ""
-"Choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> "
-"</menuchoice>."
+"Move the mouse pointer over the page and hold down the middle mouse button "
+"to drag it around."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:268
+#. (itstool) path: item/p
+#: C/movingaround.page:61
 msgid ""
-"In the <guilabel>Open Document</guilabel> dialog, select the file you want "
-"to open."
+"If you don't have a middle mouse button, hold down the left and right mouse "
+"buttons at the same time, then drag."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:273
+#. (itstool) path: section/title
+#: C/movingaround.page:69
+msgid "Flipping between pages"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/movingaround.page:71
 msgid ""
-"Click <guibutton>Open</guibutton>. <application>Atril Document "
-"Viewer</application> displays the name of the document in the titlebar of "
-"the window."
+"You can move between pages of a document using one of the following methods:"
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:278
+#. (itstool) path: item/p
+#: C/movingaround.page:76
 msgid ""
-"To open another document, choose <menuchoice> "
-"<guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. "
-"<application>Atril Document Viewer</application> opens each file in a new "
-"window."
+"Press the <keyseq><key>Ctrl</key><key>Page Up</key></keyseq> or "
+"<keyseq><key>Ctrl</key><key>Page Down</key></keyseq> buttons on the "
+"keyboard."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:281
+#. (itstool) path: item/p
+#: C/movingaround.page:81
+msgid "To go to a specific page:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:84
 msgid ""
-"If you try to open a document with format that <application>Atril Document "
-"Viewer</application> does not recognize, the application displays an error "
-"message."
+"Type a page number in <gui style=\"input\">Select Page</gui> and press "
+"<key>Enter</key>."
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:287
-msgid "To Navigate Through a Document"
+#. (itstool) path: item/p
+#: C/movingaround.page:87
+msgid "If you want to go to the beginning or the end of the document:"
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:288
-msgid "You can navigate through a file as follows:"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:291
+#. (itstool) path: item/p
+#: C/movingaround.page:90
 msgid ""
-"To view the next page, choose <menuchoice> <guimenu>Go</guimenu> "
-"<guimenuitem>Next Page</guimenuitem> </menuchoice>."
+"Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your keyboard."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:295
+#. (itstool) path: item/p
+#: C/movingaround.page:94
+msgid "Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your keyboard."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:102
 msgid ""
-"To view the previous page, choose <menuchoice> <guimenu>Go</guimenu> "
-"<guimenuitem>Previous Page</guimenuitem> </menuchoice>."
+"To move ten pages at a time, press <keyseq><key>Shift</key><key>Page "
+"Up</key></keyseq> or <keyseq><key>Shift</key><key>Page Down</key></keyseq>."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:299
+#. (itstool) path: note/p
+#: C/movingaround.page:106
 msgid ""
-"To view the first page in the document, choose <menuchoice> "
-"<guimenu>Go</guimenu> <guimenuitem>First Page</guimenuitem> </menuchoice>."
+"You can only move around one page at a time, by default. If you want to move"
+" between pages just by scrolling or dragging, go to the <gui "
+"style=\"menuitem\">View</gui> menu and select <gui "
+"style=\"menuitem\">Continuous</gui>."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:303
+#. (itstool) path: section/title
+#: C/movingaround.page:117
+msgid "Navigating with a page list or table of contents"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/movingaround.page:119
 msgid ""
-"To view the last page in the document, choose <menuchoice> "
-"<guimenu>Go</guimenu> <guimenuitem>Last Page</guimenuitem> </menuchoice>."
+"When you open a file, you should have a side pane on the left side of the "
+"window. If you do not have a visible side pane, <guiseq><gui "
+"style=\"menuitem\">View</gui> <gui "
+"style=\"menuitem\">Sidepane</gui></guiseq> or press the <key>F9</key> key on"
+" the keyboard."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:307
+#. (itstool) path: section/p
+#: C/movingaround.page:125
+msgid "The side pane shows a preview of all of the pages in the document."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/movingaround.page:127
+msgid "You can move between pages by clicking on them in the side pane."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/movingaround.page:130
 msgid ""
-"To view a particular page, enter the page number or page label in the text "
-"box on the toolbar, then press <keycap>Return</keycap>."
+"Some documents have an index or table of contents, which you can display in "
+"the side pane. Select the <gui>Thumbnails</gui> Combobox at the top of the "
+"side pane and select <gui>Index</gui> to view it."
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:314
-msgid "To Scroll a Page"
-msgstr ""
-
-#. (itstool) path: sect2/para
-#: C/index.docbook:315
+#. (itstool) path: note/p
+#: C/movingaround.page:134
 msgid ""
-"To display the page contents that are not currently displayed in the display"
-" area, use the following methods:"
+"Most documents don't use this feature, so you won't be able to view their "
+"index in the side pane."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:318
-msgid "Use the arrow keys or space key on the keyboard."
+#. (itstool) path: section/title
+#: C/movingaround.page:142
+msgid "Zooming in and out"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:321
+#. (itstool) path: section/p
+#: C/movingaround.page:144
+msgid "To adjust the zoom level:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:148
+msgid "Select the desired zoom percentage from combobox in the toolbar."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:151
 msgid ""
-"Drag the display area by clicking with the middle mouse button somewhere in "
-"the document and then moving the mouse. For example, to scroll down the "
-"page, drag the display area upwards in the window."
+"Alternatively, use the keyboard shortcuts "
+"<keyseq><key>Ctrl</key><key>+</key></keyseq> to zoom in, or "
+"<keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:324
-msgid "Use the scrollbars on the window."
-msgstr ""
-
-#. (itstool) path: sect2/title
-#: C/index.docbook:331
-msgid "To Change the Page Size"
-msgstr ""
-
-#. (itstool) path: sect2/para
-#: C/index.docbook:332
+#. (itstool) path: item/p
+#: C/movingaround.page:155
 msgid ""
-"You can use the following methods to resize a page in the <application>Atril"
-" Document Viewer</application> display area:"
+"Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to "
+"zoom."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:337
+#. (itstool) path: note/p
+#: C/movingaround.page:160
 msgid ""
-"To increase the page size, choose <menuchoice> <guimenu>View</guimenu> "
-"<guimenuitem>Zoom In</guimenuitem> </menuchoice>."
+"The <gui>Fit Page</gui> option will make a document page fit the whole "
+"<em>height</em> of the window."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:342
+#. (itstool) path: note/p
+#: C/movingaround.page:162
 msgid ""
-"To decrease the page size, choose <menuchoice> <guimenu>View</guimenu> "
-"<guimenuitem>Zoom Out</guimenuitem> </menuchoice>."
+"The <gui>Fit Width</gui> option will make a document page fill the whole "
+"<em>width</em> of the window."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:347
+#. (itstool) path: note/p
+#: C/movingaround.page:164
 msgid ""
-"To resize a page to have the same width as the <application>Atril Document "
-"Viewer</application> display area, choose <menuchoice> "
-"<guimenu>View</guimenu> <guimenuitem>Fit page width</guimenuitem> "
-"</menuchoice>."
+"If you want to see two pages at once, side by side, like in a book, go to "
+"<guiseq><gui style=\"menuitem\">View</gui><gui "
+"style=\"menuitem\">Dual</gui></guiseq> and press <gui "
+"style=\"menuitem\">Dual</gui>."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:352
+#. (itstool) path: note/p
+#: C/movingaround.page:167
 msgid ""
-"To resize a page to fit within the <application>Atril Document "
-"Viewer</application> display area, choose <menuchoice> "
-"<guimenu>View</guimenu> <guimenuitem>Best Fit</guimenuitem> </menuchoice>."
+"If the allow-links-change-zoom gsetting is set to false, links are blocked "
+"from changing your zoom level."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:357
+#. (itstool) path: section/p
+#: C/movingaround.page:171
+msgid "You can use the whole of your screen to view the document:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:175
+msgid "Press <key>F11</key>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:178
+msgid "To exit the full screen mode:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/movingaround.page:179
+msgid "Press <key>F11</key> or <key>Escape</key>"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/noprint.page:9
+msgid "The author may have put printing restrictions on the document."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/noprint.page:21
+msgid "I can't print a document"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/noprint.page:23
+msgid "Possible reasons for printing failure"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/noprint.page:24
+msgid "A document might not print because of:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/noprint.page:26
+msgid "Printer problems or,"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/noprint.page:27
+msgid "PDF printing restrictions."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/noprint.page:32
+msgid "Printer problems"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/noprint.page:33
 msgid ""
-"To resize the <application>Atril Document Viewer</application> window to "
-"have the same width and height as the screen, choose <menuchoice> "
-"<guimenu>View</guimenu> <guimenuitem>Full Screen</guimenuitem> "
-"</menuchoice>. To resize the <application>Atril Document "
-"Viewer</application> window to the original size, click on the "
-"<guibutton>Exit Full Screen</guibutton> button."
+"There are many reasons why your printer might not be working. For example, "
+"it could be out of paper or ink, or unplugged or damaged."
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:365
-msgid "To View Pages or Document Structure"
-msgstr ""
-
-#. (itstool) path: sect2/para
-#: C/index.docbook:366
-msgid "To view bookmarks or pages, perform the following steps:"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:370
+#. (itstool) path: section/p
+#: C/noprint.page:37
 msgid ""
-"Choose <menuchoice> <guimenu>View</guimenu> "
-"<guimenuitem>Sidebar</guimenuitem> </menuchoice> or press "
-"<keycap>F9</keycap>."
+"You might want to check your printer configuration in the Control Centre."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:375
+#. (itstool) path: section/title
+#: C/noprint.page:43
+msgid "PDF printing restrictions"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/noprint.page:44
 msgid ""
-"Use the drop-down list in the side-pane header to select whether to display "
-"document structure or pages in the side pane."
+"Some PDF documents have a setting which prevents you from printing them. "
+"Authors can set this printing restriction when they write a document. Atril "
+"overrides this restriction by default, but you may want to check that it "
+"hasn't been disabled:"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:380
+#. (itstool) path: note/p
+#: C/noprint.page:52
 msgid ""
-"Use the side-pane scrollbars to display the required item or page in the "
-"side pane."
+"You need to have <app>dconf Editor</app> installed on your computer to "
+"change this setting."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:385
+#. (itstool) path: item/p
+#: C/noprint.page:58
+msgid "Open <gui>dconf Editor</gui>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/noprint.page:61
+msgid "Browse to <sys>/org/mate/atril</sys>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/noprint.page:64
+msgid "Make sure that the <gui>override-restrictions</gui> option is checked."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/noprint.page:69
+msgid "Go back to<app>Atril</app> and try to print the document again."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/openerror.page:7
+msgid "Error When Opening A File."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/openerror.page:20
+msgid "Why can't I open a file?"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/openerror.page:22
 msgid ""
-"Click on an entry to navigate to that location in the document. Click on a "
-"page to navigate to that page in the document."
+"If you try to open a document of a format that Atril does not recognize, you"
+" will get an \"Unable to open document\" error message. Click "
+"<gui>Close</gui> to return to<app>Atril</app> window."
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:391
-msgid "To View the Properties of a Document"
+#. (itstool) path: info/desc
+#: C/opening.page:22
+msgid "How to open a document."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:392
+#. (itstool) path: page/title
+#: C/opening.page:25
+msgid "Open a document"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/opening.page:27
+msgid "You can open a document using any one of the following ways:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/opening.page:31
 msgid ""
-"To view the properties of a document, choose <menuchoice> "
-"<guimenu>File</guimenu> <guimenuitem>Properties</guimenuitem> </menuchoice>."
+"Double-click on the file in <app>Caja</app> or your <em>file manager</em>."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:398
+#. (itstool) path: note/p
+#: C/opening.page:34
 msgid ""
-"The <guilabel>Properties</guilabel> dialog displays all information "
-"available"
+"Double clicking PDF, PostScript, .djvu, .dvi and Comic Book Archive files "
+"opens them in <app>Atril</app> by default."
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:404
-msgid "To Print a Document"
-msgstr "Para imprimir un documento"
-
-#. (itstool) path: sect2/para
-#: C/index.docbook:405
+#. (itstool) path: item/p
+#: C/opening.page:39
 msgid ""
-"To print a Document, choose <menuchoice> <guimenu>File</guimenu> "
-"<guimenuitem>Print</guimenuitem> </menuchoice>."
+"Right-click on a file icon in <app>Caja</app> and click <guiseq><gui>Open "
+"With</gui><gui>Atril</gui></guiseq>."
 msgstr ""
 
-#. (itstool) path: note/para
-#: C/index.docbook:409
+#. (itstool) path: page/p
+#: C/opening.page:44
+msgid "If an empty <app>Atril</app> window is already open you can:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/opening.page:48 C/opening.page:63
 msgid ""
-"If you cannot choose the <guimenuitem>Print</guimenuitem> menu item, the "
-"author of the document has disabled the print option for this document. To "
-"enable the print option, you must enter the master password when you open "
-"the document. See <xref linkend=\"atril-password\"/> for more information "
-"about password-protected files."
+"Drag a file into the window from <app>Caja</app>. The new file will open in "
+"a new window."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:413
+#. (itstool) path: item/p
+#: C/opening.page:52
 msgid ""
-"The <guilabel>Print</guilabel> dialog has the following tabbed sections:"
+"Press the <gui>Open…</gui> button in the top-left corner of the window. In "
+"the <gui>Open Document</gui> dialog, choose the file which you wish to open,"
+" and click <gui>Open</gui>. The file will open in a new window."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:418
-msgid "<link linkend=\"print-dialog-job\">Job</link>"
-msgstr "<link linkend=\"print-dialog-job\">Traballo</link>"
+#. (itstool) path: page/p
+#: C/opening.page:59
+msgid "If a document is already opened in a <app>Atril</app> window you can:"
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:423
-msgid "<link linkend=\"print-dialog-printer\">Printer</link>"
-msgstr "<link linkend=\"print-dialog-printer\">Impresora</link>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:428
-msgid "<link linkend=\"print-dialog-paper\">Paper</link>"
-msgstr "<link linkend=\"print-dialog-paper\">Papel</link>"
-
-#. (itstool) path: sect3/title
-#: C/index.docbook:435
-msgid "Job"
-msgstr "Traballo"
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:437
-msgid "<guilabel>Print range</guilabel>"
-msgstr "<guilabel>Intervalo de impresión</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:439
+#. (itstool) path: item/p
+#: C/opening.page:67
 msgid ""
-"Select one of the following options to determine how many pages to print:"
+"Press <keyseq><key>Ctrl</key><key>O</key></keyseq>. In the <gui>Open "
+"Document</gui> dialog, choose the file which you wish to open, and click "
+"<gui>Open</gui>. The file will open in a new window."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:442
-msgid "<guilabel>All</guilabel>"
-msgstr "<guilabel>Todo</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:443
-msgid "Select this option to print all of the pages in the document."
+#. (itstool) path: info/desc
+#: C/password.page:20
+msgid "Handling password protected PDFs."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:446
-msgid "<guilabel>Pages From</guilabel>"
+#. (itstool) path: page/title
+#: C/password.page:23
+msgid "Password-protected documents"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:447
+#. (itstool) path: page/p
+#: C/password.page:25
 msgid ""
-"Select this option to print the selected range of pages in the document. Use"
-" the spin boxes to specify the first page and last page of the range."
+"If you try to open a PDF document that is protected with a password, a "
+"window will appear asking you to enter the document password. Enter the "
+"password and click <gui>Unlock Document</gui>."
 msgstr ""
 
-#. (itstool) path: sect3/title
-#: C/index.docbook:457
-msgid "Printer"
-msgstr "Impresora"
+#. (itstool) path: note/p
+#: C/password.page:48
+msgid "Passwords can be set by the person who created or edited the document."
+msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:459
-msgid "<guilabel>Printer</guilabel>"
-msgstr "<guilabel>Impresora</guilabel>"
+#. (itstool) path: info/desc
+#: C/presentations.page:7
+msgid "How to play presentations."
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:461
+#. (itstool) path: page/title
+#: C/presentations.page:23
+msgid "Presentations"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/presentations.page:25
+msgid "Starting a presentation"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:26
+msgid "To start a presentation:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/presentations.page:29
+msgid "<link xref=\"opening\">Open a file</link>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/presentations.page:32
 msgid ""
-"Use this drop-down list to select the printer to which you want to print the"
+"Press <gui style=\"menuitem\">View</gui> and select <gui "
+"style=\"menuitem\">Presentation</gui> (or press <key>F5</key>)."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/presentations.page:34
+msgid "The presentation will be displayed full screen."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/presentations.page:41
+msgid "Moving through a presentation"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:44
+msgid ""
+"Use the <key>spacebar</key>, <key>→</key>, <key>↓</key>, or left mouse click"
+" to go to the next slide."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:47
+msgid ""
+"Use the <key>←</key>, <key>↑</key> or right mouse click to go to the "
+"previous slide."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/presentations.page:51
+msgid ""
+"You can also use the scroll wheel to move back and forth through the "
+"presentation."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:55
+msgid "Use <key>Esc</key> to exit the presentation."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/presentations.page:61
+msgid "Showing a blank screen"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:62
+msgid "Press <key>B</key> or <key>.</key> to show a black screen."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:63
+msgid "Press <key>W</key> to show a white screen."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:64
+msgid ""
+"Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the slide."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/presentations.page:69
+msgid "Supported presentation file formats"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/presentations.page:70
+msgid "The following file formats can be used for presentations:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/presentations.page:77
+msgid "Open Document Presentation (.odp)"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/print-2sided.page:8
+msgid "Printing two-sided and multi-page per sheet."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/print-2sided.page:20
+msgid "Two-sided and multiple pages per side layout for printing"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/print-2sided.page:22
+msgid "You can print on both sides of each sheet of paper:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-2sided.page:33
+msgid ""
+"Go to the <gui>Page Setup</gui> tab of the Print window and choose an option"
+" from the <gui>Two-sided</gui> drop-down list."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-2sided.page:38
+msgid ""
+"You can print more than one page of the document per <em>side</em> of paper "
+"too. Use the <gui>Pages per side</gui> option to do this."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/print-booklet.page:8
+msgid "How to print a booklet."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/print-booklet.page:20
+msgid "Printing a booklet"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/print-booklet.page:22
+msgid ""
+"If you are printing a booklet (which will perhaps be bound or stapled in the"
+" middle of each page), select the type of printer you will be using for "
+"printing from the list below. Then select the number of printed pages your "
+"booklet will have."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/print-booklet.page:27
+msgid "Printer allows single-sided printing"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/print-booklet.page:31
+msgid "Printer allows double-sided printing"
+msgstr ""
+
+#. (itstool) path: credit/years
+#: C/print-differentsize.page:16 C/print-pagescaling.page:12
+msgid "2015"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/print-differentsize.page:21
+msgid "Printing a document on paper of a different size or orientation."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/print-differentsize.page:25
+msgid "Changing the paper size when printing"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/print-differentsize.page:27 C/print-pagescaling.page:22
+msgid ""
+"If you want to change the paper size of your document (for example, print a "
+"US Letter-sized PDF on A4 paper), you can change the printing format for the"
 " document."
 msgstr ""
 
-#. (itstool) path: note/para
-#: C/index.docbook:463
+#. (itstool) path: item/p
+#: C/print-differentsize.page:36
+msgid "Select the <gui>Page Setup</gui> tab."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-differentsize.page:39
 msgid ""
-"The <guilabel>Create a PDF document</guilabel> option is not supported in "
-"this version of <application>Atril Document Viewer</application>."
+"Under the <em>Paper</em> column, choose your <em>Paper size</em> from the "
+"drop-down list."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:469
-msgid "<guilabel>Settings</guilabel>"
-msgstr "<guilabel>Axustes</guilabel>"
+#. (itstool) path: item/p
+#: C/print-differentsize.page:43
+msgid "Click <gui>Print</gui> and your document should print."
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:471
-msgid "Use this drop-down list to select the printer settings."
-msgstr "Use esta lista despregábel para seleccionar  os axustes da impresora."
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:473
+#. (itstool) path: page/p
+#: C/print-differentsize.page:47
 msgid ""
-"To configure the printer, click <guibutton>Configure</guibutton>. For "
-"example, you can enable or disable duplex printing, or schedule delayed "
-"printing, if this functionality is supported by the printer."
+"You can also use the <em>Orientation</em> menu to choose a different "
+"orientation:"
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:477
-msgid "<guilabel>Location</guilabel>"
-msgstr "<guilabel>Localización</guilabel>"
+#. (itstool) path: item/p
+#: C/print-differentsize.page:52
+msgid "<gui>Portrait</gui>"
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:479
+#. (itstool) path: item/p
+#: C/print-differentsize.page:55
+msgid "<gui>Landscape</gui>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-differentsize.page:58
+msgid "<gui>Reverse portrait</gui>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-differentsize.page:61
+msgid "<gui>Reverse landscape</gui>"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/printing.page:9
+msgid "How to print, and common questions about printing."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/printing.page:25
+msgid "Printing a document"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/printing.page:28
+msgid "To print a document:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/printing.page:31
 msgid ""
-"Use this drop-down list to select one of the following print destinations:"
-msgstr ""
-"Use esta lista despregábel para seleccionar un dos seguintes destinos de "
-"impresión:"
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:484
-msgid "<guilabel>CUPS</guilabel>"
-msgstr "<guilabel>CUPS</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:486
-msgid "Print the document to a CUPS printer."
+"Click the <gui>File</gui> menu and select <gui>Print</gui> or press "
+"<keyseq><key>Ctrl</key><key>P</key></keyseq>."
 msgstr ""
 
-#. (itstool) path: note/para
-#: C/index.docbook:490
+#. (itstool) path: item/p
+#: C/printing.page:36
+msgid "Choose your printer from the list."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/printing.page:45
+msgid "Printing is enabled for the following file formats:"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/print-pagescaling.page:17
+msgid "Shrink or expand the document to fit the paper size."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/print-pagescaling.page:20
+msgid "Scale page for printing"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:28
 msgid ""
-"If the selected printer is a CUPS printer, <guilabel>CUPS</guilabel> is the "
-"only entry in this drop-down list."
-msgstr ""
-"Se a impresora seleccionada é unha impresora CUPS, <guilabel>CUPS</guilabel>"
-" é a única entrada desta lista despregábel."
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:497
-msgid "<guilabel>lpr</guilabel>"
-msgstr "<guilabel>lpr</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:499
-msgid "Print the document to a printer."
+"Open the menu at the top-right of the window, then select <gui "
+"style=\"menuitem\">Print…</gui>."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:505
-msgid "<guilabel>File</guilabel>"
-msgstr "<guilabel>Ficheiro</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:507
-msgid "Print the document to a PostScript file."
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:32
+msgid "Select the <gui style=\"tab\">Page Handling</gui> tab."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:510
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:35
+msgid "Choose a <em>Page Scaling</em> from the drop-down list."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:38
+msgid "<em>None</em>: do not perform page scaling."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:41
 msgid ""
-"Click <guibutton>Save As</guibutton> to display a dialog where you specify "
-"the name and location of the PostScript file."
+"<em>Shrink to Printable Area</em>: document pages larger than the printable "
+"area are reduced to fit the printable area of the printer page."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:516
-msgid "<guilabel>Custom</guilabel>"
-msgstr "<guilabel>Personalizado</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:518
-msgid "Use the specified command to print the document."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:521
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:46
 msgid ""
-"Type the name of the command in the text box. Include all command-line "
-"arguments."
+"<em>Fit to Printable Area</em>: document pages are enlarged or reduced as "
+"required to fit the printable area of the printer page."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:529
-msgid "<guilabel>State</guilabel>"
-msgstr "<guilabel>Estado</guilabel>"
+#. (itstool) path: item/p
+#: C/print-pagescaling.page:53
+msgid "Click <gui>Print</gui> to print your document."
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:531 C/index.docbook:537 C/index.docbook:543
+#. (itstool) path: info/desc
+#: C/reload.page:8
 msgid ""
-"This functionality is not supported in this version of <application>Atril "
-"Document Viewer</application>."
+"Your document will be automatically reloaded if another program changes it "
+"while you're viewing it."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:535
-msgid "<guilabel>Type</guilabel>"
-msgstr "<guilabel>Tipo</guilabel>"
+#. (itstool) path: page/title
+#: C/reload.page:22
+msgid "Why does the document keep reloading?"
+msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:541
-msgid "<guilabel>Comment</guilabel>"
-msgstr "<guilabel>Comentario</guilabel>"
-
-#. (itstool) path: sect3/title
-#: C/index.docbook:551
-msgid "Paper"
-msgstr "Papel"
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:553
-msgid "<guilabel>Paper size</guilabel>"
-msgstr "<guilabel>Tamaño do papel</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:555
+#. (itstool) path: page/p
+#: C/reload.page:24
 msgid ""
-"Use this drop-down list to select the size of the paper to which you want to"
-" print the document."
+"If<app>Atril</app> detects that the document you have open has changed "
+"(perhaps because another program has modified it), it will automatically "
+"reload the document and display the most recent version for you."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:558
-msgid "<guilabel>Width</guilabel>"
-msgstr "<guilabel>Largo</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:560
+#. (itstool) path: page/p
+#: C/reload.page:28
 msgid ""
-"Use this spin box to specify the width of the paper. Use the adjacent drop-"
-"down list to change the measurement unit."
+"If the document is deleted while you are still viewing it, it will still "
+"remain open."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:563
-msgid "<guilabel>Height</guilabel>"
-msgstr "<guilabel>Alto</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:565
-msgid "Use this spin box to specify the height of the paper."
+#. (itstool) path: info/desc
+#: C/shortcuts.page:7
+msgid "See a list of all shortcuts."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:568
-msgid "<guilabel>Feed orientation</guilabel>"
-msgstr "<guilabel>Orientación da alimentación</guilabel>"
+#. (itstool) path: credit/name
+#: C/shortcuts.page:19
+msgid "Taufan Lubis"
+msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:570
+#. (itstool) path: credit/name
+#: C/shortcuts.page:23
+msgid "Ronaldi Santosa"
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/shortcuts.page:27
+msgid "Ibnu Amansyah"
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/shortcuts.page:35 C/synctex-support.page:14
+msgid "Germán Poo-Caamaño"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:46
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/shortcuts.page:48
+msgid "Default shortcuts"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/shortcuts.page:50
+msgid "Opening, closing, saving and printing"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:53
+msgid "Open a document."
+msgstr "Abre un documento"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:54
+msgid "<keyseq><key>Ctrl</key><key>O</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:57
+msgid "Open a copy of the current document."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:58
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:61
+msgid "Save a copy of the current document with a new file name."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:63
+msgid "<keyseq><key>Ctrl</key><key>S</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:66
+msgid "Print the current document."
+msgstr "Imprime o documento actual"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:67
+msgid "<keyseq><key>Ctrl</key><key>P</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:70
+msgid "Close the current document window."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:71
+msgid "<keyseq><key>Ctrl</key><key>W</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:74
+msgid "Reload the document (effectively closes and re-opens the document)."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:76
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:85
+msgid "Move up/down a page."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:86
+msgid "Arrow keys"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:89
+msgid "Move up/down a page several lines at a time."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:90
+msgid "<key>Page Up</key> / <key>Page Down</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:93
+msgid "Go to the previous page."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:94
+msgid "<keyseq><key>Ctrl</key><key>Page Up</key></keyseq> / <key>P</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:98
+msgid "Go to the next page."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:99
+msgid "<keyseq><key>Ctrl</key><key>Page Down</key></keyseq> / <key>N</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:103
+msgid "Go to page number."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:104
 msgid ""
-"Use this drop-down list to select the orientation of the paper in the "
-"printer."
+"<keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and"
+" <key>Enter</key>"
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:573
-msgid "<guilabel>Page orientation</guilabel>"
-msgstr "<guilabel>Orientación da páxina</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:575
-msgid "Use this drop-down list to select the page orientation."
-msgstr ""
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:578
-msgid "<guilabel>Layout</guilabel>"
-msgstr "<guilabel>Disposición</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:580
+#. (itstool) path: td/p
+#: C/shortcuts.page:107
 msgid ""
-"Use this drop-down list to select the page layout. A preview of each layout "
-"that you select is displayed in the <guilabel>Preview</guilabel> area."
+"Go to the beginning of a page (beginning of the document if "
+"<gui>Continuous</gui> is selected in the main menu in the top-right corner)."
 msgstr ""
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:583
-msgid "<guilabel>Paper Tray</guilabel>"
-msgstr "<guilabel>Bandexa do papel</guilabel>"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:585
-msgid "Use this drop-down list to select the paper tray."
-msgstr "Use esta lista despregábel para seleccionar  a bandexa do papel."
-
-#. (itstool) path: sect2/title
-#: C/index.docbook:595
-msgid "To Copy a Document"
-msgstr "Para copiar un documento"
-
-#. (itstool) path: sect2/para
-#: C/index.docbook:596
-msgid "To copy a file, perform the following steps:"
+#. (itstool) path: td/p
+#: C/shortcuts.page:109
+msgid "<key>Home</key>"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:600
+#. (itstool) path: td/p
+#: C/shortcuts.page:112
 msgid ""
-"Choose <menuchoice> <guimenu>File</guimenu> <guimenuitem>Save a "
-"Copy</guimenuitem> </menuchoice>."
+"Go to the end of a page (end of the document if <gui>Continuous</gui> is "
+"selected in the main menu in the top-right corner)."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:605
+#. (itstool) path: td/p
+#: C/shortcuts.page:114
+msgid "<key>End</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:117
+msgid "Go to the beginning of the document."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:118
+msgid "<keyseq><key>Ctrl</key><key>Home</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:121
+msgid "Go to the end of the document."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:122
+msgid "<keyseq><key>Ctrl</key><key>End</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:125
+msgid "Add a bookmark in the current page."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:126
+msgid "<keyseq><key>Ctrl</key><key>D</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:129
+msgid "Delete the bookmark in the current page if there is one."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:130
+msgid "<keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:133
+msgid "Display the side pane with a table of contents and bookmarks."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:134
+msgid "<key>F9</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:137
 msgid ""
-"Type the new filename in the <guilabel>Filename</guilabel> text box in the "
-"<guilabel>Save a Copy</guilabel> dialog."
+"Enable caret navigation placing a moveable cursor in text pages, allowing "
+"you to move around and select text with the keyboard."
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:608
+#. (itstool) path: td/p
+#: C/shortcuts.page:138
+msgid "<key>F7</key>"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/shortcuts.page:144
+msgid "Selecting and copying text"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:147
+msgid "Copy highlighted text."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:148
 msgid ""
-"If necessary, specify the location of the copied document. By default, "
-"copies are saved in your home directory."
+"<keyseq><key>Ctrl</key><key>C</key></keyseq> / "
+"<keyseq><key>Ctrl</key><key>Insert</key></keyseq>"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:613
-msgid "Click <guibutton>Save</guibutton>."
-msgstr "Prema en <guibutton>Gardar</guibutton>."
-
-#. (itstool) path: sect2/title
-#: C/index.docbook:622
-msgid "To Work With Password-Protected Documents"
+#. (itstool) path: td/p
+#: C/shortcuts.page:151
+msgid "Select all the text in a document."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:623
-msgid "An author can use the following password levels to protect a document:"
+#. (itstool) path: td/p
+#: C/shortcuts.page:152
+msgid "<keyseq><key>Ctrl</key><key>A</key></keyseq>"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:628
-msgid "User password that allows others only to read the document."
+#. (itstool) path: section/title
+#: C/shortcuts.page:158
+msgid "Finding text"
 msgstr ""
 
-#. (itstool) path: listitem/para
-#: C/index.docbook:632
+#. (itstool) path: td/p
+#: C/shortcuts.page:161
 msgid ""
-"Master password that allows others to perform additional actions, such as "
-"print the document."
+"Show the toolbar that lets you search for words in the document. The search "
+"box is automatically highlighted when you press this, and the search will "
+"start as soon as you type some text. If you select a text in the document "
+"before searching, then the search will start using that text as input."
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:636
+#. (itstool) path: td/p
+#: C/shortcuts.page:168
+msgid "<keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:171
+msgid "Go to the next search result."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:172
+msgid "<keyseq><key>Ctrl</key><key>G</key></keyseq> / <key>F3</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:175
+msgid "Go to the previous search result."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:176
 msgid ""
-"When you try to open a password-protected document, <application>Atril "
-"Document Viewer</application> displays a security dialog. Type either the "
-"user password or the master password in the <guilabel>Enter document "
-"password</guilabel> text box, then click <guibutton>Open "
-"Document</guibutton>."
+"<keyseq><key>Shift</key><key>Ctrl</key><key>G</key></keyseq> / "
+"<keyseq><key>Shift</key><key>F3</key></keyseq>"
 msgstr ""
 
-#. (itstool) path: sect2/title
-#: C/index.docbook:643
-msgid "To Close a Document"
-msgstr "Para pechar un documento"
+#. (itstool) path: section/title
+#: C/shortcuts.page:182
+msgid "Rotating and zooming"
+msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:644
+#. (itstool) path: td/p
+#: C/shortcuts.page:185
+msgid "Rotate the pages 90 degrees counter-clockwise."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:186
+msgid "<keyseq><key>Ctrl</key><key>Left arrow</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:189
+msgid "Rotate the pages 90 degrees clockwise."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:190
+msgid "<keyseq><key>Ctrl</key><key>Right arrow</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:194
+msgid "Default zoom."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:195
+msgid "<keyseq><key>Ctrl</key><key>0</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:198
+msgid "Zoom in."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:199
 msgid ""
-"To close a document, choose <menuchoice> <guimenu>File</guimenu> "
-"<guimenuitem>Close</guimenuitem> </menuchoice>."
+"<keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / "
+"<keyseq><key>Ctrl</key><key>=</key></keyseq>"
 msgstr ""
 
-#. (itstool) path: sect2/para
-#: C/index.docbook:646
+#. (itstool) path: td/p
+#: C/shortcuts.page:203
+msgid "Zoom out."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:204
+msgid "<keyseq><key>Ctrl</key><key>-</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:207
+msgid "Fit the page into the window."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:208
+msgid "<key>F</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:211
+msgid "Fit the content width to the space available."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:212 C/shortcuts.page:258
+msgid "<key>W</key>"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/shortcuts.page:218
+msgid "Window"
+msgstr "Xanela"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:221
+msgid "Use the full screen to view the document."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:222
+msgid "<key>F11</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:225
+msgid "Start a presentation."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:226
+msgid "<key>F5</key> / <keyseq><key>Shift</key><key>F5</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/shortcuts.page:232
+msgid "Document view"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:235
+msgid "Invert background and text colors."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:236
+msgid "<keyseq><key>Ctrl</key><key>I</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:239
+msgid "Swap between continuous and page by page view of the document."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:240
+msgid "<key>C</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:243
+msgid "Display two pages side by side."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:244
+msgid "<key>D</key>"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/shortcuts.page:250
+msgid "Presentation mode"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:253
+msgid "Toggle black screen."
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:254
+msgid "<key>B</key> / <key>.</key>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:257
+msgid "Toggle white screen."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/singlesided-npages.page:26
 msgid ""
-"If the window is the last <application>Atril Document Viewer</application> "
-"window open, the application exits."
+"If the number of pages in your PDF document is not a multiple of 4, you "
+"should add the appropriate number of blank pages (1, 2 or 3) to make it a "
+"multiple of 4. To do so, you can:"
 msgstr ""
 
-#. (itstool) path: sect1/title
-#: C/index.docbook:655
-msgid "Shortcuts"
-msgstr "Atallos"
+#. (itstool) path: page/p
+#: C/singlesided-npages.page:43
+msgid "To print:"
+msgstr ""
 
-#. (itstool) path: sect1/para
-#: C/index.docbook:656
+#. (itstool) path: item/p
+#: C/singlesided-npages.page:71
 msgid ""
-"Below is a list of all shortcuts present in <application>Atril Document "
-"Viewer</application>:"
+"Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One "
+"Sided</gui>."
 msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:664
-msgid "Shortcut"
-msgstr "Atallo"
+#. (itstool) path: item/p
+#: C/singlesided-npages.page:74
+msgid "In the <gui>Pages per side</gui> menu, select <gui>2</gui>."
+msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:671
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>"
+#. (itstool) path: item/p
+#: C/singlesided-npages.page:80
+msgid "In the <gui>Only print</gui> menu, select <gui>Odd sheets</gui>."
+msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:672
-msgid "Open an existing document"
-msgstr "Abrir un documento existente"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:675
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>S</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:676
-msgid "Save a copy of the current document"
-msgstr "Gardar unha copia do documento actual"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:679
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:680
-msgid "Print document"
-msgstr "Imprimir un documento"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:683
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:684
-msgid "Close window"
-msgstr "Pechar a xanela"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:687
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:688
-msgid "Copy selection"
-msgstr "Copiar a selección"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:691
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:692
-msgid "Select All"
-msgstr "Seleccionar todo"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:696
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:697
-msgid "<keycap>/</keycap> (slash)"
-msgstr "<keycap>/</keycap> (barra)"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:699
-msgid "Find a word or phrase in the document"
-msgstr "Buscar unha palabra ou frase no documento"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:703
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>G</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:704
-msgid "<keycap>F3</keycap>"
-msgstr "<keycap>F3</keycap>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:706
-msgid "Find next"
-msgstr "Buscar o seguinte"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:710
+#. (itstool) path: item/p
+#: C/singlesided-npages.page:90
 msgid ""
-"<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (plus sign)"
+"When all the pages have printed, flip the pages over and place them back in "
+"the printer."
 msgstr ""
-"<keycombo><keycap>Ctrl</keycap><keycap>+</keycap></keycombo> (signo máis)"
 
-#. (itstool) path: entry/para
-#: C/index.docbook:711
-msgid "<keycap>+</keycap>"
-msgstr "<keycap>+</keycap>"
+#. (itstool) path: item/p
+#: C/singlesided-npages.page:103
+msgid "In the <gui>Only print</gui> menu, select <gui>Even sheets</gui>."
+msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:712
-msgid "<keycap>=</keycap>"
-msgstr "<keycap>=</keycap>"
+#. (itstool) path: info/desc
+#: C/synctex-beamer.page:7
+msgid "Using SyncTeX with the LaTeX Beamer class."
+msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:714
-msgid "Zoom in"
-msgstr "Ampliar"
+#. (itstool) path: page/title
+#: C/synctex-beamer.page:18
+msgid "Beamer with SyncTeX"
+msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:718
+#. (itstool) path: page/p
+#: C/synctex-beamer.page:19
+msgid "Beamer is a LaTeX class for creating slides for presentations."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex-beamer.page:22
 msgid ""
-"<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (minus sign)"
-msgstr ""
-"<keycombo><keycap>Ctrl</keycap><keycap>-</keycap></keycombo> (signo menos)"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:719
-msgid "<keycap>-</keycap>"
-msgstr "<keycap>-</keycap>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:721
-msgid "Zoom out"
-msgstr "Reducir"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:724
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>"
-msgstr "<keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:725
-msgid "Reload the document"
-msgstr "Recargar o documento"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:729
-msgid "<keycap>Page Up</keycap>"
+"You can perform forward and backward search in a <em>Beamer-LaTeX</em> "
+"presentation in a similar fashion to <link xref=\"synctex-"
+"search\">searching</link> through other TeX files compiled with SyncTeX. "
+"However the search brings you to the corresponding frame (slide), not "
+"necessarily the associated line of text. This difference is outlined in "
+"detail below."
 msgstr ""
 
-#. (itstool) path: entry/para
-#: C/index.docbook:730
-msgid "Go to the previous page"
-msgstr "Ir á páxina anterior"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:733
-msgid "<keycap>Page Down</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:734
-msgid "Go to the next page"
-msgstr "Ir á páxina seguinte"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:738
-msgid "<keycap>Space</keycap>"
-msgstr "<keycap>Espazo</keycap>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:739
-msgid "<keycombo><keycap>Shift</keycap><keycap>Backspace</keycap></keycombo>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:740
-msgid "<keycap>Return</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:742
-msgid "Scroll forward"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:746
-msgid "<keycombo><keycap>Shift</keycap><keycap>Space</keycap></keycombo>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:747
-msgid "<keycap>Backspace</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:748
-msgid "<keycombo><keycap>Shift</keycap><keycap>Return</keycap></keycombo>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:750
-msgid "Scroll backward"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:754
-msgid "<keycombo><keycap>Shift</keycap><keycap>Page Up</keycap></keycombo>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:755
-msgid "Go a bunch of pages up"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:758
-msgid "<keycombo><keycap>Shift</keycap><keycap>Page Down</keycap></keycombo>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:759
-msgid "Go a bunch of pages down"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:762
-msgid "<keycap>Home</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:763
-msgid "Go to the first page"
-msgstr "Ir á primeira páxina"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:766
-msgid "<keycap>End</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:767
-msgid "Go to the last page"
-msgstr "Ir á última páxina"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:770
-msgid "<keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:771
-msgid "Go to page by number or label"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:774
-msgid "<keycap>F1</keycap>"
-msgstr "<keycap>F1</keycap>"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:775
-msgid "Help"
-msgstr "Axuda"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:778
-msgid "<keycap>F5</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:779
-msgid "Run document as presentation"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:782
-msgid "<keycap>F9</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:783
-msgid "Show or hide the side pane"
-msgstr "Amosar ou agochar o panel lateral"
-
-#. (itstool) path: entry/para
-#: C/index.docbook:786
-msgid "<keycap>F11</keycap>"
-msgstr ""
-
-#. (itstool) path: entry/para
-#: C/index.docbook:787
-msgid "Toggle fullscreen mode"
-msgstr "Alternar o modo de pantalla completa"
-
-#. (itstool) path: para/ulink
-#: C/legal.xml:9
-msgid "link"
-msgstr "ligazón"
-
-#. (itstool) path: legalnotice/para
-#: C/legal.xml:2
+#. (itstool) path: section/title
+#: C/synctex-beamer.page:26
 msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
-"with this manual."
+"Forward search: from Beamer-LaTeX source to PDF (<app>pluma</app> to Atril)"
 msgstr ""
-"Autorízase a copia, distribución e/ou modificación deste documento baixo os "
-"termos da Licenza de Documentación Libre de GNU (GFDL), versión 1.1 ou "
-"calquera outra versión posterior publicada pola Free Software Foundation sen"
-" seccións invariantes, sen textos de cuberta e sen textos de cuberta "
-"traseira. Pode atopar unha copia da GFDL en <_:ulink-1/> ou no ficheiro "
-"COPYING-DOCS distribuído con este manual."
+
+#. (itstool) path: section/p
+#: C/synctex-beamer.page:27
+msgid ""
+"With <link xref=\"synctex-search#forward-search\">forward search</link>, you"
+" can click on a specific line of Beamer-LaTeX source code. The <em>top</em> "
+"of the corresponding slide in the PDF will be outlined in red. This will "
+"often be the <em>frametitle</em>."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/synctex-beamer.page:34
+msgid ""
+"Backward search: from PDF to Beamer-LaTeX source (from Atril to "
+"<app>pluma</app>)"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-beamer.page:35
+msgid ""
+"With <link xref=\"synctex-search#backward-search\">backward search</link>, "
+"you click on some text in a frame, and the corresponding line of LaTex code "
+"that ends that particular frame is highlighted. This will usually be the "
+"line:"
+msgstr ""
+
+#. (itstool) path: section/code
+#: C/synctex-beamer.page:38
+#, no-wrap
+msgid "\\end{frame}"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-beamer.page:39
+msgid "corresponding to the frame you clicked on."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/synctex-compile.page:7
+msgid "How to compile your TeX document with SyncTeX"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/synctex-compile.page:18
+msgid "Compile TeX with SyncTeX"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex-compile.page:19
+msgid ""
+"Adding the line <em>\\synctex=1</em> in the preamble of your TeX file will "
+"trigger synchronization with SyncTeX."
+msgstr ""
+
+#. (itstool) path: page/code
+#: C/synctex-compile.page:22
+#, no-wrap
+msgid ""
+"\n"
+"\\documentclass{article}\n"
+"\\synctex=1\n"
+"\\usepackage{fullpage}\n"
+"\\begin{document}\n"
+"...\n"
+"\\end{document}\n"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex-compile.page:30
+msgid ""
+"Alternatively, you can run the pdflatex command with the <em>-synctex=1</em>"
+" option:"
+msgstr ""
+
+#. (itstool) path: page/screen
+#: C/synctex-compile.page:33
+#, no-wrap
+msgid "pdflatex -synctex=1 yourFile.tex"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/synctex-editors.page:7
+msgid "Which editor can you use to edit your TEX file?"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/synctex-editors.page:19
+msgid "Supported editors"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/synctex-editors.page:21
+msgid "<app>pluma</app>"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-editors.page:22
+msgid ""
+"<link xref=\"synctex-search#forward-search\">Forward Search</link> (from "
+"<app>pluma</app> to Atril) and <link xref=\"synctex-search#backward-"
+"search\">Backward search</link> (from Atril to <app>pluma</app>) are both "
+"supported."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/synctex-editors.page:27
+msgid "Vim-latex"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-editors.page:28
+msgid ""
+"The <app>pluma</app> plugin contains a python script "
+"(<file>atril_dbus.py</file>) that can be used to get SyncTeX working with "
+"Vim. In order to use vim-latex together with Atril you need to follow the "
+"next steps:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-editors.page:34
+msgid ""
+"Copy the <file>atril_dbus.py</file> to some directory in your path and give "
+"it +x permissions."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-editors.page:40
+msgid "Modify your <file>~/.vimrc</file> file and add the following lines."
+msgstr ""
+
+#. (itstool) path: item/code
+#: C/synctex-editors.page:43
+#, no-wrap
+msgid ""
+"\n"
+"let g:Tex_ViewRule_pdf = 'atril_dbus.py'\n"
+"let g:Tex_DefaultTargetFormat = 'pdf'\n"
+"let g:Tex_CompileRule_pdf = 'pdflatex --synctex=1 -interaction=nonstopmode $*'\n"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-editors.page:51
+msgid ""
+"Now you can use Forward search from vim-latex by typing \\ls. Backward "
+"search is not yet supported."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/synctex.page:7
+msgid "SyncTeX support is available."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/synctex.page:18
+msgid "What is SyncTeX?"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex.page:19
+msgid ""
+"SyncTeX is a method that enables synchronization between a TeX source file "
+"and the resulting PDF output."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/synctex-search.page:7
+msgid "Flip between Atril and <app>pluma</app>."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/synctex-search.page:19
+msgid "Search with SyncTeX"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex-search.page:20
+msgid ""
+"After you <link xref=\"synctex-compile\">compile your TeX file with "
+"SyncTeX</link>, you will be able to search. SyncTeX even supports forward "
+"and backward search from an included file."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/synctex-search.page:25
+msgid "Forward search: from TeX to PDF (from <app>pluma</app> to Atril)"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-search.page:26
+msgid ""
+"Forward search allows you to click on a specific section of TeX source code,"
+" and jump to the associated position in the PDF. To perform forward search:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-search.page:31
+msgid "Click on a line in the TeX file."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-search.page:36
+msgid ""
+"In <app>pluma</app>, click <guiseq><gui>Tools</gui> <gui>Forward "
+"Search</gui></guiseq>. The corresponding line in the PDF will be outlined in"
+" red."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-search.page:39
+msgid ""
+"Alternatively, you can press "
+"<keyseq><key>Ctrl</key><key>Alt</key><key>F</key></keyseq>, or "
+"<keyseq><key>Ctrl</key>left click</keyseq>. The corresponding line in the "
+"PDF will be outlined in red."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/synctex-search.page:45
+msgid ""
+"If the corresponding PDF file is not open, performing a forward search will "
+"open the PDF in Atril."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-search.page:49
+msgid "If you have a complex project with several TeX files you can put"
+msgstr ""
+
+#. (itstool) path: section/code
+#: C/synctex-search.page:52
+#, no-wrap
+msgid "% mainfile: mainfile.tex"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-search.page:53
+msgid ""
+"either in the first or last three lines of each included TeX file, and "
+"forward search will work. Backward search should always work, even if you "
+"don't add the modeline."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/synctex-search.page:60
+msgid "Backward search: from PDF to TeX (from Atril to <app>pluma</app>)"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-search.page:61
+msgid ""
+"Backward search allows you to click on a specific line in the PDF file, and "
+"jump to the associated line in the TeX source code."
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/synctex-search.page:64
+msgid ""
+"You can perform a backward search by pressing <keyseq><key>Ctrl</key>left "
+"click</keyseq> in Atril. The corresponding line in the TeX source code will "
+"be highlighted."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/synctex-support.page:7
+msgid "How to add support for SyncTeX."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/synctex-support.page:23
+msgid "Set-up SyncTeX"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex-support.page:24
+msgid ""
+"The following packages need to be installed in order to add support for "
+"SyncTeX:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-support.page:29
+msgid "A LaTeX engine with SyncTeX support, such as <app>pdflatex</app>."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-support.page:34
+msgid ""
+"A text editor with SyncTeX support, such as <app>pluma</app> with pluma-"
+"plugins installed."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/synctex-support.page:40
+msgid "In <app>pluma</app>, enable the SyncTeX Plugin:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-support.page:45
+msgid ""
+"Click "
+"<guiseq><gui>Edit</gui><gui>Preferences</gui><gui>Plugins</gui></guiseq> "
+"tab."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/synctex-support.page:50
+msgid "Check <gui>SyncTeX</gui>."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/textselection.page:7
+msgid ""
+"When you copy text, the text that is pasted might be different from what you"
+" had selected."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/textselection.page:19
+msgid "Why didn't the text I selected copy properly?"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/textselection.page:22
+msgid ""
+"If you highlight and copy text from a document using Atril and then paste it"
+" into another application, the formatting may alter. It may also contain "
+"different characters than the original selection. This often happens when "
+"copying text from a PDF document with multiple columns."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/textselection.page:28
+msgid ""
+"This problem happens because of how some document formats handle text. The "
+"actual text in the document is stored differently from the way it is "
+"displayed. This may result in a copy that does not appear as expected."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/textselection.page:34
+msgid ""
+"Unfortunately, there is no real way of fixing this problem. Copying less "
+"text at a time, or copying the text into a text editor (like "
+"<app>pluma</app>) may minimize the problem."
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/translate.page:7
+msgid "Localize <app>Atril.</app>"
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"Atrils user interface and documentation is being translated by a world-wide "
+"volunteer community. You are welcome to participate."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid "There are many languages for which translations are still needed."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link "
+"href=\"https://www.transifex.com/signin/\">create an account</link> and join"
+" the <link href=\"https://www.transifex.com/mate/MATE/\">translation "
+"team</link> for your language. This will give you the ability to upload new "
+"translations."
+msgstr ""

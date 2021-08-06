@@ -10,8 +10,8 @@
 # בר בוכובזה <bokovzabox@gmail.com>, 2019
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2020
 # shy tzedaka <shaytzedaka123@gmail.com>, 2020
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2021-02-08 15:30+0100\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
+"Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>, 2021\n"
 "Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,7 +115,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "לא היה ניתן לטעון את הגופן „%s”\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
@@ -421,35 +421,35 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "אווופס!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "אוי!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "באסה!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "הוסטון, יש לנו בעיה"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3.. 2.. 1.. בום!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "אני היסטוריה"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
-msgstr ""
+msgstr "ארד לי למטה"
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
-msgstr ""
+msgstr "אני מריח עכבר"
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
@@ -458,7 +458,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: שגיאה: "
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
@@ -467,7 +467,7 @@ msgstr "שגיאה"
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: אזהרה: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
@@ -935,6 +935,8 @@ msgstr "הצגת מסמכים מרובי עמודים"
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 msgstr ""
+"MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;\n"
+"מסמך;מציג;מסמכים;קומיקס;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -946,7 +948,7 @@ msgstr "Override document restrictions, like restriction to copy or to print."
 
 #: data/org.mate.Atril.gschema.xml:17
 msgid "Automatically reload the document"
-msgstr ""
+msgstr "טעינת המסמך באופן אוטומטית"
 
 #: data/org.mate.Atril.gschema.xml:18
 msgid "Whether the document is automatically reloaded on file change."
@@ -1831,7 +1833,7 @@ msgstr ""
 
 #: shell/ev-window.c:5449
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "על אודות מציג המסמכים Atril"
 
 #: shell/ev-window.c:5450
 msgid ""
@@ -1878,7 +1880,7 @@ msgstr ""
 
 #: shell/ev-window.c:6128
 msgid "Don't show this message again"
-msgstr ""
+msgstr "לא להציג הודעה זה שוב"
 
 #: shell/ev-window.c:6437
 msgid "_File"
