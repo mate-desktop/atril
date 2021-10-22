@@ -125,20 +125,9 @@ ev_annotation_finalize (GObject *object)
 		annot->page = NULL;
 	}
 
-        if (annot->contents) {
-                g_free (annot->contents);
-                annot->contents = NULL;
-        }
-
-        if (annot->name) {
-                g_free (annot->name);
-                annot->name = NULL;
-        }
-
-        if (annot->modified) {
-                g_free (annot->modified);
-                annot->modified = NULL;
-        }
+        g_free (annot->contents);
+        g_free (annot->name);
+        g_free (annot->modified);
 
         G_OBJECT_CLASS (ev_annotation_parent_class)->finalize (object);
 }

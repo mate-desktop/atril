@@ -67,25 +67,10 @@ ev_attachment_finalize (GObject *object)
 {
 	EvAttachment *attachment = EV_ATTACHMENT (object);
 
-	if (attachment->priv->name) {
-		g_free (attachment->priv->name);
-		attachment->priv->name = NULL;
-	}
-
-	if (attachment->priv->description) {
-		g_free (attachment->priv->description);
-		attachment->priv->description = NULL;
-	}
-
-	if (attachment->priv->data) {
-		g_free (attachment->priv->data);
-		attachment->priv->data = NULL;
-	}
-
-	if (attachment->priv->mime_type) {
-		g_free (attachment->priv->mime_type);
-		attachment->priv->mime_type = NULL;
-	}
+	g_free (attachment->priv->name);
+	g_free (attachment->priv->description);
+	g_free (attachment->priv->data);
+	g_free (attachment->priv->mime_type);
 
 	if (attachment->priv->app) {
 		g_object_unref (attachment->priv->app);

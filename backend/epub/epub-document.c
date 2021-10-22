@@ -1780,33 +1780,13 @@ epub_document_finalize (GObject *object)
                        epub_document->tmp_archive_dir);
     }
 
-    if ( epub_document->contentList ) {
-            g_list_free_full(epub_document->contentList,(GDestroyNotify)free_tree_nodes);
-            epub_document->contentList = NULL;
-    }
+    g_list_free_full (epub_document->contentList, (GDestroyNotify) free_tree_nodes);
+    g_list_free_full (epub_document->index, (GDestroyNotify) free_link_nodes);
+    g_free (epub_document->tmp_archive_dir);
+    g_free (epub_document->docTitle);
+    g_free (epub_document->archivename);
+    g_free (epub_document->documentdir);
 
-    if (epub_document->index) {
-        g_list_free_full(epub_document->index,(GDestroyNotify)free_link_nodes);
-        epub_document->index = NULL;
-    }
-
-    if ( epub_document->tmp_archive_dir) {
-        g_free (epub_document->tmp_archive_dir);
-        epub_document->tmp_archive_dir = NULL;
-    }
-
-    if (epub_document->docTitle) {
-        g_free(epub_document->docTitle);
-        epub_document->docTitle = NULL;
-    }
-    if ( epub_document->archivename) {
-        g_free (epub_document->archivename);
-        epub_document->archivename = NULL;
-    }
-    if ( epub_document->documentdir) {
-        g_free (epub_document->documentdir);
-        epub_document->documentdir = NULL;
-    }
     G_OBJECT_CLASS (epub_document_parent_class)->finalize (object);
 }
 

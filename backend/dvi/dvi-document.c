@@ -215,11 +215,8 @@ dvi_document_finalize (GObject *object)
 	}
 	g_mutex_unlock (&dvi_context_mutex);
 
-	if (dvi_document->params)
-		g_free (dvi_document->params);
-
-	if (dvi_document->exporter_filename)
-		g_free (dvi_document->exporter_filename);
+	g_free (dvi_document->params);
+	g_free (dvi_document->exporter_filename);
 
 	if (dvi_document->exporter_opts)
 		g_string_free (dvi_document->exporter_opts, TRUE);

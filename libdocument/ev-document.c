@@ -105,15 +105,8 @@ ev_document_finalize (GObject *object)
 {
 	EvDocument *document = EV_DOCUMENT (object);
 
-	if (document->priv->uri) {
-		g_free (document->priv->uri);
-		document->priv->uri = NULL;
-	}
-
-	if (document->priv->page_sizes) {
-		g_free (document->priv->page_sizes);
-		document->priv->page_sizes = NULL;
-	}
+	g_free (document->priv->uri);
+	g_free (document->priv->page_sizes);
 
 	if (document->priv->page_labels) {
 		gint i;
@@ -122,13 +115,10 @@ ev_document_finalize (GObject *object)
 			g_free (document->priv->page_labels[i]);
 		}
 		g_free (document->priv->page_labels);
-		document->priv->page_labels = NULL;
 	}
 
-	if (document->priv->info) {
-		ev_document_info_free (document->priv->info);
-		document->priv->info = NULL;
-	}
+	ev_document_info_free (document->priv->info);
+
 #ifdef ENABLE_SYNCTEX
 	if (document->priv->synctex_scanner) {
 		synctex_scanner_free (document->priv->synctex_scanner);

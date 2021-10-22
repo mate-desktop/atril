@@ -391,8 +391,7 @@ djvu_document_finalize (GObject *object)
 	if (djvu_document->opts)
 	    g_string_free (djvu_document->opts, TRUE);
 
-	if (djvu_document->ps_filename)
-	    g_free (djvu_document->ps_filename);
+	g_free (djvu_document->ps_filename);
 
 	ddjvu_context_release (djvu_document->d_context);
 	ddjvu_format_release (djvu_document->d_format);
