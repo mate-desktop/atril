@@ -202,11 +202,16 @@ ev_page_action_widget_document_changed_cb (EvDocumentModel    *model,
 		g_object_unref (action_widget->document);
 	action_widget->document = document;
 
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&action_widget->signal_id,
+	                        action_widget->doc_model);
+#else
 	if (action_widget->signal_id > 0) {
 		g_signal_handler_disconnect (action_widget->doc_model,
 					     action_widget->signal_id);
 		action_widget->signal_id = 0;
 	}
+#endif
 	action_widget->signal_id =
 		g_signal_connect_object (action_widget->doc_model,
 					 "page-changed",
@@ -240,6 +245,13 @@ ev_page_action_widget_finalize (GObject *object)
 	EvPageActionWidget *action_widget = EV_PAGE_ACTION_WIDGET (object);
 
 	if (action_widget->doc_model != NULL) {
+#if GLIB_CHECK_VERSION(2,62,0)
+		if ((action_widget->signal_id != 0) &&
+		    (g_signal_handler_is_connected (action_widget->doc_model,
+		                                    action_widget->signal_id)))
+			g_clear_signal_handler (&action_widget->signal_id,
+			                        action_widget->doc_model);
+#else
 		if (action_widget->signal_id > 0) {
 			if (g_signal_handler_is_connected(action_widget->doc_model,
 							  action_widget->signal_id))
@@ -247,6 +259,7 @@ ev_page_action_widget_finalize (GObject *object)
 							     action_widget->signal_id);
 			action_widget->signal_id = 0;
 		}
+#endif
 		g_object_remove_weak_pointer (G_OBJECT (action_widget->doc_model),
 					      (gpointer)&action_widget->doc_model);
 		action_widget->doc_model = NULL;
