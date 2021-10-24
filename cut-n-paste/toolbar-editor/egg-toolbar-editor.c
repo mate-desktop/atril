@@ -149,6 +149,11 @@ egg_toolbar_editor_disconnect_model (EggToolbarEditor *t)
     {
       handler = priv->sig_handlers[i];
 
+#if GLIB_CHECK_VERSION(2,62,0)
+      if ((handler == 0) || !g_signal_handler_is_connected (model, handler))
+        continue;
+      g_clear_signal_handler (&handler, model);
+#else
       if (handler != 0)
         {
           if (g_signal_handler_is_connected (model, handler))
@@ -158,6 +163,7 @@ egg_toolbar_editor_disconnect_model (EggToolbarEditor *t)
 
           priv->sig_handlers[i] = 0;
         }
+#endif
     }
 }
 
