@@ -34,7 +34,7 @@ struct _EphyZoomControlPrivate
 	float zoom;
 	float min_zoom;
 	float max_zoom;
-	guint handler_id;
+	gulong handler_id;
 };
 
 enum

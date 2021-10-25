@@ -43,7 +43,7 @@ struct _EvPageActionWidget
 
 	GtkWidget *entry;
 	GtkWidget *label;
-	guint signal_id;
+	gulong signal_id;
 	GtkTreeModel *filter_model;
 	GtkTreeModel *model;
 };

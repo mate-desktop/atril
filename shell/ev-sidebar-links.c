@@ -39,9 +39,9 @@ struct _EvSidebarLinksPrivate {
 	GtkWidget *tree_view;
 
 	/* Keep these ids around for blocking */
-	guint selection_id;
-	guint page_changed_id;
-	guint row_activated_id;
+	gulong selection_id;
+	gulong page_changed_id;
+	gulong row_activated_id;
 
 	EvJob *job;
 	GtkTreeModel *model;
@@ -643,7 +643,7 @@ job_finished_callback (EvJobLinks     *job,
 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (priv->tree_view));
 	gtk_tree_selection_set_mode (selection, GTK_SELECTION_SINGLE);
 
-	if (priv->selection_id <= 0) {
+	if (priv->selection_id == 0) {
 		priv->selection_id =
 			g_signal_connect (selection, "changed",
 					  G_CALLBACK (selection_changed_callback),
@@ -653,7 +653,7 @@ job_finished_callback (EvJobLinks     *job,
 		g_signal_connect_swapped (priv->doc_model, "page-changed",
 					  G_CALLBACK (update_page_callback),
 					  sidebar_links);
-	if (priv->row_activated_id <= 0) {
+	if (priv->row_activated_id == 0) {
 		priv->row_activated_id =
 			g_signal_connect (priv->tree_view, "row-activated",
 					  G_CALLBACK (row_activated_callback),
