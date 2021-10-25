@@ -56,7 +56,7 @@ struct _EvSidebarAnnotationsPrivate {
 	GtkWidget *annot_text_item;
 
 	EvJob *job;
-	guint selection_changed_id;
+	gulong selection_changed_id;
 };
 
 static void ev_sidebar_annotations_page_iface_init (EvSidebarPageInterface *iface);
