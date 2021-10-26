@@ -51,14 +51,12 @@ static const EvStockIcon stock_icons [] = {
 	{ EV_STOCK_SEND_TO,          "document-send"},
 };
 
-static gchar *ev_icons_path;
+#define EV_ICONS_PATH ATRILDATADIR "/icons"
 
 static void
 ev_stock_icons_add_icons_path_for_screen (GdkScreen *screen)
 {
 	GtkIconTheme *icon_theme;
-
-	g_return_if_fail (ev_icons_path != NULL);
 
 	icon_theme = screen ? gtk_icon_theme_get_for_screen (screen) : gtk_icon_theme_get_default ();
 	if (icon_theme) {
@@ -71,13 +69,13 @@ ev_stock_icons_add_icons_path_for_screen (GdkScreen *screen)
 		 */
 		gtk_icon_theme_get_search_path (icon_theme, &path, &n_paths);
 		for (i = n_paths - 1; i >= 0; i--) {
-			if (g_ascii_strcasecmp (ev_icons_path, path[i]) == 0)
+			if (g_ascii_strcasecmp (EV_ICONS_PATH, path[i]) == 0)
 				break;
 		}
 
 		if (i < 0)
 			gtk_icon_theme_append_search_path (icon_theme,
-							   ev_icons_path);
+							   EV_ICONS_PATH);
 
 		g_strfreev (path);
 	}
@@ -94,8 +92,6 @@ ev_stock_icons_init (void)
 	GtkIconFactory *factory;
 	GtkIconSource *source;
 	gint i;
-
-	ev_icons_path = g_build_filename (ATRILDATADIR, "icons", NULL);
 
         factory = gtk_icon_factory_new ();
         gtk_icon_factory_add_default (factory);
@@ -128,10 +124,3 @@ ev_stock_icons_set_screen (GdkScreen *screen)
 
 	ev_stock_icons_add_icons_path_for_screen (screen);
 }
-
-void
-ev_stock_icons_shutdown (void)
-{
-	g_free (ev_icons_path);
-}
-

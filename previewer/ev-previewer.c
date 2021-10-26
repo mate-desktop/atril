@@ -163,7 +163,6 @@ main (gint argc, gchar **argv)
 		ev_previewer_unlink_tempfile (print_settings);
 
 	ev_shutdown ();
-	ev_stock_icons_shutdown ();
 	g_object_unref (model);
 
 	return 0;
