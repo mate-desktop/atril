@@ -2174,6 +2174,19 @@ show_loading_progress (EvWindow *ev_window)
 	return FALSE;
 }
 
+#if !GLIB_CHECK_VERSION(2, 62, 0)
+/* Non-year-2038-proof compatibility with GLib < 2.62 */
+static GDateTime *
+_g_file_info_get_modification_date_time (GFileInfo *info)
+{
+       GTimeVal mtime;
+
+       g_file_info_get_modification_time (info, &mtime);
+       return g_date_time_new_from_timeval_utc (&mtime);
+}
+#define g_file_info_get_modification_date_time _g_file_info_get_modification_date_time
+#endif
+
 static void
 ev_window_load_remote_failed (EvWindow *ev_window,
 			      GError   *error)
