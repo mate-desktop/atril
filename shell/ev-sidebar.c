@@ -26,6 +26,8 @@
 
 #include <string.h>
 
+#include <glib.h>
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
@@ -362,6 +364,7 @@ ev_sidebar_init (EvSidebar *ev_sidebar)
 	g_signal_connect (close_button, "clicked",
 			  G_CALLBACK (ev_sidebar_close_clicked_cb),
 			  ev_sidebar);
+	gtk_widget_set_tooltip_text (close_button, _("Hide sidebar"));
 
 	image = gtk_image_new_from_icon_name ("window-close",
 	                                      GTK_ICON_SIZE_MENU);
