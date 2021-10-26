@@ -27,9 +27,6 @@
 #ifndef EV_DOCUMENT_H
 #define EV_DOCUMENT_H
 
-#include <config.h>
-#include <glib/gi18n-lib.h>
-
 #include <glib-object.h>
 #include <glib.h>
 #include <gmodule.h>
