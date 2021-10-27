@@ -212,7 +212,6 @@ void	mdvi_flush_specials(void)
 {
 	DviSpecial *sp, *list;
 
-
 	for(list = (DviSpecial *)specials.head; (sp = list); ) {
 		list = sp->next;
 		if(sp->prefix) mdvi_free(sp->prefix);

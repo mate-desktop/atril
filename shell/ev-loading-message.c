@@ -174,4 +174,3 @@ ev_loading_message_new (void)
         return message;
 }
 
-

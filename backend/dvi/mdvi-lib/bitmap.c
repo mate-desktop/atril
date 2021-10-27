@@ -117,7 +117,6 @@ static Uchar bit_swap[] = {
 	0x1f, 0x9f, 0x5f, 0xdf, 0x3f, 0xbf, 0x7f, 0xff
 };
 
-
 /*
  * next we have three bitmap functions to convert bitmaps in LSB bit order
  * with 8, 16 and 32 bits per unit, to our internal format. The differences
@@ -191,7 +190,6 @@ BITMAP	*bitmap_convert_msb8(Uchar *data, int w, int h, int stride)
 		bitmap_print(stderr, bm);
 	return bm;
 }
-
 
 BITMAP	*bitmap_copy(BITMAP *bm)
 {

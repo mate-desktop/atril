@@ -834,7 +834,6 @@ int	mdvi_add_fontmap_file(const char *name, const char *fullpath)
 	return 0;
 }
 
-
 void	mdvi_flush_encodings(void)
 {
 	DviEncoding *enc;

@@ -443,7 +443,6 @@ ev_sidebar_add_page (EvSidebar   *ev_sidebar,
 	gtk_list_store_move_before(GTK_LIST_STORE(ev_sidebar->priv->page_model),
 					   &iter, NULL);
 
-
 	/* Set the first item added as active */
 	gtk_tree_model_get_iter_first (ev_sidebar->priv->page_model, &iter);
 	gtk_tree_model_get (ev_sidebar->priv->page_model,

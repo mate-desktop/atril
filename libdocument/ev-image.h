@@ -62,7 +62,6 @@ const gchar *ev_image_save_tmp         (EvImage         *image,
 					GdkPixbuf       *pixbuf);
 const gchar *ev_image_get_tmp_uri      (EvImage         *image);
 
-
 G_END_DECLS
 
 #endif /* __EV_IMAGE_H__ */

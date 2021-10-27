@@ -149,7 +149,6 @@ ev_document_misc_get_page_border_size (gint       page_width,
 	}
 }
 
-
 void
 ev_document_misc_paint_one_page (cairo_t      *cr,
 				 GtkWidget    *widget,

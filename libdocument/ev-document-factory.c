@@ -106,7 +106,6 @@ get_compression_from_mime_type (const gchar *mime_type)
 	return EV_COMPRESSION_NONE;
 }
 
-
 /*
  * get_document_from_uri:
  * @uri: the document URI

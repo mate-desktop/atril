@@ -34,7 +34,6 @@ typedef struct EggToolbarEditorClass EggToolbarEditorClass;
 #define EGG_IS_TOOLBAR_EDITOR_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), EGG_TYPE_TOOLBAR_EDITOR))
 #define EGG_TOOLBAR_EDITOR_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), EGG_TYPE_TOOLBAR_EDITOR, EggToolbarEditorClass))
 
-
 typedef struct EggToolbarEditor EggToolbarEditor;
 typedef struct EggToolbarEditorPrivate EggToolbarEditorPrivate;
 
@@ -50,7 +49,6 @@ struct EggToolbarEditorClass
 {
   GtkBoxClass parent_class;
 };
-
 
 GType            egg_toolbar_editor_get_type     (void);
 GtkWidget        *egg_toolbar_editor_new         (GtkUIManager *manager,

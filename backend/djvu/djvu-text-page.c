@@ -23,7 +23,6 @@
 #include <libdjvu/miniexp.h>
 #include "djvu-text-page.h"
 
-
 /**
  * djvu_text_page_selection_process:
  * @page: #DjvuTextPage instance
@@ -116,7 +115,6 @@ djvu_text_page_limits_process (DjvuTextPage *page,
 	    	page->end = p;
 	}
 }
-
 
 static void
 djvu_text_page_limits (DjvuTextPage *page,
@@ -403,7 +401,6 @@ djvu_text_page_search (DjvuTextPage *page,
 
 	g_free (search_text);
 }
-
 
 /**
  * djvu_text_page_prepare_search:

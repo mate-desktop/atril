@@ -81,12 +81,9 @@
 
 #define MATCH(A,B)		(strncmp((A),(B), MAX_NAME) == 0)
 
-
-
 /*************************** GLOBALS ***********************/
 
 static char *ident = NULL; /* storage buffer for keywords */
-
 
 /* "shorts" for fast case statement
  * The values of each of these enumerated items correspond to an entry in the
@@ -175,7 +172,6 @@ static char *token(FILE *stream)
 
 } /* token */
 
-
 /*************************** linetoken *************************/
 
 /*  "linetoken" will get read all tokens until the EOL character from
@@ -202,7 +198,6 @@ static char *linetoken(FILE *stream)
     return(ident);	/* returns pointer to the token */
 
 } /* linetoken */
-
 
 /*************************** recognize *************************/
 
@@ -233,7 +228,6 @@ static enum parseKey recognize(char *ident)
     else return NOPE;
 
 } /* recognize */
-
 
 /************************* parseGlobals *****************************/
 
@@ -400,8 +394,6 @@ static BOOL parseGlobals(FILE *fp, GlobalFontInfo *gfi)
     return(error);
 
 } /* parseGlobals */
-
-
 
 #if 0 /* this function does not seem to be used anywhere */
 /************************* initializeArray ************************/
@@ -584,7 +576,6 @@ static int parseCharWidths(FILE *fp, int *cwi)
 
 } /* parseCharWidths */
 
-
 /************************* parseCharMetrics ************************/
 
 /*  This function is called by parseFile if the caller of parseFile
@@ -694,8 +685,6 @@ static int parseCharMetrics(FILE *fp, FontInfo *fi)
 
 } /* parseCharMetrics */
 
-
-
 /************************* parseTrackKernData ***********************/
 
 /*  This function is called by "parseFile". It will parse the AFM File
@@ -796,7 +785,6 @@ static int parseTrackKernData(FILE *fp, FontInfo *fi)
     return(error);
 
 } /* parseTrackKernData */
-
 
 /************************* parsePairKernData ************************/
 
@@ -917,7 +905,6 @@ static int parsePairKernData(FILE *fp, FontInfo *fi)
     return(error);
 
 } /* parsePairKernData */
-
 
 /************************* parseCompCharData **************************/
 
@@ -1043,11 +1030,7 @@ static int parseCompCharData(FILE *fp, FontInfo *fi)
 
 } /* parseCompCharData */
 
-
-
-
 /*************************** 'PUBLIC' FUNCTION ********************/
-
 
 /*************************** parseFile *****************************/
 
@@ -1077,7 +1060,6 @@ extern int afm_parse_file(FILE *fp, FontInfo **fi, FLAGS flags)
     int error = ok;	/* used as the return code from this function */
 
     register char *keyword; /* used to store a token */
-
 
     /* storage data for the global variable ident */
     ident = (char *) calloc(MAX_NAME, sizeof(char));

@@ -66,7 +66,6 @@ gchar       *ev_file_compress         (const gchar       *uri,
 				       EvCompressionType  type,
 				       GError           **error);
 
-
 G_END_DECLS
 
 #endif /* EV_FILE_HELPERS_H */

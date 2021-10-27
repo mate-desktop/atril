@@ -56,9 +56,7 @@ enum {
 
 static guint signals [LAST_SIGNAL] = { 0, };
 
-
 G_DEFINE_TYPE_WITH_PRIVATE (EvTimeline, ev_timeline, G_TYPE_OBJECT)
-
 
 static void
 ev_timeline_init (EvTimeline *timeline)

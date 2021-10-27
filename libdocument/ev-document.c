@@ -388,7 +388,6 @@ ev_document_get_page (EvDocument *document,
 	return klass->get_page (document, index);
 }
 
-
 #ifdef ENABLE_SYNCTEX
 static gboolean
 _ev_document_support_synctex (EvDocument *document)

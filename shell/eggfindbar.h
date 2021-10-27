@@ -77,4 +77,3 @@ G_END_DECLS
 
 #endif /* __EGG_FIND_BAR_H__ */
 
-

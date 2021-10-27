@@ -31,7 +31,6 @@
 #include "ev-document-model.h"
 #include "ev-jobs.h"
 
-
  typedef enum {
  	EV_WEB_VIEW_FIND_NEXT,
  	EV_WEB_VIEW_FIND_PREV
@@ -321,7 +320,6 @@ ev_web_view_reload (EvWebView *webview)
 {
 	web_view_update_range_and_current_page (webview);
 }
-
 
 gboolean
 ev_web_view_next_page (EvWebView *webview)

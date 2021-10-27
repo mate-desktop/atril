@@ -58,7 +58,6 @@ void          ev_sidebar_page_set_model         (EvSidebarPage    *sidebar_page,
 				                 EvDocumentModel *model);
 const gchar*  ev_sidebar_page_get_label         (EvSidebarPage *page);
 
-
 G_END_DECLS
 
 #endif /* EV_SIDEBAR_PAGE */

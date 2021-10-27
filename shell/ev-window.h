@@ -58,7 +58,6 @@ typedef struct _EvWindowPrivate EvWindowPrivate;
 #define EV_IS_WINDOW_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE((klass), EV_TYPE_WINDOW))
 #define EV_WINDOW_GET_CLASS(object)	(G_TYPE_INSTANCE_GET_CLASS((object), EV_TYPE_WINDOW, EvWindowClass))
 
-
 struct _EvWindow {
 	GtkApplicationWindow base_instance;
 	EvWindowPrivate     *priv;
@@ -86,7 +85,6 @@ void		ev_window_print_range   (EvWindow       *ev_window,
 					 int             first_page,
 					 int		 last_page);
 const gchar *	ev_window_get_dbus_object_path (EvWindow *ev_window);
-
 
 G_END_DECLS
 

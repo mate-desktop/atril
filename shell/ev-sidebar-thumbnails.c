@@ -245,7 +245,6 @@ ev_thumbnails_size_cache_get (EvDocument *document)
 	return cache;
 }
 
-
 static void
 ev_sidebar_thumbnails_dispose (GObject *object)
 {

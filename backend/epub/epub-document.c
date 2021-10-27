@@ -224,7 +224,6 @@ epub_document_links_has_document_links(EvDocumentLinks *document_links)
     return TRUE;
 }
 
-
 typedef struct _LinksCBStruct {
     GtkTreeModel *model;
     GtkTreeIter  *parent;
@@ -412,7 +411,6 @@ epub_remove_temporary_dir (gchar *path_name)
      * into memory.*/
     return (g_remove (path_name));
 }
-
 
 static gboolean
 check_mime_type             (const gchar* uri,
@@ -1546,7 +1544,6 @@ epub_document_check_add_night_sheet(EvDocument *document)
 
         gchar *csspath = g_strdup_printf("%s/atrilnightstyle.css",epub_document->documentdir);
 
-
         GFile *styles = g_file_new_for_path (csspath);
         GOutputStream *outstream = (GOutputStream*)g_file_create(styles,G_FILE_CREATE_PRIVATE,NULL,NULL);
         if ( g_output_stream_write((GOutputStream*)outstream,style,strlen(style),NULL,NULL) == -1 )
@@ -1619,7 +1616,6 @@ epub_document_set_index_pages(GList *index,GList *contentList)
 
     g_list_foreach(index,(GFunc)page_set_function,contentList);
 }
-
 
 static void
 add_mathjax_script_node_to_file(gchar *filename, gchar *data)
@@ -1768,7 +1764,6 @@ epub_document_init (EpubDocument *epub_document)
     epub_document->docTitle = NULL;
 }
 
-
 static void
 epub_document_finalize (GObject *object)
 {
@@ -1809,7 +1804,6 @@ epub_document_finalize (GObject *object)
     }
     G_OBJECT_CLASS (epub_document_parent_class)->finalize (object);
 }
-
 
 static void
 epub_document_class_init (EpubDocumentClass *klass)

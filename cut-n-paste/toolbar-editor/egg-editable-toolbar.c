@@ -541,7 +541,6 @@ configure_item_cursor (GtkToolItem *item,
     }
 }
 
-
 static void
 configure_item_tooltip (GtkToolItem *item)
 {
@@ -556,7 +555,6 @@ configure_item_tooltip (GtkToolItem *item)
       g_object_notify (G_OBJECT (action), "tooltip");
     }
 }
-
 
 static void
 connect_widget_signals (GtkWidget *proxy, EggEditableToolbar *etoolbar)

@@ -37,7 +37,6 @@ struct _EvPageAccessiblePrivate {
 	gboolean          children_initialized;
 };
 
-
 enum {
 	PROP_0,
 	PROP_VIEW_ACCESSIBLE,
@@ -411,7 +410,6 @@ treat_as_soft_return (EvView       *view,
 	EvRectangle *next_line_end;
 	EvRectangle *next_word_end;
 	gint prev_offset, next_offset;
-
 
 	if (!log_attrs[offset].is_white)
 		return FALSE;

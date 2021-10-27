@@ -239,7 +239,6 @@ ev_sidebar_layers_create_tree_view (EvSidebarLayers *ev_layers)
 	gtk_tree_selection_set_mode (gtk_tree_view_get_selection (tree_view),
 				     GTK_SELECTION_NONE);
 
-
 	column = gtk_tree_view_column_new ();
 
 	renderer = gtk_cell_renderer_toggle_new ();

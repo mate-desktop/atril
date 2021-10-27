@@ -3,7 +3,6 @@
 
 /* Hash tables */
 
-
 typedef struct _DviHashBucket DviHashBucket;
 typedef struct _DviHashTable DviHashTable;
 
@@ -17,7 +16,6 @@ typedef Uchar	*DviHashKey;
 typedef Ulong	(*DviHashFunc) __PROTO((DviHashKey key));
 typedef int	(*DviHashComp) __PROTO((DviHashKey key1, DviHashKey key2));
 typedef void	(*DviHashFree) __PROTO((DviHashKey key, void *data));
-
 
 struct _DviHashTable {
 	DviHashBucket	**buckets;

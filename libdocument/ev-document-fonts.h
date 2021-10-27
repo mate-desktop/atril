@@ -37,7 +37,6 @@
 
 G_BEGIN_DECLS
 
-
 #define EV_TYPE_DOCUMENT_FONTS		  (ev_document_fonts_get_type ())
 #define EV_DOCUMENT_FONTS(o)		  (G_TYPE_CHECK_INSTANCE_CAST ((o), EV_TYPE_DOCUMENT_FONTS, EvDocumentFonts))
 #define EV_DOCUMENT_FONTS_IFACE(k)	  (G_TYPE_CHECK_CLASS_CAST((k), EV_TYPE_DOCUMENT_FONTS, EvDocumentFontsInterface))

@@ -305,7 +305,6 @@ match_selected_cb (GtkEntryCompletion *completion,
 	return TRUE;
 }
 
-
 static void
 display_completion_text (GtkCellLayout      *cell_layout,
 			 GtkCellRenderer    *renderer,
@@ -348,7 +347,6 @@ match_completion (GtkEntryCompletion *completion,
 	gtk_tree_model_get (proxy->model, iter,
 			    EV_DOCUMENT_LINKS_COLUMN_LINK, &link,
 			    -1);
-
 
 	if (link) {
 		text = ev_link_get_title (link);
@@ -444,7 +442,6 @@ get_filter_model_from_model (GtkTreeModel *model)
 
 	return filter_model;
 }
-
 
 void
 ev_page_action_widget_update_links_model (EvPageActionWidget *proxy, GtkTreeModel *model)

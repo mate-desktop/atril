@@ -414,7 +414,6 @@ struct _DviRange {
 	int	step;		/* step */
 };
 
-
 typedef void (*DviSpecialHandler)
 	__PROTO((DviContext *dvi, const char *prefix, const char *arg));
 
@@ -599,7 +598,6 @@ extern int font_free_unused __PROTO((DviDevice *));
 	FONTCHAR((font), (code)), MDVI_FONTSEL_GLYPH)
 
 extern int mdvi_encode_font __PROTO((DviParams *, DviFont *));
-
 
 /* font lookup functions */
 extern int mdvi_register_font_type __PROTO((DviFontInfo *, int));

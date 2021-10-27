@@ -176,7 +176,6 @@ xps_document_get_info (EvDocument *document)
 		EV_DOCUMENT_INFO_N_PAGES |
 		EV_DOCUMENT_INFO_PAPER_SIZE;
 
-
 	if (gxps_document_get_n_pages (xps->doc) > 0) {
 		ev_document_get_page_size (document, 0,
 					   &(info->paper_width),
@@ -482,7 +481,6 @@ xps_document_document_links_iface_init (EvDocumentLinksInterface *iface)
 	iface->find_link_dest = xps_document_links_find_link_dest;
 	iface->find_link_page = xps_document_links_find_link_page;
 }
-
 
 /* EvDocumentPrint */
 static void

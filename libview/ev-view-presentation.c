@@ -1385,7 +1385,6 @@ ev_view_presentation_scroll_event (GtkWidget      *widget,
 	return TRUE;
 }
 
-
 static void
 add_change_page_binding_keypad (GtkBindingSet  *binding_set,
 				guint           keyval,

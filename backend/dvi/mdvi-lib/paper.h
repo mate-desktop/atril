@@ -24,7 +24,6 @@ struct _DviPaperSpec {
 	const char *height;
 };
 
-
 extern int 	mdvi_get_paper_size __PROTO((const char *, DviPaper *));
 extern DviPaperSpec* mdvi_get_paper_specs __PROTO((DviPaperClass));
 extern void	mdvi_free_paper_specs __PROTO((DviPaperSpec *));
