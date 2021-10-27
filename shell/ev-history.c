@@ -24,7 +24,6 @@
 
 #include "ev-history.h"
 
-
 enum
 {
 	HISTORY_CHANGED,

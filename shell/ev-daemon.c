@@ -43,7 +43,6 @@
 
 #define LOG g_debug
 
-
 #define EV_TYPE_DAEMON_APPLICATION              (ev_daemon_application_get_type ())
 #define EV_DAEMON_APPLICATION(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), EV_TYPE_DAEMON_APPLICATION, EvDaemonApplication))
 

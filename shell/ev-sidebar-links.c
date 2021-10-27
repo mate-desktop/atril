@@ -379,7 +379,6 @@ button_press_cb (GtkWidget *treeview,
 	return FALSE;
 }
 
-
 static void
 ev_sidebar_links_construct (EvSidebarLinks *ev_sidebar_links)
 {
@@ -424,7 +423,6 @@ ev_sidebar_links_construct (EvSidebarLinks *ev_sidebar_links)
 	gtk_tree_view_column_set_attributes (GTK_TREE_VIEW_COLUMN (column), renderer,
 					     "markup", EV_DOCUMENT_LINKS_COLUMN_MARKUP,
 					     NULL);
-
 
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_column_pack_end (GTK_TREE_VIEW_COLUMN (column), renderer, FALSE);
@@ -565,7 +563,6 @@ expand_open_links (GtkTreeView *tree_view, GtkTreeModel *model, GtkTreeIter *par
 		} while (gtk_tree_model_iter_next (model, &iter));
 	}
 }
-
 
 static gint
 page_link_tree_sort (gconstpointer a, gconstpointer b, void *data)

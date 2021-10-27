@@ -63,4 +63,3 @@ G_END_DECLS
 
 #endif /* __EV_SIDEBAR_LINKS_H__ */
 
-

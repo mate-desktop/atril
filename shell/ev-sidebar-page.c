@@ -74,7 +74,6 @@ ev_sidebar_page_get_label (EvSidebarPage *sidebar_page)
 	return iface->get_label (sidebar_page);
 }
 
-
 static void
 ev_sidebar_page_default_init (EvSidebarPageInterface *iface)
 {

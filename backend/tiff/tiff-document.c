@@ -361,7 +361,6 @@ tiff_document_render_pixbuf (EvDocument      *document,
 	if (width <= 0 || height <= 0)
 		return NULL;
 
-
 	if (width >= INT_MAX / 4)
 		/* overflow */
 		return NULL;

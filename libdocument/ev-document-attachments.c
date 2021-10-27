@@ -52,4 +52,3 @@ ev_document_attachments_get_attachments (EvDocumentAttachments *document_attachm
 	return iface->get_attachments (document_attachments);
 }
 
-

@@ -213,7 +213,6 @@ is_unique (EggToolbarsModel *model,
   EggToolbarsItem *idata2;
   GNode *toolbar, *item;
 
-
   for(toolbar = g_node_first_child (model->priv->toolbars);
       toolbar != NULL; toolbar = g_node_next_sibling (toolbar))
     {
@@ -329,7 +328,6 @@ egg_toolbars_model_set_flags (EggToolbarsModel *model,
   g_signal_emit (G_OBJECT (model), signals[TOOLBAR_CHANGED],
 		 0, toolbar_position);
 }
-
 
 char *
 egg_toolbars_model_get_data (EggToolbarsModel *model,

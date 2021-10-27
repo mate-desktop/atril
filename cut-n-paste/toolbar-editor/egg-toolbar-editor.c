@@ -36,7 +36,6 @@ static const GtkTargetEntry source_drag_types[] = {
   {EGG_TOOLBAR_ITEM_TYPE, GTK_TARGET_SAME_APP, 0},
 };
 
-
 static void egg_toolbar_editor_finalize         (GObject *object);
 static void update_editor_sheet                 (EggToolbarEditor *editor);
 

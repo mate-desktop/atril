@@ -110,7 +110,6 @@ dvi_document_load (EvDocument  *document,
 
 	mdvi_cairo_device_init (&dvi_document->context->device);
 
-
 	dvi_document->base_width = dvi_document->context->dvi_page_w * dvi_document->context->params.conv
 		+ 2 * unit2pix(dvi_document->params->dpi, MDVI_HMARGIN) / dvi_document->params->hshrink;
 
@@ -122,7 +121,6 @@ dvi_document_load (EvDocument  *document,
 
 	return TRUE;
 }
-
 
 static gboolean
 dvi_document_save (EvDocument  *document,

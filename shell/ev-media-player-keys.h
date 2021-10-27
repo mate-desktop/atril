@@ -37,7 +37,6 @@ G_BEGIN_DECLS
 typedef struct _EvMediaPlayerKeys EvMediaPlayerKeys;
 typedef struct _EvMediaPlayerKeysClass EvMediaPlayerKeysClass;
 
-
 GType	           ev_media_player_keys_get_type  (void) G_GNUC_CONST;
 
 EvMediaPlayerKeys *ev_media_player_keys_new	  (void);

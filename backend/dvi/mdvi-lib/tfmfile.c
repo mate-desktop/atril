@@ -258,7 +258,6 @@ int	tfm_load_file(const char *filename, TFMInfo *info)
 	/* allocate characters */
 	info->chars = xnalloc(TFMChar, size);
 
-
 #ifdef WORD_LITTLE_ENDIAN
 	/* byte-swap the three arrays at once (they are consecutive in memory) */
 	swap_array((Uint32 *)widths, nw + nh + nd);

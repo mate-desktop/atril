@@ -573,7 +573,6 @@ egg_find_bar_set_search_string  (EggFindBar *find_bar,
   g_object_thaw_notify (G_OBJECT (find_bar));
 }
 
-
 /**
  * egg_find_bar_get_search_string:
  *

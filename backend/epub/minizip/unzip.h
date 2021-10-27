@@ -70,7 +70,6 @@ typedef unzFile__ *unzFile;
 typedef voidp unzFile;
 #endif
 
-
 #define UNZ_OK                          (0)
 #define UNZ_END_OF_LIST_OF_FILE         (-100)
 #define UNZ_ERRNO                       (Z_ERRNO)
@@ -162,7 +161,6 @@ extern int ZEXPORT unzStringFileNameCompare OF ((const char* fileName1,
     (like 1 on Unix, 2 on Windows)
 */
 
-
 extern unzFile ZEXPORT unzOpen OF((const char *path));
 extern unzFile ZEXPORT unzOpen64 OF((const void *path));
 /*
@@ -179,7 +177,6 @@ extern unzFile ZEXPORT unzOpen64 OF((const void *path));
        is a pointer to a wide unicode string (LPCTSTR is LPCWSTR), so const char*
        does not describe the reality
 */
-
 
 extern unzFile ZEXPORT unzOpen2 OF((const char *path,
                                     zlib_filefunc_def* pzlib_filefunc_def));
@@ -212,7 +209,6 @@ extern int ZEXPORT unzGetGlobalInfo64 OF((unzFile file,
   No preparation of the structure is needed
   return UNZ_OK if there is no problem. */
 
-
 extern int ZEXPORT unzGetGlobalComment OF((unzFile file,
                                            char *szComment,
                                            uLong uSizeBuf));
@@ -221,7 +217,6 @@ extern int ZEXPORT unzGetGlobalComment OF((unzFile file,
   uSizeBuf is the size of the szComment buffer.
   return the number of byte copied or an error code <0
 */
-
 
 /***************************************************************************/
 /* Unzip package allow you browse the directory of the zipfile */
@@ -250,7 +245,6 @@ extern int ZEXPORT unzLocateFile OF((unzFile file,
   UNZ_OK if the file is found. It becomes the current file.
   UNZ_END_OF_LIST_OF_FILE if the file is not found
 */
-
 
 /* ****************************************** */
 /* Ryan supplied functions */
@@ -315,13 +309,11 @@ extern int ZEXPORT unzGetCurrentFileInfo OF((unzFile file,
             (commentBufferSize is the size of the buffer)
 */
 
-
 /** Addition for GDAL : START */
 
 extern ZPOS64_T ZEXPORT unzGetCurrentFileZStreamPos64 OF((unzFile file));
 
 /** Addition for GDAL : END */
-
 
 /***************************************************************************/
 /* for reading the content of the current zipfile, you can open it, read data
@@ -368,7 +360,6 @@ extern int ZEXPORT unzOpenCurrentFile3 OF((unzFile file,
   note : you can set level parameter as NULL (if you did not want known level,
          but you CANNOT set method parameter as NULL
 */
-
 
 extern int ZEXPORT unzCloseCurrentFile OF((unzFile file));
 /*
@@ -427,8 +418,6 @@ extern uLong ZEXPORT unzGetOffset (unzFile file);
 /* Set the current file offset */
 extern int ZEXPORT unzSetOffset64 (unzFile file, ZPOS64_T pos);
 extern int ZEXPORT unzSetOffset (unzFile file, uLong pos);
-
-
 
 #ifdef __cplusplus
 }

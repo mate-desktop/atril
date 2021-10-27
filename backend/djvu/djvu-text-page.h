@@ -25,7 +25,6 @@
 #include <glib.h>
 #include <libdjvu/miniexp.h>
 
-
 typedef struct _DjvuTextPage DjvuTextPage;
 typedef struct _DjvuTextLink DjvuTextLink;
 

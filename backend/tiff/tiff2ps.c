@@ -449,7 +449,6 @@ PlaceImage(TIFF2PSContext *ctx, double pagewidth, double pageheight,
 	return splitpage;
 }
 
-
 void
 tiff2ps_process_page(TIFF2PSContext* ctx, TIFF* tif, double pw, double ph,
 		     double lm, double bm, gboolean cnt)
@@ -591,7 +590,6 @@ tiff2ps_process_page(TIFF2PSContext* ctx, TIFF* tif, double pw, double ph,
 		fprintf(ctx->fd, "showpage\n");
 	}
 }
-
 
 static char DuplexPreamble[] = "\
 %%BeginFeature: *Duplex True\n\

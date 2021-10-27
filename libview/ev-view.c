@@ -5621,7 +5621,6 @@ ev_view_style_updated (GtkWidget *widget)
 
 /*** Drawing ***/
 
-
 static void
 draw_rubberband (EvView             *view,
 		 cairo_t            *cr,
@@ -5651,7 +5650,6 @@ draw_rubberband (EvView             *view,
 
 	cairo_restore (cr);
 }
-
 
 static void
 highlight_find_results (EvView *view, cairo_t *cr, int page)

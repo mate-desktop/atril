@@ -209,7 +209,6 @@ EvFormField *ev_form_field_choice_new         (gint                  id,
 GType        ev_form_field_signature_get_type (void) G_GNUC_CONST;
 EvFormField *ev_form_field_signature_new      (gint                  id);
 
-
 G_END_DECLS
 
 #endif /* !EV_FORM_FIELD_H */

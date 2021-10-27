@@ -52,7 +52,6 @@ struct _EvRenderContext
 	gdouble scale;
 };
 
-
 GType            ev_render_context_get_type        (void) G_GNUC_CONST;
 EvRenderContext *ev_render_context_new             (EvPage          *page,
 						    gint             rotation,
@@ -63,7 +62,6 @@ void             ev_render_context_set_rotation    (EvRenderContext *rc,
 						    gint             rotation);
 void             ev_render_context_set_scale       (EvRenderContext *rc,
 						    gdouble          scale);
-
 
 G_END_DECLS
 

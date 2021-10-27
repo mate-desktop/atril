@@ -42,7 +42,6 @@ ev_document_text_get_text (EvDocumentText   *document_text,
 	return iface->get_text (document_text, page);
 }
 
-
 gboolean
 ev_document_text_get_text_layout (EvDocumentText   *document_text,
 				  EvPage           *page,

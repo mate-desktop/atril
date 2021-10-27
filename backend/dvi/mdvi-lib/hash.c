@@ -21,7 +21,6 @@
 
 /* simple hash tables for MDVI */
 
-
 struct _DviHashBucket {
 	DviHashBucket *next;
 	DviHashKey	key;

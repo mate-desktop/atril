@@ -41,9 +41,7 @@ enum {
 	PROP_DEST_SURFACE
 };
 
-
 G_DEFINE_TYPE_WITH_PRIVATE (EvTransitionAnimation, ev_transition_animation, EV_TYPE_TIMELINE)
-
 
 static void
 ev_transition_animation_init (EvTransitionAnimation *animation)

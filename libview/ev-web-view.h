@@ -35,7 +35,6 @@
 #include <glib-object.h>
 G_BEGIN_DECLS
 
-
 typedef struct _EvWebView       EvWebView;
 typedef struct _EvWebViewClass  EvWebViewClass;
 

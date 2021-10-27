@@ -54,4 +54,3 @@ void mdvi_register_fonts (void)
 	return;
 }
 
-

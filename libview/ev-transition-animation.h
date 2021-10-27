@@ -50,7 +50,6 @@ struct EvTransitionAnimationClass {
 	EvTimelineClass parent_class;
 };
 
-
 GType                   ev_transition_animation_get_type           (void) G_GNUC_CONST;
 
 EvTransitionAnimation * ev_transition_animation_new                (EvTransitionEffect    *effect);
@@ -66,7 +65,6 @@ void                    ev_transition_animation_paint              (EvTransition
 								    cairo_t               *cr,
 								    GdkRectangle           page_area);
 gboolean                ev_transition_animation_ready              (EvTransitionAnimation *animation);
-
 
 G_END_DECLS
 

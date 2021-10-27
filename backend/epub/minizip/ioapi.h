@@ -110,7 +110,6 @@ typedef unsigned long long int ZPOS64_T;
 extern "C" {
 #endif
 
-
 #define ZLIB_FILEFUNC_SEEK_CUR (1)
 #define ZLIB_FILEFUNC_SEEK_END (2)
 #define ZLIB_FILEFUNC_SEEK_SET (0)
@@ -122,7 +121,6 @@ extern "C" {
 #define ZLIB_FILEFUNC_MODE_EXISTING (4)
 #define ZLIB_FILEFUNC_MODE_CREATE   (8)
 
-
 #ifndef ZCALLBACK
  #if (defined(WIN32) || defined(_WIN32) || defined (WINDOWS) || defined (_WINDOWS)) && defined(CALLBACK) && defined (USEWINDOWS_CALLBACK)
    #define ZCALLBACK CALLBACK
@@ -130,9 +128,6 @@ extern "C" {
    #define ZCALLBACK
  #endif
 #endif
-
-
-
 
 typedef voidpf   (ZCALLBACK *open_file_func)      OF((voidpf opaque, const char* filename, int mode));
 typedef uLong    (ZCALLBACK *read_file_func)      OF((voidpf opaque, voidpf stream, void* buf, uLong size));
@@ -142,7 +137,6 @@ typedef int      (ZCALLBACK *testerror_file_func) OF((voidpf opaque, voidpf stre
 
 typedef long     (ZCALLBACK *tell_file_func)      OF((voidpf opaque, voidpf stream));
 typedef long     (ZCALLBACK *seek_file_func)      OF((voidpf opaque, voidpf stream, uLong offset, int origin));
-
 
 /* here is the "old" 32 bits structure structure */
 typedef struct zlib_filefunc_def_s
@@ -184,7 +178,6 @@ typedef struct zlib_filefunc64_32_def_s
     tell_file_func      ztell32_file;
     seek_file_func      zseek32_file;
 } zlib_filefunc64_32_def;
-
 
 #define ZREAD64(filefunc,filestream,buf,size)     ((*((filefunc).zfile_func64.zread_file))   ((filefunc).zfile_func64.opaque,filestream,buf,size))
 #define ZWRITE64(filefunc,filestream,buf,size)    ((*((filefunc).zfile_func64.zwrite_file))  ((filefunc).zfile_func64.opaque,filestream,buf,size))
