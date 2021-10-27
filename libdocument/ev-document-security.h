@@ -35,7 +35,6 @@
 
 G_BEGIN_DECLS
 
-
 #define EV_TYPE_DOCUMENT_SECURITY		  (ev_document_security_get_type ())
 #define EV_DOCUMENT_SECURITY(o)			  (G_TYPE_CHECK_INSTANCE_CAST ((o), EV_TYPE_DOCUMENT_SECURITY, EvDocumentSecurity))
 #define EV_DOCUMENT_SECURITY_IFACE(k)	  	  (G_TYPE_CHECK_CLASS_CAST((k), EV_TYPE_DOCUMENT_SECURITY, EvDocumentSecurityInterface))

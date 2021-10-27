@@ -631,7 +631,6 @@ job_finished_callback (EvJobAttachments     *job,
 	g_object_unref (job);
 }
 
-
 static void
 ev_sidebar_attachments_document_changed_cb (EvDocumentModel      *model,
 					    GParamSpec           *pspec,

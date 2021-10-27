@@ -418,7 +418,6 @@ ev_window_set_action_sensitive (EvWindow   *ev_window,
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
-
 static void
 ev_window_setup_action_sensitivity (EvWindow *ev_window)
 {
@@ -1554,7 +1553,6 @@ ev_window_setup_default (EvWindow *ev_window)
 	if (ev_document_model_get_sizing_mode (model) == EV_SIZING_FREE)
 		ev_document_model_set_scale (model, g_settings_get_double (settings, "zoom"));
 }
-
 
 static void
 ev_window_clear_thumbnail_job (EvWindow *ev_window)
@@ -3649,7 +3647,6 @@ ev_window_print_operation_done (EvPrintOperation       *op,
 		GtkWidget *dialog;
 		GError    *error = NULL;
 
-
 		ev_print_operation_get_error (op, &error);
 
 		/* The message area is already used by
@@ -3903,7 +3900,6 @@ ev_window_check_document_modified (EvWindow *ev_window)
 	} else {
 		return FALSE;
 	}
-
 
 	text = g_markup_printf_escaped (_("Save a copy of document “%s” before closing?"),
 					gtk_window_get_title (GTK_WINDOW (ev_window)));
@@ -4427,7 +4423,6 @@ ev_window_inhibit_screensaver (EvWindow *window)
                                          _("Running in presentation mode"));
 }
 
-
 static void
 ev_window_uninhibit_screensaver (EvWindow *window)
 {
@@ -4739,7 +4734,6 @@ ev_window_set_page_mode (EvWindow         *window,
 	}
 	ev_window_update_actions (window);
 }
-
 
 static void
 ev_window_cmd_edit_rotate_left (GtkAction *action, EvWindow *ev_window)
@@ -5990,7 +5984,6 @@ zoom_control_changed_cb (EphyZoomAction *action,
 		 * the new expanded window size.
 		 */
 
-
 		if (ev_window->priv->chrome & EV_CHROME_SIDEBAR)
 		{
 			GtkAllocation alloc;
@@ -6503,7 +6496,6 @@ static const GtkActionEntry entries[] = {
 	  G_CALLBACK (ev_window_cmd_edit_rotate_right) },
 	{ "EditSaveSettings", NULL, N_("Save Current Settings as _Default"), "<control>T", NULL,
 	  G_CALLBACK (ev_window_cmd_edit_save_settings) },
-
 
         /* View menu */
         { "ViewZoomIn", "zoom-in", N_("Zoom _In"), "<control>plus",
@@ -7758,7 +7750,6 @@ ev_window_emit_doc_loaded (EvWindow *window)
 
         ev_atril_window_emit_document_loaded (window->priv->skeleton, window->priv->uri);
 }
-
 
 #ifdef ENABLE_SYNCTEX
 static gboolean

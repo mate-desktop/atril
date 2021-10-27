@@ -59,7 +59,6 @@ struct EvTimelineClass {
 				    gdouble     progress);
 };
 
-
 GType                 ev_timeline_get_type           (void) G_GNUC_CONST;
 
 EvTimeline           *ev_timeline_new                (guint                    duration);
@@ -83,7 +82,6 @@ void                  ev_timeline_set_duration       (EvTimeline             *ti
 						      guint                   duration);
 
 gdouble               ev_timeline_get_progress       (EvTimeline             *timeline);
-
 
 G_END_DECLS
 

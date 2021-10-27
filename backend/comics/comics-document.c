@@ -126,7 +126,6 @@ static void       render_pixbuf_size_prepared_cb (GdkPixbufLoader *loader,
 static char**     extract_argv                   (EvDocument *document,
 						  gint page);
 
-
 EV_BACKEND_REGISTER_WITH_CODE (ComicsDocument, comics_document,
 	{
 		EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_THUMBNAILS,
@@ -185,7 +184,6 @@ comics_regex_quote (const gchar *unquoted_string)
 	g_string_append_c (dest, '\'');
 	return g_string_free (dest, FALSE);
 }
-
 
 /* This function manages the command for decompressing a comic book */
 static gboolean
@@ -626,7 +624,6 @@ comics_document_load (EvDocument *document,
 
 	return TRUE;
 }
-
 
 static gboolean
 comics_document_save (EvDocument *document,

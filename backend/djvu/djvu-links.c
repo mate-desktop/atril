@@ -181,7 +181,6 @@ build_tree (const DjvuDocument *djvu_document,
 		if (!string_from_miniexp (miniexp_car (iter), &title)) goto unknown_entry;
 		if (!string_from_miniexp (miniexp_cadr (iter), &link_dest)) goto unknown_entry;
 
-
 		if (!g_utf8_validate (title, -1, NULL)) {
 			utf8_title = str_to_utf8 (title);
 			title_markup = g_markup_escape_text (utf8_title, -1);
@@ -341,7 +340,6 @@ get_djvu_hyperlink_mapping (DjvuDocument     *djvu_document,
 	g_warning("DjvuLibre error: Unknown hyperlink %s", miniexp_to_name(miniexp_car(sexp)));
 	return NULL;
 }
-
 
 gboolean
 djvu_links_has_document_links (EvDocumentLinks *document_links)

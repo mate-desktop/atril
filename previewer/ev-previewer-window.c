@@ -621,7 +621,6 @@ ev_previewer_window_constructor (GType                  type,
 	return object;
 }
 
-
 static void
 ev_previewer_window_class_init (EvPreviewerWindowClass *klass)
 {

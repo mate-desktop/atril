@@ -54,7 +54,6 @@ ephy_zoom_get_zoom_level_index (float level)
 	return n_zoom_levels - 1;
 }
 
-
 float
 ephy_zoom_get_changed_zoom_level (float level, gint steps)
 {

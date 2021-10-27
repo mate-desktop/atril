@@ -201,7 +201,6 @@ pixbuf_document_document_thumbnails_iface_init (EvDocumentThumbnailsInterface *i
 	iface->get_dimensions = pixbuf_document_thumbnails_get_dimensions;
 }
 
-
 static void
 pixbuf_document_init (PixbufDocument *pixbuf_document)
 {

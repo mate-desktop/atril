@@ -50,8 +50,6 @@ void         ev_bookmarks_delete        (EvBookmarks *bookmarks,
 void         ev_bookmarks_update        (EvBookmarks *bookmarks,
                                          EvBookmark  *bookmark);
 
-
-
 G_END_DECLS
 
 #endif /* EV_BOOKMARKS_H */

@@ -56,4 +56,3 @@ G_END_DECLS
 
 #endif /* __EV_SIDEBAR_THUMBNAILS_H__ */
 
-

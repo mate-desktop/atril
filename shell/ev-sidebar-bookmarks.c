@@ -122,7 +122,6 @@ ev_bookmarks_popup_cmd_rename_bookmark (GtkAction          *action,
         GtkTreeModel              *model;
         GtkTreeIter                iter;
 
-
         selection = gtk_tree_view_get_selection (tree_view);
         if (gtk_tree_selection_get_selected (selection, &model, &iter)) {
                 GtkTreePath *path;

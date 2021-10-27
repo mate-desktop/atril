@@ -66,7 +66,6 @@ EV_BACKEND_REGISTER_WITH_CODE (DjvuDocument, djvu_document,
       EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_SELECTION, djvu_selection_iface_init);
      });
 
-
 #define EV_DJVU_ERROR ev_djvu_error_quark ()
 
 static GQuark
@@ -255,7 +254,6 @@ djvu_document_load (EvDocument  *document,
 
 	return TRUE;
 }
-
 
 static gboolean
 djvu_document_save (EvDocument  *document,
@@ -675,7 +673,6 @@ djvu_document_find_find_text (EvDocumentFind   *document,
 		r->y1 = height - r->y2 * SCALE_FACTOR;
 		r->y2 = height - tmp * SCALE_FACTOR;
 	}
-
 
 	return matches;
 }

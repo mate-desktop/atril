@@ -39,8 +39,6 @@ G_BEGIN_DECLS
 #define EV_PIXBUF_CACHE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EV_TYPE_PIXBUF_CACHE, EvPixbufCache))
 #define EV_IS_PIXBUF_CACHE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EV_TYPE_PIXBUF_CACHE))
 
-
-
 /* The coordinates in the rect here are at scale == 1.0, so that we can ignore
  * resizings.  There is one per page, maximum.
  */

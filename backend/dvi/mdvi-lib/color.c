@@ -79,7 +79,6 @@ static int		cc_entries;
 
 #define GAMMA_DIFF	0.005
 
-
 /* create a color table */
 Ulong	*get_color_table(DviDevice *dev,
 			 int nlevels, Ulong fg, Ulong bg, double gamma, int density)

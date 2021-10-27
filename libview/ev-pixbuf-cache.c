@@ -72,7 +72,6 @@ struct _EvPixbufCacheClass
 	void (* job_finished) (EvPixbufCache *pixbuf_cache);
 };
 
-
 enum
 {
 	JOB_FINISHED,
@@ -91,7 +90,6 @@ static gboolean      new_selection_surface_needed(EvPixbufCache      *pixbuf_cac
 						  CacheJobInfo       *job_info,
 						  gint                page,
 						  gfloat              scale);
-
 
 /* These are used for iterating through the prev and next arrays */
 #define FIRST_VISIBLE_PREV(pixbuf_cache) \
@@ -222,7 +220,6 @@ ev_pixbuf_cache_dispose (GObject *object)
 
 	G_OBJECT_CLASS (ev_pixbuf_cache_parent_class)->dispose (object);
 }
-
 
 EvPixbufCache *
 ev_pixbuf_cache_new (GtkWidget       *view,
@@ -985,7 +982,6 @@ ev_pixbuf_cache_clear (EvPixbufCache *pixbuf_cache)
 	}
 }
 
-
 void
 ev_pixbuf_cache_style_changed (EvPixbufCache *pixbuf_cache)
 {
@@ -1265,7 +1261,6 @@ ev_pixbuf_cache_set_selection_list (EvPixbufCache *pixbuf_cache,
 	}
 }
 
-
 /* Returns what the pixbuf cache thinks is */
 
 GList *
@@ -1355,5 +1350,4 @@ ev_pixbuf_cache_reload_page (EvPixbufCache  *pixbuf_cache,
 		 width, height, page, rotation, scale,
 		 EV_JOB_PRIORITY_URGENT);
 }
-
 

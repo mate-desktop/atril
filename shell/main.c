@@ -36,7 +36,6 @@
 #include "eggsmclient.h"
 #include "eggdesktopfile.h"
 
-
 static gchar   *ev_page_label;
 static gchar   *ev_find_string;
 static gint     ev_page_index = 0;
@@ -47,7 +46,6 @@ static gboolean presentation_mode = FALSE;
 static gboolean unlink_temp_file = FALSE;
 static gchar   *print_settings;
 static const char **file_arguments = NULL;
-
 
 static gboolean
 option_version_cb (const gchar *option_name,
@@ -205,8 +203,6 @@ load_files (const char **files)
 			g_free (uri);
 			continue;
 		}
-
-
 
 		ev_application_open_uri_at_dest (EV_APP, uri, screen, dest,
 						 mode, ev_find_string,

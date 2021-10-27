@@ -61,7 +61,6 @@ typedef enum {
 	EV_TRANSITION_DIRECTION_OUTWARD
 } EvTransitionEffectDirection;
 
-
 typedef struct EvTransitionEffect      EvTransitionEffect;
 typedef struct EvTransitionEffectClass EvTransitionEffectClass;
 
@@ -74,7 +73,6 @@ struct EvTransitionEffectClass
 {
 	GObjectClass parent_class;
 };
-
 
 GType                 ev_transition_effect_get_type           (void) G_GNUC_CONST;
 
