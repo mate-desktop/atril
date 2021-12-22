@@ -387,7 +387,7 @@ ev_timeline_set_loop (EvTimeline *timeline,
 	g_return_if_fail (EV_IS_TIMELINE (timeline));
 
 	priv = ev_timeline_get_instance_private (timeline);
-	priv->loop = loop;
+	priv->loop = (loop != FALSE);
 
 	g_object_notify (G_OBJECT (timeline), "loop");
 }

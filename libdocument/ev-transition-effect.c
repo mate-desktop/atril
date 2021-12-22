@@ -81,7 +81,7 @@ ev_transition_effect_set_property (GObject	*object,
 		priv->scale = g_value_get_double (value);
 		break;
 	case PROP_RECTANGULAR:
-		priv->rectangular = g_value_get_boolean (value);
+		priv->rectangular = (g_value_get_boolean (value) != FALSE);
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
