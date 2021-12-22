@@ -500,7 +500,7 @@ _ev_document_model_set_dual_page_internal (EvDocumentModel *model,
 	if (dual_page == model->dual_page)
 		return;
 
-	model->dual_page = dual_page;
+	model->dual_page = (dual_page != FALSE);
 
 	g_object_notify (G_OBJECT (model), "dual-page");
 }
@@ -566,7 +566,7 @@ ev_document_model_set_inverted_colors (EvDocumentModel *model,
 	if (inverted_colors == model->inverted_colors)
 		return;
 
-	model->inverted_colors = inverted_colors;
+	model->inverted_colors = (inverted_colors != FALSE);
 
 	g_object_notify (G_OBJECT (model), "inverted-colors");
 }
@@ -590,7 +590,7 @@ ev_document_model_set_continuous (EvDocumentModel *model,
 	if (continuous == model->continuous)
 		return;
 
-	model->continuous = continuous;
+	model->continuous = (continuous != FALSE);
 
 	g_object_notify (G_OBJECT (model), "continuous");
 }
@@ -634,7 +634,7 @@ ev_document_model_set_dual_page_odd_pages_left (EvDocumentModel *model,
 	if (odd_left == model->dual_page_odd_left)
 		return;
 
-	model->dual_page_odd_left = odd_left;
+	model->dual_page_odd_left = (odd_left != FALSE);
 
 	g_object_notify (G_OBJECT (model), "dual-odd-left");
 }
@@ -658,7 +658,7 @@ ev_document_model_set_fullscreen (EvDocumentModel *model,
 	if (fullscreen == model->fullscreen)
 		return;
 
-	model->fullscreen = fullscreen;
+	model->fullscreen = (fullscreen != FALSE);
 
 	g_object_notify (G_OBJECT (model), "fullscreen");
 }

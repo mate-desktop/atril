@@ -1257,8 +1257,8 @@ ev_print_operation_export_print_dialog_response_cb (GtkDialog              *dial
 	export->pages_per_sheet = MAX (1, gtk_print_settings_get_number_up (print_settings));
 
 	export->copies = gtk_print_settings_get_n_copies (print_settings);
-	export->collate = gtk_print_settings_get_collate (print_settings);
-	export->reverse = gtk_print_settings_get_reverse (print_settings);
+	export->collate = (gtk_print_settings_get_collate (print_settings) != FALSE);
+	export->reverse = (gtk_print_settings_get_reverse (print_settings) != FALSE);
 
 	if (export->collate) {
 		export->uncollated_copies = export->copies;
