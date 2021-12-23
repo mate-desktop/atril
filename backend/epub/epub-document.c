@@ -624,7 +624,7 @@ static gboolean
 check_mime_type(const gchar* uri,GError** error)
 {
     GError * err = NULL ;
-    const gchar* mimeFromFile = ev_file_get_mime_type(uri,FALSE,&err);
+    const gchar* mimeFromFile = ev_file_get_mime_type(uri,TRUE,&err);
 
     gchar* mimetypes[] = {"application/epub+zip","application/x-booki+zip"};
     int typecount = 2;

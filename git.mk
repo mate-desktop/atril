@@ -367,6 +367,7 @@ $(srcdir)/.gitignore: Makefile.am $(top_srcdir)/git.mk $(top_srcdir)/configure.a
 			"*~" \
 			".*.sw[nop]" \
 			".dirstamp" \
+			".vscode/" \
 		; do echo "/$$x"; done; \
 		for x in \
 			"*.$(OBJEXT)" \
