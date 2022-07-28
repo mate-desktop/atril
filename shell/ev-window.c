@@ -6116,6 +6116,9 @@ ev_window_cmd_view_toggle_caret_navigation (GtkAction *action,
 	GtkWidget *hbox;
 	gboolean   enabled;
 
+	if (window->priv->view == NULL)
+		return;
+
 	/* Don't ask for user confirmation to turn the caret navigation off when it is active,
 	 * or to turn it on when the confirmation dialog is not to be shown per settings */
 	enabled = ev_view_is_caret_navigation_enabled (EV_VIEW (window->priv->view));
