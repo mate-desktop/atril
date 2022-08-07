@@ -623,41 +623,51 @@ xml_get_data_from_node(xmlNodePtr node,
 static gboolean
 check_mime_type(const gchar* uri,GError** error)
 {
-    GError * err = NULL ;
-    const gchar* mimeFromFile = ev_file_get_mime_type(uri,FALSE,&err);
+    GError * err = NULL;
+    const gchar* mimeFromFile;
 
-    gchar* mimetypes[] = {"application/epub+zip","application/x-booki+zip"};
-    int typecount = 2;
-    if ( !mimeFromFile )
+    mimeFromFile = ev_file_get_mime_type(uri, FALSE, &err);
+    if (mimeFromFile)
     {
-        if (err)    {
-            g_propagate_error (error, err);
-        }
-        else    {
-            g_set_error_literal (error,
-                         EV_DOCUMENT_ERROR,
-                         EV_DOCUMENT_ERROR_INVALID,
-                         _("Unknown MIME Type"));
-        }
-        return FALSE;
-    }
-    else
-    {
-        int i=0;
-        for (i=0; i < typecount ;i++) {
-           if ( g_strcmp0(mimeFromFile, mimetypes[i]) == 0  ) {
+        const gchar* mimetypes[] = {"application/epub+zip", "application/x-booki+zip", NULL};
+        guint i;
+
+        for (i = 0; i < g_strv_length (mimetypes); i++) {
+           if (strcmp(mimeFromFile, mimetypes[i]) == 0)
                 return TRUE;
-           }
+	}
+
+        /* fallback for malformed epub files */
+        if (strcmp (mimeFromFile, "application/zip") == 0)
+        {
+            mimeFromFile = ev_file_get_mime_type (uri, TRUE, &err);
+            if (mimeFromFile)
+            {
+                for (i = 0; i < g_strv_length (mimetypes); i++) {
+                    if (g_strcmp0(mimeFromFile, mimetypes[i]) == 0)
+                        return TRUE;
+                }
+
+                /*We didn't find a match*/
+                g_set_error_literal (error,
+                                     EV_DOCUMENT_ERROR,
+                                     EV_DOCUMENT_ERROR_INVALID,
+                                     _("Not an ePub document"));
+
+                return FALSE;
+            }
         }
-
-        /*We didn't find a match*/
-        g_set_error_literal (error,
-                     EV_DOCUMENT_ERROR,
-                     EV_DOCUMENT_ERROR_INVALID,
-                     _("Not an ePub document"));
-
-        return FALSE;
     }
+
+    if (err)
+        g_propagate_error (error, err);
+    else
+        g_set_error_literal (error,
+                             EV_DOCUMENT_ERROR,
+                             EV_DOCUMENT_ERROR_INVALID,
+                             _("Unknown MIME Type"));
+
+    return FALSE;
 }
 
 static gboolean
