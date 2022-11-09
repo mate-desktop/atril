@@ -4,27 +4,27 @@
 # Enrico B. <enricobe@hotmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Dario Di Nucci <linkin88mail@gmail.com>, 2021
-# Alessandro Volturno <alelvb@inwind.it>, 2021
+# Alessandro Volturno <alelvb@inwind.it>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-29 20:47+0200\n"
+"POT-Creation-Date: 2022-10-29 15:26+0200\n"
 "PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
+"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Enrico , 2019\n"
-"Alessandro Volturno,  2020, 2021"
+"Enrico Bella, 2019\n"
+"Alessandro Volturno,  2020, 2022"
 
 #. (itstool) path: info/desc
 #: C/annotation-properties.page:7
@@ -73,12 +73,12 @@ msgstr "Personalizzare le annotazioni"
 #. (itstool) path: item/p
 #: C/annotation-properties.page:22
 msgid "Right click on the annotation icon in the document."
-msgstr "Fare clic destro sull'icona annotazione nel documento."
+msgstr "Fare clic destro sull'icona dell'annotazione nel documento."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:27
 msgid "Select <gui>Annotation Properties…</gui>."
-msgstr "Selezionare <gui>Proprietà annotazione...</gui>."
+msgstr "Selezionare <gui>Proprietà dell'annotazione...</gui>."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:32
@@ -86,7 +86,7 @@ msgid ""
 "In the <gui>Annotation Properties</gui> window, you can change the author, "
 "color, style and icon of your note."
 msgstr ""
-"Nella finestra <gui>Proprietà annotazione</gui>, è possibile cambiare "
+"Nella finestra <gui>Proprietà dell'annotazione</gui>, è possibile cambiare "
 "l'autore, il colore, lo stile e l'icona della vostra nota."
 
 #. (itstool) path: note/p
@@ -130,7 +130,7 @@ msgstr "David King"
 #. (itstool) path: info/desc
 #: C/annotations-delete.page:17
 msgid "Delete annotations from a PDF document."
-msgstr "Cancellare annotazioni da un documento PDF."
+msgstr "Cancellare le annotazioni da un documento PDF."
 
 #. (itstool) path: page/title
 #: C/annotations-delete.page:20
@@ -163,8 +163,8 @@ msgid ""
 "Right-click on the annotation icon in the document, and click <gui "
 "style=\"menuitem\">Remove Annotation</gui>."
 msgstr ""
-"Fare clic col tanto destro del mouse sull'icona nel documento, e fare clic s"
-" <gui style=\"menuitem\">Rimuovi annotazione</gui>."
+"Fare clic col tanto destro del mouse sull'icona nel documento, e fare clic "
+"su <gui style=\"menuitem\">Rimuovi annotazione</gui>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:36
@@ -217,7 +217,7 @@ msgstr ""
 "Se sono state create annotazioni sul vostro documento, è possibile "
 "utilizzare il pannello laterale per mostrare l'elenco di tutte le "
 "annotazioni del documento. L'elenco indica il tipo, li numero di pagina e "
-"l'autore di una nnotazione."
+"l'autore di una annotazione."
 
 #. (itstool) path: info/desc
 #: C/annotations.page:8
@@ -308,9 +308,9 @@ msgid ""
 "You can resize the note by clicking and holding the left mouse button on one"
 " of the bottom corners of the note, and moving it around."
 msgstr ""
-"È possibile ridimensionare la nota cliccando e trattenendo premuto il "
-"pulsante sinistro del mouse su uno dei margini della nota, e muovendo il "
-"cursore sullo schermo."
+"È possibile ridimensionare la nota cliccando e tenendo premuto il pulsante "
+"sinistro del mouse su uno dei margini della nota, e muovendo il cursore "
+"sullo schermo."
 
 #. (itstool) path: item/p
 #: C/annotations.page:69
@@ -334,7 +334,7 @@ msgstr "Shobha Tyagi"
 #. (itstool) path: page/title
 #: C/annotations-save.page:21
 msgid "Save a copy of an annotated PDF"
-msgstr "Salvare una copia di un documento PDF con annotazioni."
+msgstr "Salvare una copia di un documento PDF contenente annotazioni."
 
 #. (itstool) path: page/p
 #: C/annotations-save.page:22
@@ -422,7 +422,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/bookmarks.page:41
 msgid "Create a bookmark"
-msgstr "Creare un segnaliro"
+msgstr "Creare un segnalibro"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:45
@@ -449,7 +449,7 @@ msgid ""
 "pane. The default name of the bookmark you just added is the page number of "
 "the document."
 msgstr ""
-"Premere il pulsante <gui style=\"button\">+</gui> in basso sul riquadro "
+"Premere il pulsante <gui style=\"button\">+</gui> in basso sul pannello "
 "laterale. Il nome predefinito del segnalibro appena creato sarà il numero di"
 " pagina del documento."
 
@@ -466,7 +466,7 @@ msgstr "Rinominare un segnalibro"
 #. (itstool) path: item/p
 #: C/bookmarks.page:70
 msgid "Select the bookmark in the side pane."
-msgstr "Selezionare il segnalibro nel riquadro laterale."
+msgstr "Selezionare il segnalibro nel pannello laterale."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:71
@@ -494,7 +494,7 @@ msgid ""
 "Press the <gui style=\"button\">-</gui> button at the bottom of the side "
 "pane."
 msgstr ""
-"Premere il pulsante <gui style=\"button\">-</gui> sul fondo del riquadro "
+"Premere il pulsante <gui style=\"button\">-</gui> sul fondo del pannello "
 "laterale."
 
 #. (itstool) path: info/desc
@@ -505,7 +505,7 @@ msgstr "Come e dove riportare problemi."
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
 msgid "File a bug against Atril"
-msgstr "Segnala un bug per Atril"
+msgstr "Segnalare un bug per Atril"
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:19
@@ -582,7 +582,7 @@ msgid ""
 "The <cmd>atril</cmd> command can open any number of files, at specific pages"
 " and in various modes."
 msgstr ""
-"Il comando<cmd>Atril</cmd> può aprire un numero qualsiasi di documenti a "
+"Il comando<cmd>Atril</cmd> può aprire un numero qualsiasi di documenti su "
 "pagine specifiche ed in varie modalità."
 
 #. (itstool) path: credit/name
@@ -725,7 +725,7 @@ msgstr "Convertire un documento in formato PDF"
 msgid ""
 "You can convert documents of the following format types into PDF format:"
 msgstr ""
-"È possibile convertire documenti nei seguenti tipi di formati nel formato "
+"È possibile convertire documenti nei seguenti tipi di formato in formato "
 "PDF:"
 
 #. (itstool) path: item/p
@@ -1036,8 +1036,8 @@ msgid ""
 "Request</link>."
 msgstr ""
 "Se si vuole contribuire al Progetto di Documentazione, sentitevi liberi di "
-"mettervi in contatto con noi e create una <link href=\"https://github.com"
-"/mate-desktop/atril\">Pull Request</link>."
+"mettervi in contatto con noi e create una <link "
+"href=\"https://github.com/mate-desktop/atril\">Pull Request</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:25
@@ -1155,7 +1155,7 @@ msgstr "Nell'opzione pagine per foglio selezionare <gui>2</gui>."
 #: C/duplex-npages.page:76 C/singlesided-npages.page:77
 msgid "In the <gui>Page ordering</gui> menu, select <gui>Left to right</gui>."
 msgstr ""
-"Nel menù <gui>Ordinamentodi pagina</gui>, selezionare <gui>da sinistra a "
+"Nel menù <gui>Ordinamento pagine</gui>, selezionare <gui>da sinistra a "
 "destra</gui>."
 
 #. (itstool) path: item/p
@@ -1205,7 +1205,7 @@ msgstr "Cercare una parola o una frase in un documento."
 #. (itstool) path: page/title
 #: C/finding.page:27
 msgid "Find text in a document"
-msgstr "Cercare teso in un documento"
+msgstr "Cercare del testo in un documento"
 
 #. (itstool) path: item/p
 #: C/finding.page:31
@@ -1319,7 +1319,7 @@ msgid ""
 msgstr ""
 "Il supporto per un formato è chiamato <em>backend</em>. Se si ottiene "
 "l'errore «Impossibile aprire il documento», dovreste accertarvi che il "
-"pacchetto backend del formato in questione sia installato."
+"pacchetto di backend del formato in questione sia installato."
 
 #. (itstool) path: info/desc
 #: C/forms.page:7
@@ -1460,7 +1460,7 @@ msgid ""
 "<app>Atril</app> is made for viewing PDF documents. Learn how to get started"
 " with <app>Atril</app> and its features."
 msgstr ""
-"<app>Atril</app> è concepito per visualizzare documenti PDF. Impara come "
+"<app>Atril</app> è concepito per visualizzare documenti PDF. Imparate come "
 "utilizzare <app>Atril</app> e le sue caratteristiche."
 
 #. (itstool) path: page/title
@@ -1596,7 +1596,7 @@ msgstr "Siete liberi di:"
 #. (itstool) path: item/title
 #: C/license.page:25
 msgid "<em>To share</em>"
-msgstr "<em>condividere</em>"
+msgstr "<em>Condividere</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:26
@@ -1606,7 +1606,7 @@ msgstr "Copiare, distribuire e trasmettere il lavoro."
 #. (itstool) path: item/title
 #: C/license.page:29
 msgid "<em>To remix</em>"
-msgstr "<em>modificare</em>"
+msgstr "<em>Modificare</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:30
@@ -1688,7 +1688,7 @@ msgstr ""
 #. (itstool) path: p/link
 #: C/legal-unported.xml:5
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr "Licenza non registrata Creative Commons Attribution-Share Alike 3.0"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 
 #. (itstool) path: info/desc
 #: C/movingaround.page:20
@@ -1831,7 +1831,7 @@ msgstr ""
 #: C/movingaround.page:94
 msgid "Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your keyboard."
 msgstr ""
-"Premere <keyseq><key>Ctrl</key><key>End</key></keyseq> sulla tastiera."
+"Premere <keyseq><key>Ctrl</key><key>Fine</key></keyseq> sulla tastiera."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:102
@@ -1918,7 +1918,7 @@ msgstr "Aumentare o diminuire le dimensioni del documento"
 #. (itstool) path: section/p
 #: C/movingaround.page:144
 msgid "To adjust the zoom level:"
-msgstr "Per aggiustare il livelllo di ingrandimento:"
+msgstr "Per aggiustare il livello di ingrandimento:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:148
@@ -1944,7 +1944,7 @@ msgid ""
 "Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to "
 "zoom."
 msgstr ""
-"Si può anche trattenere premuto il tasto <key>Ctrl</key> ed utilizzare la "
+"Si può anche tenere premuto il tasto <key>Ctrl</key> ed utilizzare la "
 "rotella del mouse."
 
 #. (itstool) path: note/p
@@ -1976,8 +1976,8 @@ msgstr ""
 "Se si desidera visualizzare due pagine alla volta, affiancate l'una "
 "all'altra come in un libro, andare su <guiseq><gui "
 "style=\"menuitem\">Visualizza</gui> <gui "
-"style=\"menuitem\">Doppia</gui></guiseq> e premere <gui "
-"style=\"menuitem\">Doppia</gui>."
+"style=\"menuitem\">Duale</gui></guiseq> e premere <gui "
+"style=\"menuitem\">Duale</gui>."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:167
@@ -2108,7 +2108,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/noprint.page:69
 msgid "Go back to<app>Atril</app> and try to print the document again."
-msgstr "Ritornare su <app>Atril</app> e provare a ristampare il documento."
+msgstr "Ritornare ad <app>Atril</app> e provare a ristampare il documento."
 
 #. (itstool) path: info/desc
 #: C/openerror.page:7
@@ -2151,7 +2151,7 @@ msgstr "Per aprire un documento utilizzare uno dei modi seguenti:"
 msgid ""
 "Double-click on the file in <app>Caja</app> or your <em>file manager</em>."
 msgstr ""
-"Doppio cli sul file in <app>Caja</app> o sul vostro <em>file manager</em>."
+"Doppio clic sul file in <app>Caja</app> o sul vostro <em>file manager</em>."
 
 #. (itstool) path: note/p
 #: C/opening.page:34
@@ -2536,7 +2536,7 @@ msgstr "La stampa è abilitata per i seguenti formati di file:"
 #: C/print-pagescaling.page:17
 msgid "Shrink or expand the document to fit the paper size."
 msgstr ""
-"Restringere o espandere un documento per adattarlo alla dimensione della "
+"Restringere o espandere il documento per adattarlo alla dimensione della "
 "pagina."
 
 #. (itstool) path: page/title
@@ -2556,12 +2556,13 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:32
 msgid "Select the <gui style=\"tab\">Page Handling</gui> tab."
-msgstr "Selezionare la scheda <gui style=\"tab\">Gestione pagina</gui>."
+msgstr "Selezionare la scheda <gui style=\"tab\">Gestione della pagina</gui>."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:35
 msgid "Choose a <em>Page Scaling</em> from the drop-down list."
-msgstr "Selezionare un <em>Ridimensionamento pagina</em> dal menù a comparsa."
+msgstr ""
+"Selezionare un <em>Ridimensionamento della pagina</em> dal menù a comparsa."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:38
@@ -2574,9 +2575,9 @@ msgid ""
 "<em>Shrink to Printable Area</em>: document pages larger than the printable "
 "area are reduced to fit the printable area of the printer page."
 msgstr ""
-"<em>Adatta all'area stampabile</em>: le pagine del documento più grandi "
+"<em>Riduci all'area stampabile</em>: le pagine del documento più grandi "
 "dell'area di stampa saranno ridotte per adattarle alla superficie stampabile"
-" della stampante."
+" della pagina della stampante."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:46
@@ -2585,7 +2586,8 @@ msgid ""
 "required to fit the printable area of the printer page."
 msgstr ""
 "<em>Adatta all'area stampabile</em>: le pagine del documento verranno "
-"ingrandite al punto da riempire la superficie stampabile della stampante"
+"ingrandite o ridotte per adattarle alla superficie stampabile della pagina "
+"della stampante."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:53
@@ -2920,7 +2922,7 @@ msgstr ""
 "documento. La casella di ricerca viene automaticamente evidenziata se si "
 "preme questo pulsante e la ricerca inizia non appena si inizia a digitare "
 "nel campo. Se si seleziona del testo nel documento prima di effettuare la "
-"ricerca, La ricerca sarà effettuata su quel testo."
+"ricerca, La ricerca sarà effettuata su quel testo selezionato."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:168
@@ -3189,8 +3191,8 @@ msgid ""
 "detail below."
 msgstr ""
 "Si possono effettuare ricerche in avanti e all'indietro in una presentazione"
-" <em>Beamer-LaTeX</em> in modo simile a quello offerto dalla <link xref"
-"=\"synctex-search\">ricerca</link> in altri documenti TeX compilati con "
+" <em>Beamer-LaTeX</em> in modo simile a quello offerto dalla <link "
+"xref=\"synctex-search\">ricerca</link> in altri documenti TeX compilati con "
 "SyncTeX. Tuttavia la ricerca porta al corrispondente fotogramma (slide), non"
 " associato necessariamente ad una linea di testo. Questa differenza è "
 "spiegata sommariamente più avanti."
@@ -3662,7 +3664,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid "There are many languages for which translations are still needed."
-msgstr "Esistono molte lingue di cui è ancor necessaria la traduzione."
+msgstr "Esistono molte lingue di cui è ancora necessaria la traduzione."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
@@ -3677,4 +3679,4 @@ msgstr ""
 "href=\"https://www.transifex.com/signin/\">creare un account</link> e unirsi"
 " al <link href=\"https://www.transifex.com/mate/MATE/\">team di "
 "traduzione</link> della tua lingua. Ciò vi consentirà di caricare sul sito "
-"nuovi file di traduzione."
+"nuove traduzioni."

@@ -9,19 +9,20 @@
 # Laurent Napias <tamplan+transifex@free.fr>, 2021
 # Yoshida Shouyou, 2021
 # clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Adrien Golinelli, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-03-29 20:47+0200\n"
 "PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: clefebvre <clement.lefebvre@linuxmint.com>, 2021\n"
+"Last-Translator: Adrien Golinelli, 2022\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -132,7 +133,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/annotations-delete.page:17
 msgid "Delete annotations from a PDF document."
-msgstr ""
+msgstr "Supprimer les annotations d'un document PDF."
 
 #. (itstool) path: page/title
 #: C/annotations-delete.page:20
@@ -172,12 +173,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/annotations-disabled.page:7
 msgid "Annotations can only be added to PDF files."
-msgstr ""
+msgstr "Les annotations ne peuvent être ajoutées qu'aux fichiers PDF."
 
 #. (itstool) path: page/title
 #: C/annotations-disabled.page:17
 msgid "Can't add annotations?"
-msgstr ""
+msgstr "Impossible d'ajouter des annotations ?"
 
 #. (itstool) path: page/p
 #: C/annotations-disabled.page:18
@@ -217,7 +218,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/annotations.page:24
 msgid "Adding annotations"
-msgstr ""
+msgstr "Ajout d'annotations"
 
 #. (itstool) path: page/p
 #: C/annotations.page:25
@@ -371,7 +372,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/bookmarks.page:41
 msgid "Create a bookmark"
-msgstr ""
+msgstr "Créer un favori"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:45
@@ -403,7 +404,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/bookmarks.page:65
 msgid "Rename a bookmark"
-msgstr ""
+msgstr "Renommer un signet"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:70
@@ -428,7 +429,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/bookmarks.page:79
 msgid "Delete a bookmark"
-msgstr ""
+msgstr "Supprimer un favori"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:84
@@ -440,7 +441,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/bug-filing.page:7
 msgid "How and where to report problems."
-msgstr ""
+msgstr "Où et comment signaler les problèmes."
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
@@ -518,7 +519,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/commandline.page:23
 msgid "The command line"
-msgstr ""
+msgstr "La ligne de commande"
 
 #. (itstool) path: page/p
 #: C/commandline.page:24
@@ -1699,7 +1700,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/noprint.page:21
 msgid "I can't print a document"
-msgstr ""
+msgstr "Je ne peux pas imprimer un document"
 
 #. (itstool) path: section/title
 #: C/noprint.page:23
@@ -1724,7 +1725,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/noprint.page:32
 msgid "Printer problems"
-msgstr ""
+msgstr "Problèmes d'imprimante"
 
 #. (itstool) path: section/p
 #: C/noprint.page:33
@@ -1806,7 +1807,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/opening.page:25
 msgid "Open a document"
-msgstr ""
+msgstr "Ouvrir un document"
 
 #. (itstool) path: page/p
 #: C/opening.page:27
@@ -1960,7 +1961,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/presentations.page:61
 msgid "Showing a blank screen"
-msgstr ""
+msgstr "Affichage d'un écran vide"
 
 #. (itstool) path: section/p
 #: C/presentations.page:62
@@ -2131,7 +2132,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/printing.page:28
 msgid "To print a document:"
-msgstr ""
+msgstr "Pour imprimer un document:"
 
 #. (itstool) path: item/p
 #: C/printing.page:31
@@ -2256,7 +2257,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/shortcuts.page:46
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Raccourcis clavier"
 
 #. (itstool) path: section/title
 #: C/shortcuts.page:48
@@ -2351,7 +2352,7 @@ msgstr ""
 #. (itstool) path: td/p
 #: C/shortcuts.page:93
 msgid "Go to the previous page."
-msgstr ""
+msgstr "Aller à la page précédente."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:94
@@ -2361,7 +2362,7 @@ msgstr ""
 #. (itstool) path: td/p
 #: C/shortcuts.page:98
 msgid "Go to the next page."
-msgstr ""
+msgstr "Aller à la page suivante."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:99
@@ -2474,7 +2475,7 @@ msgstr ""
 #. (itstool) path: td/p
 #: C/shortcuts.page:147
 msgid "Copy highlighted text."
-msgstr ""
+msgstr "Copier le texte surligné."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:148
@@ -2496,7 +2497,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/shortcuts.page:158
 msgid "Finding text"
-msgstr ""
+msgstr "Recherche de texte"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:161
