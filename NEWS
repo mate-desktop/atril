@@ -1,3 +1,19 @@
+### atril 1.27.0
+
+  * tx: sync with transifex
+  * tx: update resource
+  * tx: migrate config file
+  * epub: Fix index loading for certain documents - look for epub:type instead of epub:id.
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * Fix implicit conversion changes signedness: 'gboolean' to 'guint'
+  * Fix the type for the signal identifier which is gulong
+  * Use GLib's new g_clear_signal_handler() function to simplify code
+  * Remove warnings about redefining gettext support macros
+  * Don't build the path to stock icons
+  * Use a blank line at most
+  * Accessibility: add button description
+  * Preserve compatibility with older GLib versions
+
 ### atril 1.26.0
 
   * update translations
