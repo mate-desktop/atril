@@ -1,30 +1,29 @@
 # 
 # Translators:
-# Giuseppe Pignataro <rogepix@gmail.com>, 2018
-# Enrico B. <enricobe@hotmail.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Giuseppe Pignataro <rogepix@gmail.com>, 2021
+# Enrico B. <enricobe@hotmail.com>, 2021
 # Dario Di Nucci <linkin88mail@gmail.com>, 2021
-# Alessandro Volturno <alelvb@inwind.it>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Davide Liessi, 2022
+# Alessandro Volturno <alelvb@inwind.it>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-03-29 20:47+0200\n"
-"PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
+"PO-Revision-Date: 2021-09-18 16:14+0000\n"
+"Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2022\n"
+"Language-Team: Italian (https://app.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr ""
-"Enrico , 2019\n"
-"Alessandro Volturno,  2020, 2021"
+msgstr "Alessandro Volturno, 2021"
 
 #. (itstool) path: info/desc
 #: C/annotation-properties.page:7
@@ -1036,8 +1035,8 @@ msgid ""
 "Request</link>."
 msgstr ""
 "Se si vuole contribuire al Progetto di Documentazione, sentitevi liberi di "
-"mettervi in contatto con noi e create una <link href=\"https://github.com"
-"/mate-desktop/atril\">Pull Request</link>."
+"mettervi in contatto con noi e create una <link "
+"href=\"https://github.com/mate-desktop/atril\">Pull Request</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:25
@@ -2536,7 +2535,7 @@ msgstr "La stampa è abilitata per i seguenti formati di file:"
 #: C/print-pagescaling.page:17
 msgid "Shrink or expand the document to fit the paper size."
 msgstr ""
-"Restringere o espandere un documento per adattarlo alla dimensione della "
+"Restringere o espandere il documento per adattarlo alla dimensione della "
 "pagina."
 
 #. (itstool) path: page/title
@@ -2574,7 +2573,7 @@ msgid ""
 "<em>Shrink to Printable Area</em>: document pages larger than the printable "
 "area are reduced to fit the printable area of the printer page."
 msgstr ""
-"<em>Adatta all'area stampabile</em>: le pagine del documento più grandi "
+"<em>Riduci all'area stampabile</em>: le pagine del documento più grandi "
 "dell'area di stampa saranno ridotte per adattarle alla superficie stampabile"
 " della stampante."
 
@@ -2584,8 +2583,9 @@ msgid ""
 "<em>Fit to Printable Area</em>: document pages are enlarged or reduced as "
 "required to fit the printable area of the printer page."
 msgstr ""
-"<em>Adatta all'area stampabile</em>: le pagine del documento verranno "
-"ingrandite al punto da riempire la superficie stampabile della stampante"
+"<em>Adatta all'area stampabile</em>: le pagine del documento saranno "
+"ingrandite o ridotte in modo da riempire l'area stampabile della pagina di "
+"stampa."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:53
@@ -3189,8 +3189,8 @@ msgid ""
 "detail below."
 msgstr ""
 "Si possono effettuare ricerche in avanti e all'indietro in una presentazione"
-" <em>Beamer-LaTeX</em> in modo simile a quello offerto dalla <link xref"
-"=\"synctex-search\">ricerca</link> in altri documenti TeX compilati con "
+" <em>Beamer-LaTeX</em> in modo simile a quello offerto dalla <link "
+"xref=\"synctex-search\">ricerca</link> in altri documenti TeX compilati con "
 "SyncTeX. Tuttavia la ricerca porta al corrispondente fotogramma (slide), non"
 " associato necessariamente ad una linea di testo. Questa differenza è "
 "spiegata sommariamente più avanti."

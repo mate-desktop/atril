@@ -1,32 +1,35 @@
 # 
 # Translators:
-# elio <micta2003@hotmail.com>, 2018
-# Andres Sanchez <blackatze93@gmail.com>, 2018
+# Andres Sanchez <blackatze93@gmail.com>, 2021
+# elio <micta2003@hotmail.com>, 2021
+# Lluís Tusquellas <lutusq@gmail.com>, 2021
+# Emiliano Fascetti, 2021
 # seacat <seacat.linux@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Lluís Tusquellas <lutusq@gmail.com>, 2021
 # happydogeface, 2021
-# Emiliano Fascetti, 2021
 # Toni Estévez <toni.estevez@gmail.com>, 2021
+# Joaquín Ruiz Luque, 2022
+# Albireo67 <jfmonago@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-03-29 20:47+0200\n"
-"PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
+"PO-Revision-Date: 2021-09-18 16:14+0000\n"
+"Last-Translator: Albireo67 <jfmonago@gmail.com>, 2022\n"
+"Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2020\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020-2021\n"
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -34,7 +37,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/annotation-properties.page:7
 msgid "How to customize the author, color, style or icon of an annotation."
-msgstr ""
+msgstr "Como personalizar el autor, color, estilo o icono de una anotación"
 
 #. (itstool) path: credit/name
 #: C/annotation-properties.page:10 C/annotations-disabled.page:10
@@ -48,7 +51,7 @@ msgstr ""
 #: C/synctex-compile.page:10 C/synctex-editors.page:10 C/synctex.page:10
 #: C/synctex-search.page:10 C/synctex-support.page:10 C/translate.page:10
 msgid "Tiffany Antopolski"
-msgstr ""
+msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/annotation-properties.page:14 C/annotations-disabled.page:14
@@ -66,22 +69,22 @@ msgstr ""
 #: C/synctex-search.page:14 C/synctex-support.page:18 C/textselection.page:14
 #: C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
-msgstr ""
+msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
 #: C/annotation-properties.page:18
 msgid "Customize annotations"
-msgstr ""
+msgstr "Personalizar anotaciones"
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:22
 msgid "Right click on the annotation icon in the document."
-msgstr ""
+msgstr "Clic derecho en el icono de anotación en el documento."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:27
 msgid "Select <gui>Annotation Properties…</gui>."
-msgstr ""
+msgstr "Seleccionar <gui>Propiedades de Anotación…</gui>."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:32
@@ -89,6 +92,8 @@ msgid ""
 "In the <gui>Annotation Properties</gui> window, you can change the author, "
 "color, style and icon of your note."
 msgstr ""
+"En la ventana de <gui>Propiedades de Anotación</gui> , puede cambiar autor, "
+"color, estilo e icono de su nota."
 
 #. (itstool) path: note/p
 #: C/annotation-properties.page:36
@@ -96,11 +101,15 @@ msgid ""
 "The annotation properties will be applied to the note for which you made the"
 " changes only. Each note can have a different set of properties."
 msgstr ""
+"Las propiedades de anotación se aplicarán a la nota para la que hizo los "
+"cambios solamente. Cada nota puede tener un conjunto distinto de "
+"propiedades."
 
 #. (itstool) path: section/title
 #: C/annotation-properties.page:45
 msgid "Can I permanently change the default annotation properties?"
 msgstr ""
+"¿Puedo cambiar permanentemente las propiedades de anotación predeterminadas?"
 
 #. (itstool) path: section/p
 #: C/annotation-properties.page:46
@@ -112,21 +121,28 @@ msgid ""
 "individually on each note. There is no way to save different default "
 "settings for annotation properties, at this time."
 msgstr ""
+"Las propiedades predeterminadas de anotación (autor, color, estilo e icono) "
+"solo pueden ser cambiadas en una  nota concreta como se menciona "
+"anteriormente. Si quiere que todos los iconos de sus notas sean "
+"<gui>rojos</gui>en lugar de <gui>amarillos</gui>, tendrá que cambiar el "
+"color predeterminado de  <gui>amarillo</gui> a <gui>rojo</gui> "
+"individualmente en cada nota. No es posible guardar diferentes ajustes "
+"predeterminados para propiedades de anotación en este momento."
 
 #. (itstool) path: credit/name
 #: C/annotations-delete.page:11
 msgid "David King"
-msgstr ""
+msgstr "David King"
 
 #. (itstool) path: info/desc
 #: C/annotations-delete.page:17
 msgid "Delete annotations from a PDF document."
-msgstr ""
+msgstr "Eliminar anotaciones en un documento PDF."
 
 #. (itstool) path: page/title
 #: C/annotations-delete.page:20
 msgid "Removing annotations"
-msgstr ""
+msgstr "Eliminando anotaciones"
 
 #. (itstool) path: page/p
 #: C/annotations-delete.page:22
@@ -134,6 +150,8 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can remove "
 "annotations that you or other people have added."
 msgstr ""
+"Una anotación es una nota o comentario añadido a un documento PDF. Puede "
+"eliminar anotaciones que usted u otra persona haya añadido."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:27
@@ -142,6 +160,9 @@ msgid ""
 "annotations, find them in the <link xref=\"annotations-navigate\">annotation"
 " side pane</link>."
 msgstr ""
+"Ver una página que tiene una anotación. Si no está seguro de qué páginas "
+"tienen anotaciones, puede encontrarlas en el<link xref=\"annotations-"
+"navigate\">panel lateral de anotación</link>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:32
@@ -149,6 +170,8 @@ msgid ""
 "Right-click on the annotation icon in the document, and click <gui "
 "style=\"menuitem\">Remove Annotation</gui>."
 msgstr ""
+"Clic derecho en el icono de anotación del documento, y clic en <gui "
+"style=\"menuitem\">Eliminar Anotación</gui>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:36
@@ -157,16 +180,19 @@ msgid ""
 "style=\"menuitem\">File</gui>, followed by <gui style=\"menuitem\">Save "
 "As…</gui>."
 msgstr ""
+"Guardar los cambios en un nuevo documento haciendo clic en  <gui "
+"style=\"menuitem\">Archivo</gui>, seguido de <gui style=\"menuitem\">Guardar"
+" Como…</gui>."
 
 #. (itstool) path: info/desc
 #: C/annotations-disabled.page:7
 msgid "Annotations can only be added to PDF files."
-msgstr ""
+msgstr "Las anotaciones solo pueden añadirse en archivos PDF."
 
 #. (itstool) path: page/title
 #: C/annotations-disabled.page:17
 msgid "Can't add annotations?"
-msgstr ""
+msgstr "¿No puede añadir anotaciones?"
 
 #. (itstool) path: page/p
 #: C/annotations-disabled.page:18
@@ -174,16 +200,19 @@ msgid ""
 "Annotations can only be added to PDF files. If your file is of a format "
 "other than PDF, the option to add annotations will be greyed out (disabled)."
 msgstr ""
+"Las anotaciones solo pueden añadirse en archivos PDF. Si su archivo tiene un"
+" formato distinto a PDF, la opción de añadir anotaciones estará sombreada "
+"(desactivada)."
 
 #. (itstool) path: info/desc
 #: C/annotations-navigate.page:7
 msgid "How to navigate to annotations."
-msgstr ""
+msgstr "Cómo navegar por las anotaciones."
 
 #. (itstool) path: page/title
 #: C/annotations-navigate.page:19
 msgid "Annotation navigation"
-msgstr ""
+msgstr "Navegación de Anotación"
 
 #. (itstool) path: page/p
 #: C/annotations-navigate.page:20
@@ -192,21 +221,24 @@ msgid ""
 "to display the list of all the annotations in the document. The list "
 "indicates the type, page number and author of the annotation."
 msgstr ""
+"Si ha creado anotaciones en su documento, puede usar el panel lateral para "
+"mostrar la lista de todas las anotaciones en el documento. La lista indica "
+"el tipo, número de página y autor de la anotación."
 
 #. (itstool) path: info/desc
 #: C/annotations.page:8
 msgid "How to create and customize annotations."
-msgstr ""
+msgstr "Como crear y personalizar anotaciones"
 
 #. (itstool) path: credit/name
 #: C/annotations.page:15 C/shortcuts.page:31
 msgid "Andre Klapper"
-msgstr ""
+msgstr "Andre Klapper"
 
 #. (itstool) path: page/title
 #: C/annotations.page:24
 msgid "Adding annotations"
-msgstr ""
+msgstr "Añadiendo anotaciones"
 
 #. (itstool) path: page/p
 #: C/annotations.page:25
@@ -214,6 +246,8 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can add "
 "annotations using Atril."
 msgstr ""
+"Una anotación es una nota o comentario añadido a un documento PDF. Puedes "
+"añadir anotaciones usando Atril."
 
 #. (itstool) path: page/p
 #: C/annotations.page:28
@@ -224,6 +258,10 @@ msgid ""
 "style=\"menuitem\">Sidepane</gui></guiseq> or press the <key>F9</key> key on"
 " the keyboard."
 msgstr ""
+"Cuando abre un fichero, debe tener un panel lateral en el lado izquierdo de "
+"la ventana. Si no tiene un panel lateral visible, haga clic en <guiseq><gui "
+"style=\"menuitem\">Ver</gui> <gui style=\"menuitem\">Panel "
+"lateral</gui></guiseq> o pulse la tecla  <key>F9</key> en su teclado."
 
 #. (itstool) path: page/p
 #: C/annotations.page:36
@@ -233,21 +271,29 @@ msgid ""
 "<gui>Bookmarks</gui> let you choose what to display in the side pane. (Some "
 "options may not be available for some documents)."
 msgstr ""
+"En la parte superior del panel lateral, los elementos de la lista "
+"desplegable  <gui>Miniaturas</gui>, <gui>Índice</gui>, "
+"<gui>Anotaciones</gui> y <gui>Marcadores</gui> le permiten elegir qué "
+"mostrar en el panel lateral. (Algunas opciones pueden no estar disponibles "
+"para algunos documentos)."
 
 #. (itstool) path: page/p
 #: C/annotations.page:39
 msgid "To create an annotation:"
-msgstr ""
+msgstr "Para crear una anotación:"
 
 #. (itstool) path: item/p
 #: C/annotations.page:44
 msgid "Select <gui style=\"button\">Annotations</gui> from the drop-down list:"
 msgstr ""
+"Seleccione <gui style=\"button\">Anotaciones</gui> en la lista desplegable:"
 
 #. (itstool) path: item/p
 #: C/annotations.page:49
 msgid "Click on <gui style=\"button\">Add</gui> to add a text annotation."
 msgstr ""
+"Haga clic en <gui style=\"button\">Añadir</gui> para añadir una anotación de"
+" texto."
 
 #. (itstool) path: item/p
 #: C/annotations.page:54
@@ -255,11 +301,13 @@ msgid ""
 "Click on the spot in the document window you would like to add the "
 "annotation to. Your <em>annotation</em> window will open."
 msgstr ""
+"Haga clic en el sitio de la ventana del documento en la que quiera añadir la"
+" anotación. Su ventana de <em>anotación</em> se abrirá."
 
 #. (itstool) path: item/p
 #: C/annotations.page:59
 msgid "Type your text into the <em>annotation</em> window."
-msgstr ""
+msgstr "Escriba su texto dentro de la ventana de <em>anotación</em> ."
 
 #. (itstool) path: note/p
 #: C/annotations.page:63
@@ -267,6 +315,8 @@ msgid ""
 "You can resize the note by clicking and holding the left mouse button on one"
 " of the bottom corners of the note, and moving it around."
 msgstr ""
+"Puede cambiar el tamaño de la nota pulsando y manteniendo el botón izquierdo"
+" del ratón en una de las esquinas de la nota, y moviéndolo según necesite."
 
 #. (itstool) path: item/p
 #: C/annotations.page:69
@@ -274,21 +324,23 @@ msgid ""
 "Close the note by clicking on the <gui>x</gui> in the top corner of the "
 "note."
 msgstr ""
+"Cierre la nota haciendo clic en la <gui>x</gui> de la esquina superior de la"
+" nota."
 
 #. (itstool) path: info/desc
 #: C/annotations-save.page:7
 msgid "How to save your annotations."
-msgstr ""
+msgstr "Cómo guardar sus anotaciones."
 
 #. (itstool) path: credit/name
 #: C/annotations-save.page:14
 msgid "Shobha Tyagi"
-msgstr ""
+msgstr "Shobha Tyagi"
 
 #. (itstool) path: page/title
 #: C/annotations-save.page:21
 msgid "Save a copy of an annotated PDF"
-msgstr ""
+msgstr "Guarda una copia de un PDF con anotaciones"
 
 #. (itstool) path: page/p
 #: C/annotations-save.page:22
@@ -296,11 +348,15 @@ msgid ""
 "To save a copy of your annotated PDF for future viewing using "
 "<app>Atril</app> or any other PDF viewer <em>that supports annotations</em>:"
 msgstr ""
+"Para guardar una copia de sus PDFs anotados para visualizar en el futuro "
+"usando <app>Atril</app> o cualquier otro visor de PDFs  <em>que soporte "
+"anotaciones</em>:"
 
 #. (itstool) path: item/p
 #: C/annotations-save.page:29
 msgid "Click <guiseq><gui>File</gui><gui>Save As…</gui></guiseq>"
 msgstr ""
+"Haga clic en <guiseq><gui>Archivo</gui><gui>Guardar Como...</gui></guiseq>"
 
 #. (itstool) path: item/p
 #: C/annotations-save.page:34
@@ -308,6 +364,8 @@ msgid ""
 "Choose a name and folder in which to save the file, then click "
 "<gui>Save</gui>. The PDF will be saved in the folder you chose."
 msgstr ""
+"Elija un nombre y una carpeta donde guardar el fichero, y haga clic en "
+"<gui>Guardar</gui>. El PDF se guardará en la carpeta que haya seleccionado."
 
 #. (itstool) path: page/p
 #: C/annotations-save.page:40
@@ -315,18 +373,21 @@ msgid ""
 "Annotations are added according to the PDF specification. Therefore, most "
 "PDF readers should be able to read them. Adobe Reader is known to work."
 msgstr ""
+"Las anotaciones se añaden de acuerdo a la especificación PDF. Por tanto, la "
+"mayoría de lectores de PDF deberían poder leerlas. Es sabido que funciona "
+"con Adobe Reader."
 
 #. (itstool) path: credit/name
 #: C/bookmarks.page:14 C/finding.page:18 C/formats.page:17 C/opening.page:16
 #: C/password.page:14 C/print-differentsize.page:14
 #: C/print-pagescaling.page:10
 msgid "Ekaterina Gerasimova"
-msgstr ""
+msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: info/desc
 #: C/bookmarks.page:22
 msgid "You can use annotations like bookmarks."
-msgstr ""
+msgstr "Puedes usar anotaciones como marcadores."
 
 #. (itstool) path: page/title
 #: C/bookmarks.page:25
@@ -339,6 +400,8 @@ msgid ""
 "You can add, rename and delete bookmarks using the <app>Document "
 "Viewer</app>."
 msgstr ""
+"Puede añadir, renombrar o eliminar marcadores usando el  <app>Visor de "
+"Documentos</app>."
 
 #. (itstool) path: page/p
 #: C/bookmarks.page:30
@@ -349,6 +412,11 @@ msgid ""
 "style=\"menuitem\">Sidepane</gui></guiseq>, or press the <key>F9</key> key "
 "on the keyboard."
 msgstr ""
+"Cuando abre un fichero, debe tener un panel lateral en el lado izquierdo de "
+"la ventana. Si no tiene un panel lateral visible, haga clic en <guiseq><gui "
+"style=\"menuitem\">Ver</gui> <gui style=\"menuitem\">Panel "
+"lateral</gui></guiseq>, o pulse la tecla <key>F9</key>  o pulse la tecla "
+"4F94 en su teclado."
 
 #. (itstool) path: page/p
 #: C/bookmarks.page:35
@@ -356,11 +424,13 @@ msgid ""
 "At the bottom of this side pane, select the <gui "
 "style=\"button\">Bookmarks</gui> from the drop-down list."
 msgstr ""
+"Al final de este panel lateral, seleccione los <gui "
+"style=\"button\">Marcadores</gui> en la lista desplegable."
 
 #. (itstool) path: section/title
 #: C/bookmarks.page:41
 msgid "Create a bookmark"
-msgstr ""
+msgstr "Crea un marcador"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:45
@@ -368,6 +438,8 @@ msgid ""
 "In the PDF document itself, navigate to the page to which you would like to "
 "add the bookmark."
 msgstr ""
+"En el propio documento PDF, navegue hasta la página en la quiere añadir el "
+"marcador."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:49 C/bookmarks.page:68 C/bookmarks.page:82
@@ -375,6 +447,8 @@ msgid ""
 "In the side pane, select <gui style=\"button\">Bookmarks</gui> from the "
 "drop-down list."
 msgstr ""
+"En el panel lateral, seleccione <gui style=\"button\">Marcadores</gui> en el"
+" menú desplegable."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:53
@@ -383,58 +457,61 @@ msgid ""
 "pane. The default name of the bookmark you just added is the page number of "
 "the document."
 msgstr ""
+"Pulse el botón <gui style=\"button\">+</gui> al final del panel lateral. El "
+"nombre predeterminado del marcador que ha añadido es el número de página del"
+" documento."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:58
 msgid "The bookmark is now listed in the bookmarks list."
-msgstr ""
+msgstr "El marcador aparece ahora en la lista de marcadores."
 
 #. (itstool) path: section/title
 #: C/bookmarks.page:65
 msgid "Rename a bookmark"
-msgstr ""
+msgstr "Renombra un marcador"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:70
 msgid "Select the bookmark in the side pane."
-msgstr ""
+msgstr "Seleccione un marcador en el panel lateral."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:71
 msgid "Click on the bookmark name."
-msgstr ""
+msgstr "Haga clic en el nombre del marcador."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:72
 msgid "Enter the new name."
-msgstr ""
+msgstr "Introduzca el nuevo nombre."
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:73
 msgid "Press <key>Enter</key>."
-msgstr ""
+msgstr "Pulse <key>Intro</key>."
 
 #. (itstool) path: section/title
 #: C/bookmarks.page:79
 msgid "Delete a bookmark"
-msgstr ""
+msgstr "Elimina un marcador"
 
 #. (itstool) path: item/p
 #: C/bookmarks.page:84
 msgid ""
 "Press the <gui style=\"button\">-</gui> button at the bottom of the side "
 "pane."
-msgstr ""
+msgstr "Pulse el botón <gui style=\"button\">-</gui> al final del panel lateral."
 
 #. (itstool) path: info/desc
 #: C/bug-filing.page:7
 msgid "How and where to report problems."
-msgstr ""
+msgstr "Cómo y dónde informar de problemas."
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
 msgid "File a bug against Atril"
-msgstr ""
+msgstr "Registrar un fallo en Atril"
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:19
@@ -444,6 +521,10 @@ msgid ""
 "file a bug, go to <link href=\"https://github.com/mate-"
 "desktop/atril/issues\"/>."
 msgstr ""
+"Atril es mantenido por una comunidad de voluntarios. Es bienvenido a "
+"participar. Si se encuentra con un problema, puede registrar un <em>informe "
+"de error</em>. Para registrar un fallo, vaya a <link "
+"href=\"https://github.com/mate-desktop/atril/issues\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:22
@@ -451,6 +532,9 @@ msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
+"Este es un sistema de seguimiento de errores donde usuarios y "
+"desarrolladores pueden registrar los detalles de un fallo, caídas del "
+"programa y solicitar mejoras."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:25
@@ -461,11 +545,17 @@ msgid ""
 " have an account, just click on the <gui>Sign in / Register</gui> link to "
 "create one."
 msgstr ""
+"Para participar, necesita una cuenta que le dará capacidades de acceder, "
+"registrar fallos, y hacer comentarios. Asimismo, necesita registrarse para "
+"recibir actualizaciones por e-mail sobre el estado de su fallo. Si aún no "
+"tiene una cuenta, haga blien en el enlace <gui>Entrar / Registrarse</gui> "
+"para crear una."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:28
 msgid "Once you have an account, log in, and click on <gui>New issue</gui>."
 msgstr ""
+"Una vez tenga una cuenta, entre y haga clic en  <gui>Nuevo problema</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:31
@@ -473,6 +563,8 @@ msgid ""
 "Fill in the Title and Description sections and click <gui>Submit "
 "Issue</gui>."
 msgstr ""
+"Rellene las secciones Título y Descripción, y haga clic en <gui>Enviar "
+"Problema</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:34
@@ -480,6 +572,8 @@ msgid ""
 "Your report will be given an ID number, and its status will be updated as it"
 " is being dealt with."
 msgstr ""
+"Su informe recibirá un número ID, y su estado se actualizará según se "
+"progrese."
 
 #. (itstool) path: info/title
 #: C/commandline.page:7
@@ -493,6 +587,8 @@ msgid ""
 "The <cmd>atril</cmd> command can open any number of files, at specific pages"
 " and in various modes."
 msgstr ""
+"El comando <cmd>atril</cmd> puede abrir cualquier número de archivos, en "
+"páginas específicas, y en varios modos."
 
 #. (itstool) path: credit/name
 #: C/commandline.page:11 C/convertpdf.page:10 C/convertPostScript.page:10
@@ -502,12 +598,12 @@ msgstr ""
 #: C/print-2sided.page:11 C/print-differentsize.page:10 C/printing.page:12
 #: C/reload.page:13 C/shortcuts.page:11 C/textselection.page:10
 msgid "Phil Bull"
-msgstr ""
+msgstr "Phil Bull"
 
 #. (itstool) path: page/title
 #: C/commandline.page:23
 msgid "The command line"
-msgstr ""
+msgstr "La línea de órdenes"
 
 #. (itstool) path: page/p
 #: C/commandline.page:24
@@ -515,12 +611,15 @@ msgid ""
 "To start<app>Atril</app> from the command line, type <cmd>atril</cmd>. You "
 "can open a specific file by typing the filename after the atril command:"
 msgstr ""
+"Para iniciar <app>Atril</app> desde la línea de órdenes, escriba "
+"<cmd>atril</cmd>. Puede abrir un archivo concreto escribiendo su nombre "
+"después del comando atril:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:29
 #, no-wrap
 msgid "atril file.pdf"
-msgstr ""
+msgstr "atril archivo.pdf"
 
 #. (itstool) path: page/p
 #: C/commandline.page:30
@@ -528,12 +627,14 @@ msgid ""
 "You can open multiple files by typing the filenames after the atril command,"
 " separating the filenames by a space:"
 msgstr ""
+"Puede abrir múltiples archivos escribiendo sus nombres después del comando "
+"atril, separando dichos nombre por un espacio:"
 
 #. (itstool) path: page/screen
 #: C/commandline.page:33
 #, no-wrap
 msgid "atril file1.pdf file2.pdf"
-msgstr ""
+msgstr "atril archivo1.pdf archivo2.pdf"
 
 #. (itstool) path: page/p
 #: C/commandline.page:34
@@ -541,11 +642,13 @@ msgid ""
 "Atril also supports the handling of files on the web. For example, after the"
 " atril command you can give the location of a file on the web:"
 msgstr ""
+"Atril también soporta el manejo de archivos en la web. Por ejemplo, después "
+"del comando atril, puede escribir la ruta de una archivo en la web:"
 
 #. (itstool) path: section/title
 #: C/commandline.page:38
 msgid "Opening a document at a specific page"
-msgstr ""
+msgstr "Abriendo un documento en una página específica"
 
 #. (itstool) path: section/p
 #: C/commandline.page:39
@@ -553,12 +656,15 @@ msgid ""
 "You can use<cmd>--page-label</cmd> switch to open a document at a specific "
 "page. For example, to open a document to page 3, you would type:"
 msgstr ""
+"Puede usar el argumento<cmd>--page-label</cmd> para abrir un documento por "
+"una página específica. Por ejemplo, para abrir un documento en la página 3, "
+"escriba:"
 
 #. (itstool) path: section/screen
 #: C/commandline.page:43
 #, no-wrap
 msgid "atril --page-label=3 file.pdf"
-msgstr ""
+msgstr "atril --page-label=3 archivo.pdf"
 
 #. (itstool) path: section/p
 #: C/commandline.page:44
@@ -566,74 +672,76 @@ msgid ""
 "The page label should be in the same format as the page number displayed in "
 "<app>Atril</app> header bar."
 msgstr ""
+"La etiqueta de página debe de estar en el mismo formato que el número de "
+"página mostrado en la barra superior de  <app>Atril</app>."
 
 #. (itstool) path: section/title
 #: C/commandline.page:50
 msgid "Opening a document in fullscreen mode"
-msgstr ""
+msgstr "Abriendo un documento a pantalla completa"
 
 #. (itstool) path: section/screen
 #: C/commandline.page:51
 #, no-wrap
 msgid "atril --fullscreen file.pdf"
-msgstr ""
+msgstr "atril --fulscreen archivo.pdf"
 
 #. (itstool) path: section/title
 #: C/commandline.page:54
 msgid "Opening a document in presentation mode"
-msgstr ""
+msgstr "Abriendo un documento en modo presentación"
 
 #. (itstool) path: section/screen
 #: C/commandline.page:55
 #, no-wrap
 msgid "atril --presentation file.pdf"
-msgstr ""
+msgstr "atril --presentation archivo.pdf"
 
 #. (itstool) path: section/title
 #: C/commandline.page:58
 msgid "Opening a document in preview mode"
-msgstr ""
+msgstr "Abriendo un documento en modo previsualización"
 
 #. (itstool) path: section/screen
 #: C/commandline.page:59
 #, no-wrap
 msgid "atril --preview file.pdf"
-msgstr ""
+msgstr "atril --preview archivo.pdf"
 
 #. (itstool) path: info/desc
 #: C/convertpdf.page:7
 msgid "You can convert a document to PDF by \"printing\" it to a file."
-msgstr ""
+msgstr "Puede convertir un documento a PDF \"imprimiendo\" el mismo a un archivo."
 
 #. (itstool) path: credit/name
 #: C/convertpdf.page:14 C/convertPostScript.page:14 C/convertSVG.page:14
 #: C/finding.page:14 C/forms-saving.page:16 C/invert-colors.page:17
 #: C/movingaround.page:14 C/presentations.page:14 C/printing.page:16
 msgid "Anna Philips"
-msgstr ""
+msgstr "Anna Philips"
 
 #. (itstool) path: page/title
 #: C/convertpdf.page:23
 msgid "Converting a document to PDF"
-msgstr ""
+msgstr "Convertir un documento a PDF"
 
 #. (itstool) path: page/p
 #: C/convertpdf.page:25
 msgid ""
 "You can convert documents of the following format types into PDF format:"
-msgstr ""
+msgstr "Puede convertir documentos de los siguientes formatos a formato PDF:"
 
 #. (itstool) path: item/p
 #: C/convertpdf.page:29 C/formats.page:33 C/presentations.page:75
 #: C/printing.page:47
 msgid "Device Independent file format (.dvi)"
-msgstr ""
+msgstr "Device Independent file format (.dvi)"
 
 #. (itstool) path: item/p
 #: C/convertpdf.page:30 C/formats.page:37 C/presentations.page:79
 #: C/printing.page:50
 msgid "PostScript (.ps)"
-msgstr ""
+msgstr "PostScript (.ps)"
 
 #. (itstool) path: page/p
 #: C/convertpdf.page:32
@@ -641,6 +749,8 @@ msgid ""
 "This works by opening the file in <app>Atril</app> and \"printing\" the "
 "document as a PDF file."
 msgstr ""
+"Esto funciona abriendo el fichero en  <app>Atril</app> e \"imprimiendo\" el "
+"documento como un archivo PDF."
 
 #. (itstool) path: item/p
 #: C/convertpdf.page:37 C/forms-saving.page:56
@@ -649,6 +759,9 @@ msgid ""
 "style=\"menuitem\">Print</gui></guiseq> and select <gui>Print</gui> or press"
 " <keyseq><key>Ctrl</key><key>P</key></keyseq> on your keyboard."
 msgstr ""
+"Vaya a <guiseq><gui style=\"menuitem\">Archivo</gui> <gui "
+"style=\"menuitem\">Imprimir</gui></guiseq> y seleccione <gui>Imprimir</gui> "
+"o pulse  <keyseq><key>Ctrl</key><key>P</key></keyseq> en su teclado."
 
 #. (itstool) path: item/p
 #: C/convertpdf.page:45 C/forms-saving.page:65
@@ -656,6 +769,8 @@ msgid ""
 "Select <gui>Print to File</gui> and choose PDF as the <gui>Output "
 "format</gui>."
 msgstr ""
+"Seleccione <gui>Imprimir a Archivo</gui> y elija PDF como el  <gui>Formato "
+"de Salida</gui>."
 
 #. (itstool) path: item/p
 #: C/convertpdf.page:51
@@ -663,6 +778,8 @@ msgid ""
 "Choose a name and folder in which to save the file, then click "
 "<gui>Print</gui>. The PDF will be saved in the folder you chose."
 msgstr ""
+"Elija un nombre y una carpeta en la que guardar el archivo, y haga clic en "
+"<gui>Imprimir</gui>. El PDF se guardará en la carpeta que haya elegido."
 
 #. (itstool) path: note/p
 #: C/convertpdf.page:58
@@ -675,39 +792,47 @@ msgid ""
 "Recognition</em> (OCR) software to extract the text from files if you need "
 "to."
 msgstr ""
+"No puede seleccionar texto en archivos PostScript o .dvi, pero normalmente "
+"puede hacerlo en archivos PDF. Convertir archivos PostScript o .dvi a PDF no"
+" harán el texto seleccionable. Esto ocurre porque el texto no está guardado "
+"en el archivo (es sólo una imagen de cómo aparece el texto), así que no hay "
+"forma de recuperarlo y ponerlo en el archivo PDF. Puede usar un programa de "
+"<em>Reconocimiento  Óptico de Caracteres</em> (OCR) para extraer el texto de"
+" archivos si lo necesita."
 
 #. (itstool) path: info/desc
 #: C/convertPostScript.page:7
 msgid "You can convert a document to PostScript."
-msgstr ""
+msgstr "Puede convertir un documento a PostScript."
 
 #. (itstool) path: page/title
 #: C/convertPostScript.page:23
 msgid "Converting a document to PostScript"
-msgstr ""
+msgstr "Convertir un documento a PostScript"
 
 #. (itstool) path: page/p
 #: C/convertPostScript.page:25
 msgid ""
 "You can convert documents of the following format types to PostScript files:"
 msgstr ""
+"Puede convertir documentos de los siguientes formatos a archivos PostScript:"
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:29 C/formats.page:34 C/presentations.page:76
 #: C/printing.page:48
 msgid "DjVu (.djvu, .djv)"
-msgstr ""
+msgstr "DjVu (.djvu, .djv)"
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:30 C/convertSVG.page:28 C/formats.page:36
 #: C/presentations.page:78 C/printing.page:49
 msgid "Portable Document Format (.pdf)"
-msgstr ""
+msgstr "Portable Document Format (.pdf)"
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:31 C/printing.page:51
 msgid "Tagged Image File Format (.tiff, .tif)"
-msgstr ""
+msgstr "Tagged Image File Format (.tiff, .tif)"
 
 #. (itstool) path: page/p
 #: C/convertPostScript.page:33
@@ -715,6 +840,8 @@ msgid ""
 "This works by opening the file in <app>Atril</app> and \"printing\" the "
 "document as a PostScript file."
 msgstr ""
+"Esto funciona abriendo el archivo en <app>Atril</app> e \"imprimiendo\" el "
+"documento como archivo  PostScript."
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:38
@@ -724,6 +851,10 @@ msgid ""
 " <keyseq><key>Ctrl</key><key>P</key></keyseq> and go to the "
 "<gui>General</gui> tab."
 msgstr ""
+"Vaya a <guiseq><gui style=\"menuitem\">Archivo</gui> <gui "
+"style=\"menuitem\">Imprimir</gui></guiseq> y seleccione <gui>Imprimir</gui> "
+"o pulse <keyseq><key>Ctrl</key><key>P</key></keyseq> y vaya a la pestaña "
+"<gui>General</gui>."
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:47
@@ -731,6 +862,8 @@ msgid ""
 "Select <gui>Print to File</gui> and choose PostScript as the <gui>Output "
 "format</gui>."
 msgstr ""
+"Seleccione <gui>Imprimir a Archivo</gui> y elija PostScript como "
+"<gui>Formato de salida</gui>."
 
 #. (itstool) path: item/p
 #: C/convertPostScript.page:53
@@ -738,6 +871,9 @@ msgid ""
 "Choose a name and folder in which to save the file, then click "
 "<gui>Print</gui>. The PostScript file will be saved in the folder you chose."
 msgstr ""
+"Elija un nombre y una carpeta en la que guardar el archivo, luego haga clic "
+"en <gui>Imprimir</gui>. El archivo PostScript se guardará en la carpeta que "
+"haya elegido."
 
 #. (itstool) path: info/desc
 #: C/convertSVG.page:7
@@ -1272,7 +1408,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/index.page:65
 msgid "SyncTeX"
-msgstr ""
+msgstr "SyncTeX"
 
 #. (itstool) path: section/title
 #: C/index.page:70

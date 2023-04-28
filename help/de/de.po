@@ -1,19 +1,21 @@
 # 
 # Translators:
-# Ettore Atalan <atalanttore@googlemail.com>, 2018
-# Moritz Bruder <muesli4@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Ettore Atalan <atalanttore@googlemail.com>, 2021
+# Moritz Bruder <muesli4@gmail.com>, 2021
 # crazyd <lebendig2002@yahoo.de>, 2021
-# Winfried Frisch <frischkoenig@online.de>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Tobias Bannert <tobannert@gmail.com>, 2021
+# Marcel Artz <email@marcel-artz.de>, 2021
+# Winfried Frisch <frischkoenig@online.de>, 2021
+# Fabian Schaar, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-03-29 20:47+0200\n"
-"PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Tobias Bannert <tobannert@gmail.com>, 2021\n"
-"Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
+"PO-Revision-Date: 2021-09-18 16:14+0000\n"
+"Last-Translator: Fabian Schaar, 2022\n"
+"Language-Team: German (https://app.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,12 +32,15 @@ msgstr ""
 "Hendrik Richter\n"
 "Christian Kirbach\n"
 "Wolfgang Stoeggl\n"
-"Tobias Bannert"
+"Tobias Bannert\n"
+"Marcel Artz"
 
 #. (itstool) path: info/desc
 #: C/annotation-properties.page:7
 msgid "How to customize the author, color, style or icon of an annotation."
 msgstr ""
+"Wie der Autor, die Farbe, der Stil oder das Symbol einer Anmerkung angepasst"
+" werden kann."
 
 #. (itstool) path: credit/name
 #: C/annotation-properties.page:10 C/annotations-disabled.page:10
@@ -49,7 +54,7 @@ msgstr ""
 #: C/synctex-compile.page:10 C/synctex-editors.page:10 C/synctex.page:10
 #: C/synctex-search.page:10 C/synctex-support.page:10 C/translate.page:10
 msgid "Tiffany Antopolski"
-msgstr ""
+msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/annotation-properties.page:14 C/annotations-disabled.page:14
@@ -67,22 +72,23 @@ msgstr ""
 #: C/synctex-search.page:14 C/synctex-support.page:18 C/textselection.page:14
 #: C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
-msgstr ""
+msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
 #: C/annotation-properties.page:18
 msgid "Customize annotations"
-msgstr ""
+msgstr "Anmerkungen anpassen"
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:22
 msgid "Right click on the annotation icon in the document."
 msgstr ""
+"Mit der rechten Maustaste auf das Anmerkungs-Symbol im Dokument klicken."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:27
 msgid "Select <gui>Annotation Properties…</gui>."
-msgstr ""
+msgstr "Wähle <gui>Anmerkungs-Eigenschaften</gui> aus."
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:32
@@ -90,6 +96,8 @@ msgid ""
 "In the <gui>Annotation Properties</gui> window, you can change the author, "
 "color, style and icon of your note."
 msgstr ""
+"Im Fenster der <gui>Anmerkungs-Eigenschaften</gui> kann der Autor, die "
+"Farbe, der Stil und das Symbol der Notiz verändert werden."
 
 #. (itstool) path: note/p
 #: C/annotation-properties.page:36
@@ -97,11 +105,15 @@ msgid ""
 "The annotation properties will be applied to the note for which you made the"
 " changes only. Each note can have a different set of properties."
 msgstr ""
+"Die Anmerkungs-Eigenschaften werden nur auf die veränderte Notiz angewendet."
+" Jede Notiz kann eine eigene Reihe an Eigenschaften haben."
 
 #. (itstool) path: section/title
 #: C/annotation-properties.page:45
 msgid "Can I permanently change the default annotation properties?"
 msgstr ""
+"Können die standardmäßigen Anmerkungs-Eigenschaften dauerhaft angepasst "
+"werden?"
 
 #. (itstool) path: section/p
 #: C/annotation-properties.page:46
@@ -113,21 +125,27 @@ msgid ""
 "individually on each note. There is no way to save different default "
 "settings for annotation properties, at this time."
 msgstr ""
+"Die standardmäßigen Eigenschaften (Autor, Farbe, Stil und Symbol) können, "
+"wie oben beschrieben, nur auf einer einzelnen Notiz verändert werden. Wenn "
+"also alle Symbole für Notizen <gui>rot</gui> anstatt <gui>gelb</gui> sein "
+"sollen, muss der Standard auf jeder einzelnen Notiz von <gui>gelb</gui> zu "
+"<gui>rot</gui> geändert werden. Momentan gibt es keine Möglichkeit, "
+"verschiedene Standardeinstellungen zu speichern."
 
 #. (itstool) path: credit/name
 #: C/annotations-delete.page:11
 msgid "David King"
-msgstr ""
+msgstr "David King"
 
 #. (itstool) path: info/desc
 #: C/annotations-delete.page:17
 msgid "Delete annotations from a PDF document."
-msgstr ""
+msgstr "Anmerkungen aus einem PDF-Dokument löschen."
 
 #. (itstool) path: page/title
 #: C/annotations-delete.page:20
 msgid "Removing annotations"
-msgstr ""
+msgstr "Anmerkungen entfernen"
 
 #. (itstool) path: page/p
 #: C/annotations-delete.page:22
@@ -135,6 +153,9 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can remove "
 "annotations that you or other people have added."
 msgstr ""
+"Eine Anmerkung ist eine Notiz oder ein Kommentar, der zu einem PDF-Dokument "
+"hinzugefügt wurde. Du kannst Anmerkungen, die du oder andere Personen "
+"hinzugefügt haben, löschen."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:27
@@ -143,6 +164,9 @@ msgid ""
 "annotations, find them in the <link xref=\"annotations-navigate\">annotation"
 " side pane</link>."
 msgstr ""
+"Sieh dir eine Seite mit Anmerkungen an. Falls du nicht sicher bist, welche "
+"Seiten Anmerkungen haben, kannst du diese über die <link xref=\"annotations-"
+"navigate\">Anmerkungs-Seitenleiste</link> finden."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:32
@@ -150,6 +174,8 @@ msgid ""
 "Right-click on the annotation icon in the document, and click <gui "
 "style=\"menuitem\">Remove Annotation</gui>."
 msgstr ""
+"Klicke mit der rechten Maustaste auf das Anmerkungs-Symbol im Dokument und "
+"klicke dann auf <gui style=\"menuitem\">Anmerkung entfernen</gui>."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:36
@@ -158,16 +184,19 @@ msgid ""
 "style=\"menuitem\">File</gui>, followed by <gui style=\"menuitem\">Save "
 "As…</gui>."
 msgstr ""
+"Speichere die Änderungen an einem neuen Dokument, indem zu auf <gui "
+"style=\"menuitem\">Datei</gui> und danach auf <gui "
+"style=\"menuitem\">Speichern unter...</gui> klickst."
 
 #. (itstool) path: info/desc
 #: C/annotations-disabled.page:7
 msgid "Annotations can only be added to PDF files."
-msgstr ""
+msgstr "Anmerkungen können nur zu PDF-Dateien hinzugefügt werden."
 
 #. (itstool) path: page/title
 #: C/annotations-disabled.page:17
 msgid "Can't add annotations?"
-msgstr ""
+msgstr "Können keine Anmerkungen hinzugefügt werden?"
 
 #. (itstool) path: page/p
 #: C/annotations-disabled.page:18
@@ -175,16 +204,19 @@ msgid ""
 "Annotations can only be added to PDF files. If your file is of a format "
 "other than PDF, the option to add annotations will be greyed out (disabled)."
 msgstr ""
+"Anmerkungen können nur zu PDF-Dateien hinzugefügt werden. Falls die Datei in"
+" einem anderen Format als PDF vorliegen sollte, wird die Option zum "
+"Hinzufügen von Anmerkungen grau dargestellt (deaktiviert)."
 
 #. (itstool) path: info/desc
 #: C/annotations-navigate.page:7
 msgid "How to navigate to annotations."
-msgstr ""
+msgstr "Zwischen Anmerkungen navigieren."
 
 #. (itstool) path: page/title
 #: C/annotations-navigate.page:19
 msgid "Annotation navigation"
-msgstr ""
+msgstr "Anmerkungs-Navigation"
 
 #. (itstool) path: page/p
 #: C/annotations-navigate.page:20
@@ -193,21 +225,25 @@ msgid ""
 "to display the list of all the annotations in the document. The list "
 "indicates the type, page number and author of the annotation."
 msgstr ""
+"Solltest du Anmerkungen auf deinem Dokument erstellt haben, kannst du die "
+"Seitenleiste verwenden, um alle Anmerkungen im Dokument aufzulisten. Diese "
+"Liste zeigt den Typ, die Seitenzahl und den Autor der entsprechenden "
+"Anmerkung."
 
 #. (itstool) path: info/desc
 #: C/annotations.page:8
 msgid "How to create and customize annotations."
-msgstr ""
+msgstr "Wie Anmerkungen erstellt und angepasst werden können."
 
 #. (itstool) path: credit/name
 #: C/annotations.page:15 C/shortcuts.page:31
 msgid "Andre Klapper"
-msgstr ""
+msgstr "Andre Klapper"
 
 #. (itstool) path: page/title
 #: C/annotations.page:24
 msgid "Adding annotations"
-msgstr ""
+msgstr "Anmerkungen hinzufügen"
 
 #. (itstool) path: page/p
 #: C/annotations.page:25
@@ -215,6 +251,8 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can add "
 "annotations using Atril."
 msgstr ""
+"Eine Anmerkung ist eine Notiz oder ein Kommentar in einem PDF-Dokument. "
+"Diese Anmerkungen können mit Atril hinzugefügt werden."
 
 #. (itstool) path: page/p
 #: C/annotations.page:28
@@ -225,6 +263,11 @@ msgid ""
 "style=\"menuitem\">Sidepane</gui></guiseq> or press the <key>F9</key> key on"
 " the keyboard."
 msgstr ""
+"Wenn du eine Datei öffnest, sollte links im Fenster eine Seitenleiste "
+"angezeigt werden. Sollte dies nicht der Fall sein, <guiseq>klicke auf <gui "
+"style=\"menuitem\">Ansicht</gui> <gui "
+"style=\"menuitem\">Seitenleiste</gui></guiseq> oder drücke die Taste "
+"<key>F9</key> auf der Tastatur."
 
 #. (itstool) path: page/p
 #: C/annotations.page:36
@@ -234,21 +277,28 @@ msgid ""
 "<gui>Bookmarks</gui> let you choose what to display in the side pane. (Some "
 "options may not be available for some documents)."
 msgstr ""
+"Oben auf der Seitenleiste befinden sich in einer Drop-Down-Liste die "
+"Einträge <gui>Vorschaubilder</gui>,<gui>Index</gui>,<gui>Anmerkungen</gui> "
+"und <gui>Lesezeichen</gui>, worüber ausgewählt werden kann, was in der "
+"Seitenleiste angezeigt werden soll. (Einige Optionen sind möglicherweise für"
+" ein paar Dokumente nicht verfügbar)."
 
 #. (itstool) path: page/p
 #: C/annotations.page:39
 msgid "To create an annotation:"
-msgstr ""
+msgstr "Erstellen einer Anmerkung:"
 
 #. (itstool) path: item/p
 #: C/annotations.page:44
 msgid "Select <gui style=\"button\">Annotations</gui> from the drop-down list:"
-msgstr ""
+msgstr "Wähle <gui style=\"button\">Anmerkungen</gui> aus der Drop-Down-Liste:"
 
 #. (itstool) path: item/p
 #: C/annotations.page:49
 msgid "Click on <gui style=\"button\">Add</gui> to add a text annotation."
 msgstr ""
+"Klicke auf <gui style=\"button\">Hinzufügen</gui> um eine Text-Anmerkung "
+"hinzuzufügen."
 
 #. (itstool) path: item/p
 #: C/annotations.page:54
