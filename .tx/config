@@ -1,16 +1,17 @@
 [main]
 host = https://www.transifex.com
- 
-[MATE.1-26--atril]
-file_filter = po/<lang>.po
-source_file = atril.pot
-source_lang = en
-type = PO
+
+[o:mate:p:MATE:r:1-26--atril]
+file_filter  = po/<lang>.po
+source_file  = atril.pot
+source_lang  = en
+type         = PO
 minimum_perc = 2
 
-[MATE.1-26--atril-user-guide]
-file_filter = help/<lang>/<lang>.po
-source_file = help/atril.pot
-source_lang = en
-type = PO
+[o:mate:p:MATE:r:1-26--atril-user-guide]
+file_filter  = help/<lang>/<lang>.po
+source_file  = help/atril.pot
+source_lang  = en
+type         = PO
 minimum_perc = 2
+
