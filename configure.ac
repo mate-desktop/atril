@@ -622,7 +622,7 @@ AC_ARG_ENABLE(epub,
 
 have_webkit="no"
 if test "x$enable_epub" = "xyes"; then
-    PKG_CHECK_MODULES(EPUB, webkit2gtk-4.0 >= $WEBKIT_REQUIRED \
+    PKG_CHECK_MODULES(EPUB, webkit2gtk-4.1 >= $WEBKIT_REQUIRED \
        libxml-2.0 >= $LIBXML_REQUIRED zlib,have_webkit=yes,have_webkit=no)
 
     if test "x$have_webkit" = "xyes"; then
