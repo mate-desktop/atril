@@ -29,6 +29,8 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
+#include <libmate-desktop/mate-image-menu-item.h>
+
 #include "ev-document-links.h"
 #include "ev-job-scheduler.h"
 #include "ev-sidebar-links.h"
@@ -331,11 +333,13 @@ static GtkMenu *
 build_popup_menu (EvSidebarLinks *sidebar)
 {
 	GtkWidget *menu;
+	GtkWidget *image;
 	GtkWidget *item;
 
 	menu = gtk_menu_new ();
-	item = gtk_image_menu_item_new_from_stock ("gtk-print", NULL);
-	gtk_label_set_label (GTK_LABEL (gtk_bin_get_child (GTK_BIN (item))), _("Print…"));
+	item = mate_image_menu_item_new_with_label ("Print…");
+	image = gtk_image_new_from_icon_name ("gtk-print", GTK_ICON_SIZE_MENU);
+	mate_image_menu_item_set_image (MATE_IMAGE_MENU_ITEM (item), image);
 	gtk_widget_show (item);
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 	g_signal_connect (item, "activate",
