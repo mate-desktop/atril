@@ -15,11 +15,14 @@ requires:
     - libgxps
     - make
     - mate-common
+    - mate-desktop
     - poppler-glib
     - texlive-bin
     - webkit2gtk
     - which
     - yelp-tools
+    # mate-desktop dependencies
+    - iso-codes
 
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
@@ -38,6 +41,7 @@ requires:
     - libgtk-3-dev
     - libgxps-dev
     - libkpathsea-dev
+    - libmate-desktop-dev
     - libsynctex-dev
     - libpoppler-glib-dev
     - libsecret-1-dev
@@ -53,6 +57,8 @@ requires:
     - xsltproc
     - yelp-tools
     - zlib1g-dev
+    # mate-desktop dependencies
+    - iso-codes
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/atril.git
@@ -78,11 +84,14 @@ requires:
     - libtiff-devel
     - make
     - mate-common
+    - mate-desktop-devel
     - poppler-glib-devel
     - redhat-rpm-config
     - texlive-lib-devel
     - webkit2gtk4.1-devel
     - yelp-tools
+    # mate-desktop dependencies
+    - iso-codes-devel
 
   ubuntu:
     - autopoint
@@ -98,6 +107,7 @@ requires:
     - libgtk-3-dev
     - libgxps-dev
     - libkpathsea-dev
+    - libmate-desktop-dev
     - libsynctex-dev
     - libpoppler-glib-dev
     - libsecret-1-dev
@@ -113,6 +123,8 @@ requires:
     - xsltproc
     - yelp-tools
     - zlib1g-dev
+    # mate-desktop dependencies
+    - iso-codes
 
 variables:
   - 'CHECKERS="
@@ -131,8 +143,27 @@ variables:
     -enable-checker alpha.unix.cstring.OutOfBounds
     -enable-checker alpha.core.FixedAddr
     -enable-checker security.insecureAPI.strcpy"'
+  - MATE_DESKTOP_VERSION=1.27.1
 
 before_scripts:
+  - cd ${START_DIR}
+  - if [ ! -f mate-desktop-${MATE_DESKTOP_VERSION}.tar.xz ];then
+  -     curl -Ls -o mate-desktop-${MATE_DESKTOP_VERSION}.tar.xz https://github.com/mate-desktop/mate-desktop/releases/download/v${MATE_DESKTOP_VERSION}/mate-desktop-${MATE_DESKTOP_VERSION}.tar.xz
+  - fi
+  - tar xf mate-desktop-${MATE_DESKTOP_VERSION}.tar.xz
+  - cd mate-desktop-${MATE_DESKTOP_VERSION}
+  - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
+  -     ./autogen.sh --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
+  - else
+  -     ./autogen.sh --prefix=/usr
+  - fi
+  - if [ ${TRAVIS} == "false" ]; then
+  -     make clean
+  - fi
+  - make
+  - make install
+
+  - cd ${START_DIR}
   - if [ ${DISTRO_NAME} == "debian" ];then
   -     egrep -lRZ 'G_GNUC_BEGIN_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_BEGIN_IGNORE_DEPRECATIONS/ /g'
   -     egrep -lRZ 'G_GNUC_END_IGNORE_DEPRECATIONS' . | xargs -0 -l sed -i -e 's/G_GNUC_END_IGNORE_DEPRECATIONS/ /g'

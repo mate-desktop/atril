@@ -26,6 +26,8 @@
 #include "ev-navigation-action.h"
 #include "ev-navigation-action-widget.h"
 
+#include <libmate-desktop/mate-image-menu-item.h>
+
 enum
 {
 	WIDGET_ACTIVATE_LINK,
@@ -99,7 +101,7 @@ new_history_menu_item (EvNavigationAction *action,
 	const char *title;
 
 	title = ev_link_get_title (link);
-	item = gtk_image_menu_item_new_with_label (title);
+	item = mate_image_menu_item_new_with_label (title);
 	label = GTK_LABEL (gtk_bin_get_child (GTK_BIN (item)));
 	gtk_label_set_use_markup (label, TRUE);
 	g_object_set_data (G_OBJECT (item), "index",
