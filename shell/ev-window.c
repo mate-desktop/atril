@@ -7804,7 +7804,6 @@ ev_window_init (EvWindow *ev_window)
 	GtkCssProvider *css_provider;
 	GError *error = NULL;
 	GtkWidget *sidebar_widget;
-	GtkWidget *menuitem;
 	GtkWidget *overlay;
 	GObject *mpkeys;
 	guint page_cache_mb;
@@ -7940,12 +7939,6 @@ ev_window_init (EvWindow *ev_window)
 	gtk_box_pack_start (GTK_BOX (ev_window->priv->main_box),
 			    ev_window->priv->menubar,
 			    FALSE, FALSE, 0);
-	menuitem = gtk_ui_manager_get_widget (ev_window->priv->ui_manager,
-					      "/MainMenu/EditMenu/EditRotateLeftMenu");
-	gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (menuitem), TRUE);
-	menuitem = gtk_ui_manager_get_widget (ev_window->priv->ui_manager,
-					      "/MainMenu/EditMenu/EditRotateRightMenu");
-	gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (menuitem), TRUE);
 
 	ev_window->priv->toolbars_model = get_toolbars_model ();
 	ev_window->priv->toolbar = GTK_WIDGET
