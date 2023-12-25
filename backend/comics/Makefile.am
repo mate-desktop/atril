@@ -12,12 +12,15 @@ backend_LTLIBRARIES = libcomicsdocument.la
 
 libcomicsdocument_la_SOURCES = \
 	comics-document.c      \
-	comics-document.h
+	comics-document.h      \
+	ev-archive.c     \
+	ev-archive.h
 
 libcomicsdocument_la_LDFLAGS = $(BACKEND_LIBTOOL_FLAGS)
 libcomicsdocument_la_LIBADD =				\
 	$(top_builddir)/libdocument/libatrildocument.la	\
 	$(BACKEND_LIBS)					\
+	$(COMICS_LIBS)					\
 	$(LIB_LIBS)
 
 backend_in_files = comicsdocument.atril-backend.desktop.in
