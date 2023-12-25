@@ -581,8 +581,11 @@ AC_ARG_ENABLE(comics,
     [enable_comics=$enableval],
     [enable_comics=yes])
 
+COMICS_DEPS="libarchive"
 if test "x$enable_comics" = "xyes"; then
     AC_DEFINE([ENABLE_COMICS], [1], [Enable support for comics.])
+    PKG_CHECK_MODULES([COMICS], [$COMICS_DEPS])
+    AC_SUBST(COMICS_LIBS)
 fi
 AM_CONDITIONAL(ENABLE_COMICS, test x$enable_comics = xyes)
 
