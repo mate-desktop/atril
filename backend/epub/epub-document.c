@@ -635,7 +635,7 @@ check_mime_type(const gchar* uri,GError** error)
         for (i = 0; i < g_strv_length (mimetypes); i++) {
            if (strcmp(mimeFromFile, mimetypes[i]) == 0)
                 return TRUE;
-	}
+        }
 
         /* fallback for malformed epub files */
         if (strcmp (mimeFromFile, "application/zip") == 0)
@@ -671,7 +671,7 @@ check_mime_type(const gchar* uri,GError** error)
 }
 
 static gboolean
-extract_one_file(EpubDocument* epub_document,GError ** error)
+extract_one_file(EpubDocument* epub_document, GFile *tmp_gfile, GError ** error)
 {
     GFile * outfile ;
     gsize writesize = 0;
@@ -697,6 +697,20 @@ extract_one_file(EpubDocument* epub_document,GError ** error)
 
     gfilepath = g_string_new(epub_document->tmp_archive_dir) ;
     g_string_append_printf(gfilepath,"/%s",(gchar*)currentfilename);
+
+    outfile = g_file_new_for_path (gfilepath->str);
+    g_autofree gchar *rpath = g_file_get_relative_path (tmp_gfile, outfile);
+
+    if (rpath == NULL)
+    {
+        g_set_error_literal (error,
+                             EV_DOCUMENT_ERROR,
+                             EV_DOCUMENT_ERROR_INVALID,
+                             _("epub file is invalid or corrupt"));
+        g_critical ("Invalid filename in Epub container - '%s'", (gchar *) currentfilename);
+        result = FALSE;
+        goto out;
+    }
 
     /*if we encounter a directory, make a directory inside our temporary folder.*/
     if (directory != NULL && *directory == '\0')
@@ -725,7 +739,6 @@ extract_one_file(EpubDocument* epub_document,GError ** error)
         g_string_free(dir_create,TRUE);
     }
 
-    outfile = g_file_new_for_path(gfilepath->str);
     outstream = g_file_create(outfile,G_FILE_CREATE_PRIVATE,NULL,error);
     gpointer buffer = g_malloc0(512);
     while ( (writesize = unzReadCurrentFile(epub_document->epubDocument,buffer,512) ) != 0 )
@@ -738,10 +751,10 @@ extract_one_file(EpubDocument* epub_document,GError ** error)
     }
     g_free(buffer);
     g_output_stream_close((GOutputStream*)outstream,NULL,error);
-    g_object_unref(outfile) ;
-    g_object_unref(outstream) ;
+    g_object_unref(outstream);
 
 out:
+    g_object_unref(outfile);
     unzCloseCurrentFile (epub_document->epubDocument) ;
     g_string_free(gfilepath,TRUE);
     g_free(currentfilename);
@@ -753,6 +766,7 @@ extract_epub_from_container (const gchar* uri,
                              EpubDocument *epub_document,
                              GError ** error)
 {
+    GFile *tmp_gfile = NULL;
     GError *err = NULL;
     epub_document->archivename = g_filename_from_uri(uri,NULL,error);
 
@@ -814,9 +828,10 @@ extract_epub_from_container (const gchar* uri,
         goto out;
     }
 
+    tmp_gfile = g_file_new_for_path (epub_document->tmp_archive_dir);
     while ( TRUE )
     {
-        if ( extract_one_file(epub_document,&err) == FALSE )
+        if ( extract_one_file(epub_document, tmp_gfile, &err) == FALSE )
         {
             if (err) {
                 g_propagate_error (error, err);
@@ -837,6 +852,7 @@ extract_epub_from_container (const gchar* uri,
     }
 
 out:
+    g_clear_object (&tmp_gfile);
     unzClose(epub_document->epubDocument);
     return result;
 }
