@@ -22,6 +22,7 @@
 # Mario Verdin <jmvl1303@gmail.com>, 2021
 # seacat <seacat.linux@gmail.com>, 2021
 # Toni Estévez <toni.estevez@gmail.com>, 2021
+# Francisco Serrador, 2023
 # 
 msgid ""
 msgstr ""
@@ -29,7 +30,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2021-11-20 17:20+0100\n"
 "PO-Revision-Date: 2021-09-18 16:11+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
+"Last-Translator: Francisco Serrador, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -230,13 +231,12 @@ msgstr "%s: no hay tipografías definidas\n"
 #, c-format
 msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
 msgstr ""
-"%s: %d: [%s] la codificación solicitada «%s» no coincide con el vector "
-"«%s»\n"
+"%s: %d: [%s] solicita codificación «%s» que no coincide con el vector «%s»\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:757
 #, c-format
 msgid "%s: could not load fontmap\n"
-msgstr "%s: no se pudo cargar el mapa de fuentes\n"
+msgstr "%s: no se pudo cargar el mapa tipográfico\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
@@ -303,7 +303,7 @@ msgstr "personalizado"
 
 #: backend/dvi/mdvi-lib/pk.c:309
 msgid "Bad PK file: More bits than required\n"
-msgstr "Archivo PK en mal estado: más bits que los requeridos\n"
+msgstr "Archivo PK en mal estado: más bit que los requeridos\n"
 
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
@@ -334,7 +334,7 @@ msgstr "archivo PK no válido (basura en el epílogo)\n"
 #: backend/dvi/mdvi-lib/pk.c:535
 #, c-format
 msgid "%s: File corrupted, or not a PK file\n"
-msgstr "%s:  Archivo corrupto, o no es un archivo PK\n"
+msgstr "%s: Archivo corrupto, o no es un archivo PK\n"
 
 #: backend/dvi/mdvi-lib/special.c:241
 #, c-format
@@ -389,7 +389,7 @@ msgstr "Advertencia: el archivo TFM `%s' tiene un tamaño sospechoso\n"
 #: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:512
 #, c-format
 msgid "%s: font coding scheme truncated to 40 bytes\n"
-msgstr "%s: esquema de codificación de fuentes truncado a 40 bytes\n"
+msgstr "%s: esquema de codificación de tipografía truncado a 40 bytes\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:292 backend/dvi/mdvi-lib/tfmfile.c:590
 #, c-format
@@ -445,7 +445,7 @@ msgstr "(tt) %s: no hay datos métricos de la tipografía\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr "Ooops!"
+msgstr "¡Ooops!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
@@ -453,7 +453,7 @@ msgstr "¡¡Aieeeee!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr "Auch!"
+msgstr "¡Auch!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
@@ -674,7 +674,7 @@ msgstr "TrueType (CID)"
 
 #: backend/pdf/ev-poppler.cc:921
 msgid "Unknown font type"
-msgstr "Tipografía con formato desconocido"
+msgstr "Tipografía con tipo desconocido"
 
 #: backend/pdf/ev-poppler.cc:947
 msgid "No name"
@@ -682,15 +682,15 @@ msgstr "Sin nombre"
 
 #: backend/pdf/ev-poppler.cc:955
 msgid "Embedded subset"
-msgstr "Subconjunto incrustado"
+msgstr "Subconjunto empotrado"
 
 #: backend/pdf/ev-poppler.cc:957
 msgid "Embedded"
-msgstr "Incrustado"
+msgstr "Empotrado"
 
 #: backend/pdf/ev-poppler.cc:959
 msgid "Not embedded"
-msgstr "No incrustado"
+msgstr "No empotrado"
 
 #: backend/pdf/pdfdocument.atril-backend.desktop.in:5
 msgid "PDF Documents"
@@ -872,15 +872,15 @@ msgstr "Expandir la ventana hasta ajustar"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
-msgstr "50 %"
+msgstr "50%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:54
 msgid "70%"
-msgstr "70 %"
+msgstr "70%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:55
 msgid "85%"
-msgstr "85 %"
+msgstr "85%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:56
 msgid "100%"
@@ -888,11 +888,11 @@ msgstr "100%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:57
 msgid "125%"
-msgstr "125 %"
+msgstr "125%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:58
 msgid "150%"
-msgstr "150 %"
+msgstr "150%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:59
 msgid "175%"
@@ -900,40 +900,40 @@ msgstr "175%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:60
 msgid "200%"
-msgstr "200 %"
+msgstr "200%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:61
 msgid "300%"
-msgstr "300 %"
+msgstr "300%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:62
 msgid "400%"
-msgstr "400 %"
+msgstr "400%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:63
 msgid "800%"
-msgstr "800 %"
+msgstr "800%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:64
 msgid "1600%"
-msgstr "1600 %"
+msgstr "1600%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:65
 msgid "3200%"
-msgstr "3200 %"
+msgstr "3200%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:66
 msgid "6400%"
-msgstr "6400 %"
+msgstr "6400%"
 
 #: data/atril.appdata.xml.in.in:7 data/atril.desktop.in.in:3
 #: shell/ev-window.c:5468
 msgid "Atril Document Viewer"
-msgstr "Visor de documentos Atril"
+msgstr "Visor documental Atril"
 
 #: data/atril.appdata.xml.in.in:8
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr "Un visor de documentos para el entorno de escritorio MATE"
+msgstr "Un visor documental para el entorno de escritorio MATE"
 
 #: data/atril.appdata.xml.in.in:10
 msgid ""
@@ -943,10 +943,10 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
-"Atril es un visor de documentos multipágina sencillo. Puede mostrar e "
-"imprimir archivos PS (PostScript), EPS (PostScript encapsulado), DJVU, DVI, "
-"XPS y PDF, así como archivadores de cómic. Cuando el documento lo admite, "
-"también permite buscar texto, copiar texto en el portapapeles, navegar con "
+"Atril es un visor documental multi-página sencillo. Puede mostrar e imprimir"
+" archivos PS (PostScript), EPS (PostScript encapsulado), DJVU, DVI, XPS y "
+"PDF, así como archivadores de cómic. Cuando el documento lo admite, también "
+"permite buscar texto, copiar texto en el portapapeles, navegar con "
 "hipertexto y usar marcadores de índice. "
 
 #: data/atril.appdata.xml.in.in:18
