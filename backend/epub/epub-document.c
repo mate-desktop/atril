@@ -632,7 +632,7 @@ check_mime_type(const gchar* uri,GError** error)
         const gchar* mimetypes[] = {"application/epub+zip", "application/x-booki+zip", NULL};
         guint i;
 
-        for (i = 0; i < g_strv_length ((gchar**) mimetypes); i++) {
+        for (i = 0; mimetypes[i]; i++) {
            if (strcmp(mimeFromFile, mimetypes[i]) == 0)
                 return TRUE;
         }
