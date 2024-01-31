@@ -643,7 +643,7 @@ check_mime_type(const gchar* uri,GError** error)
             mimeFromFile = ev_file_get_mime_type (uri, TRUE, &err);
             if (mimeFromFile)
             {
-                for (i = 0; i < g_strv_length ((gchar**) mimetypes); i++) {
+                for (i = 0; i < G_N_ELEMENTS (mimetypes); i++) {
                     if (g_strcmp0(mimeFromFile, mimetypes[i]) == 0)
                         return TRUE;
                 }
