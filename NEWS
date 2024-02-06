@@ -1,8 +1,25 @@
+### atril 1.27.1
+
+  * update translations
+  * fix a incompatible pointer type warning for gcc14
+  * epub: Avoid crash when index list has extraneous entry
+  * epub: Prevent path traversal when extracting files
+  * comics: Use libarchive to unpack documents
+  * Fix build with libxml2 2.12
+  * fix typo in configure.ac
+  * replace deprecated gtk_image_menu_item_new_from_stock
+  * replace deprecated gtk-image-menu-item
+  * drop double ui files
+  * Remove compilation warnings and set 'always_show_image' Properties in the UI file
+  * fix warnings in id,it and tr translations
+  * Add epub to man page
+  * support webkit2 4.0 and 4.1
+  * use webkit2gtk-4.1
+  * epub: add fallback for malformed epub files in check_mime_type
+
 ### atril 1.27.0
 
-  * tx: sync with transifex
-  * tx: update resource
-  * tx: migrate config file
+  * update translations
   * epub: Fix index loading for certain documents - look for epub:type instead of epub:id.
   * ci: drop -Wunused-parameter compiler cflag from debian build
   * Fix implicit conversion changes signedness: 'gboolean' to 'guint'
