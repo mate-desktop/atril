@@ -10,16 +10,16 @@
 # b84df44fb72862b85bae7a669218c6c2, 2019
 # 87d96f43665dd9fb55eba4603e184cae, 2019
 # Allan Nordhøy <epost@anotheragency.no>, 2021
-# heskjestad <cato@heskjestad.xyz>, 2022
+# Kaci Heskjestad, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2022\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
+"Last-Translator: Kaci Heskjestad, 2022\n"
+"Language-Team: Norwegian Bokmål (https://app.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,7 +55,7 @@ msgstr ""
 "Kan ikke finne en passende kommando for å dekomprimere denne typen "
 "tegneserien"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Ukjent MIME-type"
@@ -73,7 +73,7 @@ msgstr "Ingen filer i arkivet"
 msgid "No images found in archive %s"
 msgstr "Fant ingen bilder i arkiv %s"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Det oppsto en feil ved sletting av «%s»."
@@ -548,59 +548,59 @@ msgstr "(vf) %s: mangler postamble\n"
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr "%s: Fila er ødelagt, eller det er ikke en VF-fil.\n"
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Ikke et ePub-dokument"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "klarte ikke hente filnavn"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "klarte ikke åpne arkivet"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "klarte ikke pakke ut arkivet"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "klarte ikke innhente kontainerfil"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "klarte ikke åpne kontainerfil"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "kontainerfila er ødelagt"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub-filen er ugyldig eller korrupt"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub-fila er ødelagt, ingen kontainer"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "klarte ikke tolke innholdsmanifest"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "innholdsfil ugyldig"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "epub-filen har ingen rygg"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "epub-filen mangler manifest"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 "Klarte ikke sette opp dokument-tre for innlasting fordi noen filer mangler"
@@ -741,64 +741,64 @@ msgstr "Klarte ikke å lage en midlertidig fil: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Klarte ikke å lage en midlertidig katalog: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "Filen er ikke en gyldig .desktop-fil"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Kjenner ikke igjen versjon «%s» i desktop-fil"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "Starter %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "Programmet tar ikke dokumenter på kommandolinjen"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Kjenner ikke igjen oppstartsalternativ: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Kan ikke gi URIer til dokumenter til en oppføring av type «Types=Link»"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "Ikke en startbar oppføring"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Slå av tilkobling til øktbehandler"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Oppgi fil som inneholder lagret oppsett"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FIL"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Oppgi øktbehandlings-ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Alternativer for øktbehandling:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Vis alternativer for øktbehandling"
 

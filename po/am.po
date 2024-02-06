@@ -8,12 +8,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>, 2021\n"
-"Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
+"Language-Team: Amharic (https://app.transifex.com/mate/teams/13566/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,7 +46,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "ይህን አይነት አስቂኝ መጽሀፍ ለመክፈት ተስማሚ መተግበሪያ አልተገኘም "
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "ያልታወቀ የ MIME አይነት "
@@ -64,7 +64,7 @@ msgstr "በማህደሩ ውስጥ ፋይሎች የሉም "
 msgid "No images found in archive %s"
 msgstr "በማህደሩ ውስጥ ምስሎች አልተገኙም %s"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "ስህተት ተፈጥሯል በማጥፋት ላይ እንዳለ “%s”."
@@ -536,59 +536,59 @@ msgstr ""
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr ""
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "የ ePub ሰነድ አይደለም"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "የ ፋይሉን ስም ማግኘት አልተቻለም"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "ማህደሩን መክፈት አልተቻለም "
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "ማህደሩን ማራገፍ አልተቻለም"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "ፋይሉን የያዘውን ፈልጎ ማግኘት አልተቻለም"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "ፋይሉን የያዘውን መክፈት አልተቻለም"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "ፋይሉን የያዘው የተበላሸ ነው"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub ዋጋ የለውም የተበላሸ ነው"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub ዋጋ የለውም የተበላሸ ነው ማጠራቀሚያ አልተገኘም"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "የይዞታውን ትንታኔ ማሳየት አልተቻለም"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "የ ፋይሉ ይዞታ ዋጋ የለውም"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "epub ዋጋ የለውም የተበላሸ ነው"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "epub file ማሳየት አልተቻለም"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "የ ሰነድ ዛፍ ለመጫን ማዘጋጀት አልተቻለም አንዳንድ ፋይሎች ጎድለዋል"
 
@@ -728,63 +728,63 @@ msgstr "ጊዚያዊ ፋይል መፍጠር አልተቻለም : %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "ጊዚያዊ ዳይሬክቶሪ መፍጠር አልተቻለም: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "ፋይሉ ዋጋ ያለው የ .ዴስክቶፕ ፋይል አይደለም"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "ያልታወቀ የ ዴስክቶፕ ፋይል አይነት እትም '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "በ ማስጀመር ላይ %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "መተግበሪያው ሰነድ በ ትእዛዝ መስመር አይቀበልም"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "ያልታወቀ ማስጀመሪያ ምርጫ: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "የ ሰነድ URIs ማለፍ አልተቻለም ወደ የ 'አይነት=አገናኝ' ዴስክቶፕ ማስገቢያ"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "እቃው የሚጀምር አይነት አይደለም"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "ከ ክፍለ ጊዜ አስተዳዳሪ ጋር ግንኙነት ማሰናከያ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "የ ተቀመጠውን የ ማሰናጃ ፋይል የያዘውን መወሰኛ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "ፋይል"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "የ ክፍለ ጊዜ አስተዳዳሪ ID ይወስኑ "
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "መለያ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "የ ክፍለ ጊዜ አስተዳዳሪ ምርጫ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "የ ክፍለ ጊዜ አስተዳዳሪ ምርጫ ማሳያ"
 

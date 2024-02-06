@@ -6,16 +6,16 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Martin Wimpress <code@flexion.org>, 2021
-# Andi Chandler <andi@gowling.com>, 2022
+# Andi Chandler <andi@gowling.com>, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>, 2022\n"
-"Language-Team: English (United Kingdom) (https://www.transifex.com/mate/teams/13566/en_GB/)\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>, 2023\n"
+"Language-Team: English (United Kingdom) (https://app.transifex.com/mate/teams/13566/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 "Can't find an appropriate command to decompress this type of comic book"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Unknown MIME Type"
@@ -68,7 +68,7 @@ msgstr "No files in archive"
 msgid "No images found in archive %s"
 msgstr "No images found in archive %s"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "There was an error deleting “%s”."
@@ -108,355 +108,355 @@ msgstr "DVI Documents"
 
 #: backend/dvi/mdvi-lib/dviread.c:209
 msgid "unexpected EOF\n"
-msgstr ""
+msgstr "unexpected EOF\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "could not load font `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
 msgid "could not reload `%s'\n"
-msgstr ""
+msgstr "could not reload `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr ""
+msgstr "%s: unsupported DVI format (version %u)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
-msgstr ""
+msgstr "no pages selected\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:897
 #, c-format
 msgid "%s: File corrupted, or not a DVI file\n"
-msgstr ""
+msgstr "%s: File corrupted, or not a DVI file\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: vf macro had errors\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s: stack not empty after vf macro\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: could not reopen file (%s)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
 msgid "%s: page %d out of range\n"
-msgstr ""
+msgstr "%s: page %d out of range\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s: bad offset at page %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "stack not empty at end of page\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
-msgstr ""
+msgstr "no default font set yet\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "requested character %d does not exist in `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "enlarging stack\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "stack underflow\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "font %d is not defined\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "malformed special length\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr ""
+msgstr "font %d is not defined in postamble\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "unexpected opcode %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
-msgstr ""
+msgstr "undefined opcode %d\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: no fonts defined\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
 msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
-msgstr ""
+msgstr "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:757
 #, c-format
 msgid "%s: could not load fontmap\n"
-msgstr ""
+msgstr "%s: could not load fontmap\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
 msgid "%s: could not set as default encoding\n"
-msgstr ""
+msgstr "%s: could not set as default encoding\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:849
 #, c-format
 msgid "encoding vector `%s' is in use\n"
-msgstr ""
+msgstr "encoding vector `%s' is in use\n"
 
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: invalid opcode %d in character %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
 msgid "(gf) Character %d: invalid opcode %d\n"
-msgstr ""
+msgstr "(gf) Character %d: invalid opcode %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
 msgid "(gf) character %d has an incorrect bounding box\n"
-msgstr ""
+msgstr "(gf) character %d has an incorrect bounding box\n"
 
 #: backend/dvi/mdvi-lib/gf.c:288
 #, c-format
 msgid "%s: bad checksum (expected %u, found %u)\n"
-msgstr ""
+msgstr "%s: bad checksum (expected %u, found %u)\n"
 
 #: backend/dvi/mdvi-lib/gf.c:324
 #, c-format
 msgid "%s: junk in postamble\n"
-msgstr ""
+msgstr "%s: junk in postamble\n"
 
 #: backend/dvi/mdvi-lib/gf.c:361
 #, c-format
 msgid "%s: File corrupted, or not a GF file\n"
-msgstr ""
+msgstr "%s: File corrupted, or not a GF file\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:212
 #, c-format
 msgid "invalid page specification `%s'\n"
-msgstr ""
+msgstr "invalid page specification `%s'\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:232
 msgid "garbage after DVI page specification ignored\n"
-msgstr ""
+msgstr "garbage after DVI page specification ignored\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:260
 msgid "more than 10 counters in page specification\n"
-msgstr ""
+msgstr "more than 10 counters in page specification\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:262
 msgid "garbage after TeX page specification ignored\n"
-msgstr ""
+msgstr "garbage after TeX page specification ignored\n"
 
 #: backend/dvi/mdvi-lib/paper.c:104 backend/dvi/mdvi-lib/paper.c:111
 msgid "custom"
-msgstr ""
+msgstr "custom"
 
 #: backend/dvi/mdvi-lib/pk.c:309
 msgid "Bad PK file: More bits than required\n"
-msgstr ""
+msgstr "Bad PK file: More bits than required\n"
 
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
 msgid "%s: checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: checksum mismatch (expected %u, got %u)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:420
 #, c-format
 msgid "%s: unexpected preamble\n"
-msgstr ""
+msgstr "%s: unexpected preamble\n"
 
 #: backend/dvi/mdvi-lib/pk.c:477
 #, c-format
 msgid "%s: unexpected charcode (%d)\n"
-msgstr ""
+msgstr "%s: unexpected charcode (%d)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:512
 #, c-format
 msgid "%s: unexpected end of file (no postamble)\n"
-msgstr ""
+msgstr "%s: unexpected end of file (no postamble)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:518
 msgid "invalid PK file! (junk in postamble)\n"
-msgstr ""
+msgstr "invalid PK file! (junk in postamble)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:535
 #, c-format
 msgid "%s: File corrupted, or not a PK file\n"
-msgstr ""
+msgstr "%s: File corrupted, or not a PK file\n"
 
 #: backend/dvi/mdvi-lib/special.c:240
 #, c-format
 msgid "%s: tried to pop top level layer\n"
-msgstr ""
+msgstr "%s: tried to pop top level layer\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:150
 #, c-format
 msgid "%s: malformed value for key `%s'\n"
-msgstr ""
+msgstr "%s: malformed value for key `%s'\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:161
 #, c-format
 msgid "%s: unknown key `%s' ignored\n"
-msgstr ""
+msgstr "%s: unknown key `%s' ignored\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:166
 #, c-format
 msgid "%s: no argument for key `%s', using defaults\n"
-msgstr ""
+msgstr "%s: no argument for key `%s', using defaults\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:170
 #, c-format
 msgid "%s: argument `%s' ignored for key `%s'\n"
-msgstr ""
+msgstr "%s: argument `%s' ignored for key `%s'\n"
 
 #: backend/dvi/mdvi-lib/t1.c:187
 msgid "(t1) failed to reset device resolution\n"
-msgstr ""
+msgstr "(t1) failed to reset device resolution\n"
 
 #: backend/dvi/mdvi-lib/t1.c:215
 #, c-format
 msgid "%s: could not encode font\n"
-msgstr ""
+msgstr "%s: could not encode font\n"
 
 #: backend/dvi/mdvi-lib/tfm.c:175
 #, c-format
 msgid "%s: Checksum mismatch (got %u, expected %u)\n"
-msgstr ""
+msgstr "%s: Checksum mismatch (got %u, expected %u)\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:91
 #, c-format
 msgid "%s: Error reading AFM data\n"
-msgstr ""
+msgstr "%s: Error reading AFM data\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:182
 #, c-format
 msgid "Warning: TFM file `%s' has suspicious size\n"
-msgstr ""
+msgstr "Warning: TFM file `%s' has suspicious size\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:511
 #, c-format
 msgid "%s: font coding scheme truncated to 40 bytes\n"
-msgstr ""
+msgstr "%s: font coding scheme truncated to 40 bytes\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:291 backend/dvi/mdvi-lib/tfmfile.c:589
 #, c-format
 msgid "%s: File corrupted, or not a TFM file\n"
-msgstr ""
+msgstr "%s: File corrupted, or not a TFM file\n"
 
 #: backend/dvi/mdvi-lib/tt.c:151
 #, c-format
 msgid "(tt) %s: could not load face: %s\n"
-msgstr ""
+msgstr "(tt) %s: could not load face: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:159
 #, c-format
 msgid "(tt) %s: could not create face: %s\n"
-msgstr ""
+msgstr "(tt) %s: could not create face: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:168
 #, c-format
 msgid "(tt) %s: could not create glyph: %s\n"
-msgstr ""
+msgstr "(tt) %s: could not create glyph: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:201
 #, c-format
 msgid "(tt) %s: no acceptable map found, using #0\n"
-msgstr ""
+msgstr "(tt) %s: no acceptable map found, using #0\n"
 
 #: backend/dvi/mdvi-lib/tt.c:214
 #, c-format
 msgid "(tt) %s: could not set resolution: %s\n"
-msgstr ""
+msgstr "(tt) %s: could not set resolution: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:221
 #, c-format
 msgid "(tt) %s: could not set point size: %s\n"
-msgstr ""
+msgstr "(tt) %s: could not set point size: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:240
 #, c-format
 msgid "(tt) %s: could not load PS name table\n"
-msgstr ""
+msgstr "(tt) %s: could not load PS name table\n"
 
 #: backend/dvi/mdvi-lib/tt.c:265
 #, c-format
 msgid "%s: no encoding vector found, expect bad output\n"
-msgstr ""
+msgstr "%s: no encoding vector found, expect bad output\n"
 
 #: backend/dvi/mdvi-lib/tt.c:325
 #, c-format
 msgid "(tt) %s: no font metric data\n"
-msgstr ""
+msgstr "(tt) %s: no font metric data\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "Ooops!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "Aieeeee!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "Ouch!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "Houston, we have a problem"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3.. 2.. 1.. BOOM!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "I'm history"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
-msgstr ""
+msgstr "I'm going down"
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
-msgstr ""
+msgstr "I smell a rat"
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
-msgstr ""
+msgstr "Crashing"
 
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: Error: "
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
@@ -465,7 +465,7 @@ msgstr "Error"
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: Warning: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
@@ -474,127 +474,127 @@ msgstr "Warning"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: Fatal: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "Fatal"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
 msgid "out of memory allocating %u bytes\n"
-msgstr ""
+msgstr "out of memory allocating %u bytes\n"
 
 #: backend/dvi/mdvi-lib/util.c:224
 msgid "attempted to reallocate with zero size\n"
-msgstr ""
+msgstr "attempted to reallocate with zero size\n"
 
 #: backend/dvi/mdvi-lib/util.c:227
 #, c-format
 msgid "failed to reallocate %u bytes\n"
-msgstr ""
+msgstr "failed to reallocate %u bytes\n"
 
 #: backend/dvi/mdvi-lib/util.c:236
 msgid "attempted to callocate 0 members\n"
-msgstr ""
+msgstr "attempted to callocate 0 members\n"
 
 #: backend/dvi/mdvi-lib/util.c:238
 #, c-format
 msgid "attempted to callocate %u members with size 0\n"
-msgstr ""
+msgstr "attempted to callocate %u members with size 0\n"
 
 #: backend/dvi/mdvi-lib/util.c:242
 #, c-format
 msgid "failed to allocate %ux%u bytes\n"
-msgstr ""
+msgstr "failed to allocate %ux%u bytes\n"
 
 #: backend/dvi/mdvi-lib/util.c:250
 msgid "attempted to free NULL pointer\n"
-msgstr ""
+msgstr "attempted to free NULL pointer\n"
 
 #: backend/dvi/mdvi-lib/vf.c:82
 #, c-format
 msgid "%s: Checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: Checksum mismatch (expected %u, got %u)\n"
 
 #: backend/dvi/mdvi-lib/vf.c:130
 #, c-format
 msgid "(vf) %s: could not load font `%s'\n"
-msgstr ""
+msgstr "(vf) %s: could not load font `%s'\n"
 
 #: backend/dvi/mdvi-lib/vf.c:170
 #, c-format
 msgid "(vf) %s: unexpected character %d\n"
-msgstr ""
+msgstr "(vf) %s: unexpected character %d\n"
 
 #: backend/dvi/mdvi-lib/vf.c:186
 #, c-format
 msgid "(vf) %s: character %d redefined\n"
-msgstr ""
+msgstr "(vf) %s: character %d redefined\n"
 
 #: backend/dvi/mdvi-lib/vf.c:209
 #, c-format
 msgid "(vf) %s: no postamble\n"
-msgstr ""
+msgstr "(vf) %s: no postamble\n"
 
 #: backend/dvi/mdvi-lib/vf.c:235
 #, c-format
 msgid "%s: File corrupted, or not a VF file.\n"
-msgstr ""
+msgstr "%s: File corrupted, or not a VF file.\n"
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Not an ePub document"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "could not retrieve filename"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "could not open archive"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "could not extract archive"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "could not retrieve container file"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "could not open container file"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "container file is corrupt"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub file is invalid or corrupt"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub file is corrupt, no container"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "could not parse content manifest"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "content file is invalid"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "epub file has no spine"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "epub file has no manifest"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "Could not set up document tree for loading, some files missing"
 
@@ -690,11 +690,11 @@ msgstr "Invalid document"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:4
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Tiff Documents"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:5
 msgid "XPS Documents"
-msgstr ""
+msgstr "XPS Documents"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
@@ -734,63 +734,63 @@ msgstr "Failed to create a temporary file: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Failed to create a temporary directory: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "File is not a valid .desktop file"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Unrecognised desktop file Version '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "Starting %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "Application does not accept documents on the command line"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Unrecognised launch option: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "Can't pass document URIs to a 'Type=Link' desktop entry"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "Not a launchable item"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Disable connection to session manager"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Specify file containing saved configuration"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FILE"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Specify session management ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Session management options:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Show session management options"
 
@@ -912,6 +912,11 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril is a simple multi-page document viewer. It can display and print "
+"PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, XPS and Portable "
+"Document Format (PDF) files, as well as comic book archive files. When "
+"supported by the document, it also allows searching for text, copying text "
+"to the clipboard, hypertext navigation and table-of-contents bookmarks."
 
 #: data/atril.appdata.xml.in.in:18
 msgid ""
@@ -919,6 +924,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril is a fork of Evince and part of the MATE Desktop Environment. If you "
+"would like to know more about MATE and Atril, please visit the project's "
+"home page."
 
 #: data/atril.desktop.in.in:4 shell/ev-window-title.c:157
 msgid "Document Viewer"
@@ -932,7 +940,7 @@ msgstr "View multi-page documents"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1037,7 +1045,7 @@ msgstr "Shrink the document"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6508
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Reset zoom to 100%"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1319
 msgid "Print"
@@ -1176,6 +1184,11 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
+"Copyright (C) 2000, 2001 Eazel Inc.\n"
+"Copyright (C) 2003 Andrew Sobala <aes@gnome.org>\n"
+"Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Copyright (C) 2005 Red Hat, Inc\n"
+"Copyright (C) 2012–2021 The MATE developers"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
@@ -1273,7 +1286,7 @@ msgstr "Page Handling"
 #: libview/ev-jobs.c:622
 #, c-format
 msgid "Failed to render page %d"
-msgstr ""
+msgstr "Failed to render page %d"
 
 #: libview/ev-jobs.c:1737
 #, c-format
@@ -1544,7 +1557,7 @@ msgstr "Further Information"
 
 #: shell/ev-sidebar.c:367
 msgid "Hide sidebar"
-msgstr ""
+msgstr "Hide sidebar"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1720,8 +1733,8 @@ msgstr "Could not send current document"
 #, c-format
 msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu pending job in queue"
+msgstr[1] "%lu pending jobs in queue"
 
 #: shell/ev-window.c:3717
 #, c-format
@@ -1755,7 +1768,7 @@ msgstr "Close _without Saving"
 
 #: shell/ev-window.c:3927 shell/ev-window.c:6465
 msgid "_Save As…"
-msgstr ""
+msgstr "_Save As…"
 
 #: shell/ev-window.c:3996
 #, c-format
@@ -1769,7 +1782,9 @@ msgid ""
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"There is %d print job active. Wait until print finishes before closing?"
 msgstr[1] ""
+"There are %d print jobs active. Wait until print finishes before closing?"
 
 #: shell/ev-window.c:4018
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1805,10 +1820,12 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
+"Atril is a simple multi-page document viewer,\n"
+"powered by SyncTex %s and %s %s."
 
 #: shell/ev-window.c:5392
 msgid "Atril is a simple multi-page document viewer."
-msgstr ""
+msgstr "Atril is a simple multi-page document viewer."
 
 #: shell/ev-window.c:5405
 msgid "MATE Documentation Team"
@@ -1825,6 +1842,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public Licence as published by the Free Software "
+"Foundation; either version 2 of the Licence, or (at your option) any later "
+"version."
 
 #: shell/ev-window.c:5415
 msgid ""
@@ -1833,6 +1854,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public Licence for more "
+"details."
 
 #: shell/ev-window.c:5419
 msgid ""
@@ -1840,27 +1865,34 @@ msgid ""
 " Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"You should have received a copy of the GNU General Public Licence along with"
+" Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA 02110-1301  USA"
 
 #: shell/ev-window.c:5464
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "About Atril Document Viewer"
 
 #: shell/ev-window.c:5465
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Copyright © 1996–2009 The Evince authors\n"
+"Copyright © 2012–2021 The MATE developers"
 
 #: shell/ev-window.c:5472
 msgid "translator-credits"
-msgstr "Martin Wimpress"
+msgstr ""
+"Martin Wimpress\n"
+"Andi Chandler"
 
 #: shell/ev-window.c:5767
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d found on this page"
+msgstr[1] "%d found on this page"
 
 #: shell/ev-window.c:5772
 msgid "Not found"
@@ -1885,6 +1917,9 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Pressing F7 turns the caret navigation on or off. This feature places a "
+"movable cursor in text pages, allowing you to move around and select text "
+"with your keyboard. Do you want to enable the caret navigation?"
 
 #: shell/ev-window.c:6142
 msgid "Don't show this message again"
@@ -1992,7 +2027,7 @@ msgstr "Save Current Settings as _Default"
 
 #: shell/ev-window.c:6507
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Reset Zoom"
 
 #: shell/ev-window.c:6510
 msgid "_Reload"
@@ -2116,7 +2151,7 @@ msgstr "Run document as a presentation"
 
 #: shell/ev-window.c:6633
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "Inverted _Colours"
 
 #: shell/ev-window.c:6634
 msgid "Show page contents with the colors inverted"
@@ -2212,7 +2247,7 @@ msgstr "Zoom Out"
 
 #: shell/ev-window.c:6870
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Reset Zoom"
 
 #: shell/ev-window.c:7014 shell/ev-window.c:7030
 msgid "Unable to launch external application."

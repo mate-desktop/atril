@@ -17,12 +17,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2022\n"
-"Language-Team: Dutch (https://www.transifex.com/mate/teams/13566/nl/)\n"
+"Language-Team: Dutch (https://app.transifex.com/mate/teams/13566/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,7 +57,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "Kan geen passende opdracht vinden om dit type stripboek uit te pakken"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Onbekend MIME-type (bestandssoort)"
@@ -75,7 +75,7 @@ msgstr "Geen bestanden in archief"
 msgid "No images found in archive %s"
 msgstr "Geen afbeeldingen gevonden in archief %s"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Er is een fout opgetreden bij het verwijderen van ʻ%sʼ."
@@ -550,59 +550,59 @@ msgstr "(vf) %s: geen postamble\n"
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr "%s: Bestand corrupt of geen VF-bestand.\n"
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Geen ePub-document"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "kon bestandsnaam niet terugvinden"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "kon archief niet openen"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "kon archief niet uitpakken"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "kon bevattend bestand niet terugvinden"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "kon bevattend bestand niet openen"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "bevattend bestand is corrupt"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub-bestand is ongeldig of corrupt"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub-bestand is corrupt, geen bevattend bestand"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "kon inhoud manifest niet analyseren"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "inhoud van bestand is ongeldig"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "epub-bestand heeft geen ruggengraat"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "epub-bestand heeft geen manifest"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 "Kon documentstructuur niet opzetten tijdens het laden, sommige bestanden "
@@ -744,65 +744,65 @@ msgstr "Aanmaken van een tijdelijk bestand is mislukt: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Aanmaken van een tijdelijke map is mislukt: %s."
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "Bestand is geen geldig bureaubladbestand (.desktop)"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Niet-herkende bureaubladbestandversie '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "%s starten..."
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "De toepassing aanvaardt geen documenten via de opdrachtregel"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Niet-herkende startoptie: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Kan geen document-URI's doorsturen naar de werkomgeving via een ‘Type=Link’ "
 "invoerregel"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "Geen opstartbaar element"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Verbinding met de sessiebeheerder uitschakelen"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Geef het bestand op met de opgeslagen instellingen"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "BESTAND"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Sessiebeheer-ID opgeven"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Opties voor sessiebeheer:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Toon opties voor sessiebeheer"
 

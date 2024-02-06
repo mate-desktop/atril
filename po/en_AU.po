@@ -8,12 +8,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
 "Last-Translator: Michael Findlay <translate@cobber-linux.org>, 2021\n"
-"Language-Team: English (Australia) (https://www.transifex.com/mate/teams/13566/en_AU/)\n"
+"Language-Team: English (Australia) (https://app.transifex.com/mate/teams/13566/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 "Can't find an appropriate command to decompress this type of comic book"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Unknown MIME Type"
@@ -66,7 +66,7 @@ msgstr "No files in archive"
 msgid "No images found in archive %s"
 msgstr "No images found in archive %s"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "There was an error deleting “%s”."
@@ -540,59 +540,59 @@ msgstr ""
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr ""
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Not an ePub document"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "could not retrieve filename"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "could not open archive"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "could not extract archive"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "could not retrieve container file"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "could not open container file"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "container file is corrupt"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub file is invalid or corrupt"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub file is corrupt, no container"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "could not parse content manifest"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "content file is invalid"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "epub file has no spine"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "epub file has no manifest"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "Could not set up document tree for loading, some files missing"
 
@@ -732,63 +732,63 @@ msgstr "Failed to create a temporary file: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Failed to create a temporary directory: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "File is not a valid .desktop file"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Unrecognised desktop file Version '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "Starting %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "Application does not accept documents on command line"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Unrecognised launch option: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "Can't pass document URIs to a 'Type=Link' desktop entry"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "Not a launchable item"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Disable connection to session manager"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Specify file containing saved configuration"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FILE"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Specify session management ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Session management options:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Show session management options"
 

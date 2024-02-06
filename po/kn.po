@@ -6,17 +6,17 @@
 # Translators:
 # Feryn <feryn.xiv@openmailbox.org>, 2018
 # Yogesh K S <yogesh@karnatakaeducation.org.in>, 2018
-# karthik holla <karthikholla87@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# karthik holla <karthikholla87@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Kannada (https://www.transifex.com/mate/teams/13566/kn/)\n"
+"Last-Translator: karthik holla <karthikholla87@gmail.com>, 2023\n"
+"Language-Team: Kannada (https://app.transifex.com/mate/teams/13566/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 "ಈ ಬಗೆಯ ಕಾಮಿಕ್ ಪುಸ್ತಕವನ್ನು ಸಂಕುಚನದಿಂದ ಹೊರತೆಗೆಯಲು ಸೂಕ್ತವಾದ ಆಜ್ಞೆಯು ಕಂಡುಬಂದಿಲ್ಲ"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "ಗೊತ್ತಿರದ MIME ಬಗೆ"
@@ -70,7 +70,7 @@ msgstr "ಆರ್ಕೈವಿನಲ್ಲಿ ಯಾವುದೆ ಕಡತಗಳ�
 msgid "No images found in archive %s"
 msgstr "ಆರ್ಕೈವ್ %s ನಲ್ಲಿ ಯಾವುದೆ ಚಿತ್ರಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "“%s” ಅನ್ನು ಅಳಿಸುವಲ್ಲಿ ಒಂದು ದೋಷ ಉಂಟಾಗಿದೆ."
@@ -209,7 +209,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: ಯಾವುದೇ ಅಕ್ಷರಶೈಲಿಯನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿಲ್ಲ\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
@@ -544,59 +544,59 @@ msgstr ""
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr ""
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "ePub ದಸ್ತಾವೇಜಲ್ಲ. "
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "ಕಡತದ ಮರುಕಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "ಆರ್ಕೈವ್ ತೆಗೆಯಲಾಗಲಿಲ್ಲ"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "ಆರ್ಕೈವನಿಂದ ಹೊರತೆಗೆಯಲಾಗಲಿಲ್ಲ"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "ಧಾರಕ ಕಡತದವನ್ನು ಮರುಕಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "ಧಾರಕ ಕಡತದವನ್ನು ತೆಗೆಯಲಾಗಲಿಲ್ಲ"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "ಧಾರಕ ಕಡತದ ಕೆಟ್ಟಿದೆ "
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub ಕಡತವು ಅಮಾನ್ಯವಾಗಿದೆ ಅಥವಾ ಆಳಾಗಿದೆ."
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub ಕಡತವು ಆಳಾಗಿದೆ, ಕಂಟೇನರ್ ಇಲ್ಲ"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr ""
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr ""
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr ""
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr ""
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 
@@ -692,11 +692,11 @@ msgstr "ಅಮಾನ್ಯ ದಸ್ತಾವೇಜು"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:4
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Tiff ದಸ್ತಾವೇಜು"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:5
 msgid "XPS Documents"
-msgstr ""
+msgstr "XPS ದಸ್ತಾವೇಜುಗಳು"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
@@ -736,63 +736,63 @@ msgstr "ತಾತ್ಕಾಲಿಕ ಕೋಶವನ್ನು ರಚಿಸಲು 
 msgid "Failed to create a temporary directory: %s"
 msgstr "ತಾತ್ಕಾಲಿಕ ಕೋಶವನ್ನು ರಚಿಸಲು ವಿಫಲಗೊಂಡಿದೆ: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "ಕಡತವು ಮಾನ್ಯವಾದ .desktop ಕಡತವಾಗಿಲ್ಲ"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "ಗುರುತಿಸಲಾಗದ ಗಣಕತೆರೆ ಕಡತ ಆವೃತ್ತಿ '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "%s ಅನ್ನು ಆರಂಭಿಸಲಾಗುತ್ತಿದೆ"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "ಅನ್ವಯವು ಆಜ್ಞಾ ಸಾಲಿನಲ್ಲಿ ದಸ್ತಾವೇಜುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದಿಲ್ಲ"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "ಗುರುತಿಸಲಾಗದ ಆರಂಭದ ಆಯ್ಕೆ: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "ಒಂದು 'Type=Link' ಗಣಕತೆರೆ ನಮೂದಿಗಾಗಿ ದಸ್ತಾವೇಜು URIಗಳನ್ನು ಒದಗಿಸಲಾಗಿಲ್ಲ"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "ಆರಂಭಿಸಬಹುದಾದ ಅಂಶವಾಗಿಲ್ಲ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "ಅಧಿವೇಶನದ ವ್ಯವಸ್ಥಾಪಕನೊಂದಿಗಿನ ಸಂಪರ್ಕವನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "ಉಳಿಸಲಾದ ಸಂರಚನೆಯನ್ನು ಹೊಂದಿರುವ ಕಡತವನ್ನು ಸೂಚಿಸಿ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FILE"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "ಅಧೀವೇಶನ ವ್ಯವಸ್ಥಾಪನಾ ID ಯನ್ನು ಸೂಚಿಸಿ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ಐಡಿ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "ಅಧಿವೇಶನ ವ್ಯವಸ್ಥಾಪನಾ ಆಯ್ಕೆಗಳು:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "ಅಧಿವೇಶನ ವ್ಯವಸ್ಥಾಪನಾ ಆಯ್ಕೆಗಳನ್ನು ತೋರಿಸು"
 
@@ -831,7 +831,7 @@ msgstr "ವಿಭಜಕ"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6874
 msgid "Fit Page"
-msgstr ""
+msgstr "ಪುಟಕ್ಕೆ ಹೊಂದಿಸು"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6878
 msgid "Fit Width"

@@ -7,17 +7,17 @@
 # brennus <jonas.ska@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Audrius Meskauskas, 2018
-# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020
-# Moo, 2021
+# Moo, 2023
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Moo, 2021\n"
-"Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
+"Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2023\n"
+"Language-Team: Lithuanian (https://app.transifex.com/mate/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,7 +50,7 @@ msgid ""
 "Can't find an appropriate command to decompress this type of comic book"
 msgstr "Nepavyko rasti tinkamos komandos išskleisti šio tipo komiksų knygos"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Nežinomas MIME tipas"
@@ -68,7 +68,7 @@ msgstr "Archyve nėra failų"
 msgid "No images found in archive %s"
 msgstr "Archyve %s nereasta jokių paveikslų"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Įvyko klaida trinant „%s“"
@@ -108,136 +108,136 @@ msgstr "DVI dokumentai"
 
 #: backend/dvi/mdvi-lib/dviread.c:209
 msgid "unexpected EOF\n"
-msgstr ""
+msgstr "netikėta failo pabaiga\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "nepavyko įkelti %s šrifto\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
 msgid "could not reload `%s'\n"
-msgstr ""
+msgstr "nepavyko įkelti iš naujo %s\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr ""
+msgstr "%s nepalaikomas DVI formatas (versija %u)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
-msgstr ""
+msgstr "nėra pasirinktų puslapių\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:897
 #, c-format
 msgid "%s: File corrupted, or not a DVI file\n"
-msgstr ""
+msgstr "%s: Failas sugadintas, arba ne DVI failas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: vf makrokomanda turėjo klaidų\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s: dėklas netuščias po vf makrokomandos\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: nepavyko iš naujo atidaryti failo (%s)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
 msgid "%s: page %d out of range\n"
-msgstr ""
+msgstr "%s: puslapis %d nepasiekiamas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s: blogas poslinkis %d puslapyje\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "puslapio pabaigoje dėklas netuščias\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
-msgstr ""
+msgstr "dar nenustatytas numatytasis šriftas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "pageidajamo ženklo „%d“  nėra %s\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "dėklo didinimas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "dėklo atvirkštinis perpildymas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "šriftas %d neapibrėžtas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "netaisyklingas ypatingasis ilgis\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr ""
+msgstr "šriftas %d neapibrėžtas postambulėje\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "netikėtas operacijos kodas %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
-msgstr ""
+msgstr "neapibrėžtas operacijos kodas %d\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: nėra apibrėžtų šriftų\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
 msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
-msgstr ""
+msgstr "%s:%d:[%s] pageidauta koduotė `%s' neatitinka vektoriaus `%s´\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:757
 #, c-format
 msgid "%s: could not load fontmap\n"
-msgstr ""
+msgstr "%s: nepavyko įkelti šriftų žemėlapio\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
 msgid "%s: could not set as default encoding\n"
-msgstr ""
+msgstr "%s: nepavyko nustatyti numatytąja koduote\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:849
 #, c-format
 msgid "encoding vector `%s' is in use\n"
-msgstr ""
+msgstr "naudojamas koduotės vektorius `%s'\n"
 
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: netinkamas operacijos kodas %d ženkle %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
 msgid "(gf) Character %d: invalid opcode %d\n"
-msgstr ""
+msgstr "(gf) Ženklas %d: netinkamas operacijos kodas %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
@@ -423,7 +423,7 @@ msgstr "Oi!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "Aieeeee!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
@@ -431,11 +431,11 @@ msgstr "Ai!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "Hiustonai, turime bėdą"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3.. 2.. 1.. BUM!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
@@ -474,11 +474,11 @@ msgstr "Įspėjimas"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: Lemtingoji klaida:"
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "Lemtingoji klaida"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
@@ -542,59 +542,59 @@ msgstr ""
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr ""
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Ne EPUB dokumentas"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "nepavyko gauti failo vardo"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "nepavyko atverti archyvo"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "nepavyko išskleisti archyvo"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "nepavyko gauti talpiklio failo"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "nepavyko atverti talpiklio failo"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "talpiklio failas sugadintas"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "epub failas netinkamas arba sugadintas"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "epub failas pažeistas, nėra talpiklio"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "Nepavyko išnagrinėti turinio manifesto."
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "Turinio failas sugadintas"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "EPUB failas neturi spine"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "EPUB failas neturi manifesto"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr "Nepavyko įkėlimui paruošti dokumentų medžio, trūksta failų"
 
@@ -734,63 +734,63 @@ msgstr "Nepavyko sukurti laikinojo failo: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Nepavyko sukurti laikinojo katalogo: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "Šis failas nėra taisyklingas .desktop failas"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Neatpažinta darbalaukio failo versija „%s“"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "Paleidžiama %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "Programa nepriima dokumentų komandų eilutėje"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Neatpažintas paleidimo parametras: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "Negalima perduoti dokumentų URI „Type=Link“ darbalaukio elementui"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "Nepaleidžiamas elementas"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Išjungti ryšį su seansų tvarkytuve"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Nurodyti failą su įrašytais nustatymais"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FAILAS"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Nurodykite seanso valdymo ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Seanso valdymo parametrai:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Rodyti seanso valdymo parametrus"
 
@@ -1187,6 +1187,11 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
+"Autorių teisės (C) 2000, 2001 Eazel, Inc.\n"
+"Autorių teisės (C) 2003 Andrew Sobala <aes@gnome.org>\n"
+"Autorių teisės (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Autorių teisės (C) 2005 Red Hat, Inc\n"
+"Autorių teisės (C) 2012–2021 MATE kūrėjai"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
@@ -1285,7 +1290,7 @@ msgstr "Puslapių apdorojimas"
 #: libview/ev-jobs.c:622
 #, c-format
 msgid "Failed to render page %d"
-msgstr ""
+msgstr "Nepavyko atvaizduoti puslapio %d"
 
 #: libview/ev-jobs.c:1737
 #, c-format
@@ -1378,7 +1383,7 @@ msgstr "Ieškoti kito ieškomo užrašo pasikartojimo"
 
 #: shell/eggfindbar.c:341
 msgid "Case Sensitive"
-msgstr "S_kirti raidžių dydį"
+msgstr "Skirti raidžių dydį"
 
 #: shell/eggfindbar.c:344
 msgid "Toggle case sensitive search"
@@ -1556,7 +1561,7 @@ msgstr "Daugiau informacijos"
 
 #: shell/ev-sidebar.c:367
 msgid "Hide sidebar"
-msgstr ""
+msgstr "Slėpti šoninę juostą"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1888,6 +1893,8 @@ msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Autorių teisės © 1996–2009 Evince autoriai\n"
+"Autorių teisės © 2012–2021 MATE kūrėjai"
 
 #: shell/ev-window.c:5472
 msgid "translator-credits"

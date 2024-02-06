@@ -7,16 +7,16 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2019
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
-# Quentin PAGÈS, 2022
+# Quentin PAGÈS, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Quentin PAGÈS, 2022\n"
-"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
+"Last-Translator: Quentin PAGÈS, 2023\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,7 +53,7 @@ msgstr ""
 "Impossible de trobar una comanda apropriada per descompressar aqueste tipe "
 "de benda dessenhada"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Tipe MIME desconegut"
@@ -71,7 +71,7 @@ msgstr "Cap de fichièr dins l’archiu"
 msgid "No images found in archive %s"
 msgstr "Cap d'imatge pas trobat dins « %s »"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Error en suprimissent « %s »."
@@ -545,59 +545,59 @@ msgstr ""
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr ""
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Es pas un document ePub"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "recuperacion impossibla del filename"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "dubertura impossibla de l’archiu"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "extraccion impossibla de l’archiu"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "Impossible de recuperar lo fichièr del contenidor"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "Impossible de dobrir lo fichièr del contenidor"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "lo fichièr del contenidor es corromput"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "lo fichièr epub es invalid o corromput"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "lo fichièr epub es corromput, cap de contenidor"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "impossible d’analisar lo contengut del manifèst"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "lo contengut del fichièr es invalid"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "fichièr epub sens basa"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "lo fichièr epub a pas de manifest"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 "Impossible de definir l’arborescéncia del document pel cargament, unes "
@@ -739,65 +739,65 @@ msgstr "Creacion fracassada del fichièr temporari : %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Creacion fracassada del dossièr temporari : %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "Lo fichièr es pas un fichièr .desktop valid"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "La version « %s » del fichièr desktop es pas reconeguda"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "Aviada de %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "L'aplicacion accepta pas los documents en linha de comandas"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Opcion d'aviada pas reconeguda : %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
 "Impossible de passar d'URI de document a un fichièr de burèu amb "
 "« Type=Link »"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "L'element es pas executable"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Desactivar la connexion al gestionari de sessions"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Indicar un fichièr que conten la configuracion enregistrada"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FICHIÈR"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Indicar l'ID de gestion de session"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "Identificador"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Opcions de gestion de sessions :"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Afichar las opcions de gestion de sessions"
 
@@ -1269,7 +1269,7 @@ msgstr ""
 
 #: libview/ev-print-operation.c:1919
 msgid "Auto Rotate and Center"
-msgstr "Rotacion auto e cenrar"
+msgstr "Rotacion auto e centrar"
 
 #: libview/ev-print-operation.c:1922
 msgid ""
@@ -1309,19 +1309,19 @@ msgstr "Impression fracassada de la pagina %d: %s"
 
 #: libview/ev-view-accessible.c:43
 msgid "Scroll Up"
-msgstr "Desfilar cap amont"
+msgstr "Defilar cap amont"
 
 #: libview/ev-view-accessible.c:44
 msgid "Scroll Down"
-msgstr "Desfilar cap aval"
+msgstr "Defilar cap aval"
 
 #: libview/ev-view-accessible.c:50
 msgid "Scroll View Up"
-msgstr "Far desfilar la vista cap amont"
+msgstr "Far defilar la vista cap amont"
 
 #: libview/ev-view-accessible.c:51
 msgid "Scroll View Down"
-msgstr "Far desfilar la vista cap aval"
+msgstr "Far defilar la vista cap aval"
 
 #: libview/ev-view-accessible.c:128
 msgid "Document View"
@@ -1655,7 +1655,7 @@ msgid ""
 "instead."
 msgstr ""
 "Dintrada impossibla en mòde presentacion amb los documents ePub, utilizacion"
-" del mòde ecran complet a la plaça."
+" del mòde ecran complèt a la plaça."
 
 #: shell/ev-window.c:1772
 msgid "The document contains no pages"
@@ -1904,7 +1904,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "
-"(totenoc.eu) <cvalmary@yahoo.fr>"
+"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin PAGÈS"
 
 #: shell/ev-window.c:5767
 #, c-format

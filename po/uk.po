@@ -16,12 +16,12 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: atril 1.26.0\n"
+"Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2022-10-29 15:26+0200\n"
+"POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
 "Last-Translator: Anton Gladky <gladk@debian.org>, 2022\n"
-"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
+"Language-Team: Ukrainian (https://app.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,7 +55,7 @@ msgid ""
 msgstr ""
 "Для розпакування цього типу коміксів знайти відповідну команду не вдається"
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:640
+#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
 msgstr "Невідомий тип MIME"
@@ -73,7 +73,7 @@ msgstr "Файлів в архіві немає"
 msgid "No images found in archive %s"
 msgstr "Зображень в архіві %s немає"
 
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1780
+#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
 msgstr "Сталася помилка видалення “%s”."
@@ -470,20 +470,20 @@ msgstr "Помилка"
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr "%s: Увага: "
+msgstr "%s: Попередження: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
-msgstr "Увага"
+msgstr "Попередження"
 
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr "%s: Капут: "
+msgstr "%s: Фатальна помилка: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr "Капут"
+msgstr "Фатальна помилка"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
@@ -515,7 +515,7 @@ msgstr "збій розміщення байтів %ux%u \n"
 
 #: backend/dvi/mdvi-lib/util.c:250
 msgid "attempted to free NULL pointer\n"
-msgstr "спроба вивільнення нульового (NULL) вказівника\n"
+msgstr "спроба звільнення нульового (NULL) вказівника\n"
 
 #: backend/dvi/mdvi-lib/vf.c:82
 #, c-format
@@ -547,59 +547,59 @@ msgstr "(vf) %s: висновок відсутній\n"
 msgid "%s: File corrupted, or not a VF file.\n"
 msgstr "%s: Файл пошкоджений або не є файлом VF.\n"
 
-#: backend/epub/epub-document.c:657
+#: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
 msgstr "Не є документом ePub"
 
-#: backend/epub/epub-document.c:758
+#: backend/epub/epub-document.c:768
 msgid "could not retrieve filename"
 msgstr "не вдалося отримати ім'я файлу"
 
-#: backend/epub/epub-document.c:786
+#: backend/epub/epub-document.c:796
 msgid "could not open archive"
 msgstr "не вдалося відкрити архів"
 
-#: backend/epub/epub-document.c:802 backend/epub/epub-document.c:818
+#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
 msgstr "не вдалося розпакувати архів"
 
-#: backend/epub/epub-document.c:850 backend/epub/epub-document.c:933
+#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
 msgstr "не вдалося отримати файл контейнера"
 
-#: backend/epub/epub-document.c:862
+#: backend/epub/epub-document.c:872
 msgid "could not open container file"
 msgstr "не вдалося відкрити файл контейнера"
 
-#: backend/epub/epub-document.c:872
+#: backend/epub/epub-document.c:882
 msgid "container file is corrupt"
 msgstr "файл контейнера пошкоджений"
 
-#: backend/epub/epub-document.c:882
+#: backend/epub/epub-document.c:892
 msgid "epub file is invalid or corrupt"
 msgstr "файл epub неправильний або пошкоджений"
 
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:902
 msgid "epub file is corrupt, no container"
 msgstr "файл epub пошкоджений: немає контейнера"
 
-#: backend/epub/epub-document.c:966
+#: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
 msgstr "не вдалося розібрати вміст маніфесту"
 
-#: backend/epub/epub-document.c:975
+#: backend/epub/epub-document.c:985
 msgid "content file is invalid"
 msgstr "вміст файлу хибний"
 
-#: backend/epub/epub-document.c:984
+#: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
 msgstr "файл epub без основи"
 
-#: backend/epub/epub-document.c:993
+#: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
 msgstr "файл epub без маніфесту"
 
-#: backend/epub/epub-document.c:1079
+#: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 "Не вдалося налаштувати дерево документа для завантаження, деякі файли "
@@ -611,7 +611,7 @@ msgstr "Документи epub"
 
 #: backend/pdf/ev-poppler.cc:519
 msgid "This work is in the Public Domain"
-msgstr "Ця робота — Суспільне надбання"
+msgstr "Ця робота — суспільне надбання"
 
 #: backend/pdf/ev-poppler.cc:774 backend/pdf/ev-poppler.cc:780
 msgid "Yes"
@@ -741,63 +741,63 @@ msgstr "Збій створення тимчасового файлу: %s"
 msgid "Failed to create a temporary directory: %s"
 msgstr "Збій створення тимчасового каталогу: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "Файл не є дійсним файлом .desktop"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "Незрозуміла версія desktop-файлу '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "Запускається '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "Програма не приймає документи з командного рядка"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "Незрозумілий параметр запуску: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "Неможливо передати URI документа до desktop-запису 'Type=Link'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "Елемент не запускається"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:233
+#: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "Вимкнути під’єднання до диспетчера сеансів"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "Вказати файл, який містить збережені налаштування"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "Задати ідентифікатор керування сеансами"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:243
+#: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ID"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:269
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "Параметри керування сеансом:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "Показати параметри керування сеансами"
 
@@ -1045,7 +1045,7 @@ msgstr "З_більшити"
 
 #: previewer/ev-previewer-window.c:294 shell/ev-window.c:6502
 msgid "Enlarge the document"
-msgstr "Збільшити розмір сторінки"
+msgstr "Збільшити документ"
 
 #: previewer/ev-previewer-window.c:296 shell/ev-window.c:6504
 msgid "Zoom _Out"
@@ -1089,7 +1089,7 @@ msgstr "Сторінка"
 
 #: previewer/ev-previewer-window.c:554 shell/ev-window.c:6785
 msgid "Select Page"
-msgstr "Позначити сторінку"
+msgstr "Обрати сторінку"
 
 #: properties/ev-properties-main.c:116
 msgid "Document"
@@ -1259,7 +1259,7 @@ msgid ""
 "\n"
 "• \"Fit to Printable Area\": Document pages are enlarged or reduced as required to fit the printable area of the printer page.\n"
 msgstr ""
-"Масштабувати сторінки для припасування їх до обраного розміру відбитка. Оберіть щось одне:\n"
+"Масштабувати сторінки, щоб умістити їх на сторінці принтера. Оберіть щось одне:\n"
 "\n"
 "• \"Нічого\": Масштаб не змінюється.\n"
 "\n"
@@ -1652,8 +1652,8 @@ msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
 msgstr ""
-"Увійти в режим доповіді з документами ePub не можна, користуйтеся "
-"повноекранним режимом."
+"Неможливо увійти у режим презентації з документами ePub, використовуйте "
+"повноекранний режим."
 
 #: shell/ev-window.c:1772
 msgid "The document contains no pages"
@@ -1905,7 +1905,8 @@ msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
 "Микола Ткач <znadibnyk@gmail.com>,\n"
 "Oleh Tsyupka <myr4yk@gmail.com>,\n"
-"Serhii Horichenko aka sgg <mail@sgg.im>"
+"Serhii Horichenko aka sgg <mail@sgg.im>,\n"
+"Anton Gladky <gladk@debian.org>"
 
 #: shell/ev-window.c:5767
 #, c-format
@@ -1977,7 +1978,7 @@ msgstr "_Відкрити…"
 
 #: shell/ev-window.c:6460 shell/ev-window.c:6826
 msgid "Open an existing document"
-msgstr "Відрити документ"
+msgstr "Відкрити документ"
 
 #: shell/ev-window.c:6462
 msgid "Op_en a Copy"
@@ -2145,7 +2146,7 @@ msgstr "_Дві сторінки"
 
 #: shell/ev-window.c:6616
 msgid "Show two pages at once"
-msgstr "Показувати по дві сторінки"
+msgstr "Показувати дві сторінки одночасно"
 
 #: shell/ev-window.c:6618
 msgid "_Odd pages left"
