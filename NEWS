@@ -1,6 +1,10 @@
+### atril 1.28.0
+
+  * Translations update
+
 ### atril 1.27.1
 
-  * update translations
+  * Translations update
   * fix a incompatible pointer type warning for gcc14
   * epub: Avoid crash when index list has extraneous entry
   * epub: Prevent path traversal when extracting files
@@ -19,7 +23,7 @@
 
 ### atril 1.27.0
 
-  * update translations
+  * Translations update
   * epub: Fix index loading for certain documents - look for epub:type instead of epub:id.
   * ci: drop -Wunused-parameter compiler cflag from debian build
   * Fix implicit conversion changes signedness: 'gboolean' to 'guint'
@@ -33,7 +37,7 @@
 
 ### atril 1.26.0
 
-  * update translations
+  * Translations update
   * ev-window.c: only create a EvWebView if needed
   * ev-sidebar-links: Optimize reverse link lookup for a page
   * introspection: Fix bogus --library arguments.
@@ -44,7 +48,7 @@
 
 ### atril 1.25.1
 
-  * update translations
+  * Translations update
   * update help
   * caja extension: Update copyright year
   * dvi: use glib i18n macros
@@ -80,7 +84,7 @@
 
 ### atril 1.25.0
 
-  * sync with transifex
+  * Translations update
   * [ci] fix release tarball on travis CI failed
   * Re-enable highlight_find_results
   * Use ENABLE_SYNCTEX in libdocument/Makefile.am
@@ -109,13 +113,13 @@
 
 ### atril 1.24.0
 
-  * update translations
+  * Translations update
   * thumbnailer: Fix memory leak
   * Fix year 2038 issue with signed 32-bit integers
 
 ### atril 1.23.2
 
-  * update translations
+  * Translations update
   * Fix atril.desktop file
   * Fix memory leak ev_sidebar_thumbnails_document_changed_cb()
   * pdf: Fix memory leak when adding new text annotations
@@ -142,7 +146,7 @@
 
 ### atril 1.23.1
 
-  * update translations
+  * Translations update
   * tx: sync with transifex
   * Travis CI: 'cppcheck' with '-D__cplusplus'
   * ev-view: Remove unused variables and assignment
@@ -205,7 +209,7 @@
 
 ### atril 1.23.0
 
-  * update translations
+  * Translations update
   * Remove trailing whitespaces
   * test: get focus on frame
   * let test7.py can works
@@ -223,7 +227,7 @@
 
 ### atril 1.22.0
 
-  * update translations
+  * Translations update
   * Add update-authors.pl script which helps to update atril.about
   * Read authors (updated) from atril.about gresource
   * Initialize Travis CI support
@@ -243,7 +247,7 @@
 
 ### atril 1.21.1
 
-  * update translations
+  * Translations update
   * Use make functions for HELP_LINGUAS
   * comics: support application/vnd.rar MIME type
   * shell: Save document to the same path it was opened from
