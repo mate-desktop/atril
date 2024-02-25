@@ -47,6 +47,7 @@
 #include "egg-toolbars-model.h"
 
 #include "eggfindbar.h"
+#include "ev-find-sidebar.h"
 
 #include "ephy-zoom-action.h"
 #include "ephy-zoom.h"
@@ -144,6 +145,7 @@ struct _EvWindowPrivate {
 	GtkWidget *password_view;
 	GtkWidget *sidebar_thumbs;
 	GtkWidget *sidebar_links;
+	GtkWidget *find_sidebar;
 	GtkWidget *sidebar_attachments;
 	GtkWidget *sidebar_layers;
 	GtkWidget *sidebar_annots;
@@ -383,6 +385,9 @@ static void     ev_window_setup_bookmarks               (EvWindow         *windo
 static void    zoom_control_changed_cb                 (EphyZoomAction *action,
                                                          float           zoom,
                                                          EvWindow       *ev_window);
+
+static void     ev_window_show_find_bar                 (EvWindow         *ev_window);
+static void     ev_window_close_find_bar                (EvWindow         *ev_window);
 
 static gchar *caja_sendto = NULL;
 
@@ -1731,7 +1736,7 @@ ev_window_setup_document (EvWindow *ev_window)
 	if (EV_IS_DOCUMENT_FIND (document)) {
 		if (ev_window->priv->search_string &&
 		    !EV_WINDOW_IS_PRESENTATION (ev_window)) {
-			ev_window_cmd_edit_find (NULL, ev_window);
+			ev_window_show_find_bar (ev_window);
 			egg_find_bar_set_search_string (EGG_FIND_BAR (ev_window->priv->find_bar), ev_window->priv->search_string);
 		}
 
@@ -2506,7 +2511,7 @@ ev_window_open_document (EvWindow       *ev_window,
 
 	if (search_string && EV_IS_DOCUMENT_FIND (document) &&
 	    mode != EV_WINDOW_MODE_PRESENTATION) {
-		ev_window_cmd_edit_find (NULL, ev_window);
+		ev_window_show_find_bar (ev_window);
 		egg_find_bar_set_search_string (EGG_FIND_BAR (ev_window->priv->find_bar),
 						search_string);
 	}
@@ -4201,32 +4206,61 @@ ev_window_cmd_edit_select_all (GtkAction *action, EvWindow *ev_window)
 }
 
 static void
+ev_window_cmd_toggle_find (GtkAction *action, EvWindow *ev_window)
+{
+	gboolean show_find_bar;
+
+	show_find_bar = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+	if (show_find_bar)
+		ev_window_show_find_bar (ev_window);
+	else
+		ev_window_close_find_bar (ev_window);
+}
+
+static void
 ev_window_cmd_edit_find (GtkAction *action, EvWindow *ev_window)
 {
-	if (ev_window->priv->document == NULL || !EV_IS_DOCUMENT_FIND (ev_window->priv->document)) {
-		g_error ("Find action should be insensitive since document doesn't support find");
-		return;
-	}
+	ev_window_show_find_bar (ev_window);
+}
 
-	if (EV_WINDOW_IS_PRESENTATION (ev_window))
-		return;
+static void
+ev_window_find_previous (EvWindow *ev_window)
+{
+	ev_view_find_previous (EV_VIEW (ev_window->priv->view));
+	ev_find_sidebar_previous (EV_FIND_SIDEBAR (ev_window->priv->find_sidebar));
+}
 
-	update_chrome_flag (ev_window, EV_CHROME_FINDBAR, TRUE);
-	update_chrome_visibility (ev_window);
-	gtk_widget_grab_focus (ev_window->priv->find_bar);
+static void
+ev_window_find_next (EvWindow *ev_window)
+{
+	ev_view_find_next (EV_VIEW (ev_window->priv->view));
+	ev_find_sidebar_next (EV_FIND_SIDEBAR (ev_window->priv->find_sidebar));
+}
+
+static gboolean
+find_next_idle_cb (EvWindow *ev_window)
+{
+	ev_window_find_next (ev_window);
+	return FALSE;
 }
 
 static void
 ev_window_cmd_edit_find_next (GtkAction *action, EvWindow *ev_window)
 {
+	gboolean find_bar_hidden;
+
 	if (EV_WINDOW_IS_PRESENTATION (ev_window))
 		return;
 
-	update_chrome_flag (ev_window, EV_CHROME_FINDBAR, TRUE);
-	update_chrome_visibility (ev_window);
-	gtk_widget_grab_focus (ev_window->priv->find_bar);
+	find_bar_hidden = !gtk_widget_get_visible (ev_window->priv->find_bar);
+	ev_window_show_find_bar (ev_window);
+
 	if (ev_window->priv->document && ev_window->priv->document->iswebdocument == FALSE) {
-		ev_view_find_next (EV_VIEW (ev_window->priv->view));
+		/* Use idle to make sure view allocation happens before find */
+		if (find_bar_hidden)
+			g_idle_add ((GSourceFunc)find_next_idle_cb, ev_window);
+		else
+			ev_window_find_next (ev_window);
 	}
 #if ENABLE_EPUB
 	else {
@@ -4235,17 +4269,30 @@ ev_window_cmd_edit_find_next (GtkAction *action, EvWindow *ev_window)
 #endif
 }
 
+static gboolean
+find_previous_idle_cb (EvWindow *ev_window)
+{
+	ev_window_find_previous (ev_window);
+	return FALSE;
+}
+
 static void
 ev_window_cmd_edit_find_previous (GtkAction *action, EvWindow *ev_window)
 {
+	gboolean find_bar_hidden;
+
 	if (EV_WINDOW_IS_PRESENTATION (ev_window))
 		return;
 
-	update_chrome_flag (ev_window, EV_CHROME_FINDBAR, TRUE);
-	update_chrome_visibility (ev_window);
-	gtk_widget_grab_focus (ev_window->priv->find_bar);
+	find_bar_hidden = !gtk_widget_get_visible (ev_window->priv->find_bar);
+	ev_window_show_find_bar (ev_window);
+
 	if (ev_window->priv->document && ev_window->priv->document->iswebdocument == FALSE) {
-		ev_view_find_previous (EV_VIEW (ev_window->priv->view));
+		/* Use idle to make sure view allocation happens before find */
+		if (find_bar_hidden)
+			g_idle_add ((GSourceFunc)find_previous_idle_cb, ev_window);
+		else
+			ev_window_find_previous (ev_window);
 	}
 #if ENABLE_EPUB
 	else {
@@ -5155,14 +5202,9 @@ ev_window_cmd_escape (GtkAction *action, EvWindow *window)
 
 	widget = gtk_window_get_focus (GTK_WINDOW (window));
 	if (widget && gtk_widget_get_ancestor (widget, EGG_TYPE_FIND_BAR)) {
-		update_chrome_flag (window, EV_CHROME_FINDBAR, FALSE);
-		update_chrome_visibility (window);
-
-		if (window->priv->view)
-			gtk_widget_grab_focus (window->priv->view);
+		ev_window_close_find_bar (window);
 #if ENABLE_EPUB
-		else
-			gtk_widget_grab_focus (window->priv->webview);
+		gtk_widget_grab_focus (window->priv->webview);
 #endif
 	} else {
 		gboolean fullscreen;
@@ -5745,6 +5787,15 @@ attachment_bar_menu_popup_cb (EvSidebarAttachments *attachbar,
 }
 
 static void
+find_sidebar_result_activated_cb (EvFindSidebar *find_sidebar,
+				  gint           page,
+				  gint           result,
+				  EvWindow      *window)
+{
+	ev_view_find_set_result (EV_VIEW (window->priv->view), page, result);
+}
+
+static void
 ev_window_update_find_status_message (EvWindow *ev_window)
 {
 	gchar *message;
@@ -5809,6 +5860,7 @@ ev_window_find_job_updated_cb (EvJobFind *job,
 				      page);
 	}
 	ev_window_update_find_status_message (ev_window);
+	ev_find_sidebar_update (EV_FIND_SIDEBAR (ev_window->priv->find_sidebar));
 }
 
 static void
@@ -5836,10 +5888,10 @@ find_bar_previous_cb (EggFindBar *find_bar,
 #if ENABLE_EPUB
 	if (ev_window->priv->document && ev_window->priv->document->iswebdocument == TRUE ) {
 		ev_web_view_find_previous(EV_WEB_VIEW(ev_window->priv->webview));
-	}else
+	} else
 #endif
 	{
-		ev_view_find_previous (EV_VIEW (ev_window->priv->view));
+		ev_window_find_previous (ev_window);
 	}
 }
 
@@ -5853,7 +5905,7 @@ find_bar_next_cb (EggFindBar *find_bar,
 	} else
 #endif
 	{
-		ev_view_find_next (EV_VIEW (ev_window->priv->view));
+		ev_window_find_next (ev_window);
 	}
 }
 
@@ -5865,14 +5917,8 @@ find_bar_close_cb (EggFindBar *find_bar,
 	if (ev_window->priv->document && ev_window->priv->document->iswebdocument == TRUE ) {
 		ev_web_view_find_cancel(EV_WEB_VIEW(ev_window->priv->webview));
 	}
-	else
 #endif
-	{
-			ev_view_find_cancel (EV_VIEW (ev_window->priv->view));
-	}
-	ev_window_clear_find_job (ev_window);
-	update_chrome_flag (ev_window, EV_CHROME_FINDBAR, FALSE);
-	update_chrome_visibility (ev_window);
+	ev_window_close_find_bar (ev_window);
 }
 
 static void
@@ -5895,6 +5941,9 @@ ev_window_search_start (EvWindow *ev_window)
 							     search_string,
 							     egg_find_bar_get_case_sensitive (find_bar));
 
+		ev_find_sidebar_start (EV_FIND_SIDEBAR (ev_window->priv->find_sidebar),
+				       EV_JOB_FIND (ev_window->priv->find_job));
+
 		g_signal_connect (ev_window->priv->find_job, "finished",
 				  G_CALLBACK (ev_window_find_job_finished_cb),
 				  ev_window);
@@ -5905,6 +5954,7 @@ ev_window_search_start (EvWindow *ev_window)
 	} else {
 		ev_window_update_actions (ev_window);
 		egg_find_bar_set_status_text (find_bar, NULL);
+		ev_find_sidebar_clear (EV_FIND_SIDEBAR (ev_window->priv->find_sidebar));
 		if (ev_window->priv->document->iswebdocument == FALSE) {
 			gtk_widget_queue_draw (GTK_WIDGET (ev_window->priv->view));
 		}
@@ -5951,11 +6001,68 @@ find_bar_visibility_changed_cb (EggFindBar *find_bar,
 #endif
 		ev_window_update_actions (ev_window);
 
-		if (visible)
-			ev_window_search_start (ev_window);
-		else
+		if (!visible)
 			egg_find_bar_set_status_text (EGG_FIND_BAR (ev_window->priv->find_bar), NULL);
 	}
+}
+
+static void
+update_toggle_find_action (EvWindow *ev_window,
+			   gboolean  active)
+{
+	GtkAction *action;
+
+	action = gtk_action_group_get_action (ev_window->priv->action_group, "EditFind");
+	if (gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action)) == active)
+		return;
+
+	g_signal_handlers_block_by_func (action, G_CALLBACK (ev_window_cmd_toggle_find), ev_window);
+	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), active);
+	g_signal_handlers_unblock_by_func (action, G_CALLBACK (ev_window_cmd_toggle_find), ev_window);
+}
+
+static void
+ev_window_show_find_bar (EvWindow *ev_window)
+{
+	if (gtk_widget_get_visible (ev_window->priv->find_bar))
+		return;
+
+	if (ev_window->priv->document == NULL || !EV_IS_DOCUMENT_FIND (ev_window->priv->document)) {
+		g_error ("Find action should be insensitive since document doesn't support find");
+		return;
+	}
+
+	if (EV_WINDOW_IS_PRESENTATION (ev_window))
+		return;
+
+	g_object_ref (ev_window->priv->sidebar);
+	gtk_container_remove (GTK_CONTAINER (ev_window->priv->hpaned), ev_window->priv->sidebar);
+	gtk_paned_pack1 (GTK_PANED (ev_window->priv->hpaned),
+			 ev_window->priv->find_sidebar, FALSE, FALSE);
+	gtk_widget_show (ev_window->priv->find_sidebar);
+
+	update_chrome_flag (ev_window, EV_CHROME_FINDBAR, TRUE);
+	update_chrome_visibility (ev_window);
+	gtk_widget_grab_focus (ev_window->priv->find_bar);
+	update_toggle_find_action (ev_window, TRUE);
+}
+
+static void
+ev_window_close_find_bar (EvWindow *ev_window)
+{
+	if (!gtk_widget_get_visible (ev_window->priv->find_bar))
+		return;
+
+	g_object_ref (ev_window->priv->find_sidebar);
+	gtk_container_remove (GTK_CONTAINER (ev_window->priv->hpaned),
+			      ev_window->priv->find_sidebar);
+	gtk_paned_pack1 (GTK_PANED (ev_window->priv->hpaned),
+			 ev_window->priv->sidebar, FALSE, FALSE);
+
+	update_chrome_flag (ev_window, EV_CHROME_FINDBAR, FALSE);
+	update_chrome_visibility (ev_window);
+	gtk_widget_grab_focus (ev_window->priv->view);
+	update_toggle_find_action (ev_window, FALSE);
 }
 
 static void
@@ -6481,9 +6588,6 @@ static const GtkActionEntry entries[] = {
           G_CALLBACK (ev_window_cmd_edit_copy) },
  	{ "EditSelectAll", "edit-select-all", N_("Select _All"), "<control>A", NULL,
 	  G_CALLBACK (ev_window_cmd_edit_select_all) },
-        { "EditFind", "edit-find", N_("_Find…"), "<control>F",
-          N_("Find a word or phrase in the document"),
-          G_CALLBACK (ev_window_cmd_edit_find) },
 	{ "EditFindNext", NULL, N_("Find Ne_xt"), "<control>G", NULL,
 	  G_CALLBACK (ev_window_cmd_edit_find_next) },
 	{ "EditFindPrevious", NULL, N_("Find Pre_vious"), "<shift><control>G", NULL,
@@ -6637,6 +6741,9 @@ static const GtkToggleActionEntry toggle_entries[] = {
 	  N_("Activate or disable caret-navigation"),
 	  G_CALLBACK (ev_window_cmd_view_toggle_caret_navigation) },
 
+	{ "EditFind", GTK_STOCK_FIND, N_("_Find…"), "<control>F",
+	  N_("Find a word or phrase in the document"),
+	  G_CALLBACK (ev_window_cmd_toggle_find) },
 };
 
 /* Popups specific items */
@@ -7129,7 +7236,7 @@ do_action_named (EvWindow *window, EvLinkAction *action)
 	} else if (g_ascii_strcasecmp (name, "GoToPage") == 0) {
 		ev_window_cmd_focus_page_selector (NULL, window);
 	} else if (g_ascii_strcasecmp (name, "Find") == 0) {
-		ev_window_cmd_edit_find (NULL, window);
+		ev_window_show_find_bar (window);
 	} else if (g_ascii_strcasecmp (name, "Close") == 0) {
 		ev_window_cmd_file_close_window (NULL, window);
 	} else if (g_ascii_strcasecmp (name, "Print") == 0) {
@@ -7971,6 +8078,12 @@ ev_window_init (EvWindow *ev_window)
 			    FALSE, FALSE, 0);
 	gtk_widget_show (ev_window->priv->toolbar);
 
+	/* Find Bar */
+	ev_window->priv->find_bar = egg_find_bar_new ();
+	gtk_box_pack_end (GTK_BOX (ev_window->priv->main_box),
+			  ev_window->priv->find_bar,
+			  FALSE, TRUE, 0);
+
 	/* Add the main area */
 	ev_window->priv->hpaned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
 	g_signal_connect (ev_window->priv->hpaned,
@@ -8146,11 +8259,12 @@ ev_window_init (EvWindow *ev_window)
 	gtk_widget_show (ev_window->priv->view);
 	gtk_widget_show (ev_window->priv->password_view);
 
-	/* Find Bar */
-	ev_window->priv->find_bar = egg_find_bar_new ();
-	gtk_box_pack_end (GTK_BOX (ev_window->priv->main_box),
-			  ev_window->priv->find_bar,
-			  FALSE, TRUE, 0);
+	/* Find results sidebar */
+	ev_window->priv->find_sidebar = ev_find_sidebar_new ();
+	g_signal_connect (ev_window->priv->find_sidebar,
+			  "result-activated",
+			  G_CALLBACK (find_sidebar_result_activated_cb),
+			  ev_window);
 
 	/* We own a ref on these widgets, as we can swap them in and out */
 	g_object_ref (ev_window->priv->view);
