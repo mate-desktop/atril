@@ -1,0 +1,214 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - atril</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - atril: Statistics</h1>
+
+    </div>
+
+    <div id="menu_index">
+     <p><a href="index.html">Back to summary</a> </p>
+
+    </div>
+    <div id="content_index">
+<p><span class="statHeader">Top 10 files for error severity, total findings: 73</span><br>
+&#160;&#160;&#160;5&#160;<a href="11.html">  backend/dvi/dvi-document.c</a><br>
+&#160;&#160;&#160;2&#160;<a href="42.html">  backend/dvi/mdvi-lib/util.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="317.html">  shell/ev-window.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="312.html">  shell/ev-sidebar.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="310.html">  shell/ev-sidebar-thumbnails.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="307.html">  shell/ev-sidebar-links.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="305.html">  shell/ev-sidebar-layers.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="302.html">  shell/ev-sidebar-bookmarks.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="300.html">  shell/ev-sidebar-attachments.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="297.html">  shell/ev-sidebar-annotations.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for warning severity, total findings: 10</span><br>
+&#160;&#160;&#160;2&#160;<a href="38.html">  backend/dvi/mdvi-lib/t1.c</a><br>
+&#160;&#160;&#160;2&#160;<a href="17.html">  backend/dvi/mdvi-lib/bitmap.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="126.html">  libdocument/ev-document-misc.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="42.html">  backend/dvi/mdvi-lib/util.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="41.html">  backend/dvi/mdvi-lib/tt.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="32.html">  backend/dvi/mdvi-lib/pagesel.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="26.html">  backend/dvi/mdvi-lib/font.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="23.html">  backend/dvi/mdvi-lib/dviread.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for portability severity, total findings: 24</span><br>
+&#160;&#160;&#160;23&#160;<a href="219.html">  mate-desktop-1.27.1/libmate-desktop/mate-desktop-item.c</a><br>
+&#160;&#160;&#160;1&#160;&#160;<a href="42.html">  backend/dvi/mdvi-lib/util.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for style severity, total findings: 240</span><br>
+&#160;&#160;&#160;47&#160;<a href="50.html">  backend/pdf/ev-poppler.cc</a><br>
+&#160;&#160;&#160;26&#160;<a href="14.html">  backend/dvi/mdvi-lib/afmparse.c</a><br>
+&#160;&#160;&#160;17&#160;<a href="70.html">  cut-n-paste/toolbar-editor/egg-editable-toolbar.c</a><br>
+&#160;&#160;&#160;15&#160;<a href="23.html">  backend/dvi/mdvi-lib/dviread.c</a><br>
+&#160;&#160;&#160;14&#160;<a href="63.html">  cut-n-paste/smclient/libegg/eggdesktopfile.c</a><br>
+&#160;&#160;&#160;12&#160;<a href="41.html">  backend/dvi/mdvi-lib/tt.c</a><br>
+&#160;&#160;&#160;11&#160;<a href="17.html">  backend/dvi/mdvi-lib/bitmap.c</a><br>
+&#160;&#160;&#160;11&#160;<a href="0.html">  backend/comics/comics-document.c</a><br>
+&#160;&#160;&#160;9&#160;&#160;<a href="45.html">  backend/epub/epub-document.c</a><br>
+&#160;&#160;&#160;8&#160;&#160;<a href="48.html">  backend/epub/minizip/unzip.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for information severity, total findings: 1117</span><br>
+&#160;&#160;&#160;37&#160;<a href="317.html">  shell/ev-window.c</a><br>
+&#160;&#160;&#160;33&#160;<a href="50.html">  backend/pdf/ev-poppler.cc</a><br>
+&#160;&#160;&#160;23&#160;<a href="184.html">  libview/ev-jobs.c</a><br>
+&#160;&#160;&#160;20&#160;<a href="219.html">  mate-desktop-1.27.1/libmate-desktop/mate-desktop-item.c</a><br>
+&#160;&#160;&#160;16&#160;<a href="202.html">  libview/ev-view.c</a><br>
+&#160;&#160;&#160;15&#160;<a href="45.html">  backend/epub/epub-document.c</a><br>
+&#160;&#160;&#160;14&#160;<a href="227.html">  mate-desktop-1.27.1/libmate-desktop/mate-languages.c</a><br>
+&#160;&#160;&#160;13&#160;<a href="208.html">  mate-desktop-1.27.1/libmate-desktop/mate-bg.c</a><br>
+&#160;&#160;&#160;13&#160;<a href="2.html">  backend/djvu/djvu-document.c</a><br>
+&#160;&#160;&#160;13&#160;<a href="0.html">  backend/comics/comics-document.c</a><br>
+</p>
+
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.12.1 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>
