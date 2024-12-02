@@ -16,7 +16,7 @@ Atril Optional Backend Libraries
 ==================================================
 * [DjVuLibre](http://djvu.sourceforge.net/) for DjVu viewing
 
-* [RAR](https://www.rarlab.com/) for viewing CBR comics
+* [libarchive](https://www.libarchive.org/) for viewing CBR comics
 
 * [libgxps](https://wiki.gnome.org/Projects/libgxps) for XPS documents
 
