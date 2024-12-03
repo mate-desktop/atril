@@ -10,8 +10,7 @@
 # Robert Orzanna <robert@orzanna.de>, 2018
 # nautilusx, 2018
 # Tobias Bannert <tobannert@gmail.com>, 2019
-# Gustav Gyges, 2019
-# Ettore Atalan <atalanttore@googlemail.com>, 2019
+# Christian Spaan, 2019
 # Julian Rüger <jr98@gmx.net>, 2019
 # Stefan Kadow <git17@ska67.de>, 2019
 # Marcel Artz, 2019
@@ -20,6 +19,8 @@
 # Winfried Frisch <frischkoenig@online.de>, 2021
 # andenbeere <andenbeere@gmx.net>, 2022
 # Wolfgang Ulbrich <mate@raveit.de>, 2024
+# Ettore Atalan <atalanttore@googlemail.com>, 2024
+# Oliver Sandmaier, 2024
 # 
 msgid ""
 msgstr ""
@@ -27,7 +28,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2024\n"
+"Last-Translator: Oliver Sandmaier, 2024\n"
 "Language-Team: German (https://app.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +151,7 @@ msgstr "%s:Datei beschädigt oder keine DVI-Datei\n"
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: vf Marko fehlerhaft\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
@@ -160,7 +161,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: Datei kann nicht geöffnet werden (%s)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
@@ -191,12 +192,12 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "Stapelunterlauf\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "Schriftart %d ist nicht definiert\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
@@ -220,7 +221,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: Schriftarten nicht definiert\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
@@ -245,7 +246,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: ungültiger Opcode %din %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
@@ -300,7 +301,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
 msgid "%s: checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: Prüfsumme passt nicht (erwartet: %u, erhalten:  %u)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:420
 #, c-format
@@ -339,7 +340,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/sp-epsf.c:161
 #, c-format
 msgid "%s: unknown key `%s' ignored\n"
-msgstr ""
+msgstr "%s: unbekannter Schlüssel `%s’ ignoriert.\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:166
 #, c-format
@@ -358,7 +359,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/t1.c:215
 #, c-format
 msgid "%s: could not encode font\n"
-msgstr ""
+msgstr "%s: Schriftart konnte nicht gelesen werden\n"
 
 #: backend/dvi/mdvi-lib/tfm.c:175
 #, c-format
@@ -413,7 +414,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/tt.c:221
 #, c-format
 msgid "(tt) %s: could not set point size: %s\n"
-msgstr ""
+msgstr "(tt)%s : Punktgröße konnte nicht gesetzt werden: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:240
 #, c-format
@@ -432,7 +433,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "Hoppla!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
@@ -440,23 +441,23 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "Autsch!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "Houston, wir haben ein Problem"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3.. 2.. 1.. BOOM!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "Ich bin Geschichte"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
-msgstr ""
+msgstr "Ich werde untergehen"
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
@@ -469,7 +470,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: Fehler: "
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
@@ -478,7 +479,7 @@ msgstr "Fehler"
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: Warnung: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
@@ -487,11 +488,11 @@ msgstr "Achtung"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: Fatal: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "Fatal"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
@@ -505,7 +506,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/util.c:227
 #, c-format
 msgid "failed to reallocate %u bytes\n"
-msgstr ""
+msgstr "Zuordnung %u Bytes fehlgeschlagen\n"
 
 #: backend/dvi/mdvi-lib/util.c:236
 msgid "attempted to callocate 0 members\n"
@@ -1582,7 +1583,7 @@ msgstr "Weitere Informationen"
 
 #: shell/ev-sidebar.c:367
 msgid "Hide sidebar"
-msgstr ""
+msgstr "Seitenleiste ausblenden"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1847,6 +1848,8 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
+"Atril ist ein einfacher Betrachter für mehrseitige Dokumente.,\n"
+"unterstützt durch SyncTex %s und %s%s."
 
 #: shell/ev-window.c:5392
 msgid "Atril is a simple multi-page document viewer."

@@ -12,6 +12,7 @@
 # shy tzedaka <shaytzedaka123@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
+# Avi Markovitz <avi.markovitz@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -19,13 +20,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>, 2024\n"
 "Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
 #: backend/comics/comics-document.c:206
 #, c-format
@@ -680,7 +681,7 @@ msgstr "לא ניתן לטעון את המסמך “%s”"
 #: backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr "ארע כשל בשמירת המסמך “%s”"
+msgstr "שמירת מסמך “%s” כשלה"
 
 #: backend/ps/psdocument.atril-backend.desktop.in:5
 msgid "PostScript Documents"
@@ -701,17 +702,17 @@ msgstr "מסמכי XPS"
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
 msgid "Couldn't save attachment “%s”: %s"
-msgstr "לא ניתן לשמור את הצרופה “%s”:‏ %s"
+msgstr "לא ניתן לשמור צרופה “%s”:‏ %s"
 
 #: libdocument/ev-attachment.c:368
 #, c-format
 msgid "Couldn't open attachment “%s”: %s"
-msgstr "לא ניתן לפתוח את הצרופה “%s”:‏ %s"
+msgstr "לא ניתן לפתוח צרופה “%s”:‏ %s"
 
 #: libdocument/ev-attachment.c:403
 #, c-format
 msgid "Couldn't open attachment “%s”"
-msgstr "לא ניתן לפתוח את הצרופה “%s”"
+msgstr "לא ניתן לפתוח צרופה “%s”"
 
 #: libdocument/ev-document-factory.c:167
 #, c-format
@@ -773,7 +774,7 @@ msgstr "Disable connection to session manager"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
-msgstr "הגדר קובץ המכיל הגדרות שמורות"
+msgstr "ציון קובץ שמכיל תצורה שנשמרה"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
@@ -904,7 +905,7 @@ msgstr "מציג המסמכים Atril"
 
 #: data/atril.appdata.xml.in.in:8
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr "מציג מסמכים לסביבת שולחן העבודה Mate"
+msgstr "משקף מסמכים לסביבת שולחן העבודה שולחן עבודה מאטה"
 
 #: data/atril.appdata.xml.in.in:10
 msgid ""
@@ -944,7 +945,7 @@ msgstr "דרוס מגבלות מסמך"
 
 #: data/org.mate.Atril.gschema.xml:13
 msgid "Override document restrictions, like restriction to copy or to print."
-msgstr "Override document restrictions, like restriction to copy or to print."
+msgstr ""
 
 #: data/org.mate.Atril.gschema.xml:17
 msgid "Automatically reload the document"
@@ -988,7 +989,7 @@ msgstr "קובץ הגדרות הדפסה"
 
 #: previewer/ev-previewer.c:107 previewer/ev-previewer.c:143
 msgid "MATE Document Previewer"
-msgstr "כלי להצגה מקדימה של מסמכים של MATE"
+msgstr "תצוגת מסמכים מקדימה של מאטה"
 
 #: previewer/ev-previewer-window.c:96 shell/ev-window.c:3660
 msgid "Failed to print document"
@@ -1001,7 +1002,7 @@ msgstr "המדפסת הנבחרת '%s' לא נמצאה"
 
 #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6476
 msgid "_Close"
-msgstr "_סגור"
+msgstr "_סגירה"
 
 #: previewer/ev-previewer-window.c:287 shell/ev-window.c:6521
 msgid "_Previous Page"
@@ -1531,7 +1532,7 @@ msgstr "תנאי שימוש"
 
 #: shell/ev-properties-license.c:140
 msgid "Text License"
-msgstr "רישיון הטקסט"
+msgstr "רישיון מילולי"
 
 #: shell/ev-properties-license.c:146
 msgid "Further Information"
@@ -1547,7 +1548,7 @@ msgstr "הוספה"
 
 #: shell/ev-sidebar-annotations.c:207
 msgid "Add text annotation"
-msgstr "הוספת פרשנות טקסט"
+msgstr "הוספת איור מלל"
 
 #: shell/ev-sidebar-annotations.c:342
 msgid "Document contains no annotations"
@@ -1568,15 +1569,15 @@ msgstr "צרופות"
 
 #: shell/ev-sidebar-bookmarks.c:154
 msgid "_Open Bookmark"
-msgstr "_פתח סימניה"
+msgstr "_פתיחת סימניה"
 
 #: shell/ev-sidebar-bookmarks.c:156
 msgid "_Rename Bookmark"
-msgstr "_שנה את שם הסימניה"
+msgstr "_שנוי שם סימניה"
 
 #: shell/ev-sidebar-bookmarks.c:158
 msgid "_Remove Bookmark"
-msgstr "_מחק סימניה"
+msgstr "_מחיקת סימניה"
 
 #: shell/ev-sidebar-bookmarks.c:313 shell/ev-window.c:1010
 #: shell/ev-window.c:5085
@@ -1610,7 +1611,7 @@ msgstr "מפתח"
 
 #: shell/ev-sidebar-thumbnails.c:1027
 msgid "Thumbnails"
-msgstr "תמונות ממוזערות"
+msgstr "דוגמיות"
 
 #: shell/ev-window.c:1007
 #, c-format
@@ -1637,7 +1638,7 @@ msgstr "מצב מצגת לא תומך בקבצי ePub."
 
 #: shell/ev-window.c:2016 shell/ev-window.c:2197
 msgid "Unable to open document"
-msgstr "לא ניתן לפתוח את המסמך"
+msgstr "לא ניתן לפתוח מסמך"
 
 #: shell/ev-window.c:2153
 #, c-format
@@ -1651,7 +1652,7 @@ msgstr "מוריד מסמך (%d%%)"
 
 #: shell/ev-window.c:2341
 msgid "Failed to load remote file."
-msgstr "ארע כשל בטעינת קובץ מרוחק."
+msgstr "טעינת קובץ מרוחק כשלה."
 
 #: shell/ev-window.c:2543
 #, c-format
@@ -1660,11 +1661,11 @@ msgstr "המסמך מ־%s נטען מחדש"
 
 #: shell/ev-window.c:2575
 msgid "Failed to reload document."
-msgstr "ארע כשל בטעינת המסמך מחדש."
+msgstr "טעינת מסמך מחדש כשלה."
 
 #: shell/ev-window.c:2793
 msgid "Open Document"
-msgstr "פתח מסמך"
+msgstr "פתיחת מסמך"
 
 #: shell/ev-window.c:3072
 #, c-format
@@ -1716,7 +1717,6 @@ msgid_plural "%lu pending jobs in queue"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: shell/ev-window.c:3717
 #, c-format
@@ -1739,7 +1739,7 @@ msgstr ""
 #: shell/ev-window.c:3904
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
-msgstr "האם לשמור עותק של המסמך “%s” לפני הסגירה?"
+msgstr "האם לשמור עותק מסמך “%s” לפני הסגירה?"
 
 #: shell/ev-window.c:3923
 msgid "Close _without Saving"
@@ -1763,7 +1763,6 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: shell/ev-window.c:4018
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1806,7 +1805,7 @@ msgstr ""
 
 #: shell/ev-window.c:5405
 msgid "MATE Documentation Team"
-msgstr "צוות התיעוד של MATE"
+msgstr "צוות תיעוד מאטה"
 
 #: shell/ev-window.c:5406
 msgid "GNOME Documentation Team"
@@ -1837,7 +1836,7 @@ msgstr ""
 
 #: shell/ev-window.c:5464
 msgid "About Atril Document Viewer"
-msgstr "על אודות מציג המסמכים Atril"
+msgstr "על אודות משקף מסמכים Atril"
 
 #: shell/ev-window.c:5465
 msgid ""
@@ -1856,7 +1855,6 @@ msgid_plural "%d found on this page"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
-msgstr[3] ""
 
 #: shell/ev-window.c:5772
 msgid "Not found"
@@ -1873,7 +1871,7 @@ msgstr ""
 
 #: shell/ev-window.c:6134
 msgid "_Enable"
-msgstr ""
+msgstr "_אפשור"
 
 #: shell/ev-window.c:6137
 msgid ""
@@ -1920,19 +1918,19 @@ msgstr "פתיחת מסמך קיים"
 
 #: shell/ev-window.c:6462
 msgid "Op_en a Copy"
-msgstr "_פתיחת העתק"
+msgstr "_פתיחת עותק"
 
 #: shell/ev-window.c:6463
 msgid "Open a copy of the current document in a new window"
-msgstr "פתיחת העתק של המסמך הנוכחי בחלון חדש"
+msgstr "פתיחת עותק של המסמך הנוכחי בחלון חדש"
 
 #: shell/ev-window.c:6466
 msgid "Save a copy of the current document"
-msgstr "שמור עותק של המסמך הנוכחי"
+msgstr "שמירת עותק של המסמך הנוכחי"
 
 #: shell/ev-window.c:6468
 msgid "Send _To..."
-msgstr ""
+msgstr "שליחה _אל.."
 
 #: shell/ev-window.c:6469
 msgid "Send current document by mail, instant message..."
@@ -1948,7 +1946,7 @@ msgstr "_מאפיינים"
 
 #: shell/ev-window.c:6480
 msgid "_Copy"
-msgstr "ה_עתק"
+msgstr "ה_עתקה"
 
 #: shell/ev-window.c:6482
 msgid "Select _All"
@@ -1984,11 +1982,11 @@ msgstr "סיבוב _ימינה"
 
 #: shell/ev-window.c:6497
 msgid "Save Current Settings as _Default"
-msgstr "שמירת ההגדרות ה_נוכחיות כברירת מחדל"
+msgstr "שמירת הגדרות _נוכחיות כברירת מחדל"
 
 #: shell/ev-window.c:6507
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_שיצוב תקריב"
 
 #: shell/ev-window.c:6510
 msgid "_Reload"
@@ -1996,11 +1994,11 @@ msgstr "_טעינה מחדש"
 
 #: shell/ev-window.c:6511
 msgid "Reload the document"
-msgstr "טעינה מחדש של המסמך"
+msgstr "טעינת המסמך מחדש"
 
 #: shell/ev-window.c:6513
 msgid "_Expand Window to Fit"
-msgstr "_הרחב בהתאם לגודל החלון"
+msgstr "_הרחבה להתאמה לגודל החלון"
 
 #: shell/ev-window.c:6517
 msgid "Auto_scroll"
@@ -2024,11 +2022,11 @@ msgstr "מעבר לעמוד האחרון"
 
 #: shell/ev-window.c:6535
 msgid "_Add Bookmark"
-msgstr "_הוסף סימניה"
+msgstr "_הוספת סימניה"
 
 #: shell/ev-window.c:6536
 msgid "Add a bookmark for the current page"
-msgstr "הוסף סימניה עבור הדף הנוכחי"
+msgstr "הוספת סימניה לעמוד הנוכחי"
 
 #: shell/ev-window.c:6540
 msgid "_Contents"
@@ -2140,7 +2138,7 @@ msgstr "פתיחה ב_חלון חדש"
 
 #: shell/ev-window.c:6651
 msgid "_Copy Link Address"
-msgstr "העתקת _מיקום הקישור"
+msgstr "העתקת כתובת _קישור"
 
 #: shell/ev-window.c:6653
 msgid "_Save Image As…"
@@ -2164,7 +2162,7 @@ msgstr "_פתיחת צרופה"
 
 #: shell/ev-window.c:6666
 msgid "_Save Attachment As…"
-msgstr "_שמירת הצרופה בשם..."
+msgstr "_שמירת צרופה בשם..."
 
 #: shell/ev-window.c:6799
 msgid "Zoom"
@@ -2220,7 +2218,7 @@ msgstr "לא ניתן לפתוח קישור חיצוני"
 
 #: shell/ev-window.c:7281
 msgid "Couldn't find appropriate format to save image"
-msgstr "לא נמצאה התצורה המתאימה לשמירת התמונה"
+msgstr "לא נתן למצוא תסדיר נכון לשמירת תמונה"
 
 #: shell/ev-window.c:7313
 msgid "The image could not be saved."
@@ -2253,7 +2251,7 @@ msgstr "לפי סיומת"
 
 #: shell/main.c:56 shell/main.c:232
 msgid "MATE Document Viewer"
-msgstr "מציג המסמכים של MATE"
+msgstr "משקף מסמכים מאטה"
 
 #: shell/main.c:64
 msgid "The page label of the document to display."
