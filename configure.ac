@@ -664,7 +664,7 @@ if test "x$enable_tiff" = "xyes"; then
     ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}image/tiff;"
 fi
 if test "x$enable_comics" = "xyes"; then
-    ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}application/x-cbr;application/x-cbz;application/x-cb7;application/x-cbt;application/vnd.comicbook+zip;application/vnd-comicbook.rar;"
+    ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}application/x-cbr;application/x-cbz;application/x-cb7;application/x-cbt;application/vnd.comicbook+zip;application/vnd.comicbook-rar;"
 fi
 if test "x$enable_pixbuf" = "xyes"; then
     ATRIL_MIME_TYPES="${ATRIL_MIME_TYPES}image/*;"
