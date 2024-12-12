@@ -36,6 +36,8 @@ atril_SOURCES=				\
 	ev-bookmark-action.c		\
 	ev-application.c		\
 	ev-application.h		\
+	ev-find-sidebar.h		\
+	ev-find-sidebar.c		\
 	ev-file-monitor.h		\
 	ev-file-monitor.c		\
 	ev-history.c			\
