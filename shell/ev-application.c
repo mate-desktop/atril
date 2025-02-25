@@ -419,9 +419,17 @@ on_register_uri_cb (GObject      *source_object,
 	g_variant_builder_add (&builder, "{sv}",
 	                       "display",
 	                       g_variant_new_string (gdk_display_get_name (gdk_screen_get_display (data->screen))));
-	g_variant_builder_add (&builder, "{sv}",
-	                       "screen",
-	                       g_variant_new_int32 (gdk_x11_screen_get_screen_number (data->screen)));
+
+	if (GDK_IS_X11_SCREEN (data->screen)) {
+		g_variant_builder_add (&builder, "{sv}",
+		                     "screen",
+		                      g_variant_new_int32 (gdk_x11_screen_get_screen_number (data->screen)));
+	} else {
+		/*Do not crash on wayland, use the first monitor for now*/
+		g_variant_builder_add (&builder, "{sv}",
+		                     "screen",
+		                      g_variant_new_int32 (0));
+	}
 	if (data->dest) {
 		switch (ev_link_dest_get_dest_type (data->dest)) {
 		case EV_LINK_DEST_TYPE_PAGE_LABEL:
