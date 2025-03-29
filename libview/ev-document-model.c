@@ -175,7 +175,7 @@ ev_document_model_get_property (GObject    *object,
 		g_value_set_enum (value, model->page_layout);
 		break;
 	case PROP_DUAL_PAGE:
-		g_value_set_boolean (value, ev_document_model_get_dual_page (model));
+		g_value_set_boolean (value, ev_document_model_get_page_layout (model));
 		break;
 	case PROP_DUAL_PAGE_ODD_LEFT:
 		g_value_set_boolean (value, ev_document_model_get_dual_page_odd_pages_left (model));
