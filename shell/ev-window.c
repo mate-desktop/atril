@@ -537,7 +537,7 @@ ev_window_update_actions (EvWindow *ev_window)
 		page = ev_document_model_get_page (ev_window->priv->model);
 		n_pages = ev_document_get_n_pages (ev_window->priv->document);
 		has_pages = n_pages > 0;
-		dual_mode = ev_document_model_get_dual_page (ev_window->priv->model);
+		dual_mode = ev_document_model_get_page_layout (ev_window->priv->model);
 	}
 #if ENABLE_EPUB
 	if (ev_window->priv->document && ev_window->priv->document->iswebdocument == TRUE ) {
@@ -4843,7 +4843,7 @@ ev_window_cmd_edit_save_settings (GtkAction *action, EvWindow *ev_window)
 	g_settings_set_boolean (settings, "continuous",
 				ev_document_model_get_continuous (model));
 	g_settings_set_boolean (settings, "dual-page",
-				ev_document_model_get_dual_page (model));
+				ev_document_model_get_page_layout (model));
 	g_settings_set_boolean (settings, "dual-page-odd-left",
 				ev_document_model_get_dual_page_odd_pages_left (model));
 	g_settings_set_boolean (settings, "fullscreen",
@@ -5332,7 +5332,7 @@ ev_window_update_dual_page_action (EvWindow *window)
 	g_signal_handlers_block_by_func
 		(action, G_CALLBACK (ev_window_cmd_dual), window);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-				      ev_document_model_get_dual_page (window->priv->model));
+				      ev_document_model_get_page_layout (window->priv->model));
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 	g_signal_handlers_unblock_by_func
 		(action, G_CALLBACK (ev_window_cmd_dual), window);
@@ -5347,7 +5347,7 @@ ev_window_dual_mode_changed_cb (EvDocumentModel *model,
 
 	if (ev_window->priv->metadata && !ev_window_is_empty (ev_window))
 		ev_metadata_set_boolean (ev_window->priv->metadata, "dual-page",
-					 ev_document_model_get_dual_page (model));
+					 ev_document_model_get_page_layout (model));
 }
 
 static void
