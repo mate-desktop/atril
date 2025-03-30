@@ -1,0 +1,105 @@
+option('comics',
+    type: 'boolean',
+    value: false,
+    description: 'Support for the comic book (cbr) backend'
+)
+option('djvu',
+    type: 'boolean',
+    value: false,
+    description: 'Support for the djvu backend'
+)
+option('dvi',
+    type: 'boolean',
+    value: false,
+    description: 'Support for the dvi backend'
+)
+option('t1lib',
+    type: 'boolean',
+    value: false,
+    description: 'Compile with t1lib for type1 font support in the dvi backend'
+)
+option('epub',
+    type: 'boolean',
+    value: true,
+    description: 'Support for the epub backend'
+)
+option('pdf',
+    type: 'boolean',
+    value: true,
+    description: 'Support for the PDF backend'
+)
+option('pixbuf',
+    type: 'boolean',
+    value: false,
+    description: 'Support for the generic pixbuf image backend'
+)
+option('ps',
+    type: 'boolean',
+    value: true,
+    description: 'Support for the PostScript backend'
+)
+option('tiff',
+    type: 'boolean',
+    value: true,
+    description: 'Support for the tiff backend'
+)
+option('xps',
+    type: 'boolean',
+    value: false,
+    description: 'Support for the xps backend'
+)
+option('gtk_unix_print',
+    type: 'boolean',
+    value: true,
+    description: 'Print support'
+)
+option('keyring',
+    type: 'boolean',
+    value: true,
+    description: 'Keyring support for password-protected documents'
+)
+option('mathjax-directory',
+    type: 'string',
+    value: '',
+    description: 'Path to the system mathjax installation.'
+)
+option('previewer',
+    type: 'boolean',
+    value: true,
+    description: 'Build the print previewer program'
+)
+option('thumbnailer',
+    type: 'boolean',
+    value: true,
+    description: 'Build the thumbnailer program'
+)
+option('docs',
+    type: 'boolean',
+    value: false,
+    description: 'Build the API references (requires gtk-doc)'
+)
+option('help_files',
+    type: 'boolean',
+    value: false,
+    description: 'Build the help files'
+)
+option('introspection',
+    type: 'boolean',
+    value: false,
+    description: 'Enable GObject introspection'
+)
+option('enable_dbus',
+    type: 'boolean',
+    value: true,
+    description: 'Enable D-Bus support'
+)
+option('deprecated_warnings',
+    type: 'boolean',
+    value: false,
+    description: 'Show build warnings for deprecations'
+)
+option('enable_debug',
+    type: 'boolean',
+    value: false,
+    description: 'Enable the runtime debugger'
+)
