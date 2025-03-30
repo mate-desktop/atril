@@ -20,7 +20,7 @@ option('t1lib',
 )
 option('epub',
     type: 'boolean',
-    value: true,
+    value: false,
     description: 'Support for the epub backend'
 )
 option('pdf',
@@ -35,7 +35,7 @@ option('pixbuf',
 )
 option('ps',
     type: 'boolean',
-    value: true,
+    value: false,
     description: 'Support for the PostScript backend'
 )
 option('tiff',
