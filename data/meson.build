@@ -1,3 +1,4 @@
+
 subdir('icons')
 
 data_dir = include_directories('.')
@@ -23,6 +24,7 @@ schema_file = install_data(
 )
 
 desktop_conf = configuration_data()
+desktop_conf.set('VERSION', meson.project_version())
 desktop_conf.set('ATRIL_MIME_TYPES', atril_mime_types)
 
 desktop = configure_file(
