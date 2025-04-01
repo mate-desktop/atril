@@ -31,20 +31,20 @@ desktop = configure_file(
     configuration: desktop_conf,
 )
 
-custom_target(
-    'desktop',
+i18n.merge_file(
     input: desktop,
     output: 'atril.desktop',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
+    type: 'desktop',
+    po_dir: po_dir,
     install: true,
     install_dir: desktopdir,
 )
 
-appdata = custom_target(
-    'appdata',
+appdata = i18n.merge_file(
     input: 'atril.appdata.xml.in',
     output: 'atril.appdata.xml',
-    command: [intltool_merge, '-x', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
+    type: 'xml',
+    po_dir: po_dir,
     install: true,
     install_dir: join_paths(datadir, 'metainfo'),
 )

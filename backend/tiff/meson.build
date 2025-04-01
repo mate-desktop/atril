@@ -24,11 +24,11 @@ shared_module(
     install_dir: backendsdir,
 )
 
-custom_target(
-    'tiff_backend',
-    input: 'tiffdocument.atril-backend.desktop.in',
-    output: 'tiffdocument.atril-backend',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
-    install: true,
-    install_dir: backendsdir,
+i18n.merge_file(
+  input: 'tiffdocument.atril-backend.desktop.in',
+  output: 'tiffdocument.atril-backed',
+  type: 'desktop',
+  po_dir: po_dir,
+  install: true,
+  install_dir: backendsdir,
 )

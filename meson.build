@@ -133,8 +133,6 @@ atril_conf.set_quoted('SUPPORTED_MIMETYPES', atril_mime_types) # This is generat
 # on some systems we need to find the math lib to make sure it builds
 math = cc.find_library('m', required: false)
 
-intltool_merge = find_program('intltool-merge')
-
 mathjax_directory = get_option('mathjax-directory')
 if mathjax_directory == ''
     foreach dir: [
