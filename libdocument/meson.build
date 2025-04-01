@@ -124,7 +124,7 @@ libdocument_deps = [
 ]
 
 libdocument = library(
-    'xreaderdocument',
+    'libdocument',
     libdocument_private_headers + libdocument_sources,
     dependencies: libdocument_deps,
     include_directories: include_root,
@@ -158,7 +158,7 @@ if get_option('introspection')
 
     libdocument_gir = gnome.generate_gir(
         libdocument,
-        namespace: 'XreaderDocument',
+        namespace: 'AtrilDocument',
         nsversion: api_version,
         sources: libdocument_sources,
         identifier_prefix: 'Ev',
@@ -167,6 +167,6 @@ if get_option('introspection')
         install: true,
         install_dir_typelib: join_paths(libdir, 'girepository-1.0'),
         install_dir_gir: join_paths(datadir, 'gir-1.0'),
-        export_packages: 'xreader-document-' + api_version,
+        export_packages: 'libdocument-' + api_version,
     )
 endif

@@ -79,7 +79,7 @@ if get_option('epub')
 endif
 
 libview = library(
-    'xreaderview',
+    'libview',
     libview_sources + libview_private_headers + libdoc_enums + libview_marshal,
     include_directories: include_dirs,
     dependencies: libview_deps,
@@ -111,6 +111,6 @@ if get_option('introspection')
         install: true,
         install_dir_typelib: join_paths(libdir, 'girepository-1.0'),
         install_dir_gir: join_paths(datadir, 'gir-1.0'),
-        export_packages: ['xreader-view-' + api_version, 'xreader-document-' + api_version],
+        export_packages: ['libview-' + api_version, 'libdocument-' + api_version],
     )
 endif
