@@ -191,24 +191,48 @@ cpp_args = [
     '-DHAVE_CONFIG_H',
 ]
 
+# Check if maintainer mode is enabled
+if get_option('maintainer_mode')
+  # Define the domains to disable deprecated APIs for
+  domains = ['G', 'ATK', 'PANGO', 'GDK', 'GDK_PIXBUF', 'GTK', 'MATE', 'LIBGLADE', 'VTE', 'WNCK', 'LIBSOUP']
+
+  # Create the compiler arguments to DISABLE deprecated APIs
+  disable_deprecated_flags = []
+  foreach domain : domains
+    disable_deprecated_flags += '-D@0@_DISABLE_DEPRECATED'.format(domain)
+    disable_deprecated_flags += '-D@0@_DISABLE_SINGLE_INCLUDES'.format(domain)
+  endforeach
+
+  # Add these flags to c_args and cpp_args
+  c_args += disable_deprecated_flags
+  cpp_args += disable_deprecated_flags
+endif
+
 if get_option('enable_debug')
-    c_args += '-DEV_ENABLE_DEBUG'
+  c_args += '-DEV_ENABLE_DEBUG'
+  cpp_args += '-DEV_ENABLE_DEBUG'
 endif
 
 if get_option('epub')
-    c_args += '-DENABLE_EPUB'
+  c_args += '-DENABLE_EPUB'
+  cpp_args += '-DENABLE_EPUB'
 endif
 
 if not get_option('deprecated_warnings')
-    c_args += [
-        '-Wno-deprecated-declarations',
-        '-Wno-deprecated',
-        '-Wno-declaration-after-statement',
-    ]
+  c_args += [
+    '-Wno-deprecated-declarations',
+    '-Wno-deprecated',
+    '-Wno-declaration-after-statement',
+  ]
+  cpp_args += [
+    '-Wno-deprecated-declarations',
+    '-Wno-deprecated',
+  ]
 endif
 
-add_global_arguments(c_args, language: 'c')
-add_global_arguments(cpp_args, language: ['c', 'cpp'])
+# Add all arguments at once
+add_project_arguments(c_args, language: 'c')
+add_project_arguments(cpp_args, language: 'cpp')
 
 subdir('libdocument')
 subdir('libview')
