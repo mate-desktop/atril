@@ -25,11 +25,11 @@ shared_module(
     install_dir: backendsdir,
 )
 
-custom_target(
-    'epub_backend',
-    input: 'epubdocument.atril-backend.desktop.in',
-    output: 'epubdocument.atril-backend',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
-    install: true,
-    install_dir: backendsdir,
+i18n.merge_file(
+  input: 'epubdocument.atril-backend.desktop.in',
+  output: 'epubdocument.atril-backed',
+  type: 'desktop',
+  po_dir: po_dir,
+  install: true,
+  install_dir: backendsdir,
 )

@@ -21,11 +21,11 @@ shared_module(
     install_dir: backendsdir,
 )
 
-custom_target(
-    'ps_backend',
-    input: 'psdocument.atril-backend.desktop.in',
-    output: 'psdocument.atril-backend',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
-    install: true,
-    install_dir: backendsdir,
+i18n.merge_file(
+  input: 'psdocument.atril-backend.desktop.in',
+  output: 'psdocument.atril-backed',
+  type: 'desktop',
+  po_dir: po_dir,
+  install: true,
+  install_dir: backendsdir,
 )

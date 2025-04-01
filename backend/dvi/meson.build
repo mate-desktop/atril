@@ -31,11 +31,11 @@ shared_module(
     install_dir: backendsdir,
 )
 
-custom_target(
-    'dvi_backend',
-    input: 'dvidocument.xreader-backend.in',
-    output: 'dvidocument.xreader-backend',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
-    install: true,
-    install_dir: backendsdir,
+i18n.merge_file(
+  input: 'dvidocument.atril-backend.desktop.in',
+  output: 'dvidocument.atril-backed',
+  type: 'desktop',
+  po_dir: po_dir,
+  install: true,
+  install_dir: backendsdir,
 )

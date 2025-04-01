@@ -20,11 +20,11 @@ shared_module(
     install_dir: backendsdir,
 )
 
-custom_target(
-    'pdf_backend',
-    input: 'pdfdocument.atril-backend.desktop.in',
-    output: 'pdfdocument.atril-backend',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
-    install: true,
-    install_dir: backendsdir,
+i18n.merge_file(
+  input: 'pdfdocument.atril-backend.desktop.in',
+  output: 'pdfdocument.atril-backed',
+  type: 'desktop',
+  po_dir: po_dir,
+  install: true,
+  install_dir: backendsdir,
 )

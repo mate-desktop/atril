@@ -26,11 +26,11 @@ shared_module(
     install_dir: backendsdir,
 )
 
-custom_target(
-    'djvu_backend',
-    input: 'djvudocument.xreader-backend.in',
-    output: 'djvudocument.xreader-backend',
-    command: [intltool_merge, '-d', '-u', po_dir, '@INPUT@', '@OUTPUT@'],
-    install: true,
-    install_dir: backendsdir,
+i18n.merge_file(
+  input: 'djvudocument.atril-backend.desktop.in',
+  output: 'djvudocument.atril-backed',
+  type: 'desktop',
+  po_dir: po_dir,
+  install: true,
+  install_dir: backendsdir,
 )
