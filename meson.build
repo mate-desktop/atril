@@ -169,7 +169,7 @@ if mathjax_directory == ''
     '/usr/share/mathjax',
     '/usr/share/javascript/mathjax'
   ]
-    if run_command('test', ['-f', join_paths(dir, 'MathJax.js')]).returncode() == 0
+    if run_command('test', ['-f', join_paths(dir, 'MathJax.js')], check: false).returncode() == 0
       mathjax_directory = dir
     endif
   endforeach
@@ -338,7 +338,7 @@ configure_file(
 # Summary output
 summary = [
   '',
-  '--- Build Configuration Summary ---',
+  '--- Build Configuration Summary For Atril ---',
   'prefix = @0@'.format(prefix),
   'bindir = @0@'.format(bindir),
   'datadir = @0@'.format(datadir),
