@@ -15,7 +15,7 @@ zoom_deps = [
 ]
 
 libephyzoom = static_library(
-    'libephyzoom',
+    'ephyzoom',
     zoom_sources,
     include_directories: include_root,
     dependencies: zoom_deps,

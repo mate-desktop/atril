@@ -209,17 +209,20 @@ atril_view_header = [
 
 # Compiler flags
 c_args = [
+  '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
   '-DDATADIR="@0@"'.format(join_paths(prefix, datadir)),
   '-DLIBDIR="@0@"'.format(join_paths(prefix, libdir)),
   '-DBINDIR="@0@"'.format(join_paths(prefix, bindir)),
   '-DEV_BACKENDSDIR="@0@"'.format(join_paths(prefix, libdir, meson.project_name(), binary_major_version, 'backends')),
   '-DATRILDATADIR="@0@"'.format(join_paths(prefix, datadir, meson.project_name())),
+  '-DMATELOCALEDIR="@0@"'.format(join_paths(prefix, datadir, 'locale')),
   '-Werror=implicit-function-declaration',
   '-DATRIL_COMPILATION',
 ]
 
 cpp_args = [
   '-DATRIL_LOCALE_DIR="@0@"'.format(join_paths(prefix, datadir, 'locale')),
+  '-DMATELOCALEDIR="@0@"'.format(join_paths(prefix, datadir, 'locale')),
   '-DATRIL_COMPILATION',
   '-DHAVE_CONFIG_H',
 ]
@@ -247,18 +250,6 @@ endif
 if get_option('epub')
   c_args += '-DENABLE_EPUB'
   cpp_args += '-DENABLE_EPUB'
-endif
-
-if not get_option('deprecated_warnings')
-  c_args += [
-    '-Wno-deprecated-declarations',
-    '-Wno-deprecated',
-    '-Wno-declaration-after-statement',
-  ]
-  cpp_args += [
-    '-Wno-deprecated-declarations',
-    '-Wno-deprecated',
-  ]
 endif
 
 # Add compiler arguments
