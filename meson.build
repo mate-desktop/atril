@@ -181,6 +181,9 @@ elif get_option('epub')
   error('"mathjax-directory" is undefined and could not be autodetected')
 endif
 
+mate_submodules_dep = dependency('mate-submodules', version: '1.24.0',
+fallback: ['mate-submodules', 'mate_submodules_dep'])
+
 # Generate config.h
 config_h_file = configure_file(
   output: 'config.h',
@@ -283,7 +286,6 @@ if get_option('previewer')
   subdir('previewer')
 endif
 
-subdir('cut-n-paste/smclient')
 subdir('cut-n-paste/toolbar-editor')
 subdir('cut-n-paste/zoom-control')
 
