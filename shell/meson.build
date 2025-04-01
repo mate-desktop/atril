@@ -121,7 +121,7 @@ libshell_deps = [
     atril_deps,
     libview_dep,
     libmisc_dep,
-    libsmclient_dep,
+    mate_submodules_dep,
     libephyzoom_dep,
 ]
 
