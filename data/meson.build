@@ -43,7 +43,7 @@ i18n.merge_file(
 )
 
 appdata = i18n.merge_file(
-    input: 'atril.appdata.xml.in',
+    input: 'atril.appdata.xml.in.in',
     output: 'atril.appdata.xml',
     type: 'xml',
     po_dir: po_dir,
