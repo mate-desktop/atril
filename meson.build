@@ -1,6 +1,6 @@
 project('atril', 'c', 'cpp', 
   version: '1.28.1',
-  meson_version: '>=0.50.0',
+  meson_version: '>=0.56.0',
   default_options: [
     'warning_level=1',
     'buildtype=debugoptimized',
