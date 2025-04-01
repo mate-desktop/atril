@@ -103,3 +103,9 @@ option('enable_debug',
     value: false,
     description: 'Enable the runtime debugger'
 )
+
+option('maintainer_mode',
+  type: 'boolean',
+  value: true,
+  description: 'Enable maintainer mode (extra warnings for deprecated APIs)'
+)
