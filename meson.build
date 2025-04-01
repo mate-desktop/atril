@@ -214,7 +214,8 @@ c_args = [
   '-DBINDIR="@0@"'.format(join_paths(prefix, bindir)),
   '-DEV_BACKENDSDIR="@0@"'.format(join_paths(prefix, libdir, meson.project_name(), binary_major_version, 'backends')),
   '-DATRILDATADIR="@0@"'.format(join_paths(prefix, datadir, meson.project_name())),
-  '-Werror=implicit-function-declaration'
+  '-Werror=implicit-function-declaration',
+  '-DATRIL_COMPILATION',
 ]
 
 cpp_args = [
