@@ -55,14 +55,6 @@ shell_sources = [
     'ev-sidebar-thumbnails.h',
 ]
 
-ev_marshal = gnome.genmarshal(
-    'ev-marshal',
-    sources: 'ev-marshal.list',
-    prefix: 'ev_marshal'
-)
-
-shell_sources += ev_marshal
-
 ev_resources = gnome.compile_resources(
     'atril-resources',
     'atril.gresource.xml',
