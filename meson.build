@@ -212,6 +212,7 @@ atril_view_header = [
 c_args = [
   '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
   '-DDATADIR="@0@"'.format(join_paths(prefix, datadir)),
+  '-DMATEDATADIR="@0@"'.format(join_paths(prefix, datadir)),
   '-DLIBDIR="@0@"'.format(join_paths(prefix, libdir)),
   '-DBINDIR="@0@"'.format(join_paths(prefix, bindir)),
   '-DEV_BACKENDSDIR="@0@"'.format(join_paths(prefix, libdir, meson.project_name(), binary_major_version, 'backends')),
