@@ -14,10 +14,10 @@ libdoc_doc_deps = declare_dependency(
 )
 
 gnome.gtkdoc(
-    'libxreaderdocument',
+    'libdocument',
     mode: 'xml',
-    main_xml: 'libxreaderdocument-docs.xml',
-    gobject_typesfile: files('libxreaderdocument.types'),
+    main_xml: 'libdocument-docs.xml',
+    gobject_typesfile: files('libdocument.types'),
     src_dir: [
         join_paths(meson.source_root(), 'libdocument'),
     ],
@@ -26,5 +26,5 @@ gnome.gtkdoc(
     mkdb_args: ['--xml-mode', '--output-format=xml', '--name-space=ev'],
     fixxref_args: fixref_args,
     install: true,
-    install_dir: 'libxreaderdocument-' + api_version,
+    install_dir: 'libocument-' + api_version,
 )

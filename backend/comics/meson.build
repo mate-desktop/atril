@@ -2,8 +2,8 @@ backend_desktop_conf = configuration_data()
 backend_desktop_conf.set('COMICS_MIME_TYPES', comic_mimetypes)
 
 backend_desktop = configure_file(
-    input: 'comicsdocument.xreader-backend.in',
-    output: 'comicsdocument.xreader-backend',
+    input: 'comicsdocument.atril-backend.in',
+    output: 'comicsdocument.atril-backend',
     configuration: backend_desktop_conf,
     install: true,
     install_dir: backendsdir,

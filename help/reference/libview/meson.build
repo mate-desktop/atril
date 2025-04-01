@@ -14,10 +14,10 @@ libview_doc_deps = declare_dependency(
 )
 
 gnome.gtkdoc(
-    'libxreaderview',
+    'libview',
     mode: 'xml',
-    main_xml: 'libxreaderview-docs.xml',
-    gobject_typesfile: files('libxreaderview.types'),
+    main_xml: 'libview-docs.xml',
+    gobject_typesfile: files('libview.types'),
     src_dir: [
         join_paths(meson.source_root(), 'libview'),
     ],
@@ -27,5 +27,5 @@ gnome.gtkdoc(
     cflags: '-DATRIL_COMPILATION',
     fixxref_args: fixref_args,
     install: true,
-    install_dir: 'libxreaderview-' + api_version,
+    install_dir: 'libview-' + api_version,
 )

@@ -24,7 +24,7 @@ if get_option('help_files')
   ]
 
   help_media = [
-      'figures/xreader_start_window.png',
+      'figures/atril_start_window.png',
   ]
 
   gnome.yelp(
