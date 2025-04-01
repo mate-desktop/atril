@@ -66,6 +66,7 @@ xml = dependency('libxml-2.0', version: '>= 2.5.0')
 zlib = dependency('zlib')
 libsecret = dependency('libsecret-1', version: '>= 0.5', required: get_option('keyring'))
 gtk_unix_print = dependency('gtk+-unix-print-3.0', version: '>= ' + gtk_version, required: get_option('gtk_unix_print'))
+mate_desktop = dependency('mate-desktop-2.0')
 
 # Backend configuration
 enabled_backend_names = []
@@ -195,7 +196,7 @@ config_h = declare_dependency(
 )
 
 # Include directories
-include_dirs = include_directories('.', 'libdocument', 'libview', 'libmisc')
+include_dirs = include_directories('.', 'libdocument', 'libview', 'libmisc', 'cut-n-paste/toolbar-editor', 'properties')
 include_root = include_directories('.')
 
 # Headers
@@ -218,6 +219,7 @@ c_args = [
   '-DMATELOCALEDIR="@0@"'.format(join_paths(prefix, datadir, 'locale')),
   '-Werror=implicit-function-declaration',
   '-DATRIL_COMPILATION',
+  '-DPACKAGE_URL="https://mate-desktop.org"'
 ]
 
 cpp_args = [
@@ -225,6 +227,7 @@ cpp_args = [
   '-DMATELOCALEDIR="@0@"'.format(join_paths(prefix, datadir, 'locale')),
   '-DATRIL_COMPILATION',
   '-DHAVE_CONFIG_H',
+  '-DPACKAGE_URL="https://mate-desktop.org"'
 ]
 
 # Maintainer mode configuration

@@ -72,6 +72,7 @@ atril_deps = [
     gtk,
     libsecret,
     math,
+    mate_desktop
 ]
 
 if get_option('enable_dbus')

@@ -1,6 +1,9 @@
 libview_private_headers = [
     'ev-annotation-window.h',
     'ev-link-accessible.h',
+    'ev-page-accessible.h',
+    'ev-image-accessible.h',
+    'ev-form-field-accessible.h',
     'ev-page-cache.h',
     'ev-pixbuf-cache.h',
     'ev-timeline.h',
@@ -27,6 +30,9 @@ libview_sources = [
     'ev-jobs.c',
     'ev-job-scheduler.c',
     'ev-link-accessible.c',
+    'ev-page-accessible.c',
+    'ev-image-accessible.c',
+    'ev-form-field-accessible.c',
     'ev-page-cache.c',
     'ev-pixbuf-cache.c',
     'ev-print-operation.c',
@@ -79,7 +85,7 @@ if get_option('epub')
 endif
 
 libview = library(
-    'libview',
+    'view',
     libview_sources + libview_private_headers + libdoc_enums + libview_marshal,
     include_directories: include_dirs,
     dependencies: libview_deps,
