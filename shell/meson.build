@@ -1,3 +1,23 @@
+# Define include directories
+include_dirs = include_directories(
+    '.',  # Current directory
+    '..',  # Parent directory
+    '../cut-n-paste/zoom-control',
+    '../cut-n-paste/toolbar-editor',
+    '../libdocument',
+    '../libview',
+    '../libmisc',
+    '../properties'
+)
+
+# Define preprocessor definitions
+c_args = [
+    '-DATRILDATADIR="' + join_paths(get_option('prefix'), get_option('datadir'), 'atril') + '"',
+    '-DMATEDATADIR="' + get_option('datadir') + '"',
+    '-DLIBEXECDIR="' + get_option('libexecdir') + '"',
+    '-DATRIL_COMPILATION'
+]
+
 shell_sources = [
     'eggfindbar.c',
     'eggfindbar.h',
@@ -13,12 +33,18 @@ shell_sources = [
     'ev-file-monitor.c',
     'ev-history.c',
     'ev-history.h',
+    'ev-loading-message.h',
+    'ev-loading-message.c',
     'ev-keyring.h',
     'ev-keyring.c',
     'ev-message-area.c',
     'ev-message-area.h',
     'ev-metadata.c',
     'ev-metadata.h',
+    'ev-navigation-action.h',
+    'ev-navigation-action.c',
+    'ev-navigation-action-widget.h',
+    'ev-navigation-action-widget.c',
     'ev-password-view.h',
     'ev-password-view.c',
     'ev-progress-message-area.h',
@@ -72,9 +98,34 @@ atril_deps = [
     gtk,
     libsecret,
     math,
-    mate_desktop
+    mate_desktop,
+    egg, 
+    libtoolbareditor_dep,
+    libevproperties_dep
 ]
 
+libshell_deps = [
+    atril_deps,
+    libview_dep,
+    libmisc_dep,
+    mate_submodules_dep,
+    libephyzoom_dep,
+]
+
+libshell = static_library(
+    'shell',
+    shell_sources,
+    dependencies: libshell_deps,
+    include_directories: include_dirs,
+)
+
+libshell_dep = declare_dependency(
+  link_whole: libshell,  # Need the whole lib for gresource lookup
+  dependencies: libshell_deps,
+  include_directories: include_dirs,
+)
+
+# Conditional compilation for DBus
 if get_option('enable_dbus')
     dbus_generated = gnome.gdbus_codegen(
         'ev-gdbus-generated',
@@ -105,35 +156,17 @@ if get_option('enable_dbus')
         atrild_sources,
         include_directories: include_dirs,
         dependencies: atril_deps,
+        c_args: c_args,
         install: true,
         install_dir: libexecdir,
     )
 endif
 
-libshell_deps = [
-    atril_deps,
-    libview_dep,
-    libmisc_dep,
-    mate_submodules_dep,
-    libephyzoom_dep,
-]
-
-libshell = static_library(
-    'shell',
-    shell_sources,
-    dependencies: libshell_deps,
-    include_directories: include_dirs,
-)
-
-libshell_dep = declare_dependency(
-  link_whole: libshell,  # Need the whole lib for gresource lookup
-  dependencies: libshell_deps,
-  include_directories: include_dirs,
-)
-
 atril = executable(
     'atril',
     'main.c',
-    dependencies: libshell_dep,
+    dependencies: [libshell_dep] + atril_deps,
+    include_directories: include_dirs,
+    c_args: c_args,
     install: true,
 )

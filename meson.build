@@ -67,6 +67,7 @@ zlib = dependency('zlib')
 libsecret = dependency('libsecret-1', version: '>= 0.5', required: get_option('keyring'))
 gtk_unix_print = dependency('gtk+-unix-print-3.0', version: '>= ' + gtk_version, required: get_option('gtk_unix_print'))
 mate_desktop = dependency('mate-desktop-2.0')
+egg = dependency('libegg')
 
 # Backend configuration
 enabled_backend_names = []
@@ -220,7 +221,8 @@ c_args = [
   '-DMATELOCALEDIR="@0@"'.format(join_paths(prefix, datadir, 'locale')),
   '-Werror=implicit-function-declaration',
   '-DATRIL_COMPILATION',
-  '-DPACKAGE_URL="https://mate-desktop.org"'
+  '-DPACKAGE_URL="https://mate-desktop.org"',
+  '-include', 'config.h', 
 ]
 
 cpp_args = [
@@ -284,6 +286,7 @@ endif
 
 subdir('cut-n-paste/toolbar-editor')
 subdir('cut-n-paste/zoom-control')
+subdir('properties')
 
 subdir('shell')
 subdir('po')
