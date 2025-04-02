@@ -88,11 +88,11 @@ libtoolbareditor = static_library('toolbareditor',
   c_args: [
     '-DCURSOR_DIR="' + join_paths(get_option('prefix'), get_option('datadir'), meson.project_name()) + '"',
   ],
-  include_directories: include_directories('.'),
+  include_directories: include_directories('.', '..'),
   dependencies: [shell_core_deps, xml]
 )
 
 libtoolbareditor_dep = declare_dependency(
   link_with: libtoolbareditor,
-  include_directories: include_directories('.')
+  include_directories: include_directories('.', '..')
 )
