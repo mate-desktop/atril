@@ -106,33 +106,12 @@ atril_deps = [
     libevproperties_dep
 ]
 
-libshell_deps = [
-    atril_deps,
-    libview_dep,
-    libmisc_dep,
-    mate_submodules_dep,
-    libephyzoom_dep,
-]
-
-libshell = static_library(
-    'shell',
-    shell_sources,
-    dependencies: libshell_deps,
-    include_directories: include_dirs,
-)
-
-libshell_dep = declare_dependency(
-  link_whole: libshell,  # Need the whole lib for gresource lookup
-  dependencies: libshell_deps,
-  include_directories: include_dirs,
-)
-
 # Conditional compilation for DBus
 if get_option('enable_dbus')
     dbus_generated = gnome.gdbus_codegen(
         'ev-gdbus-generated',
         'ev-gdbus.xml',
-        interface_prefix: 'org.x.reader',
+        interface_prefix: 'org.mate.atril.reader',
         namespace: 'Ev',
         object_manager: true,
     )
@@ -140,7 +119,7 @@ if get_option('enable_dbus')
     dbus_daemon_generated = gnome.gdbus_codegen(
         'ev-daemon-gdbus-generated',
         'ev-daemon-gdbus.xml',
-        interface_prefix: 'org.x.reader',
+        interface_prefix: 'org.mate.atril.reader',
         namespace: 'Ev',
         object_manager: true,
     )
@@ -163,6 +142,27 @@ if get_option('enable_dbus')
         install_dir: libexecdir,
     )
 endif
+
+libshell_deps = [
+    atril_deps,
+    libview_dep,
+    libmisc_dep,
+    mate_submodules_dep,
+    libephyzoom_dep,
+]
+
+libshell = static_library(
+    'shell',
+    shell_sources,
+    dependencies: libshell_deps,
+    include_directories: include_dirs,
+)
+
+libshell_dep = declare_dependency(
+  link_whole: libshell,  # Need the whole lib for gresource lookup
+  dependencies: libshell_deps,
+  include_directories: include_dirs,
+)
 
 atril = executable(
     'atril',
