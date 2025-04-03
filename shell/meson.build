@@ -99,7 +99,7 @@ atril_deps = [
     libsecret,
     math,
     mate_desktop,
-    egg, 
+    mate_submodules_dep,
     libtoolbareditor_dep,
     libevproperties_dep
 ]
