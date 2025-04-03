@@ -39,6 +39,8 @@ shell_sources = [
     'ev-keyring.c',
     'ev-message-area.c',
     'ev-message-area.h',
+    'ev-media-player-keys.h',
+    'ev-media-player-keys.c',
     'ev-metadata.c',
     'ev-metadata.h',
     'ev-navigation-action.h',

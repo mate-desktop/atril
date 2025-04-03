@@ -339,6 +339,7 @@ configure_file(
 summary = [
   '',
   '--- Build Configuration Summary For Atril ---',
+  '',
   'prefix = @0@'.format(prefix),
   'bindir = @0@'.format(bindir),
   'datadir = @0@'.format(datadir),
