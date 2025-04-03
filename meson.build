@@ -268,7 +268,6 @@ shell_core_deps = [
   gio,
 ]
 
-# Process subdirectories in the correct order
 subdir('libdocument')
 subdir('libview')
 subdir('libmisc')

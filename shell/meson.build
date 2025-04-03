@@ -106,7 +106,6 @@ atril_deps = [
     libevproperties_dep
 ]
 
-# Conditional compilation for DBus
 if get_option('enable_dbus')
     dbus_generated = gnome.gdbus_codegen(
         'ev-gdbus-generated',
@@ -116,6 +115,9 @@ if get_option('enable_dbus')
         object_manager: true,
     )
 
+    shell_sources += dbus_generated
+
+    # Generate the daemon D-Bus code
     dbus_daemon_generated = gnome.gdbus_codegen(
         'ev-daemon-gdbus-generated',
         'ev-daemon-gdbus.xml',
@@ -124,17 +126,13 @@ if get_option('enable_dbus')
         object_manager: true,
     )
 
-    shell_sources += dbus_generated
-
-    atrild_sources = [
-        'ev-daemon.c',
-    ]
-
-    atrild_sources += dbus_daemon_generated
+    # Create the daemon executable
+    # Use a custom_target to ensure the generated files are properly compiled
+    daemon_sources = ['ev-daemon.c', 'ev-daemon-gdbus-generated.c', 'ev-daemon-gdbus-generated.h']
 
     executable(
         'atrild',
-        atrild_sources,
+        sources: daemon_sources,
         include_directories: include_dirs,
         dependencies: atril_deps,
         c_args: c_args,
