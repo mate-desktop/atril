@@ -110,7 +110,7 @@ if get_option('enable_dbus')
     dbus_generated = gnome.gdbus_codegen(
         'ev-gdbus-generated',
         'ev-gdbus.xml',
-        interface_prefix: 'org.mate.atril.reader',
+        interface_prefix: 'org.mate.atril',
         namespace: 'Ev',
         object_manager: true,
     )
@@ -121,18 +121,14 @@ if get_option('enable_dbus')
     dbus_daemon_generated = gnome.gdbus_codegen(
         'ev-daemon-gdbus-generated',
         'ev-daemon-gdbus.xml',
-        interface_prefix: 'org.mate.atril.reader',
+        interface_prefix: 'org.mate.atril',
         namespace: 'Ev',
         object_manager: true,
     )
 
-    # Create the daemon executable
-    # Use a custom_target to ensure the generated files are properly compiled
-    daemon_sources = ['ev-daemon.c', 'ev-daemon-gdbus-generated.c', 'ev-daemon-gdbus-generated.h']
-
     executable(
         'atrild',
-        sources: daemon_sources,
+        sources: ['ev-daemon.c', ] + dbus_daemon_generated,
         include_directories: include_dirs,
         dependencies: atril_deps,
         c_args: c_args,
