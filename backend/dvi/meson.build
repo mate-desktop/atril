@@ -33,7 +33,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'dvidocument.atril-backend.desktop.in',
-  output: 'dvidocument.atril-backed',
+  output: 'dvidocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,

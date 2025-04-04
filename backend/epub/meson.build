@@ -27,7 +27,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'epubdocument.atril-backend.desktop.in',
-  output: 'epubdocument.atril-backed',
+  output: 'epubdocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,

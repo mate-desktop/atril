@@ -26,7 +26,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'tiffdocument.atril-backend.desktop.in',
-  output: 'tiffdocument.atril-backed',
+  output: 'tiffdocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,

@@ -22,7 +22,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'pixbuf.atril-backend.desktop.in',
-  output: 'pixbuf.atril-backed',
+  output: 'pixbuf.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,
