@@ -23,7 +23,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'psdocument.atril-backend.desktop.in',
-  output: 'psdocument.atril-backed',
+  output: 'psdocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,

@@ -28,7 +28,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'djvudocument.atril-backend.desktop.in',
-  output: 'djvudocument.atril-backed',
+  output: 'djvudocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,

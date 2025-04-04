@@ -22,7 +22,7 @@ shared_module(
 
 i18n.merge_file(
   input: 'pdfdocument.atril-backend.desktop.in',
-  output: 'pdfdocument.atril-backed',
+  output: 'pdfdocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,
