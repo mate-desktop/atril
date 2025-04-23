@@ -1592,7 +1592,8 @@ ev_window_refresh_window_thumbnail (EvWindow *ev_window)
 	EvDocument *document = ev_window->priv->document;
 
 	if (!document || ev_document_get_n_pages (document) <= 0 ||
-	    !ev_document_check_dimensions (document)) {
+	    !ev_document_check_dimensions (document) ||
+        document->iswebdocument) {
 		return;
 	}
 
