@@ -1,9 +1,44 @@
+### atril 1.28.2
+  * Translations update
+  * epub: Disable thumbnailing sidebar
+  * (meson) fix: rename all backend files
+  * (meson) fix: generate dbus generated with the correct prefix
+  * (meson) fix: building atrild with explicit sources
+  * (meson) fix: building atril target
+  * (meson) fix: shell/meson.build missing files
+  * (meson) fix: correct dependeny on mate-submodules
+  * (meson) fix: properly build cut-n-paste/toolbar-editor
+  * (meson) fix: add missing properties/meson.build
+  * (meson) fix all build errors with meson
+  * (meson) fix more build errors
+  * (meson) fix more build errors
+  * (meson) fix: disable maintainer mode per default
+  * (meson) fix: #error "Only <atril-document.h> can be included directly."
+  * (meson) fix: libdocument! meson automatically adds lib prefix
+  * (meson) chore: clean references to xreader
+  * (meson) chore: add subprojects/mate-submodules.wrap
+  * (meson) fix: remove non existing source in shell
+  * (meson) fix: correct typo missing .in in filename
+  * (meson) fix: use mate-submodules correctly
+  * (meson) chore: fix warnings for meson.build
+  * (meson) chore: pin meson version, add missing ATRIL_MIME_TYPES
+  * (meson) chore: reorganinze meson.build
+  * (meson) chore: add maintainer mode
+  * (meson) chore: remove unused intltool
+  * (meson) meson: make ps and epub optional backends
+  * (meson) Initial support for meson
+  * Fix .cbr mimetype
+  * Wayland: stop segfaults on some systems
+  * replace deprecated gtk_menu_tool_button_new_from_stock
+  * libview/ev-document-model.c remove one more deprecation warning
+  * replace ev_document_model_get_dual_page with
+
 ### atril 1.28.1
   * Translations update
   * Update CBR library to libarchive in README.md
   * ci: fix travis build failures caused by recent travis changes
   * Cleanup icons Makefile
-  *  icons: Include higher resolution icons (#608)
+  * icons: Include higher resolution icons (#608)
 
 ### atril 1.28.0
 
