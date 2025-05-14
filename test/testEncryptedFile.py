@@ -2,7 +2,7 @@
 
 # Test opening a password encrypted file and unlocking it.
 
-from testCommon import run_app, bail
+from testCommon import run_app, bail, pushButton
 
 from dogtail.procedural import *
 
@@ -13,16 +13,16 @@ try:
 	# Try an incorrect password first
 	focus.dialog('Enter password')
 	type('wrong password')
-	click('Unlock Document', roleName='push button')
+	click('Unlock Document', roleName=pushButton)
 	focus.dialog('Enter password')
-	click('Cancel', roleName='push button')
+	click('Cancel', roleName=pushButton)
 
 	# Try again with the correct password
 	focus.frame('test-encrypt.pdf — Password Required')
-	click('Unlock Document', roleName='push button')
+	click('Unlock Document', roleName=pushButton)
 	type('Foo')
 	focus.dialog('Enter password')
-	click('Unlock Document', roleName='push button')
+	click('Unlock Document', roleName=pushButton)
 
 	# Close Atril
 	focus.frame('test-encrypt.pdf — Dokument1')

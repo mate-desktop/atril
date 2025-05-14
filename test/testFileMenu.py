@@ -2,7 +2,7 @@
 
 # Test that the File menu and menu items work correctly.
 
-from testCommon import run_app, bail
+from testCommon import run_app, bail, pushButton
 
 from dogtail.procedural import *
 
@@ -12,20 +12,20 @@ try:
     # Open a file
     click('File', roleName='menu')
     click('Open…', roleName='menu item')
-    click('Cancel', roleName='push button')
+    click('Cancel', roleName=pushButton)
 
     # Save As
     focus.frame('test-links.pdf')
     click('File', roleName='menu')
     click('Save As…', roleName='menu item')
-    click('Cancel', roleName='push button')
+    click('Cancel', roleName=pushButton)
 
     # Print
     focus.frame('test-links.pdf')
     click('File', roleName='menu')
     click('Print…', roleName='menu item')
     focus.dialog('Print')
-    click('Cancel', roleName='push button')
+    click('Cancel', roleName=pushButton)
 
     # Properties
     focus.frame('test-links.pdf')
@@ -34,7 +34,7 @@ try:
     click('Fonts', roleName='page tab')
     click('General', roleName='page tab')
     focus.dialog('Properties')
-    click('Close', roleName='push button')
+    click('Close', roleName=pushButton)
 
     # Close
     focus.frame('test-links.pdf')

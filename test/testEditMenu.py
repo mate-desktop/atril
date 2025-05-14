@@ -2,7 +2,7 @@
 
 # This test opens the Edit menu and runs through the menu items.
 
-from testCommon import run_app, bail
+from testCommon import run_app, bail, pushButton
 
 from dogtail.procedural import *
 
@@ -20,7 +20,7 @@ try:
 
     focus.frame('test-links.pdf')
     type('link')
-    click('Find Previous', roleName='push button')
+    click('Find Previous', roleName=pushButton)
 
     click('Edit', roleName='menu')
     click('Find Next', roleName='menu item')
