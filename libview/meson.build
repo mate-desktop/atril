@@ -108,7 +108,7 @@ install_headers(
 if get_option('introspection')
     libview_gir = gnome.generate_gir(
         libview,
-        namespace: 'XreaderView',
+        namespace: 'AtrilView',
         nsversion: api_version,
         sources: libview_sources,
         identifier_prefix: 'Ev',
