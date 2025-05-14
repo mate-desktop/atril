@@ -37,12 +37,6 @@ try:
     click('Edit', roleName='menu')
     click('Save Current Settings as Default', roleName='menu item')
 
-    click('Edit', roleName='menu')
-    click('Preferences', roleName='menu item')
-
-    focus.frame('Preferences')
-    click('Close', roleName='push button')
-
     focus.frame('test-links.pdf')
     click('File', roleName='menu')
     click('Close', roleName='menu item')

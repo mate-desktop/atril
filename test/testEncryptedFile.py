@@ -24,7 +24,7 @@ try:
 	focus.dialog('Enter password')
 	click('Unlock Document', roleName='push button')
 
-	# Close xreader
+	# Close Atril
 	focus.frame('test-encrypt.pdf — Dokument1')
 	click('File', roleName='menu')
 	click('Close', roleName='menu item')
