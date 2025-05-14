@@ -10,7 +10,7 @@ try:
 
 	run_app(file='test-mime.bin')
 
-	# Close xreader
+	# Close Atril
 	click('File', roleName='menu')
 	click('Close', roleName='menu item')
 

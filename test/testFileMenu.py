@@ -14,10 +14,10 @@ try:
     click('Open…', roleName='menu item')
     click('Cancel', roleName='push button')
 
-    # Save a Copy
+    # Save As
     focus.frame('test-links.pdf')
     click('File', roleName='menu')
-    click('Save a Copy…', roleName='menu item')
+    click('Save As…', roleName='menu item')
     click('Cancel', roleName='push button')
 
     # Print
@@ -36,10 +36,10 @@ try:
     focus.dialog('Properties')
     click('Close', roleName='push button')
 
-    # Close All Windows
+    # Close
     focus.frame('test-links.pdf')
     click('File', roleName='menu')
-    click('Close All Windows', roleName='menu item')
+    click('Close', roleName='menu item')
 
 except:
     bail()

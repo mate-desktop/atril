@@ -19,7 +19,7 @@ def run_app(file=None):
         arguments = os.path.join(os.path.dirname(__file__), file)
     else:
         arguments = ''
-    pid = dt.run(sys.argv[1], arguments=arguments, appName='xreader')
+    pid = dt.run(sys.argv[1], arguments=arguments, appName='atril')
 
 def bail():
     os.kill(pid, signal.SIGTERM)
