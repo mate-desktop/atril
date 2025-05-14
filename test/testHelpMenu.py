@@ -11,17 +11,17 @@ try:
 
     click('Help', roleName='menu')
     click('About', roleName='menu item')
-    focus.dialog('About Xreader')
+    focus.dialog('About Atril Document Viewer')
     click('License', roleName='toggle button')
     click('Close', roleName='push button')
 
-    focus.frame('Recent Documents')
+    focus.frame('')
     click('Help', roleName='menu')
     click('Contents', roleName='menu item')
 
     keyCombo('<Control>w')
 
-    focus.frame('Recent Documents')
+    focus.frame('')
     click('File', roleName='menu')
     click('Close', roleName='menu item')
 except:
