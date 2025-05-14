@@ -66,7 +66,7 @@ xml = dependency('libxml-2.0', version: '>= 2.5.0')
 zlib = dependency('zlib')
 libsecret = dependency('libsecret-1', version: '>= 0.5', required: get_option('keyring'))
 gtk_unix_print = dependency('gtk+-unix-print-3.0', version: '>= ' + gtk_version, required: get_option('gtk_unix_print'))
-mate_desktop = dependency('mate-desktop-2.0')
+mate_desktop = dependency('mate-desktop-2.0', version: '>= 1.27.1')
 
 # Backend configuration
 enabled_backend_names = []
