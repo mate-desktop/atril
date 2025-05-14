@@ -3,15 +3,11 @@
 # Test printing
 
 import os
-import dogtail.config
-import time
-dogtail.config.config.logDebugToStdOut = True
-dogtail.config.config.logDebugToFile = False
 
-os.environ['LANG']='C'
-srcdir = os.environ['srcdir']
-
+from testCommon import pushButton
 from dogtail.procedural import *
+
+srcdir = os.environ['srcdir']
 
 run('atril', arguments=' '+srcdir+'/test-page-labels.pdf')
 
@@ -27,7 +23,7 @@ focus.dialog('Print')
 click('Page Setup', roleName='page tab', raw=True)
 click('All sheets')
 click('Odd sheets', roleName='menu item')
-click('Preview', roleName='push button')
+click('Preview', roleName=pushButton)
 keyCombo('<Alt><F4>')
 
 # Close atril

@@ -3,14 +3,10 @@
 # Test printing
 
 import os
-import dogtail.config
-dogtail.config.config.logDebugToStdOut = True
-dogtail.config.config.logDebugToFile = False
-
-os.environ['LANG']='C'
-srcdir = os.environ['srcdir']
-
+from testCommon import pushButton
 from dogtail.procedural import *
+
+srcdir = os.environ['srcdir']
 
 recent_used = os.path.expanduser('~/.local/share/recently-used.xbel')
 recent_used_orig = recent_used + '.orig'
@@ -31,7 +27,7 @@ click('Print…', roleName='menu item')
 
 click('Print to File', roleName='table cell', raw=True)
 click('Postscript', roleName='radio button', raw=True)
-click('Print', roleName='push button')
+click('Print', roleName=pushButton)
 
 statinfo = os.stat (ps_file)
 if statinfo.st_size > 100000:
