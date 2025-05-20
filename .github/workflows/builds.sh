@@ -16,7 +16,7 @@ infoend() {
 # Run meson first, then run autotools
 # Because meson dist requires a clean git workspace
 # Autotools will modify some files (such as po, etc.), making them dirty.
-if [ -f meson.build ]; then
+if [[ -f meson.build && $1 == "meson" ]]; then
 
 	infobegin "Configure (meson)"
 	meson setup _build --prefix=/usr
@@ -45,7 +45,7 @@ if [ -f meson.build ]; then
 	infoend
 fi
 
-if [ -f autogen.sh ]; then
+if [[ -f autogen.sh && $1 == "autotools" ]]; then
 	infobegin "Configure (autotools)"
 	NOCONFIGURE=1 ./autogen.sh
 	./configure --prefix=/usr --enable-compile-warnings=maximum || {
