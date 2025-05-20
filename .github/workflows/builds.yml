@@ -20,7 +20,7 @@ env:
 
 jobs:
   build:
-    name: Build on ${{matrix.container}} (using ${{matrix.cc}})
+    name: ${{matrix.container}} (${{matrix.cc}} ${{matrix.build-system}})
     runs-on: ubuntu-latest
     container:
       image: ${{matrix.container}}
@@ -39,8 +39,14 @@ jobs:
           ]
         cc: ["gcc"]
         cxx: ["g++"]
+        build-system: ["autotools", "meson"]
         include:
           - container: "archlinux:latest"
+            build-system: "autotools"
+            cc: "clang"
+            cxx: "clang++"
+          - container: "archlinux:latest"
+            build-system: "meson"
             cc: "clang"
             cxx: "clang++"
 
@@ -90,4 +96,4 @@ jobs:
       # INFO: M-C-C depends mate-desktop 1.27.1+, install finished.
 
       - name: Build the source code
-        run: .github/workflows/builds.sh
+        run: .github/workflows/builds.sh ${{ matrix.build-system }}

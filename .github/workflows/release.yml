@@ -25,7 +25,7 @@ jobs:
         run: sudo .github/workflows/mate-desktop.sh ${{env.MATE_DESKTOP_VERSION}} ${{ env.CACHE_PATH }}
 
       - name: Build the source code
-        run: .github/workflows/builds.sh
+        run: .github/workflows/builds.sh meson
 
       - name: Install GH CLI
         uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
