@@ -120,7 +120,7 @@ PKG_CHECK_MODULES(BACKEND, cairo >= $CAIRO_REQUIRED gtk+-3.0 >= $GTK_REQUIRED)
 PKG_CHECK_MODULES(FRONTEND_CORE, gtk+-3.0 >= $GTK_REQUIRED gthread-2.0 gio-2.0 >= $GLIB_REQUIRED)
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0 >= $GLIB_REQUIRED)
 
-PKG_CHECK_MODULES([SHELL_CORE],[libxml-2.0 >= $LIBXML_REQUIRED gtk+-3.0 >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED gthread-2.0 x11 mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED])
+PKG_CHECK_MODULES([SHELL_CORE],[libxml-2.0 >= $LIBXML_REQUIRED gtk+-3.0 >= $GTK_REQUIRED gio-2.0 >= $GLIB_REQUIRED gthread-2.0 x11])
 
 AC_SUBST(GLIB_CFLAGS)
 AC_SUBST(GLIB_LIBS)
@@ -219,6 +219,25 @@ if test "$with_keyring" = "yes"; then
         PKG_CHECK_MODULES(LIBSECRET, libsecret-1 >= $LIBSECRET_REQUIRED)
         AC_DEFINE([WITH_KEYRING],[1],[Define if KEYRING support is enabled])
 fi
+
+# ****
+# MATE
+# ****
+AC_ARG_ENABLE([mate],
+  [AS_HELP_STRING([--disable-mate], [Disable functions from mate])],
+  [],
+  [enable_mate=yes])
+
+if test "$enable_mate" = "yes"; then
+  AC_DEFINE([ENABLE_MATE],[1],[Define if MATE functions are enabled])
+
+   PKG_CHECK_MODULES([MATE], [mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRE],[found_mate=yes],[found_mate=no])
+  if test "x$found_mate" = "xno" ; then
+    AC_MSG_ERROR([*** mate-desktop not found ***])
+  fi
+fi
+
+AM_CONDITIONAL([ENABLE_MATE], [test "$enable_mate" = "yes"])
 
 # ****
 # DBUS
@@ -783,6 +802,7 @@ Configure summary:
     GTK+ Unix Print.....:    $with_gtk_unix_print
     Keyring Support.....:    $with_keyring
     DBUS Support........:    $enable_dbus
+    Mate Functions......:    $enable_mate
     Caja Plugin.........:    $enable_caja
     Thumbnailer.........:    $enable_thumbnailer
     Previewer...........:    $enable_previewer

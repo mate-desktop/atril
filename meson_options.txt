@@ -63,6 +63,11 @@ option('mathjax-directory',
     value: '',
     description: 'Path to the system mathjax installation.'
 )
+option('mate',
+    type: 'boolean',
+    value: true,
+    description: 'Build with mate functions'
+)
 option('previewer',
     type: 'boolean',
     value: true,

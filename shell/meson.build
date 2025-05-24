@@ -100,11 +100,14 @@ atril_deps = [
     gtk,
     libsecret,
     math,
-    mate_desktop,
     mate_submodules_dep,
     libtoolbareditor_dep,
     libevproperties_dep
 ]
+
+if get_option('mate')
+    atril_deps += mate_desktop
+endif
 
 if get_option('enable_dbus')
     dbus_generated = gnome.gdbus_codegen(

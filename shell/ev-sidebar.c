@@ -31,7 +31,9 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 
+#ifdef ENABLE_MATE
 #include <libmate-desktop/mate-image-menu-item.h>
+#endif
 
 #include "ev-sidebar.h"
 #include "ev-sidebar-page.h"
@@ -429,7 +431,11 @@ ev_sidebar_add_page (EvSidebar   *ev_sidebar,
 	index = gtk_notebook_append_page (GTK_NOTEBOOK (ev_sidebar->priv->notebook),
 					  main_widget, NULL);
 
+#ifdef ENABLE_MATE
 	menu_item = mate_image_menu_item_new_with_label (title);
+#else
+	menu_item = gtk_menu_item_new_with_label (title);
+#endif
 	g_signal_connect (menu_item, "activate",
 			  G_CALLBACK (ev_sidebar_menu_item_activate_cb),
 			  ev_sidebar);
