@@ -66,7 +66,12 @@ xml = dependency('libxml-2.0', version: '>= 2.5.0')
 zlib = dependency('zlib')
 libsecret = dependency('libsecret-1', version: '>= 0.5', required: get_option('keyring'))
 gtk_unix_print = dependency('gtk+-unix-print-3.0', version: '>= ' + gtk_version, required: get_option('gtk_unix_print'))
-mate_desktop = dependency('mate-desktop-2.0', version: '>= 1.27.1')
+
+# Mate functions
+if get_option('mate')
+  mate_desktop = dependency('mate-desktop-2.0', version: '>= 1.27.1')
+  atril_conf.set10('ENABLE_MATE', true)
+endif
 
 # Backend configuration
 enabled_backend_names = []
@@ -347,6 +352,7 @@ summary = [
   'libexecdir = @0@'.format(libexecdir),
   'desktopdir = @0@'.format(desktopdir),
   'schema_dir = @0@'.format(schema_dir),
+  'ENABLE_MATE = @0@'.format(get_option('mate')),
   'ENABLE_DBUS = @0@'.format(get_option('enable_dbus')),
   'MathJax directory = @0@'.format(mathjax_directory),
   '',
