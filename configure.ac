@@ -231,7 +231,7 @@ AC_ARG_ENABLE([mate],
 if test "$enable_mate" = "yes"; then
   AC_DEFINE([ENABLE_MATE],[1],[Define if MATE functions are enabled])
 
-   PKG_CHECK_MODULES([MATE], [mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRE],[found_mate=yes],[found_mate=no])
+   PKG_CHECK_MODULES([MATE], [mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED],[found_mate=yes],[found_mate=no])
   if test "x$found_mate" = "xno" ; then
     AC_MSG_ERROR([*** mate-desktop not found ***])
   fi
