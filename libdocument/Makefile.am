@@ -180,10 +180,10 @@ AtrilDocument-$(EV_API_VERSION).gir: libatrildocument.la Makefile $(INST_H_FILES
 	$(filter %.h,$^) \
 	$(filter %.c,$^)
 
-girdir = $(GIRDIR)
+girdir = $(datadir)/gir-1.0
 gir_DATA = AtrilDocument-$(EV_API_VERSION).gir
 
-typelibsdir = $(GIRTYPELIBDIR)
+typelibsdir = $(libdir)/girepository-1.0
 typelibs_DATA = AtrilDocument-$(EV_API_VERSION).typelib
 
 EXTRA_DIST += $(gir_DATA)
