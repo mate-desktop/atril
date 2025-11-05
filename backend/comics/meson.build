@@ -2,7 +2,7 @@ backend_desktop_conf = configuration_data()
 backend_desktop_conf.set('COMICS_MIME_TYPES', comic_mimetypes)
 
 backend_desktop = configure_file(
-    input: 'comicsdocument.atril-backend.in',
+    input: 'comicsdocument.atril-backend.desktop.in',
     output: 'comicsdocument.atril-backend',
     configuration: backend_desktop_conf,
     install: true,
@@ -33,17 +33,17 @@ shared_module(
 )
 
 
-
-test_name = 'test-ev-archive'
-
-test_sources = files(
-  'ev-archive.c',
-  'test-ev-archive.c',
-)
-
-executable(
-  test_name,
-  test_sources,
-  include_directories: include_dirs,
-  dependencies: comics_deps,
-)
+# Test is missing its source file
+#test_name = 'test-ev-archive'
+#
+#test_sources = files(
+#  'ev-archive.c',
+#  'test-ev-archive.c',
+#)
+#
+#executable(
+#  test_name,
+#  test_sources,
+#  include_directories: include_dirs,
+#  dependencies: comics_deps,
+#)

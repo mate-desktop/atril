@@ -21,8 +21,8 @@ shared_module(
 )
 
 i18n.merge_file(
-  input: 'pixbuf.atril-backend.desktop.in',
-  output: 'pixbuf.atril-backend',
+  input: 'pixbufdocument.atril-backend.desktop.in',
+  output: 'pixbufdocument.atril-backend',
   type: 'desktop',
   po_dir: po_dir,
   install: true,
