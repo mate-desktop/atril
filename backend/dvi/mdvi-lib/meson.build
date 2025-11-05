@@ -45,6 +45,7 @@ mdvi_c_args = [
 ]
 
 mdvi_deps = [
+    glib,
     kpathsea,
 ]
 

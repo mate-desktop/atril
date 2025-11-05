@@ -89,6 +89,7 @@ endif
 
 # DVI backend
 if get_option('dvi')
+  atril_conf.set10('STDC_HEADERS', true)
   kpathsea = dependency('kpathsea')
   spectre = dependency('libspectre', version: '>= 0.2.0')
   if get_option('t1lib')
