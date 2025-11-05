@@ -40,6 +40,11 @@ option('xps',
     type: 'feature',
     description: 'Support for the xps backend'
 )
+option('caja',
+    type: 'feature',
+    value: 'enabled',
+    description: 'Support for the Caja extension'
+)
 option('gtk_unix_print',
     type: 'boolean',
     value: true,
