@@ -13,8 +13,6 @@ include_dirs = include_directories(
 # Define preprocessor definitions
 c_args = [
     '-DATRILDATADIR="' + join_paths(get_option('prefix'), get_option('datadir'), 'atril') + '"',
-    '-DMATEDATADIR="' + get_option('datadir') + '"',
-    '-DLIBEXECDIR="' + get_option('libexecdir') + '"',
     '-DATRIL_COMPILATION'
 ]
 
