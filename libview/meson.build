@@ -85,7 +85,7 @@ if get_option('epub')
 endif
 
 libview = library(
-    'view',
+    'atrilview',
     libview_sources + libview_private_headers + libdoc_enums + libview_marshal,
     include_directories: include_dirs,
     dependencies: libview_deps,

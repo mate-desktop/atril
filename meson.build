@@ -22,7 +22,7 @@ major_version = version_list[0]
 minor_version = version_list[1]
 micro_version = version_list[2]
 
-api_version = '1.5'
+api_version = '1.5.0'
 binary_version = '3.0.0'
 binary_major_version = binary_version.split('.')[0]
 

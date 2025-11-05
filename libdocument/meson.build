@@ -124,7 +124,7 @@ libdocument_deps = [
 ]
 
 libdocument = library(
-    'document',
+    'atrildocument',
     libdocument_private_headers + libdocument_sources,
     dependencies: libdocument_deps,
     include_directories: include_root,
