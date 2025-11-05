@@ -15,7 +15,7 @@ dvi_deps = [
     gtk,
     libmdvi_dep,
     math,
-    spectre,
+    spectre_dvi,
     mdvi_deps,
 ]
 

@@ -74,59 +74,54 @@ backend_subdirs = []
 atril_mime_types = ''
 
 # PDF backend
-if get_option('pdf')
-  poppler = dependency('poppler-glib')
+poppler = dependency('poppler-glib', required: get_option('pdf'))
+if poppler.found()
   backend_subdirs += 'pdf'
   atril_mime_types += 'application/pdf;application/x-bzpdf;application/x-gzpdf;application/x-xzpdf;'
 endif
 
 # PostScript backend
-if get_option('ps')
-  spectre = dependency('libspectre', version: '>= 0.2.0')
+spectre_ps = dependency('libspectre', version: '>= 0.2.0', required: get_option('ps'))
+if spectre_ps.found()
   backend_subdirs += 'ps'
   atril_mime_types += 'application/postscript;application/x-bzpostscript;application/x-gzpostscript;image/x-eps;image/x-bzeps;image/x-gzeps;application/illustrator;'
 endif
 
 # DVI backend
-if get_option('dvi')
+kpathsea = dependency('kpathsea', required: get_option('dvi'))
+spectre_dvi = dependency('libspectre', version: '>= 0.2.0', required:  get_option('dvi'))
+if kpathsea.found() and spectre_dvi.found()
   atril_conf.set10('STDC_HEADERS', true)
-  kpathsea = dependency('kpathsea')
-  spectre = dependency('libspectre', version: '>= 0.2.0')
-  if get_option('t1lib')
-    t1lib = cc.find_library('t1', required: false)
-    t1_enabled = t1lib.found()
-  else
-    t1_enabled = false
-  endif
+  t1lib = cc.find_library('t1', required: get_option('t1lib'))
+  t1_enabled = t1lib.found()
   backend_subdirs += 'dvi'
   atril_mime_types += 'application/x-dvi;application/x-bzdvi;application/x-gzdvi;'
 endif
 
 # DJVU backend
-if get_option('djvu')
-  djvu = dependency('ddjvuapi', version: '>= 3.5.17')
+djvu = dependency('ddjvuapi', version: '>= 3.5.17', required: get_option('djvu'))
+if djvu.found()
   backend_subdirs += 'djvu'
   atril_mime_types += 'image/vnd.djvu;image/vnd.djvu+multipage;'
 endif
 
 # TIFF backend
-if get_option('tiff')
-  tiff = dependency('libtiff-4')
+tiff = dependency('libtiff-4', required: get_option('tiff'))
+if tiff.found()
   backend_subdirs += 'tiff'
   atril_mime_types += 'image/tiff;'
 endif
 
 # Pixbuf backend
-if get_option('pixbuf')
+if not get_option('pixbuf').disabled()
   backend_subdirs += 'pixbuf'
   atril_mime_types += 'image/*;'
   atril_conf.set10('ENABLE_PIXBUF', true)
 endif
 
 # Comics backend
-if get_option('comics')
-  libarchive_req_version = '>= 3.6.0'
-  libarchive_dep = dependency('libarchive', version: '>= 3.6.0', required: true)
+libarchive_dep = dependency('libarchive', version: '>= 3.6.0', required: get_option('comics'))
+if libarchive_dep.found()
   backend_subdirs += 'comics'
   comic_mimetypes = ';'.join([
     'application/vnd.comicbook-rar',
@@ -144,8 +139,8 @@ if get_option('comics')
 endif
 
 # XPS backend
-if get_option('xps')
-  xps = dependency('libgxps', version: '>= 0.2.1')
+xps = dependency('libgxps', version: '>= 0.2.1', required: get_option('xps'))
+if xps.found()
   backend_subdirs += 'xps'
   atril_mime_types += 'application/oxps;application/vnd.ms-xpsdocument;'
 endif
@@ -153,7 +148,7 @@ endif
 thumbnailer_mime_types = atril_mime_types
 
 # EPUB backend
-if get_option('epub')
+if not get_option('epub').disabled()
   webkit = dependency('webkit2gtk-4.1', version: '>= 2.4.3', required: false)
   backend_subdirs += 'epub'
   atril_mime_types += 'application/epub+zip;'
@@ -179,7 +174,7 @@ endif
 
 if mathjax_directory != ''
   atril_conf.set_quoted('MATHJAX_DIRECTORY', mathjax_directory)
-elif get_option('epub')
+elif get_option('epub').enabled()
   error('"mathjax-directory" is undefined and could not be autodetected')
 endif
 
@@ -253,7 +248,7 @@ if get_option('enable_debug')
   cpp_args += '-DEV_ENABLE_DEBUG'
 endif
 
-if get_option('epub')
+if not get_option('epub').disabled()
   c_args += '-DENABLE_EPUB'
   cpp_args += '-DENABLE_EPUB'
 endif

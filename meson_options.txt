@@ -1,51 +1,43 @@
 option('comics',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Support for the comic book (cbr) backend'
 )
 option('djvu',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Support for the djvu backend'
 )
 option('dvi',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Support for the dvi backend'
 )
 option('t1lib',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Compile with t1lib for type1 font support in the dvi backend'
 )
 option('epub',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Support for the epub backend'
 )
 option('pdf',
-    type: 'boolean',
-    value: true,
+    type: 'feature',
+    value: 'enabled',
     description: 'Support for the PDF backend'
 )
 option('pixbuf',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
+    value: 'disabled',
     description: 'Support for the generic pixbuf image backend'
 )
 option('ps',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Support for the PostScript backend'
 )
 option('tiff',
-    type: 'boolean',
-    value: true,
+    type: 'feature',
     description: 'Support for the tiff backend'
 )
 option('xps',
-    type: 'boolean',
-    value: false,
+    type: 'feature',
     description: 'Support for the xps backend'
 )
 option('gtk_unix_print',

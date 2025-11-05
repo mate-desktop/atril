@@ -80,7 +80,7 @@ libview_deps = [
     math,
 ]
 
-if get_option('epub')
+if not get_option('epub').disabled()
    libview_deps += webkit
 endif
 

@@ -7,7 +7,7 @@ ps_deps = [
     cairo,
     glib,
     gtk,
-    spectre,
+    spectre_ps,
 ]
 
 shared_module(
