@@ -33,17 +33,17 @@ shared_module(
 )
 
 
-# Test is missing its source file
-#test_name = 'test-ev-archive'
-#
-#test_sources = files(
-#  'ev-archive.c',
-#  'test-ev-archive.c',
-#)
-#
-#executable(
-#  test_name,
-#  test_sources,
-#  include_directories: include_dirs,
-#  dependencies: comics_deps,
-#)
+
+test_name = 'test-ev-archive'
+
+test_sources = files(
+  'ev-archive.c',
+  'test-ev-archive.c',
+)
+
+executable(
+  test_name,
+  test_sources,
+  include_directories: include_dirs,
+  dependencies: comics_deps,
+)
