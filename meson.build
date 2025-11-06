@@ -148,35 +148,44 @@ endif
 thumbnailer_mime_types = atril_mime_types
 
 # EPUB backend
-if not get_option('epub').disabled()
-  webkit = dependency('webkit2gtk-4.1', version: '>= 2.4.3', required: false)
+webkit = dependency('webkit2gtk-4.1', version: '>= 2.4.3', required: get_option('epub'))
+if webkit.found()
   backend_subdirs += 'epub'
   atril_mime_types += 'application/epub+zip;'
+
+  # MathJax configuration
+  mathjax_directory = get_option('mathjax-directory')
+  if mathjax_directory == ''
+    mathjax_directories = [
+      '/usr/share/javascript/mathjax',
+      '/usr/share/mathjax'
+    ]
+
+    fs = import('fs')
+    foreach dir: mathjax_directories
+      if fs.exists(join_paths(dir, 'MathJax.js'))
+        mathjax_directory = dir
+        break
+      endif
+    endforeach
+
+    if mathjax_directory == ''
+      # default to the first directory, just in case, and because that's what
+      # we used to do in the code, which just means MathML might not work properly
+      mathjax_directory = mathjax_directories[0]
+      warning(('mathjax not found, using @0@ as fallback, but MathML might not work. ' +
+               'Install mathjax or set "mathjax-directory" as needed.').format(mathjax_directory))
+    endif
+  endif
+
+  atril_conf.set10('ENABLE_EPUB', true)
+  atril_conf.set_quoted('MATHJAX_DIRECTORY', mathjax_directory)
 endif
 
 atril_conf.set_quoted('SUPPORTED_MIMETYPES', atril_mime_types)
 
 # Math library
 math = cc.find_library('m', required: false)
-
-# MathJax configuration
-mathjax_directory = get_option('mathjax-directory')
-if mathjax_directory == ''
-  foreach dir: [
-    '/usr/share/mathjax',
-    '/usr/share/javascript/mathjax'
-  ]
-    if run_command('test', ['-f', join_paths(dir, 'MathJax.js')], check: false).returncode() == 0
-      mathjax_directory = dir
-    endif
-  endforeach
-endif
-
-if mathjax_directory != ''
-  atril_conf.set_quoted('MATHJAX_DIRECTORY', mathjax_directory)
-elif get_option('epub').enabled()
-  error('"mathjax-directory" is undefined and could not be autodetected')
-endif
 
 mate_submodules_dep = dependency('mate-submodules', version: '1.24.0',
 fallback: ['mate-submodules', 'mate_submodules_dep'])
@@ -246,11 +255,6 @@ endif
 if get_option('enable_debug')
   c_args += '-DEV_ENABLE_DEBUG'
   cpp_args += '-DEV_ENABLE_DEBUG'
-endif
-
-if not get_option('epub').disabled()
-  c_args += '-DENABLE_EPUB'
-  cpp_args += '-DENABLE_EPUB'
 endif
 
 # Add compiler arguments
