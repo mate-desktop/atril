@@ -642,6 +642,25 @@ if test "x$enable_epub" = "xyes"; then
     fi
 fi
 
+AC_ARG_WITH([mathjax-directory],
+  [AS_HELP_STRING([--with-mathjax-directory=DIRECTORY],
+                  [Specify the directory containing MathJax.js])],
+  [],[with_mathjax_directory=check])
+AC_MSG_CHECKING([for the MathJax directory])
+mathjax_default_dir=/usr/share/javascript/mathjax
+AS_IF([test x$have_webkit = xyes -a "x$with_mathjax_directory" = xcheck],
+      [for dir in "$mathjax_default_dir" /usr/share/mathjax; do
+         if test -f "$dir/MathJax.js"; then
+            with_mathjax_directory="$dir"
+            break
+         fi
+       done])
+AS_IF([test "x$with_mathjax_directory" = xcheck],
+      [AC_MSG_RESULT([not found, falling back to $mathjax_default_dir])
+       with_mathjax_directory="$mathjax_default_dir"],
+      [AC_MSG_RESULT([$with_mathjax_directory])])
+AC_DEFINE_UNQUOTED([MATHJAX_DIRECTORY], ["$with_mathjax_directory"], [Directory where to look up MathJax.js])
+
 AM_CONDITIONAL(ENABLE_EPUB, test x$have_webkit = xyes)
 
 dnl ================== End of EPUB checks ===================================================
@@ -791,6 +810,7 @@ Configure summary:
     GObj. Introspection.:    $enable_introspection
     Use NLS.............:    ${USE_NLS}
     Tests...............:    $enable_tests
+    MathJax.............:    $with_mathjax_directory
 
     PDF Backend.........:    $enable_pdf
     Synctex enabled.....:    $enable_synctex
