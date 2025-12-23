@@ -104,17 +104,14 @@ jobs:
       - name: Build and install mate-desktop from source
         run: .github/workflows/mate-desktop.sh ${{env.MATE_DESKTOP_VERSION}} ${{ env.CACHE_PATH }}
       # INFO: M-C-C depends mate-desktop 1.27.1+, install finished.
-
-
       - name: Disable DVI on ubunut and fedora latest
         run: |
-          if [[ "${{ matrix.container }}" == "fedora:latest" ]] || [[ "${{ matrix.container }}" == "ubuntu:rolling" ]]; then
+          if [ "${{ matrix.container }}" = "fedora:latest" ] || [ "${{ matrix.container }}" = "ubuntu:rolling" ]; then
             echo "DVI_OPTION=-Ddvi=disabled" >> $GITHUB_ENV
             echo "Disabling DVI backend on ${{ matrix.container }}"
           else
             echo "DVI_OPTION=" >> $GITHUB_ENV
             echo "Building with DVI backend on ${{ matrix.container }}"
           fi
-
       - name: Build the source code
         run: .github/workflows/builds.sh ${{ matrix.build-system }}
