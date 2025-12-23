@@ -147,6 +147,7 @@ endif
 
 thumbnailer_mime_types = atril_mime_types
 
+mathjax_directory = 'not enabled'
 # EPUB backend
 webkit = dependency('webkit2gtk-4.1', version: '>= 2.4.3', required: get_option('epub'))
 if webkit.found()
@@ -329,10 +330,6 @@ configure_file(
   configuration: pc_conf,
   install_dir: join_paths(libdir, 'pkgconfig')
 )
-
-if not defined('mathjax_directory')
-  mathjax_directory = 'not enabled'
-endif
 
 # Summary output
 summary = [
