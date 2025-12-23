@@ -31,6 +31,7 @@ requires+=(
 	poppler-glib
 	texlive-bin
 	webkit2gtk
+	mathjax
 	which
 	yelp-tools
 )
