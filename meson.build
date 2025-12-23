@@ -330,6 +330,10 @@ configure_file(
   install_dir: join_paths(libdir, 'pkgconfig')
 )
 
+if not defined('mathjax_directory')
+  mathjax_directory = 'not enabled'
+endif
+
 # Summary output
 summary = [
   '',
