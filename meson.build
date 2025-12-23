@@ -153,7 +153,7 @@ if webkit.found()
   backend_subdirs += 'epub'
   atril_mime_types += 'application/epub+zip;'
 
-  # MathJax configuration
+  # MathJax configuration: auto-detect path if not specified
   mathjax_directory = get_option('mathjax-directory')
   if mathjax_directory == ''
     mathjax_directories = [
@@ -170,11 +170,7 @@ if webkit.found()
     endforeach
 
     if mathjax_directory == ''
-      # default to the first directory, just in case, and because that's what
-      # we used to do in the code, which just means MathML might not work properly
-      mathjax_directory = mathjax_directories[0]
-      warning(('mathjax not found, using @0@ as fallback, but MathML might not work. ' +
-               'Install mathjax or set "mathjax-directory" as needed.').format(mathjax_directory))
+      warning('MathJax not found, EPUB/MathML will not work fully. Please install mathjax or set --mathjax-directory!')
     endif
   endif
 
