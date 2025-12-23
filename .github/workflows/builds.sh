@@ -19,7 +19,7 @@ infoend() {
 if [[ -f meson.build && $1 == "meson" ]]; then
 
 	infobegin "Configure (meson)"
-	meson setup _build --prefix=/usr
+	meson setup _build --prefix=/usr ${DVI_OPTION}
 	infoend
 
 	infobegin "Build (meson)"
