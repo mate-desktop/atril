@@ -8,6 +8,12 @@ on:
     branches:
       - master
   workflow_dispatch:
+    inputs:
+      CLEAN_CCACHE:
+        description: 'Clean ccache before build'
+        required: false
+        default: 'false'
+
 
 # cancel already running builds of the same branch or pull request
 concurrency:
@@ -91,7 +97,11 @@ jobs:
         with:
           path: ${{ env.CACHE_PATH }}
           key: ${{ env.DISTRO }}-build-mate-desktop-${{env.MATE_DESKTOP_VERSION}}
-      - name: Built and install mate-desktop from source
+      - name: Optionally force ccache cleanup
+        if: ${{ github.event.inputs.CLEAN_CCACHE == 'true' }}
+        run: |
+          ccache -C
+      - name: Build and install mate-desktop from source
         run: .github/workflows/mate-desktop.sh ${{env.MATE_DESKTOP_VERSION}} ${{ env.CACHE_PATH }}
       # INFO: M-C-C depends mate-desktop 1.27.1+, install finished.
 
