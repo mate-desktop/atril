@@ -19,7 +19,7 @@ try:
 		click('Close', roleName='menu item')
 		exit (1)
 
-	# Close xreader
+	# Close Atril
 	click('File', roleName='menu')
 	click('Close', roleName='menu item')
 
