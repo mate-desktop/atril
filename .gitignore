@@ -1,0 +1,129 @@
+# Meson build directory
+build/
+builddir/
+_build/
+
+# Submodules/subprojects
+subprojects/*/
+
+# Autotools generated files
+Makefile
+Makefile.in
+.deps/
+.libs/
+*.la
+*.lo
+aclocal.m4
+autom4te.cache/
+compile
+config.guess
+config.h
+config.h.in
+config.log
+config.status
+config.sub
+configure
+depcomp
+install-sh
+libtool
+ltmain.sh
+missing
+stamp-h1
+test-driver
+m4/libtool.m4
+m4/ltoptions.m4
+m4/ltsugar.m4
+m4/ltversion.m4
+m4/lt~obsolete.m4
+
+# C/C++ compiled files
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Generated pkg-config files
+*.pc
+
+# GObject introspection
+*.gir
+*.typelib
+
+# Translation files
+*.gmo
+*.mo
+po/*.pot
+po/POTFILES
+po/stamp-it
+po/.intltool-merge-cache
+
+# GSettings compiled schemas
+gschemas.compiled
+
+# Generated resources
+*-resources.c
+*-resources.h
+
+# Generated D-Bus files
+*-gdbus-generated.c
+*-gdbus-generated.h
+
+# Documentation generated files
+help/*/*.page.stub
+help/*/*.omf.out
+help/*/legal.xml
+gtk-doc.make
+*.stamp
+
+# Backup and temporary files
+*~
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+.*.sw?
+\#*\#
+.#*
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+.project
+.cproject
+.settings/
+*.geany
+*.kate-swp
+.clangd/
+compile_commands.json
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.stackdump
+
+# Core dumps
+core
+core.*
+vgcore.*
+
+# Test and coverage files
+*.gcno
+*.gcda
+*.gcov
+coverage/
+.coverage
+
+# Packaging
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.deb
+*.rpm

@@ -65,6 +65,8 @@ shell_sources = [
     'ev-window-title.h',
     'ev-sidebar.c',
     'ev-sidebar.h',
+    'ev-find-sidebar.c',
+    'ev-find-sidebar.h',
     'ev-sidebar-annotations.c',
     'ev-sidebar-annotations.h',
     'ev-sidebar-attachments.c',
