@@ -1249,13 +1249,12 @@ setup_chrome_from_metadata (EvWindow *window)
 	gboolean show_toolbar;
 	gboolean show_sidebar;
 
-	if (!window->priv->metadata)
-		return;
-
-	if (ev_metadata_get_boolean (window->priv->metadata, "show_toolbar", &show_toolbar))
-		update_chrome_flag (window, EV_CHROME_TOOLBAR, show_toolbar);
-	if (ev_metadata_get_boolean (window->priv->metadata, "sidebar_visibility", &show_sidebar))
-		update_chrome_flag (window, EV_CHROME_SIDEBAR, show_sidebar);
+	if (window->priv->metadata) {
+		if (ev_metadata_get_boolean (window->priv->metadata, "show_toolbar", &show_toolbar))
+			update_chrome_flag (window, EV_CHROME_TOOLBAR, show_toolbar);
+		if (ev_metadata_get_boolean (window->priv->metadata, "sidebar_visibility", &show_sidebar))
+			update_chrome_flag (window, EV_CHROME_SIDEBAR, show_sidebar);
+	}
 	update_chrome_visibility (window);
 }
 
