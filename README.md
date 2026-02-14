@@ -28,7 +28,10 @@ Atril Requirements to Run Tests
 
 Atril Compilation
 ==================================================
+* git clone https://github.com/mate-desktop/atril
 * git submodule init
 * git submodule update --remote --recursive
+* apt build-dep -y atril
+* apt install -y mate-common yelp-tools
 * ./autogen.sh
 * make
