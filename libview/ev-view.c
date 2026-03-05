@@ -229,6 +229,8 @@ static double   zoom_for_size_automatic                      (GdkScreen *screen,
 							      gdouble    doc_height,
 							      int        target_width,
 							      int        target_height);
+static gboolean ev_view_can_zoom                             (EvView *view,
+							      gdouble factor);
 static void     ev_view_zoom_for_size                        (EvView *view,
 							      int     width,
 							      int     height);
@@ -3819,8 +3821,7 @@ ev_view_scroll_event (GtkWidget *widget, GdkEventScroll *event)
 			gdouble delta = event->delta_x + event->delta_y;
 			gdouble factor = pow (delta < 0 ? ZOOM_IN_FACTOR : ZOOM_OUT_FACTOR, fabs (delta));
 
-			if ((factor < 1.0 && ev_view_can_zoom_out (view)) ||
-			    (factor >= 1.0 && ev_view_can_zoom_in (view)))
+			if (ev_view_can_zoom (view, factor))
 				ev_view_zoom (view, factor);
 		}
 			break;
@@ -6472,8 +6473,7 @@ zoom_gesture_scale_changed_cb (GtkGestureZoom *gesture,
 
 	gtk_gesture_get_bounding_box_center (GTK_GESTURE (gesture), &view->zoom_center_x, &view->zoom_center_y);
 
-	if ((factor < 1.0 && ev_view_can_zoom_out (view)) ||
-	    (factor >= 1.0 && ev_view_can_zoom_in (view)))
+	if (ev_view_can_zoom (view, factor))
 		ev_view_zoom (view, factor);
 }
 
@@ -6906,8 +6906,8 @@ update_can_zoom (EvView *view)
 	min_scale = ev_document_model_get_min_scale (view->model);
 	max_scale = ev_document_model_get_max_scale (view->model);
 
-	can_zoom_in = (view->scale * ZOOM_IN_FACTOR) <= max_scale;
-	can_zoom_out = (view->scale * ZOOM_OUT_FACTOR) > min_scale;
+	can_zoom_in = view->scale <= max_scale;
+	can_zoom_out = view->scale > min_scale;
 
 	if (can_zoom_in != view->can_zoom_in) {
 		view->can_zoom_in = can_zoom_in;
@@ -7098,6 +7098,19 @@ ev_view_reload (EvView *view)
 }
 
 /*** Zoom and sizing mode ***/
+
+static gboolean
+ev_view_can_zoom (EvView *view, gdouble factor)
+{
+	if (factor == 1.0)
+		return TRUE;
+
+	else if (factor < 1.0) {
+		return ev_view_can_zoom_out (view);
+	} else {
+		return ev_view_can_zoom_in (view);
+	}
+}
 
 gboolean
 ev_view_can_zoom_in (EvView *view)
