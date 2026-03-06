@@ -4664,12 +4664,21 @@ ev_window_setup_gtk_settings (EvWindow *window)
 	g_free (menubar_accel_accel);
 }
 
+/*
+ * Cairo image surfaces don't reliably work on
+ * images larger than 32767 in width or height.
+ * See https://gitlab.freedesktop.org/cairo/cairo/-/commit/9e45673e
+ */
+#define CAIRO_MAX_IMAGE_SIZE 32767
+
 static void
 ev_window_update_max_min_scale (EvWindow *window)
 {
 	gdouble    dpi;
+	gint       scale;
 	GtkAction *action;
 	gdouble    min_width, min_height;
+	gdouble    max_width, max_height;
 	gdouble    max_scale;
 	guint      page_cache_mb;
 
@@ -4678,9 +4687,15 @@ ev_window_update_max_min_scale (EvWindow *window)
 
 	page_cache_mb = g_settings_get_uint (window->priv->settings, GS_PAGE_CACHE_SIZE);
 	dpi = get_monitor_dpi (window) / 72.0;
+	scale = gtk_widget_get_scale_factor (GTK_WIDGET (window));
 
 	ev_document_get_min_page_size (window->priv->document, &min_width, &min_height);
 	max_scale = sqrt ((page_cache_mb * 1024 * 1024) / (min_width * dpi * 4 * min_height * dpi));
+
+	/* Cap zoom so rendered pages stay within cairo's pixel limit.
+	 * Use the largest page since any page could be rendered. */
+	ev_document_get_max_page_size (window->priv->document, &max_width, &max_height);
+	max_scale = MIN (max_scale, (gdouble)(CAIRO_MAX_IMAGE_SIZE - 1) / (MAX (max_width, max_height) * dpi * scale));
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group,
