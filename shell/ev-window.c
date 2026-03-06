@@ -4670,10 +4670,8 @@ ev_window_update_max_min_scale (EvWindow *window)
 	gdouble    dpi;
 	GtkAction *action;
 	gdouble    min_width, min_height;
-	gdouble    width, height;
 	gdouble    max_scale;
 	guint      page_cache_mb;
-	gint       rotation = ev_document_model_get_rotation (window->priv->model);
 
 	if (!window->priv->document)
 		return;
@@ -4682,9 +4680,7 @@ ev_window_update_max_min_scale (EvWindow *window)
 	dpi = get_monitor_dpi (window) / 72.0;
 
 	ev_document_get_min_page_size (window->priv->document, &min_width, &min_height);
-	width = (rotation == 0 || rotation == 180) ? min_width : min_height;
-	height = (rotation == 0 || rotation == 180) ? min_height : min_width;
-	max_scale = sqrt ((page_cache_mb * 1024 * 1024) / (width * dpi * 4 * height * dpi));
+	max_scale = sqrt ((page_cache_mb * 1024 * 1024) / (min_width * dpi * 4 * min_height * dpi));
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	action = gtk_action_group_get_action (window->priv->action_group,
