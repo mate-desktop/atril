@@ -73,7 +73,9 @@ enum {
 	PROP_HADJUSTMENT,
 	PROP_VADJUSTMENT,
 	PROP_HSCROLL_POLICY,
-	PROP_VSCROLL_POLICY
+	PROP_VSCROLL_POLICY,
+	PROP_CAN_ZOOM_IN,
+	PROP_CAN_ZOOM_OUT
 };
 
 static guint signals[N_SIGNALS] = { 0 };
@@ -227,6 +229,8 @@ static double   zoom_for_size_automatic                      (GdkScreen *screen,
 							      gdouble    doc_height,
 							      int        target_width,
 							      int        target_height);
+static gboolean ev_view_can_zoom                             (EvView *view,
+							      gdouble factor);
 static void     ev_view_zoom_for_size                        (EvView *view,
 							      int     width,
 							      int     height);
@@ -3817,8 +3821,7 @@ ev_view_scroll_event (GtkWidget *widget, GdkEventScroll *event)
 			gdouble delta = event->delta_x + event->delta_y;
 			gdouble factor = pow (delta < 0 ? ZOOM_IN_FACTOR : ZOOM_OUT_FACTOR, fabs (delta));
 
-			if ((factor < 1.0 && ev_view_can_zoom_out (view)) ||
-			    (factor >= 1.0 && ev_view_can_zoom_in (view)))
+			if (ev_view_can_zoom (view, factor))
 				ev_view_zoom (view, factor);
 		}
 			break;
@@ -5988,6 +5991,12 @@ ev_view_get_property (GObject     *object,
 	case PROP_IS_LOADING:
 		g_value_set_boolean (value, view->loading);
 		break;
+	case PROP_CAN_ZOOM_IN:
+		g_value_set_boolean (value, view->can_zoom_in);
+		break;
+	case PROP_CAN_ZOOM_OUT:
+		g_value_set_boolean (value, view->can_zoom_out);
+		break;
 	case PROP_HADJUSTMENT:
 		g_value_set_object (value, view->hadjustment);
 		break;
@@ -6263,6 +6272,23 @@ ev_view_class_init (EvViewClass *class)
 							       G_PARAM_READABLE |
 							       G_PARAM_STATIC_STRINGS));
 
+	g_object_class_install_property (object_class,
+					 PROP_CAN_ZOOM_IN,
+					 g_param_spec_boolean ("can-zoom-in",
+							       "Can Zoom In",
+							       "Whether the view can be zoomed in further",
+							       TRUE,
+							       G_PARAM_READABLE |
+							       G_PARAM_STATIC_STRINGS));
+	g_object_class_install_property (object_class,
+					 PROP_CAN_ZOOM_OUT,
+					 g_param_spec_boolean ("can-zoom-out",
+							       "Can Zoom Out",
+							       "Whether the view can be zoomed out further",
+							       TRUE,
+							       G_PARAM_READABLE |
+							       G_PARAM_STATIC_STRINGS));
+
 	/* Scrollable interface */
 	g_object_class_override_property (object_class, PROP_HADJUSTMENT, "hadjustment");
 	g_object_class_override_property (object_class, PROP_VADJUSTMENT, "vadjustment");
@@ -6447,8 +6473,7 @@ zoom_gesture_scale_changed_cb (GtkGestureZoom *gesture,
 
 	gtk_gesture_get_bounding_box_center (GTK_GESTURE (gesture), &view->zoom_center_x, &view->zoom_center_y);
 
-	if ((factor < 1.0 && ev_view_can_zoom_out (view)) ||
-	    (factor >= 1.0 && ev_view_can_zoom_in (view)))
+	if (ev_view_can_zoom (view, factor))
 		ev_view_zoom (view, factor);
 }
 
@@ -6871,6 +6896,31 @@ ev_view_sizing_mode_changed_cb (EvDocumentModel *model,
 }
 
 static void
+update_can_zoom (EvView *view)
+{
+	gdouble min_scale;
+	gdouble max_scale;
+	gboolean can_zoom_in;
+	gboolean can_zoom_out;
+
+	min_scale = ev_document_model_get_min_scale (view->model);
+	max_scale = ev_document_model_get_max_scale (view->model);
+
+	can_zoom_in = view->scale <= max_scale;
+	can_zoom_out = view->scale > min_scale;
+
+	if (can_zoom_in != view->can_zoom_in) {
+		view->can_zoom_in = can_zoom_in;
+		g_object_notify (G_OBJECT (view), "can-zoom-in");
+	}
+
+	if (can_zoom_out != view->can_zoom_out) {
+		view->can_zoom_out = can_zoom_out;
+		g_object_notify (G_OBJECT (view), "can-zoom-out");
+	}
+}
+
+static void
 ev_view_page_layout_changed_cb (EvDocumentModel *model,
 				GParamSpec      *pspec,
 				EvView          *view)
@@ -6903,6 +6953,24 @@ ev_view_scale_changed_cb (EvDocumentModel *model,
 	view->pending_resize = TRUE;
 	if (view->sizing_mode == EV_SIZING_FREE)
 		gtk_widget_queue_resize (GTK_WIDGET (view));
+
+	update_can_zoom (view);
+}
+
+static void
+ev_view_min_scale_changed_cb (EvDocumentModel *model,
+			      GParamSpec      *pspec,
+			      EvView          *view)
+{
+	update_can_zoom (view);
+}
+
+static void
+ev_view_max_scale_changed_cb (EvDocumentModel *model,
+			      GParamSpec      *pspec,
+			      EvView          *view)
+{
+	update_can_zoom (view);
 }
 
 static void
@@ -6986,6 +7054,12 @@ ev_view_set_model (EvView          *view,
 	g_signal_connect (view->model, "notify::scale",
 			  G_CALLBACK (ev_view_scale_changed_cb),
 			  view);
+	g_signal_connect (view->model, "notify::min-scale",
+			  G_CALLBACK (ev_view_min_scale_changed_cb),
+			  view);
+	g_signal_connect (view->model, "notify::max-scale",
+			  G_CALLBACK (ev_view_max_scale_changed_cb),
+			  view);
 	g_signal_connect (view->model, "notify::continuous",
 			  G_CALLBACK (ev_view_continuous_changed_cb),
 			  view);
@@ -7025,16 +7099,29 @@ ev_view_reload (EvView *view)
 
 /*** Zoom and sizing mode ***/
 
+static gboolean
+ev_view_can_zoom (EvView *view, gdouble factor)
+{
+	if (factor == 1.0)
+		return TRUE;
+
+	else if (factor < 1.0) {
+		return ev_view_can_zoom_out (view);
+	} else {
+		return ev_view_can_zoom_in (view);
+	}
+}
+
 gboolean
 ev_view_can_zoom_in (EvView *view)
 {
-	return view->scale * ZOOM_IN_FACTOR <= ev_document_model_get_max_scale (view->model);
+	return view->can_zoom_in;
 }
 
 gboolean
 ev_view_can_zoom_out (EvView *view)
 {
-	return view->scale * ZOOM_OUT_FACTOR >= ev_document_model_get_min_scale (view->model);
+	return view->can_zoom_out;
 }
 
 void
