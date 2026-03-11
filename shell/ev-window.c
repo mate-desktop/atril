@@ -7141,7 +7141,7 @@ launch_action (EvWindow *window, EvLinkAction *action)
 
 	g_object_unref (app_info);
 	g_object_unref (file);
-        /* FIXMEchpe: unref launch context? */
+    g_object_unref (context);
 
 	/* According to the PDF spec filename can be an executable. I'm not sure
 	   allowing to launch executables is a good idea though. -- marco */
