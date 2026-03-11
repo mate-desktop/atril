@@ -2450,6 +2450,7 @@ ev_window_open_uri (EvWindow       *ev_window,
 
 	if (!g_file_is_native (source_file) && !ev_window->priv->local_uri) {
 		ev_window_load_file_remote (ev_window, source_file);
+		g_object_unref (source_file);
 	} else {
 		ev_window_show_loading_message (ev_window);
 		g_object_unref (source_file);
@@ -2654,6 +2655,7 @@ query_remote_uri_mtime_cb (GFile        *remote,
 				   (GAsyncReadyCallback)reload_remote_copy_ready_cb,
 				   ev_window);
 		g_object_unref (target_file);
+		g_object_unref (remote);
 		ev_window_show_progress_message (ev_window, 1,
 						 (GSourceFunc)show_reloading_progress);
 	} else {
@@ -7141,7 +7143,7 @@ launch_action (EvWindow *window, EvLinkAction *action)
 
 	g_object_unref (app_info);
 	g_object_unref (file);
-        /* FIXMEchpe: unref launch context? */
+    g_object_unref (context);
 
 	/* According to the PDF spec filename can be an executable. I'm not sure
 	   allowing to launch executables is a good idea though. -- marco */
