@@ -19,6 +19,7 @@
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
+#include <kpathsea/c-auto.h>
 
 #define _MDVI_PRIVATE_H 1
 #define HAVE_PROTOTYPES 1
