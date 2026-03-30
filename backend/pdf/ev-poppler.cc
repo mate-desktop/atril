@@ -51,6 +51,7 @@
 #include "ev-document-annotations.h"
 #include "ev-document-attachments.h"
 #include "ev-document-text.h"
+#include "ev-document-signatures.h"
 #include "ev-selection.h"
 #include "ev-transition-effect.h"
 #include "ev-attachment.h"
@@ -123,6 +124,7 @@ static void pdf_document_document_layers_iface_init      (EvDocumentLayersInterf
 static void pdf_document_document_print_iface_init       (EvDocumentPrintInterface       *iface);
 static void pdf_document_document_annotations_iface_init (EvDocumentAnnotationsInterface *iface);
 static void pdf_document_document_attachments_iface_init (EvDocumentAttachmentsInterface *iface);
+static void pdf_document_signatures_iface_init           (EvDocumentSignaturesInterface  *iface);
 static void pdf_document_find_iface_init                 (EvDocumentFindInterface        *iface);
 static void pdf_document_file_exporter_iface_init        (EvFileExporterInterface        *iface);
 static void pdf_selection_iface_init                     (EvSelectionInterface           *iface);
@@ -176,6 +178,8 @@ EV_BACKEND_REGISTER_WITH_CODE (PdfDocument, pdf_document,
 								 pdf_document_page_transition_iface_init);
 				 EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_TEXT,
 								 pdf_document_text_iface_init);
+				 EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_SIGNATURES,
+								 pdf_document_signatures_iface_init);
 			 });
 
 static void
@@ -3333,4 +3337,161 @@ pdf_document_document_layers_iface_init (EvDocumentLayersInterface *iface)
 	iface->show_layer = pdf_document_layers_show_layer;
 	iface->hide_layer = pdf_document_layers_hide_layer;
 	iface->layer_is_visible = pdf_document_layers_layer_is_visible;
+}
+
+#if POPPLER_CHECK_VERSION(22, 2, 0)
+static PopplerCertificateInfo *
+find_poppler_certificate_info_by_id (EvCertificateInfo *ev_cert_info)
+{
+	GList *certs = poppler_get_available_signing_certificates ();
+
+	for (GList *list = certs; list != NULL; list = list->next) {
+		PopplerCertificateInfo *cinfo = (PopplerCertificateInfo *)list->data;
+
+		if (g_strcmp0 (ev_certificate_info_get_id (ev_cert_info), poppler_certificate_info_get_id (cinfo)) == 0)
+			return cinfo;
+	}
+
+	return NULL;
+}
+
+static void
+pdf_document_signatures_sign (EvDocumentSignatures *document,
+                              EvSignaturesData     *data,
+                              GCancellable         *cancellable,
+                              GAsyncReadyCallback   callback,
+                              gpointer              user_data)
+{
+	PdfDocument *pdf_document = PDF_DOCUMENT (document);
+	PopplerColor *color;
+	PopplerSigningData *signing_data = poppler_signing_data_new ();
+	PopplerCertificateInfo *cert_info = find_poppler_certificate_info_by_id (data->certificate_info);
+
+	if (!cert_info)
+		return;
+
+	poppler_signing_data_set_certificate_info (signing_data, cert_info);
+	poppler_signing_data_set_page (signing_data, data->page);
+	poppler_signing_data_set_field_partial_name (signing_data, g_uuid_string_random ());
+	poppler_signing_data_set_destination_filename (signing_data, data->destination_file);
+
+	if (data->password)
+		poppler_signing_data_set_password (signing_data, data->password);
+	poppler_signing_data_set_signature_text (signing_data, data->signature);
+	poppler_signing_data_set_signature_text_left (signing_data, data->signature_left);
+
+	color = poppler_color_new ();
+	color->red = data->font_color.red * 255;
+	color->green = data->font_color.green * 255;
+	color->blue = data->font_color.blue * 255;
+	poppler_signing_data_set_font_color (signing_data, color);
+	g_clear_pointer (&color, poppler_color_free);
+
+	poppler_signing_data_set_font_size (signing_data, data->font_size);
+	poppler_signing_data_set_left_font_size (signing_data, data->left_font_size);
+	poppler_signing_data_set_border_width (signing_data, data->border_width);
+
+	color = poppler_color_new ();
+	color->red = data->border_color.red * 255;
+	color->green = data->border_color.green * 255;
+	color->blue = data->border_color.blue * 255;
+	poppler_signing_data_set_border_color (signing_data, color);
+	g_clear_pointer (&color, poppler_color_free);
+
+	color = poppler_color_new ();
+	color->red = data->background_color.red * 255;
+	color->green = data->background_color.green * 255;
+	color->blue = data->background_color.blue * 255;
+	poppler_signing_data_set_background_color (signing_data, color);
+	g_clear_pointer (&color, poppler_color_free);
+
+	if (data->document_owner_password)
+		poppler_signing_data_set_document_owner_password (signing_data, data->document_owner_password);
+
+	if (data->document_user_password)
+		poppler_signing_data_set_document_user_password (signing_data, data->document_user_password);
+
+	gdouble height;
+	ev_document_get_page_size (EV_DOCUMENT (document), data->page, NULL, &height);
+
+	PopplerRectangle *signing_rect = poppler_rectangle_new ();
+	signing_rect->x1 = data->rect->x1;
+	signing_rect->y1 = height - data->rect->y1;
+	signing_rect->x2 = data->rect->x2;
+	signing_rect->y2 = height - data->rect->y2;
+
+	poppler_signing_data_set_signature_rectangle (signing_data, signing_rect);
+
+	poppler_document_sign (POPPLER_DOCUMENT (pdf_document->document), signing_data, cancellable, callback, user_data);
+}
+
+static gboolean
+pdf_document_signatures_can_sign (EvDocumentSignatures *document)
+{
+	return TRUE;
+}
+
+static void
+pdf_document_set_password_callback (EvDocumentSignatures        *document,
+                                    EvSignaturePasswordCallback  cb)
+{
+	poppler_set_nss_password_callback (cb);
+}
+
+static GList *
+pdf_document_get_available_signing_certificates (EvDocumentSignatures *document)
+{
+	GList *certs = poppler_get_available_signing_certificates ();
+	GList *ev_certs = NULL;
+
+	if (!certs)
+		return NULL;
+
+	for (GList *list = certs; list != NULL; list = list->next) {
+		PopplerCertificateInfo *info = (PopplerCertificateInfo *)list->data;
+		EvCertificateInfo *cert_info = ev_certificate_info_new (poppler_certificate_info_get_id (info), poppler_certificate_info_get_subject_common_name (info));
+
+		ev_certs = g_list_append (ev_certs, cert_info);
+	}
+
+	g_list_free_full (certs, (GDestroyNotify) poppler_certificate_info_free);
+
+	return ev_certs;
+}
+
+static EvCertificateInfo *
+pdf_document_get_certificate_info (EvDocumentSignatures *document,
+                                   const char           *id)
+{
+	GList *list;
+	EvCertificateInfo *info = NULL;
+
+	if (!id || strlen (id) == 0)
+		return NULL;
+
+	for (list = pdf_document_get_available_signing_certificates (document); list != NULL; list = list->next) {
+		EvCertificateInfo *cert_info = (EvCertificateInfo *)list->data;
+
+		if (g_strcmp0 (ev_certificate_info_get_id (cert_info), id) == 0) {
+			info = ev_certificate_info_copy (cert_info);
+			break;
+		}
+	}
+
+	g_list_free_full (list, (GDestroyNotify) ev_certificate_info_free);
+
+	return info;
+}
+#endif /* POPPLER_CHECK_VERSION(22, 2, 0) */
+
+static void
+pdf_document_signatures_iface_init (EvDocumentSignaturesInterface *iface)
+{
+#if POPPLER_CHECK_VERSION(22, 2, 0)
+	iface->set_password_callback = pdf_document_set_password_callback;
+	iface->get_available_signing_certificates = pdf_document_get_available_signing_certificates;
+	iface->get_certificate_info = pdf_document_get_certificate_info;
+	iface->sign = pdf_document_signatures_sign;
+	iface->can_sign = pdf_document_signatures_can_sign;
+#endif
 }

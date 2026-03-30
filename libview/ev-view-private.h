@@ -206,6 +206,12 @@ struct _EvView {
 	gboolean           adding_annot;
 	EvAnnotationType   adding_annot_type;
 
+	/* Signature Rect */
+	gboolean           signature_rect_active;
+	gboolean           signature_rect_in_selection;
+	GdkPoint           signature_rect_start;
+	GdkPoint           signature_rect_stop;
+
 	/* Focus */
 	EvMapping *focused_element;
 	guint focused_element_page;
@@ -260,6 +266,9 @@ struct _EvViewClass {
 	                               GtkMovementStep step,
 	                               gint            count,
 	                               gboolean        extend_selection);
+	void     (*signature_rect)   (EvView         *view,
+	                               guint           page,
+	                               EvRectangle    *rectangle);
 };
 
 void _get_page_size_for_scale_and_rotation (EvDocument *document,

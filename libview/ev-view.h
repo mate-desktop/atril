@@ -128,6 +128,10 @@ void           ev_view_set_caret_navigation_enabled (EvView  *view,
 void           ev_view_set_caret_cursor_position    (EvView  *view,
                                                      guint    page,
                                                      guint    offset);
+/* Digital Signing */
+void           ev_view_start_signature_rect  (EvView *view);
+void           ev_view_cancel_signature_rect (EvView *view);
+
 G_END_DECLS
 
 #endif /* __EV_VIEW_H__ */
