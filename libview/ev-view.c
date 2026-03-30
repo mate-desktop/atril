@@ -58,6 +58,7 @@ enum {
 	SIGNAL_LAYERS_CHANGED,
 	SIGNAL_MOVE_CURSOR,
 	SIGNAL_CURSOR_MOVED,
+	SIGNAL_SIGNATURE_RECT,
 	N_SIGNALS
 };
 
@@ -287,6 +288,8 @@ static void       ev_view_update_primary_selection           (EvView            
 
 /*** Caret navigation ***/
 static void       ev_view_check_cursor_blink                 (EvView             *ev_view);
+
+void ev_view_stop_signature_rect (EvView *view);
 
 G_DEFINE_TYPE_WITH_CODE (EvView, ev_view, GTK_TYPE_CONTAINER,
                          G_IMPLEMENT_INTERFACE (GTK_TYPE_SCROLLABLE, NULL))
@@ -4039,6 +4042,43 @@ draw_focus (EvView       *view,
 	}
 }
 
+static void
+draw_signature_rect (EvView  *view,
+                     cairo_t *cr)
+{
+	gint pos_x1, pos_x2, pos_y1, pos_y2;
+	gint x, y, w, h;
+
+	if (!view->signature_rect_active || !view->signature_rect_in_selection)
+		return;
+
+	pos_x1 = view->signature_rect_start.x - view->scroll_x;
+	pos_y1 = view->signature_rect_start.y - view->scroll_y;
+	pos_x2 = view->signature_rect_stop.x - view->scroll_x;
+	pos_y2 = view->signature_rect_stop.y - view->scroll_y;
+
+	x = MIN(pos_x1, pos_x2);
+	y = MIN(pos_y1, pos_y2);
+	w = ABS(pos_x1 - pos_x2);
+	h = ABS(pos_y1 - pos_y2);
+
+	if (w <= 0 || h <= 0)
+		return;
+
+	cairo_save (cr);
+
+	cairo_rectangle (cr, x + 1, y + 1, w - 2, h - 2);
+	cairo_set_source_rgba (cr, 0.2, 0.6, 0.8, 0.2);
+	cairo_fill (cr);
+
+	cairo_rectangle (cr, x + 0.5, y + 0.5, w - 1, h - 1);
+	cairo_set_source_rgba (cr, 0.2, 0.6, 0.8, 0.35);
+	cairo_set_line_width (cr, 1);
+	cairo_stroke (cr);
+
+	cairo_restore (cr);
+}
+
 static gboolean
 ev_view_draw (GtkWidget      *widget,
 	      cairo_t *cr)
@@ -4085,6 +4125,8 @@ ev_view_draw (GtkWidget      *widget,
 		if (page_ready && view->synctex_result)
 			highlight_forward_search_results (view, cr, i);
 #endif
+		if (page_ready && view->signature_rect_active)
+			draw_signature_rect (view, cr);
 	}
 
 	if (GTK_WIDGET_CLASS (ev_view_parent_class)->draw)
@@ -4470,6 +4512,17 @@ ev_view_button_press_event (GtkWidget      *widget,
 	if (view->scroll_info.autoscrolling)
 		return TRUE;
 
+	if (view->signature_rect_active && !view->signature_rect_in_selection) {
+		if (view->pressed_button != 1)
+			return TRUE;
+
+		view->signature_rect_start.x = event->x + view->scroll_x;
+		view->signature_rect_start.y = event->y + view->scroll_y;
+		view->signature_rect_stop = view->signature_rect_start;
+		view->signature_rect_in_selection = TRUE;
+		return TRUE;
+	}
+
 	switch (event->button) {
 	        case 1: {
 			EvImage *image;
@@ -4850,6 +4903,13 @@ ev_view_motion_notify_event (GtkWidget      *widget,
 		if (view->rotation != 0)
 			return FALSE;
 
+		if (view->signature_rect_active && view->signature_rect_in_selection) {
+			view->signature_rect_stop.x = x + view->scroll_x;
+			view->signature_rect_stop.y = y + view->scroll_y;
+			gtk_widget_queue_draw (widget);
+			return TRUE;
+		}
+
 		/* Schedule timeout to scroll during selection and additionally
 		 * scroll once to allow arbitrary speed. */
 		if (!view->selection_scroll_id)
@@ -4968,6 +5028,14 @@ ev_view_button_release_event (GtkWidget      *widget,
 	}
 
 	view->drag_info.in_drag = FALSE;
+
+	if (view->signature_rect_in_selection) {
+		view->signature_rect_stop.x = event->x + view->scroll_x;
+		view->signature_rect_stop.y = event->y + view->scroll_y;
+		view->signature_rect_in_selection = FALSE;
+		ev_view_stop_signature_rect (view);
+		return TRUE;
+	}
 
 	if (view->adding_annot && view->pressed_button == 1) {
 		view->adding_annot = FALSE;
@@ -6388,6 +6456,15 @@ ev_view_class_init (EvViewClass *class)
 		         G_TYPE_INT,
 			 G_TYPE_INT);
 
+	signals[SIGNAL_SIGNATURE_RECT] = g_signal_new ("signature-rect",
+			 G_TYPE_FROM_CLASS (object_class),
+			 G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
+			 G_STRUCT_OFFSET (EvViewClass, signature_rect),
+			 NULL, NULL,
+			 g_cclosure_marshal_VOID__UINT_POINTER,
+			 G_TYPE_NONE, 2,
+			 G_TYPE_INT,
+			 EV_TYPE_RECTANGLE);
 	binding_set = gtk_binding_set_by_class (class);
 
 	add_move_binding_keypad (binding_set, GDK_KEY_Left,  0, GTK_MOVEMENT_VISUAL_POSITIONS, -1);
@@ -8255,4 +8332,58 @@ ev_view_disconnect_handlers(EvView *view)
 	g_signal_handlers_disconnect_by_func(view->model,
 					     G_CALLBACK (ev_view_document_changed_cb),
 					     view);
+}
+
+void
+ev_view_start_signature_rect (EvView *view)
+{
+	ev_view_set_cursor (view, EV_VIEW_CURSOR_ADD);
+	view->signature_rect_active = TRUE;
+}
+
+void
+ev_view_cancel_signature_rect (EvView *view)
+{
+	ev_view_set_cursor (view, EV_VIEW_CURSOR_IBEAM);
+	view->signature_rect_in_selection = FALSE;
+	view->signature_rect_active = FALSE;
+}
+
+void
+ev_view_stop_signature_rect (EvView *view)
+{
+	EvRectangle  *rect = ev_rectangle_new ();
+	EvPoint       start;
+	EvPoint       end;
+	gint          signature_page;
+	gint          offset;
+	GdkRectangle  page_area;
+	GtkBorder     border;
+
+	ev_view_set_cursor (view, EV_VIEW_CURSOR_IBEAM);
+
+	find_page_at_location (view, view->signature_rect_start.x, view->signature_rect_start.y, &signature_page, &offset, &offset);
+	if (signature_page == -1) {
+		g_warning ("%s: Invalid signature page", G_STRFUNC);
+		ev_rectangle_free (rect);
+		return;
+	}
+
+	ev_view_get_page_extents (view, signature_page, &page_area, &border);
+	_ev_view_transform_view_point_to_doc_point (view, &view->signature_rect_start, &page_area,
+						    &start.x, &start.y);
+	_ev_view_transform_view_point_to_doc_point (view, &view->signature_rect_stop, &page_area,
+						    &end.x, &end.y);
+
+	rect->x1 = MIN (start.x, end.x);
+	rect->y1 = MIN (start.y, end.y);
+	rect->x2 = MAX (start.x, end.x);
+	rect->y2 = MAX (start.y, end.y);
+
+	view->signature_rect_in_selection = FALSE;
+	view->signature_rect_active = FALSE;
+
+	g_signal_emit (view, signals[SIGNAL_SIGNATURE_RECT], 0, signature_page, rect);
+	ev_rectangle_free (rect);
+	gtk_widget_queue_draw (GTK_WIDGET (view));
 }

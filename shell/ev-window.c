@@ -60,6 +60,7 @@
 #include "ev-document-links.h"
 #include "ev-document-thumbnails.h"
 #include "ev-document-annotations.h"
+#include "ev-document-signatures.h"
 #include "ev-document-type-builtins.h"
 #include "ev-document-misc.h"
 #include "ev-file-exporter.h"
@@ -241,6 +242,12 @@ struct _EvWindowPrivate {
 
 	/* Caret navigation */
 	GtkWidget *ask_caret_navigation_check;
+
+	/* Digital signing */
+	GtkWidget         *certificate_listbox;
+	guint              signature_page;
+	EvRectangle       *signature_bounding_box;
+	EvCertificateInfo *signature_certificate_info;
 };
 
 #define EV_WINDOW_IS_PRESENTATION(w) (w->priv->presentation_view != NULL)
@@ -391,6 +398,9 @@ static void     ev_window_close_find_bar                (EvWindow         *ev_wi
 
 static gchar *caja_sendto = NULL;
 
+static char *ev_window_signature_password_callback (const char *text);
+static void  ev_window_cmd_digital_signing         (GtkAction *action, EvWindow *ev_window);
+
 G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
 static gdouble
@@ -513,6 +523,11 @@ ev_window_setup_action_sensitivity (EvWindow *ev_window)
 	/* Bookmarks menu */
 	ev_window_set_action_sensitive (ev_window, "BookmarksAdd",
 					has_pages && ev_window->priv->bookmarks);
+
+	/* Digital signing */
+	ev_window_set_action_sensitive (ev_window, "DigitalSigning",
+					has_pages && EV_IS_DOCUMENT_SIGNATURES (document) &&
+					ev_document_signatures_can_sign (EV_DOCUMENT_SIGNATURES (document)));
 
 	/* Toolbar-specific actions: */
 	ev_window_set_action_sensitive (ev_window, PAGE_SELECTOR_ACTION, has_pages);
@@ -822,6 +837,8 @@ ev_window_message_area_response_cb (EvMessageArea *area,
 				    gint           response_id,
 				    EvWindow      *window)
 {
+	if (window->priv->view)
+		ev_view_cancel_signature_rect (EV_VIEW (window->priv->view));
 	ev_window_set_message_area (window, NULL);
 }
 
@@ -1770,6 +1787,10 @@ ev_window_set_document (EvWindow *ev_window, EvDocument *document)
 	ev_window->priv->document = g_object_ref (document);
 
 	ev_window_update_max_min_scale (ev_window);
+
+	if (EV_IS_DOCUMENT_SIGNATURES (ev_window->priv->document))
+		ev_document_signatures_set_password_callback (EV_DOCUMENT_SIGNATURES (ev_window->priv->document),
+		                                               ev_window_signature_password_callback);
 
 	ev_window_set_message_area (ev_window, NULL);
 
@@ -3323,7 +3344,298 @@ ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 	gtk_widget_show (fc);
 }
 
- static void
+static char *
+ev_window_signature_password_callback (const char *text)
+{
+	GtkWidget *dialog;
+	GtkWidget *box;
+	GtkWidget *entry;
+	char *ret;
+	GtkWindow *parent;
+
+	parent = gtk_application_get_active_window (GTK_APPLICATION (g_application_get_default ()));
+
+	dialog = gtk_message_dialog_new (parent, GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_NONE, _("Enter password"));
+	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Cancel"), GTK_RESPONSE_CANCEL);
+	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Unlock"), GTK_RESPONSE_OK);
+
+	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), _("Enter password to open: %s"), text);
+	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+
+	box = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
+	entry = gtk_entry_new ();
+	gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
+	gtk_entry_set_visibility (GTK_ENTRY (entry), FALSE);
+	gtk_box_pack_end (GTK_BOX (box), entry, TRUE, TRUE, 6);
+	gtk_widget_show_all (box);
+
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	ret = g_strdup (gtk_entry_get_text (GTK_ENTRY (entry)));
+	gtk_widget_destroy (dialog);
+
+	return ret;
+}
+
+static void
+on_document_signed (GObject      *source_object,
+                    GAsyncResult *result,
+                    gpointer      user_data)
+{
+	char *file = user_data;
+	gchar *uri = g_strdup_printf ("file://%s", file);
+	GtkWidget *new_window;
+
+	new_window = ev_window_new ();
+	ev_window_open_uri (EV_WINDOW (new_window), uri, NULL, EV_WINDOW_MODE_NORMAL, NULL);
+	gtk_widget_show_all (new_window);
+	g_free (uri);
+	g_free (file);
+}
+
+static void
+ev_window_certificate_save_file (EvWindow                *window,
+                                 const EvCertificateInfo *certificate_info,
+                                 const char              *filename)
+{
+	EvWindowPrivate *priv = window->priv;
+	EvSignaturesData *data;
+	time_t t;
+	gchar *tmp;
+
+	data = ev_document_signatures_data_new ();
+	ev_document_signatures_data_set_certificate_info (data, certificate_info);
+	ev_document_signatures_data_set_destination_file (data, filename);
+	ev_document_signatures_data_set_page (data, priv->signature_page);
+	ev_document_signatures_data_set_rect (data, priv->signature_bounding_box);
+
+	time (&t);
+	tmp = g_strdup_printf (_("Digitally signed by %s\nDate: %s"),
+	                       ev_certificate_info_get_subject_common_name (certificate_info),
+	                       ctime (&t));
+	ev_document_signatures_data_set_signature (data, tmp);
+	g_free (tmp);
+	ev_document_signatures_data_set_signature_left (data, ev_certificate_info_get_subject_common_name (certificate_info));
+
+	ev_document_signatures_sign (EV_DOCUMENT_SIGNATURES (priv->document), data, NULL, on_document_signed, g_strdup (filename));
+}
+
+static void
+ev_window_on_save_signed_file_response (GtkWidget *dialog,
+                                        guint      response,
+                                        gpointer   user_data)
+{
+	EvWindow *window = EV_WINDOW (user_data);
+	EvWindowPrivate *priv = window->priv;
+
+	if (response == GTK_RESPONSE_ACCEPT) {
+		gchar *filename;
+		GtkFileChooser *chooser = GTK_FILE_CHOOSER (dialog);
+
+		filename = gtk_file_chooser_get_filename (chooser);
+		ev_window_certificate_save_file (window, priv->signature_certificate_info, filename);
+		g_free (filename);
+	} else {
+		g_clear_pointer (&priv->signature_certificate_info, ev_certificate_info_free);
+	}
+
+	gtk_widget_destroy (dialog);
+}
+
+static void
+ev_window_certificate_save_as_dialog (EvWindow *window)
+{
+	GtkWidget *dialog;
+	GtkFileChooser *chooser;
+	GFile *file;
+	gchar *base_name;
+
+	dialog = gtk_file_chooser_dialog_new (_("Save Signed File"),
+	                                      GTK_WINDOW (window),
+	                                      GTK_FILE_CHOOSER_ACTION_SAVE,
+	                                      _("_Cancel"), GTK_RESPONSE_CANCEL,
+	                                      _("_Save"), GTK_RESPONSE_ACCEPT,
+	                                      NULL);
+	chooser = GTK_FILE_CHOOSER (dialog);
+	gtk_file_chooser_set_do_overwrite_confirmation (chooser, TRUE);
+
+	if (window->priv->uri) {
+		file = g_file_new_for_uri (window->priv->uri);
+		base_name = g_file_get_basename (file);
+		gtk_file_chooser_set_current_name (chooser, base_name);
+		g_free (base_name);
+		g_object_unref (file);
+	}
+
+	g_signal_connect (dialog, "response", G_CALLBACK (ev_window_on_save_signed_file_response), window);
+	gtk_widget_show_all (dialog);
+}
+
+static void
+ev_window_certificate_selection_response (GtkWidget *dialog,
+                                          guint      response,
+                                          gpointer   user_data)
+{
+	EvWindow *window = EV_WINDOW (user_data);
+	EvWindowPrivate *priv = window->priv;
+
+	if (response != GTK_RESPONSE_OK) {
+		gtk_widget_destroy (dialog);
+		return;
+	}
+
+	GtkListBoxRow *row = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->certificate_listbox));
+	if (row) {
+		const char *cert_id = g_object_get_data (G_OBJECT (row), "cert-id");
+		priv->signature_certificate_info = ev_document_signature_get_certificate_info (
+		        EV_DOCUMENT_SIGNATURES (priv->document), cert_id);
+	}
+
+	gtk_widget_destroy (dialog);
+
+	if (!priv->signature_certificate_info)
+		return;
+
+	ev_window_certificate_save_as_dialog (window);
+}
+
+static void
+ev_window_create_certificate_selection (EvWindow *window)
+{
+	GtkWidget *dialog;
+	GtkWidget *box;
+	EvWindowPrivate *priv = window->priv;
+	GList *certificates;
+	GList *list;
+
+	certificates = ev_document_signatures_get_available_signing_certificates (EV_DOCUMENT_SIGNATURES (priv->document));
+
+	dialog = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_MODAL,
+	                                 GTK_MESSAGE_QUESTION, GTK_BUTTONS_NONE,
+	                                 _("Certificate required"));
+	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Cancel"), GTK_RESPONSE_CANCEL);
+
+	if (certificates != NULL) {
+		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), _("Select signing certificate"));
+		gtk_dialog_add_button (GTK_DIALOG (dialog), _("Select"), GTK_RESPONSE_OK);
+		gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+
+		box = gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog));
+		priv->certificate_listbox = gtk_list_box_new ();
+		for (list = certificates; list; list = list->next) {
+			EvCertificateInfo *cert_info = list->data;
+			GtkWidget *row = gtk_list_box_row_new ();
+			gchar *label_text = g_strdup_printf ("%s\n<small>%s</small>",
+			        ev_certificate_info_get_id (cert_info),
+			        ev_certificate_info_get_subject_common_name (cert_info));
+			GtkWidget *label = gtk_label_new (NULL);
+			gtk_label_set_markup (GTK_LABEL (label), label_text);
+			gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+			g_free (label_text);
+			gtk_container_add (GTK_CONTAINER (row), label);
+			g_object_set_data_full (G_OBJECT (row), "cert-id",
+			                        g_strdup (ev_certificate_info_get_id (cert_info)),
+			                        g_free);
+			gtk_list_box_insert (GTK_LIST_BOX (priv->certificate_listbox), row, -1);
+		}
+
+		gtk_list_box_select_row (GTK_LIST_BOX (priv->certificate_listbox),
+		                         gtk_list_box_get_row_at_index (GTK_LIST_BOX (priv->certificate_listbox), 0));
+		gtk_box_pack_end (GTK_BOX (box), priv->certificate_listbox, TRUE, TRUE, 6);
+		gtk_widget_show_all (box);
+		g_list_free_full (certificates, (GDestroyNotify) ev_certificate_info_free);
+	} else {
+		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), _("No certificates found!"));
+	}
+
+	g_signal_connect (dialog, "response", G_CALLBACK (ev_window_certificate_selection_response), window);
+	gtk_widget_show_all (dialog);
+}
+
+static void
+ev_window_on_signature_rect_too_small_response (GtkWidget *dialog,
+                                                guint      response,
+                                                gpointer   user_data)
+{
+	EvWindow *window = EV_WINDOW (user_data);
+
+	gtk_widget_destroy (dialog);
+
+	if (response == GTK_RESPONSE_OK) {
+		ev_window_create_certificate_selection (window);
+		return;
+	}
+
+	ev_window_cmd_digital_signing (NULL, window);
+}
+
+static void
+ev_window_show_signature_rect_too_small_warning (EvWindow *window)
+{
+	GtkWidget *dialog;
+
+	dialog = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_MODAL,
+	                                 GTK_MESSAGE_QUESTION, GTK_BUTTONS_NONE,
+	                                 _("Selection too small"));
+	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	        _("A signature of this size may be too small to read. If you would like to create a potentially more readable signature, press 'Start over' and draw a bigger rectangle."));
+
+	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Start over"), GTK_RESPONSE_CANCEL);
+	gtk_dialog_add_button (GTK_DIALOG (dialog), _("Sign"), GTK_RESPONSE_OK);
+	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+	g_signal_connect (dialog, "response", G_CALLBACK (ev_window_on_signature_rect_too_small_response), window);
+	gtk_widget_show_all (dialog);
+}
+
+static void
+ev_window_on_signature_rect (EvView      *view,
+                             gint         page,
+                             EvRectangle *rect,
+                             gpointer     user_data)
+{
+	EvWindow *window = user_data;
+	EvWindowPrivate *priv = window->priv;
+	gdouble width, height;
+
+	if (priv->message_area)
+		gtk_widget_destroy (priv->message_area);
+
+	if (!rect)
+		return;
+
+	ev_document_get_page_size (priv->document, page, &width, &height);
+
+	priv->signature_page = page;
+
+	g_clear_pointer (&priv->signature_bounding_box, ev_rectangle_free);
+	priv->signature_bounding_box = ev_rectangle_copy (rect);
+
+	if ((ABS(rect->x1 - rect->x2) / width < 0.1) || (ABS(rect->y1 - rect->y2) / height < 0.1))
+		ev_window_show_signature_rect_too_small_warning (window);
+	else
+		ev_window_create_certificate_selection (window);
+}
+
+static void
+ev_window_cmd_digital_signing (GtkAction *action,
+                               EvWindow  *ev_window)
+{
+	EvWindowPrivate *priv = ev_window->priv;
+	GtkWidget *area;
+
+	area = ev_message_area_new (GTK_MESSAGE_INFO,
+	                            _("Draw a rectangle to insert a signature field"),
+	                            "gtk-close", GTK_RESPONSE_CLOSE,
+	                            NULL);
+	g_signal_connect (area, "response",
+	                  G_CALLBACK (ev_window_message_area_response_cb),
+	                  ev_window);
+	gtk_widget_show (area);
+	ev_window_set_message_area (ev_window, area);
+
+	ev_view_start_signature_rect (EV_VIEW (priv->view));
+}
+
+static void
 ev_window_cmd_send_to (GtkAction *action,
 		       EvWindow  *ev_window)
 {
@@ -6584,6 +6896,9 @@ static const GtkActionEntry entries[] = {
 	{ "FileSaveAs", "document-save-as", N_("_Save As…"), "<control>S",
 	  N_("Save a copy of the current document"),
 	  G_CALLBACK (ev_window_cmd_save_as) },
+	{ "DigitalSigning", NULL, N_("_Digital Signing…"), NULL,
+	  N_("Digitally sign the current document"),
+	  G_CALLBACK (ev_window_cmd_digital_signing) },
 	{ "FileSendTo", EV_STOCK_SEND_TO, N_("Send _To..."), NULL,
 	  N_("Send current document by mail, instant message..."),
 	  G_CALLBACK (ev_window_cmd_send_to) },
@@ -8218,6 +8533,8 @@ ev_window_init (EvWindow *ev_window)
 	gtk_widget_show (ev_window->priv->view_box);
 
 	ev_window->priv->view = ev_view_new ();
+	g_signal_connect (G_OBJECT (ev_window->priv->view), "signature-rect",
+	                  G_CALLBACK (ev_window_on_signature_rect), ev_window);
 
 #if ENABLE_EPUB /* The webview is created in ev_window_set_document only if the document is a webdocument. */
 	ev_window->priv->webview = NULL;
