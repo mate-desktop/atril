@@ -69,16 +69,28 @@ ev_document_signatures_sign (EvDocumentSignatures *document_signatures,
                              EvSignaturesData     *data,
                              GCancellable         *cancellable,
                              GAsyncReadyCallback   callback,
-                             gpointer              user_data)
+	                     gpointer              user_data,
+	                     GError              **error)
 {
    EvDocumentSignaturesInterface *iface = EV_DOCUMENT_SIGNATURES_GET_IFACE (document_signatures);
 
-   if (iface->sign) {
-       iface->sign (document_signatures, data, cancellable, callback, user_data);
-       return TRUE;
-   }
+	if (iface->sign)
+	   return iface->sign (document_signatures, data, cancellable, callback, user_data, error);
 
    return FALSE;
+}
+
+gboolean
+ev_document_signatures_sign_finish (EvDocumentSignatures *document_signatures,
+	                            GAsyncResult         *result,
+	                            GError              **error)
+{
+	EvDocumentSignaturesInterface *iface = EV_DOCUMENT_SIGNATURES_GET_IFACE (document_signatures);
+
+	if (iface->sign_finish)
+		return iface->sign_finish (document_signatures, result, error);
+
+	return FALSE;
 }
 
 gboolean
@@ -126,7 +138,7 @@ ev_document_signatures_data_new (void)
 void
 ev_document_signatures_data_free (EvSignaturesData *data)
 {
-	g_clear_object (&data->certificate_info);
+	g_clear_pointer (&data->certificate_info, ev_certificate_info_free);
 	g_clear_pointer (&data->destination_file, g_free);
 	g_clear_pointer (&data->password, g_free);
 	g_clear_pointer (&data->signature, g_free);

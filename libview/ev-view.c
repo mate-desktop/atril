@@ -289,7 +289,7 @@ static void       ev_view_update_primary_selection           (EvView            
 /*** Caret navigation ***/
 static void       ev_view_check_cursor_blink                 (EvView             *ev_view);
 
-void ev_view_stop_signature_rect (EvView *view);
+static void       ev_view_stop_signature_rect                (EvView             *view);
 
 G_DEFINE_TYPE_WITH_CODE (EvView, ev_view, GTK_TYPE_CONTAINER,
                          G_IMPLEMENT_INTERFACE (GTK_TYPE_SCROLLABLE, NULL))
@@ -8349,7 +8349,7 @@ ev_view_cancel_signature_rect (EvView *view)
 	view->signature_rect_active = FALSE;
 }
 
-void
+static void
 ev_view_stop_signature_rect (EvView *view)
 {
 	EvRectangle  *rect = ev_rectangle_new ();
