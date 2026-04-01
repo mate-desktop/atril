@@ -28,6 +28,7 @@ requires+=(
 	make
 	mate-common
 	mate-desktop
+	poppler
 	poppler-glib
 	texlive-bin
 	webkit2gtk
