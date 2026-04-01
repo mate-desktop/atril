@@ -29,6 +29,7 @@ requires+=(
 	libkpathsea-dev
 	libmate-desktop-dev
 	libpoppler-glib-dev
+	poppler-utils
 	libsecret-1-dev
 	libsm-dev
 	libspectre-dev
