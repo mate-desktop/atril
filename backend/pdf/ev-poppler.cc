@@ -3355,6 +3355,95 @@ find_poppler_certificate_info_by_id (EvCertificateInfo *ev_cert_info)
 	return NULL;
 }
 
+static EvDocumentSignatureState
+pdf_document_signatures_get_signature_state (EvDocumentSignatures *document,
+	                                     guint                *n_signatures)
+{
+	PdfDocument *pdf_document = PDF_DOCUMENT (document);
+	GList *signatures;
+	gboolean all_valid;
+	gboolean any_invalid;
+	gint total_signatures;
+
+	total_signatures = poppler_document_get_n_signatures (POPPLER_DOCUMENT (pdf_document->document));
+	if (n_signatures)
+		*n_signatures = total_signatures > 0 ? (guint) total_signatures : 0;
+
+	if (total_signatures <= 0)
+		return EV_DOCUMENT_SIGNATURE_STATE_NONE;
+
+	signatures = poppler_document_get_signature_fields (POPPLER_DOCUMENT (pdf_document->document));
+	if (!signatures)
+		return EV_DOCUMENT_SIGNATURE_STATE_PRESENT;
+
+	all_valid = TRUE;
+	any_invalid = FALSE;
+
+	for (GList *list = signatures; list != NULL; list = list->next) {
+		PopplerFormField *field = POPPLER_FORM_FIELD (list->data);
+		PopplerSignatureInfo *signature_info;
+		PopplerSignatureStatus signature_status;
+		PopplerCertificateStatus certificate_status;
+		g_autoptr(GError) error = NULL;
+
+		signature_info = poppler_form_field_signature_validate_sync (field,
+		                                                           POPPLER_SIGNATURE_VALIDATION_FLAG_VALIDATE_CERTIFICATE,
+		                                                           NULL,
+		                                                           &error);
+		if (!signature_info) {
+			all_valid = FALSE;
+			continue;
+		}
+
+		signature_status = poppler_signature_info_get_signature_status (signature_info);
+		certificate_status = poppler_signature_info_get_certificate_status (signature_info);
+
+		switch (signature_status) {
+		case POPPLER_SIGNATURE_VALID:
+			break;
+		case POPPLER_SIGNATURE_INVALID:
+		case POPPLER_SIGNATURE_DIGEST_MISMATCH:
+		case POPPLER_SIGNATURE_DECODING_ERROR:
+			all_valid = FALSE;
+			any_invalid = TRUE;
+			break;
+		case POPPLER_SIGNATURE_GENERIC_ERROR:
+		case POPPLER_SIGNATURE_NOT_FOUND:
+		case POPPLER_SIGNATURE_NOT_VERIFIED:
+			all_valid = FALSE;
+			break;
+		}
+
+		switch (certificate_status) {
+		case POPPLER_CERTIFICATE_TRUSTED:
+			break;
+		case POPPLER_CERTIFICATE_REVOKED:
+		case POPPLER_CERTIFICATE_EXPIRED:
+		case POPPLER_CERTIFICATE_UNTRUSTED_ISSUER:
+			all_valid = FALSE;
+			any_invalid = TRUE;
+			break;
+		case POPPLER_CERTIFICATE_UNKNOWN_ISSUER:
+		case POPPLER_CERTIFICATE_GENERIC_ERROR:
+		case POPPLER_CERTIFICATE_NOT_VERIFIED:
+			all_valid = FALSE;
+			break;
+		}
+
+		poppler_signature_info_free (signature_info);
+	}
+
+	g_list_free_full (signatures, g_object_unref);
+
+	if (any_invalid)
+		return EV_DOCUMENT_SIGNATURE_STATE_INVALID;
+
+	if (all_valid)
+		return EV_DOCUMENT_SIGNATURE_STATE_VALID;
+
+	return EV_DOCUMENT_SIGNATURE_STATE_PRESENT;
+}
+
 static void
 pdf_document_signatures_sign (EvDocumentSignatures *document,
                               EvSignaturesData     *data,
@@ -3493,5 +3582,6 @@ pdf_document_signatures_iface_init (EvDocumentSignaturesInterface *iface)
 	iface->get_certificate_info = pdf_document_get_certificate_info;
 	iface->sign = pdf_document_signatures_sign;
 	iface->can_sign = pdf_document_signatures_can_sign;
+	iface->get_signature_state = pdf_document_signatures_get_signature_state;
 #endif
 }
