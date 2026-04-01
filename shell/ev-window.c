@@ -399,6 +399,7 @@ static void     ev_window_close_find_bar                (EvWindow         *ev_wi
 static gchar *caja_sendto = NULL;
 
 static char *ev_window_signature_password_callback (const char *text);
+static void  ev_window_show_signature_message    (EvWindow   *window);
 static void  ev_window_cmd_digital_signing         (GtkAction *action, EvWindow *ev_window);
 
 G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
@@ -901,6 +902,72 @@ ev_window_warning_message (EvWindow    *window,
 	g_signal_connect (area, "response",
 			  G_CALLBACK (ev_window_message_area_response_cb),
 			  window);
+	gtk_widget_show (area);
+	ev_window_set_message_area (window, area);
+}
+
+static void
+ev_window_show_signature_message (EvWindow *window)
+{
+	EvDocumentSignatureState state;
+	GtkMessageType message_type;
+	GtkWidget *area;
+	gchar *primary_text;
+	const gchar *secondary_text = NULL;
+	guint n_signatures = 0;
+
+	if (window->priv->message_area ||
+	    !window->priv->document ||
+	    !EV_IS_DOCUMENT_SIGNATURES (window->priv->document))
+		return;
+
+	state = ev_document_signatures_get_signature_state (EV_DOCUMENT_SIGNATURES (window->priv->document),
+	                                                    &n_signatures);
+	if (state == EV_DOCUMENT_SIGNATURE_STATE_NONE || n_signatures == 0)
+		return;
+
+	switch (state) {
+	case EV_DOCUMENT_SIGNATURE_STATE_VALID:
+		message_type = GTK_MESSAGE_INFO;
+		primary_text = g_strdup_printf (ngettext ("This document contains %u valid digital signature.",
+		                                         "This document contains %u valid digital signatures.",
+		                                         n_signatures),
+		                                n_signatures);
+		break;
+	case EV_DOCUMENT_SIGNATURE_STATE_INVALID:
+		message_type = GTK_MESSAGE_WARNING;
+		primary_text = g_strdup_printf (ngettext ("This document contains %u digital signature, but at least one could not be validated.",
+		                                         "This document contains %u digital signatures, but at least one could not be validated.",
+		                                         n_signatures),
+		                                n_signatures);
+		secondary_text = _("The document may have been changed after signing, or a signing certificate is expired, revoked, or explicitly untrusted.");
+		break;
+	case EV_DOCUMENT_SIGNATURE_STATE_PRESENT:
+		message_type = GTK_MESSAGE_INFO;
+		primary_text = g_strdup_printf (ngettext ("This document contains %u digital signature.",
+		                                         "This document contains %u digital signatures.",
+		                                         n_signatures),
+		                                n_signatures);
+		secondary_text = _("Atril found signatures in the document, but could not confirm that all of them are valid.");
+		break;
+	case EV_DOCUMENT_SIGNATURE_STATE_NONE:
+	default:
+		return;
+	}
+
+	area = ev_message_area_new (message_type,
+	                            primary_text,
+	                            "gtk-close",
+	                            GTK_RESPONSE_CLOSE,
+	                            NULL);
+	g_free (primary_text);
+
+	if (secondary_text)
+		ev_message_area_set_secondary_text (EV_MESSAGE_AREA (area), secondary_text);
+
+	g_signal_connect (area, "response",
+	                  G_CALLBACK (ev_window_message_area_response_cb),
+	                  window);
 	gtk_widget_show (area);
 	ev_window_set_message_area (window, area);
 }
@@ -1801,6 +1868,8 @@ ev_window_set_document (EvWindow *ev_window, EvDocument *document)
 		ev_window_warning_message (ev_window, "%s",
 					   _("The document contains only empty pages"));
 	}
+
+	ev_window_show_signature_message (ev_window);
 
 #if ENABLE_EPUB
 	if (document->iswebdocument == TRUE &&
