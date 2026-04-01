@@ -92,6 +92,21 @@ ev_document_signatures_can_sign (EvDocumentSignatures *document_signatures)
    return FALSE;
 }
 
+EvDocumentSignatureState
+ev_document_signatures_get_signature_state (EvDocumentSignatures *document_signatures,
+	                                    guint                *n_signatures)
+{
+	EvDocumentSignaturesInterface *iface = EV_DOCUMENT_SIGNATURES_GET_IFACE (document_signatures);
+
+	if (n_signatures)
+		*n_signatures = 0;
+
+	if (iface->get_signature_state)
+		return iface->get_signature_state (document_signatures, n_signatures);
+
+	return EV_DOCUMENT_SIGNATURE_STATE_NONE;
+}
+
 EvSignaturesData *
 ev_document_signatures_data_new (void)
 {
