@@ -401,6 +401,7 @@ static gchar *caja_sendto = NULL;
 static char *ev_window_signature_password_callback (const char *text);
 static void  ev_window_show_signature_message    (EvWindow   *window);
 static void  ev_window_cmd_digital_signing         (GtkAction *action, EvWindow *ev_window);
+static void  ev_window_clear_signature_state       (EvWindow   *window);
 
 G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
@@ -970,6 +971,14 @@ ev_window_show_signature_message (EvWindow *window)
 	                  window);
 	gtk_widget_show (area);
 	ev_window_set_message_area (window, area);
+}
+
+static void
+ev_window_clear_signature_state (EvWindow *window)
+{
+	window->priv->certificate_listbox = NULL;
+	g_clear_pointer (&window->priv->signature_bounding_box, ev_rectangle_free);
+	g_clear_pointer (&window->priv->signature_certificate_info, ev_certificate_info_free);
 }
 
 static gboolean
@@ -3421,6 +3430,7 @@ ev_window_signature_password_callback (const char *text)
 	GtkWidget *entry;
 	char *ret;
 	GtkWindow *parent;
+	gint response;
 
 	parent = gtk_application_get_active_window (GTK_APPLICATION (g_application_get_default ()));
 
@@ -3438,8 +3448,8 @@ ev_window_signature_password_callback (const char *text)
 	gtk_box_pack_end (GTK_BOX (box), entry, TRUE, TRUE, 6);
 	gtk_widget_show_all (box);
 
-	gtk_dialog_run (GTK_DIALOG (dialog));
-	ret = g_strdup (gtk_entry_get_text (GTK_ENTRY (entry)));
+	response = gtk_dialog_run (GTK_DIALOG (dialog));
+	ret = response == GTK_RESPONSE_OK ? g_strdup (gtk_entry_get_text (GTK_ENTRY (entry))) : NULL;
 	gtk_widget_destroy (dialog);
 
 	return ret;
@@ -3451,8 +3461,22 @@ on_document_signed (GObject      *source_object,
                     gpointer      user_data)
 {
 	char *file = user_data;
-	gchar *uri = g_strdup_printf ("file://%s", file);
+	gchar *uri;
 	GtkWidget *new_window;
+	GError *error = NULL;
+
+	if (!ev_document_signatures_sign_finish (EV_DOCUMENT_SIGNATURES (source_object), result, &error)) {
+		g_warning ("Failed to sign document: %s", error->message);
+		g_error_free (error);
+		g_free (file);
+		return;
+	}
+
+	uri = g_filename_to_uri (file, NULL, NULL);
+	if (!uri) {
+		g_free (file);
+		return;
+	}
 
 	new_window = ev_window_new ();
 	ev_window_open_uri (EV_WINDOW (new_window), uri, NULL, EV_WINDOW_MODE_NORMAL, NULL);
@@ -3470,6 +3494,8 @@ ev_window_certificate_save_file (EvWindow                *window,
 	EvSignaturesData *data;
 	time_t t;
 	gchar *tmp;
+	gchar *saved_filename;
+	GError *error = NULL;
 
 	data = ev_document_signatures_data_new ();
 	ev_document_signatures_data_set_certificate_info (data, certificate_info);
@@ -3484,8 +3510,16 @@ ev_window_certificate_save_file (EvWindow                *window,
 	ev_document_signatures_data_set_signature (data, tmp);
 	g_free (tmp);
 	ev_document_signatures_data_set_signature_left (data, ev_certificate_info_get_subject_common_name (certificate_info));
+	saved_filename = g_strdup (filename);
 
-	ev_document_signatures_sign (EV_DOCUMENT_SIGNATURES (priv->document), data, NULL, on_document_signed, g_strdup (filename));
+	if (!ev_document_signatures_sign (EV_DOCUMENT_SIGNATURES (priv->document), data, NULL,
+	                                 on_document_signed, saved_filename, &error)) {
+		ev_window_error_message (window, error, "%s", _("Failed to sign document"));
+		g_error_free (error);
+		g_free (saved_filename);
+	}
+
+	ev_document_signatures_data_free (data);
 }
 
 static void
@@ -3506,6 +3540,8 @@ ev_window_on_save_signed_file_response (GtkWidget *dialog,
 	} else {
 		g_clear_pointer (&priv->signature_certificate_info, ev_certificate_info_free);
 	}
+
+	priv->certificate_listbox = NULL;
 
 	gtk_widget_destroy (dialog);
 }
@@ -3548,6 +3584,7 @@ ev_window_certificate_selection_response (GtkWidget *dialog,
 	EvWindowPrivate *priv = window->priv;
 
 	if (response != GTK_RESPONSE_OK) {
+		priv->certificate_listbox = NULL;
 		gtk_widget_destroy (dialog);
 		return;
 	}
@@ -3560,6 +3597,7 @@ ev_window_certificate_selection_response (GtkWidget *dialog,
 	}
 
 	gtk_widget_destroy (dialog);
+	priv->certificate_listbox = NULL;
 
 	if (!priv->signature_certificate_info)
 		return;
@@ -6881,6 +6919,8 @@ ev_window_dispose (GObject *object)
 		g_queue_free (priv->print_queue);
 		priv->print_queue = NULL;
 	}
+
+	ev_window_clear_signature_state (window);
 
 	if (priv->toolbars_model) {
 		g_object_unref (priv->toolbars_model);

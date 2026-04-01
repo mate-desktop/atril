@@ -3340,19 +3340,42 @@ pdf_document_document_layers_iface_init (EvDocumentLayersInterface *iface)
 }
 
 #if POPPLER_CHECK_VERSION(22, 2, 0)
-static PopplerCertificateInfo *
-find_poppler_certificate_info_by_id (EvCertificateInfo *ev_cert_info)
+typedef struct {
+	EvDocumentSignatures *document;
+	GAsyncReadyCallback   callback;
+	gpointer              user_data;
+	PopplerSigningData   *signing_data;
+} PdfSignClosure;
+
+static void
+pdf_sign_closure_free (PdfSignClosure *closure)
 {
-	GList *certs = poppler_get_available_signing_certificates ();
+	if (!closure)
+		return;
 
-	for (GList *list = certs; list != NULL; list = list->next) {
-		PopplerCertificateInfo *cinfo = (PopplerCertificateInfo *)list->data;
+	poppler_signing_data_free (closure->signing_data);
+	g_object_unref (closure->document);
+	g_free (closure);
+}
 
-		if (g_strcmp0 (ev_certificate_info_get_id (ev_cert_info), poppler_certificate_info_get_id (cinfo)) == 0)
-			return cinfo;
-	}
+static void
+pdf_document_sign_cb (GObject      *source_object,
+	              GAsyncResult *result,
+	              gpointer      user_data)
+{
+	PdfSignClosure *closure = (PdfSignClosure *)user_data;
+	GTask *task;
+	GError *error = NULL;
 
-	return NULL;
+	task = g_task_new (closure->document, NULL, closure->callback, closure->user_data);
+
+	if (poppler_document_sign_finish (POPPLER_DOCUMENT (source_object), result, &error))
+		g_task_return_boolean (task, TRUE);
+	else
+		g_task_return_error (task, error);
+
+	g_object_unref (task);
+	pdf_sign_closure_free (closure);
 }
 
 static EvDocumentSignatureState
@@ -3444,24 +3467,47 @@ pdf_document_signatures_get_signature_state (EvDocumentSignatures *document,
 	return EV_DOCUMENT_SIGNATURE_STATE_PRESENT;
 }
 
-static void
+static gboolean
 pdf_document_signatures_sign (EvDocumentSignatures *document,
                               EvSignaturesData     *data,
                               GCancellable         *cancellable,
                               GAsyncReadyCallback   callback,
-                              gpointer              user_data)
+	                      gpointer              user_data,
+	                      GError              **error)
 {
 	PdfDocument *pdf_document = PDF_DOCUMENT (document);
 	PopplerColor *color;
 	PopplerSigningData *signing_data = poppler_signing_data_new ();
-	PopplerCertificateInfo *cert_info = find_poppler_certificate_info_by_id (data->certificate_info);
+	PopplerCertificateInfo *cert_info;
+	PdfSignClosure *closure;
+	gchar *field_partial_name;
 
-	if (!cert_info)
-		return;
+	if (!data || !data->certificate_info || !data->destination_file || !data->rect) {
+		g_set_error_literal (error,
+		                     G_IO_ERROR,
+		                     G_IO_ERROR_INVALID_ARGUMENT,
+		                     _("Digital signature setup is incomplete."));
+		poppler_signing_data_free (signing_data);
+		return FALSE;
+	}
+
+	cert_info = poppler_get_certificate_info_by_id (ev_certificate_info_get_id (data->certificate_info));
+
+	if (!cert_info) {
+		g_set_error_literal (error,
+		                     G_IO_ERROR,
+		                     G_IO_ERROR_NOT_FOUND,
+		                     _("No signing certificate was found."));
+		poppler_signing_data_free (signing_data);
+		return FALSE;
+	}
 
 	poppler_signing_data_set_certificate_info (signing_data, cert_info);
+	poppler_certificate_info_free (cert_info);
 	poppler_signing_data_set_page (signing_data, data->page);
-	poppler_signing_data_set_field_partial_name (signing_data, g_uuid_string_random ());
+	field_partial_name = g_uuid_string_random ();
+	poppler_signing_data_set_field_partial_name (signing_data, field_partial_name);
+	g_free (field_partial_name);
 	poppler_signing_data_set_destination_filename (signing_data, data->destination_file);
 
 	if (data->password)
@@ -3510,14 +3556,36 @@ pdf_document_signatures_sign (EvDocumentSignatures *document,
 	signing_rect->y2 = height - data->rect->y2;
 
 	poppler_signing_data_set_signature_rectangle (signing_data, signing_rect);
+	poppler_rectangle_free (signing_rect);
 
-	poppler_document_sign (POPPLER_DOCUMENT (pdf_document->document), signing_data, cancellable, callback, user_data);
+	closure = g_new0 (PdfSignClosure, 1);
+	closure->document = EV_DOCUMENT_SIGNATURES (g_object_ref (document));
+	closure->callback = callback;
+	closure->user_data = user_data;
+	closure->signing_data = signing_data;
+
+	poppler_document_sign (POPPLER_DOCUMENT (pdf_document->document), signing_data, cancellable, pdf_document_sign_cb, closure);
+
+	return TRUE;
+}
+
+static gboolean
+pdf_document_signatures_sign_finish (EvDocumentSignatures *document,
+	                             GAsyncResult         *result,
+	                             GError              **error)
+{
+	return g_task_propagate_boolean (G_TASK (result), error);
 }
 
 static gboolean
 pdf_document_signatures_can_sign (EvDocumentSignatures *document)
 {
-	return TRUE;
+	GList *certs = poppler_get_available_signing_certificates ();
+	gboolean can_sign = certs != NULL;
+
+	g_list_free_full (certs, (GDestroyNotify) poppler_certificate_info_free);
+
+	return can_sign;
 }
 
 static void
@@ -3552,13 +3620,16 @@ static EvCertificateInfo *
 pdf_document_get_certificate_info (EvDocumentSignatures *document,
                                    const char           *id)
 {
+	GList *certs;
 	GList *list;
 	EvCertificateInfo *info = NULL;
 
 	if (!id || strlen (id) == 0)
 		return NULL;
 
-	for (list = pdf_document_get_available_signing_certificates (document); list != NULL; list = list->next) {
+	certs = pdf_document_get_available_signing_certificates (document);
+
+	for (list = certs; list != NULL; list = list->next) {
 		EvCertificateInfo *cert_info = (EvCertificateInfo *)list->data;
 
 		if (g_strcmp0 (ev_certificate_info_get_id (cert_info), id) == 0) {
@@ -3567,7 +3638,7 @@ pdf_document_get_certificate_info (EvDocumentSignatures *document,
 		}
 	}
 
-	g_list_free_full (list, (GDestroyNotify) ev_certificate_info_free);
+	g_list_free_full (certs, (GDestroyNotify) ev_certificate_info_free);
 
 	return info;
 }
@@ -3581,6 +3652,7 @@ pdf_document_signatures_iface_init (EvDocumentSignaturesInterface *iface)
 	iface->get_available_signing_certificates = pdf_document_get_available_signing_certificates;
 	iface->get_certificate_info = pdf_document_get_certificate_info;
 	iface->sign = pdf_document_signatures_sign;
+	iface->sign_finish = pdf_document_signatures_sign_finish;
 	iface->can_sign = pdf_document_signatures_can_sign;
 	iface->get_signature_state = pdf_document_signatures_get_signature_state;
 #endif
