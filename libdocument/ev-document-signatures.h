@@ -43,6 +43,14 @@ G_BEGIN_DECLS
 typedef struct _EvDocumentSignatures          EvDocumentSignatures;
 typedef struct _EvDocumentSignaturesInterface EvDocumentSignaturesInterface;
 
+typedef enum
+{
+  EV_DOCUMENT_SIGNATURE_STATE_NONE,
+  EV_DOCUMENT_SIGNATURE_STATE_PRESENT,
+  EV_DOCUMENT_SIGNATURE_STATE_VALID,
+  EV_DOCUMENT_SIGNATURE_STATE_INVALID
+} EvDocumentSignatureState;
+
 typedef struct
 {
   char *id;
@@ -78,8 +86,18 @@ struct _EvDocumentSignaturesInterface
    void      (* set_password_callback) (EvDocumentSignatures *document_signatures, EvSignaturePasswordCallback cb);
    GList    *(* get_available_signing_certificates) (EvDocumentSignatures *document_signatures);
    EvCertificateInfo *(* get_certificate_info) (EvDocumentSignatures *document_signatures, const char *id);
-   void  (* sign) (EvDocumentSignatures *document_signatures, EvSignaturesData *data, GCancellable *cancellable, GAsyncReadyCallback callback, gpointer user_data);
+  gboolean  (* sign) (EvDocumentSignatures *document_signatures,
+	               EvSignaturesData     *data,
+	               GCancellable         *cancellable,
+	               GAsyncReadyCallback   callback,
+	               gpointer              user_data,
+	               GError              **error);
+   gboolean  (* sign_finish) (EvDocumentSignatures *document_signatures,
+                       GAsyncResult         *result,
+                       GError              **error);
    gboolean  (* can_sign) (EvDocumentSignatures *document_signatures);
+	EvDocumentSignatureState (* get_signature_state) (EvDocumentSignatures *document_signatures,
+	                                                  guint                *n_signatures);
 };
 
 /* Certificate Information */
@@ -109,9 +127,17 @@ gboolean ev_document_signatures_sign (EvDocumentSignatures *document_signatures,
                                       EvSignaturesData     *data,
                                       GCancellable         *cancellable,
                                       GAsyncReadyCallback   callback,
-                                      gpointer              user_data);
+                                      gpointer              user_data,
+                                      GError              **error);
+
+gboolean ev_document_signatures_sign_finish (EvDocumentSignatures *document_signatures,
+	                                         GAsyncResult         *result,
+	                                         GError              **error);
 
 gboolean ev_document_signatures_can_sign (EvDocumentSignatures *document_signatures);
+
+EvDocumentSignatureState ev_document_signatures_get_signature_state (EvDocumentSignatures *document_signatures,
+                                                                   guint                *n_signatures);
 
 EvSignaturesData *ev_document_signatures_data_new (void);
 
