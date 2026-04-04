@@ -403,6 +403,24 @@ static void  ev_window_show_signature_message    (EvWindow   *window);
 static void  ev_window_cmd_digital_signing         (GtkAction *action, EvWindow *ev_window);
 static void  ev_window_clear_signature_state       (EvWindow   *window);
 
+typedef struct {
+	EvWindow *window;
+	gchar    *saved_filename;
+	gchar    *temporary_filename;
+} EvSignedFileSaveData;
+
+static void
+ev_signed_file_save_data_free (EvSignedFileSaveData *save_data)
+{
+	if (!save_data)
+		return;
+
+	g_clear_object (&save_data->window);
+	g_clear_pointer (&save_data->saved_filename, g_free);
+	g_clear_pointer (&save_data->temporary_filename, g_free);
+	g_free (save_data);
+}
+
 G_DEFINE_TYPE_WITH_PRIVATE (EvWindow, ev_window, GTK_TYPE_APPLICATION_WINDOW)
 
 static gdouble
@@ -3460,7 +3478,8 @@ on_document_signed (GObject      *source_object,
                     GAsyncResult *result,
                     gpointer      user_data)
 {
-	char *file = user_data;
+	EvSignedFileSaveData *save_data = user_data;
+	const gchar *file = save_data->saved_filename;
 	gchar *uri;
 	GtkWidget *new_window;
 	GError *error = NULL;
@@ -3468,13 +3487,27 @@ on_document_signed (GObject      *source_object,
 	if (!ev_document_signatures_sign_finish (EV_DOCUMENT_SIGNATURES (source_object), result, &error)) {
 		g_warning ("Failed to sign document: %s", error->message);
 		g_error_free (error);
-		g_free (file);
+		if (save_data->temporary_filename)
+			g_unlink (save_data->temporary_filename);
+		ev_signed_file_save_data_free (save_data);
+		return;
+	}
+
+	if (save_data->temporary_filename &&
+	    g_rename (save_data->temporary_filename, save_data->saved_filename) != 0) {
+		error = g_error_new_literal (G_FILE_ERROR,
+		                             g_file_error_from_errno (errno),
+		                             g_strerror (errno));
+		ev_window_error_message (save_data->window, error, "%s", _("Failed to sign document"));
+		g_error_free (error);
+		g_unlink (save_data->temporary_filename);
+		ev_signed_file_save_data_free (save_data);
 		return;
 	}
 
 	uri = g_filename_to_uri (file, NULL, NULL);
 	if (!uri) {
-		g_free (file);
+		ev_signed_file_save_data_free (save_data);
 		return;
 	}
 
@@ -3482,7 +3515,7 @@ on_document_signed (GObject      *source_object,
 	ev_window_open_uri (EV_WINDOW (new_window), uri, NULL, EV_WINDOW_MODE_NORMAL, NULL);
 	gtk_widget_show_all (new_window);
 	g_free (uri);
-	g_free (file);
+	ev_signed_file_save_data_free (save_data);
 }
 
 static void
@@ -3491,15 +3524,52 @@ ev_window_certificate_save_file (EvWindow                *window,
                                  const char              *filename)
 {
 	EvWindowPrivate *priv = window->priv;
+	EvSignedFileSaveData *save_data;
 	EvSignaturesData *data;
 	time_t t;
 	gchar *tmp;
-	gchar *saved_filename;
+	gchar *source_filename = NULL;
+	gchar *destination_filename = NULL;
 	GError *error = NULL;
 
 	data = ev_document_signatures_data_new ();
 	ev_document_signatures_data_set_certificate_info (data, certificate_info);
-	ev_document_signatures_data_set_destination_file (data, filename);
+
+	if (priv->uri)
+		source_filename = g_filename_from_uri (priv->uri, NULL, NULL);
+
+	if (source_filename && g_strcmp0 (source_filename, filename) == 0) {
+		gchar *dirname = g_path_get_dirname (filename);
+		gchar *basename = g_path_get_basename (filename);
+		gchar *tmp_template = g_strdup_printf ("%s/.%s.atril-signed-XXXXXX", dirname, basename);
+		gint fd = g_mkstemp (tmp_template);
+
+		if (fd == -1) {
+			error = g_error_new_literal (G_FILE_ERROR,
+			                             g_file_error_from_errno (errno),
+			                             g_strerror (errno));
+			ev_window_error_message (window, error, "%s", _("Failed to sign document"));
+			g_error_free (error);
+			g_free (tmp_template);
+			g_free (basename);
+			g_free (dirname);
+			g_free (source_filename);
+			ev_document_signatures_data_free (data);
+			return;
+		}
+
+		close (fd);
+		destination_filename = tmp_template;
+		g_free (basename);
+		g_free (dirname);
+	}
+
+	g_free (source_filename);
+
+	if (!destination_filename)
+		destination_filename = g_strdup (filename);
+
+	ev_document_signatures_data_set_destination_file (data, destination_filename);
 	ev_document_signatures_data_set_page (data, priv->signature_page);
 	ev_document_signatures_data_set_rect (data, priv->signature_bounding_box);
 
@@ -3510,15 +3580,21 @@ ev_window_certificate_save_file (EvWindow                *window,
 	ev_document_signatures_data_set_signature (data, tmp);
 	g_free (tmp);
 	ev_document_signatures_data_set_signature_left (data, ev_certificate_info_get_subject_common_name (certificate_info));
-	saved_filename = g_strdup (filename);
+
+	save_data = g_new0 (EvSignedFileSaveData, 1);
+	save_data->window = g_object_ref (window);
+	save_data->saved_filename = g_strdup (filename);
+	if (g_strcmp0 (destination_filename, filename) != 0)
+		save_data->temporary_filename = g_strdup (destination_filename);
 
 	if (!ev_document_signatures_sign (EV_DOCUMENT_SIGNATURES (priv->document), data, NULL,
-	                                 on_document_signed, saved_filename, &error)) {
+	                                 on_document_signed, save_data, &error)) {
 		ev_window_error_message (window, error, "%s", _("Failed to sign document"));
 		g_error_free (error);
-		g_free (saved_filename);
+		ev_signed_file_save_data_free (save_data);
 	}
 
+	g_free (destination_filename);
 	ev_document_signatures_data_free (data);
 }
 
