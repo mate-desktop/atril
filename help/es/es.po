@@ -1,4 +1,3 @@
-# 
 # Translators:
 # elio <micta2003@hotmail.com>, 2018
 # Andres Sanchez <blackatze93@gmail.com>, 2018
@@ -10,14 +9,14 @@
 # Toni Estévez <toni.estevez@gmail.com>, 2021
 # Joaquín Ruiz Luque, 2022
 # e8719986fb0e918e5504827f4b7020b9_54697cc <5c2a49c554c358fed470d27243585bdf_851518>, 2022
-# Francisco Serrador, 2023
+# Francisco Serrador, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-09-18 09:08+0000\n"
-"Last-Translator: Francisco Serrador, 2023\n"
+"Last-Translator: Francisco Serrador, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1057,12 +1056,12 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/duplex-npages.page:8 C/singlesided-npages.page:8
 msgid "Print a booklet with n pages."
-msgstr ""
+msgstr "Declara un booklet con n páginas."
 
 #. (itstool) path: page/title
 #: C/duplex-npages.page:20 C/singlesided-npages.page:20
 msgid "n-page booklet"
-msgstr ""
+msgstr "booklet con página n"
 
 #. (itstool) path: note/p
 #: C/duplex-npages.page:22 C/singlesided-npages.page:22
@@ -1075,7 +1074,7 @@ msgid ""
 "If the number of pages in your PDF document is not a multiple of 4, you "
 "should add the appropriate number of blank pages (1,2 or 3) to make it a "
 "multiple of 4. To do so, you can:"
-msgstr ""
+msgstr "Si el número de páginas en tu documento "
 
 #. (itstool) path: item/p
 #: C/duplex-npages.page:33 C/singlesided-npages.page:32
@@ -1088,6 +1087,8 @@ msgid ""
 "Merge the blank pages with your PDF document using <app>PDF-Shuffler</app> "
 "placing the blank pages at the end."
 msgstr ""
+"Combina las páginas en blanco con su documento PDF utilizando <app>PDF-"
+"Shuffler</app> colocando las páginas en blanco al final."
 
 #. (itstool) path: item/p
 #: C/duplex-npages.page:47 C/print-2sided.page:28
@@ -1098,16 +1099,19 @@ msgid ""
 "style=\"menuitem\">Print</gui></guiseq> and press the <gui "
 "style=\"button\">Print</gui> button."
 msgstr ""
+"Vaya a <guiseq><gui style=\"menuitem\">Archivo</gui><gui "
+"style=\"menuitem\">Imprimir</gui></guiseq> y presione el botón <gui "
+"style=\"button\">Imprimir</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-npages.page:52 C/singlesided-npages.page:53
 msgid "Choose the <gui>General</gui> tab."
-msgstr ""
+msgstr "Elija la lengüeta <gui>General</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-npages.page:55 C/singlesided-npages.page:56
 msgid "Under <em>Range</em>, choose <gui>Pages</gui>."
-msgstr ""
+msgstr "Debajo del <em>Intervalo</em>, elija las <gui>Páginas</gui>."
 
 #. (itstool) path: item/item
 #: C/duplex-npages.page:61 C/singlesided-npages.page:62
@@ -1141,6 +1145,8 @@ msgid ""
 "Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>Short "
 "Edge (Flip)</gui>."
 msgstr ""
+"Debajo de <em>Distribución</em>, en el menú <gui>Dos caras</gui>, seleccione"
+" <gui>Borde corto (volteado)</gui>."
 
 #. (itstool) path: item/p
 #: C/duplex-npages.page:73
@@ -1178,6 +1184,9 @@ msgid ""
 "Atril can't be used to make changes to documents. You need to use the "
 "appropriate editing application for the type of file you want to change."
 msgstr ""
+"Atril no puede ser utilizado para realizar cambios a documentos. Necesita "
+"utilizar la aplicación de edición apropiada para el tipo de archivo que "
+"desea cambiar."
 
 #. (itstool) path: note/p
 #: C/editing.page:28
@@ -1187,6 +1196,11 @@ msgid ""
 "<app>Okular</app>, for example. Furthermore, <app>pdfarranger</app> allows "
 "rearranging or removing pages and merging files."
 msgstr ""
+"Los archivos PDF y PostScript (.ps) no son usualmente intentados para ser "
+"editados pero software para editar PDF está disponible. Intente "
+"<app>LibreOffice Draw</app> u <app>Okular</app>, por ejemplo. Para más "
+"infirmación, <app>pdfarranger</app> permite reordenar  o retirar paginas y "
+"unir archivos."
 
 #. (itstool) path: info/desc
 #: C/finding.page:24
@@ -1206,12 +1220,18 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>F</key></keyseq> or <key>/</key> to display a "
 "search box."
 msgstr ""
+"Pulse <guiseq><gui style=\"menuitem\">Editar</gui> <gui "
+"style=\"menuitem\">Buscar</gui></guiseq> o "
+"<keyseq><key>Ctrl</key><key>F</key></keyseq> o <key>/</key> para exhibir una"
+" caja de búsqueda."
 
 #. (itstool) path: item/p
 #: C/finding.page:39
 msgid ""
 "Start typing into the search box and the search will start automatically."
 msgstr ""
+"Comience tecleando en la caja de búsqueda y la búsqueda comenzará "
+"automáticamente."
 
 #. (itstool) path: item/p
 #: C/finding.page:43
@@ -1219,6 +1239,8 @@ msgid ""
 "Use the <gui>Find Previous</gui> and <gui>Find Next</gui> buttons to move to"
 " the previous or next search result."
 msgstr ""
+"Utilice los botones <gui>Buscar Anterior</gui> y <gui>Buscar Siguiente</gui>"
+" para ir al resultado de la búsqueda anterior o siguiente."
 
 #. (itstool) path: item/p
 #: C/finding.page:47
@@ -1226,12 +1248,16 @@ msgid ""
 "To hide the search bar, click anywhere in the window again or press "
 "<key>Esc</key>."
 msgstr ""
+"Para ocultar la barra de búsqueda, pulse en cualquier otro lado en la "
+"ventana de nuevo o pulse <key>Esc</key>."
 
 #. (itstool) path: note/p
 #: C/finding.page:53
 msgid ""
 "To filter words by case, you can press the <gui>Case Sensitive</gui> button."
 msgstr ""
+"Para filtrar las palabras por mayúsculas/minúsculas, puede pulsar el botón "
+"<gui>Distinguir Capitalinas</gui>."
 
 #. (itstool) path: page/p
 #: C/finding.page:57
@@ -1240,6 +1266,9 @@ msgid ""
 " once, you will be shown how many times the search result appears on the "
 "current page."
 msgstr ""
+"Si la palabra o frase que buscó para aparecer en el documento en al menos "
+"una vez, será mostrado cuántas veces el resultado de la búsqueda aparece en "
+"la página actual."
 
 #. (itstool) path: note/p
 #: C/finding.page:60
@@ -1247,6 +1276,8 @@ msgid ""
 "Only PDF documents are searchable. Some PDF documents are not searchable "
 "because their text is encoded in the document as an image."
 msgstr ""
+"Solo son buscables los documentos PDF. Algunos documentos PDF no son "
+"buscables porque su texto está codificado en el documento como una imagen."
 
 #. (itstool) path: info/desc
 #: C/formats.page:10
@@ -1256,7 +1287,7 @@ msgstr "PDF, PostScript y muchos otros son."
 #. (itstool) path: page/title
 #: C/formats.page:26
 msgid "Supported formats"
-msgstr ""
+msgstr "Formatos admitidos"
 
 #. (itstool) path: page/p
 #: C/formats.page:28
@@ -1271,7 +1302,7 @@ msgstr "Archivadores de Libros de Comic Book (.cbr y .cbz)"
 #. (itstool) path: item/p
 #: C/formats.page:35
 msgid "Open XML Paper Specification (.oxps, .xps)"
-msgstr ""
+msgstr "Abrir Espacificación de Papel XML (.oxps, .xps)"
 
 #. (itstool) path: note/p
 #: C/formats.page:40
@@ -1279,6 +1310,9 @@ msgid ""
 "In some Linux distributions, not all formats are supported by default, so "
 "you might not be able to view all the formats listed above."
 msgstr ""
+"En algunas distribuciones de Linux, no todos los formatos están admitidos "
+"por defecto, por tanto quizá no sea capaz de ver todos los formatos listados"
+" arriba."
 
 #. (itstool) path: note/p
 #: C/formats.page:43
@@ -1287,6 +1321,9 @@ msgid ""
 "\"Unable to Open Document\", you may wish to check whether the backend "
 "package for the format is installed."
 msgstr ""
+"El soporte para un formato es invocado como <em>backend</em>. Si obtiene el "
+"error “No es capaz de Abrir Documento”, puede desear comprobar si está "
+"instalado el paquete backend para el formato."
 
 #. (itstool) path: info/desc
 #: C/forms.page:7
@@ -1305,6 +1342,9 @@ msgid ""
 "by clicking on a field with your mouse. When you are finished filling out a "
 "text field, press <key>Enter</key>."
 msgstr ""
+"Cuando rellene un formulario interactivo, puede navegar de campo a campo "
+"pulsando en un campo con su ratón. Cuando haya finalizado el relleno del "
+"texto y salga, presione <key>Intro</key>."
 
 #. (itstool) path: page/p
 #: C/forms.page:24
@@ -1312,6 +1352,8 @@ msgid ""
 "You can make a selection in a scrollable list box by clicking on the list "
 "box and scrolling to your choice with your mouse."
 msgstr ""
+"Se puede hacer una selección en una caja de listado arrastrable pulsando en "
+"la caja de listado y arrastrando a su elección con su ratón. "
 
 #. (itstool) path: note/p
 #: C/forms.page:28
@@ -1323,6 +1365,12 @@ msgid ""
 "href=\"http://www.g-loaded.eu/2008/05/03/how-to-annotate-pdf-files-in-linux-"
 "using-xournal/\">Xournal</link>."
 msgstr ""
+"Es posible que algunas partes del formulario deban completarse a mano "
+"<em>tras</em> imprimirlo. Por ejemplo, podría tener que marcar ciertas cosas"
+" o firmar el formulario en uno o más lugares. Si desea hacerlo "
+"electrónicamente, puede probar <link "
+"href=\"http://www.g-loaded.eu/2008/05/03/how-to-annotate-pdf-files-in-linux-"
+"using-xournal/\">Xournal</link>."
 
 #. (itstool) path: info/desc
 #: C/forms-saving.page:7
@@ -1330,11 +1378,13 @@ msgid ""
 "Make sure you save the form, otherwise all of the information you entered "
 "will be lost."
 msgstr ""
+"Asegúrese de guardar el formulario, de lo contrario se perderá toda la "
+"información ingresada."
 
 #. (itstool) path: page/title
 #: C/forms-saving.page:24
 msgid "Saving a form"
-msgstr ""
+msgstr "Guardar un formulario"
 
 #. (itstool) path: page/p
 #: C/forms-saving.page:26
@@ -1342,12 +1392,16 @@ msgid ""
 "After you have filled it out, you may wish to save your form in one of two "
 "ways:"
 msgstr ""
+"Después de completarlo, puede que desee guardar su formulario de una de dos "
+"maneras:"
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:31
 msgid ""
 "To save a copy that can be edited in the future (form remains interactive):"
 msgstr ""
+"Para guardar una copia que se pueda editar en el futuro (el formulario "
+"permanece interactivo):"
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:36
@@ -1356,6 +1410,10 @@ msgid ""
 "style=\"menuitem\">Print</gui></guiseq> and select <gui>Save As…</gui> or "
 "press <keyseq><key>Ctrl</key><key>S</key></keyseq> on your keyboard."
 msgstr ""
+"Vaya a <guiseq><gui style=\"menuitem\">Archivo</gui> <gui "
+"style=\"menuitem\">Imprimir</gui></guiseq> y seleccione<gui>Guardar "
+"como…</gui> o pulse <keyseq><key>Ctrl</key><key>S</key></keyseq> sobre su "
+"teclado."
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:44
@@ -1363,6 +1421,8 @@ msgid ""
 "Choose a name and folder to save the file in, then click <gui>Save</gui>. "
 "The PDF will be saved in the folder you chose."
 msgstr ""
+"Elija un nombre y carpeta para guardar el archivo dentro, después pulse "
+"<gui>Guardar</gui>. El PDF será guardado en la carpeta que elija."
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:51
@@ -1370,6 +1430,8 @@ msgid ""
 "To save a copy that can no longer be edited (for example, to e-mail the form"
 " or submit it on-line):"
 msgstr ""
+"Para guardar una copia que ya no se puede editar (por ejemplo, para enviar "
+"el formulario por correo electrónico o enviarlo en línea):"
 
 #. (itstool) path: item/p
 #: C/forms-saving.page:71
@@ -1377,11 +1439,13 @@ msgid ""
 "Choose a name and folder to save the file in, then click <gui>Print</gui>. "
 "The PDF will be saved in the folder you chose."
 msgstr ""
+"Elija un nombre y una carpeta para guardar el archivo y pulse en "
+"<gui>Imprimir</gui>. El PDF se guardará en la carpeta que haya seleccionado."
 
 #. (itstool) path: note/p
 #: C/forms-saving.page:81
 msgid "Copies of encrypted files can't be saved or printed."
-msgstr ""
+msgstr "No se pueden guardar ni imprimir copias de archivos cifrados."
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -1401,21 +1465,23 @@ msgid ""
 "<app>Atril</app> is made for viewing PDF documents. Learn how to get started"
 " with <app>Atril</app> and its features."
 msgstr ""
+"<app>Atril</app> está diseñado para visualizar documentos PDF. Aprenda a "
+"usar <app>Atril</app> y sus funciones."
 
 #. (itstool) path: page/title
 #: C/index.page:27
 msgid "<_:media-1/> Atril Help"
-msgstr ""
+msgstr "<_:media-1/>Ayuda de Atril"
 
 #. (itstool) path: section/title
 #: C/index.page:33
 msgid "Reading documents"
-msgstr ""
+msgstr "Lectura de documentos"
 
 #. (itstool) path: section/title
 #: C/index.page:37
 msgid "Presentations and other supported formats"
-msgstr ""
+msgstr "Presentación o otros formatos admitidos"
 
 #. (itstool) path: section/title
 #: C/index.page:41
@@ -1425,17 +1491,17 @@ msgstr "Impresión"
 #. (itstool) path: section/title
 #: C/index.page:45
 msgid "Annotations and bookmarks"
-msgstr ""
+msgstr "Anotaciones y marcadores de lectura"
 
 #. (itstool) path: section/title
 #: C/index.page:49
 msgid "Interactive forms"
-msgstr ""
+msgstr "Formularios interactivos"
 
 #. (itstool) path: section/title
 #: C/index.page:53
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "Cuestiones preguntadas frecuentemente"
 
 #. (itstool) path: section/title
 #: C/index.page:57
@@ -1460,7 +1526,7 @@ msgstr "Involucrarse"
 #. (itstool) path: info/desc
 #: C/introduction.page:16
 msgid "Introduction to <em>Atril - The MATE Document Viewer</em>."
-msgstr ""
+msgstr "Introducción a <em>Atril - El Visor Documental de MATE</em>. "
 
 #. (itstool) path: page/title
 #: C/introduction.page:19
@@ -1493,6 +1559,10 @@ msgid ""
 "style=\"menuitem\">View</gui> menu and select <gui style=\"menuitem\">Invert"
 " Colours</gui> (or press <keyseq><key>Ctrl</key><key>I</key></keyseq>)."
 msgstr ""
+"Para intercambiar el negro por blanco, el blanco por negro, etc., vaya al "
+"menú <gui style=\"menuitem\">Ver</gui> y seleccione <gui "
+"style=\"menuitem\">Invertir colores</gui> (o presione "
+"<keyseq><key>Ctrl</key><key>I</key></keyseq>)."
 
 #. (itstool) path: note/p
 #: C/invert-colors.page:32
@@ -1540,22 +1610,22 @@ msgstr "Para copiar, distribuir y transmitir el trabajo."
 #. (itstool) path: item/title
 #: C/license.page:29
 msgid "<em>To remix</em>"
-msgstr ""
+msgstr "<em>Para remezclar</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:30
 msgid "To adapt the work."
-msgstr ""
+msgstr "Para adaptar la tarea."
 
 #. (itstool) path: page/p
 #: C/license.page:33
 msgid "Under the following conditions:"
-msgstr ""
+msgstr "Bajo las condiciones siguientes:"
 
 #. (itstool) path: item/title
 #: C/license.page:38
 msgid "<em>Attribution</em>"
-msgstr ""
+msgstr "<em>Atribución</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:39
@@ -1564,11 +1634,14 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use"
 " of the work)."
 msgstr ""
+"Debe atribuir el trabajo de la manera especificada por el autor o "
+"licenciante (pero no de ninguna manera que sugiera que lo respaldan a usted "
+"o a su uso del trabajo)."
 
 #. (itstool) path: item/title
 #: C/license.page:46
 msgid "<em>Share Alike</em>"
-msgstr ""
+msgstr "<em>Share Alike</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:47
@@ -1576,6 +1649,9 @@ msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
+"Si modifica, transforma o compila sobre este trabajo, podrá distribuir el "
+"trabajo resultante sólo bajo la misma licencia, una similar o una "
+"compatible."
 
 #. (itstool) path: page/p
 #: C/license.page:53
@@ -1585,16 +1661,21 @@ msgid ""
 "sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link "
 "href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
 msgstr ""
+"Para consultar el texto completo de la licencia, consulte el <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">sitio web "
+"de Creative Commons</link> o lea el <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link> "
+"completo."
 
 #. (itstool) path: p/link
 #: C/legal.xml:4
 msgid "Creative Commons Attribution-Share Alike 3.0 United States License"
-msgstr ""
+msgstr "Creative Commons Attribution-Share Alike 3.0 United States License"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3 C/legal-unported.xml:4
 msgid "This work is licensed under a <_:link-1/>."
-msgstr ""
+msgstr "Este trabajo está licenciado bajo un <_:link-1/>."
 
 #. (itstool) path: license/p
 #: C/legal.xml:6
@@ -1603,28 +1684,33 @@ msgid ""
 "modify, and distribute the example code contained in this document under the"
 " terms of your choosing, without restriction."
 msgstr ""
+"Como excepción especial, los titulares de los derechos de autor le otorgan "
+"permiso para copiar, modificar y distribuir el código de ejemplo contenido "
+"en este documento según los términos que elija, sin restricciones."
 
 #. (itstool) path: p/link
 #: C/legal-unported.xml:5
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr ""
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 
 #. (itstool) path: info/desc
 #: C/movingaround.page:20
 msgid "Navigating, scrolling and zooming."
-msgstr ""
+msgstr "Navegando, arrastrando y ampliando/reduciendo."
 
 #. (itstool) path: page/title
 #. (itstool) path: section/title
 #: C/movingaround.page:23 C/shortcuts.page:82
 msgid "Moving around a document"
-msgstr ""
+msgstr "Mover alrededor de un documento"
 
 #. (itstool) path: page/p
 #: C/movingaround.page:25
 msgid ""
 "You can move around each page of a document by any of the following methods:"
 msgstr ""
+"Puedes mover alrededor de cada página de un documento por cualquiera de los "
+"métodos siguientes:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:30
@@ -1632,11 +1718,14 @@ msgid ""
 "Scrolling up and down using the mouse wheel. To move around a page just by "
 "moving the mouse:"
 msgstr ""
+"Arrastrar arriba y abajo utilizando la rueda del ratón. Para salir de una "
+"página tan solo mueva el ratón."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:34
 msgid "Right-click the page and select <gui>Autoscroll</gui>."
 msgstr ""
+"Pulsación secundaria en la página y seleccione <gui>Auto-arrastrar</gui>."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:37
@@ -1644,21 +1733,26 @@ msgid ""
 "Move the mouse pointer towards the bottom of the window to scroll down; it "
 "will scroll faster depending on how far down the window you go."
 msgstr ""
+"Mueve el puntero del ratón hasta el suelo de la ventana para arrastrar "
+"abajo; lo arrastrará más rápido dependiendo de cuanto de lejos baja la "
+"ventana donde va."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:42
 msgid "To stop autoscrolling, click anywhere in the document."
 msgstr ""
+"Para detener el desplazamiento automático, haga clic en cualquier parte del "
+"documento."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:47
 msgid "Using the scroll bar on the document window."
-msgstr ""
+msgstr "Usando la barra de desplazamiento en la ventana del documento."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:50
 msgid "Using the up and down arrow keys of your keyboard."
-msgstr ""
+msgstr "Utilizando las teclas de flecha arriba y abajo de su teclado."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:53
@@ -1666,6 +1760,8 @@ msgid ""
 "Dragging the page around with your mouse, as if you are grabbing it. To do "
 "this:"
 msgstr ""
+"Arrastrar la página con el ratón, como si la estuvieras agarrando. Para "
+"ello:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:57
@@ -1673,6 +1769,8 @@ msgid ""
 "Move the mouse pointer over the page and hold down the middle mouse button "
 "to drag it around."
 msgstr ""
+"Mueva el puntero del ratón sobre la página y mantenga presionado el botón "
+"central del ratón para arrastrarla."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:61
@@ -1680,17 +1778,21 @@ msgid ""
 "If you don't have a middle mouse button, hold down the left and right mouse "
 "buttons at the same time, then drag."
 msgstr ""
+"Si no tiene un botón central en el ratón, mantenga presionados los botones "
+"izquierdo y derecho del ratón al mismo tiempo y luego arrastre."
 
 #. (itstool) path: section/title
 #: C/movingaround.page:69
 msgid "Flipping between pages"
-msgstr ""
+msgstr "Pasar entre páginas"
 
 #. (itstool) path: section/p
 #: C/movingaround.page:71
 msgid ""
 "You can move between pages of a document using one of the following methods:"
 msgstr ""
+"Puede moverse entre las páginas de un documento utilizando uno de los "
+"siguientes métodos:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:76
@@ -1699,11 +1801,13 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>Page Down</key></keyseq> buttons on the "
 "keyboard."
 msgstr ""
+"Presione los botones <keyseq><key>Ctrl</key><key>RePag</key></keyseq> o "
+"<keyseq><key>Ctrl</key><key>AvPag</key></keyseq> sobre el teclado."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:81
 msgid "To go to a specific page:"
-msgstr ""
+msgstr "Para ir a una página específica:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:84
@@ -1711,22 +1815,25 @@ msgid ""
 "Type a page number in <gui style=\"input\">Select Page</gui> and press "
 "<key>Enter</key>."
 msgstr ""
+"Teclee un número de página en <gui style=\"input\">Seleccionar Página</gui> "
+"y pulse <key>Intro</key>."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:87
 msgid "If you want to go to the beginning or the end of the document:"
-msgstr ""
+msgstr "Si quiere ir al comienzo o al final del documento:"
 
 #. (itstool) path: item/p
 #: C/movingaround.page:90
 msgid ""
 "Press <keyseq><key>Ctrl</key><key>Home</key></keyseq> on your keyboard."
 msgstr ""
+"Pulse <keyseq><key>Ctrl</key><key>Inicio</key></keyseq> sobre su teclado."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:94
 msgid "Press <keyseq><key>Ctrl</key><key>End</key></keyseq> on your keyboard."
-msgstr ""
+msgstr "Pulse <keyseq><key>Ctrl</key><key>Fin</key></keyseq> en tu teclado."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:102
@@ -1734,6 +1841,8 @@ msgid ""
 "To move ten pages at a time, press <keyseq><key>Shift</key><key>Page "
 "Up</key></keyseq> or <keyseq><key>Shift</key><key>Page Down</key></keyseq>."
 msgstr ""
+"Para ir diez páginas a la vez, pulsa <keyseq><key>Mayús</key><key>Re "
+"Pag</key></keyseq> o <keyseq><key>Mayús</key><key>Av Pág</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:106
@@ -1786,6 +1895,10 @@ msgid ""
 "the side pane. Select the <gui>Thumbnails</gui> Combobox at the top of the "
 "side pane and select <gui>Index</gui> to view it."
 msgstr ""
+"Algunos documentos tienen un índice o tabla de contenido, que se puede "
+"visualizar en el panel lateral. Seleccione el cuadro combinado "
+"<gui>Miniaturas</gui> en la parte superior del panel lateral y seleccione "
+"<gui>Índice</gui> para verlo."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:134
@@ -1810,6 +1923,8 @@ msgstr "Para ajustar el nivel de zoom:"
 #: C/movingaround.page:148
 msgid "Select the desired zoom percentage from combobox in the toolbar."
 msgstr ""
+"Selecciona el porcentaje de zoom deseado desde la caja combinada en la barra"
+" de herramientas."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:151
@@ -1818,6 +1933,9 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>+</key></keyseq> to zoom in, or "
 "<keyseq><key>Ctrl</key><key>-</key></keyseq> to zoom out."
 msgstr ""
+"Alternativamente, utilice los atajos de teclado "
+"<keyseq><key>Ctrl</key><key>+</key></keyseq> para acercar, o "
+"<keyseq><key>Ctrl</key><key>-</key></keyseq> para alejar."
 
 #. (itstool) path: item/p
 #: C/movingaround.page:155
@@ -1825,6 +1943,8 @@ msgid ""
 "Alternatively, hold down <key>Ctrl</key> and use your mouse scroll wheel to "
 "zoom."
 msgstr ""
+"Alternativamente, mantenga presionada la tecla <key>Ctrl</key> y utilice la "
+"rueda de desplazamiento del mouse para hacer zoom."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:160
@@ -1832,6 +1952,8 @@ msgid ""
 "The <gui>Fit Page</gui> option will make a document page fit the whole "
 "<em>height</em> of the window."
 msgstr ""
+"La opción <gui>Ajustar Página</gui> hará que la página del documento se "
+"ajuste a toda la <em>altura</em> de la ventana."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:162
@@ -1839,6 +1961,8 @@ msgid ""
 "The <gui>Fit Width</gui> option will make a document page fill the whole "
 "<em>width</em> of the window."
 msgstr ""
+"La opción <gui>Ajustar Ancho</gui> hará que la página del documento llene "
+"todo el <em>ancho</em> de la ventana."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:164
@@ -1848,6 +1972,10 @@ msgid ""
 "style=\"menuitem\">Dual</gui></guiseq> and press <gui "
 "style=\"menuitem\">Dual</gui>."
 msgstr ""
+"Si desea ver dos páginas a la vez, una al lado de la otra, como en un libro,"
+" vaya a <guiseq><gui style=\"menuitem\">Ver</gui><gui "
+"style=\"menuitem\">Dual</gui></guiseq> y presione <gui "
+"style=\"menuitem\">Dual</gui>."
 
 #. (itstool) path: note/p
 #: C/movingaround.page:167
@@ -1855,6 +1983,8 @@ msgid ""
 "If the allow-links-change-zoom gsetting is set to false, links are blocked "
 "from changing your zoom level."
 msgstr ""
+"Si la configuración allow-links-change-zoom se establece en falso, se "
+"bloqueará el cambio de nivel de zoom en los enlaces."
 
 #. (itstool) path: section/p
 #: C/movingaround.page:171
@@ -1880,6 +2010,8 @@ msgstr "Pulse <key>F11</key> o <key>Escape</key>"
 #: C/noprint.page:9
 msgid "The author may have put printing restrictions on the document."
 msgstr ""
+"Es posible que el autor haya impuesto restricciones de impresión al "
+"documento."
 
 #. (itstool) path: page/title
 #: C/noprint.page:21
@@ -1917,17 +2049,21 @@ msgid ""
 "There are many reasons why your printer might not be working. For example, "
 "it could be out of paper or ink, or unplugged or damaged."
 msgstr ""
+"Hay muchas razones por las que tu impresora podría no funcionar. Por "
+"ejemplo, podría quedarse sin papel o tinta, o estar desconectada o dañada."
 
 #. (itstool) path: section/p
 #: C/noprint.page:37
 msgid ""
 "You might want to check your printer configuration in the Control Centre."
 msgstr ""
+"Es posible que desees comprobar la configuración de tu impresora en el "
+"Centro de control."
 
 #. (itstool) path: section/title
 #: C/noprint.page:43
 msgid "PDF printing restrictions"
-msgstr ""
+msgstr "Restricciones de impresión de PDF"
 
 #. (itstool) path: section/p
 #: C/noprint.page:44
@@ -1937,6 +2073,10 @@ msgid ""
 "overrides this restriction by default, but you may want to check that it "
 "hasn't been disabled:"
 msgstr ""
+"Algunos documentos PDF tienen una configuración que impide su impresión. Los"
+" autores pueden configurar esta restricción de impresión al escribir un "
+"documento. Atril anula esta restricción por defecto, pero conviene comprobar"
+" que no esté desactivada."
 
 #. (itstool) path: note/p
 #: C/noprint.page:52
@@ -1944,26 +2084,29 @@ msgid ""
 "You need to have <app>dconf Editor</app> installed on your computer to "
 "change this setting."
 msgstr ""
+"Necesita tener el <app>Editor dconf</app> instalado en su computadora para "
+"cambiar esta configuración."
 
 #. (itstool) path: item/p
 #: C/noprint.page:58
 msgid "Open <gui>dconf Editor</gui>."
-msgstr ""
+msgstr "Abra el <gui>Editor dconf</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:61
 msgid "Browse to <sys>/org/mate/atril</sys>."
-msgstr ""
+msgstr "Vaya a <sys>/org/mate/atril</sys>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:64
 msgid "Make sure that the <gui>override-restrictions</gui> option is checked."
 msgstr ""
+"Asegúrese que esté marcada la opción <gui>override-restrictions</gui>."
 
 #. (itstool) path: item/p
 #: C/noprint.page:69
 msgid "Go back to<app>Atril</app> and try to print the document again."
-msgstr ""
+msgstr "Vuelva a </app>Atril</app> y pruebe a imprimir el documento de nuevo."
 
 #. (itstool) path: info/desc
 #: C/openerror.page:7
@@ -1982,6 +2125,9 @@ msgid ""
 " will get an \"Unable to open document\" error message. Click "
 "<gui>Close</gui> to return to<app>Atril</app> window."
 msgstr ""
+"Si intenta abrir un documento con un formato que Atril no reconoce, recibirá"
+" el mensaje de error «No se puede abrir el documento». Pulse en "
+"<gui>Cerrar</gui> para volver a la ventana de Atril."
 
 #. (itstool) path: info/desc
 #: C/opening.page:22
@@ -1997,12 +2143,15 @@ msgstr "Abre un documento"
 #: C/opening.page:27
 msgid "You can open a document using any one of the following ways:"
 msgstr ""
+"Puedes abrir un documento utilizando cualquiera de las maneras siguientes:"
 
 #. (itstool) path: item/p
 #: C/opening.page:31
 msgid ""
 "Double-click on the file in <app>Caja</app> or your <em>file manager</em>."
 msgstr ""
+"Pulsación doble sobre el archivo en <app>Caja</app> o tu <em>gestor de "
+"archivo</em>."
 
 #. (itstool) path: note/p
 #: C/opening.page:34
@@ -2010,6 +2159,8 @@ msgid ""
 "Double clicking PDF, PostScript, .djvu, .dvi and Comic Book Archive files "
 "opens them in <app>Atril</app> by default."
 msgstr ""
+"Pulsa dos veces los archivos PDF, Postscript, .djvu, .dvi y Comic Book "
+"Archive para abrirlos en <app>Atril</app> por defecto."
 
 #. (itstool) path: item/p
 #: C/opening.page:39
@@ -2017,11 +2168,13 @@ msgid ""
 "Right-click on a file icon in <app>Caja</app> and click <guiseq><gui>Open "
 "With</gui><gui>Atril</gui></guiseq>."
 msgstr ""
+"Pulse secundaria en un icono de archivo en <app>Caja</app> y pulse "
+"<guiseq><gui>Abrir con</gui><gui>Atril</gui></guiseq>."
 
 #. (itstool) path: page/p
 #: C/opening.page:44
 msgid "If an empty <app>Atril</app> window is already open you can:"
-msgstr ""
+msgstr "Si ya está una ventana de <app>Atril</app> abierta puedes:"
 
 #. (itstool) path: item/p
 #: C/opening.page:48 C/opening.page:63
@@ -2029,6 +2182,8 @@ msgid ""
 "Drag a file into the window from <app>Caja</app>. The new file will open in "
 "a new window."
 msgstr ""
+"Arrastrar un archivo en la ventana desde <app>Caja</app>. El archivo nuevo "
+"abrirá una ventana nueva."
 
 #. (itstool) path: item/p
 #: C/opening.page:52
@@ -2037,11 +2192,16 @@ msgid ""
 "the <gui>Open Document</gui> dialog, choose the file which you wish to open,"
 " and click <gui>Open</gui>. The file will open in a new window."
 msgstr ""
+"Presiona el botón <gui>Abrir…</gui> en la esquina superior izquierda de la "
+"ventana. En el diálogo <gui>Abrir Documento</gui>, elije el archivo el cual "
+"deseas abrir, y pulsa <gui>Abrir</gui>. El archivo se abrirá en una ventana "
+"nueva."
 
 #. (itstool) path: page/p
 #: C/opening.page:59
 msgid "If a document is already opened in a <app>Atril</app> window you can:"
 msgstr ""
+"Si ya está abierto un documento en una ventana <app>Atril</app> puedes:"
 
 #. (itstool) path: item/p
 #: C/opening.page:67
@@ -2050,6 +2210,9 @@ msgid ""
 "Document</gui> dialog, choose the file which you wish to open, and click "
 "<gui>Open</gui>. The file will open in a new window."
 msgstr ""
+"Presionar <keyseq><key>Ctrl</key><key>O</key></keyseq>. En el diálogo "
+"<gui>Abrir Documento</gui>, elija el archivo el cual desea abrir y pulse "
+"<gui>Abrir</gui>. El archivo se abrirá en una ventana nueva."
 
 #. (itstool) path: info/desc
 #: C/password.page:20
@@ -2068,6 +2231,9 @@ msgid ""
 "window will appear asking you to enter the document password. Enter the "
 "password and click <gui>Unlock Document</gui>."
 msgstr ""
+"Si intenta abrir un documento PDF que está protegido con una contraseña, una"
+" ventana aparecerá solicitándole que teclee la contraseña del documento. "
+"Introduzca la contraseña y pulse <gui>Desbloquear Documento</gui>."
 
 #. (itstool) path: note/p
 #: C/password.page:48
@@ -2107,6 +2273,8 @@ msgid ""
 "Press <gui style=\"menuitem\">View</gui> and select <gui "
 "style=\"menuitem\">Presentation</gui> (or press <key>F5</key>)."
 msgstr ""
+"Pulse <gui style=\"menuitem\">Ver</gui> y seleccione <gui "
+"style=\"menuitem\">Presentación</gui> (o presione <key>F5</key>)."
 
 #. (itstool) path: item/p
 #: C/presentations.page:34
@@ -2124,6 +2292,8 @@ msgid ""
 "Use the <key>spacebar</key>, <key>→</key>, <key>↓</key>, or left mouse click"
 " to go to the next slide."
 msgstr ""
+"Utilice la <key>barra de espacio</key>, <key>→</key>, <key>↓</key>, o pulse "
+"el botón principal del ratón para ir al siguiente deslizador."
 
 #. (itstool) path: section/p
 #: C/presentations.page:47
@@ -2131,6 +2301,8 @@ msgid ""
 "Use the <key>←</key>, <key>↑</key> or right mouse click to go to the "
 "previous slide."
 msgstr ""
+"Utilice los <key>←</key>, <key>↑</key> o pulse el botón secundario para ir "
+"al arrastre anterior."
 
 #. (itstool) path: note/p
 #: C/presentations.page:51
@@ -2138,62 +2310,71 @@ msgid ""
 "You can also use the scroll wheel to move back and forth through the "
 "presentation."
 msgstr ""
+"Además puedes utilizar la rueda del ratón para arrastrar atrás y adelante a "
+"través de la presentación."
 
 #. (itstool) path: section/p
 #: C/presentations.page:55
 msgid "Use <key>Esc</key> to exit the presentation."
-msgstr ""
+msgstr "Utiliza <key>Esc</key> para salir de la presentación."
 
 #. (itstool) path: section/title
 #: C/presentations.page:61
 msgid "Showing a blank screen"
-msgstr ""
+msgstr "Mostrar una pantalla en blanco"
 
 #. (itstool) path: section/p
 #: C/presentations.page:62
 msgid "Press <key>B</key> or <key>.</key> to show a black screen."
 msgstr ""
+"Pulsa <key>B</key> o <key>.</key> para mostrar una pantalla en blanco."
 
 #. (itstool) path: section/p
 #: C/presentations.page:63
 msgid "Press <key>W</key> to show a white screen."
-msgstr ""
+msgstr "Pulsa <key>W</key> para mostrar una pantalla blanca."
 
 #. (itstool) path: section/p
 #: C/presentations.page:64
 msgid ""
 "Press <key>B</key>, <key>.</key>, or <key>W</key> again to show the slide."
 msgstr ""
+"Pulsa <key>B</key>, <key>.</key>, o <key>W</key> de nuevo para mostrar el "
+"arrastre."
 
 #. (itstool) path: section/title
 #: C/presentations.page:69
 msgid "Supported presentation file formats"
-msgstr ""
+msgstr "Formatos de presentación de archivo admitidos"
 
 #. (itstool) path: section/p
 #: C/presentations.page:70
 msgid "The following file formats can be used for presentations:"
 msgstr ""
+"Los siguientes formatos de archivo pueden ser utilizados para "
+"presentaciones:"
 
 #. (itstool) path: item/p
 #: C/presentations.page:77
 msgid "Open Document Presentation (.odp)"
-msgstr ""
+msgstr "Abrir Presentación de Documento (.odp)"
 
 #. (itstool) path: info/desc
 #: C/print-2sided.page:8
 msgid "Printing two-sided and multi-page per sheet."
-msgstr ""
+msgstr "Imprimir dos caras y multi-página por hoja."
 
 #. (itstool) path: page/title
 #: C/print-2sided.page:20
 msgid "Two-sided and multiple pages per side layout for printing"
 msgstr ""
+"Páginas de dos caras y múltiples páginas por lado distribuidas para "
+"impresión."
 
 #. (itstool) path: page/p
 #: C/print-2sided.page:22
 msgid "You can print on both sides of each sheet of paper:"
-msgstr ""
+msgstr "Puedes imprimir en ambos lados de cada hoja de papel:"
 
 #. (itstool) path: item/p
 #: C/print-2sided.page:33
@@ -2201,6 +2382,8 @@ msgid ""
 "Go to the <gui>Page Setup</gui> tab of the Print window and choose an option"
 " from the <gui>Two-sided</gui> drop-down list."
 msgstr ""
+"Ve a la lengüeta de <gui>Configurar Página</gui> en la ventana Imprimir y "
+"elije una opción para el listado desplegable de <gui>Dos caras</gui>."
 
 #. (itstool) path: item/p
 #: C/print-2sided.page:38
@@ -2208,16 +2391,18 @@ msgid ""
 "You can print more than one page of the document per <em>side</em> of paper "
 "too. Use the <gui>Pages per side</gui> option to do this."
 msgstr ""
+"También puede imprimir más de una página del documento por <em>cara</em> del"
+" papel. Utilice la opción <gui>Páginas por cara</gui> para ello."
 
 #. (itstool) path: info/desc
 #: C/print-booklet.page:8
 msgid "How to print a booklet."
-msgstr ""
+msgstr "Como imprimir un booklet."
 
 #. (itstool) path: page/title
 #: C/print-booklet.page:20
 msgid "Printing a booklet"
-msgstr ""
+msgstr "Imprime un folleto"
 
 #. (itstool) path: page/p
 #: C/print-booklet.page:22
@@ -2227,6 +2412,10 @@ msgid ""
 "printing from the list below. Then select the number of printed pages your "
 "booklet will have."
 msgstr ""
+"Si estás imprimiendo un folleto (el cual quizá estará acotado o grapado en "
+"la mitad de cada página), seleccione el tipo de impresora que estará "
+"utilizando para imprimir desde el listado a continuación. Entonces "
+"seleccione el número de páginas impresas que tendrá dentro de su folleto."
 
 #. (itstool) path: section/title
 #: C/print-booklet.page:27
@@ -2316,7 +2505,7 @@ msgstr "<gui>Paisaje revertido</gui>"
 #. (itstool) path: info/desc
 #: C/printing.page:9
 msgid "How to print, and common questions about printing."
-msgstr ""
+msgstr "Cómo imprimir y preguntas comunes sobre la impresión."
 
 #. (itstool) path: page/title
 #: C/printing.page:25
@@ -2334,26 +2523,29 @@ msgid ""
 "Click the <gui>File</gui> menu and select <gui>Print</gui> or press "
 "<keyseq><key>Ctrl</key><key>P</key></keyseq>."
 msgstr ""
+"Pulse sobre el menú <gui>Archivo</gui> y seleccione <gui>Imprimir</gui> o "
+"presione <keyseq><key>Ctrl</key><key>P</key></keyseq>."
 
 #. (itstool) path: item/p
 #: C/printing.page:36
 msgid "Choose your printer from the list."
-msgstr ""
+msgstr "Elija su impresora desde el listado."
 
 #. (itstool) path: item/p
 #: C/printing.page:45
 msgid "Printing is enabled for the following file formats:"
-msgstr ""
+msgstr "La impresión está habilitada para los siguientes formatos de archivo:"
 
 #. (itstool) path: info/desc
 #: C/print-pagescaling.page:17
 msgid "Shrink or expand the document to fit the paper size."
 msgstr ""
+"Reducir o ampliar el documento para que se ajuste al tamaño del papel."
 
 #. (itstool) path: page/title
 #: C/print-pagescaling.page:20
 msgid "Scale page for printing"
-msgstr ""
+msgstr "Página escalada para impresión"
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:28
@@ -2361,21 +2553,24 @@ msgid ""
 "Open the menu at the top-right of the window, then select <gui "
 "style=\"menuitem\">Print…</gui>."
 msgstr ""
+"Abra el menú en la cima-derecha de la ventana, después seleccione <gui "
+"style=\"menuitem\">Imprimir…</gui>."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:32
 msgid "Select the <gui style=\"tab\">Page Handling</gui> tab."
-msgstr ""
+msgstr "Selecciona la lengüeta <gui style=\"tab\">Gestionar Página</gui>."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:35
 msgid "Choose a <em>Page Scaling</em> from the drop-down list."
 msgstr ""
+"Elija un <em>Escalado de Página</em> desde el listado arrastrar-abajo."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:38
 msgid "<em>None</em>: do not perform page scaling."
-msgstr ""
+msgstr "<em>Ninguno</em>: no realizar el escalado de página."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:41
@@ -2383,6 +2578,9 @@ msgid ""
 "<em>Shrink to Printable Area</em>: document pages larger than the printable "
 "area are reduced to fit the printable area of the printer page."
 msgstr ""
+"<em>Reducir al área imprimible</em>: las páginas del documento que son más "
+"grandes que el área imprimible se reducen para ajustarse al área imprimible "
+"de la página de la impresora."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:46
@@ -2390,6 +2588,9 @@ msgid ""
 "<em>Fit to Printable Area</em>: document pages are enlarged or reduced as "
 "required to fit the printable area of the printer page."
 msgstr ""
+"<em>Ajustar al área imprimible</em>: las páginas del documento se amplían o "
+"reducen según sea necesario para ajustarse al área imprimible de la página "
+"de la impresora."
 
 #. (itstool) path: item/p
 #: C/print-pagescaling.page:53
@@ -2402,11 +2603,13 @@ msgid ""
 "Your document will be automatically reloaded if another program changes it "
 "while you're viewing it."
 msgstr ""
+"Su documento se recargará automáticamente si otro programa lo cambia "
+"mientras lo está viendo."
 
 #. (itstool) path: page/title
 #: C/reload.page:22
 msgid "Why does the document keep reloading?"
-msgstr ""
+msgstr "¿Por qué el documento se mantiene recargándose?"
 
 #. (itstool) path: page/p
 #: C/reload.page:24
@@ -2415,6 +2618,9 @@ msgid ""
 "(perhaps because another program has modified it), it will automatically "
 "reload the document and display the most recent version for you."
 msgstr ""
+"Si<app>Atril</app> detecta que el documento que tiene abierto ha cambiado "
+"(quizá porque otro programa lo ha modificado), automáticamente lo recargará "
+"y exhibirá la versión más reciente para ti."
 
 #. (itstool) path: page/p
 #: C/reload.page:28
@@ -2422,6 +2628,8 @@ msgid ""
 "If the document is deleted while you are still viewing it, it will still "
 "remain open."
 msgstr ""
+"Si el documento es borrado mientras aún está viéndolo, aún se permanecerá "
+"abierto."
 
 #. (itstool) path: info/desc
 #: C/shortcuts.page:7
@@ -2461,7 +2669,7 @@ msgstr "Enlaces predeterminados"
 #. (itstool) path: section/title
 #: C/shortcuts.page:50
 msgid "Opening, closing, saving and printing"
-msgstr ""
+msgstr "Abrir, cerrar, guardar e imprimir"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:53
@@ -2471,7 +2679,7 @@ msgstr "Abre un documento."
 #. (itstool) path: td/p
 #: C/shortcuts.page:54
 msgid "<keyseq><key>Ctrl</key><key>O</key></keyseq>"
-msgstr ""
+msgstr "<keyseq><key>Ctrl</key><key>O</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:57
@@ -2481,12 +2689,12 @@ msgstr "Abre una copia del documento actual."
 #. (itstool) path: td/p
 #: C/shortcuts.page:58
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-msgstr ""
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:61
 msgid "Save a copy of the current document with a new file name."
-msgstr ""
+msgstr "Guarda una copia del documento actual con un nombre de archivo nuevo."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:63
@@ -2496,7 +2704,7 @@ msgstr "<keyseq><key>Ctrl</key><key>S</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:66
 msgid "Print the current document."
-msgstr ""
+msgstr "Imprime el documento actual."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:67
@@ -2506,7 +2714,7 @@ msgstr "<keyseq><key>Ctrl</key><key>P</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:70
 msgid "Close the current document window."
-msgstr ""
+msgstr "Cierra la ventana del documento actual."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:71
@@ -2516,7 +2724,7 @@ msgstr "<keyseq><key>Ctrl</key><key>W</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:74
 msgid "Reload the document (effectively closes and re-opens the document)."
-msgstr ""
+msgstr "Recarga el documento (efectivamente cierra y re-abre el documento). "
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:76
@@ -2536,7 +2744,7 @@ msgstr "Teclas flecha"
 #. (itstool) path: td/p
 #: C/shortcuts.page:89
 msgid "Move up/down a page several lines at a time."
-msgstr ""
+msgstr "Sube/baja una página varias líneas a la vez."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:90
@@ -2574,6 +2782,8 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>L</key></keyseq> followed by the page number and"
 " <key>Enter</key>"
 msgstr ""
+"<keyseq><key>Ctrl</key><key>L</key></keyseq> seguido por el número de la "
+"página y <key>Entrar</key>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:107
@@ -2581,6 +2791,9 @@ msgid ""
 "Go to the beginning of a page (beginning of the document if "
 "<gui>Continuous</gui> is selected in the main menu in the top-right corner)."
 msgstr ""
+"Va al comienzo de una página (comenzando el documento si es "
+"<gui>Continuo</gui> si está seleccionado en el menú principal en la esquina "
+"superior izquierda). "
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:109
@@ -2593,6 +2806,8 @@ msgid ""
 "Go to the end of a page (end of the document if <gui>Continuous</gui> is "
 "selected in the main menu in the top-right corner)."
 msgstr ""
+"Ir al final de una página (final del documento si se selecciona "
+"<gui>Continuous</gui> en el menú principal en la esquina superior derecha)."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:114
@@ -2602,7 +2817,7 @@ msgstr "<key>Fin</key>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:117
 msgid "Go to the beginning of the document."
-msgstr ""
+msgstr "Va al comienzo del documento."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:118
@@ -2612,7 +2827,7 @@ msgstr "<keyseq><key>Ctrl</key><key>Inicio</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:121
 msgid "Go to the end of the document."
-msgstr ""
+msgstr "Va al final del documento."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:122
@@ -2622,7 +2837,7 @@ msgstr "<keyseq><key>Ctrl</key><key>Fin</keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:125
 msgid "Add a bookmark in the current page."
-msgstr ""
+msgstr "Añade un marcador de hoja en la página actual."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:126
@@ -2632,17 +2847,17 @@ msgstr "<keyseq><key>Ctrl</key><key>D</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:129
 msgid "Delete the bookmark in the current page if there is one."
-msgstr ""
+msgstr "Borra el marcador de hoja en la página actual si hay uno."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:130
 msgid "<keyseq><key>Shift</key><key>Ctrl</key><key>D</key></keyseq>"
-msgstr ""
+msgstr "<keyseq><key>Mayús</key><key>Ctrl</key><key>D</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:133
 msgid "Display the side pane with a table of contents and bookmarks."
-msgstr ""
+msgstr "Exhibe el lado del panel con una tabla de contenido y marcadores."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:134
@@ -2655,6 +2870,8 @@ msgid ""
 "Enable caret navigation placing a moveable cursor in text pages, allowing "
 "you to move around and select text with the keyboard."
 msgstr ""
+"Habilite la navegación con cursor colocando un cursor móvil en las páginas "
+"de texto, lo que le permitirá moverse y seleccionar texto con el teclado."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:138
@@ -2683,7 +2900,7 @@ msgstr ""
 #. (itstool) path: td/p
 #: C/shortcuts.page:151
 msgid "Select all the text in a document."
-msgstr ""
+msgstr "Seleccionar todo el texto de un documento."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:152
@@ -2703,26 +2920,31 @@ msgid ""
 "start as soon as you type some text. If you select a text in the document "
 "before searching, then the search will start using that text as input."
 msgstr ""
+"Muestra la barra de herramientas que permite buscar palabras en el "
+"documento. El cuadro de búsqueda se resalta automáticamente al pulsarlo y la"
+" búsqueda comienza en cuanto escribes texto. Si seleccionas un texto en el "
+"documento antes de buscar, la búsqueda comenzará usando ese texto como "
+"entrada."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:168
 msgid "<keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key>"
-msgstr ""
+msgstr "<keyseq><key>Ctrl</key><key>F</key></keyseq> / <key>/</key>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:171
 msgid "Go to the next search result."
-msgstr ""
+msgstr "Ca al siguiente resultado de búsqueda."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:172
 msgid "<keyseq><key>Ctrl</key><key>G</key></keyseq> / <key>F3</key>"
-msgstr ""
+msgstr "<keyseq><key>Ctrl</key><key>G</key></keyseq> / <key>F3</key>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:175
 msgid "Go to the previous search result."
-msgstr ""
+msgstr "Va al anterior resultado de búsqueda."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:176
@@ -2730,6 +2952,8 @@ msgid ""
 "<keyseq><key>Shift</key><key>Ctrl</key><key>G</key></keyseq> / "
 "<keyseq><key>Shift</key><key>F3</key></keyseq>"
 msgstr ""
+"<keyseq><key>Mayús</key><key>Ctrl</key><key>G</key></keyseq> / "
+"<keyseq><key>Mayús</key><key>F3</key></keyseq>"
 
 #. (itstool) path: section/title
 #: C/shortcuts.page:182
@@ -2744,7 +2968,7 @@ msgstr "Rota las páginas 90 grados como al revés que la aguja del reloj."
 #. (itstool) path: td/p
 #: C/shortcuts.page:186
 msgid "<keyseq><key>Ctrl</key><key>Left arrow</key></keyseq>"
-msgstr ""
+msgstr "<keyseq><key>Ctrl</key><key>Flecha izquierda</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:189
@@ -2777,6 +3001,8 @@ msgid ""
 "<keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / "
 "<keyseq><key>Ctrl</key><key>=</key></keyseq>"
 msgstr ""
+"<keyseq><key>Ctrl</key><key>+</key></keyseq> / <key>=</key> / "
+"<keyseq><key>Ctrl</key><key>=</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:203
@@ -2791,7 +3017,7 @@ msgstr "<keyseq><key>Ctrl</key><key>-</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:207
 msgid "Fit the page into the window."
-msgstr ""
+msgstr "Caber la página en la ventana."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:208
@@ -2846,12 +3072,13 @@ msgstr "Invertir colores del fondo y de texto."
 #. (itstool) path: td/p
 #: C/shortcuts.page:236
 msgid "<keyseq><key>Ctrl</key><key>I</key></keyseq>"
-msgstr ""
+msgstr "<keyseq><key>Ctrl</key><key>I</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:239
 msgid "Swap between continuous and page by page view of the document."
 msgstr ""
+"Cambiar entre la vista continua y la vista página por página del documento."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:240
@@ -2861,7 +3088,7 @@ msgstr "<key>C</key>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:243
 msgid "Display two pages side by side."
-msgstr ""
+msgstr "Exhibir dos páginas una al lado de la otra."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:244
@@ -2876,7 +3103,7 @@ msgstr "Modo presentación"
 #. (itstool) path: td/p
 #: C/shortcuts.page:253
 msgid "Toggle black screen."
-msgstr ""
+msgstr "Alternar pantalla negra."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:254
@@ -2886,7 +3113,7 @@ msgstr "<key>B</key> / <key>.</key>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:257
 msgid "Toggle white screen."
-msgstr ""
+msgstr "Alternar pantalla blanca"
 
 #. (itstool) path: page/p
 #: C/singlesided-npages.page:26
@@ -2895,6 +3122,9 @@ msgid ""
 "should add the appropriate number of blank pages (1, 2 or 3) to make it a "
 "multiple of 4. To do so, you can:"
 msgstr ""
+"Si el número de páginas de su documento PDF no es múltiplo de 4, debe "
+"agregar la cantidad adecuada de páginas en blanco (1, 2 o 3) para que sea "
+"múltiplo de 4. Para ello, puede:"
 
 #. (itstool) path: page/p
 #: C/singlesided-npages.page:43
@@ -2907,11 +3137,13 @@ msgid ""
 "Under <em>Layout</em>, in the <gui>Two-sided</gui> menu, select <gui>One "
 "Sided</gui>."
 msgstr ""
+"En <em>Diseño</em>, en el menú <gui>Doble cara</gui>, seleccione <gui>Una "
+"cara</gui>."
 
 #. (itstool) path: item/p
 #: C/singlesided-npages.page:74
 msgid "In the <gui>Pages per side</gui> menu, select <gui>2</gui>."
-msgstr ""
+msgstr "En el menú <gui>Páginas por lado</gui>, seleccione <gui>2</gui>."
 
 #. (itstool) path: item/p
 #: C/singlesided-npages.page:80
@@ -2942,12 +3174,13 @@ msgstr "Utilizando SyncTeX con la clase de LaTeX Beamer."
 #. (itstool) path: page/title
 #: C/synctex-beamer.page:18
 msgid "Beamer with SyncTeX"
-msgstr ""
+msgstr "Proyector con SyncTeX"
 
 #. (itstool) path: page/p
 #: C/synctex-beamer.page:19
 msgid "Beamer is a LaTeX class for creating slides for presentations."
 msgstr ""
+"Proyector es una clase LaTeX para crear diapositivas para presentaciones."
 
 #. (itstool) path: page/p
 #: C/synctex-beamer.page:22
@@ -2959,12 +3192,20 @@ msgid ""
 "necessarily the associated line of text. This difference is outlined in "
 "detail below."
 msgstr ""
+"Puede realizar búsquedas hacia adelante y hacia atrás en una presentación "
+"<em>Beamer-LaTeX</em> de forma similar<link xref=\"synctex-search\"> a como "
+"se hace en otros archivos TeX compilados con SyncTeX. Sin embargo, la "
+"búsqueda</link> le lleva al fotograma (diapositiva) correspondiente, no "
+"necesariamente a la línea de texto asociada. Esta diferencia se detalla a "
+"continuación."
 
 #. (itstool) path: section/title
 #: C/synctex-beamer.page:26
 msgid ""
 "Forward search: from Beamer-LaTeX source to PDF (<app>pluma</app> to Atril)"
 msgstr ""
+"Búsqueda hacia adelante: del código fuente Beamer-LaTeX a PDF (de "
+"<app>pluma</app> a Atril)"
 
 #. (itstool) path: section/p
 #: C/synctex-beamer.page:27
@@ -2974,6 +3215,11 @@ msgid ""
 "of the corresponding slide in the PDF will be outlined in red. This will "
 "often be the <em>frametitle</em>."
 msgstr ""
+"Con la <link xref=\"synctex-search#forward-search\">búsqueda "
+"avanzada</link>, puede hacer clic en una línea específica del código fuente "
+"de Beamer-LaTeX. El borde <em>superior</em> de la diapositiva "
+"correspondiente en el PDF se resaltará en rojo. Este suele ser el <em>título"
+" del marco</em>."
 
 #. (itstool) path: section/title
 #: C/synctex-beamer.page:34
@@ -2981,6 +3227,8 @@ msgid ""
 "Backward search: from PDF to Beamer-LaTeX source (from Atril to "
 "<app>pluma</app>)"
 msgstr ""
+"Búsqueda hacia atrás: desde el PDF hasta el código fuente Beamer-LaTeX "
+"(desde Atril hasta <app>pluma</app>)"
 
 #. (itstool) path: section/p
 #: C/synctex-beamer.page:35
@@ -2990,6 +3238,10 @@ msgid ""
 "that ends that particular frame is highlighted. This will usually be the "
 "line:"
 msgstr ""
+"Con la <link xref=\"synctex-search#backward-search\">búsqueda hacia "
+"atrás</link>, al hacer clic en el texto de un marco, se resalta la línea de "
+"código LaTex correspondiente que finaliza ese marco. Normalmente, esta línea"
+" es la siguiente:"
 
 #. (itstool) path: section/code
 #: C/synctex-beamer.page:38
@@ -3005,7 +3257,7 @@ msgstr "correspondiendo al marco sobre el cual pulsó."
 #. (itstool) path: info/desc
 #: C/synctex-compile.page:7
 msgid "How to compile your TeX document with SyncTeX"
-msgstr ""
+msgstr "Cómo compilar su documento TeX con SyncTeX"
 
 #. (itstool) path: page/title
 #: C/synctex-compile.page:18
@@ -3018,6 +3270,8 @@ msgid ""
 "Adding the line <em>\\synctex=1</em> in the preamble of your TeX file will "
 "trigger synchronization with SyncTeX."
 msgstr ""
+"Agregar la línea <em>\\synctex=1</em> en el preámbulo de su archivo TeX "
+"activará la sincronización con SyncTeX."
 
 #. (itstool) path: page/code
 #: C/synctex-compile.page:22
@@ -3045,6 +3299,8 @@ msgid ""
 "Alternatively, you can run the pdflatex command with the <em>-synctex=1</em>"
 " option:"
 msgstr ""
+"Alternativamente, puede ejecutar el comando pdflatex con la opción "
+"<em>-synctex=1</em>:"
 
 #. (itstool) path: page/screen
 #: C/synctex-compile.page:33
@@ -3055,7 +3311,7 @@ msgstr "pdflatex -synctex=1 suArchivo.tex"
 #. (itstool) path: info/desc
 #: C/synctex-editors.page:7
 msgid "Which editor can you use to edit your TEX file?"
-msgstr ""
+msgstr "¿Qué editor puedes utilizar para editar tu archivo TEX?"
 
 #. (itstool) path: page/title
 #: C/synctex-editors.page:19
@@ -3065,7 +3321,7 @@ msgstr "Editores admitidos"
 #. (itstool) path: section/title
 #: C/synctex-editors.page:21
 msgid "<app>pluma</app>"
-msgstr ""
+msgstr "<app>pluma</app>"
 
 #. (itstool) path: section/p
 #: C/synctex-editors.page:22
@@ -3075,11 +3331,15 @@ msgid ""
 "search\">Backward search</link> (from Atril to <app>pluma</app>) are both "
 "supported."
 msgstr ""
+"Se admiten tanto la <link xref=\"synctex-search#forward-search\">búsqueda "
+"hacia adelante</link> (de <app>pluma</app> a Atril) como la <link "
+"xref=\"synctex-search#backward-search\">búsqueda hacia atrás</link> (de "
+"Atril a <app>pluma</app>)."
 
 #. (itstool) path: section/title
 #: C/synctex-editors.page:27
 msgid "Vim-latex"
-msgstr ""
+msgstr "Vim-latex"
 
 #. (itstool) path: section/p
 #: C/synctex-editors.page:28
@@ -3154,7 +3414,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/synctex-search.page:7
 msgid "Flip between Atril and <app>pluma</app>."
-msgstr ""
+msgstr "Alterna entre Atril y <app>pluma</app>."
 
 #. (itstool) path: page/title
 #: C/synctex-search.page:19
@@ -3184,6 +3444,10 @@ msgid ""
 "Forward search allows you to click on a specific section of TeX source code,"
 " and jump to the associated position in the PDF. To perform forward search:"
 msgstr ""
+"La búsqueda hacia adelante le permite hacer clic en una sección específica "
+"del código fuente de TeX (¿Qué editor puede usar para editar su archivo "
+"TEX?) y saltar a la posición correspondiente en el PDF. Para realizar la "
+"búsqueda hacia adelante:"
 
 #. (itstool) path: item/p
 #: C/synctex-search.page:31
@@ -3402,6 +3666,7 @@ msgstr ""
 #: C/translate.page:27
 msgid "There are many languages for which translations are still needed."
 msgstr ""
+"Hay muchos idiomas para los cuales las traducciones aún son necesarias."
 
 #. (itstool) path: page/p
 #: C/translate.page:30

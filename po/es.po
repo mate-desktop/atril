@@ -4,14 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
 # Gustavo Mellado <gfmellado@gmail.com>, 2018
 # Mario Verdin <jmvl1303@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Lluís Tusquellas <lutusq@gmail.com>, 2018
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
 # difusion, 2018
-# Miguel de Dios Matias <tres.14159@gmail.com>, 2018
 # Arcenio Cid <gusty.miliki@gmail.com>, 2018
 # Luis Armando Medina <lamedina@gmail.com>, 2018
 # ZenWalker <scow@riseup.net>, 2018
@@ -22,6 +21,7 @@
 # seacat <seacat.linux@gmail.com>, 2021
 # Toni Estévez <toni.estevez@gmail.com>, 2022
 # Ignacio Poggi <ignaciop.3@gmail.com>, 2024
+# Francisco Serrador, 2025
 # 
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Ignacio Poggi <ignaciop.3@gmail.com>, 2024\n"
+"Last-Translator: Francisco Serrador, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +48,7 @@ msgstr ""
 #: backend/comics/comics-document.c:220
 #, c-format
 msgid "The command “%s” failed at decompressing the comic book."
-msgstr "La orden «%s» no ha podido descomprimir el cómic."
+msgstr "La orden «%s» ha fallado al descomprimir el cómic."
 
 #: backend/comics/comics-document.c:229
 #, c-format
@@ -580,11 +580,11 @@ msgstr "no se ha podido obtener el nombre del archivo"
 
 #: backend/epub/epub-document.c:796
 msgid "could not open archive"
-msgstr "No se ha podido abrir el archivador"
+msgstr "no se ha podido abrir el archivador"
 
 #: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
 msgid "could not extract archive"
-msgstr "No se ha podido extraer el archivador"
+msgstr "no se ha podido extraer el archivador"
 
 #: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
 msgid "could not retrieve container file"
@@ -608,19 +608,19 @@ msgstr "el archivo epub está dañado porque le falta el contenedor"
 
 #: backend/epub/epub-document.c:976
 msgid "could not parse content manifest"
-msgstr "No se ha podido analizar el «manifest» del contenido"
+msgstr "no se ha podido interpretar el «manifest» del contenido"
 
 #: backend/epub/epub-document.c:985
 msgid "content file is invalid"
-msgstr "El archivo de contenido no es válido"
+msgstr "el archivo de contenido no es válido"
 
 #: backend/epub/epub-document.c:994
 msgid "epub file has no spine"
-msgstr "El archivo ePub no tiene «spine»"
+msgstr "el archivo ePub no tiene «spine»"
 
 #: backend/epub/epub-document.c:1003
 msgid "epub file has no manifest"
-msgstr "El archivo ePub no tiene «manifest»"
+msgstr "el archivo ePub no tiene «manifest»"
 
 #: backend/epub/epub-document.c:1089
 msgid "Could not set up document tree for loading, some files missing"
@@ -674,7 +674,7 @@ msgstr "TrueType (CID)"
 
 #: backend/pdf/ev-poppler.cc:921
 msgid "Unknown font type"
-msgstr "Tipografía con formato desconocido"
+msgstr "Fuente tipográfica con formato desconocido"
 
 #: backend/pdf/ev-poppler.cc:947
 msgid "No name"
@@ -811,11 +811,11 @@ msgstr "ARCHIVO"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
-msgstr "Especificar el id. de gestión de sesión"
+msgstr "Especificar el ID de gestión de sesión"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "ID"
-msgstr "Id."
+msgstr "ID"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
@@ -896,7 +896,7 @@ msgstr "150 %"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:59
 msgid "175%"
-msgstr "175%"
+msgstr "175 %"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:60
 msgid "200%"
@@ -1111,7 +1111,7 @@ msgstr "Página"
 
 #: previewer/ev-previewer-window.c:554 shell/ev-window.c:6785
 msgid "Select Page"
-msgstr "Seleccione la página"
+msgstr "Seleccionar página"
 
 #: properties/ev-properties-main.c:116
 msgid "Document"
@@ -1123,7 +1123,7 @@ msgstr "Título:"
 
 #: properties/ev-properties-view.c:61
 msgid "Location:"
-msgstr "Ubicación:"
+msgstr "Lugar:"
 
 #: properties/ev-properties-view.c:62
 msgid "Subject:"
@@ -1312,8 +1312,8 @@ msgid ""
 "When enabled, each page will be printed on the same size paper as the "
 "document page."
 msgstr ""
-"Cuando se activa, cada página se imprimirá en el mismo tamaño de papel que "
-"la página del documento."
+"Cuando se habilita, cada página se imprimirá en el mismo tamaño de papel que"
+" la página del documento."
 
 #: libview/ev-print-operation.c:2011
 msgid "Page Handling"
@@ -1351,7 +1351,7 @@ msgstr "Vista de documento"
 
 #: libview/ev-view-presentation.c:729
 msgid "Jump to page:"
-msgstr "Saltar a la página:"
+msgstr "Ir a la página:"
 
 #: libview/ev-view-presentation.c:1062
 msgid "End of presentation. Click to exit."
@@ -1379,7 +1379,7 @@ msgstr "Ir a la página"
 
 #: libview/ev-view.c:1911
 msgid "Find"
-msgstr "Encontrar"
+msgstr "Buscar"
 
 #: libview/ev-view.c:1939
 #, c-format
@@ -1403,23 +1403,23 @@ msgstr "Lanzar %s"
 
 #: shell/eggfindbar.c:301
 msgid "Find:"
-msgstr "Encontrar:"
+msgstr "Buscar:"
 
 #: shell/eggfindbar.c:326
 msgid "Find previous occurrence of the search string"
-msgstr "Encontrar la aparición anterior de la cadena"
+msgstr "Busca la aparición anterior de la cadena"
 
 #: shell/eggfindbar.c:334
 msgid "Find next occurrence of the search string"
-msgstr "Encontrar la aparición siguiente de la cadena"
+msgstr "Busca la aparición siguiente de la cadena"
 
 #: shell/eggfindbar.c:341
 msgid "Case Sensitive"
-msgstr "Distinguir mayúsculas y minúsculas"
+msgstr "Distinguir Capitalinas"
 
 #: shell/eggfindbar.c:344
 msgid "Toggle case sensitive search"
-msgstr "Distinguir o no mayúsculas y minúsculas"
+msgstr "Distinguir o no capitalinas"
 
 #: shell/ev-annotation-properties-dialog.c:96
 msgid "Icon:"
@@ -1545,7 +1545,7 @@ msgstr "_Contraseña:"
 
 #: shell/ev-password-view.c:351
 msgid "Forget password _immediately"
-msgstr "Olvidar la contraseña _inmediatamente"
+msgstr "Olvidar contraseña _inmediatamente"
 
 #: shell/ev-password-view.c:363
 msgid "Remember password until you _log out"
@@ -1565,7 +1565,7 @@ msgstr "General"
 
 #: shell/ev-properties-dialog.c:168
 msgid "Fonts"
-msgstr "Tipografías"
+msgstr "Fuentes tipografías"
 
 #: shell/ev-properties-dialog.c:181
 msgid "Document License"
@@ -1573,7 +1573,7 @@ msgstr "Licencia del documento"
 
 #: shell/ev-properties-fonts.c:136
 msgid "Font"
-msgstr "Tipografía"
+msgstr "Fuente tipográfica"
 
 #: shell/ev-properties-fonts.c:163
 #, c-format
@@ -1598,7 +1598,7 @@ msgstr "Ocultar la barra lateral"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
-msgstr "Sumar"
+msgstr "Añadir"
 
 #: shell/ev-sidebar-annotations.c:207
 msgid "Add text annotation"
@@ -1746,17 +1746,17 @@ msgstr "No se ha podido guardar el archivo como «%s»."
 #: shell/ev-window.c:3153
 #, c-format
 msgid "Uploading document (%d%%)"
-msgstr "Cargando el documento (%d %%)"
+msgstr "Subiendo documento (%d %%)"
 
 #: shell/ev-window.c:3157
 #, c-format
 msgid "Uploading attachment (%d%%)"
-msgstr "Cargando el archivo adjunto (%d %%)"
+msgstr "Subiendo adjunto (%d %%)"
 
 #: shell/ev-window.c:3161
 #, c-format
 msgid "Uploading image (%d%%)"
-msgstr "Cargando la imagen (%d %%)"
+msgstr "Subiendo la imagen (%d %%)"
 
 #: shell/ev-window.c:3274
 msgid "Save As…"
@@ -1772,12 +1772,12 @@ msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
 msgstr[0] "%lu trabajo pendiente en la cola"
 msgstr[1] "%lu trabajos pendientes en la cola"
-msgstr[2] "%lu trabajos pendientes en la cola"
+msgstr[2] "%lu tareas pendientes en la cola"
 
 #: shell/ev-window.c:3717
 #, c-format
 msgid "Printing job “%s”"
-msgstr "Imprimiendo trabajo «%s»"
+msgstr "Imprimiendo tarea «%s»"
 
 #: shell/ev-window.c:3894
 msgid ""
@@ -1837,11 +1837,11 @@ msgstr ""
 
 #: shell/ev-window.c:4022
 msgid "Cancel _print and Close"
-msgstr "Cancelar la _impresión y cerrar"
+msgstr "Cancelar _impresión y cerrar"
 
 #: shell/ev-window.c:4026
 msgid "Close _after Printing"
-msgstr "Cerrar _después de imprimir"
+msgstr "Cerrar _tras imprimir"
 
 #: shell/ev-window.c:4423
 msgid "Running in presentation mode"
@@ -1865,12 +1865,12 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
-"Atril es un sencillo visor de documentos de múltiples páginas\n"
-"que funciona con SyncTex %sy %s %s."
+"Atril es un visor de documentos sencillo de múltiples páginas que funciona "
+"con SyncTex %sy %s %s."
 
 #: shell/ev-window.c:5392
 msgid "Atril is a simple multi-page document viewer."
-msgstr "Atril es un sencillo visor de documentos de múltiples páginas."
+msgstr "Atril es un visor documental sencillo de múltiples páginas."
 
 #: shell/ev-window.c:5405
 msgid "MATE Documentation Team"
@@ -1929,11 +1929,10 @@ msgstr ""
 #: shell/ev-window.c:5472
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
-"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018\n"
-"Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
-"Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
-"Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
+"Francisco Javier F. Serrador <serrador@proton.me>, 2025, 2003-2006Toni "
+"Estevez <toni.estevez@gmail.com>, 2019Adolfo Jayme Barrientos "
+"<fitojb@ubuntu.com>, 2018Jorge González <jorgegonz@svn.gnome.org>, "
+"2007-2010Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
 
 #: shell/ev-window.c:5767
 #, c-format
@@ -1985,7 +1984,7 @@ msgstr "_Editar"
 
 #: shell/ev-window.c:6453
 msgid "_View"
-msgstr "_Ver"
+msgstr "_Vista"
 
 #: shell/ev-window.c:6454
 msgid "_Go"
@@ -2021,7 +2020,7 @@ msgstr "Guarda una copia del documento actual"
 
 #: shell/ev-window.c:6468
 msgid "Send _To..."
-msgstr "En_viar a…"
+msgstr "Enviar _a…"
 
 #: shell/ev-window.c:6469
 msgid "Send current document by mail, instant message..."
@@ -2053,11 +2052,11 @@ msgstr "Encuentra una palabra o frase en el documento"
 
 #: shell/ev-window.c:6487
 msgid "Find Ne_xt"
-msgstr "Encontrar _siguiente"
+msgstr "Buscar _siguiente"
 
 #: shell/ev-window.c:6489
 msgid "Find Pre_vious"
-msgstr "Encontrar _anterior"
+msgstr "Buscar _anterior"
 
 #: shell/ev-window.c:6491
 msgid "T_oolbar"
@@ -2077,7 +2076,7 @@ msgstr "Guardar los ajustes actuales como pre_determinados"
 
 #: shell/ev-window.c:6507
 msgid "_Reset Zoom"
-msgstr "_Reestablecer la ampliación"
+msgstr "_Restablecer ampliación"
 
 #: shell/ev-window.c:6510
 msgid "_Reload"
@@ -2165,7 +2164,7 @@ msgstr "C_ontinuo"
 
 #: shell/ev-window.c:6613
 msgid "Show the entire document"
-msgstr "Mostrar el documento completo"
+msgstr "Muestra el documento completo"
 
 #: shell/ev-window.c:6615
 msgid "_Dual"
@@ -2297,7 +2296,7 @@ msgstr "Reducir"
 
 #: shell/ev-window.c:6870
 msgid "Reset Zoom"
-msgstr "Restablecer la ampliación"
+msgstr "Restablecer ampliación"
 
 #: shell/ev-window.c:7014 shell/ev-window.c:7030
 msgid "Unable to launch external application."
