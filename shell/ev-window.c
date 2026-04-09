@@ -3792,7 +3792,7 @@ ev_window_on_signature_rect (EvView      *view,
 	g_clear_pointer (&priv->signature_bounding_box, ev_rectangle_free);
 	priv->signature_bounding_box = ev_rectangle_copy (rect);
 
-	if ((ABS(rect->x1 - rect->x2) / width < 0.1) || (ABS(rect->y1 - rect->y2) / height < 0.1))
+	if ((ABS(rect->x1 - rect->x2) / width < 0.05) || (ABS(rect->y1 - rect->y2) / height < 0.01))
 		ev_window_show_signature_rect_too_small_warning (window);
 	else
 		ev_window_create_certificate_selection (window);
