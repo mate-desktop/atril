@@ -37,6 +37,15 @@ static const SecretSchema doc_password_schema = {
 	}
 };
 const SecretSchema *EV_DOCUMENT_PASSWORD_SCHEMA = &doc_password_schema;
+
+static const SecretSchema nss_token_schema = {
+        "org.mate.Atril.NssToken",
+        SECRET_SCHEMA_DONT_MATCH_NAME,
+        {
+                { "token", SECRET_SCHEMA_ATTRIBUTE_STRING },
+                { NULL, 0 }
+        }
+};
 #endif /* WITH_KEYRING */
 
 gboolean
@@ -62,6 +71,45 @@ ev_keyring_lookup_password (const gchar *uri)
 					    NULL);
 #else
 	return NULL;
+#endif /* WITH_KEYRING */
+}
+
+gchar *
+ev_keyring_lookup_nss_password (const gchar *token)
+{
+#ifdef WITH_KEYRING
+	g_return_val_if_fail (token != NULL, NULL);
+
+	return secret_password_lookup_sync (&nss_token_schema,
+	                                    NULL, NULL,
+	                                    "token", token,
+	                                    NULL);
+#else
+	return NULL;
+#endif /* WITH_KEYRING */
+}
+
+gboolean
+ev_keyring_save_nss_password (const gchar *token,
+                              const gchar *password)
+{
+#ifdef WITH_KEYRING
+	gboolean retval;
+	gchar *name;
+
+	g_return_val_if_fail (token != NULL, FALSE);
+
+	name = g_strdup_printf (_("NSS token password for %s"), token);
+	retval = secret_password_store_sync (&nss_token_schema, NULL,
+	                                     name, password,
+	                                     NULL, NULL,
+	                                     "token", token,
+	                                     NULL);
+	g_free (name);
+
+	return retval;
+#else
+	return FALSE;
 #endif /* WITH_KEYRING */
 }
 

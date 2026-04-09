@@ -3440,6 +3440,8 @@ ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 	gtk_widget_show (fc);
 }
 
+static gchar *nss_password_cache = NULL;
+
 static char *
 ev_window_signature_password_callback (const char *text)
 {
@@ -3449,6 +3451,18 @@ ev_window_signature_password_callback (const char *text)
 	char *ret;
 	GtkWindow *parent;
 	gint response;
+
+	if (nss_password_cache)
+		return g_strdup (nss_password_cache);
+
+	if (ev_keyring_is_available ()) {
+		gchar *keyring_password = ev_keyring_lookup_nss_password (text);
+		if (keyring_password) {
+			g_free (nss_password_cache);
+			nss_password_cache = keyring_password;
+			return g_strdup (nss_password_cache);
+		}
+	}
 
 	parent = gtk_application_get_active_window (GTK_APPLICATION (g_application_get_default ()));
 
@@ -3466,8 +3480,19 @@ ev_window_signature_password_callback (const char *text)
 	gtk_box_pack_end (GTK_BOX (box), entry, TRUE, TRUE, 6);
 	gtk_widget_show_all (box);
 
+	ret = NULL;
 	response = gtk_dialog_run (GTK_DIALOG (dialog));
-	ret = response == GTK_RESPONSE_OK ? g_strdup (gtk_entry_get_text (GTK_ENTRY (entry))) : NULL;
+	if (response == GTK_RESPONSE_OK) {
+		const gchar *password = gtk_entry_get_text (GTK_ENTRY (entry));
+
+		if (password && *password) {
+			ret = g_strdup (password);
+			g_free (nss_password_cache);
+			nss_password_cache = g_strdup (password);
+			if (ev_keyring_is_available ())
+				ev_keyring_save_nss_password (text, password);
+		}
+	}
 	gtk_widget_destroy (dialog);
 
 	return ret;
