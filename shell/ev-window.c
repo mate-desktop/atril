@@ -547,8 +547,7 @@ ev_window_setup_action_sensitivity (EvWindow *ev_window)
 
 	/* Digital signing */
 	ev_window_set_action_sensitive (ev_window, "DigitalSigning",
-					has_pages && EV_IS_DOCUMENT_SIGNATURES (document) &&
-					ev_document_signatures_can_sign (EV_DOCUMENT_SIGNATURES (document)));
+					has_pages && EV_IS_DOCUMENT_SIGNATURES (document));
 
 	/* Toolbar-specific actions: */
 	ev_window_set_action_sensitive (ev_window, PAGE_SELECTOR_ACTION, has_pages);
@@ -853,6 +852,9 @@ ev_window_set_message_area (EvWindow  *window,
 				   (gpointer) &(window->priv->message_area));
 }
 
+static gchar *nss_password_cache = NULL;
+static gboolean nss_prompting_enabled = FALSE;
+
 static void
 ev_window_message_area_response_cb (EvMessageArea *area,
 				    gint           response_id,
@@ -860,6 +862,7 @@ ev_window_message_area_response_cb (EvMessageArea *area,
 {
 	if (window->priv->view)
 		ev_view_cancel_signature_rect (EV_VIEW (window->priv->view));
+	nss_prompting_enabled = FALSE;
 	ev_window_set_message_area (window, NULL);
 }
 
@@ -941,8 +944,10 @@ ev_window_show_signature_message (EvWindow *window)
 	    !EV_IS_DOCUMENT_SIGNATURES (window->priv->document))
 		return;
 
+	nss_prompting_enabled = TRUE;
 	state = ev_document_signatures_get_signature_state (EV_DOCUMENT_SIGNATURES (window->priv->document),
 	                                                    &n_signatures);
+	nss_prompting_enabled = FALSE;
 	if (state == EV_DOCUMENT_SIGNATURE_STATE_NONE || n_signatures == 0)
 		return;
 
@@ -3454,8 +3459,6 @@ ev_window_cmd_save_as (GtkAction *action, EvWindow *ev_window)
 	gtk_widget_show (fc);
 }
 
-static gchar *nss_password_cache = NULL;
-
 static char *
 ev_window_signature_password_callback (const char *text)
 {
@@ -3477,6 +3480,9 @@ ev_window_signature_password_callback (const char *text)
 			return g_strdup (nss_password_cache);
 		}
 	}
+
+	if (!nss_prompting_enabled)
+		return NULL;
 
 	parent = gtk_application_get_active_window (GTK_APPLICATION (g_application_get_default ()));
 
@@ -3528,6 +3534,7 @@ on_document_signed (GObject      *source_object,
 		g_error_free (error);
 		if (save_data->temporary_filename)
 			g_unlink (save_data->temporary_filename);
+		nss_prompting_enabled = FALSE;
 		ev_signed_file_save_data_free (save_data);
 		return;
 	}
@@ -3540,12 +3547,14 @@ on_document_signed (GObject      *source_object,
 		ev_window_error_message (save_data->window, error, "%s", _("Failed to sign document"));
 		g_error_free (error);
 		g_unlink (save_data->temporary_filename);
+		nss_prompting_enabled = FALSE;
 		ev_signed_file_save_data_free (save_data);
 		return;
 	}
 
 	uri = g_filename_to_uri (file, NULL, NULL);
 	if (!uri) {
+		nss_prompting_enabled = FALSE;
 		ev_signed_file_save_data_free (save_data);
 		return;
 	}
@@ -3554,6 +3563,7 @@ on_document_signed (GObject      *source_object,
 	ev_window_open_uri (EV_WINDOW (new_window), uri, NULL, EV_WINDOW_MODE_NORMAL, NULL);
 	gtk_widget_show_all (new_window);
 	g_free (uri);
+	nss_prompting_enabled = FALSE;
 	ev_signed_file_save_data_free (save_data);
 }
 
@@ -3653,6 +3663,7 @@ ev_window_on_save_signed_file_response (GtkWidget *dialog,
 		ev_window_certificate_save_file (window, priv->signature_certificate_info, filename);
 		g_free (filename);
 	} else {
+		nss_prompting_enabled = FALSE;
 		g_clear_pointer (&priv->signature_certificate_info, ev_certificate_info_free);
 	}
 
@@ -3700,6 +3711,7 @@ ev_window_certificate_selection_response (GtkWidget *dialog,
 
 	if (response != GTK_RESPONSE_OK) {
 		priv->certificate_listbox = NULL;
+		nss_prompting_enabled = FALSE;
 		gtk_widget_destroy (dialog);
 		return;
 	}
@@ -3843,6 +3855,8 @@ ev_window_cmd_digital_signing (GtkAction *action,
 {
 	EvWindowPrivate *priv = ev_window->priv;
 	GtkWidget *area;
+
+	nss_prompting_enabled = TRUE;
 
 	area = ev_message_area_new (GTK_MESSAGE_INFO,
 	                            _("Draw a rectangle to insert a signature field"),
