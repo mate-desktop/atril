@@ -430,11 +430,14 @@ ev_pixbuf_cache_get_page_size (EvPixbufCache *pixbuf_cache,
 			       gint           rotation)
 {
 	gint width, height;
+	gint device_scale;
 
+	device_scale = get_device_scale (pixbuf_cache);
 	_get_page_size_for_scale_and_rotation (pixbuf_cache->document,
 					       page_index, scale, rotation,
 					       &width, &height);
-	return height * cairo_format_stride_for_width (CAIRO_FORMAT_RGB24, width);
+	return (height * device_scale) *
+		cairo_format_stride_for_width (CAIRO_FORMAT_RGB24, width * device_scale);
 }
 
 static gint
