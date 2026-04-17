@@ -12,6 +12,8 @@
 # Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019
 # Teemu Piippo <crimsondusk64@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Tommi Nieminen <translator@legisign.org>, 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -19,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -112,86 +114,86 @@ msgstr "DVI-asiakirjat"
 
 #: backend/dvi/mdvi-lib/dviread.c:209
 msgid "unexpected EOF\n"
-msgstr ""
+msgstr "odottamaton tiedoston loppu\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "ei voitu ladata fonttia ”%s”\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
 msgid "could not reload `%s'\n"
-msgstr ""
+msgstr "ei voitu ladata uudelleen: ”%s”\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr ""
+msgstr "%s: ei-tuettu DVI-muoto (versio %u)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
-msgstr ""
+msgstr "sivuja ei valittu\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:897
 #, c-format
 msgid "%s: File corrupted, or not a DVI file\n"
-msgstr ""
+msgstr "%s: tiedosto vioittunut tai ei DVI-tiedosto\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: vf-makrossa on virheitä\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s: vf-makron jälkeen pino ei tyhjä\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: tiedostoa (%s) ei voitu avata uudelleen\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
 msgid "%s: page %d out of range\n"
-msgstr ""
+msgstr "%s: sivu %d yli rajojen\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s: väärä siirtymä sivulla %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "pino ei tyhjä sivun lopussa\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
-msgstr ""
+msgstr "oletusfonttia ei vielä ole asetettu\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "pyydettyä merkkiä %d ei esiinny tiedostossa ”%s”\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "kasvatetaan pinoa\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "pinon alivuoto\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "fonttia %d ei ole määritetty\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "vääränmuotoinen erityismitta\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
@@ -201,17 +203,17 @@ msgstr ""
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "odottamaton op-koodi %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
-msgstr ""
+msgstr "määrittelemätön op-koodi %d\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: fontteja ei määritetty\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
@@ -226,7 +228,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
 msgid "%s: could not set as default encoding\n"
-msgstr ""
+msgstr "%s: ei voitu asettaa oletuskoodaukseksi\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:849
 #, c-format
@@ -236,7 +238,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: virheellinen op-koodi %d merkissä %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
@@ -261,24 +263,24 @@ msgstr ""
 #: backend/dvi/mdvi-lib/gf.c:361
 #, c-format
 msgid "%s: File corrupted, or not a GF file\n"
-msgstr ""
+msgstr "%s: tiedosto vioittunut tai ei GF-tiedosto\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:212
 #, c-format
 msgid "invalid page specification `%s'\n"
-msgstr ""
+msgstr "virheellinen sivumääritys ”%s”\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:232
 msgid "garbage after DVI page specification ignored\n"
-msgstr ""
+msgstr "DVI-sivumäärityksen jälkeinen roska sivuutetaan\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:260
 msgid "more than 10 counters in page specification\n"
-msgstr ""
+msgstr "sivumäärityksessä yli 10 laskuria\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:262
 msgid "garbage after TeX page specification ignored\n"
-msgstr ""
+msgstr "TeX-sivumäärityksen jälkeinen roska sivuutetaan\n"
 
 #: backend/dvi/mdvi-lib/paper.c:104 backend/dvi/mdvi-lib/paper.c:111
 msgid "custom"
@@ -286,7 +288,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/pk.c:309
 msgid "Bad PK file: More bits than required\n"
-msgstr ""
+msgstr "Huono PK-tiedosto: enemmän bittejä kuin vaaditaan\n"
 
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
@@ -340,31 +342,31 @@ msgstr ""
 #: backend/dvi/mdvi-lib/sp-epsf.c:170
 #, c-format
 msgid "%s: argument `%s' ignored for key `%s'\n"
-msgstr ""
+msgstr "%s: argumentti ”%s” ohitettiin avaimelle ”%s”\n"
 
 #: backend/dvi/mdvi-lib/t1.c:187
 msgid "(t1) failed to reset device resolution\n"
-msgstr ""
+msgstr "(t1) laitteen tarkkuuden palauttaminen epäonnistui\n"
 
 #: backend/dvi/mdvi-lib/t1.c:215
 #, c-format
 msgid "%s: could not encode font\n"
-msgstr ""
+msgstr "%s: fonttia ei voitu koodata\n"
 
 #: backend/dvi/mdvi-lib/tfm.c:175
 #, c-format
 msgid "%s: Checksum mismatch (got %u, expected %u)\n"
-msgstr ""
+msgstr "%s: tarkistussumma ei täsmää (saatiin %u, odotettiin %u)\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:91
 #, c-format
 msgid "%s: Error reading AFM data\n"
-msgstr ""
+msgstr "%s: virhe luettaessa AFM-tietoa\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:182
 #, c-format
 msgid "Warning: TFM file `%s' has suspicious size\n"
-msgstr ""
+msgstr "Varoitus: TFM-tiedoston ”%s” koko on epäilyttävä\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:511
 #, c-format
@@ -419,48 +421,48 @@ msgstr ""
 #: backend/dvi/mdvi-lib/tt.c:325
 #, c-format
 msgid "(tt) %s: no font metric data\n"
-msgstr ""
+msgstr "(tt) %s: ei fontin metriikkatietoa\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "Hupsis!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "Aaaargh!!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "Aijai!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "Houston, meillä on ongelma"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3… 2… 1… PUM!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "Olen mennyttä"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
-msgstr ""
+msgstr "Vajoan syvyyteen"
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
-msgstr ""
+msgstr "Haistan palaneen käryä"
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
-msgstr ""
+msgstr "Ohjelma kaatuu"
 
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: virhe:"
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
@@ -469,7 +471,7 @@ msgstr "Virhe"
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: varoitus:"
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
@@ -478,11 +480,11 @@ msgstr "Varoitus"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: vakava virhe:"
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "Vakava virhe"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
@@ -510,31 +512,31 @@ msgstr ""
 #: backend/dvi/mdvi-lib/util.c:242
 #, c-format
 msgid "failed to allocate %ux%u bytes\n"
-msgstr ""
+msgstr "%u×%u tavun varaaminen epäonnistui\n"
 
 #: backend/dvi/mdvi-lib/util.c:250
 msgid "attempted to free NULL pointer\n"
-msgstr ""
+msgstr "yritettiin vapauttaa NULL-osoitinta\n"
 
 #: backend/dvi/mdvi-lib/vf.c:82
 #, c-format
 msgid "%s: Checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: tarkistussumma ei täsmää (odotettiin %u, saatiin %u)\n"
 
 #: backend/dvi/mdvi-lib/vf.c:130
 #, c-format
 msgid "(vf) %s: could not load font `%s'\n"
-msgstr ""
+msgstr "(vf) %s: ei voitu ladata fonttia ”%s”\n"
 
 #: backend/dvi/mdvi-lib/vf.c:170
 #, c-format
 msgid "(vf) %s: unexpected character %d\n"
-msgstr ""
+msgstr "(vf) %s: odottamaton merkki %d\n"
 
 #: backend/dvi/mdvi-lib/vf.c:186
 #, c-format
 msgid "(vf) %s: character %d redefined\n"
-msgstr ""
+msgstr "(vf) %s: merkki %d määritelty uudelleen\n"
 
 #: backend/dvi/mdvi-lib/vf.c:209
 #, c-format
@@ -544,7 +546,7 @@ msgstr ""
 #: backend/dvi/mdvi-lib/vf.c:235
 #, c-format
 msgid "%s: File corrupted, or not a VF file.\n"
-msgstr ""
+msgstr "%s: Tiedosto on vioittunut tai ei ole VF-tiedosto.\n"
 
 #: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
@@ -919,6 +921,11 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril on yksinkertainen monen sivu asiakirjakatselin. Se osaa näyttää ja "
+"tulostaa PostScript (PS)-, EPS (Encapsulated PostScript)-, DJVU-, DVI-, XPS-"
+" ja PDF (Portable Document Format)- samoin kuin sarjakuva-arkistotiedostoja."
+" Jos asiakirja sitä tukee, se osaa myös etsiä tekstiä, kopioida sitä "
+"leikepöydälle sekä siirtyä hyperteksti- ja sisällysluettelokirjanmerkeissä."
 
 #: data/atril.appdata.xml.in.in:18
 msgid ""
@@ -926,6 +933,8 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril on haarautus Evincestä ja osa MATE-työpöytäympäristöä. Jos haluat "
+"lisätietoa MATEsta ja Atrilista, käy projektin kotisivulla."
 
 #: data/atril.desktop.in.in:4 shell/ev-window-title.c:157
 msgid "Document Viewer"
@@ -940,6 +949,7 @@ msgstr "Katsele monisivuisia asiakirjoja"
 #: data/atril.desktop.in.in:20
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 msgstr ""
+"MATE;tiedosto;asiakirja;katselin;katseluohjelma;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;sarjakuvat;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1185,6 +1195,11 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
+"Tekijänoikeudet © 2000, 2001 Eazel Inc.\n"
+"Tekijänoikeudet © 2003 Andrew Sobala <aes@gnome.org>\n"
+"Tekijänoikeudet © 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Tekijänoikeudet © 2005 Red Hat, Inc\n"
+"Tekijänoikeudet © 2012–2021 MATEn kehittäjät"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
@@ -1282,7 +1297,7 @@ msgstr "Sivunkäsittely"
 #: libview/ev-jobs.c:622
 #, c-format
 msgid "Failed to render page %d"
-msgstr ""
+msgstr "Sivun %d hahmontaminen epäonnistui"
 
 #: libview/ev-jobs.c:1737
 #, c-format
@@ -1552,7 +1567,7 @@ msgstr "Lisätietoa"
 
 #: shell/ev-sidebar.c:367
 msgid "Hide sidebar"
-msgstr ""
+msgstr "Piilota sivupaneeli"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1728,8 +1743,8 @@ msgstr "Nykyistä asiakirjaa ei voitu lähettää"
 #, c-format
 msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu odottava työ jonossa"
+msgstr[1] "%lu odottavaa työtä jonossa"
 
 #: shell/ev-window.c:3717
 #, c-format
@@ -1815,10 +1830,12 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
+"Atril on yksinkertainen monen sivun asiakirjakatselin,\n"
+"jonka voimanlähteenä ovat SyncTeX %s sekä %s %s."
 
 #: shell/ev-window.c:5392
 msgid "Atril is a simple multi-page document viewer."
-msgstr ""
+msgstr "Atril on yksinkertainen monen sivun asiakirjakatselin."
 
 #: shell/ev-window.c:5405
 msgid "MATE Documentation Team"
@@ -1853,13 +1870,15 @@ msgstr ""
 
 #: shell/ev-window.c:5464
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Tietoa Atril-asiakirjakatselimesta"
 
 #: shell/ev-window.c:5465
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Tekijänoikeudet © 1996–2009 Evincen tekijät\n"
+"Tekijänoikeudet © 2012–2021 MATEn kehittäjät"
 
 #: shell/ev-window.c:5472
 msgid "translator-credits"
@@ -2303,7 +2322,7 @@ msgstr "Nimetty kohde näytettäväksi."
 
 #: shell/main.c:67
 msgid "DEST"
-msgstr ""
+msgstr "KOHDE"
 
 #: shell/main.c:68
 msgid "Run atril in presentation mode"

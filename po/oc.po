@@ -7,7 +7,8 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2019
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
-# Quentin PAGÈS, 2024
+# Quentin PAGÈS, 2025
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Quentin PAGÈS, 2024\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -140,12 +141,12 @@ msgstr "%s : fichièr corromput o pas un fichièr DVI\n"
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s : la macrò vf a rencontrat d'errors\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s : pila pas voida après la macro vf\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
@@ -160,11 +161,11 @@ msgstr "%s : pagina %d fòra plaja\n"
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s : descalatge incorrècte a la pagina %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "pila pas voida a la fin de la pagina\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
@@ -173,15 +174,15 @@ msgstr "encara cap de polissa per defaut definida\n"
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "lo caractèr demandat %d existís pas dins « %s »\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "pila creissenta\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "pila insufisenta\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
@@ -190,22 +191,24 @@ msgstr "la polissa %d es pas definida\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "longor especiala malformada\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr ""
+msgstr "la polissa %d es pas definida dins lo postambul\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "còdi d'operacion imprevist %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
 msgstr ""
+"còdi d'operacion non definit %d\n"
+"\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
@@ -260,12 +263,12 @@ msgstr ""
 #: backend/dvi/mdvi-lib/gf.c:361
 #, c-format
 msgid "%s: File corrupted, or not a GF file\n"
-msgstr ""
+msgstr "%s : fichièr corromput, o es pas un fichièr GF\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:212
 #, c-format
 msgid "invalid page specification `%s'\n"
-msgstr ""
+msgstr "especificacion de pagina invalida « %s »\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:232
 msgid "garbage after DVI page specification ignored\n"
@@ -1831,7 +1834,7 @@ msgstr "Barra d'edicion"
 
 #: shell/ev-window.c:5131
 msgid "There was an error displaying help"
-msgstr "Una error s'es produsida al moment de l'afichatge de l'ajuda"
+msgstr "Una error s'es producha al moment de l'afichatge de l'ajuda"
 
 #: shell/ev-window.c:5389
 #, c-format
