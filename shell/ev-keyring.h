@@ -31,6 +31,9 @@ gchar   *ev_keyring_lookup_password (const gchar  *uri);
 gboolean ev_keyring_save_password   (const gchar  *uri,
 				     const gchar  *password,
 				     GPasswordSave flags);
+gchar   *ev_keyring_lookup_nss_password (const gchar *token);
+gboolean ev_keyring_save_nss_password   (const gchar *token,
+                                         const gchar *password);
 
 G_END_DECLS
 
