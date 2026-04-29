@@ -13,6 +13,8 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
 # Avi Markovitz <avi.markovitz@gmail.com>, 2024
+# Omer I.S., 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -20,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>, 2024\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +49,7 @@ msgstr "הפעולה \"%s\" לא הסתיימה בצורה שגרתית"
 #: backend/comics/comics-document.c:457
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr "סוג ה־MIME אינו של ספר קומיקס: %s"
+msgstr "לא סוג קובץ של קומיקס: %s"
 
 #: backend/comics/comics-document.c:464
 msgid ""
@@ -58,7 +60,7 @@ msgstr ""
 #: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
 #: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
-msgstr "סוג MIME לא ידוע"
+msgstr "סוג קובץ לא ידוע"
 
 #: backend/comics/comics-document.c:565
 msgid "File corrupted"
@@ -922,6 +924,8 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"‏Artil פוצל מתוך Evince והוא חלק מסביבת שולחן העבודה של MATE. אם מעניין אותך"
+" לדעת עוד על MATE ועל Artil, נא לבקר בדף הבית של המיזם."
 
 #: data/atril.desktop.in.in:4 shell/ev-window-title.c:157
 msgid "Document Viewer"
@@ -953,7 +957,7 @@ msgstr "טעינת המסמך באופן אוטומטית"
 
 #: data/org.mate.Atril.gschema.xml:18
 msgid "Whether the document is automatically reloaded on file change."
-msgstr ""
+msgstr "האם על המסמך להיטען אוטומטית בעת ביצוע שינויים בקובץ."
 
 #: data/org.mate.Atril.gschema.xml:22
 msgid "The URI of the directory last used to open or save a document."
@@ -965,7 +969,7 @@ msgstr ""
 
 #: data/org.mate.Atril.gschema.xml:30
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "גודל מטמון העמוד במגה־בתים"
 
 #: data/org.mate.Atril.gschema.xml:31
 msgid ""
@@ -1540,7 +1544,7 @@ msgstr "מידע נוסף"
 
 #: shell/ev-sidebar.c:367
 msgid "Hide sidebar"
-msgstr ""
+msgstr "הסתרת סרגל הצד"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1760,9 +1764,9 @@ msgid ""
 "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "ישנה משימת הדפסה (%d) פעילה. להמתין עד שהמדפסת מסיימת לפני הסגירה?"
+msgstr[1] "ישנן %d משימות הדפסה פעילות. להמתין עד שהמדפסת מסיימת לפני הסגירה?"
+msgstr[2] "ישנן %d משימות הדפסה פעילות. להמתין עד שהמדפסת מסיימת לפני הסגירה?"
 
 #: shell/ev-window.c:4018
 msgid "If you close the window, pending print jobs will not be printed."

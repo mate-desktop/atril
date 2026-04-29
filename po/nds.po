@@ -6,6 +6,7 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Benedikt Straub <benedikt-straub@web.de>, 2025
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Benedikt Straub <benedikt-straub@web.de>, 2025\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Low German (https://app.transifex.com/mate/teams/13566/nds/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,12 +64,12 @@ msgstr "Keene Datei im Archiv"
 #: backend/comics/comics-document.c:617
 #, c-format
 msgid "No images found in archive %s"
-msgstr "In de Verteeknis %s künn keene Billers funnen werrn"
+msgstr "In de Verteeknis %s kunn keene Billers funnen worden"
 
 #: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
 #, c-format
 msgid "There was an error deleting “%s”."
-msgstr "Künn \"%s\" nich akerat löschen."
+msgstr "Kunn \"%s\" nich akkeraat löschen."
 
 #: backend/comics/comics-document.c:1012
 #, c-format
@@ -95,7 +96,7 @@ msgstr ""
 
 #: backend/dvi/dvi-document.c:107
 msgid "DVI document has incorrect format"
-msgstr "DVI Dokument het nich akerates Format"
+msgstr "DVI Dokument hett nich akkeraates Format"
 
 #: backend/dvi/dvidocument.atril-backend.desktop.in:4
 msgid "DVI Documents"
@@ -668,12 +669,12 @@ msgstr "Billers"
 #: backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
-msgstr "Künn Dokument \"%s\" nich laden"
+msgstr "Kunn Dokument \"%s\" nich laden"
 
 #: backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr "Künn dokument \"%s\" nich spiekern"
+msgstr "Kunn dokument \"%s\" nich spiekern"
 
 #: backend/ps/psdocument.atril-backend.desktop.in:5
 msgid "PostScript Documents"
@@ -681,7 +682,7 @@ msgstr "PostScript Dokumente"
 
 #: backend/tiff/tiff-document.c:114
 msgid "Invalid document"
-msgstr "Nich akerates Dokument"
+msgstr "Nich akkeraates Dokument"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:4
 msgid "Tiff Documents"
@@ -694,17 +695,17 @@ msgstr ""
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
 msgid "Couldn't save attachment “%s”: %s"
-msgstr "Künn Anhangen \"%s\" nich spiekern: %s"
+msgstr "Kunn Anhangen \"%s\" nich spiekern: %s"
 
 #: libdocument/ev-attachment.c:368
 #, c-format
 msgid "Couldn't open attachment “%s”: %s"
-msgstr "Künn Anhangen \"%s\" nich opmaken: %s"
+msgstr "Kunn Anhangen \"%s\" nich opmaken: %s"
 
 #: libdocument/ev-attachment.c:403
 #, c-format
 msgid "Couldn't open attachment “%s”"
-msgstr "Künn Anhangen \"%s\" nich opmaken"
+msgstr "Kunn Anhangen \"%s\" nich opmaken"
 
 #: libdocument/ev-document-factory.c:167
 #, c-format
@@ -736,7 +737,7 @@ msgstr "Datei is keene valide .desktop Datei"
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Dateiverschoon '%s' vu'm Schrievdisk nich erkannt"
+msgstr "Dateiversioon »%s« vum Schrievdisk nich erkannt"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
 #, c-format
@@ -745,7 +746,7 @@ msgstr "Starte %s"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "Anwennen nimmt keene Dokumenten up de Oorderrieg an"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
 #, c-format
@@ -755,6 +756,8 @@ msgstr "Unbekannte Startoption: %d"
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
+"Kann Dokument-URIs nich an eenen Schrievdisk-Indrag vun de Aard »Type=Link« "
+"geven"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
@@ -762,7 +765,7 @@ msgstr "Keen startbares Element"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
-msgstr "Deaktivert de Verbinnen to'm Törnoppasser"
+msgstr "Deaktiveert de Verbinnen to'm Törnoppasser"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
@@ -771,7 +774,7 @@ msgstr "Datei mit sekert Konfiguratioon angeven"
 #: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
-msgstr "FILE"
+msgstr "DATEI"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
@@ -783,11 +786,11 @@ msgstr "ID"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Session management options:"
-msgstr "Törnoppassensoptschoonen:"
+msgstr "Törnoppassens-Instellens:"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:271
 msgid "Show session management options"
-msgstr "Törnoppassensoptschoonen opwiesen"
+msgstr "Törnoppassens-Instellens opwiesen"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:982
 #, c-format
@@ -800,7 +803,7 @@ msgstr "Op de Warktüügbalken _verschuven"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1472
 msgid "Move the selected item on the toolbar"
-msgstr "Dat utwählte Element op de Warktüügbalken verschuven"
+msgstr "Dat utköörte Element op de Warktüügbalken verschuven"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
 msgid "_Remove from Toolbar"
@@ -808,7 +811,7 @@ msgstr "Ut de Warktüügbalken _löschen"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1474
 msgid "Remove the selected item from the toolbar"
-msgstr "Utwähltes Element ut Warktüügbalken löschen"
+msgstr "Utköörtes Element ut Warktüügbalken löschen"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1475
 msgid "_Delete Toolbar"
@@ -816,7 +819,7 @@ msgstr "Warktüügbalken _löschen"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1476
 msgid "Remove the selected toolbar"
-msgstr "Utwählten Warktüügbalken löschen"
+msgstr "Utköörten Warktüügbalken löschen"
 
 #: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
@@ -971,7 +974,7 @@ msgstr ""
 
 #: previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
-msgstr "Twüschentiedliche Datei löschen"
+msgstr "Tüskentiedliche Datei löschen"
 
 #: previewer/ev-previewer.c:36
 msgid "Print settings file"
@@ -983,7 +986,7 @@ msgstr "MATE Dokument Utblick"
 
 #: previewer/ev-previewer-window.c:96 shell/ev-window.c:3660
 msgid "Failed to print document"
-msgstr "Künn dat Dokument nich drucken"
+msgstr "Kunn dat Dokument nich drucken"
 
 #: previewer/ev-previewer-window.c:240
 #, c-format
@@ -1036,7 +1039,7 @@ msgstr "Drucken"
 
 #: previewer/ev-previewer-window.c:305 shell/ev-window.c:6472
 msgid "Print this document"
-msgstr "Düsses Dokument drucken"
+msgstr "Deeses Dokument drucken"
 
 #: previewer/ev-previewer-window.c:339 shell/ev-window.c:6627
 msgid "Fit Pa_ge"
@@ -1060,7 +1063,7 @@ msgstr "Siet"
 
 #: previewer/ev-previewer-window.c:554 shell/ev-window.c:6785
 msgid "Select Page"
-msgstr "Siet utwählen"
+msgstr "Siet utkören"
 
 #: properties/ev-properties-main.c:116
 msgid "Document"
@@ -1072,7 +1075,7 @@ msgstr "Titel:"
 
 #: properties/ev-properties-view.c:61
 msgid "Location:"
-msgstr "Ort:"
+msgstr "Oort:"
 
 #: properties/ev-properties-view.c:62
 msgid "Subject:"
@@ -1197,7 +1200,7 @@ msgstr ""
 
 #: libview/ev-print-operation.c:1237
 msgid "Invalid page selection"
-msgstr "Nich akerate Sietenutwahl"
+msgstr "Nich akkeraate Sietenutwahl"
 
 #: libview/ev-print-operation.c:1240
 msgid "Your print range selection does not include any pages"
@@ -1370,7 +1373,7 @@ msgstr "Slötel"
 
 #: shell/ev-annotation-properties-dialog.c:105
 msgid "Help"
-msgstr "Hölp"
+msgstr "Hülp"
 
 #: shell/ev-annotation-properties-dialog.c:106
 msgid "New Paragraph"
@@ -1382,7 +1385,7 @@ msgstr "Absatz"
 
 #: shell/ev-annotation-properties-dialog.c:108
 msgid "Insert"
-msgstr ""
+msgstr "Infögen"
 
 #: shell/ev-annotation-properties-dialog.c:109
 msgid "Cross"
@@ -1472,7 +1475,7 @@ msgstr "_Passwoord:"
 
 #: shell/ev-password-view.c:351
 msgid "Forget password _immediately"
-msgstr "Passwoord just wedder _vergeten"
+msgstr "Passwoord jüüst wedder _vergeten"
 
 #: shell/ev-password-view.c:363
 msgid "Remember password until you _log out"
@@ -1480,11 +1483,11 @@ msgstr ""
 
 #: shell/ev-password-view.c:375
 msgid "Remember _forever"
-msgstr "Jümmers _merken"
+msgstr "Alltieden _merken"
 
 #: shell/ev-properties-dialog.c:120
 msgid "Properties"
-msgstr "Eegenschapten"
+msgstr "Eegenskuppen"
 
 #: shell/ev-properties-dialog.c:158
 msgid "General"
@@ -1509,7 +1512,7 @@ msgstr ""
 
 #: shell/ev-properties-license.c:134
 msgid "Usage terms"
-msgstr "Gebrukregeln"
+msgstr "Bruuk-Regeln"
 
 #: shell/ev-properties-license.c:140
 msgid "Text License"
@@ -1517,7 +1520,7 @@ msgstr "textlizenz"
 
 #: shell/ev-properties-license.c:146
 msgid "Further Information"
-msgstr "Mehr Informatschoonen"
+msgstr "Mehr Informatioonen"
 
 #: shell/ev-sidebar.c:367
 msgid "Hide sidebar"
@@ -1619,7 +1622,7 @@ msgstr ""
 
 #: shell/ev-window.c:2016 shell/ev-window.c:2197
 msgid "Unable to open document"
-msgstr "Künn dat Dokument nich opmaken"
+msgstr "Kunn dat Dokument nich opmaken"
 
 #: shell/ev-window.c:2153
 #, c-format
@@ -1685,7 +1688,7 @@ msgstr ""
 
 #: shell/ev-window.c:3274
 msgid "Save As…"
-msgstr "Spiekern as..."
+msgstr "Spiekern as …"
 
 #: shell/ev-window.c:3352
 msgid "Could not send current document"
@@ -1886,11 +1889,11 @@ msgstr "_Leseteken"
 
 #: shell/ev-window.c:6456
 msgid "_Help"
-msgstr "_Hölp"
+msgstr "_Hülp"
 
 #: shell/ev-window.c:6459 shell/ev-window.c:6825
 msgid "_Open…"
-msgstr ""
+msgstr "_Opmaken …"
 
 #: shell/ev-window.c:6460 shell/ev-window.c:6826
 msgid "Open an existing document"
@@ -1918,11 +1921,11 @@ msgstr ""
 
 #: shell/ev-window.c:6471
 msgid "_Print…"
-msgstr ""
+msgstr "_Drucken …"
 
 #: shell/ev-window.c:6474
 msgid "P_roperties"
-msgstr "E_egenschapten"
+msgstr "_Eegenskuppen"
 
 #: shell/ev-window.c:6480
 msgid "_Copy"
@@ -1970,11 +1973,11 @@ msgstr ""
 
 #: shell/ev-window.c:6510
 msgid "_Reload"
-msgstr "_Opfrischen"
+msgstr "_Vernejen"
 
 #: shell/ev-window.c:6511
 msgid "Reload the document"
-msgstr "Düsses Dokument opfrischen"
+msgstr "Deeses Dokument vernejen"
 
 #: shell/ev-window.c:6513
 msgid "_Expand Window to Fit"
@@ -2026,7 +2029,7 @@ msgstr "Fullbill sluten"
 
 #: shell/ev-window.c:6550
 msgid "Start Presentation"
-msgstr "Präsentatschoon starten"
+msgstr "Präsenteren starten"
 
 #: shell/ev-window.c:6551
 msgid "Start a presentation"
@@ -2038,7 +2041,7 @@ msgstr "_Warktüügbalken"
 
 #: shell/ev-window.c:6607
 msgid "Show or hide the toolbar"
-msgstr "Warktüügbalken opwiesen or verbargen"
+msgstr "Warktüügbalken opwiesen of verbargen"
 
 #: shell/ev-window.c:6609
 msgid "Side _Pane"
@@ -2058,11 +2061,11 @@ msgstr "Dat heele Dokument opwiesen"
 
 #: shell/ev-window.c:6615
 msgid "_Dual"
-msgstr "_Twejfach"
+msgstr "_Dübbelt"
 
 #: shell/ev-window.c:6616
 msgid "Show two pages at once"
-msgstr "Twej Sieten op eenmol opwiesen"
+msgstr "Twee Sieten op een Maal opwiesen"
 
 #: shell/ev-window.c:6618
 msgid "_Odd pages left"
@@ -2082,7 +2085,7 @@ msgstr ""
 
 #: shell/ev-window.c:6624
 msgid "Pre_sentation"
-msgstr "Präsentat_schoon"
+msgstr "Pr_äsenteren"
 
 #: shell/ev-window.c:6625
 msgid "Run document as a presentation"
@@ -2154,7 +2157,7 @@ msgstr "Gröte ännern"
 
 #: shell/ev-window.c:6811
 msgid "Navigation"
-msgstr "Navigatschoon"
+msgstr "Navigeren"
 
 #: shell/ev-window.c:6813
 msgid "Back"
@@ -2210,7 +2213,7 @@ msgstr "Bill spiekern"
 
 #: shell/ev-window.c:7483
 msgid "Unable to open attachment"
-msgstr "Künn Anhangen nich opmaken"
+msgstr "Kunn Anhangen nich opmaken"
 
 #: shell/ev-window.c:7539
 msgid "The attachment could not be saved."
@@ -2271,7 +2274,7 @@ msgstr ""
 
 #: shell/main.c:70
 msgid "The word or phrase to find in the document"
-msgstr "Dat Woort or de Deel, de in düssen Dokumentä funnen werrn schall"
+msgstr "Dat Woort of de Deel, wat in deesem Dokument funnen worden sall"
 
 #: shell/main.c:70
 msgid "STRING"
@@ -2279,4 +2282,4 @@ msgstr "STRING"
 
 #: shell/main.c:74
 msgid "[FILE…]"
-msgstr ""
+msgstr "[DATEI…]"
