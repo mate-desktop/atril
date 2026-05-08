@@ -45,6 +45,7 @@
 #include "ev-view-accessible.h"
 #include "ev-view-private.h"
 #include "ev-view-type-builtins.h"
+#include "ev-debug.h"
 
 enum {
 	SIGNAL_SCROLL,
@@ -7263,6 +7264,11 @@ ev_view_zoom_for_size_continuous_and_dual_page (EvView *view,
 		g_assert_not_reached ();
 	}
 
+	ev_debug_message (DEBUG_ZOOM,
+			  "continuous+dual: current_page=%d doc=%.1fx%.1f (after 2x width) "
+			  "target=%dx%d sb=%d scale=%.4f",
+			  view->current_page + 1, doc_width, doc_height,
+			  width - sb_size, height, sb_size, scale);
 	ev_document_model_set_scale (view->model, scale);
 }
 
@@ -7307,6 +7313,11 @@ ev_view_zoom_for_size_continuous (EvView *view,
 		g_assert_not_reached ();
 	}
 
+	ev_debug_message (DEBUG_ZOOM,
+			  "continuous: current_page=%d doc=%.1fx%.1f "
+			  "target=%dx%d sb=%d scale=%.4f",
+			  view->current_page + 1, doc_width, doc_height,
+			  width - sb_size, height, sb_size, scale);
 	ev_document_model_set_scale (view->model, scale);
 }
 
@@ -7319,13 +7330,19 @@ ev_view_zoom_for_size_dual_page (EvView *view,
 	gdouble doc_width, doc_height;
 	gdouble scale;
 	gint other_page;
+	gboolean odd_left;
 	gint sb_size;
 
-	other_page = view->current_page ^ 1;
+	is_dual_page (view, &odd_left);
+
+	if (view->current_page % 2 == !odd_left)
+		other_page = view->current_page + 1;
+	else
+		other_page = view->current_page - 1;
 
 	/* Find the largest of the two. */
 	get_doc_page_size (view, view->current_page, &doc_width, &doc_height);
-	if (other_page < ev_document_get_n_pages (view->document)) {
+	if (other_page >= 0 && other_page < ev_document_get_n_pages (view->document)) {
 		gdouble width_2, height_2;
 
 		get_doc_page_size (view, other_page, &width_2, &height_2);
@@ -7357,6 +7374,13 @@ ev_view_zoom_for_size_dual_page (EvView *view,
 		g_assert_not_reached ();
 	}
 
+	ev_debug_message (DEBUG_ZOOM,
+			  "dual: current_page=%d other_page=%d "
+			  "doc=%.1fx%.1f (after 2x width) "
+			  "target=%dx%d scale=%.4f",
+			  view->current_page + 1, other_page + 1,
+			  doc_width, doc_height,
+			  width, height, scale);
 	ev_document_model_set_scale (view->model, scale);
 }
 
@@ -7395,6 +7419,11 @@ ev_view_zoom_for_size_single_page (EvView *view,
 		g_assert_not_reached ();
 	}
 
+	ev_debug_message (DEBUG_ZOOM,
+			  "single: current_page=%d doc=%.1fx%.1f "
+			  "target=%dx%d scale=%.4f",
+			  view->current_page + 1, doc_width, doc_height,
+			  width, height, scale);
 	ev_document_model_set_scale (view->model, scale);
 }
 
