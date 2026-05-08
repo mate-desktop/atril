@@ -57,6 +57,8 @@ debug_init ()
 
 	if (g_getenv ("EV_DEBUG_JOBS") != NULL)
 		ev_debug |= EV_DEBUG_JOBS;
+	if (g_getenv ("EV_DEBUG_ZOOM") != NULL)
+		ev_debug |= EV_DEBUG_ZOOM;
 }
 
 static void
