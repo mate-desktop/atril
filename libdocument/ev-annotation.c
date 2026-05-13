@@ -66,7 +66,16 @@ struct _EvAnnotationAttachmentClass {
 	EvAnnotationClass parent_class;
 };
 
-static void ev_annotation_text_markup_iface_init       (EvAnnotationMarkupInterface *iface);
+struct _EvAnnotationTextMarkup {
+	EvAnnotation parent;
+};
+
+struct _EvAnnotationTextMarkupClass {
+	EvAnnotationClass parent_class;
+};
+
+static void ev_annotation_text_markup_iface_init             (EvAnnotationMarkupInterface *iface);
+static void ev_annotation_text_markup_markup_iface_init      (EvAnnotationMarkupInterface *iface);
 static void ev_annotation_attachment_markup_iface_init (EvAnnotationMarkupInterface *iface);
 
 /* EvAnnotation */
@@ -112,6 +121,11 @@ G_DEFINE_TYPE_WITH_CODE (EvAnnotationAttachment, ev_annotation_attachment, EV_TY
 	 {
 		 G_IMPLEMENT_INTERFACE (EV_TYPE_ANNOTATION_MARKUP,
 					ev_annotation_attachment_markup_iface_init);
+	 });
+G_DEFINE_TYPE_WITH_CODE (EvAnnotationTextMarkup, ev_annotation_text_markup, EV_TYPE_ANNOTATION,
+	 {
+		 G_IMPLEMENT_INTERFACE (EV_TYPE_ANNOTATION_MARKUP,
+					ev_annotation_text_markup_markup_iface_init);
 	 });
 
 /* EvAnnotation */
@@ -1217,4 +1231,23 @@ ev_annotation_attachment_set_attachment (EvAnnotationAttachment *annot,
 	g_object_notify (G_OBJECT (annot), "attachment");
 
 	return TRUE;
+}
+
+/* EvAnnotationTextMarkup */
+static void
+ev_annotation_text_markup_init (EvAnnotationTextMarkup *annot)
+{
+}
+
+static void
+ev_annotation_text_markup_class_init (EvAnnotationTextMarkupClass *klass)
+{
+	GObjectClass *g_object_class = G_OBJECT_CLASS (klass);
+
+	ev_annotation_markup_class_install_properties (g_object_class);
+}
+
+static void
+ev_annotation_text_markup_markup_iface_init (EvAnnotationMarkupInterface *iface)
+{
 }
