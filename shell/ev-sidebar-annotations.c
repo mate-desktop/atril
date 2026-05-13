@@ -336,6 +336,7 @@ job_finished_callback (EvJobAnnots          *job,
 	GdkPixbuf *highlight_icon = NULL;
 	GdkPixbuf *strike_out_icon = NULL;
 	GdkPixbuf *underline_icon = NULL;
+	GdkPixbuf *squiggly_icon = NULL;
 
 	priv = sidebar_annots->priv;
 
@@ -456,6 +457,16 @@ job_finished_callback (EvJobAnnots          *job,
 					}
 					pixbuf = underline_icon;
 					break;
+				case EV_ANNOTATION_TEXT_MARKUP_SQUIGGLY:
+					if (!squiggly_icon) {
+						squiggly_icon = gtk_icon_theme_load_icon (icon_theme,
+						                                           "format-text-underline",
+						                                           GTK_ICON_SIZE_BUTTON,
+						                                           GTK_ICON_LOOKUP_FORCE_REGULAR,
+						                                           NULL);
+					}
+					pixbuf = squiggly_icon;
+					break;
 				default:
 					break;
 				}
@@ -489,6 +500,8 @@ job_finished_callback (EvJobAnnots          *job,
 		g_object_unref (strike_out_icon);
 	if (underline_icon)
 		g_object_unref (underline_icon);
+	if (squiggly_icon)
+		g_object_unref (squiggly_icon);
 
 	g_object_unref (job);
 	priv->job = NULL;
