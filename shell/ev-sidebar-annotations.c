@@ -334,6 +334,7 @@ job_finished_callback (EvJobAnnots          *job,
 	GdkPixbuf *text_icon = NULL;
 	GdkPixbuf *attachment_icon = NULL;
 	GdkPixbuf *highlight_icon = NULL;
+	GdkPixbuf *strike_out_icon = NULL;
 
 	priv = sidebar_annots->priv;
 
@@ -423,14 +424,30 @@ job_finished_callback (EvJobAnnots          *job,
 				}
 				pixbuf = attachment_icon;
 			} else if (EV_IS_ANNOTATION_TEXT_MARKUP (annot)) {
-				if (!highlight_icon) {
-					highlight_icon = gtk_icon_theme_load_icon (icon_theme,
-					                                           "edit-select-all",
-					                                           GTK_ICON_SIZE_BUTTON,
-					                                           GTK_ICON_LOOKUP_FORCE_REGULAR,
-					                                           NULL);
+				switch (ev_annotation_text_markup_get_markup_type (EV_ANNOTATION_TEXT_MARKUP (annot))) {
+				case EV_ANNOTATION_TEXT_MARKUP_HIGHLIGHT:
+					if (!highlight_icon) {
+						highlight_icon = gtk_icon_theme_load_icon (icon_theme,
+						                                           "edit-select-all",
+						                                           GTK_ICON_SIZE_BUTTON,
+						                                           GTK_ICON_LOOKUP_FORCE_REGULAR,
+						                                           NULL);
+					}
+					pixbuf = highlight_icon;
+					break;
+				case EV_ANNOTATION_TEXT_MARKUP_STRIKE_OUT:
+					if (!strike_out_icon) {
+						strike_out_icon = gtk_icon_theme_load_icon (icon_theme,
+						                                             "format-text-strikethrough",
+						                                             GTK_ICON_SIZE_BUTTON,
+						                                             GTK_ICON_LOOKUP_FORCE_REGULAR,
+						                                             NULL);
+					}
+					pixbuf = strike_out_icon;
+					break;
+				default:
+					break;
 				}
-				pixbuf = highlight_icon;
 			}
 
 			gtk_tree_store_append (model, &child_iter, &iter);
@@ -457,6 +474,8 @@ job_finished_callback (EvJobAnnots          *job,
 		g_object_unref (attachment_icon);
 	if (highlight_icon)
 		g_object_unref (highlight_icon);
+	if (strike_out_icon)
+		g_object_unref (strike_out_icon);
 
 	g_object_unref (job);
 	priv->job = NULL;

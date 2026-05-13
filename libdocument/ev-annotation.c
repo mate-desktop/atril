@@ -1324,3 +1324,20 @@ ev_annotation_text_markup_highlight_new (EvPage *page)
 	                                    "type", EV_ANNOTATION_TEXT_MARKUP_HIGHLIGHT,
 	                                    NULL));
 }
+
+EvAnnotation *
+ev_annotation_text_markup_strike_out_new (EvPage *page)
+{
+	return EV_ANNOTATION (g_object_new (EV_TYPE_ANNOTATION_TEXT_MARKUP,
+	                                    "page", page,
+	                                    "type", EV_ANNOTATION_TEXT_MARKUP_STRIKE_OUT,
+	                                    NULL));
+}
+
+EvAnnotationTextMarkupType
+ev_annotation_text_markup_get_markup_type (EvAnnotationTextMarkup *annot)
+{
+	g_return_val_if_fail (EV_IS_ANNOTATION_TEXT_MARKUP (annot), 0);
+
+	return annot->type;
+}
