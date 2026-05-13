@@ -2686,6 +2686,9 @@ ev_annot_from_poppler_annot (PopplerAnnot *poppler_annot,
 				g_object_unref (poppler_attachment);
 		}
 			break;
+	        case POPPLER_ANNOT_HIGHLIGHT:
+			ev_annot = ev_annotation_text_markup_highlight_new (page);
+			break;
 	        case POPPLER_ANNOT_LINK:
 	        case POPPLER_ANNOT_WIDGET:
 			/* Ignore link and widgets annots since they are already handled */
