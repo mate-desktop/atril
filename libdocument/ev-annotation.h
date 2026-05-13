@@ -93,7 +93,8 @@ typedef struct _EvAnnotationTextMarkupClass EvAnnotationTextMarkupClass;
 typedef enum {
 	EV_ANNOTATION_TYPE_UNKNOWN,
 	EV_ANNOTATION_TYPE_TEXT,
-	EV_ANNOTATION_TYPE_ATTACHMENT
+	EV_ANNOTATION_TYPE_ATTACHMENT,
+	EV_ANNOTATION_TYPE_HIGHLIGHT
 } EvAnnotationType;
 
 typedef enum {
@@ -177,6 +178,7 @@ gboolean             ev_annotation_attachment_set_attachment (EvAnnotationAttach
 
 /* EvAnnotationTextMarkup */
 GType                ev_annotation_text_markup_get_type     (void) G_GNUC_CONST;
+EvAnnotation        *ev_annotation_text_markup_highlight_new (EvPage *page);
 
 G_END_DECLS
 
