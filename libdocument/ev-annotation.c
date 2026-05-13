@@ -1334,6 +1334,15 @@ ev_annotation_text_markup_strike_out_new (EvPage *page)
 	                                    NULL));
 }
 
+EvAnnotation *
+ev_annotation_text_markup_underline_new (EvPage *page)
+{
+	return EV_ANNOTATION (g_object_new (EV_TYPE_ANNOTATION_TEXT_MARKUP,
+	                                    "page", page,
+	                                    "type", EV_ANNOTATION_TEXT_MARKUP_UNDERLINE,
+	                                    NULL));
+}
+
 EvAnnotationTextMarkupType
 ev_annotation_text_markup_get_markup_type (EvAnnotationTextMarkup *annot)
 {
