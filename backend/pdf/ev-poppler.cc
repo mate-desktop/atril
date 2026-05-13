@@ -2692,6 +2692,9 @@ ev_annot_from_poppler_annot (PopplerAnnot *poppler_annot,
 	        case POPPLER_ANNOT_STRIKE_OUT:
 			ev_annot = ev_annotation_text_markup_strike_out_new (page);
 			break;
+	        case POPPLER_ANNOT_UNDERLINE:
+			ev_annot = ev_annotation_text_markup_underline_new (page);
+			break;
 	        case POPPLER_ANNOT_LINK:
 	        case POPPLER_ANNOT_WIDGET:
 			/* Ignore link and widgets annots since they are already handled */
