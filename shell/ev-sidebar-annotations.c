@@ -333,6 +333,7 @@ job_finished_callback (EvJobAnnots          *job,
 	GList *l;
 	GdkPixbuf *text_icon = NULL;
 	GdkPixbuf *attachment_icon = NULL;
+	GdkPixbuf *highlight_icon = NULL;
 
 	priv = sidebar_annots->priv;
 
@@ -421,6 +422,15 @@ job_finished_callback (EvJobAnnots          *job,
 					                                            NULL);
 				}
 				pixbuf = attachment_icon;
+			} else if (EV_IS_ANNOTATION_TEXT_MARKUP (annot)) {
+				if (!highlight_icon) {
+					highlight_icon = gtk_icon_theme_load_icon (icon_theme,
+					                                           "edit-select-all",
+					                                           GTK_ICON_SIZE_BUTTON,
+					                                           GTK_ICON_LOOKUP_FORCE_REGULAR,
+					                                           NULL);
+				}
+				pixbuf = highlight_icon;
 			}
 
 			gtk_tree_store_append (model, &child_iter, &iter);
@@ -445,6 +455,8 @@ job_finished_callback (EvJobAnnots          *job,
 		g_object_unref (text_icon);
 	if (attachment_icon)
 		g_object_unref (attachment_icon);
+	if (highlight_icon)
+		g_object_unref (highlight_icon);
 
 	g_object_unref (job);
 	priv->job = NULL;
