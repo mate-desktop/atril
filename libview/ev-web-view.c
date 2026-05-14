@@ -292,34 +292,39 @@ ev_web_view_document_changed_cb (EvDocumentModel *model,
 	}
 }
 
+static const gchar *night_mode_css =
+	"body { color: #fff !important; background-color: #000 !important; }"
+	"* { color: inherit !important; background-color: inherit !important; }"
+	"img { filter: none !important; }";
+
 static void
 ev_web_view_inverted_colors_changed_cb (EvDocumentModel *model,
 				        GParamSpec      *pspec,
 				        EvWebView       *webview)
 {
-	EvDocument *document = ev_document_model_get_document(model);
+	EvDocument *document = ev_document_model_get_document (model);
 
 	if (!document || !document->iswebdocument)
-	    return;
+		return;
 
-	if (ev_document_model_get_inverted_colors(model) == TRUE) {
-		if (document == NULL) {
-			ev_document_model_set_inverted_colors(model,FALSE);
-			return;
-		}
-		if (webview->inverted_stylesheet == FALSE) {
-			ev_document_check_add_night_sheet(document);
-			webview->inverted_stylesheet = TRUE;
-		}
-		ev_document_toggle_night_mode(document,TRUE);
-		webkit_web_view_reload(WEBKIT_WEB_VIEW(webview));
+	WebKitUserContentManager *ucm =
+		webkit_web_view_get_user_content_manager (WEBKIT_WEB_VIEW (webview));
+
+	if (ev_document_model_get_inverted_colors (model)) {
+		WebKitUserStyleSheet *sheet = webkit_user_style_sheet_new (
+			night_mode_css,
+			WEBKIT_USER_CONTENT_INJECT_ALL_FRAMES,
+			WEBKIT_USER_STYLE_LEVEL_USER,
+			NULL, NULL);
+		webkit_user_content_manager_add_style_sheet (ucm, sheet);
+		webkit_user_style_sheet_unref (sheet);
+		webview->inverted_stylesheet = TRUE;
+	} else {
+		webkit_user_content_manager_remove_all_style_sheets (ucm);
+		webview->inverted_stylesheet = FALSE;
 	}
-	else {
-		if (document != NULL) {
-			ev_document_toggle_night_mode(document,FALSE);
-			webkit_web_view_reload(WEBKIT_WEB_VIEW(webview));
-		}
-	}
+
+	webkit_web_view_reload (WEBKIT_WEB_VIEW (webview));
 }
 
 void
