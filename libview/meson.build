@@ -82,6 +82,7 @@ libview_deps = [
 
 if webkit.found()
    libview_deps += webkit
+   libview_deps += libgepub
 endif
 
 libview = library(

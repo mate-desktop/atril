@@ -150,7 +150,8 @@ thumbnailer_mime_types = atril_mime_types
 mathjax_directory = 'not enabled'
 # EPUB backend
 webkit = dependency('webkit2gtk-4.1', version: '>= 2.4.3', required: get_option('epub'))
-if webkit.found()
+libgepub = dependency('libgepub-0.7', required: get_option('epub'))
+if webkit.found() and libgepub.found()
   backend_subdirs += 'epub'
   atril_mime_types += 'application/epub+zip;'
 

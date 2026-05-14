@@ -11,6 +11,7 @@ epub_deps = [
     gtk,
     xml,
     minizip_dep,
+    libgepub,
 ]
 
 shared_module(
