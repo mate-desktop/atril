@@ -22,7 +22,6 @@
 
 #include "epub-document.h"
 #include "ev-file-helpers.h"
-#include "ev-document-find.h"
 #include "ev-backends-manager.h"
 #include "ev-document-links.h"
 
@@ -55,27 +54,17 @@ struct _EpubDocument
 	GepubDoc *gepub_doc;
 	GList *index;
 	gchar *docTitle;
+	gchar **page_paths;
+	gint n_pages;
 };
 
-static void epub_document_document_find_iface_init  (EvDocumentFindInterface  *iface);
 static void epub_document_document_links_iface_init (EvDocumentLinksInterface *iface);
 
 EV_BACKEND_REGISTER_WITH_CODE (EpubDocument, epub_document,
     {
-        EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_FIND,
-                                        epub_document_document_find_iface_init);
         EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_LINKS,
                                         epub_document_document_links_iface_init);
     } );
-
-static guint
-epub_document_check_hits (EvDocumentFind *document_find,
-                          EvPage         *page,
-                          const gchar    *text,
-                          gboolean        case_sensitive)
-{
-	return 0;
-}
 
 static void
 free_link_nodes (gpointer data)
@@ -187,12 +176,6 @@ epub_document_links_get_links (EvDocumentLinks *document_links,
 }
 
 static void
-epub_document_document_find_iface_init (EvDocumentFindInterface *iface)
-{
-	iface->check_for_hits = epub_document_check_hits;
-}
-
-static void
 epub_document_document_links_iface_init (EvDocumentLinksInterface *iface)
 {
 	iface->has_document_links = epub_document_links_has_document_links;
@@ -217,11 +200,7 @@ static int
 epub_document_get_n_pages (EvDocument *document)
 {
 	EpubDocument *epub_document = EPUB_DOCUMENT (document);
-
-	if (!epub_document->gepub_doc)
-		return 0;
-
-	return gepub_doc_get_n_chapters (epub_document->gepub_doc);
+	return epub_document->n_pages;
 }
 
 static EvPage *
@@ -231,15 +210,10 @@ epub_document_get_page (EvDocument *document,
 	EpubDocument *epub_document = EPUB_DOCUMENT (document);
 	EvPage *page = ev_page_new (index);
 
-	if (!epub_document->gepub_doc)
-		return page;
-
-	gepub_doc_set_chapter (epub_document->gepub_doc, index);
-	gchar *path = gepub_doc_get_current_path (epub_document->gepub_doc);
-	if (path) {
-		page->backend_page = g_strdup_printf ("epub:///%s", path);
+	if (epub_document->page_paths &&
+	    index >= 0 && index < epub_document->n_pages) {
+		page->backend_page = g_strdup (epub_document->page_paths[index]);
 		page->backend_destroy_func = g_free;
-		g_free (path);
 	}
 
 	return page;
@@ -365,12 +339,24 @@ epub_document_load (EvDocument  *document,
 
 	epub_document->index = build_index_from_gepub_toc (epub_document);
 
-	if (gepub_doc_get_n_chapters (epub_document->gepub_doc) == 0) {
+	epub_document->n_pages = gepub_doc_get_n_chapters (epub_document->gepub_doc);
+	if (epub_document->n_pages == 0) {
 		g_set_error_literal (error,
 		                     EV_DOCUMENT_ERROR,
 		                     EV_DOCUMENT_ERROR_INVALID,
 		                     _("epub document has no pages"));
 		return FALSE;
+	}
+
+	/* Pre-compute page URIs so get_page is thread-safe */
+	epub_document->page_paths = g_new0 (gchar *, epub_document->n_pages);
+	for (gint i = 0; i < epub_document->n_pages; i++) {
+		gepub_doc_set_chapter (epub_document->gepub_doc, i);
+		gchar *path = gepub_doc_get_current_path (epub_document->gepub_doc);
+		if (path) {
+			epub_document->page_paths[i] = g_strdup_printf ("epub:///%s", path);
+			g_free (path);
+		}
 	}
 
 	return TRUE;
@@ -383,6 +369,8 @@ epub_document_init (EpubDocument *epub_document)
 	epub_document->gepub_doc = NULL;
 	epub_document->index = NULL;
 	epub_document->docTitle = NULL;
+	epub_document->page_paths = NULL;
+	epub_document->n_pages = 0;
 }
 
 static void
@@ -395,6 +383,12 @@ epub_document_finalize (GObject *object)
 	if (epub_document->index) {
 		g_list_free_full (epub_document->index, free_link_nodes);
 		epub_document->index = NULL;
+	}
+
+	if (epub_document->page_paths) {
+		for (gint i = 0; i < epub_document->n_pages; i++)
+			g_free (epub_document->page_paths[i]);
+		g_free (epub_document->page_paths);
 	}
 
 	g_free (epub_document->docTitle);
