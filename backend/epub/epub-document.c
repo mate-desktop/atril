@@ -22,14 +22,12 @@
 
 #include "epub-document.h"
 #include "ev-file-helpers.h"
-#include "ev-backends-manager.h"
 #include "ev-document-links.h"
 
 #include <gepub.h>
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
-#include <glib/gstdio.h>
 
 #include <gtk/gtk.h>
 

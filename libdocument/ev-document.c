@@ -966,16 +966,3 @@ ev_document_get_resource_mime (EvDocument  *document,
 	return NULL;
 }
 
-void
-ev_document_toggle_night_mode(EvDocument *document,gboolean night)
-{
-	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS(document);
-	return klass->toggle_night_mode(document,night) ;
-}
-
-void
-ev_document_check_add_night_sheet(EvDocument *document)
-{
-	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS(document);
-	return klass->check_add_night_sheet(document) ;
-}
