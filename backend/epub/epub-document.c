@@ -336,16 +336,6 @@ build_index_from_gepub_toc (EpubDocument *epub_document)
 	return index;
 }
 
-static void
-epub_document_toggle_night_mode (EvDocument *document, gboolean night)
-{
-}
-
-static void
-epub_document_check_add_night_sheet (EvDocument *document)
-{
-}
-
 static gboolean
 epub_document_load (EvDocument  *document,
                     const char  *uri,
@@ -425,8 +415,6 @@ epub_document_class_init (EpubDocumentClass *klass)
 	ev_document_class->get_n_pages = epub_document_get_n_pages;
 	ev_document_class->get_info = epub_document_get_info;
 	ev_document_class->get_page = epub_document_get_page;
-	ev_document_class->toggle_night_mode = epub_document_toggle_night_mode;
-	ev_document_class->check_add_night_sheet = epub_document_check_add_night_sheet;
 	ev_document_class->get_resource = epub_document_get_resource;
 	ev_document_class->get_resource_mime = epub_document_get_resource_mime;
 }
