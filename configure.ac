@@ -633,7 +633,7 @@ if test "x$enable_epub" = "xyes"; then
                                        [webkit_pkg=webkit2gtk-4.0])])
 
     PKG_CHECK_MODULES(EPUB, $webkit_pkg >= $WEBKIT_REQUIRED \
-       libxml-2.0 >= $LIBXML_REQUIRED zlib libgepub-0.7,have_webkit=yes,have_webkit=no)
+       libgepub-0.7,have_webkit=yes,have_webkit=no)
 
     if test "x$have_webkit" = "xyes"; then
        AC_DEFINE([ENABLE_EPUB], [1], [Enable support for ePub documents.])
@@ -746,7 +746,6 @@ backend/djvu/Makefile
 backend/dvi/Makefile
 backend/dvi/mdvi-lib/Makefile
 backend/epub/Makefile
-backend/epub/minizip/Makefile
 backend/pdf/Makefile
 backend/pixbuf/Makefile
 backend/ps/Makefile

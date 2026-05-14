@@ -1,9 +1,6 @@
-SUBDIRS = minizip
-
 AM_CPPFLAGS = 		       			\
 	-I$(top_srcdir)				\
 	-I$(top_srcdir)/libdocument		\
-	-I$(srcdir)/minizip			\
 	-DMATELOCALEDIR=\"$(datadir)/locale\"	\
 	-DATRIL_COMPILATION			\
 	$(BACKEND_CFLAGS)			\
@@ -20,7 +17,6 @@ libepubdocument_la_SOURCES =	\
 libepubdocument_la_LDFLAGS = $(BACKEND_LIBTOOL_FLAGS)
 libepubdocument_la_LIBADD =				\
 	$(top_builddir)/libdocument/libatrildocument.la	\
-	minizip/libminizip.la				\
 	$(EPUB_LIBS)					\
 	$(BACKEND_LIBS)
 

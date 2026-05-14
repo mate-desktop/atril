@@ -118,6 +118,11 @@ struct _EvDocumentClass
 
 	void              (* toggle_night_mode)  (EvDocument      *document,gboolean night);
 	void              (*check_add_night_sheet)(EvDocument      *document);
+
+	GBytes          * (* get_resource)       (EvDocument      *document,
+	                                          const gchar     *path);
+	gchar           * (* get_resource_mime)  (EvDocument      *document,
+	                                          const gchar     *path);
 };
 
 GType            ev_document_get_type             (void) G_GNUC_CONST;
@@ -185,7 +190,11 @@ EvMapping       *ev_document_synctex_forward_search
 gint             ev_rect_cmp                      (EvRectangle     *a,
 					           EvRectangle     *b);
 void            ev_document_toggle_night_mode     (EvDocument *document,gboolean night);
-void			ev_document_check_add_night_sheet (EvDocument *document);
+void            ev_document_check_add_night_sheet (EvDocument *document);
+GBytes         *ev_document_get_resource          (EvDocument      *document,
+                                                   const gchar     *path);
+gchar          *ev_document_get_resource_mime     (EvDocument      *document,
+                                                   const gchar     *path);
 
 #define EV_TYPE_RECTANGLE (ev_rectangle_get_type ())
 struct _EvRectangle

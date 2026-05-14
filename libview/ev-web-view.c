@@ -29,6 +29,7 @@
 
 #include "ev-web-view.h"
 #include "ev-document-model.h"
+#include "ev-document.h"
 #include "ev-jobs.h"
 
  typedef enum {
@@ -130,11 +131,62 @@ ev_web_view_class_init (EvWebViewClass *klass)
 }
 
 static void
+epub_uri_scheme_request_cb (WebKitURISchemeRequest *request,
+                            gpointer               user_data)
+{
+	WebKitWebView *wv = webkit_uri_scheme_request_get_web_view (request);
+	EvWebView *webview = EV_WEB_VIEW (wv);
+	const gchar *path = webkit_uri_scheme_request_get_path (request);
+
+	if (!webview->document || !path) {
+		GError *error = g_error_new (G_IO_ERROR, G_IO_ERROR_NOT_FOUND,
+		                             "Resource not found: %s", path ? path : "(null)");
+		webkit_uri_scheme_request_finish_error (request, error);
+		g_error_free (error);
+		return;
+	}
+
+	/* Strip leading slash from the path */
+	while (*path == '/')
+		path++;
+
+	GBytes *resource = ev_document_get_resource (webview->document, path);
+	gchar *mime = ev_document_get_resource_mime (webview->document, path);
+
+	if (!resource) {
+		GError *error = g_error_new (G_IO_ERROR, G_IO_ERROR_NOT_FOUND,
+		                             "Resource not found: %s", path);
+		webkit_uri_scheme_request_finish_error (request, error);
+		g_error_free (error);
+		g_free (mime);
+		return;
+	}
+
+	gsize size = g_bytes_get_size (resource);
+	GInputStream *stream = g_memory_input_stream_new_from_bytes (resource);
+	webkit_uri_scheme_request_finish (request, stream, size,
+	                                  mime ? mime : "application/octet-stream");
+	g_object_unref (stream);
+	g_bytes_unref (resource);
+	g_free (mime);
+}
+
+static void
 ev_web_view_init (EvWebView *webview)
 {
+	static gboolean scheme_registered = FALSE;
+
 	gtk_widget_set_can_focus (GTK_WIDGET (webview), TRUE);
 
 	gtk_widget_set_has_window (GTK_WIDGET (webview), TRUE);
+
+	if (!scheme_registered) {
+		WebKitWebContext *context = webkit_web_context_get_default ();
+		webkit_web_context_register_uri_scheme (context, "epub",
+		                                        epub_uri_scheme_request_cb,
+		                                        NULL, NULL);
+		scheme_registered = TRUE;
+	}
 
 	webview->current_page = 0;
 
