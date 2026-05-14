@@ -147,37 +147,13 @@ endif
 
 thumbnailer_mime_types = atril_mime_types
 
-mathjax_directory = 'not enabled'
 # EPUB backend
 webkit = dependency('webkit2gtk-4.1', version: '>= 2.4.3', required: get_option('epub'))
 libgepub = dependency('libgepub-0.7', required: get_option('epub'))
 if webkit.found() and libgepub.found()
   backend_subdirs += 'epub'
   atril_mime_types += 'application/epub+zip;'
-
-  # MathJax configuration: auto-detect path if not specified
-  mathjax_directory = get_option('mathjax-directory')
-  if mathjax_directory == ''
-    mathjax_directories = [
-      '/usr/share/javascript/mathjax',
-      '/usr/share/mathjax'
-    ]
-
-    fs = import('fs')
-    foreach dir: mathjax_directories
-      if fs.exists(join_paths(dir, 'MathJax.js'))
-        mathjax_directory = dir
-        break
-      endif
-    endforeach
-
-    if mathjax_directory == ''
-      warning('MathJax not found, EPUB/MathML will not work fully. Please install mathjax or set --mathjax-directory!')
-    endif
-  endif
-
   atril_conf.set10('ENABLE_EPUB', true)
-  atril_conf.set_quoted('MATHJAX_DIRECTORY', mathjax_directory)
 endif
 
 atril_conf.set_quoted('SUPPORTED_MIMETYPES', atril_mime_types)
@@ -346,7 +322,6 @@ summary = [
   'desktopdir = @0@'.format(desktopdir),
   'schema_dir = @0@'.format(schema_dir),
   'ENABLE_DBUS = @0@'.format(get_option('enable_dbus')),
-  'MathJax directory = @0@'.format(mathjax_directory),
   '',
   'Backends enabled:',
 ]
