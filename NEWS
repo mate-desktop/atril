@@ -1,8 +1,44 @@
+### atril 1.28.4
+
+  * bump version in meson.build
+  * bump version in configure.ac
+  * update NEWS for 1.28.3
+  * fix: add mathjax to build script for arch linux
+  * fix meson.build autodetect mathjax if epub
+  * fix: meson.build define undefiend mathjax variable
+  * fix: meson.build mathjax variable in correct scope
+  * ci: add option to clean ccache
+  * build: disable DVI on fedora:latest and ubuntu:rolling
+  * build: use shell vs bash
+  * ci: remove unnecessary GH CLI installation step
+  * chore(deps): bump actions/cache from 3 to 5
+  * chore(deps): bump actions/checkout from 3 to 6
+  * Fix tests imported from XReader
+  * Fix tests with AT-SPI2 >= 2.53
+  * Improve search system
+  * add .gitignore and include files in meson
+  * pdf: Always use poppler_document_save to avoid data loss
+  * fix meson help
+  * fix memleak
+  * fix build on gcc 15
+  * ci: enable dvi for all distros
+  * Use properties for can-zoom-in and -out
+  * libview: Allow zooming to the limits of the scale
+  * shell: Fix Max zoom in UI
+  * ev-window: Remove unnecessary calculation
+  * ev-window: Limit max zoom based on largest page size
+  * Increase default page cache size to 500 MiB
+  * libview: Account for device scale in page cache size calculation
+  * Weblate migration (#690)
+  * ev-application: Quote user-supplied strings in ev_spawn command line
+
 ### atril 1.28.3
+
   * epub: autodetect matjax path
   * improvements to meson build
   * ci: initial work on github actions
 ### atril 1.28.2
+
   * Translations update
   * epub: Disable thumbnailing sidebar
   * (meson) fix: rename all backend files
@@ -38,6 +74,7 @@
   * replace ev_document_model_get_dual_page with
 
 ### atril 1.28.1
+
   * Translations update
   * Update CBR library to libarchive in README.md
   * ci: fix travis build failures caused by recent travis changes
