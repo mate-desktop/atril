@@ -2,82 +2,63 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Mooglie <mooglietech@gmail.com>, 2018
 # Kamala Kannan, 2018
 # Maurious Paul Vincent <paulmaurious@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
-"POT-Creation-Date: 2023-08-31 17:43+0200\n"
+"POT-Creation-Date: 2026-04-10 17:37+0200\n"
 "PO-Revision-Date: 2018-03-11 14:35+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Tamil (https://app.transifex.com/mate/teams/13566/ta/)\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: backend/comics/comics-document.c:206
-#, c-format
-msgid ""
-"Error launching the command “%s” in order to decompress the comic book: %s"
-msgstr "காமிக் புத்தகத்தை பிரிக்க “%s” கட்டளையை துவக்குவதில் பிழை : %s"
+#: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
+#, fuzzy
+#| msgid "File corrupted"
+msgid "File is corrupted"
+msgstr "கோப்பு சிதைந்தது"
 
-#: backend/comics/comics-document.c:220
-#, c-format
-msgid "The command “%s” failed at decompressing the comic book."
-msgstr "காமிக் புத்தகத்தை பிரிக்க “%s” கட்டளை தோல்வியுற்றது."
+#: backend/comics/comics-document.c:257
+msgid "Archive is encrypted"
+msgstr ""
 
-#: backend/comics/comics-document.c:229
-#, c-format
-msgid "The command “%s” did not end normally."
-msgstr " “%s” கட்டளை சரியாக முடியவில்லை"
+#: backend/comics/comics-document.c:262
+#, fuzzy
+#| msgid "No files in archive"
+msgid "No supported images in archive"
+msgstr "பெட்டகத்தில் கோப்புகள் இல்லை"
 
-#: backend/comics/comics-document.c:457
+#: backend/comics/comics-document.c:272
+msgid "No files in archive"
+msgstr "பெட்டகத்தில் கோப்புகள் இல்லை"
+
+#: backend/comics/comics-document.c:321
 #, c-format
 msgid "Not a comic book MIME type: %s"
 msgstr "ஒரு காமிக் புத்தக MIME வகை இல்லை: %s"
 
-#: backend/comics/comics-document.c:464
+#: backend/comics/comics-document.c:328
 msgid ""
-"Can't find an appropriate command to decompress this type of comic book"
-msgstr "இந்த வகை காமிக் புத்தகத்தை பிரிக்க சரியான கட்டளையை காண முடியவில்லை"
+"libarchive lacks support for this comic book’s compression, please contact "
+"your distributor"
+msgstr ""
 
-#: backend/comics/comics-document.c:538 backend/epub/epub-document.c:668
-#: libdocument/ev-document-factory.c:142 libdocument/ev-document-factory.c:285
-msgid "Unknown MIME Type"
-msgstr "தெரியாத MIME வகை"
-
-#: backend/comics/comics-document.c:565
+#: backend/comics/comics-document.c:365
 msgid "File corrupted"
 msgstr "கோப்பு சிதைந்தது"
 
-#: backend/comics/comics-document.c:578
-msgid "No files in archive"
-msgstr "பெட்டகத்தில் கோப்புகள் இல்லை"
-
-#: backend/comics/comics-document.c:617
-#, c-format
-msgid "No images found in archive %s"
-msgstr "%s காப்பகத்தில் ஒரு உருவும் இல்லை"
-
-#: backend/comics/comics-document.c:863 backend/epub/epub-document.c:1790
-#, c-format
-msgid "There was an error deleting “%s”."
-msgstr "“%s” ஐ நீக்குவதில் பிழை."
-
-#: backend/comics/comics-document.c:1012
-#, c-format
-msgid "Error %s"
-msgstr "பிழை %s"
-
-#: backend/comics/comicsdocument.atril-backend.desktop.in:4
+#: backend/comics/comicsdocument.atril-backend.desktop.in:3
 msgid "Comic Books"
 msgstr "காமிக் புத்தகங்கள்"
 
@@ -87,13 +68,12 @@ msgstr "DjVu ஆவணம் தவறான முறையை கொண்ட�
 
 #: backend/djvu/djvu-document.c:249
 msgid ""
-"The document is composed of several files. One or more of these files cannot"
-" be accessed."
+"The document is composed of several files. One or more of these files cannot "
+"be accessed."
 msgstr ""
-"இந்த ஆவணம் பல கோப்புக்களால் உருவானது. அதில் ஒன்றோ பலவோ கோப்புகளை அணுக "
-"இயலவில்லை."
+"இந்த ஆவணம் பல கோப்புக்களால் உருவானது. அதில் ஒன்றோ பலவோ கோப்புகளை அணுக இயலவில்லை."
 
-#: backend/djvu/djvudocument.atril-backend.desktop.in:4
+#: backend/djvu/djvudocument.atril-backend.desktop.in:3
 msgid "DjVu Documents"
 msgstr "Djvu ஆவணங்கள்"
 
@@ -101,7 +81,7 @@ msgstr "Djvu ஆவணங்கள்"
 msgid "DVI document has incorrect format"
 msgstr "DVI ஆவணம் தவறான முறையை கொண்டுள்ளது"
 
-#: backend/dvi/dvidocument.atril-backend.desktop.in:4
+#: backend/dvi/dvidocument.atril-backend.desktop.in:3
 msgid "DVI Documents"
 msgstr "DVI ஆவணங்கள்"
 
@@ -545,127 +525,138 @@ msgstr ""
 msgid "Not an ePub document"
 msgstr "இந்த ஆவணம் ePub வகையை சார்ந்தது அல்ல"
 
-#: backend/epub/epub-document.c:768
-msgid "could not retrieve filename"
-msgstr "கோப்பின் பெயரை மீட்டெடுக்க இயலவில்லை"
+#: backend/epub/epub-document.c:668 libdocument/ev-document-factory.c:142
+#: libdocument/ev-document-factory.c:285
+msgid "Unknown MIME Type"
+msgstr "தெரியாத MIME வகை"
 
-#: backend/epub/epub-document.c:796
-msgid "could not open archive"
-msgstr "காப்பகத்தை திறக்க இயலவில்லை"
-
-#: backend/epub/epub-document.c:812 backend/epub/epub-document.c:828
-msgid "could not extract archive"
-msgstr "காப்பகத்தை எடுபகுக்க இயலவில்லை"
-
-#: backend/epub/epub-document.c:860 backend/epub/epub-document.c:943
-msgid "could not retrieve container file"
-msgstr "கொள்கல கோப்பினை மீட்டெடுக்க இயலவில்லை"
-
-#: backend/epub/epub-document.c:872
-msgid "could not open container file"
-msgstr "கொள்கல கோப்பினை திறக்க இயலவில்லை"
-
-#: backend/epub/epub-document.c:882
-msgid "container file is corrupt"
-msgstr "கொள்கல கோப்பு சிதைந்துள்ளது"
-
-#: backend/epub/epub-document.c:892
+#: backend/epub/epub-document.c:709 backend/epub/epub-document.c:908
 msgid "epub file is invalid or corrupt"
 msgstr "செல்லுபடியாகாத அல்லது சிதைந்த epub கோப்பு "
 
-#: backend/epub/epub-document.c:902
+#: backend/epub/epub-document.c:782
+msgid "could not retrieve filename"
+msgstr "கோப்பின் பெயரை மீட்டெடுக்க இயலவில்லை"
+
+#: backend/epub/epub-document.c:810
+msgid "could not open archive"
+msgstr "காப்பகத்தை திறக்க இயலவில்லை"
+
+#: backend/epub/epub-document.c:826 backend/epub/epub-document.c:843
+msgid "could not extract archive"
+msgstr "காப்பகத்தை எடுபகுக்க இயலவில்லை"
+
+#: backend/epub/epub-document.c:876 backend/epub/epub-document.c:959
+msgid "could not retrieve container file"
+msgstr "கொள்கல கோப்பினை மீட்டெடுக்க இயலவில்லை"
+
+#: backend/epub/epub-document.c:888
+msgid "could not open container file"
+msgstr "கொள்கல கோப்பினை திறக்க இயலவில்லை"
+
+#: backend/epub/epub-document.c:898
+msgid "container file is corrupt"
+msgstr "கொள்கல கோப்பு சிதைந்துள்ளது"
+
+#: backend/epub/epub-document.c:918
 msgid "epub file is corrupt, no container"
 msgstr "சிதைந்த epub கோப்பு, கொள்கலன் காணப்படவில்லை"
 
-#: backend/epub/epub-document.c:976
+#: backend/epub/epub-document.c:992
 msgid "could not parse content manifest"
 msgstr "உள்ளடக்கத் தெளிவுகளை பகுக்க இயலவில்லை"
 
-#: backend/epub/epub-document.c:985
+#: backend/epub/epub-document.c:1001
 msgid "content file is invalid"
 msgstr "செல்லுபடியாகாத உள்ளடக்க கோப்பு"
 
-#: backend/epub/epub-document.c:994
+#: backend/epub/epub-document.c:1010
 msgid "epub file has no spine"
 msgstr "வேரற்ற epub கோப்பு"
 
-#: backend/epub/epub-document.c:1003
+#: backend/epub/epub-document.c:1019
+#, fuzzy
 msgid "epub file has no manifest"
-msgstr "தெளிவற்ற  epub கோப்பு"
+msgstr "தெளிவற்ற epub கோப்பு"
 
-#: backend/epub/epub-document.c:1089
+#: backend/epub/epub-document.c:1105
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
 
-#: backend/epub/epubdocument.atril-backend.desktop.in:4
+#: backend/epub/epub-document.c:1806
+#, c-format
+msgid "There was an error deleting “%s”."
+msgstr "“%s” ஐ நீக்குவதில் பிழை."
+
+#: backend/epub/epubdocument.atril-backend.desktop.in:3
 msgid "epub Documents"
 msgstr ""
 
-#: backend/pdf/ev-poppler.cc:519
+#: backend/pdf/ev-poppler.cc:513
 msgid "This work is in the Public Domain"
 msgstr "இந்த பணி பொது உரிமத்திலுள்ளது"
 
-#: backend/pdf/ev-poppler.cc:774 backend/pdf/ev-poppler.cc:780
+#: backend/pdf/ev-poppler.cc:768 backend/pdf/ev-poppler.cc:774
 msgid "Yes"
 msgstr "ஆம்"
 
-#: backend/pdf/ev-poppler.cc:777 backend/pdf/ev-poppler.cc:780
+#: backend/pdf/ev-poppler.cc:771 backend/pdf/ev-poppler.cc:774
 msgid "No"
 msgstr "இல்லை"
 
-#: backend/pdf/ev-poppler.cc:907
+#: backend/pdf/ev-poppler.cc:901
 msgid "Type 1"
 msgstr "வகை 1"
 
-#: backend/pdf/ev-poppler.cc:909
+#: backend/pdf/ev-poppler.cc:903
 msgid "Type 1C"
 msgstr "வகை 1C"
 
-#: backend/pdf/ev-poppler.cc:911
+#: backend/pdf/ev-poppler.cc:905
 msgid "Type 3"
 msgstr "வகை 3"
 
-#: backend/pdf/ev-poppler.cc:913
+#: backend/pdf/ev-poppler.cc:907
 msgid "TrueType"
 msgstr "மெய்வகை"
 
-#: backend/pdf/ev-poppler.cc:915
+#: backend/pdf/ev-poppler.cc:909
 msgid "Type 1 (CID)"
 msgstr "வகை 1 (CID)"
 
-#: backend/pdf/ev-poppler.cc:917
+#: backend/pdf/ev-poppler.cc:911
 msgid "Type 1C (CID)"
 msgstr "வகை 1C (CID)"
 
-#: backend/pdf/ev-poppler.cc:919
+#: backend/pdf/ev-poppler.cc:913
 msgid "TrueType (CID)"
 msgstr "மெய்வகை (CID)"
 
-#: backend/pdf/ev-poppler.cc:921
+#: backend/pdf/ev-poppler.cc:915
 msgid "Unknown font type"
 msgstr "தெரியாத எழுத்துரு வகை"
 
-#: backend/pdf/ev-poppler.cc:947
+#: backend/pdf/ev-poppler.cc:941
 msgid "No name"
 msgstr "பெயர் இல்லை"
 
-#: backend/pdf/ev-poppler.cc:955
+#: backend/pdf/ev-poppler.cc:949
 msgid "Embedded subset"
 msgstr "உட்பொதியப்பட்ட துணை கணம்"
 
-#: backend/pdf/ev-poppler.cc:957
+#: backend/pdf/ev-poppler.cc:951
 msgid "Embedded"
 msgstr "உட்பொதியப்பட்டது"
 
-#: backend/pdf/ev-poppler.cc:959
+#: backend/pdf/ev-poppler.cc:953
 msgid "Not embedded"
 msgstr "உட்பொதியப்படவில்லை"
 
-#: backend/pdf/pdfdocument.atril-backend.desktop.in:5
+#: backend/pdf/pdfdocument.atril-backend.desktop.in:4
 msgid "PDF Documents"
 msgstr "PDF ஆவணங்கள்"
 
-#: backend/pixbuf/pixbufdocument.atril-backend.desktop.in:4
+#: backend/pixbuf/pixbufdocument.atril-backend.desktop.in:3
 msgid "Images"
 msgstr "படங்கள்"
 
@@ -679,7 +670,7 @@ msgstr "ஆவணத்தை ஏற்ற முடியவில்லை “
 msgid "Failed to save document “%s”"
 msgstr "ஆவணத்தை சேமிக்க முடியவில்லை “%s”"
 
-#: backend/ps/psdocument.atril-backend.desktop.in:5
+#: backend/ps/psdocument.atril-backend.desktop.in:4
 msgid "PostScript Documents"
 msgstr "பின்னுரை ஆவணங்கள்"
 
@@ -687,11 +678,11 @@ msgstr "பின்னுரை ஆவணங்கள்"
 msgid "Invalid document"
 msgstr "செல்லுபடியாகாத ஆவணம்"
 
-#: backend/tiff/tiffdocument.atril-backend.desktop.in:4
+#: backend/tiff/tiffdocument.atril-backend.desktop.in:3
 msgid "Tiff Documents"
 msgstr ""
 
-#: backend/xps/xpsdocument.atril-backend.desktop.in:5
+#: backend/xps/xpsdocument.atril-backend.desktop.in:4
 msgid "XPS Documents"
 msgstr ""
 
@@ -733,63 +724,63 @@ msgstr "தற்காலிக கோப்பினை உருவாக்�
 msgid "Failed to create a temporary directory: %s"
 msgstr "தற்காலிக அடைவை உருவாக்குவதில் தோற்றது: %s"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:169
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
 msgid "File is not a valid .desktop file"
 msgstr "கோப்பு சரியான .desktop கோப்பில்லை"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:194
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "அங்கீகரிக்கப்படாத பணிமேடை கோப்பு பதிப்பு '%s'"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:984
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
 #, c-format
 msgid "Starting %s"
 msgstr "%sஐ துவக்குகிறது"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1126
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
 msgid "Application does not accept documents on command line"
 msgstr "பயன்பாடு ஆவணங்களை கட்டளைவரியில் ஏற்காது"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1194
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "அங்கீகரிக்கப்படாத ஏற்ற விருப்பம்: %d"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1410
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "'Type=Link' மேல்மேசை உள்ளீடுக்கு ஆவண யூஆர்ஐ ஐ கொடுக்க இயலாது"
 
-#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1431
+#: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
 msgstr "ஏற்றக்கூடிய உருப்படி இல்லை"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:234
+#: cut-n-paste/smclient/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
 msgstr "அமர்வு மேலாளருக்கு இணைப்பை செயல்நீக்கு"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:239
+#: cut-n-paste/smclient/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
 msgstr "சேமிக்கப்பட்ட கட்டமைப்பை கொண்ட கோப்பினை குறிப்பிடு"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:239 previewer/ev-previewer.c:36
+#: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
 msgstr "FILE"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:244
+#: cut-n-paste/smclient/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
 msgstr "அமர்வு மேலாண்மை IDஐ குறிப்பிடு"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:244
+#: cut-n-paste/smclient/libegg/eggsmclient.c:243
 msgid "ID"
 msgstr "எண்"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:270
+#: cut-n-paste/smclient/libegg/eggsmclient.c:269
 msgid "Session management options:"
 msgstr "அமர்வு மேலாண்மை விருப்பங்கள்:"
 
-#: cut-n-paste/smclient/libegg/eggsmclient.c:271
+#: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Show session management options"
 msgstr "அமர்வு மேலாண்மை விருப்பங்களை காட்டு"
 
@@ -826,15 +817,15 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட கருவ�
 msgid "Separator"
 msgstr "பிரிப்பி"
 
-#: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6874
+#: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6993
 msgid "Fit Page"
 msgstr ""
 
-#: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6878
+#: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6997
 msgid "Fit Width"
 msgstr "அகலத்தை பொருத்து"
 
-#: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6514
+#: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6630
 msgid "Expand Window to Fit"
 msgstr ""
 
@@ -894,8 +885,8 @@ msgstr "3200%"
 msgid "6400%"
 msgstr "6400%"
 
-#: data/atril.appdata.xml.in.in:7 data/atril.desktop.in.in:3
-#: shell/ev-window.c:5462
+#: data/atril.appdata.xml.in.in:7 data/atril.desktop.in.in:2
+#: shell/ev-window.c:5516
 msgid "Atril Document Viewer"
 msgstr ""
 
@@ -919,17 +910,16 @@ msgid ""
 "home page."
 msgstr ""
 
-#: data/atril.desktop.in.in:4 shell/ev-window-title.c:157
+#: data/atril.desktop.in.in:3 shell/ev-window-title.c:157
 msgid "Document Viewer"
 msgstr "ஆவண காட்டி"
 
-#: data/atril.desktop.in.in:5
+#: data/atril.desktop.in.in:4
 msgid "View multi-page documents"
 msgstr "பல பக்க ஆவணங்களை பார்வையிடு"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
-#: data/atril.desktop.in.in:20
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/atril.desktop.in.in:19
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 msgstr ""
 
@@ -985,7 +975,7 @@ msgstr "அச்சு அமைப்பு கோப்பு"
 msgid "MATE Document Previewer"
 msgstr "க்னோம் ஆவண முன் பார்வை கருவி"
 
-#: previewer/ev-previewer-window.c:96 shell/ev-window.c:3660
+#: previewer/ev-previewer-window.c:96 shell/ev-window.c:3666
 msgid "Failed to print document"
 msgstr "ஆவணத்தை அச்சிட முடியவில்லை"
 
@@ -994,43 +984,43 @@ msgstr "ஆவணத்தை அச்சிட முடியவில்ல�
 msgid "The selected printer '%s' could not be found"
 msgstr "தேர்ந்தெடுக்கப்பட்ட அச்சு இயந்திரம் '%s' ஐ கண்டு பிடிக்க முடியவில்லை"
 
-#: previewer/ev-previewer-window.c:284 shell/ev-window.c:6476
+#: previewer/ev-previewer-window.c:284 shell/ev-window.c:6595
 msgid "_Close"
 msgstr "மூடு (_C)"
 
-#: previewer/ev-previewer-window.c:287 shell/ev-window.c:6521
+#: previewer/ev-previewer-window.c:287 shell/ev-window.c:6637
 msgid "_Previous Page"
 msgstr "முந்தைய பக்கம் (_P)"
 
-#: previewer/ev-previewer-window.c:288 shell/ev-window.c:6522
+#: previewer/ev-previewer-window.c:288 shell/ev-window.c:6638
 msgid "Go to the previous page"
 msgstr "முந்தைய பக்கத்திற்கு செல்லவும்"
 
-#: previewer/ev-previewer-window.c:290 shell/ev-window.c:6524
+#: previewer/ev-previewer-window.c:290 shell/ev-window.c:6640
 msgid "_Next Page"
 msgstr "அடுத்த பக்கம் (_N)"
 
-#: previewer/ev-previewer-window.c:291 shell/ev-window.c:6525
+#: previewer/ev-previewer-window.c:291 shell/ev-window.c:6641
 msgid "Go to the next page"
 msgstr "அடுத்த பக்கத்திற்கு செல்லவும்"
 
-#: previewer/ev-previewer-window.c:293 shell/ev-window.c:6501
+#: previewer/ev-previewer-window.c:293 shell/ev-window.c:6617
 msgid "Zoom _In"
 msgstr "(_I)சிறிதாக்கு"
 
-#: previewer/ev-previewer-window.c:294 shell/ev-window.c:6502
+#: previewer/ev-previewer-window.c:294 shell/ev-window.c:6618
 msgid "Enlarge the document"
 msgstr "ஆவணத்தை பெரிதாக்கவும்"
 
-#: previewer/ev-previewer-window.c:296 shell/ev-window.c:6504
+#: previewer/ev-previewer-window.c:296 shell/ev-window.c:6620
 msgid "Zoom _Out"
 msgstr "(_O) விலகிப் பார்"
 
-#: previewer/ev-previewer-window.c:297 shell/ev-window.c:6505
+#: previewer/ev-previewer-window.c:297 shell/ev-window.c:6621
 msgid "Shrink the document"
 msgstr "ஆவணத்தை சுருக்கவும்"
 
-#: previewer/ev-previewer-window.c:300 shell/ev-window.c:6508
+#: previewer/ev-previewer-window.c:300 shell/ev-window.c:6624
 msgid "Reset zoom to 100%"
 msgstr ""
 
@@ -1038,31 +1028,31 @@ msgstr ""
 msgid "Print"
 msgstr "அச்சிடு"
 
-#: previewer/ev-previewer-window.c:305 shell/ev-window.c:6472
+#: previewer/ev-previewer-window.c:305 shell/ev-window.c:6591
 msgid "Print this document"
 msgstr "இந்த ஆவணத்தை அச்சிடவும்"
 
-#: previewer/ev-previewer-window.c:339 shell/ev-window.c:6627
+#: previewer/ev-previewer-window.c:339 shell/ev-window.c:6743
 msgid "Fit Pa_ge"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:340 shell/ev-window.c:6628
+#: previewer/ev-previewer-window.c:340 shell/ev-window.c:6744
 msgid "Make the current document fill the window"
 msgstr "நடப்பு ஆவணத்தை சாளர முழுமைக்கும் நிரப்பவும்"
 
-#: previewer/ev-previewer-window.c:342 shell/ev-window.c:6630
+#: previewer/ev-previewer-window.c:342 shell/ev-window.c:6746
 msgid "Fit _Width"
 msgstr ""
 
-#: previewer/ev-previewer-window.c:343 shell/ev-window.c:6631
+#: previewer/ev-previewer-window.c:343 shell/ev-window.c:6747
 msgid "Make the current document fill the window width"
 msgstr "நடப்பு ஆவணத்தை சாளர அகலத்திற்கு நிரப்பவும்"
 
-#: previewer/ev-previewer-window.c:553 shell/ev-window.c:6784
+#: previewer/ev-previewer-window.c:553 shell/ev-window.c:6903
 msgid "Page"
 msgstr "பக்கம்"
 
-#: previewer/ev-previewer-window.c:554 shell/ev-window.c:6785
+#: previewer/ev-previewer-window.c:554 shell/ev-window.c:6904
 msgid "Select Page"
 msgstr "பக்கத்தை தேரந்தெடு"
 
@@ -1155,15 +1145,15 @@ msgstr "%s, நீளவாக்கு (%s)"
 msgid "%s, Landscape (%s)"
 msgstr "%s, அகலவாக்கு (%s)"
 
-#: properties/libatril-properties-page.caja-extension.desktop.in.in:5
+#: properties/libatril-properties-page.caja-extension.desktop.in.in:4
 msgid "Atril properties"
 msgstr ""
 
-#: properties/libatril-properties-page.caja-extension.desktop.in.in:6
+#: properties/libatril-properties-page.caja-extension.desktop.in.in:5
 msgid "Shows details for Atril documents"
 msgstr ""
 
-#: properties/libatril-properties-page.caja-extension.desktop.in.in:10
+#: properties/libatril-properties-page.caja-extension.desktop.in.in:9
 msgid ""
 "Copyright (C) 2000, 2001 Eazel Inc.\n"
 "Copyright (C) 2003 Andrew Sobala <aes@gnome.org>\n"
@@ -1221,21 +1211,27 @@ msgstr "அச்சிடக்கூடிய பரப்புக்கு �
 
 #: libview/ev-print-operation.c:1907
 msgid ""
-"Scale document pages to fit the selected printer page. Select from one of the following:\n"
+"Scale document pages to fit the selected printer page. Select from one of "
+"the following:\n"
 "\n"
 "• \"None\": No page scaling is performed.\n"
 "\n"
-"• \"Shrink to Printable Area\": Document pages larger than the printable area are reduced to fit the printable area of the printer page.\n"
+"• \"Shrink to Printable Area\": Document pages larger than the printable "
+"area are reduced to fit the printable area of the printer page.\n"
 "\n"
-"• \"Fit to Printable Area\": Document pages are enlarged or reduced as required to fit the printable area of the printer page.\n"
+"• \"Fit to Printable Area\": Document pages are enlarged or reduced as "
+"required to fit the printable area of the printer page.\n"
 msgstr ""
-"தேர்ந்தெடுத்த அச்சுப்பொறிக்கு  ஆவண பக்கங்களை பொருத்த மறு அளவீடு செய்க. கீழ் கண்டவற்றில் ஏதேனும் ஒன்றை தேர்வு செய்க:\n"
+"தேர்ந்தெடுத்த அச்சுப்பொறிக்கு  ஆவண பக்கங்களை பொருத்த மறு அளவீடு செய்க. கீழ் கண்டவற்றில் "
+"ஏதேனும் ஒன்றை தேர்வு செய்க:\n"
 "\n"
 "• \"ஏதுமில்லை\": மறு அளவீடு இல்லை.\n"
 "\n"
-"• \"அச்சுப்பரப்புக்கு சுருக்கு\": அச்சிடக்கூடிய அளவுக்கு அதிகமாக ஆவண அளவு இருப்பின் அச்சுப்பொறியின் அச்சிடக்கூடிய பக்க அளவுக்கு மறு அளவு செய்யப்படும்..\n"
+"• \"அச்சுப்பரப்புக்கு சுருக்கு\": அச்சிடக்கூடிய அளவுக்கு அதிகமாக ஆவண அளவு இருப்பின் "
+"அச்சுப்பொறியின் அச்சிடக்கூடிய பக்க அளவுக்கு மறு அளவு செய்யப்படும்..\n"
 "\n"
-"• \"அச்சிடக்கூடிய பரப்புக்கு பொருத்துக\": அச்சுப்பொறியின் அச்சிடக்கூடிய பக்க அளவுக்கு   ஆவண பக்கம் சுருக்கவோ நீட்டவோ செய்யப்படும்.\n"
+"• \"அச்சிடக்கூடிய பரப்புக்கு பொருத்துக\": அச்சுப்பொறியின் அச்சிடக்கூடிய பக்க அளவுக்கு   "
+"ஆவண பக்கம் சுருக்கவோ நீட்டவோ செய்யப்படும்.\n"
 
 #: libview/ev-print-operation.c:1919
 msgid "Auto Rotate and Center"
@@ -1246,9 +1242,8 @@ msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
 msgstr ""
-"ஒவ்வொரு ஆவண பக்கத்தின் திசையையும் ஒத்திசைய அச்சுப்பொறி பக்க திஅசை "
-"பொருத்தத்தை மாற்றுக. ஆவண பக்கங்கள் அச்சுப்பொறி பக்கத்திற்கு "
-"மையப்படுத்தப்படும்."
+"ஒவ்வொரு ஆவண பக்கத்தின் திசையையும் ஒத்திசைய அச்சுப்பொறி பக்க திஅசை பொருத்தத்தை மாற்றுக. "
+"ஆவண பக்கங்கள் அச்சுப்பொறி பக்கத்திற்கு மையப்படுத்தப்படும்."
 
 #: libview/ev-print-operation.c:1927
 msgid "Select page size using document page size"
@@ -1258,19 +1253,18 @@ msgstr "ஆவண பக்க அளவை பயன்படுத்தி �
 msgid ""
 "When enabled, each page will be printed on the same size paper as the "
 "document page."
-msgstr ""
-"இயலுமை செய்யின் ஒவ்வொரு பக்கமும் ஆவண பக்கத்தின் அதே அளவில் அச்சிடப்படும்."
+msgstr "இயலுமை செய்யின் ஒவ்வொரு பக்கமும் ஆவண பக்கத்தின் அதே அளவில் அச்சிடப்படும்."
 
 #: libview/ev-print-operation.c:2011
 msgid "Page Handling"
 msgstr "பக்க கையாளுமை"
 
-#: libview/ev-jobs.c:622
+#: libview/ev-jobs.c:619
 #, c-format
 msgid "Failed to render page %d"
 msgstr ""
 
-#: libview/ev-jobs.c:1737
+#: libview/ev-jobs.c:1629
 #, c-format
 msgid "Failed to print page %d: %s"
 msgstr "பக்கத்தை அச்சிட முடியவில்லை%d: %s"
@@ -1303,67 +1297,67 @@ msgstr "பக்கத்திற்கு செல்:"
 msgid "End of presentation. Click to exit."
 msgstr "முன் வைப்பு முடிந்தது. வெளியேற சொடுக்கவும்"
 
-#: libview/ev-view.c:1901
+#: libview/ev-view.c:1905
 msgid "Go to first page"
 msgstr "முதல் பக்கத்திற்கு செல்லவும்"
 
-#: libview/ev-view.c:1903
+#: libview/ev-view.c:1907
 msgid "Go to previous page"
 msgstr "முந்தைய பக்கத்திற்கு செல்லவும்"
 
-#: libview/ev-view.c:1905
+#: libview/ev-view.c:1909
 msgid "Go to next page"
 msgstr "அடுத்த பக்கத்திற்கு செல்லவும்"
 
-#: libview/ev-view.c:1907
+#: libview/ev-view.c:1911
 msgid "Go to last page"
 msgstr "கடைசி பக்கத்திற்கு செல்லவும்"
 
-#: libview/ev-view.c:1909
+#: libview/ev-view.c:1913
 msgid "Go to page"
 msgstr "பக்கத்திற்கு செல்"
 
-#: libview/ev-view.c:1911
+#: libview/ev-view.c:1915
 msgid "Find"
 msgstr "கண்டுபிடி"
 
-#: libview/ev-view.c:1939
+#: libview/ev-view.c:1943
 #, c-format
 msgid "Go to page %s"
 msgstr "பக்கத்திற்கு செல் %s"
 
-#: libview/ev-view.c:1945
+#: libview/ev-view.c:1949
 #, c-format
 msgid "Go to %s on file “%s”"
 msgstr "“%s” கோப்பில் %s க்கு செல்லவும்"
 
-#: libview/ev-view.c:1948
+#: libview/ev-view.c:1952
 #, c-format
 msgid "Go to file “%s”"
 msgstr "“%s” கோப்பிற்கு செல்"
 
-#: libview/ev-view.c:1956
+#: libview/ev-view.c:1960
 #, c-format
 msgid "Launch %s"
 msgstr "%sஐ செயல்படுத்து"
 
-#: shell/eggfindbar.c:301
+#: shell/eggfindbar.c:276
 msgid "Find:"
 msgstr "தேடுதல்:"
 
-#: shell/eggfindbar.c:326
+#: shell/eggfindbar.c:301
 msgid "Find previous occurrence of the search string"
 msgstr "வார்த்தை அல்லது சொல் தொடரின் முந்தைய தோன்றலை தேடுக"
 
-#: shell/eggfindbar.c:334
+#: shell/eggfindbar.c:309
 msgid "Find next occurrence of the search string"
 msgstr "சொல் அல்லது சொற்றொடரின் அடுத்த நிகழ்வை தேடவும்"
 
-#: shell/eggfindbar.c:341
+#: shell/eggfindbar.c:316
 msgid "Case Sensitive"
 msgstr ""
 
-#: shell/eggfindbar.c:344
+#: shell/eggfindbar.c:319
 msgid "Toggle case sensitive search"
 msgstr "எழுத்துணர்வு தேடுதலை மாற்றுக"
 
@@ -1449,11 +1443,11 @@ msgid "Password for document %s"
 msgstr "ஆவணத்தின் கடவுச்சொல் %s"
 
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
-#: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:262
+#: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:264
 msgid "Loading…"
 msgstr "ஏற்றுகிறது"
 
-#: shell/ev-open-recent-action.c:70
+#: shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
 msgstr "சமீபத்தில் பயன் படுத்திய ஆவணத்தை திறக்கவும்"
 
@@ -1462,8 +1456,7 @@ msgid ""
 "This document is locked and can only be read by entering the correct "
 "password."
 msgstr ""
-"இந்த ஆவணம் பூட்டப்பட்டுள்ளது மற்றும் சரியான கடவுச்சொல்லை உள்ளிட்டால் தான் "
-"படிக்க முடியும்."
+"இந்த ஆவணம் பூட்டப்பட்டுள்ளது மற்றும் சரியான கடவுச்சொல்லை உள்ளிட்டால் தான் படிக்க முடியும்."
 
 #: shell/ev-password-view.c:142 shell/ev-password-view.c:258
 msgid "_Unlock Document"
@@ -1478,8 +1471,7 @@ msgstr "கடவுச்சொல்லை உள்ளிடவும்"
 msgid ""
 "The document “%s” is locked and requires a password before it can be opened."
 msgstr ""
-"ஆவணம் “%s” பூட்டப்பட்டுள்ளது மற்றும் அதனை திறப்பதற்கு முன் கடவுச்சொல் "
-"தேவைப்படுகிறது."
+"ஆவணம் “%s” பூட்டப்பட்டுள்ளது மற்றும் அதனை திறப்பதற்கு முன் கடவுச்சொல் தேவைப்படுகிறது."
 
 #: shell/ev-password-view.c:289
 msgid "Password required"
@@ -1538,7 +1530,7 @@ msgstr "உரை உரிமம்"
 msgid "Further Information"
 msgstr "மேலும் விவரங்கள்"
 
-#: shell/ev-sidebar.c:367
+#: shell/ev-sidebar.c:369
 msgid "Hide sidebar"
 msgstr ""
 
@@ -1579,8 +1571,8 @@ msgstr ""
 msgid "_Remove Bookmark"
 msgstr ""
 
-#: shell/ev-sidebar-bookmarks.c:313 shell/ev-window.c:1010
-#: shell/ev-window.c:5085
+#: shell/ev-sidebar-bookmarks.c:313 shell/ev-window.c:1015
+#: shell/ev-window.c:5144
 #, c-format
 msgid "Page %s"
 msgstr "பக்கம் %s"
@@ -1601,218 +1593,213 @@ msgstr "புத்தககுறிகள்"
 msgid "Layers"
 msgstr "அடுக்குகள்"
 
-#: shell/ev-sidebar-links.c:338
-msgid "Print…"
-msgstr "அச்சிடு"
-
-#: shell/ev-sidebar-links.c:731
+#: shell/ev-sidebar-links.c:735
 msgid "Index"
 msgstr "அகரவரிசை"
 
-#: shell/ev-sidebar-thumbnails.c:1027
+#: shell/ev-sidebar-thumbnails.c:1031
 msgid "Thumbnails"
 msgstr "சிறுபடங்கள்"
 
-#: shell/ev-window.c:1007
+#: shell/ev-window.c:1012
 #, c-format
 msgid "Page %s — %s"
 msgstr "பக்கம் %s — %s"
 
-#: shell/ev-window.c:1167
+#: shell/ev-window.c:1172
 msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
 msgstr ""
 
-#: shell/ev-window.c:1772
+#: shell/ev-window.c:1778
 msgid "The document contains no pages"
 msgstr "ஆவணத்தில் பக்கங்கள் ஏதும் இல்லை "
 
-#: shell/ev-window.c:1775
+#: shell/ev-window.c:1781
 msgid "The document contains only empty pages"
 msgstr "ஆவணத்தில் உள்ளது வெற்று பக்கங்களே"
 
-#: shell/ev-window.c:1822
+#: shell/ev-window.c:1828
 msgid "Presentation mode is not supported for ePub documents."
 msgstr ""
 
-#: shell/ev-window.c:2016 shell/ev-window.c:2197
+#: shell/ev-window.c:2022 shell/ev-window.c:2203
 msgid "Unable to open document"
 msgstr "ஆவணத்தை திறக்க முடியவில்லை"
 
-#: shell/ev-window.c:2153
+#: shell/ev-window.c:2159
 #, c-format
 msgid "Loading document from “%s”"
 msgstr "“%s” இலிருந்து ஆவணத்தை ஏற்றுகிறது"
 
-#: shell/ev-window.c:2308 shell/ev-window.c:2599
+#: shell/ev-window.c:2314 shell/ev-window.c:2605
 #, c-format
 msgid "Downloading document (%d%%)"
 msgstr "ஆவணத்தை பதிவிறக்குகிறது (%d%%)"
 
-#: shell/ev-window.c:2341
+#: shell/ev-window.c:2347
 msgid "Failed to load remote file."
 msgstr "தொலை கோப்பை ஏற்ற முடியவில்லை."
 
-#: shell/ev-window.c:2543
+#: shell/ev-window.c:2549
 #, c-format
 msgid "Reloading document from %s"
 msgstr "%sஇலிருந்து ஆவணத்தை மீண்டும் ஏற்றுகிறது"
 
-#: shell/ev-window.c:2575
+#: shell/ev-window.c:2581
 msgid "Failed to reload document."
 msgstr "ஆவணத்தை மீளேற்ற முடியவில்லை."
 
-#: shell/ev-window.c:2793
+#: shell/ev-window.c:2799
 msgid "Open Document"
 msgstr "ஆவணத்தை திற"
 
-#: shell/ev-window.c:3072
+#: shell/ev-window.c:3078
 #, c-format
 msgid "Saving document to %s"
 msgstr "%sக்கு ஆவணத்தை சேமிக்கிறது"
 
-#: shell/ev-window.c:3075
+#: shell/ev-window.c:3081
 #, c-format
 msgid "Saving attachment to %s"
 msgstr "%sக்கு இணைப்பை சேமிக்கிறது"
 
-#: shell/ev-window.c:3078
+#: shell/ev-window.c:3084
 #, c-format
 msgid "Saving image to %s"
 msgstr "%sக்கு ஆவணத்தை சேமிக்கிறது"
 
-#: shell/ev-window.c:3122 shell/ev-window.c:3222
+#: shell/ev-window.c:3128 shell/ev-window.c:3228
 #, c-format
 msgid "The file could not be saved as “%s”."
 msgstr "“%s” ஆக கோப்பினை சேமிக்க முடியவில்லை."
 
-#: shell/ev-window.c:3153
+#: shell/ev-window.c:3159
 #, c-format
 msgid "Uploading document (%d%%)"
 msgstr "ஆவணத்தை ஏற்றுகிறது (%d%%)"
 
-#: shell/ev-window.c:3157
+#: shell/ev-window.c:3163
 #, c-format
 msgid "Uploading attachment (%d%%)"
 msgstr "இணைப்பை பதிவேற்றுகிறது (%d%%)"
 
-#: shell/ev-window.c:3161
+#: shell/ev-window.c:3167
 #, c-format
 msgid "Uploading image (%d%%)"
 msgstr "படத்தை பதிவேற்றுகிறது (%d%%)"
 
-#: shell/ev-window.c:3274
+#: shell/ev-window.c:3280
 msgid "Save As…"
 msgstr "இந்த பெயரில் சேமிக்கவும்..."
 
-#: shell/ev-window.c:3352
+#: shell/ev-window.c:3358
 msgid "Could not send current document"
 msgstr ""
 
-#: shell/ev-window.c:3604
+#: shell/ev-window.c:3610
 #, c-format
 msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/ev-window.c:3717
+#: shell/ev-window.c:3723
 #, c-format
 msgid "Printing job “%s”"
 msgstr "அச்சிடும் பணி “%s”"
 
-#: shell/ev-window.c:3894
+#: shell/ev-window.c:3900
 msgid ""
-"Document contains form fields that have been filled out. If you don't save a"
-" copy, changes will be permanently lost."
+"Document contains form fields that have been filled out. If you don't save a "
+"copy, changes will be permanently lost."
 msgstr ""
-"ஆவணத்தில் நிரப்பப்பட்ட படிவபுலங்கள் உள்ளன. நீங்கள் ஒரு பிரதியை "
-"சேமிக்காவிட்டால் மாற்றங்கள் நிரந்தரமாக இழக்கப்படும்."
+"ஆவணத்தில் நிரப்பப்பட்ட படிவபுலங்கள் உள்ளன. நீங்கள் ஒரு பிரதியை சேமிக்காவிட்டால் மாற்றங்கள் "
+"நிரந்தரமாக இழக்கப்படும்."
 
-#: shell/ev-window.c:3898
+#: shell/ev-window.c:3904
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
-"ஆவணத்தில் புதிய அல்லது மாற்றப்பட்ட வியாக்கியானங்கள் உள்ளன. நீங்கள் ஒரு "
-"பிரதியை சேமிக்காவிட்டால் மாற்றங்கள் நிரந்தரமாக இழக்கப்படும்."
+"ஆவணத்தில் புதிய அல்லது மாற்றப்பட்ட வியாக்கியானங்கள் உள்ளன. நீங்கள் ஒரு பிரதியை "
+"சேமிக்காவிட்டால் மாற்றங்கள் நிரந்தரமாக இழக்கப்படும்."
 
-#: shell/ev-window.c:3904
+#: shell/ev-window.c:3910
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
 msgstr "“%s” ஆவணத்தின் ஒரு நகலை சேமிக்கவா?"
 
-#: shell/ev-window.c:3923
+#: shell/ev-window.c:3929
 msgid "Close _without Saving"
 msgstr "சேமிக்காமல் மூடு (_w)"
 
-#: shell/ev-window.c:3927 shell/ev-window.c:6465
+#: shell/ev-window.c:3933 shell/ev-window.c:6584
 msgid "_Save As…"
 msgstr ""
 
-#: shell/ev-window.c:3996
+#: shell/ev-window.c:4002
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
 msgstr "அச்சு பணி “%s” முடியும் வரை காத்திருக்க வேண்டுமா?"
 
-#: shell/ev-window.c:4003
+#: shell/ev-window.c:4009
 #, c-format
-msgid ""
-"There is %d print job active. Wait until print finishes before closing?"
+msgid "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/ev-window.c:4018
+#: shell/ev-window.c:4024
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr "சாளரத்தை மூடினால், மீதமுள்ள அச்சு பணிகள் அச்சிடப்படாது."
 
-#: shell/ev-window.c:4022
+#: shell/ev-window.c:4028
 msgid "Cancel _print and Close"
 msgstr "அச்சிடுதலை ரத்து செய்து மூடுகிறது (_p)"
 
-#: shell/ev-window.c:4026
+#: shell/ev-window.c:4032
 msgid "Close _after Printing"
 msgstr "அச்சிட்ட பின் மூடுகிறது (_a)"
 
-#: shell/ev-window.c:4423
+#: shell/ev-window.c:4471
 msgid "Running in presentation mode"
 msgstr "காட்சி அளிப்பு பாங்கில் இயங்குகிறது"
 
-#: shell/ev-window.c:4489
+#: shell/ev-window.c:4537
 msgid "Presentation mode is not supported for ePub documents"
 msgstr ""
 
-#: shell/ev-window.c:4806
+#: shell/ev-window.c:4865
 msgid "Toolbar Editor"
 msgstr "கருவிப்பட்டி தொகுப்பி"
 
-#: shell/ev-window.c:5131
+#: shell/ev-window.c:5190
 msgid "There was an error displaying help"
 msgstr "உதவியை காட்டுவதில் பிழை"
 
-#: shell/ev-window.c:5389
+#: shell/ev-window.c:5443
 #, c-format
 msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
 
-#: shell/ev-window.c:5392
+#: shell/ev-window.c:5446
 msgid "Atril is a simple multi-page document viewer."
 msgstr ""
 
-#: shell/ev-window.c:5405
+#: shell/ev-window.c:5459
 msgid "MATE Documentation Team"
 msgstr ""
 
-#: shell/ev-window.c:5406
+#: shell/ev-window.c:5460
 msgid "GNOME Documentation Team"
 msgstr ""
 
-#: shell/ev-window.c:5411
+#: shell/ev-window.c:5465
 msgid ""
 "Atril is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -1820,7 +1807,7 @@ msgid ""
 "version."
 msgstr ""
 
-#: shell/ev-window.c:5415
+#: shell/ev-window.c:5469
 msgid ""
 "Atril is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -1828,418 +1815,418 @@ msgid ""
 "details."
 msgstr ""
 
-#: shell/ev-window.c:5419
+#: shell/ev-window.c:5473
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"You should have received a copy of the GNU General Public License along with "
+"Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
 
-#: shell/ev-window.c:5464
+#: shell/ev-window.c:5518
 msgid "About Atril Document Viewer"
 msgstr ""
 
-#: shell/ev-window.c:5465
+#: shell/ev-window.c:5519
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
 
-#: shell/ev-window.c:5472
+#: shell/ev-window.c:5526
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Valmantas Palikša https://launchpad.net/~walmis\n"
 "  bhuvi https://launchpad.net/~bhuvanesh"
 
-#: shell/ev-window.c:5767
+#: shell/ev-window.c:5830
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
 msgstr[0] ""
 msgstr[1] ""
 
-#: shell/ev-window.c:5772
+#: shell/ev-window.c:5835
 msgid "Not found"
 msgstr "காண முடியவில்லை"
 
-#: shell/ev-window.c:5778
+#: shell/ev-window.c:5841
 #, c-format
 msgid "%3d%% remaining to search"
 msgstr "%3d%% மீதி தேட வேண்டியவை"
 
-#: shell/ev-window.c:6132
+#: shell/ev-window.c:6251
 msgid "Enable caret navigation?"
 msgstr ""
 
-#: shell/ev-window.c:6134
+#: shell/ev-window.c:6253
 msgid "_Enable"
 msgstr ""
 
-#: shell/ev-window.c:6137
+#: shell/ev-window.c:6256
 msgid ""
 "Pressing F7 turns the caret navigation on or off. This feature places a "
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
 
-#: shell/ev-window.c:6142
+#: shell/ev-window.c:6261
 msgid "Don't show this message again"
 msgstr ""
 
-#: shell/ev-window.c:6451
+#: shell/ev-window.c:6570
 msgid "_File"
 msgstr "_F கோப்பு"
 
-#: shell/ev-window.c:6452
+#: shell/ev-window.c:6571
 msgid "_Edit"
 msgstr "தொகு (_E)"
 
-#: shell/ev-window.c:6453
+#: shell/ev-window.c:6572
 msgid "_View"
 msgstr "_பார்"
 
-#: shell/ev-window.c:6454
+#: shell/ev-window.c:6573
 msgid "_Go"
 msgstr "_G போ"
 
-#: shell/ev-window.c:6455
+#: shell/ev-window.c:6574
 msgid "_Bookmarks"
 msgstr "_ப புத்தகக்குறிப்புகள்"
 
-#: shell/ev-window.c:6456
+#: shell/ev-window.c:6575
 msgid "_Help"
 msgstr "_உதவி"
 
-#: shell/ev-window.c:6459 shell/ev-window.c:6825
+#: shell/ev-window.c:6578 shell/ev-window.c:6944
 msgid "_Open…"
 msgstr "(_O) திற"
 
-#: shell/ev-window.c:6460 shell/ev-window.c:6826
+#: shell/ev-window.c:6579 shell/ev-window.c:6945
 msgid "Open an existing document"
 msgstr "ஏற்கனவே உள்ள ஆவணத்தை திறக்கவும்"
 
-#: shell/ev-window.c:6462
+#: shell/ev-window.c:6581
 msgid "Op_en a Copy"
 msgstr "நகலை திறக்கவும்"
 
-#: shell/ev-window.c:6463
+#: shell/ev-window.c:6582
 msgid "Open a copy of the current document in a new window"
 msgstr "நடப்பு ஆவணத்தின் ஒரு நகலை புதிய சாளரத்தில் திறக்கவும்"
 
-#: shell/ev-window.c:6466
+#: shell/ev-window.c:6585
 msgid "Save a copy of the current document"
 msgstr "நடப்பு ஆவணத்தின் ஒரு நகலை சேமிக்கவும்"
 
-#: shell/ev-window.c:6468
+#: shell/ev-window.c:6587
 msgid "Send _To..."
 msgstr ""
 
-#: shell/ev-window.c:6469
+#: shell/ev-window.c:6588
 msgid "Send current document by mail, instant message..."
 msgstr ""
 
-#: shell/ev-window.c:6471
+#: shell/ev-window.c:6590
 msgid "_Print…"
 msgstr "_P அச்சிடு."
 
-#: shell/ev-window.c:6474
+#: shell/ev-window.c:6593
 msgid "P_roperties"
 msgstr "பண்புகள் (_R)"
 
-#: shell/ev-window.c:6480
+#: shell/ev-window.c:6599
 msgid "_Copy"
 msgstr "நகல் (_C)"
 
-#: shell/ev-window.c:6482
+#: shell/ev-window.c:6601
 msgid "Select _All"
 msgstr "அனைத்தையும் தேர்ந்தெடு (_A)"
 
-#: shell/ev-window.c:6484
-msgid "_Find…"
-msgstr "(_F) தேடுக..."
-
-#: shell/ev-window.c:6485
-msgid "Find a word or phrase in the document"
-msgstr "ஆவணத்தில் ஒரு சொல் அல்லது சொற்றொடரை தேடுகிறது"
-
-#: shell/ev-window.c:6487
+#: shell/ev-window.c:6603
 msgid "Find Ne_xt"
 msgstr "அடுத்ததை தேடு (_x)"
 
-#: shell/ev-window.c:6489
+#: shell/ev-window.c:6605
 msgid "Find Pre_vious"
 msgstr "முந்தையதை தேடு (_v)"
 
-#: shell/ev-window.c:6491
+#: shell/ev-window.c:6607
 msgid "T_oolbar"
 msgstr "கருவிப்பட்டை (_o)"
 
-#: shell/ev-window.c:6493
+#: shell/ev-window.c:6609
 msgid "Rotate _Left"
 msgstr "இடப்பக்கம் சுழற்று (_L)"
 
-#: shell/ev-window.c:6495
+#: shell/ev-window.c:6611
 msgid "Rotate _Right"
 msgstr "வலப்பக்கம் சுழற்று (_R) "
 
-#: shell/ev-window.c:6497
+#: shell/ev-window.c:6613
 msgid "Save Current Settings as _Default"
 msgstr "_D தற்போதைய அமைப்புகளை முன்னிருப்பாக  வைக்கவும்"
 
-#: shell/ev-window.c:6507
+#: shell/ev-window.c:6623
 msgid "_Reset Zoom"
 msgstr ""
 
-#: shell/ev-window.c:6510
+#: shell/ev-window.c:6626
 msgid "_Reload"
 msgstr "மீண்டும் ஏற்று (_R)"
 
-#: shell/ev-window.c:6511
+#: shell/ev-window.c:6627
 msgid "Reload the document"
 msgstr "ஆவணத்தை மீண்டும் ஏற்றவும்"
 
-#: shell/ev-window.c:6513
+#: shell/ev-window.c:6629
 msgid "_Expand Window to Fit"
 msgstr ""
 
-#: shell/ev-window.c:6517
+#: shell/ev-window.c:6633
 msgid "Auto_scroll"
 msgstr "தானியங்கி உருளல் (_s)"
 
-#: shell/ev-window.c:6527
+#: shell/ev-window.c:6643
 msgid "_First Page"
 msgstr "முதல் பக்கம் (_F)"
 
-#: shell/ev-window.c:6528
+#: shell/ev-window.c:6644
 msgid "Go to the first page"
 msgstr "முதல் பக்கத்திற்கு செல்லவும்"
 
-#: shell/ev-window.c:6530
+#: shell/ev-window.c:6646
 msgid "_Last Page"
 msgstr "கடைசி பக்கம் (_L)"
 
-#: shell/ev-window.c:6531
+#: shell/ev-window.c:6647
 msgid "Go to the last page"
 msgstr "கடைசி பக்கத்திற்கு செல்லவும்"
 
-#: shell/ev-window.c:6535
+#: shell/ev-window.c:6651
 msgid "_Add Bookmark"
 msgstr "_ச புத்தகக்குறிகளை சேர்"
 
-#: shell/ev-window.c:6536
+#: shell/ev-window.c:6652
 msgid "Add a bookmark for the current page"
 msgstr ""
 
-#: shell/ev-window.c:6540
+#: shell/ev-window.c:6656
 msgid "_Contents"
 msgstr "_C உள்ளடக்கங்கள்"
 
-#: shell/ev-window.c:6543
+#: shell/ev-window.c:6659
 msgid "_About"
 msgstr "பற்றி "
 
-#: shell/ev-window.c:6547
+#: shell/ev-window.c:6663
 msgid "Leave Fullscreen"
 msgstr "முழுத்திரையாக விடவும்"
 
-#: shell/ev-window.c:6548
+#: shell/ev-window.c:6664
 msgid "Leave fullscreen mode"
 msgstr "முழுத்திரை முறையில் விடவும்"
 
-#: shell/ev-window.c:6550
+#: shell/ev-window.c:6666
 msgid "Start Presentation"
 msgstr "காட்சியை ஆரம்பிக்கவும்"
 
-#: shell/ev-window.c:6551
+#: shell/ev-window.c:6667
 msgid "Start a presentation"
 msgstr "முன் வைப்பு காட்சியாக துவக்கவும்"
 
-#: shell/ev-window.c:6606
+#: shell/ev-window.c:6722
 msgid "_Toolbar"
 msgstr "கருவிப்பட்டை (_T)"
 
-#: shell/ev-window.c:6607
+#: shell/ev-window.c:6723
 msgid "Show or hide the toolbar"
 msgstr "கருவிப்பட்டையை காட்டு அல்லது மறை"
 
-#: shell/ev-window.c:6609
+#: shell/ev-window.c:6725
 msgid "Side _Pane"
 msgstr "பக்க பலகம் (_P)"
 
-#: shell/ev-window.c:6610
+#: shell/ev-window.c:6726
 msgid "Show or hide the side pane"
 msgstr "பக்க பலகத்தை காட்டு அல்லது மறை"
 
-#: shell/ev-window.c:6612
+#: shell/ev-window.c:6728
 msgid "_Continuous"
 msgstr "தொடர்ச்சி (_C)"
 
-#: shell/ev-window.c:6613
+#: shell/ev-window.c:6729
 msgid "Show the entire document"
 msgstr "முழு ஆவணத்தையும் காட்டவும்"
 
-#: shell/ev-window.c:6615
+#: shell/ev-window.c:6731
 msgid "_Dual"
 msgstr "இரட்டை (_D)"
 
-#: shell/ev-window.c:6616
+#: shell/ev-window.c:6732
 msgid "Show two pages at once"
 msgstr "ஒரே முறை இரு பக்கத்தையும் காட்டவும்"
 
-#: shell/ev-window.c:6618
+#: shell/ev-window.c:6734
 msgid "_Odd pages left"
 msgstr ""
 
-#: shell/ev-window.c:6619
+#: shell/ev-window.c:6735
 msgid "Show odd pages on the left in dual mode"
 msgstr ""
 
-#: shell/ev-window.c:6621
+#: shell/ev-window.c:6737
 msgid "_Fullscreen"
 msgstr "முழுத்திரை (_F)"
 
-#: shell/ev-window.c:6622
+#: shell/ev-window.c:6738
 msgid "Expand the window to fill the screen"
 msgstr "திரையை நிரப்ப சாளரத்தை நிரப்பவும்"
 
-#: shell/ev-window.c:6624
+#: shell/ev-window.c:6740
 msgid "Pre_sentation"
 msgstr "(_s) காட்சி முன்வைப்பு"
 
-#: shell/ev-window.c:6625
+#: shell/ev-window.c:6741
 msgid "Run document as a presentation"
 msgstr "ஆவணத்தை காட்சியாக இயக்கவும்"
 
-#: shell/ev-window.c:6633
+#: shell/ev-window.c:6749
 msgid "Inverted _Colors"
 msgstr ""
 
-#: shell/ev-window.c:6634
+#: shell/ev-window.c:6750
 msgid "Show page contents with the colors inverted"
 msgstr "பக்க உள்ளடகத்தை தலைகீழ் மாற்றிய நிறங்களுடன் காட்டுக"
 
-#: shell/ev-window.c:6636
+#: shell/ev-window.c:6752
 msgid "Caret _Navigation"
 msgstr ""
 
-#: shell/ev-window.c:6637
+#: shell/ev-window.c:6753
 msgid "Activate or disable caret-navigation"
 msgstr ""
 
-#: shell/ev-window.c:6645
+#: shell/ev-window.c:6756
+msgid "_Find…"
+msgstr "(_F) தேடுக..."
+
+#: shell/ev-window.c:6757
+msgid "Find a word or phrase in the document"
+msgstr "ஆவணத்தில் ஒரு சொல் அல்லது சொற்றொடரை தேடுகிறது"
+
+#: shell/ev-window.c:6764
 msgid "_Open Link"
 msgstr "இணைப்பினை திற (_O)"
 
-#: shell/ev-window.c:6647
+#: shell/ev-window.c:6766
 msgid "_Go To"
 msgstr "செல் (_G)"
 
-#: shell/ev-window.c:6649
+#: shell/ev-window.c:6768
 msgid "Open in New _Window"
 msgstr "புது _சாளரத்தில் திறக்கவும்"
 
-#: shell/ev-window.c:6651
+#: shell/ev-window.c:6770
 msgid "_Copy Link Address"
 msgstr "இணைப்பு முகவரியை நகலெடு (_C)"
 
-#: shell/ev-window.c:6653
+#: shell/ev-window.c:6772
 msgid "_Save Image As…"
 msgstr "(_S) பிம்பத்தை இப்படிச் சேமி"
 
-#: shell/ev-window.c:6655
+#: shell/ev-window.c:6774
 msgid "Copy _Image"
 msgstr "_ப பிம்பத்தை பிரதி எடுக்கவும்"
 
-#: shell/ev-window.c:6657
+#: shell/ev-window.c:6776
 msgid "Annotation Properties…"
 msgstr "வியாக்கியான பண்புகள்..."
 
-#: shell/ev-window.c:6659
+#: shell/ev-window.c:6778
 msgid "Remove Annot…"
 msgstr ""
 
-#: shell/ev-window.c:6664
+#: shell/ev-window.c:6783
 msgid "_Open Attachment"
 msgstr "_O இணைப்பை திற"
 
-#: shell/ev-window.c:6666
+#: shell/ev-window.c:6785
 msgid "_Save Attachment As…"
 msgstr "_S இணைப்புகளை இப்படிச் சேமி"
 
-#: shell/ev-window.c:6799
+#: shell/ev-window.c:6918
 msgid "Zoom"
 msgstr "பெரிதாக்கு"
 
-#: shell/ev-window.c:6801
+#: shell/ev-window.c:6920
 msgid "Adjust the zoom level"
 msgstr "பெரிதாக்கும் நிலையை மாற்று"
 
-#: shell/ev-window.c:6811
+#: shell/ev-window.c:6930
 msgid "Navigation"
 msgstr "உலாவல்"
 
-#: shell/ev-window.c:6813
+#: shell/ev-window.c:6932
 msgid "Back"
 msgstr "பின்"
 
-#: shell/ev-window.c:6816
+#: shell/ev-window.c:6935
 msgid "Move across visited pages"
 msgstr "முன்பு சென்ற பக்கங்கள் ஊடாக உலாவுக"
 
-#: shell/ev-window.c:6847
+#: shell/ev-window.c:6966
 msgid "Send To"
 msgstr ""
 
-#: shell/ev-window.c:6853
+#: shell/ev-window.c:6972
 msgid "Previous"
 msgstr "முந்தைய"
 
-#: shell/ev-window.c:6858
+#: shell/ev-window.c:6977
 msgid "Next"
 msgstr "அடுத்து"
 
-#: shell/ev-window.c:6862
+#: shell/ev-window.c:6981
 msgid "Zoom In"
 msgstr "சிறிதாக்கு"
 
-#: shell/ev-window.c:6866
+#: shell/ev-window.c:6985
 msgid "Zoom Out"
 msgstr "பெரிதாக்கு"
 
-#: shell/ev-window.c:6870
+#: shell/ev-window.c:6989
 msgid "Reset Zoom"
 msgstr ""
 
-#: shell/ev-window.c:7014 shell/ev-window.c:7030
+#: shell/ev-window.c:7133 shell/ev-window.c:7149
 msgid "Unable to launch external application."
 msgstr "புற பயன்பாட்டை திறக்க இயலவில்லை"
 
-#: shell/ev-window.c:7087
+#: shell/ev-window.c:7206
 msgid "Unable to open external link"
 msgstr "புற இணைப்பினை திறக்க இயலவில்லை"
 
-#: shell/ev-window.c:7281
+#: shell/ev-window.c:7400
 msgid "Couldn't find appropriate format to save image"
 msgstr "சேமிக்க பொருத்தமான ஒழுங்கை காண முடியவில்லை"
 
-#: shell/ev-window.c:7313
+#: shell/ev-window.c:7432
 msgid "The image could not be saved."
 msgstr "பிம்பத்தை சேமிக்க இயலவில்லை."
 
-#: shell/ev-window.c:7345
+#: shell/ev-window.c:7464
 msgid "Save Image"
 msgstr "பிம்பத்தை சேமி"
 
-#: shell/ev-window.c:7483
+#: shell/ev-window.c:7602
 msgid "Unable to open attachment"
 msgstr "இணைப்பினை திறக்க இயலவில்லை"
 
-#: shell/ev-window.c:7539
+#: shell/ev-window.c:7658
 msgid "The attachment could not be saved."
 msgstr "இணைப்பினை சேமிக்க இயலவில்லை."
 
-#: shell/ev-window.c:7584
+#: shell/ev-window.c:7703
 msgid "Save Attachment"
 msgstr "இணைப்புகளை சேமி"
 
@@ -2303,3 +2290,31 @@ msgstr "STRING"
 #: shell/main.c:74
 msgid "[FILE…]"
 msgstr "[FILE...]"
+
+#, c-format
+#~ msgid ""
+#~ "Error launching the command “%s” in order to decompress the comic book: %s"
+#~ msgstr "காமிக் புத்தகத்தை பிரிக்க “%s” கட்டளையை துவக்குவதில் பிழை : %s"
+
+#, c-format
+#~ msgid "The command “%s” failed at decompressing the comic book."
+#~ msgstr "காமிக் புத்தகத்தை பிரிக்க “%s” கட்டளை தோல்வியுற்றது."
+
+#, c-format
+#~ msgid "The command “%s” did not end normally."
+#~ msgstr " “%s” கட்டளை சரியாக முடியவில்லை"
+
+#~ msgid ""
+#~ "Can't find an appropriate command to decompress this type of comic book"
+#~ msgstr "இந்த வகை காமிக் புத்தகத்தை பிரிக்க சரியான கட்டளையை காண முடியவில்லை"
+
+#, c-format
+#~ msgid "No images found in archive %s"
+#~ msgstr "%s காப்பகத்தில் ஒரு உருவும் இல்லை"
+
+#, c-format
+#~ msgid "Error %s"
+#~ msgstr "பிழை %s"
+
+#~ msgid "Print…"
+#~ msgstr "அச்சிடு"
