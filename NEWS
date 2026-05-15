@@ -1,3 +1,12 @@
+### atril 1.26.3
+
+  * epub: Avoid crash when index list has extraneous entry
+  * fix a incompatible pointer type warning for gcc14
+  * Fix build with libxml2 2.12
+  * fix memleak
+  * pdf: Always use poppler_document_save to avoid data loss
+  * ev-application: Quote user-supplied strings in ev_spawn command line
+
 ### atril 1.26.2
 
   * update translations
