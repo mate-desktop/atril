@@ -72,10 +72,12 @@ G_BEGIN_DECLS
  */
 typedef enum {
 	EV_NO_DEBUG          = 0,
-	EV_DEBUG_JOBS        = 1 << 0
+	EV_DEBUG_JOBS        = 1 << 0,
+	EV_DEBUG_ZOOM        = 1 << 1
 } EvDebugSection;
 
 #define DEBUG_JOBS      EV_DEBUG_JOBS,    __FILE__, __LINE__, G_STRFUNC
+#define DEBUG_ZOOM      EV_DEBUG_ZOOM,    __FILE__, __LINE__, G_STRFUNC
 
 /*
  * Set an environmental var of the same name to turn on
