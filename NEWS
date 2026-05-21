@@ -1,3 +1,20 @@
+### atril 1.28.5
+
+  * CI: release - create tarball with autotools (distcheck)
+  * remove duplicated language files
+  * remove escape char
+  * libdocument: adding class EvAnnotationTextMarkup
+  * libdocument: adding annotation highlight
+  * pdf: Create highlight annotations for existing annotations in document
+  * shell: Show highlight annotations in the sidebar
+  * libdocument: Use a common annotation type for text markup annotations
+  * Add support for reading strike out text markup annotations
+  * Add support for reading underline text markup annotations
+  * libdocument: adding annotation squiggly.
+  * pdf: adding annotation squiggly.
+  * shell: adding annotation squiggly.
+  * window: sidebar ignores settings when no metadata
+
 ### atril 1.28.4
 
   * bump version in meson.build
