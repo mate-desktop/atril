@@ -32,7 +32,7 @@ else
 	$(AM_V_GEN) cp -f $< $@
 endif
 
-EXTRA_DIST = $(backend_in_files)
+EXTRA_DIST = $(backend_in_files) test-ev-archive.c
 
 CLEANFILES = $(backend_DATA)
 

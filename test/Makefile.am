@@ -14,6 +14,16 @@ EXTRA_DIST = \
 	test-mime.bin \
 	test-page-labels.pdf \
 	test6.py \
-	test7.py
+	test7.py \
+	testBookmarksMenu.py \
+	testCommon.py \
+	testEditMenu.py \
+	testEncryptedFile.py \
+	testFileMenu.py \
+	testFileReloading.py \
+	testGoMenu.py \
+	testHelpMenu.py \
+	testWrongFileExtension.py \
+	testZoom.py
 
 -include $(top_srcdir)/git.mk
