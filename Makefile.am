@@ -45,7 +45,43 @@ header_DATA = \
 EXTRA_DIST =            \
     $(header_DATA)      \
     autogen.sh          \
-    README.md
+    README.md           \
+    meson.build         \
+    meson_options.txt   \
+    backend/meson.build \
+    backend/comics/meson.build \
+    backend/djvu/meson.build \
+    backend/dvi/meson.build \
+    backend/dvi/mdvi-lib/meson.build \
+    backend/epub/meson.build \
+    backend/epub/minizip/meson.build \
+    backend/pdf/meson.build \
+    backend/pixbuf/meson.build \
+    backend/ps/meson.build \
+    backend/tiff/meson.build \
+    backend/xps/meson.build \
+    cut-n-paste/toolbar-editor/meson.build \
+    cut-n-paste/zoom-control/meson.build \
+    data/meson.build \
+    data/icons/meson.build \
+    help/meson.build \
+    help/reference/libdocument/meson.build \
+    help/reference/libview/meson.build \
+    help/reference/shell/meson.build \
+    install-scripts/meson.build \
+    install-scripts/meson_install_schemas.py \
+    install-scripts/meson_update_icon_cache.py \
+    install-scripts/meson_update_mime_database.py \
+    libdocument/meson.build \
+    libmisc/meson.build \
+    libview/meson.build \
+    po/meson.build \
+    previewer/meson.build \
+    properties/meson.build \
+    shell/meson.build \
+    test/meson.build \
+    thumbnailer/meson.build \
+    subprojects/mate-submodules.wrap
 
 DISTCLEANFILES =
 
