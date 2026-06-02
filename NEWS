@@ -1,3 +1,11 @@
+### atril 1.28.6
+
+  * Fix and off-by-one error for fit-to-page zoom
+  * epub: use g_strndup for parsing document path
+  * epub: validate epub content before parsing
+  * build: Distribute meson build files when using autotools
+  * meson: Make caja extension optional
+
 ### atril 1.28.5
 
   * CI: release - create tarball with autotools (distcheck)
