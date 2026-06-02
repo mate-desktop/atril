@@ -23,6 +23,7 @@ INST_H_SRC_FILES = 				\
 	ev-document-misc.h			\
 	ev-document-print.h			\
 	ev-document-security.h			\
+	ev-document-signatures.h		\
 	ev-document-thumbnails.h		\
 	ev-document-transition.h		\
 	ev-document-text.h			\
@@ -72,6 +73,7 @@ libatrildocument_la_SOURCES=			\
 	ev-document-images.c			\
 	ev-document-print.c			\
 	ev-document-security.c			\
+	ev-document-signatures.c		\
 	ev-document-find.c			\
 	ev-document-transition.c		\
 	ev-document-forms.c			\
