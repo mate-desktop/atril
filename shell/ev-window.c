@@ -3003,7 +3003,7 @@ ev_window_setup_recent (EvWindow *ev_window)
 
 		action_name = g_strdup_printf ("RecentFile%u", i++);
 		label = ev_window_get_recent_file_label (
-			n_items + 1, gtk_recent_info_get_display_name (info));
+			(n_items + 1) % 10, gtk_recent_info_get_display_name (info));
 
                 mime_type = gtk_recent_info_get_mime_type (info);
                 content_type = g_content_type_from_mime_type (mime_type);
@@ -3047,7 +3047,7 @@ ev_window_setup_recent (EvWindow *ev_window)
                 if (icon != NULL)
                         g_object_unref (icon);
 
-		if (++n_items == 5)
+		if (++n_items == 10)
 			break;
 	}
 
