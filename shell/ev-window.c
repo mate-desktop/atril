@@ -184,6 +184,7 @@ struct _EvWindowPrivate {
 	GtkActionGroup   *bookmarks_action_group;
 	guint             bookmarks_ui_id;
 	GtkUIManager     *ui_manager;
+	GtkAction        *page_counter_action;
 
 	/* Fullscreen mode */
 	GtkWidget *fullscreen_toolbar;
@@ -1161,6 +1162,44 @@ ev_window_sidebar_set_current_page (EvWindow    *window,
 		   ev_sidebar_page_support_document (EV_SIDEBAR_PAGE (bookmarks), document)) {
 		ev_sidebar_set_page (sidebar, bookmarks);
 	}
+}
+
+static void
+update_page_counter (GObject    *object,
+		     GParamSpec *pspec,
+		     gpointer    user_data)
+{
+	EvWindow *ev_window = EV_WINDOW (user_data);
+	gint current_page;
+	gint total_pages;
+	gchar *text;
+
+	/* Safety checks */
+	if (!ev_window)
+		return;
+
+	if (!ev_window->priv->page_counter_action)
+		return;
+
+	if (!ev_window->priv->document)
+		return;
+
+	total_pages = ev_document_get_n_pages(ev_window->priv->document);
+
+	if (!ev_window->priv->model)
+		return;
+
+	current_page = ev_document_model_get_page(ev_window->priv->model) + 1;
+
+	text = g_strdup_printf(_("(%d of %d)"),
+			       current_page,
+			       total_pages);
+
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+	gtk_action_set_label(ev_window->priv->page_counter_action, text);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
+
+	g_free(text);
 }
 
 static void
@@ -6348,6 +6387,11 @@ ev_window_dispose (GObject *object)
 		priv->action_group = NULL;
 	}
 
+	if (priv->page_counter_action) {
+		g_object_unref (priv->page_counter_action);
+		priv->page_counter_action = NULL;
+	}
+
 	if (priv->view_popup_action_group) {
 		g_object_unref (priv->view_popup_action_group);
 		priv->view_popup_action_group = NULL;
@@ -6391,6 +6435,9 @@ ev_window_dispose (GObject *object)
 	if (priv->model) {
 		g_signal_handlers_disconnect_by_func (priv->model,
 						      ev_window_page_changed_cb,
+						      window);
+		g_signal_handlers_disconnect_by_func (priv->model,
+						      update_page_counter,
 						      window);
 		g_object_unref (priv->model);
 		priv->model = NULL;
@@ -7921,6 +7968,7 @@ ev_window_init (EvWindow *ev_window)
 	GtkAccelGroup *accel_group;
 	GtkCssProvider *css_provider;
 	GError *error = NULL;
+	GtkWidget *counter;
 	GtkWidget *sidebar_widget;
 	GtkWidget *overlay;
 	GObject *mpkeys;
@@ -8007,6 +8055,16 @@ ev_window_init (EvWindow *ev_window)
 	gtk_window_add_accel_group (GTK_WINDOW (ev_window), accel_group);
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+	ev_window->priv->page_counter_action =
+		g_object_new(GTK_TYPE_ACTION,
+			     "name", "PageCounter",
+			     "label", "",
+			     "sensitive", FALSE,
+			     NULL);
+
+	gtk_action_group_add_action(ev_window->priv->action_group,
+				    ev_window->priv->page_counter_action);
+
 	action_group = gtk_action_group_new ("ViewPopupActions");
 	ev_window->priv->view_popup_action_group = action_group;
 	gtk_action_group_set_translation_domain (action_group, NULL);
@@ -8057,6 +8115,12 @@ ev_window_init (EvWindow *ev_window)
 	gtk_box_pack_start (GTK_BOX (ev_window->priv->main_box),
 			    ev_window->priv->menubar,
 			    FALSE, FALSE, 0);
+
+	counter = gtk_ui_manager_get_widget(ev_window->priv->ui_manager,
+					    "/MainMenu/PageCounter");
+	if (counter) {
+		g_object_set(counter, "right-justified", TRUE, NULL);
+	}
 
 	ev_window->priv->toolbars_model = get_toolbars_model ();
 	ev_window->priv->toolbar = GTK_WIDGET
@@ -8356,6 +8420,16 @@ ev_window_init (EvWindow *ev_window)
 	g_signal_connect (ev_window->priv->find_bar,
 			  "notify::visible",
 			  G_CALLBACK (find_bar_visibility_changed_cb),
+			  ev_window);
+
+	/* Update page counter */
+	g_signal_connect (ev_window->priv->model,
+			  "notify::page",
+			  G_CALLBACK (update_page_counter),
+			  ev_window);
+	g_signal_connect (ev_window->priv->model,
+			  "notify::document",
+			  G_CALLBACK (update_page_counter),
 			  ev_window);
 
 	/* Popups */
