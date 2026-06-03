@@ -44,6 +44,7 @@ static gboolean preview_mode = FALSE;
 static gboolean fullscreen_mode = FALSE;
 static gboolean presentation_mode = FALSE;
 static gboolean unlink_temp_file = FALSE;
+static gboolean reset_metadata = FALSE;
 static gchar   *print_settings;
 static const char **file_arguments = NULL;
 
@@ -69,6 +70,7 @@ static const GOptionEntry goption_options[] =
 	{ "preview", 'w', 0, G_OPTION_ARG_NONE, &preview_mode, N_("Run atril as a previewer"), NULL },
 	{ "find", 'l', 0, G_OPTION_ARG_STRING, &ev_find_string, N_("The word or phrase to find in the document"), N_("STRING")},
 	{ "unlink-tempfile", 'u', G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_NONE, &unlink_temp_file, NULL, NULL },
+	{ "reset-metadata", 'r', 0, G_OPTION_ARG_NONE, &reset_metadata, N_("Resets stored metadata for target file to default values"), NULL },
 	{ "print-settings", 't', G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_FILENAME, &print_settings, NULL, NULL },
 	{ "version", 0, G_OPTION_FLAG_NO_ARG | G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_CALLBACK, option_version_cb, NULL, NULL },
 	{ G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_FILENAME_ARRAY, &file_arguments, NULL, N_("[FILE…]") },
@@ -151,6 +153,59 @@ get_label_from_filename (const gchar *filename)
 }
 
 static void
+erase_metadata_attributes (GFile *file)
+{
+	GFileInfo *info;
+	GFileInfo *clear;
+	gchar **attrs;
+	int i;
+	GError *error = NULL;
+
+	info = g_file_query_info (file, "metadata::*", 0, NULL, &error);
+	if (!info) {
+		if (error) {
+			g_warning ("%s", error->message);
+			g_error_free (error);
+		}
+		return;
+	}
+
+	attrs = g_file_info_list_attributes (info, "metadata");
+
+	if (!attrs) {
+		g_object_unref (info);
+		return;
+	}
+
+	clear = g_file_info_new ();
+
+	for (i = 0; attrs[i]; i++) {
+		if (!g_str_has_prefix (attrs[i], "metadata::atril::"))
+			continue;
+
+		g_file_info_set_attribute (clear,
+								   attrs[i],
+								   G_FILE_ATTRIBUTE_TYPE_INVALID,
+								   NULL);
+	}
+
+	if (!g_file_set_attributes_from_info (file,
+										  clear,
+										  0,
+										  NULL,
+										  &error)) {
+		if (error) {
+			g_warning ("%s", error->message);
+			g_error_free (error);
+		}
+	}
+
+	g_strfreev (attrs);
+	g_object_unref (clear);
+	g_object_unref (info);
+}
+
+static void
 load_files (const char **files)
 {
 	GdkScreen       *screen = gdk_screen_get_default ();
@@ -195,6 +250,10 @@ load_files (const char **files)
 		}
 
 		file = g_file_new_for_commandline_arg (filename);
+
+		if (reset_metadata && ev_is_metadata_supported_for_file (file))
+			erase_metadata_attributes (file);
+
 		uri = g_file_get_uri (file);
 		g_object_unref (file);
 
