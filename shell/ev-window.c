@@ -3005,12 +3005,27 @@ ev_window_setup_recent (EvWindow *ev_window)
 		label = ev_window_get_recent_file_label (
 			(n_items + 1) % 10, gtk_recent_info_get_display_name (info));
 
-                mime_type = gtk_recent_info_get_mime_type (info);
-                content_type = g_content_type_from_mime_type (mime_type);
-                if (content_type != NULL) {
-                        icon = g_content_type_get_icon (content_type);
-                        g_free (content_type);
-                }
+		mime_type = gtk_recent_info_get_mime_type (info);
+		if (!mime_type)
+			continue;
+
+		/* Check if Atril has a backend for this MIME type */
+		if (!ev_backends_manager_get_document(mime_type)) {
+		#ifdef ENABLE_PIXBUF
+			/* Allow image backend if pixbuf support enabled */
+			if (!mime_type_supported_by_gdk_pixbuf(mime_type))
+				continue;
+		#else
+			continue;
+		#endif
+		}
+
+		content_type = g_content_type_from_mime_type (mime_type);
+		if (content_type != NULL) {
+				icon = g_content_type_get_icon (content_type);
+				g_free (content_type);
+		}
+
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		action = g_object_new (GTK_TYPE_ACTION,
 				       "name", action_name,
