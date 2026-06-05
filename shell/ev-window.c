@@ -3001,29 +3001,21 @@ ev_window_setup_recent (EvWindow *ev_window)
 		    (gtk_recent_info_is_local (info) && !gtk_recent_info_exists (info)))
 			continue;
 
-		action_name = g_strdup_printf ("RecentFile%u", i++);
-		label = ev_window_get_recent_file_label (
-			(n_items + 1) % 10, gtk_recent_info_get_display_name (info));
-
 		mime_type = gtk_recent_info_get_mime_type (info);
 		if (!mime_type)
 			continue;
 
-		/* Check if Atril has a backend for this MIME type */
-		if (!ev_backends_manager_get_document(mime_type)) {
-		#ifdef ENABLE_PIXBUF
-			/* Allow image backend if pixbuf support enabled */
-			if (!mime_type_supported_by_gdk_pixbuf(mime_type))
-				continue;
-		#else
+		if (!ev_backends_manager_mime_type_supported (mime_type))
 			continue;
-		#endif
-		}
+
+		action_name = g_strdup_printf ("RecentFile%u", i++);
+		label = ev_window_get_recent_file_label (
+			(n_items + 1) % 10, gtk_recent_info_get_display_name (info));
 
 		content_type = g_content_type_from_mime_type (mime_type);
 		if (content_type != NULL) {
-				icon = g_content_type_get_icon (content_type);
-				g_free (content_type);
+			icon = g_content_type_get_icon (content_type);
+			g_free (content_type);
 		}
 
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
@@ -3063,7 +3055,7 @@ ev_window_setup_recent (EvWindow *ev_window)
                         g_object_unref (icon);
 
 		if (++n_items == 10)
-			break;
+            break;
 	}
 
 	g_list_foreach (items, (GFunc) gtk_recent_info_unref, NULL);
