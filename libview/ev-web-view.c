@@ -26,6 +26,7 @@
 #include <stdlib.h>
 
 #include <webkit2/webkit2.h>
+#include <gepub.h>
 
 #include "ev-web-view.h"
 #include "ev-document-model.h"
@@ -51,6 +52,7 @@ struct _EvWebView
 	WebKitWebView web_view;
 	EvDocument *document;
 	EvDocumentModel *model;
+	GepubDoc *gepub_doc;
 	gint current_page;
 	gboolean inverted_stylesheet ;
 	gboolean fullscreen;
@@ -91,8 +93,10 @@ web_view_update_range_and_current_page (EvWebView *webview)
 
 	ev_document_model_set_page(webview->model, 0);
 	webview->current_page = 0;
-	EvPage *webpage = ev_document_get_page(webview->document,0);
-	webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)webpage->backend_page);
+	EvPage *webpage = ev_document_get_page (webview->document, 0);
+	if (webpage->backend_page)
+		webkit_web_view_load_uri (WEBKIT_WEB_VIEW (webview), (gchar*)webpage->backend_page);
+	g_object_unref (webpage);
 }
 
 static void
@@ -146,7 +150,6 @@ epub_uri_scheme_request_cb (WebKitURISchemeRequest *request,
 		return;
 	}
 
-	/* Strip leading slash from the path */
 	while (*path == '/')
 		path++;
 
@@ -216,8 +219,6 @@ ev_web_view_change_page (EvWebView *webview,
 {
 	g_return_if_fail(EV_IS_WEB_VIEW(webview));
 
-	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS(webview->document);
-
 	webview->current_page = new_page;
 	ev_document_model_set_page(webview->model,new_page);
 	webkit_find_controller_search_finish(webview->findcontroller);
@@ -227,8 +228,10 @@ ev_web_view_change_page (EvWebView *webview,
 		webview->hlink = NULL;
 	}
 	else {
-		EvPage *page = klass->get_page(webview->document,new_page);
-		webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)page->backend_page);
+		EvPage *page = ev_document_get_page (webview->document, new_page);
+		if (page->backend_page)
+			webkit_web_view_load_uri (WEBKIT_WEB_VIEW (webview), (gchar*)page->backend_page);
+		g_object_unref (page);
 	}
 }
 
@@ -283,6 +286,7 @@ ev_web_view_document_changed_cb (EvDocumentModel *model,
 
 		if(webview->document) {
 			g_object_ref(webview->document);
+			webview->gepub_doc = ev_document_get_doc_handle (webview->document);
 		}
 		webview->inverted_stylesheet = FALSE;
 		gint current_page = ev_document_model_get_page(model);
@@ -395,14 +399,10 @@ ev_web_view_next_page (EvWebView *webview)
 
 	if (page < n_pages) {
 		ev_document_model_set_page (webview->model, page);
-		EvPage *webpage = ev_document_get_page(webview->document,page);
-		webview->current_page = page ;
-		webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)webpage->backend_page);
+		webview->current_page = page;
 		return TRUE;
 	} else if (page == n_pages) {
 		ev_document_model_set_page (webview->model, page - 1);
-		EvPage *webpage = ev_document_get_page(webview->document,page);
-		webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)webpage->backend_page);
 		return TRUE;
 	} else {
 		return FALSE;
@@ -425,13 +425,10 @@ ev_web_view_previous_page (EvWebView *webview)
 
 	if (page >= 0) {
 		ev_document_model_set_page (webview->model, page);
-		EvPage *webpage = ev_document_get_page(webview->document,page);
-		webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)webpage->backend_page);
+		webview->current_page = page;
 		return TRUE;
 	} else if (page == -1) {
 		ev_document_model_set_page (webview->model, 0);
-		EvPage *webpage = ev_document_get_page(webview->document,page);
-		webkit_web_view_load_uri(WEBKIT_WEB_VIEW(webview),(gchar*)webpage->backend_page);
 		return TRUE;
 	} else {
 		return FALSE;
