@@ -549,6 +549,9 @@ xml_parse_children_of_node(xmlNodePtr parent,
                            xmlChar* attributename,
                            xmlChar* attributevalue )
 {
+    if ( parent == NULL )
+        return;
+
     xmlNodePtr child = parent->xmlChildrenNode ;
 
     while ( child != NULL )
@@ -612,6 +615,8 @@ xml_get_data_from_node(xmlNodePtr node,
                        xmlChar* attributename)
 {
     xmlChar* datastring ;
+    if ( node == NULL )
+        return NULL;
     if ( rettype == XML_ATTRIBUTE )
        datastring= xmlGetProp(node,attributename);
     else
@@ -1178,6 +1183,8 @@ static GList*
 get_child_list(xmlNodePtr ol,gchar* documentdir)
 {
     GList *childlist = NULL;
+    if (ol == NULL)
+        return NULL;
     xmlNodePtr li = ol->xmlChildrenNode;
 
     while (li != NULL) {
@@ -1302,7 +1309,7 @@ setup_document_index(EpubDocument *epub_document,gchar *containeruri)
             xml_parse_children_of_node(navLabel,(xmlChar*)"text",NULL,NULL);
             linknode *newnode = g_new0(linknode,1);
             newnode->linktext = NULL;
-            while (newnode->linktext == NULL) {
+            while (newnode->linktext == NULL && xmlretval != NULL) {
                 newnode->linktext = (gchar*)xml_get_data_from_node(xmlretval,XML_KEYWORD,NULL);
                 xmlretval = xmlretval->next;
             }
