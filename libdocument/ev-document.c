@@ -966,3 +966,14 @@ ev_document_get_resource_mime (EvDocument  *document,
 	return NULL;
 }
 
+gpointer
+ev_document_get_doc_handle (EvDocument *document)
+{
+	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS (document);
+
+	if (klass->get_doc_handle)
+		return klass->get_doc_handle (document);
+
+	return NULL;
+}
+

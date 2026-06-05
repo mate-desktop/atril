@@ -120,6 +120,7 @@ struct _EvDocumentClass
 	                                          const gchar     *path);
 	gchar           * (* get_resource_mime)  (EvDocument      *document,
 	                                          const gchar     *path);
+	gpointer          (* get_doc_handle)    (EvDocument      *document);
 };
 
 GType            ev_document_get_type             (void) G_GNUC_CONST;
@@ -190,6 +191,7 @@ GBytes         *ev_document_get_resource          (EvDocument      *document,
                                                    const gchar     *path);
 gchar          *ev_document_get_resource_mime     (EvDocument      *document,
                                                    const gchar     *path);
+gpointer        ev_document_get_doc_handle       (EvDocument      *document);
 
 #define EV_TYPE_RECTANGLE (ev_rectangle_get_type ())
 struct _EvRectangle

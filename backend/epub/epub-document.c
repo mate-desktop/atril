@@ -276,6 +276,13 @@ epub_document_get_resource_mime (EvDocument  *document,
 	return gepub_doc_get_resource_mime (epub_document->gepub_doc, path);
 }
 
+static gpointer
+epub_document_get_doc_handle (EvDocument *document)
+{
+	EpubDocument *epub_document = EPUB_DOCUMENT (document);
+	return epub_document->gepub_doc;
+}
+
 static GList *
 build_index_from_gepub_toc (EpubDocument *epub_document)
 {
@@ -409,4 +416,5 @@ epub_document_class_init (EpubDocumentClass *klass)
 	ev_document_class->get_page = epub_document_get_page;
 	ev_document_class->get_resource = epub_document_get_resource;
 	ev_document_class->get_resource_mime = epub_document_get_resource_mime;
+	ev_document_class->get_doc_handle = epub_document_get_doc_handle;
 }
