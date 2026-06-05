@@ -453,7 +453,7 @@ ev_window_setup_action_sensitivity (EvWindow *ev_window)
 	else if (has_document && document->iswebdocument) {
 		can_get_text = TRUE;
 	}
-	if (has_pages && EV_IS_DOCUMENT_FIND (document)) {
+	if (has_pages && (EV_IS_DOCUMENT_FIND (document) || document->iswebdocument)) {
 		can_find = TRUE;
 	}
 
@@ -1733,7 +1733,7 @@ ev_window_setup_document (EvWindow *ev_window)
 	info = ev_document_get_info (document);
 	update_document_mode (ev_window, info->mode);
 
-	if (EV_IS_DOCUMENT_FIND (document)) {
+	if (EV_IS_DOCUMENT_FIND (document) || document->iswebdocument) {
 		if (ev_window->priv->search_string &&
 		    !EV_WINDOW_IS_PRESENTATION (ev_window)) {
 			ev_window_show_find_bar (ev_window);
@@ -2509,7 +2509,7 @@ ev_window_open_document (EvWindow       *ev_window,
 		break;
 	}
 
-	if (search_string && EV_IS_DOCUMENT_FIND (document) &&
+	if (search_string && (EV_IS_DOCUMENT_FIND (document) || document->iswebdocument) &&
 	    mode != EV_WINDOW_MODE_PRESENTATION) {
 		ev_window_show_find_bar (ev_window);
 		egg_find_bar_set_search_string (EGG_FIND_BAR (ev_window->priv->find_bar),
@@ -5858,13 +5858,6 @@ ev_window_find_job_updated_cb (EvJobFind *job,
 			       EvWindow  *ev_window)
 {
 	ev_window_update_actions (ev_window);
-#if ENABLE_EPUB
-	if (ev_window->priv->document && ev_window->priv->document->iswebdocument == TRUE ) {
-		ev_web_view_find_changed(EV_WEB_VIEW(ev_window->priv->webview),
-								 job->results,job->text, job->case_sensitive);
-	}
-	else
-#endif
 	{
 		ev_view_find_changed (EV_VIEW (ev_window->priv->view),
 				      ev_job_find_get_results (job),
@@ -5938,10 +5931,26 @@ ev_window_search_start (EvWindow *ev_window)
 	EggFindBar *find_bar = EGG_FIND_BAR (ev_window->priv->find_bar);
 	const char *search_string;
 
-	if (!ev_window->priv->document || !EV_IS_DOCUMENT_FIND (ev_window->priv->document))
+	if (!ev_window->priv->document)
 		return;
 
 	search_string = egg_find_bar_get_search_string (find_bar);
+
+#if ENABLE_EPUB
+	if (ev_window->priv->document->iswebdocument) {
+		if (search_string && search_string[0]) {
+			ev_web_view_find_changed (EV_WEB_VIEW (ev_window->priv->webview),
+			                          search_string,
+			                          egg_find_bar_get_case_sensitive (find_bar));
+		} else {
+			ev_web_view_find_cancel (EV_WEB_VIEW (ev_window->priv->webview));
+		}
+		return;
+	}
+#endif
+
+	if (!EV_IS_DOCUMENT_FIND (ev_window->priv->document))
+		return;
 
 	ev_window_clear_find_job (ev_window);
 
@@ -5966,9 +5975,7 @@ ev_window_search_start (EvWindow *ev_window)
 		ev_window_update_actions (ev_window);
 		egg_find_bar_set_status_text (find_bar, NULL);
 		ev_find_sidebar_clear (EV_FIND_SIDEBAR (ev_window->priv->find_sidebar));
-		if (ev_window->priv->document->iswebdocument == FALSE) {
-			gtk_widget_queue_draw (GTK_WIDGET (ev_window->priv->view));
-		}
+		gtk_widget_queue_draw (GTK_WIDGET (ev_window->priv->view));
 	}
 }
 
@@ -5999,15 +6006,16 @@ find_bar_visibility_changed_cb (EggFindBar *find_bar,
 	visible = gtk_widget_get_visible (GTK_WIDGET (find_bar));
 
 	if (ev_window->priv->document &&
-	    EV_IS_DOCUMENT_FIND (ev_window->priv->document)) {
+	    (EV_IS_DOCUMENT_FIND (ev_window->priv->document) ||
+	     ev_window->priv->document->iswebdocument)) {
 
 		if (!ev_window->priv->document->iswebdocument) {
 			ev_view_find_set_highlight_search (EV_VIEW (ev_window->priv->view), visible);
 		}
 #if ENABLE_EPUB
 		else {
-			ev_web_view_find_search_changed(EV_WEB_VIEW(ev_window->priv->webview));
-			ev_web_view_set_handler(EV_WEB_VIEW(ev_window->priv->webview),visible);
+			if (!visible)
+				ev_web_view_find_cancel (EV_WEB_VIEW (ev_window->priv->webview));
 		}
 #endif
 		ev_window_update_actions (ev_window);
@@ -6038,7 +6046,9 @@ ev_window_show_find_bar (EvWindow *ev_window)
 	if (gtk_widget_get_visible (ev_window->priv->find_bar))
 		return;
 
-	if (ev_window->priv->document == NULL || !EV_IS_DOCUMENT_FIND (ev_window->priv->document)) {
+	if (ev_window->priv->document == NULL ||
+	    (!EV_IS_DOCUMENT_FIND (ev_window->priv->document) &&
+	     !ev_window->priv->document->iswebdocument)) {
 		g_error ("Find action should be insensitive since document doesn't support find");
 		return;
 	}

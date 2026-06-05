@@ -33,20 +33,6 @@
 #include "ev-document.h"
 #include "ev-jobs.h"
 
- typedef enum {
- 	EV_WEB_VIEW_FIND_NEXT,
- 	EV_WEB_VIEW_FIND_PREV
- } EvWebViewFindDirection;
-
-typedef struct _SearchParams {
-	gboolean case_sensitive;
-	gchar*   search_string;
-	EvWebViewFindDirection direction;
-	gboolean search_jump;
-	gint     on_result;
-	guint   *results;
-}SearchParams;
-
 struct _EvWebView
 {
 	WebKitWebView web_view;
@@ -54,13 +40,13 @@ struct _EvWebView
 	EvDocumentModel *model;
 	GepubDoc *gepub_doc;
 	gint current_page;
-	gboolean inverted_stylesheet ;
+	gboolean inverted_stylesheet;
 	gboolean fullscreen;
-	SearchParams *search;
 	WebKitFindController *findcontroller;
 	WebKitFindOptions findoptions;
 	gdouble zoom_level;
 	gchar *hlink;
+	gchar *search_string;
 };
 
 struct _EvWebViewClass
@@ -119,9 +105,9 @@ ev_web_view_dispose (GObject *object)
 		webview->hlink = NULL;
 	}
 
-	if (webview->search) {
-		g_free(webview->search);
-		webview->search = NULL;
+	if (webview->search_string) {
+		g_free(webview->search_string);
+		webview->search_string = NULL;
 	}
 
 	G_OBJECT_CLASS (ev_web_view_parent_class)->dispose (object);
@@ -192,17 +178,10 @@ ev_web_view_init (EvWebView *webview)
 	}
 
 	webview->current_page = 0;
-
-	webview->search = g_new0(SearchParams, 1);
-	webview->search->search_string = NULL;
-
-	webview->search->on_result = -1 ;
-	webview->search->results = NULL;
-	webview->search->search_jump = TRUE ;
-
 	webview->fullscreen = FALSE;
 	webview->inverted_stylesheet = FALSE;
 	webview->hlink = NULL;
+	webview->search_string = NULL;
 }
 
 static void
@@ -481,207 +460,57 @@ ev_web_view_handle_link(EvWebView *webview,EvLink *link)
 /* Searching */
 
 static void
-results_counted_cb(WebKitFindController *findcontroller,
-                   guint match_count,
-                   EvWebView *webview)
+ev_web_view_find_restart (EvWebView *webview)
 {
-	if (match_count > 0 && webview->search->on_result < match_count) {
-		webkit_find_controller_search(findcontroller,
-			                          webview->search->search_string,
-			                          webview->findoptions,
-			                          match_count);
-		webview->search->search_jump = FALSE;
-	}
-}
-
-/*
- * Jump to find results once we have changed the page in the webview.
- */
-static void
-jump_to_find_results(EvWebView *webview,
-                     WebKitLoadEvent load_event,
-                     gpointer data)
-{
-	if ( load_event != WEBKIT_LOAD_FINISHED) {
+	if (!webview->search_string || !webview->search_string[0])
 		return;
-	}
 
-	if (!webview->search->search_string) {
-		return;
-	}
-
-	if (webview->search->direction == EV_WEB_VIEW_FIND_NEXT) {
-		webview->findoptions &= ~WEBKIT_FIND_OPTIONS_BACKWARDS;
-		webview->findoptions &= ~WEBKIT_FIND_OPTIONS_WRAP_AROUND;
-	}
-	else {
-		webview->findoptions |= WEBKIT_FIND_OPTIONS_BACKWARDS;
-		webview->findoptions |= WEBKIT_FIND_OPTIONS_WRAP_AROUND;
-	}
-
-	webkit_find_controller_count_matches (webview->findcontroller,
-	                                      webview->search->search_string,
-	                                      webview->findoptions,
-	                                      G_MAXUINT);
-	webview->search->search_jump = FALSE;
-}
-
-static gint
-ev_web_view_find_get_n_results (EvWebView *webview, gint page)
-{
-	return webview->search->results[page];
-}
-
-/**
- * jump_to_find_page
- * @webview: #EvWebView instance
- * @direction: Direction to look
- * @shift: Shift from current page
- *
- * Jumps to the first page that has occurences of searched word.
- * Uses a direction where to look and a shift from current page.
-**/
-static void
-jump_to_find_page (EvWebView *webview, EvWebViewFindDirection direction, gint shift)
-{
-	int n_pages, i;
-
-	n_pages = ev_document_get_n_pages (webview->document);
-
-	for (i = 0; i < n_pages; i++) {
-		int page;
-
-		if (direction == EV_WEB_VIEW_FIND_NEXT)
-			page = webview->current_page + i;
-		else
-			page = webview->current_page - i;
-		page += shift;
-
-		if (page >= n_pages) {
-			page = page - n_pages;
-		} else if (page < 0)
-			page = page + n_pages;
-
-		if (page == webview->current_page && ev_web_view_find_get_n_results(webview,page) > 0) {
-			if (direction == EV_WEB_VIEW_FIND_PREV) {
-				webview->findoptions |= WEBKIT_FIND_OPTIONS_WRAP_AROUND;
-				webview->findoptions |= WEBKIT_FIND_OPTIONS_BACKWARDS;
-			}
-			else {
-				if (webview->search->search_jump)
-					webview->findoptions |= WEBKIT_FIND_OPTIONS_WRAP_AROUND;
-				else
-					webview->findoptions &= ~WEBKIT_FIND_OPTIONS_WRAP_AROUND;
-
-				webview->findoptions &= ~WEBKIT_FIND_OPTIONS_BACKWARDS;
-			}
-
-			webkit_find_controller_search (webview->findcontroller,
-			                               webview->search->search_string,
-			                               webview->findoptions,
-			                               /*Highlight all the results.*/
-			                               G_MAXUINT);
-			webview->search->search_jump = FALSE;
-			break;
-		}
-
-		if (ev_web_view_find_get_n_results (webview, page) > 0) {
-			webview->search->direction = direction;
-			webkit_find_controller_search_finish(webview->findcontroller);
-			ev_document_model_set_page (webview->model, page);
-			break;
-		}
-	}
+	webkit_find_controller_search (webview->findcontroller,
+	                               webview->search_string,
+	                               webview->findoptions,
+	                               G_MAXUINT);
 }
 
 void
-ev_web_view_find_changed (EvWebView *webview, guint *results, gchar *text,gboolean case_sensitive)
+ev_web_view_find_changed (EvWebView   *webview,
+                          const gchar *text,
+                          gboolean     case_sensitive)
 {
-	webview->search->results = results;
-	webview->search->on_result = 0;
-	webview->search->search_string = g_strdup(text);
-	webview->search->case_sensitive = case_sensitive;
-		if (webview->search->search_jump == TRUE) {
-		if (!case_sensitive) {
-			webview->findoptions |=	 WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE;
-		}
-		else {
-			webview->findoptions &= ~WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE;
-		}
-		jump_to_find_page (webview, EV_WEB_VIEW_FIND_NEXT, 0);
-	}
+	g_free (webview->search_string);
+	webview->search_string = g_strdup (text);
+
+	webview->findoptions = WEBKIT_FIND_OPTIONS_NONE;
+	if (!case_sensitive)
+		webview->findoptions |= WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE;
+	webview->findoptions |= WEBKIT_FIND_OPTIONS_WRAP_AROUND;
+
+	ev_web_view_find_restart (webview);
 }
 
 void
 ev_web_view_find_next (EvWebView *webview)
 {
-	gint n_results;
-
-	n_results = ev_web_view_find_get_n_results (webview, webview->current_page);
-	webview->search->on_result++;
-
-	if (webview->search->on_result >= n_results) {
-		webview->search->on_result = 0;
-		jump_to_find_page (webview, EV_WEB_VIEW_FIND_NEXT, 1);
-	}
-	else {
-		webkit_find_controller_search_next(webview->findcontroller);
-	}
+	webkit_find_controller_search_next (webview->findcontroller);
 }
 
 void
 ev_web_view_find_previous (EvWebView *webview)
 {
-	webview->search->on_result--;
-
-	if (webview->search->on_result < 0) {
-		jump_to_find_page (webview, EV_WEB_VIEW_FIND_PREV, -1);
-		webview->search->on_result = MAX (0, ev_web_view_find_get_n_results (webview, webview->current_page) - 1);
-	} else {
-		webkit_find_controller_search_previous(webview->findcontroller);
-	}
+	webkit_find_controller_search_previous (webview->findcontroller);
 }
 
 void
 ev_web_view_find_search_changed (EvWebView *webview)
 {
-	/* search string has changed, focus on new search result */
-	if (webview->search->search_string) {
-		g_free(webview->search->search_string);
-		webview->search->search_string = NULL;
-	}
-
-	webkit_find_controller_search_finish(webview->findcontroller);
-	webview->search->search_jump = TRUE;
+	webkit_find_controller_search_finish (webview->findcontroller);
 }
 
 void
 ev_web_view_find_cancel (EvWebView *webview)
 {
 	webkit_find_controller_search_finish (webview->findcontroller);
-}
-
-void
-ev_web_view_set_handler(EvWebView *webview,gboolean visible)
-{
-	if (visible) {
-		g_signal_connect(webview,
-		                 "load-changed",
-		                 G_CALLBACK(jump_to_find_results),
-		                 NULL);
-		g_signal_connect(webview->findcontroller,
-		                 "counted-matches",
-		                 G_CALLBACK(results_counted_cb),
-		                 webview);
-	}
-	else {
-		g_signal_handlers_disconnect_by_func(webview,
-											 jump_to_find_results,
-											 NULL);
-		g_signal_handlers_disconnect_by_func(webview,
-		                                     results_counted_cb,
-		                                     NULL);
-	}
+	g_free (webview->search_string);
+	webview->search_string = NULL;
 }
 
 /* Selection and copying*/
