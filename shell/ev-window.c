@@ -1222,10 +1222,6 @@ ev_window_init_metadata_with_default_values (EvWindow *window)
 		ev_metadata_set_boolean (metadata, "dual-page-odd-left",
 					 g_settings_get_boolean (settings, "dual-page-odd-left"));
 	}
-	if (!ev_metadata_has_key (metadata, "inverted-colors")) {
-		ev_metadata_set_boolean (metadata, "inverted-colors",
-					 g_settings_get_boolean (settings, "inverted-colors"));
-	}
 	if (!ev_metadata_has_key (metadata, "sizing_mode")) {
 		EvSizingMode mode = g_settings_get_enum (settings, "sizing-mode");
 		GEnumValue *enum_value = g_enum_get_value (g_type_class_peek (EV_TYPE_SIZING_MODE), mode);
@@ -1336,6 +1332,10 @@ setup_model_from_metadata (EvWindow *window)
 	/* Inverted Colors */
 	if (ev_metadata_get_boolean (window->priv->metadata, "inverted-colors", &inverted_colors)) {
 		ev_document_model_set_inverted_colors (window->priv->model, inverted_colors);
+	} else {
+		ev_document_model_set_inverted_colors (window->priv->model,
+						       g_settings_get_boolean (window->priv->default_settings,
+									       "inverted-colors"));
 	}
 
 	/* Continuous */
