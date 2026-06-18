@@ -3055,7 +3055,7 @@ ev_window_setup_recent (EvWindow *ev_window)
                         g_object_unref (icon);
 
 		if (++n_items == 10)
-            break;
+			break;
 	}
 
 	g_list_foreach (items, (GFunc) gtk_recent_info_unref, NULL);
