@@ -3001,16 +3001,23 @@ ev_window_setup_recent (EvWindow *ev_window)
 		    (gtk_recent_info_is_local (info) && !gtk_recent_info_exists (info)))
 			continue;
 
+		mime_type = gtk_recent_info_get_mime_type (info);
+		if (!mime_type)
+			continue;
+
+		if (!ev_backends_manager_mime_type_supported (mime_type))
+			continue;
+
 		action_name = g_strdup_printf ("RecentFile%u", i++);
 		label = ev_window_get_recent_file_label (
 			(n_items + 1) % 10, gtk_recent_info_get_display_name (info));
 
-                mime_type = gtk_recent_info_get_mime_type (info);
-                content_type = g_content_type_from_mime_type (mime_type);
-                if (content_type != NULL) {
-                        icon = g_content_type_get_icon (content_type);
-                        g_free (content_type);
-                }
+		content_type = g_content_type_from_mime_type (mime_type);
+		if (content_type != NULL) {
+			icon = g_content_type_get_icon (content_type);
+			g_free (content_type);
+		}
+
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		action = g_object_new (GTK_TYPE_ACTION,
 				       "name", action_name,
