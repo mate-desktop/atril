@@ -942,16 +942,38 @@ ev_rect_cmp (EvRectangle *a,
 		  (ABS (a->y2 - b->y2) < EPSILON));
 }
 
-void
-ev_document_toggle_night_mode(EvDocument *document,gboolean night)
+GBytes *
+ev_document_get_resource (EvDocument  *document,
+                          const gchar *path)
 {
-	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS(document);
-	return klass->toggle_night_mode(document,night) ;
+	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS (document);
+
+	if (klass->get_resource)
+		return klass->get_resource (document, path);
+
+	return NULL;
 }
 
-void
-ev_document_check_add_night_sheet(EvDocument *document)
+gchar *
+ev_document_get_resource_mime (EvDocument  *document,
+                               const gchar *path)
 {
-	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS(document);
-	return klass->check_add_night_sheet(document) ;
+	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS (document);
+
+	if (klass->get_resource_mime)
+		return klass->get_resource_mime (document, path);
+
+	return NULL;
 }
+
+gpointer
+ev_document_get_doc_handle (EvDocument *document)
+{
+	EvDocumentClass *klass = EV_DOCUMENT_GET_CLASS (document);
+
+	if (klass->get_doc_handle)
+		return klass->get_doc_handle (document);
+
+	return NULL;
+}
+
