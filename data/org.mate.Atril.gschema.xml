@@ -44,39 +44,63 @@
   <schema id="org.mate.Atril.Default" path="/org/mate/atril/default/" gettext-domain="atril">
     <key name="show-toolbar" type="b">
       <default>true</default>
+      <summary>Show toolbar</summary>
+      <description>Whether to show the toolbar.</description>
     </key>
     <key name="show-sidebar" type="b">
       <default>true</default>
+      <summary>Show side pane</summary>
+      <description>Whether to show the side pane.</description>
     </key>
     <key name="window-ratio" type="(dd)">
       <default>(0., 0.)</default>
+      <summary>Default window size ratio</summary>
+      <description>The default width and height ratio of the window.</description>
     </key>
     <key name="sizing-mode" enum="org.mate.Atril.SizingMode">
       <default>'fit-width'</default>
+      <summary>Page sizing mode</summary>
+      <description>The default page sizing mode: "fit-page", "fit-width", or "free".</description>
     </key>
     <key name="zoom" type="d">
       <default>1.</default>
+      <summary>Default zoom level</summary>
+      <description>The default zoom level when sizing mode is set to "free".</description>
     </key>
     <key name="inverted-colors" type="b">
       <default>false</default>
+      <summary>Invert document colors</summary>
+      <description>Whether to display documents with inverted colors.</description>
     </key>
     <key name="continuous" type="b">
       <default>true</default>
+      <summary>Continuous scrolling</summary>
+      <description>Whether to scroll pages continuously.</description>
     </key>
     <key name="dual-page" type="b">
       <default>false</default>
+      <summary>Dual page view</summary>
+      <description>Whether to show two pages side by side.</description>
     </key>
     <key name="dual-page-odd-left" type="b">
       <default>false</default>
+      <summary>Odd pages on the left in dual page mode</summary>
+      <description>Whether to place odd-numbered pages on the left side in dual page mode.</description>
     </key>
     <key name="fullscreen" type="b">
       <default>false</default>
+      <summary>Open in fullscreen mode</summary>
+      <description>Whether to open the document in fullscreen mode.</description>
     </key>
     <key name="sidebar-page" type="s">
       <default>'links'</default>
+      <summary>Default sidebar page</summary>
+      <description>The default sidebar page to show.</description>
     </key>
     <key name="sidebar-size" type="i">
       <default>132</default>
+      <summary>Side pane width</summary>
+      <description>The default width of the side pane in pixels.</description>
     </key>
   </schema>
 
