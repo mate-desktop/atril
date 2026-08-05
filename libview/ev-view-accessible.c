@@ -343,10 +343,26 @@ ev_view_accessible_selection_changed (EvView *view,
                                       EvViewAccessible *view_accessible)
 {
 	AtkObject *page_accessible;
+	GList *l;
 
-	page_accessible = g_ptr_array_index (view_accessible->priv->children,
-					     get_relevant_page (view));
-	g_signal_emit_by_name (page_accessible, "text-selection-changed");
+	if (view->selection_info.selections == NULL) {
+		page_accessible = g_ptr_array_index (view_accessible->priv->children,
+						     get_relevant_page (view));
+		g_signal_emit_by_name (page_accessible, "text-selection-changed");
+		return;
+	}
+
+	/* Notify every page that actually has a selection, rather than
+	 * guessing based on the current/cursor page, since the selection
+	 * may have been made on a page other than the one the view
+	 * currently considers "current" (e.g. via AT-SPI). */
+	for (l = view->selection_info.selections; l != NULL; l = l->next) {
+		EvViewSelection *selection = (EvViewSelection *) l->data;
+
+		page_accessible = g_ptr_array_index (view_accessible->priv->children,
+						     selection->page);
+		g_signal_emit_by_name (page_accessible, "text-selection-changed");
+	}
 }
 
 static void
