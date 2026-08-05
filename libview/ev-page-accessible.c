@@ -1025,9 +1025,9 @@ ev_page_accessible_set_selection (AtkText *text,
 	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + start_pos, &start_rect);
 	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + end_pos - 1, &end_rect);
 	start_point.x = start_rect.x;
-	start_point.y = start_rect.y;
+	start_point.y = start_rect.y + start_rect.height / 2;
 	end_point.x = end_rect.x + end_rect.width;
-	end_point.y = end_rect.y + end_rect.height;
+	end_point.y = end_rect.y + end_rect.height / 2;
 	_ev_view_set_selection (view, &start_point, &end_point);
 
 	return TRUE;
