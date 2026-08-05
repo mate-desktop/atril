@@ -1063,6 +1063,7 @@ ev_page_accessible_text_iface_init (AtkTextIface *iface)
 	iface->get_selection = ev_page_accessible_get_selection;
 	iface->remove_selection = ev_page_accessible_remove_selection;
 	iface->add_selection = ev_page_accessible_add_selection;
+	iface->set_selection = ev_page_accessible_set_selection;
 	iface->get_run_attributes = ev_page_accessible_get_run_attributes;
 	iface->get_default_attributes = ev_page_accessible_get_default_attributes;
 	iface->get_character_extents = ev_page_accessible_get_character_extents;
