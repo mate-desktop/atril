@@ -1013,7 +1013,7 @@ ev_page_accessible_get_selection_points (EvPageAccessible *self,
 	GdkRectangle start_rect, end_rect;
 
 	ev_page_cache_get_text_layout (view->page_cache, self->priv->page, &areas, &n_areas);
-	if (start_pos < 0 || end_pos >= n_areas)
+	if (start_pos < 0 || end_pos > n_areas)
 		return FALSE;
 
 	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + start_pos, &start_rect);
