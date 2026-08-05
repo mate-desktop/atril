@@ -8006,6 +8006,57 @@ selection_free (EvViewSelection *selection)
 	g_slice_free (EvViewSelection, selection);
 }
 
+static EvViewSelection *
+selection_dup (EvViewSelection *selection)
+{
+	EvViewSelection *new_selection = g_slice_new0 (EvViewSelection);
+
+	new_selection->page = selection->page;
+	new_selection->rect = selection->rect;
+	new_selection->style = selection->style;
+
+	return new_selection;
+}
+
+static gint
+selection_compare_pages (gconstpointer a,
+			 gconstpointer b)
+{
+	const EvViewSelection *sel_a = a;
+	const EvViewSelection *sel_b = b;
+
+	return sel_a->page - sel_b->page;
+}
+
+/* Duplicates every selection whose page falls outside [first, last],
+ * dropping (and optionally flagging) the ones inside that range. */
+static GList *
+dup_selections_outside_range (GList    *selections,
+			      gint      first,
+			      gint      last,
+			      gboolean *out_had_match)
+{
+	GList *l;
+	GList *result = NULL;
+
+	if (out_had_match)
+		*out_had_match = FALSE;
+
+	for (l = selections; l != NULL; l = l->next) {
+		EvViewSelection *selection = l->data;
+
+		if (selection->page >= first && selection->page <= last) {
+			if (out_had_match)
+				*out_had_match = TRUE;
+			continue;
+		}
+
+		result = g_list_prepend (result, selection_dup (selection));
+	}
+
+	return result;
+}
+
 static void
 clear_selection (EvView *view)
 {
@@ -8054,12 +8105,60 @@ _ev_view_clear_selection (EvView *view)
 	clear_selection (view);
 }
 
+/* Adds (or updates) the selection on whichever page(s) start_point/end_point
+ * fall on, keeping any existing selection on other pages instead of
+ * discarding it. Used for both AT-SPI set_selection (updating a page's own
+ * existing selection) and add_selection (starting a new one), since both
+ * must only affect the page(s) actually being selected. */
 void
-_ev_view_set_selection (EvView   *view,
+_ev_view_add_selection (EvView   *view,
                         GdkPoint *start_point,
                         GdkPoint *end_point)
 {
-	compute_selections (view, EV_SELECTION_STYLE_GLYPH, start_point, end_point);
+	GList *new_range, *l;
+	GList *merged;
+	gint new_first = G_MAXINT;
+	gint new_last = G_MININT;
+
+	new_range = compute_new_selection (view, EV_SELECTION_STYLE_GLYPH, start_point, end_point);
+	if (new_range == NULL)
+		return;
+
+	for (l = new_range; l != NULL; l = l->next) {
+		EvViewSelection *selection = l->data;
+
+		new_first = MIN (new_first, selection->page);
+		new_last = MAX (new_last, selection->page);
+	}
+
+	merged = dup_selections_outside_range (view->selection_info.selections,
+					       new_first, new_last, NULL);
+	merged = g_list_concat (merged, new_range);
+	merged = g_list_sort (merged, selection_compare_pages);
+
+	merge_selection_region (view, merged);
+}
+
+/* Removes the selection on a single page, leaving any selection on other
+ * pages untouched. Returns FALSE if the given page had no selection. */
+gboolean
+_ev_view_remove_page_selection (EvView *view,
+                                gint    page)
+{
+	GList *new_list;
+	gboolean had_selection;
+
+	new_list = dup_selections_outside_range (view->selection_info.selections,
+						 page, page, &had_selection);
+
+	if (!had_selection) {
+		g_list_free_full (new_list, (GDestroyNotify) selection_free);
+		return FALSE;
+	}
+
+	merge_selection_region (view, g_list_reverse (new_list));
+
+	return TRUE;
 }
 
 static char *

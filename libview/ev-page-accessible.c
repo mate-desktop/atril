@@ -997,12 +997,33 @@ ev_page_accessible_remove_selection (AtkText *text,
 	EvPageAccessible *self = EV_PAGE_ACCESSIBLE (text);
 	EvView *view = ev_page_accessible_get_view (self);
 
-	if (ev_view_get_has_selection (view)) {
-		_ev_view_clear_selection (view);
-		return TRUE;
-	}
+	return _ev_view_remove_page_selection (view, self->priv->page);
+}
 
-	return FALSE;
+static gboolean
+ev_page_accessible_get_selection_points (EvPageAccessible *self,
+					 EvView           *view,
+					 gint              start_pos,
+					 gint              end_pos,
+					 GdkPoint         *start_point,
+					 GdkPoint         *end_point)
+{
+	EvRectangle *areas = NULL;
+	guint n_areas = 0;
+	GdkRectangle start_rect, end_rect;
+
+	ev_page_cache_get_text_layout (view->page_cache, self->priv->page, &areas, &n_areas);
+	if (start_pos < 0 || end_pos >= n_areas)
+		return FALSE;
+
+	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + start_pos, &start_rect);
+	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + end_pos - 1, &end_rect);
+	start_point->x = start_rect.x;
+	start_point->y = start_rect.y + start_rect.height / 2;
+	end_point->x = end_rect.x + end_rect.width;
+	end_point->y = end_rect.y + end_rect.height / 2;
+
+	return TRUE;
 }
 
 static gboolean
@@ -1013,22 +1034,16 @@ ev_page_accessible_set_selection (AtkText *text,
 {
 	EvPageAccessible *self = EV_PAGE_ACCESSIBLE (text);
 	EvView *view = ev_page_accessible_get_view (self);
-	EvRectangle *areas = NULL;
-	guint n_areas = 0;
-	GdkRectangle start_rect, end_rect;
 	GdkPoint start_point, end_point;
 
-	ev_page_cache_get_text_layout (view->page_cache, self->priv->page, &areas, &n_areas);
-	if (start_pos < 0 || end_pos >= n_areas)
+	if (!ev_page_accessible_get_selection_points (self, view, start_pos, end_pos, &start_point, &end_point))
 		return FALSE;
 
-	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + start_pos, &start_rect);
-	_ev_view_transform_doc_rect_to_view_rect (view, self->priv->page, areas + end_pos - 1, &end_rect);
-	start_point.x = start_rect.x;
-	start_point.y = start_rect.y + start_rect.height / 2;
-	end_point.x = end_rect.x + end_rect.width;
-	end_point.y = end_rect.y + end_rect.height / 2;
-	_ev_view_set_selection (view, &start_point, &end_point);
+	/* AT-SPI clients call set_selection() to update a selection this page
+	 * already has (get_n_selections() == 1), and add_selection() to start
+	 * one where it currently has none. Both cases must only touch this
+	 * page's own selection, leaving selections on other pages alone. */
+	_ev_view_add_selection (view, &start_point, &end_point);
 
 	return TRUE;
 }
@@ -1038,8 +1053,16 @@ ev_page_accessible_add_selection (AtkText *text,
 				  gint     start_pos,
 				  gint     end_pos)
 {
-	return ev_page_accessible_set_selection (text, 0, start_pos, end_pos);
+	EvPageAccessible *self = EV_PAGE_ACCESSIBLE (text);
+	EvView *view = ev_page_accessible_get_view (self);
+	GdkPoint start_point, end_point;
 
+	if (!ev_page_accessible_get_selection_points (self, view, start_pos, end_pos, &start_point, &end_point))
+		return FALSE;
+
+	_ev_view_add_selection (view, &start_point, &end_point);
+
+	return TRUE;
 }
 
 static void

@@ -294,9 +294,11 @@ gint _ev_view_get_caret_cursor_offset_at_doc_point (EvView *view,
                                                     gdouble doc_x,
                                                     gdouble doc_y);
 void _ev_view_clear_selection (EvView   *view);
-void _ev_view_set_selection   (EvView   *view,
+void _ev_view_add_selection   (EvView   *view,
                                GdkPoint *start_point,
                                GdkPoint *end_point);
+gboolean _ev_view_remove_page_selection (EvView *view,
+                                         gint    page);
 void _ev_view_set_focused_element (EvView *view,
                                    EvMapping *element_mapping,
                                    gint page);
