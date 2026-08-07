@@ -65,6 +65,10 @@ struct _EvViewAccessiblePrivate {
 	gint end_page;
 
 	GPtrArray *children;
+
+	/* Selection state as of the last "text-selection-changed" event,
+	 * for diffing which pages actually changed. */
+	GList *previous_selections;
 };
 
 G_DEFINE_TYPE_WITH_CODE (EvViewAccessible, ev_view_accessible, GTK_TYPE_CONTAINER_ACCESSIBLE,
@@ -110,6 +114,9 @@ ev_view_accessible_finalize (GObject *object)
 		g_source_remove (priv->action_idle_handler);
 	for (i = 0; i < LAST_ACTION; i++)
 		g_free (priv->action_descriptions [i]);
+
+	g_list_free_full (priv->previous_selections, g_free);
+	priv->previous_selections = NULL;
 
 	clear_children (EV_VIEW_ACCESSIBLE (object));
 
@@ -338,15 +345,46 @@ ev_view_accessible_cursor_moved (EvView *view,
 	g_signal_emit_by_name (page_accessible, "text-caret-moved", offset);
 }
 
+typedef struct {
+	gint        page;
+	EvRectangle rect;
+} SelectionSnapshot;
+
+static SelectionSnapshot *
+find_selection_snapshot (GList *snapshots,
+			 gint   page)
+{
+	GList *l;
+
+	for (l = snapshots; l != NULL; l = l->next) {
+		SelectionSnapshot *snapshot = l->data;
+
+		if (snapshot->page == page)
+			return snapshot;
+	}
+
+	return NULL;
+}
+
+static gboolean
+selection_rect_equal (EvRectangle *a,
+		      EvRectangle *b)
+{
+	return a->x1 == b->x1 && a->y1 == b->y1 &&
+	       a->x2 == b->x2 && a->y2 == b->y2;
+}
+
 static void
 ev_view_accessible_selection_changed (EvView *view,
                                       EvViewAccessible *view_accessible)
 {
+	EvViewAccessiblePrivate *priv = view_accessible->priv;
 	AtkObject *page_accessible;
 	GList *l;
+	GList *current = NULL;
 
-	if (view->selection_info.selections == NULL) {
-		page_accessible = g_ptr_array_index (view_accessible->priv->children,
+	if (view->selection_info.selections == NULL && priv->previous_selections == NULL) {
+		page_accessible = g_ptr_array_index (priv->children,
 						     get_relevant_page (view));
 		g_signal_emit_by_name (page_accessible, "text-selection-changed");
 		return;
@@ -358,11 +396,41 @@ ev_view_accessible_selection_changed (EvView *view,
 	 * currently considers "current" (e.g. via AT-SPI). */
 	for (l = view->selection_info.selections; l != NULL; l = l->next) {
 		EvViewSelection *selection = (EvViewSelection *) l->data;
+		SelectionSnapshot *snapshot = g_new (SelectionSnapshot, 1);
 
-		page_accessible = g_ptr_array_index (view_accessible->priv->children,
-						     selection->page);
+		snapshot->page = selection->page;
+		snapshot->rect = selection->rect;
+		current = g_list_prepend (current, snapshot);
+	}
+	current = g_list_reverse (current);
+
+	/* Only notify pages that their selection differs from last time.
+	 * A page untouched by this change shouldn't get random events. */
+	for (l = current; l != NULL; l = l->next) {
+		SelectionSnapshot *new_snapshot = l->data;
+		SelectionSnapshot *old_snapshot =
+			find_selection_snapshot (priv->previous_selections, new_snapshot->page);
+
+		if (old_snapshot != NULL && selection_rect_equal (&old_snapshot->rect, &new_snapshot->rect))
+			continue;
+
+		page_accessible = g_ptr_array_index (priv->children, new_snapshot->page);
 		g_signal_emit_by_name (page_accessible, "text-selection-changed");
 	}
+
+	/* A page that dropped out of the list lost its selection entirely. */
+	for (l = priv->previous_selections; l != NULL; l = l->next) {
+		SelectionSnapshot *old_snapshot = l->data;
+
+		if (find_selection_snapshot (current, old_snapshot->page) != NULL)
+			continue;
+
+		page_accessible = g_ptr_array_index (priv->children, old_snapshot->page);
+		g_signal_emit_by_name (page_accessible, "text-selection-changed");
+	}
+
+	g_list_free_full (priv->previous_selections, g_free);
+	priv->previous_selections = current;
 }
 
 static void
