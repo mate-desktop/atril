@@ -1,10 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-# Translators:
-# Cleber Teixeira, 2018
 # Samuel Henrique <samueloph@debian.org>, 2018
 # Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2018
 # Wagner Marques <wagnermarques00@hotmail.com>, 2018
@@ -32,38 +28,40 @@
 # Doretox <doretox@protonmail.com>, 2022
 # Vitor Henrique, 2023
 # Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2024
+# Mark Adhans <aphrax@users.noreply.translate.fedoraproject.org>, 2026.
+#
+# Translators:
+# Cleber Teixeira, 2018
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2024\n"
-"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mate/teams/"
-"13566/pt_BR/)\n"
+"PO-Revision-Date: 2026-07-25 00:18+0000\n"
+"Last-Translator: Mark Adhans "
+"<aphrax@users.noreply.translate.fedoraproject.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
+"projects/mate-desktop/applications/atril/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
-"1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % "
+"1000000 == 0) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
-#, fuzzy
-#| msgid "File corrupted"
 msgid "File is corrupted"
 msgstr "Arquivo corrompido"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "Pacote está encriptado"
 
 #: backend/comics/comics-document.c:262
-#, fuzzy
-#| msgid "No files in archive"
 msgid "No supported images in archive"
-msgstr "Nenhum arquivo no pacote"
+msgstr "Nenhuma imagem suportada no arquivo"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
@@ -79,10 +77,12 @@ msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
+"libarchive não tem suporte para esse formato de quadrinhos, favor contatar "
+"seu distribuidor"
 
 #: backend/comics/comics-document.c:365
 msgid "File corrupted"
-msgstr "Arquivo corrompido"
+msgstr "Arquivo está corrompido"
 
 #: backend/comics/comicsdocument.atril-backend.desktop.in:3
 msgid "Comic Books"
@@ -184,7 +184,7 @@ msgstr "ampliação pilha\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr "pilha  underflow\n"
+msgstr "Estouro negativo de pilha\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
@@ -193,12 +193,12 @@ msgstr "fonte %dnão está definido\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr "tamanho especial mal formado\n"
+msgstr "comprimento especial malformado\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr "o tipo de letra %d não está definido em postamble\n"
+msgstr "a fonte %d não está definida no epílogo\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
@@ -213,7 +213,7 @@ msgstr "opcode indefinido %d\n"
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr "%s:  nenhuma fonte definida\n"
+msgstr "%s: nenhuma fonte definida\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
@@ -238,12 +238,12 @@ msgstr "vetor de codificação `%s' está em uso\n"
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr "GF: opcode inválido  %d em caractere%d\n"
+msgstr "GF: opcode inválido %d em caractere%d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
 msgid "(gf) Character %d: invalid opcode %d\n"
-msgstr "(gf) Caractere %d:  opcode inválido %d\n"
+msgstr "(gf) Caractere %d: opcode inválido %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
@@ -425,11 +425,11 @@ msgstr "(tt) %s: sem dados de métrica de fonte\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr "Ooops!"
+msgstr "Opa!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr "Aieeeee!!"
+msgstr "Eita!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
@@ -480,11 +480,11 @@ msgstr "Aviso"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr "%s: Fatal:"
+msgstr "%s: Fatal: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr "Fatal:"
+msgstr "Fatal"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
@@ -662,7 +662,7 @@ msgstr "TrueType (CID)"
 
 #: backend/pdf/ev-poppler.cc:915
 msgid "Unknown font type"
-msgstr "Tipo de fonte desconhecido"
+msgstr "Tipo de fonte desconhecida"
 
 #: backend/pdf/ev-poppler.cc:941
 msgid "No name"
@@ -1180,7 +1180,7 @@ msgstr "%.0f x %.0f mm"
 #: properties/ev-properties-view.c:269
 #, c-format
 msgid "%.2f × %.2f inch"
-msgstr "%.2f x %.2f pol."
+msgstr "%.2f x %.2f polegada"
 
 #: properties/ev-properties-view.c:293
 #, c-format
@@ -1208,11 +1208,11 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
-"Copyright (C) 2000, 2001 Eazel Inc.\n"
-"Copyright (C) 2003 Andrew Sobala <aes@gnome.org>\n"
-"Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
-"Copyright (C) 2005 Red Hat, Inc\n"
-"Copyright (C) 2012–2021 The MATE developers"
+"Copyright © 2000, 2001 Eazel Inc.\n"
+"Copyright © 2003 Andrew Sobala <aes@gnome.org>\n"
+"Copyright © 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Copyright © 2005 Red Hat, Inc\n"
+"Copyright © 2012–2021 The MATE developers"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
@@ -1226,16 +1226,16 @@ msgstr "de %d"
 
 #: libview/ev-print-operation.c:346
 msgid "Preparing to print…"
-msgstr "Preparando para imprimir..."
+msgstr "Preparando para imprimir…"
 
 #: libview/ev-print-operation.c:348
 msgid "Finishing…"
-msgstr "Concluindo..."
+msgstr "Concluindo…"
 
 #: libview/ev-print-operation.c:350
 #, c-format
 msgid "Printing page %d of %d…"
-msgstr "Imprimindo página %d de %d..."
+msgstr "Imprimindo página %d de %d…"
 
 #: libview/ev-print-operation.c:1172
 msgid "Printing is not supported on this printer."
@@ -1502,7 +1502,7 @@ msgstr "Senha para o documento %s"
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:264
 msgid "Loading…"
-msgstr "Carregando..."
+msgstr "Carregando…"
 
 #: shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
@@ -1750,7 +1750,7 @@ msgstr "Enviando a imagem (%d%%)"
 
 #: shell/ev-window.c:3280
 msgid "Save As…"
-msgstr "Salvar como..."
+msgstr "Salvar como…"
 
 #: shell/ev-window.c:3358
 msgid "Could not send current document"
@@ -1762,7 +1762,7 @@ msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
 msgstr[0] "%lu trabalhos pendentes na fila"
 msgstr[1] "%lu trabalhos pendentes na fila"
-msgstr[2] "%lu trabalhos pendentes na fila"
+msgstr[2] "%lu tarefas pendentes na fila"
 
 #: shell/ev-window.c:3723
 #, c-format
@@ -1921,7 +1921,6 @@ msgstr ""
 "Fabrizzio Alphonsus Soares https://www.transifex.com/accounts/profile/"
 "fabrizzio\n"
 "Alberto Federman Neto https://www.transifex.com/accounts/profile/albfneto\n"
-"Aldo Oliveira https://www.transifex.com/user/profile/AldoBR/\n"
 "Appes https://www.transifex.com/accounts/profile/apps\n"
 "arm332 https://www.transifex.com/accounts/profile/arm332\n"
 "augusteiner https://www.transifex.com/accounts/profile/augusteiner\n"
@@ -1943,7 +1942,12 @@ msgstr ""
 "Michele dos Santos da Silva https://www.transifex.com/accounts/profile/"
 "mchelem\n"
 "Thiago Cangussu https://www.transifex.com/accounts/profile/cangussu.thg\n"
-"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti"
+"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti\n"
+"Ítalo Rangel Penaforte https://www.transifex.com/accounts/profile/"
+"italo.penaforte\n"
+"George Salu da Silva https://www.transifex.com/user/profile/"
+"George_salu_da_silva/\n"
+"Josué Teodoro Moreira https://www.transifex.com/user/profile/J0sueTM/"
 
 #: shell/ev-window.c:5830
 #, c-format
@@ -1976,7 +1980,7 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
-"Pressioner F7  para ativar ou desativar a navegação de cursor. Esse recurso "
+"Pressione F7 para ativar ou desativar a navegação de cursor. Esse recurso "
 "coloca um cursor móvel em páginas de texto, permitindo que você se mova e "
 "selecione o texto com o teclado. Você quer ativar a navegação de cursor?"
 
@@ -2010,7 +2014,7 @@ msgstr "_Ajuda"
 
 #: shell/ev-window.c:6578 shell/ev-window.c:6944
 msgid "_Open…"
-msgstr "_Abrir..."
+msgstr "_Abrir…"
 
 #: shell/ev-window.c:6579 shell/ev-window.c:6945
 msgid "Open an existing document"
@@ -2038,7 +2042,7 @@ msgstr "Envie o documento atual por email, mensagem instantânea..."
 
 #: shell/ev-window.c:6590
 msgid "_Print…"
-msgstr "Im_primir..."
+msgstr "Im_primir…"
 
 #: shell/ev-window.c:6593
 msgid "P_roperties"
@@ -2218,7 +2222,7 @@ msgstr "Ativar ou inibir navegação com cursor de teclado"
 
 #: shell/ev-window.c:6756
 msgid "_Find…"
-msgstr "_Localizar..."
+msgstr "_Localizar…"
 
 #: shell/ev-window.c:6757
 msgid "Find a word or phrase in the document"
@@ -2242,7 +2246,7 @@ msgstr "_Copiar endereço do link"
 
 #: shell/ev-window.c:6772
 msgid "_Save Image As…"
-msgstr "_Salvar imagem como..."
+msgstr "_Salvar imagem como…"
 
 #: shell/ev-window.c:6774
 msgid "Copy _Image"
@@ -2250,11 +2254,11 @@ msgstr "Copiar _imagem"
 
 #: shell/ev-window.c:6776
 msgid "Annotation Properties…"
-msgstr "Propriedades da anotação..."
+msgstr "Propriedades da anotação…"
 
 #: shell/ev-window.c:6778
 msgid "Remove Annot…"
-msgstr "Remover Anot..."
+msgstr "Remover Anot…"
 
 #: shell/ev-window.c:6783
 msgid "_Open Attachment"
@@ -2262,7 +2266,7 @@ msgstr "_Abrir anexo"
 
 #: shell/ev-window.c:6785
 msgid "_Save Attachment As…"
-msgstr "_Salvar anexo como..."
+msgstr "_Salvar anexo como…"
 
 #: shell/ev-window.c:6918
 msgid "Zoom"
