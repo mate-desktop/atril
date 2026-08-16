@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-# Translators:
 # Le Pa <lepa.22@hotmail.com>, 2018
 # geost <george.stefanakis@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
@@ -20,40 +17,41 @@
 # anvo anvo <fragos.george@hotmail.com>, 2019
 # Efstathios Iosifidis <eiosifidis@gmail.com>, 2021
 # Transifex Bot <>, 2026
+# Jim Spentzos <jimspentzos2000@gmail.com>, 2026.
+#
+# Translators:
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Greek (https://app.transifex.com/mate/teams/13566/el/)\n"
+"PO-Revision-Date: 2026-07-28 22:17+0000\n"
+"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
+"Language-Team: Greek <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/atril/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
-#, fuzzy
-#| msgid "File corrupted"
 msgid "File is corrupted"
 msgstr "Το αρχείο είναι κατεστραμμένο"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "Το συμπιεσμένο αρχείο είναι κρυπτογραφημένο"
 
 #: backend/comics/comics-document.c:262
-#, fuzzy
-#| msgid "No files in archive"
 msgid "No supported images in archive"
-msgstr "Δεν βρέθηκαν αρχεία στην αρχειοθήκη"
+msgstr "Δεν βρέθηκαν υποστηριζόμενες εικόνες στο συμπιεσμένο αρχείο"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
-msgstr "Δεν βρέθηκαν αρχεία στην αρχειοθήκη"
+msgstr "Δεν βρέθηκαν αρχεία στο συμπιεσμένο αρχείο"
 
 #: backend/comics/comics-document.c:321
 #, c-format
@@ -411,7 +409,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "Ωχ!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
@@ -443,7 +441,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
-msgstr ""
+msgstr "Κατάρρευση"
 
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
@@ -769,7 +767,7 @@ msgstr ""
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
-msgstr "Μη εκκινήσιμο αντικείμενο"
+msgstr "Μη εκκινήσιμο στοιχείο"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
@@ -811,7 +809,7 @@ msgstr "_Μετακίνηση στην εργαλειοθήκη"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1472
 msgid "Move the selected item on the toolbar"
-msgstr "Μετακίνηση του επιλεγμένου αντικειμένου στην εργαλειοθήκη"
+msgstr "Μετακίνηση του επιλεγμένου στοιχείου στη γραμμή εργαλείων"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
 msgid "_Remove from Toolbar"
@@ -819,7 +817,7 @@ msgstr "Α_φαίρεση από την εργαλειοθήκη"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1474
 msgid "Remove the selected item from the toolbar"
-msgstr "Αφαίρεση του επιλεγμένου αντικειμένου από την εργαλειοθήκη"
+msgstr "Αφαίρεση του επιλεγμένου στοιχείου από τη γραμμή εργαλείων"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1475
 msgid "_Delete Toolbar"
@@ -938,6 +936,7 @@ msgstr "Προβολή εγγράφων πολλαπλών σελίδων"
 #: data/atril.desktop.in.in:19
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 msgstr ""
+"έγγραφο;προβολή;κόμικς;κόμικ;MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1010,7 +1009,7 @@ msgstr "Αδυναμία εκτύπωσης εγγράφου"
 #: previewer/ev-previewer-window.c:240
 #, c-format
 msgid "The selected printer '%s' could not be found"
-msgstr "Ο επιλεγμένος εκτυπωτής '%s'  δεν μπορεί να βρεθεί"
+msgstr "Δεν ήταν δυνατή η εύρεση του επιλεγμένου εκτυπωτή «%s»"
 
 #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6595
 msgid "_Close"
@@ -1132,7 +1131,7 @@ msgstr "Αριθμός Σελίδων:"
 
 #: properties/ev-properties-view.c:70
 msgid "Optimized:"
-msgstr "Βελτιώθηκε:"
+msgstr "Βελτιστοποιήθηκε:"
 
 #: properties/ev-properties-view.c:71
 msgid "Format:"
@@ -1152,7 +1151,7 @@ msgstr "Κανένα"
 
 #: properties/ev-properties-view.c:221
 msgid "default:mm"
-msgstr "προεπιλογή:mm"
+msgstr "default:mm"
 
 #: properties/ev-properties-view.c:265
 #, c-format
@@ -1207,7 +1206,7 @@ msgstr "Προετοιμασία για εκτύπωση..."
 
 #: libview/ev-print-operation.c:348
 msgid "Finishing…"
-msgstr "Ολοκλήρωση..."
+msgstr "Ολοκλήρωση…"
 
 #: libview/ev-print-operation.c:350
 #, c-format
@@ -1479,7 +1478,7 @@ msgstr "Κωδικός για το έγγραφο %s"
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:264
 msgid "Loading…"
-msgstr "Φόρτωση..."
+msgstr "Φόρτωση…"
 
 #: shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
@@ -1514,7 +1513,7 @@ msgstr "Απαιτείται κωδικός."
 
 #: shell/ev-password-view.c:319
 msgid "_Password:"
-msgstr "_Κωδικός:"
+msgstr "Κ_ωδικός πρόσβασης:"
 
 #: shell/ev-password-view.c:351
 msgid "Forget password _immediately"
@@ -1592,7 +1591,7 @@ msgstr "Σχόλια"
 
 #: shell/ev-sidebar-attachments.c:692
 msgid "Attachments"
-msgstr "Συνημμένα "
+msgstr "Συνημμένα"
 
 #: shell/ev-sidebar-bookmarks.c:154
 msgid "_Open Bookmark"
@@ -1618,7 +1617,7 @@ msgstr "Προσ_θήκη"
 
 #: shell/ev-sidebar-bookmarks.c:479
 msgid "_Remove"
-msgstr "_Αφάιρεση"
+msgstr "Α_φαίρεση"
 
 #: shell/ev-sidebar-bookmarks.c:605
 msgid "Bookmarks"
@@ -1955,7 +1954,7 @@ msgstr "_Βοήθεια"
 
 #: shell/ev-window.c:6578 shell/ev-window.c:6944
 msgid "_Open…"
-msgstr "Άν_οιγμα..."
+msgstr "Άν_οιγμα…"
 
 #: shell/ev-window.c:6579 shell/ev-window.c:6945
 msgid "Open an existing document"
