@@ -1,41 +1,38 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021, 2026.
 #
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021\n"
-"Language-Team: Kazakh (https://app.transifex.com/mate/teams/13566/kk/)\n"
+"PO-Revision-Date: 2026-07-30 10:48+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/atril/kk/>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
-#, fuzzy
-#| msgid "File corrupted"
 msgid "File is corrupted"
 msgstr "Файл зақымдалған"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "Архив шифрленген"
 
 #: backend/comics/comics-document.c:262
-#, fuzzy
-#| msgid "No files in archive"
 msgid "No supported images in archive"
-msgstr "Архивте файлдар жоқ"
+msgstr "Архивте қолдау көрсетілетін суреттер жоқ"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
@@ -51,6 +48,8 @@ msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
+"libarchive-те бұл комикс кітабының сығылуына қолдау жоқ, таратушыға "
+"хабарласыңыз"
 
 #: backend/comics/comics-document.c:365
 msgid "File corrupted"
@@ -86,355 +85,355 @@ msgstr "DVI құжаттары"
 
 #: backend/dvi/mdvi-lib/dviread.c:209
 msgid "unexpected EOF\n"
-msgstr ""
+msgstr "күтпеген EOF\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "«%s» қарібін жүктеу мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
 msgid "could not reload `%s'\n"
-msgstr ""
+msgstr "«%s» файлын қайта жүктеу мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr ""
+msgstr "%s: қолдау көрсетілмейтін DVI пішімі (%u нұсқасы)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
-msgstr ""
+msgstr "ешқандай бет таңдалмады\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:897
 #, c-format
 msgid "%s: File corrupted, or not a DVI file\n"
-msgstr ""
+msgstr "%s: Файл зақымдалған немесе DVI файлы емес\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: vf макросында қателер болды\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s: vf макросынан кейін стек бос емес\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: файлды қайта ашу мүмкін емес (%s)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
 msgid "%s: page %d out of range\n"
-msgstr ""
+msgstr "%s: %d беті ауқымнан тыс\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s: %d бетінде қате ығысу\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "бет соңында стек бос емес\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
-msgstr ""
+msgstr "бастапқы қаріп әлі орнатылмаған\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "сұралған %d таңбасы «%s» ішінде жоқ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "стек кеңейтілуде\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "стектің төмен толып кетуі\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "%d қарібі анықталмаған\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "қате пішімделген арнайы ұзындық\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr ""
+msgstr "%d қарібі соңғы деректерде анықталмаған\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "күтпеген %d операция коды\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
-msgstr ""
+msgstr "анықталмаған %d операция коды\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: қаріптер анықталмаған\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
 msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
-msgstr ""
+msgstr "%s: %d: [%s] сұралған «%s» кодтауы «%s» векторына сәйкес келмейді\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:757
 #, c-format
 msgid "%s: could not load fontmap\n"
-msgstr ""
+msgstr "%s: fontmap жүктеу мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
 msgid "%s: could not set as default encoding\n"
-msgstr ""
+msgstr "%s: бастапқы кодтау ретінде орнату мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:849
 #, c-format
 msgid "encoding vector `%s' is in use\n"
-msgstr ""
+msgstr "«%s» кодтау векторы пайдаланылуда\n"
 
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: %2$d таңбасындағы %1$d операция коды жарамсыз\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
 msgid "(gf) Character %d: invalid opcode %d\n"
-msgstr ""
+msgstr "(gf) %d таңбасы: жарамсыз %d операция коды\n"
 
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
 msgid "(gf) character %d has an incorrect bounding box\n"
-msgstr ""
+msgstr "(gf) %d таңбасында қате жақтау бар\n"
 
 #: backend/dvi/mdvi-lib/gf.c:288
 #, c-format
 msgid "%s: bad checksum (expected %u, found %u)\n"
-msgstr ""
+msgstr "%s: қате бақылау сомасы (күтілгені %u, табылды %u)\n"
 
 #: backend/dvi/mdvi-lib/gf.c:324
 #, c-format
 msgid "%s: junk in postamble\n"
-msgstr ""
+msgstr "%s: соңғы деректердегі қалдық\n"
 
 #: backend/dvi/mdvi-lib/gf.c:361
 #, c-format
 msgid "%s: File corrupted, or not a GF file\n"
-msgstr ""
+msgstr "%s: Файл зақымдалған немесе GF файлы емес\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:212
 #, c-format
 msgid "invalid page specification `%s'\n"
-msgstr ""
+msgstr "«%s» бет сипаттамасы жарамсыз\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:232
 msgid "garbage after DVI page specification ignored\n"
-msgstr ""
+msgstr "DVI бет сипаттамасынан кейінгі қоқыс еленбеді\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:260
 msgid "more than 10 counters in page specification\n"
-msgstr ""
+msgstr "бет сипаттамасында 10-нан астам есептегіш бар\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:262
 msgid "garbage after TeX page specification ignored\n"
-msgstr ""
+msgstr "TeX бет сипаттамасынан кейінгі қоқыс еленбеді\n"
 
 #: backend/dvi/mdvi-lib/paper.c:104 backend/dvi/mdvi-lib/paper.c:111
 msgid "custom"
-msgstr ""
+msgstr "пайдаланушылық"
 
 #: backend/dvi/mdvi-lib/pk.c:309
 msgid "Bad PK file: More bits than required\n"
-msgstr ""
+msgstr "Қате PK файлы: Талап етілгеннен көп бит\n"
 
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
 msgid "%s: checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: бақылау сомасының сәйкессіздігі (күтілгені %u, алынғаны %u)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:420
 #, c-format
 msgid "%s: unexpected preamble\n"
-msgstr ""
+msgstr "%s: күтпеген преамбула\n"
 
 #: backend/dvi/mdvi-lib/pk.c:477
 #, c-format
 msgid "%s: unexpected charcode (%d)\n"
-msgstr ""
+msgstr "%s: күтпеген таңба коды (%d)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:512
 #, c-format
 msgid "%s: unexpected end of file (no postamble)\n"
-msgstr ""
+msgstr "%s: күтпеген файл соңы (соңғы деректер жоқ)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:518
 msgid "invalid PK file! (junk in postamble)\n"
-msgstr ""
+msgstr "жарамсыз PK файлы! (соңғы деректердегі қалдық)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:535
 #, c-format
 msgid "%s: File corrupted, or not a PK file\n"
-msgstr ""
+msgstr "%s: Файл зақымдалған немесе PK файлы емес\n"
 
 #: backend/dvi/mdvi-lib/special.c:240
 #, c-format
 msgid "%s: tried to pop top level layer\n"
-msgstr ""
+msgstr "%s: жоғарғы деңгейдегі қабатты шығару әрекеті жасалды\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:150
 #, c-format
 msgid "%s: malformed value for key `%s'\n"
-msgstr ""
+msgstr "%s: «%s» кілті үшін қате пішімделген мән\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:161
 #, c-format
 msgid "%s: unknown key `%s' ignored\n"
-msgstr ""
+msgstr "%s: белгісіз «%s» кілті еленбеді\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:166
 #, c-format
 msgid "%s: no argument for key `%s', using defaults\n"
-msgstr ""
+msgstr "%s: «%s» кілті үшін аргумент жоқ, бастапқы мәндер пайдаланылуда\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:170
 #, c-format
 msgid "%s: argument `%s' ignored for key `%s'\n"
-msgstr ""
+msgstr "%s: «%s» аргументі «%s» кілті үшін еленбеді\n"
 
 #: backend/dvi/mdvi-lib/t1.c:187
 msgid "(t1) failed to reset device resolution\n"
-msgstr ""
+msgstr "(t1) құрылғы ажыратымдылығын бастапқы күйге келтіру сәтсіз аяқталды\n"
 
 #: backend/dvi/mdvi-lib/t1.c:215
 #, c-format
 msgid "%s: could not encode font\n"
-msgstr ""
+msgstr "%s: қаріпті кодтау мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/tfm.c:175
 #, c-format
 msgid "%s: Checksum mismatch (got %u, expected %u)\n"
-msgstr ""
+msgstr "%s: Бақылау сомасының сәйкессіздігі (алынғаны %u, күтілгені %u)\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:91
 #, c-format
 msgid "%s: Error reading AFM data\n"
-msgstr ""
+msgstr "%s: AFM деректерін оқу қатесі\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:182
 #, c-format
 msgid "Warning: TFM file `%s' has suspicious size\n"
-msgstr ""
+msgstr "Ескерту: «%s» TFM файлының өлшемі күмәнді\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:511
 #, c-format
 msgid "%s: font coding scheme truncated to 40 bytes\n"
-msgstr ""
+msgstr "%s: қаріп кодтау сұлбасы 40 байтқа дейін қысқартылған\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:291 backend/dvi/mdvi-lib/tfmfile.c:589
 #, c-format
 msgid "%s: File corrupted, or not a TFM file\n"
-msgstr ""
+msgstr "%s: Файл зақымдалған немесе TFM файлы емес\n"
 
 #: backend/dvi/mdvi-lib/tt.c:151
 #, c-format
 msgid "(tt) %s: could not load face: %s\n"
-msgstr ""
+msgstr "(tt) %s: бетті жүктеу мүмкін емес: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:159
 #, c-format
 msgid "(tt) %s: could not create face: %s\n"
-msgstr ""
+msgstr "(tt) %s: бетті жасау мүмкін емес: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:168
 #, c-format
 msgid "(tt) %s: could not create glyph: %s\n"
-msgstr ""
+msgstr "(tt) %s: глифті жасау мүмкін емес: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:201
 #, c-format
 msgid "(tt) %s: no acceptable map found, using #0\n"
-msgstr ""
+msgstr "(tt) %s: ешқандай қолайлы карта табылмады, #0 пайдаланылуда\n"
 
 #: backend/dvi/mdvi-lib/tt.c:214
 #, c-format
 msgid "(tt) %s: could not set resolution: %s\n"
-msgstr ""
+msgstr "(tt) %s: ажыратымдылықты орнату мүмкін емес: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:221
 #, c-format
 msgid "(tt) %s: could not set point size: %s\n"
-msgstr ""
+msgstr "(tt) %s: нүкте өлшемін орнату мүмкін емес: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:240
 #, c-format
 msgid "(tt) %s: could not load PS name table\n"
-msgstr ""
+msgstr "(tt) %s: PS атаулар кестесін жүктеу мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/tt.c:265
 #, c-format
 msgid "%s: no encoding vector found, expect bad output\n"
-msgstr ""
+msgstr "%s: ешқандай кодтау векторы табылмады, қате шығыс күтілуде\n"
 
 #: backend/dvi/mdvi-lib/tt.c:325
 #, c-format
 msgid "(tt) %s: no font metric data\n"
-msgstr ""
+msgstr "(tt) %s: қаріптің метрикалық деректері жоқ\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "Әттеген-ай!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "Ай-ай-ай!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "Қап!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "Хьюстон, бізде мәселе туындады"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3.. 2.. 1.. БУМ!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "Мен кеттім"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
-msgstr ""
+msgstr "Мен төмен құлап барамын"
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
-msgstr ""
+msgstr "Мен бірдеңенің дұрыс еместігін сезіп тұрмын"
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
-msgstr ""
+msgstr "Апаттық аяқталу"
 
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: Қате: "
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
@@ -443,7 +442,7 @@ msgstr "Қате"
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: Ескерту: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
@@ -452,73 +451,73 @@ msgstr "Ескерту"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: Критикалық: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "Критикалық"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
 msgid "out of memory allocating %u bytes\n"
-msgstr ""
+msgstr "%u байтты бөлу кезінде жады таусылды\n"
 
 #: backend/dvi/mdvi-lib/util.c:224
 msgid "attempted to reallocate with zero size\n"
-msgstr ""
+msgstr "нөлдік өлшеммен қайта бөлу әрекеті жасалды\n"
 
 #: backend/dvi/mdvi-lib/util.c:227
 #, c-format
 msgid "failed to reallocate %u bytes\n"
-msgstr ""
+msgstr "%u байтты қайта бөлу сәтсіз аяқталды\n"
 
 #: backend/dvi/mdvi-lib/util.c:236
 msgid "attempted to callocate 0 members\n"
-msgstr ""
+msgstr "0 мүшені callocate арқылы бөлу әрекеті жасалды\n"
 
 #: backend/dvi/mdvi-lib/util.c:238
 #, c-format
 msgid "attempted to callocate %u members with size 0\n"
-msgstr ""
+msgstr "өлшемі 0 болатын %u мүшені callocate арқылы бөлу әрекеті жасалды\n"
 
 #: backend/dvi/mdvi-lib/util.c:242
 #, c-format
 msgid "failed to allocate %ux%u bytes\n"
-msgstr ""
+msgstr "%ux%u байтты бөлу сәтсіз аяқталды\n"
 
 #: backend/dvi/mdvi-lib/util.c:250
 msgid "attempted to free NULL pointer\n"
-msgstr ""
+msgstr "NULL курсорын босату әрекеті жасалды\n"
 
 #: backend/dvi/mdvi-lib/vf.c:82
 #, c-format
 msgid "%s: Checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: Бақылау сомасының сәйкессіздігі (күтілгені %u, алынғаны %u)\n"
 
 #: backend/dvi/mdvi-lib/vf.c:130
 #, c-format
 msgid "(vf) %s: could not load font `%s'\n"
-msgstr ""
+msgstr "(vf) %s: «%s» қарпін жүктеу мүмкін емес\n"
 
 #: backend/dvi/mdvi-lib/vf.c:170
 #, c-format
 msgid "(vf) %s: unexpected character %d\n"
-msgstr ""
+msgstr "(vf) %s: күтпеген %d таңбасы\n"
 
 #: backend/dvi/mdvi-lib/vf.c:186
 #, c-format
 msgid "(vf) %s: character %d redefined\n"
-msgstr ""
+msgstr "(vf) %s: %d таңбасы қайта сипатталған\n"
 
 #: backend/dvi/mdvi-lib/vf.c:209
 #, c-format
 msgid "(vf) %s: no postamble\n"
-msgstr ""
+msgstr "(vf) %s: соңғы деректер жоқ\n"
 
 #: backend/dvi/mdvi-lib/vf.c:235
 #, c-format
 msgid "%s: File corrupted, or not a VF file.\n"
-msgstr ""
+msgstr "%s: Файл зақымдалған немесе VF файлы емес.\n"
 
 #: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
@@ -680,11 +679,11 @@ msgstr "Қате құжат"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:3
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Tiff құжаттары"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:4
 msgid "XPS Documents"
-msgstr ""
+msgstr "XPS құжаттары"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
@@ -902,6 +901,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril — көпбетті құжаттарды қарапайым қарау құралы. Ол PostScript (PS), "
+"Encapsulated PostScript (EPS), DJVU, DVI, XPS және Portable Document Format "
+"(PDF) файлдарын, сондай-ақ комикс кітаптарының архив файлдарын көрсете және "
+"басып шығара алады. Құжат қолдау көрсеткен жағдайда, ол мәтінді іздеуге, "
+"мәтінді алмасу буферіне көшіруге, гипермәтіндік шарлауға және мазмұн "
+"бетбелгілеріне рұқсат береді."
 
 #: data/atril.appdata.xml.in.in:18
 msgid ""
@@ -909,6 +914,8 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril — Evince-тің тармағы және MATE жұмыс үстелі ортасының бөлігі. Егер сіз "
+"MATE және Atril туралы көбірек білгіңіз келсе, жобаның басты бетіне өтіңіз."
 
 #: data/atril.desktop.in.in:3 shell/ev-window-title.c:157
 msgid "Document Viewer"
@@ -921,7 +928,7 @@ msgstr "Көппарақты құжаттарды қарау"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:19
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;құжат;қарау құралы;pdf;dvi;ps;xps;tiff;pixbuf;djvu;комикстер;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -965,6 +972,8 @@ msgid ""
 "Show a dialog to confirm that the user wants to activate the caret "
 "navigation."
 msgstr ""
+"Пайдаланушы кареткалық шарлауды белсендіруді растауы үшін сұхбат терезесін "
+"көрсету."
 
 #: previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
@@ -1025,7 +1034,7 @@ msgstr "Құжатты кішірейту"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6624
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Масштабты 100% күйіне бастапқы күйге келтіру"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1319
 msgid "Print"
@@ -1053,7 +1062,7 @@ msgstr "Ағымдағы құжатты терезе енін толығымен
 
 #: previewer/ev-previewer-window.c:553 shell/ev-window.c:6903
 msgid "Page"
-msgstr "Парақ"
+msgstr "Пейдж"
 
 #: previewer/ev-previewer-window.c:554 shell/ev-window.c:6904
 msgid "Select Page"
@@ -1164,6 +1173,11 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
+"Copyright (C) 2000, 2001 Eazel Inc.\n"
+"Copyright (C) 2003 Andrew Sobala <aes@gnome.org>\n"
+"Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Copyright (C) 2005 Red Hat, Inc\n"
+"Copyright (C) 2012–2021 The MATE developers"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
@@ -1266,7 +1280,7 @@ msgstr "Парақтарды басқару"
 #: libview/ev-jobs.c:619
 #, c-format
 msgid "Failed to render page %d"
-msgstr ""
+msgstr "%d бетін рендерлеу сәтсіз аяқталды"
 
 #: libview/ev-jobs.c:1629
 #, c-format
@@ -1534,7 +1548,7 @@ msgstr "Кейінгі ақпарат"
 
 #: shell/ev-sidebar.c:369
 msgid "Hide sidebar"
-msgstr ""
+msgstr "Бүйірлік панельді жасыру"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
@@ -1706,8 +1720,8 @@ msgstr "Ағымдағы құжатты жіберу мүмкін емес"
 #, c-format
 msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Кезекте %lu күтудегі тапсырма бар"
+msgstr[1] "Кезекте %lu күтудегі тапсырма бар"
 
 #: shell/ev-window.c:3723
 #, c-format
@@ -1741,7 +1755,7 @@ msgstr "Сақта_май-ақ жабу"
 
 #: shell/ev-window.c:3933 shell/ev-window.c:6584
 msgid "_Save As…"
-msgstr ""
+msgstr "Қала_йша сақтау…"
 
 #: shell/ev-window.c:4002
 #, c-format
@@ -1754,7 +1768,11 @@ msgid "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"%d басып шығару тапсырмасы белсенді. Жабу алдында басып шығару аяқталғанша "
+"күту керек пе?"
 msgstr[1] ""
+"%d басып шығару тапсырмасы белсенді. Жабу алдында басып шығару аяқталғанша "
+"күту керек пе?"
 
 #: shell/ev-window.c:4024
 msgid "If you close the window, pending print jobs will not be printed."
@@ -1790,18 +1808,20 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
+"Atril — SyncTex %s және %s %s негізіндегі қарапайым көпбетті құжаттарды "
+"қарау құралы."
 
 #: shell/ev-window.c:5446
 msgid "Atril is a simple multi-page document viewer."
-msgstr ""
+msgstr "Atril — қарапайым көпбетті құжаттарды қарау құралы."
 
 #: shell/ev-window.c:5459
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "MATE құжаттама тобы"
 
 #: shell/ev-window.c:5460
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "GNOME құжаттама тобы"
 
 #: shell/ev-window.c:5465
 msgid ""
@@ -1810,6 +1830,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril — еркін бағдарламалық қамтама; сіз оны Free Software Foundation "
+"жариялаған GNU General Public License шарттарына сәйкес қайта тарата аласыз "
+"және/немесе өзгерте аласыз; лицензияның 2-нұсқасы немесе (өз қалауыңыз "
+"бойынша) кез келген кейінгі нұсқасы негізінде."
 
 #: shell/ev-window.c:5469
 msgid ""
@@ -1818,6 +1842,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril бағдарламасы пайдалы болады деген үмітпен, бірақ КЕЗ КЕЛГЕН "
+"КЕПІЛДІКСІЗ, тіпті ТАУАРЛЫҚ КҮЙІ немесе БЕЛГІЛІ БІР МАҚСАТҚА САЙ КЕЛУІ "
+"туралы жанама кепілдіксіз таратылады. Қосымша ақпарат алу үшін GNU General "
+"Public License лицензиясын қараңыз."
 
 #: shell/ev-window.c:5473
 msgid ""
@@ -1825,16 +1853,22 @@ msgid ""
 "Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Сіз Atril бағдарламасымен бірге GNU General Public License лицензиясының "
+"көшірмесін алуыңыз керек еді; егер алмасаңыз, мына мекенжайға жазыңыз: Free "
+"Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-"
+"1301 USA"
 
 #: shell/ev-window.c:5518
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Atril құжаттарды қарау құралы туралы"
 
 #: shell/ev-window.c:5519
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Copyright © 1996–2009 The Evince authors\n"
+"Copyright © 2012–2021 The MATE developers"
 
 #: shell/ev-window.c:5526
 msgid "translator-credits"
@@ -1844,8 +1878,8 @@ msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Бұл бетте %d табылған"
+msgstr[1] "Бұл бетте %d табылған"
 
 #: shell/ev-window.c:5835
 msgid "Not found"
@@ -1858,11 +1892,11 @@ msgstr "%3d%% іздеу үшін қалды"
 
 #: shell/ev-window.c:6251
 msgid "Enable caret navigation?"
-msgstr ""
+msgstr "Мәтіндік курсор навигациясын іске қосу керек пе?"
 
 #: shell/ev-window.c:6253
 msgid "_Enable"
-msgstr ""
+msgstr "І_ске қосу"
 
 #: shell/ev-window.c:6256
 msgid ""
@@ -1870,10 +1904,14 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"F7 пернесін басу мәтіндік курсор навигациясын іске қосады немесе сөндіреді. "
+"Бұл мүмкіндік мәтін беттеріне жылжымалы курсорды орналастырады, бұл сізге "
+"пернетақта арқылы шарлауға және мәтінді таңдауға мүмкіндік береді. Мәтіндік "
+"курсор навигациясын іске қосуды қалайсыз ба?"
 
 #: shell/ev-window.c:6261
 msgid "Don't show this message again"
-msgstr ""
+msgstr "Бұл хабарламаны қайта көрсетпеу"
 
 #: shell/ev-window.c:6570
 msgid "_File"
@@ -1969,7 +2007,7 @@ msgstr "Ағы_мдағы баптауларды негізгі ретінде �
 
 #: shell/ev-window.c:6623
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Масштабты бастапқы күйге келтіру"
 
 #: shell/ev-window.c:6626
 msgid "_Reload"
@@ -2093,7 +2131,7 @@ msgstr "Құжатты презентация ретінде жіберу"
 
 #: shell/ev-window.c:6749
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "Инверсияланған _түстер"
 
 #: shell/ev-window.c:6750
 msgid "Show page contents with the colors inverted"
@@ -2101,11 +2139,11 @@ msgstr "Түстері терістелген парақтарды көрсет�
 
 #: shell/ev-window.c:6752
 msgid "Caret _Navigation"
-msgstr ""
+msgstr "Мәтіндік курсор навигаци_ясы"
 
 #: shell/ev-window.c:6753
 msgid "Activate or disable caret-navigation"
-msgstr ""
+msgstr "Мәтіндік курсор навигациясын белсендіру немесе сөндіру"
 
 #: shell/ev-window.c:6756
 msgid "_Find…"
@@ -2197,7 +2235,7 @@ msgstr "Кішірейту"
 
 #: shell/ev-window.c:6989
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Масштабты бастапқы күйге келтіру"
 
 #: shell/ev-window.c:7133 shell/ev-window.c:7149
 msgid "Unable to launch external application."
