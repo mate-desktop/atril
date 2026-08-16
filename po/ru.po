@@ -22,6 +22,7 @@
 # DrSheppard <georg.b2012@gmail.com>, 2022
 # Olesya Gerasimenko <gammaray@basealt.ru>, 2023
 # "Sergey A." <Ser82-png@yandex.ru>, 2026.
+# Andrei Stepanov <adem4ik@gmail.com>, 2026.
 #
 # Translators:
 #
@@ -30,8 +31,8 @@ msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2026-07-08 12:17+0000\n"
-"Last-Translator: \"Sergey A.\" <Ser82-png@yandex.ru>\n"
+"PO-Revision-Date: 2026-08-06 00:42+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/mate-"
 "desktop/applications/atril/ru/>\n"
 "Language: ru\n"
@@ -41,7 +42,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
 msgid "File is corrupted"
@@ -98,7 +99,7 @@ msgstr "Документы формата DjVu"
 
 #: backend/dvi/dvi-document.c:107
 msgid "DVI document has incorrect format"
-msgstr "Документ DVI имеет некорректный формат"
+msgstr "Документ DVI имеет неверный формат"
 
 #: backend/dvi/dvidocument.atril-backend.desktop.in:3
 msgid "DVI Documents"
@@ -185,7 +186,7 @@ msgstr "шрифт %d не определен\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr "некорректная специальная длина\n"
+msgstr "неправильная специальная длина\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
@@ -241,7 +242,7 @@ msgstr "(gf) Символ %d: неправильный код операции %
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
 msgid "(gf) character %d has an incorrect bounding box\n"
-msgstr "(gf) символ %d имеет некорректную ограничивающую рамку\n"
+msgstr "(gf) символ %d имеет неверную ограничивающую рамку\n"
 
 #: backend/dvi/mdvi-lib/gf.c:288
 #, c-format
@@ -552,7 +553,7 @@ msgstr "Неизвестный тип MIME документа"
 
 #: backend/epub/epub-document.c:709 backend/epub/epub-document.c:908
 msgid "epub file is invalid or corrupt"
-msgstr "файл epub некорректен или повреждён"
+msgstr "файл epub неверен или повреждён"
 
 #: backend/epub/epub-document.c:782
 msgid "could not retrieve filename"
@@ -588,7 +589,7 @@ msgstr "не удалось разобрать содержимое манифе
 
 #: backend/epub/epub-document.c:1001
 msgid "content file is invalid"
-msgstr "файл содержимого некорректен"
+msgstr "файл содержимого недопустим"
 
 #: backend/epub/epub-document.c:1010
 msgid "epub file has no spine"
@@ -697,7 +698,7 @@ msgstr "Документы формата PostScript"
 
 #: backend/tiff/tiff-document.c:114
 msgid "Invalid document"
-msgstr "Некорректный документ"
+msgstr "Неверный документ"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:3
 msgid "Tiff Documents"
@@ -1232,7 +1233,7 @@ msgstr "Печать на этом принтере не поддерживае�
 
 #: libview/ev-print-operation.c:1237
 msgid "Invalid page selection"
-msgstr "Некорректный выбор страниц"
+msgstr "Неверный выбор страниц"
 
 #: libview/ev-print-operation.c:1240
 msgid "Your print range selection does not include any pages"
