@@ -1,29 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023, 2026.
 #
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023\n"
-"Language-Team: Georgian (https://app.transifex.com/mate/teams/13566/ka/)\n"
+"PO-Revision-Date: 2026-07-10 05:17+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/atril/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
-#, fuzzy
-#| msgid "File corrupted"
 msgid "File is corrupted"
 msgstr "ფაილი დაზიანებულია"
 
@@ -32,10 +31,8 @@ msgid "Archive is encrypted"
 msgstr ""
 
 #: backend/comics/comics-document.c:262
-#, fuzzy
-#| msgid "No files in archive"
 msgid "No supported images in archive"
-msgstr "არქივი გამოსახულებებს არ შეიცავს"
+msgstr "არქივი მხარდაჭერილ გამოსახულებებს არ შეიცავს"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
@@ -62,7 +59,7 @@ msgstr "კომიქსები"
 
 #: backend/djvu/djvu-document.c:172
 msgid "DjVu document has incorrect format"
-msgstr "DVI დოკუმენტის არასწორი ფორმატი"
+msgstr "DjVu დოკუმენტს არასწორი ფორმატი აქვს"
 
 #: backend/djvu/djvu-document.c:249
 msgid ""
@@ -401,7 +398,7 @@ msgstr "უკაცრავად!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "აი, ეგრე!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
@@ -429,7 +426,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
-msgstr ""
+msgstr "ავარია"
 
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
@@ -798,7 +795,7 @@ msgstr "გადაიტანე მონიშნული ელემე�
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
 msgid "_Remove from Toolbar"
-msgstr "ინსტრუმენტთა ველიდან  ამოშლა"
+msgstr "წაშლა ხელსაწყოთა _პანელიდან"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1474
 msgid "Remove the selected item from the toolbar"
@@ -921,6 +918,7 @@ msgstr "მრავალგვერდიანი დოკუმენტ�
 #: data/atril.desktop.in.in:19
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 msgstr ""
+"MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;დოკუმენტი;დათვალიერება;კომიქსები;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
@@ -1338,11 +1336,11 @@ msgstr "ძებნა:"
 
 #: shell/eggfindbar.c:301
 msgid "Find previous occurrence of the search string"
-msgstr "იპოვე საძიებო ნუსხის  წინა ვარიანტი"
+msgstr "საძიებო სტრიქონის წინა აღმოჩენაზე გადასვლა"
 
 #: shell/eggfindbar.c:309
 msgid "Find next occurrence of the search string"
-msgstr "იპოვე საძიებო ნუსხის  შემდეგი ვარიანტი"
+msgstr "საძიებო სტრიქონის შემდეგ აღმოჩენაზე გადასვლა"
 
 #: shell/eggfindbar.c:316
 msgid "Case Sensitive"
@@ -1533,7 +1531,7 @@ msgstr "ტექსტის ანოტაციის დამატებ�
 
 #: shell/ev-sidebar-annotations.c:342
 msgid "Document contains no annotations"
-msgstr "დოკუმენტს  ანოტაციები არ გააჩნია"
+msgstr "დოკუმენტი ანოტაციებს არ შეიცავს"
 
 #: shell/ev-sidebar-annotations.c:374
 #, c-format
@@ -2066,7 +2064,7 @@ msgstr "ფანჯრის მთელი ეკრანის დაფა
 
 #: shell/ev-window.c:6740
 msgid "Pre_sentation"
-msgstr ""
+msgstr "პრე_ზენტაცია"
 
 #: shell/ev-window.c:6741
 msgid "Run document as a presentation"
@@ -2271,7 +2269,7 @@ msgstr "სტრიქონი"
 
 #: shell/main.c:74
 msgid "[FILE…]"
-msgstr ""
+msgstr "[ფაილი…]"
 
 #, c-format
 #~ msgid "No images found in archive %s"
