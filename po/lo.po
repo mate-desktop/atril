@@ -1,890 +1,894 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Transifex Bot <>, 2026
+# Bone NI <bounkirdni@gmail.com>, 2026.
+#
+# Translators:
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Lao (https://app.transifex.com/mate/teams/13566/lo/)\n"
+"PO-Revision-Date: 2026-08-16 11:18+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/atril/lo/>\n"
 "Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
 msgid "File is corrupted"
-msgstr ""
+msgstr "ໄຟລ໌ເສຍຫາຍ"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "ໄຟລ໌ຈັດເກັບຖືກເຂົ້າລະຫັດໄວ້"
 
 #: backend/comics/comics-document.c:262
 msgid "No supported images in archive"
-msgstr ""
+msgstr "ບໍ່ມີຮູບພາບທີ່ຮອງຮັບໃນໄຟລ໌ຈັດເກັບ"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
-msgstr ""
+msgstr "ບໍ່ມີໄຟລ໌ໃນໄຟລ໌ຈັດເກັບ"
 
 #: backend/comics/comics-document.c:321
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr ""
+msgstr "ບໍ່ແມ່ນປະເພດ MIME ຂອງປຶ້ມກາຕູນ: %s"
 
 #: backend/comics/comics-document.c:328
 msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
+"libarchive ບໍ່ຮອງຮັບການບີບອັດຂອງປຶ້ມກາຕູນຫົວນີ້, ກະລຸນາຕິດຕໍ່ຜູ້ຈຳໜ່າຍຂອງທ່ານ"
 
 #: backend/comics/comics-document.c:365
 msgid "File corrupted"
-msgstr ""
+msgstr "ໄຟລ໌ເສຍຫາຍ"
 
 #: backend/comics/comicsdocument.atril-backend.desktop.in:3
 msgid "Comic Books"
-msgstr ""
+msgstr "ປຶ້ມກາຕູນ"
 
 #: backend/djvu/djvu-document.c:172
 msgid "DjVu document has incorrect format"
-msgstr ""
+msgstr "ເອກະສານ DjVu ມີຮູບແບບທີ່ບໍ່ຖືກຕ້ອງ"
 
 #: backend/djvu/djvu-document.c:249
 msgid ""
 "The document is composed of several files. One or more of these files cannot "
 "be accessed."
 msgstr ""
+"ເອກະສານນີ້ປະກອບດ້ວຍຫຼາຍໄຟລ໌. ມີໄຟລ໌ໃດໜຶ່ງ ຫຼື ຫຼາຍກວ່ານັ້ນທີ່ບໍ່ສາມາດເຂົ້າເຖິງໄດ້."
 
 #: backend/djvu/djvudocument.atril-backend.desktop.in:3
 msgid "DjVu Documents"
-msgstr ""
+msgstr "ເອກະສານ DjVu"
 
 #: backend/dvi/dvi-document.c:107
 msgid "DVI document has incorrect format"
-msgstr ""
+msgstr "ເອກະສານ DVI ມີຮູບແບບທີ່ບໍ່ຖືກຕ້ອງ"
 
 #: backend/dvi/dvidocument.atril-backend.desktop.in:3
 msgid "DVI Documents"
-msgstr ""
+msgstr "ເອກະສານ DVI"
 
 #: backend/dvi/mdvi-lib/dviread.c:209
 msgid "unexpected EOF\n"
-msgstr ""
+msgstr "ສິ້ນສຸດໄຟລ໌ (EOF) ແບບບໍ່ຄາດຄິດ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "ບໍ່ສາມາດໂຫຼດຟອນ `%s' ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
 msgid "could not reload `%s'\n"
-msgstr ""
+msgstr "ບໍ່ສາມາດໂຫຼດ `%s' ຄືນໃໝ່ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr ""
+msgstr "%s: ຮູບແບບ DVI ທີ່ບໍ່ຮອງຮັບ (ເວີຊັນ %u)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
-msgstr ""
+msgstr "ບໍ່ໄດ້ເລືອກໜ້າໃດເລີຍ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:897
 #, c-format
 msgid "%s: File corrupted, or not a DVI file\n"
-msgstr ""
+msgstr "%s: ໄຟລ໌ເສຍຫາຍ ຫຼື ບໍ່ແມ່ນໄຟລ໌ DVI\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: ມາກໂຄ vf ມີຂໍ້ຜິດພາດ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s: stack ບໍ່ຫວ່າງຫຼັງຈາກມາກໂຄ vf\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: ບໍ່ສາມາດເປີດໄຟລ໌ຄືນໃໝ່ໄດ້ (%s)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
 msgid "%s: page %d out of range\n"
-msgstr ""
+msgstr "%s: ໜ້າ %d ຢູ່ນອກຂອບເຂດ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s: ຄ່າ offset ບໍ່ຖືກຕ້ອງຢູ່ໜ້າ %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "stack ບໍ່ຫວ່າງເມື່ອຮອດທ້າຍໜ້າ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
-msgstr ""
+msgstr "ຍັງບໍ່ທັນໄດ້ກຳນົດຟອນເລີ່ມຕົ້ນ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "ຕົວອັກສອນ %d ທີ່ຮ້ອງຂໍບໍ່ມີຢູ່ໃນ `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "ກຳລັງຂະຫຍາຍ stack\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "stack underflow\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "ບໍ່ໄດ້ກຳນົດຟອນ %d ໄວ້\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "ຮູບແບບຄວາມຍາວພິເສດບໍ່ຖືກຕ້ອງ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr ""
+msgstr "ບໍ່ໄດ້ກຳນົດຟອນ %d ໄວ້ໃນ postamble\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "opcode %d ແບບບໍ່ຄາດຄິດ\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
-msgstr ""
+msgstr "ບໍ່ໄດ້ກຳນົດ opcode %d ໄວ້\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: ບໍ່ມີຟອນທີ່ຖືກກຳນົດໄວ້\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
 msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
-msgstr ""
+msgstr "%s: %d: [%s] ການເຂົ້າລະຫັດ `%s' ທີ່ຮ້ອງຂໍ ບໍ່ກົງກັບເວັກເຕີ `%s'\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:757
 #, c-format
 msgid "%s: could not load fontmap\n"
-msgstr ""
+msgstr "%s: ບໍ່ສາມາດໂຫຼດ fontmap ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
 msgid "%s: could not set as default encoding\n"
-msgstr ""
+msgstr "%s: ບໍ່ສາມາດກຳນົດເປັນການເຂົ້າລະຫັດເລີ່ມຕົ້ນໄດ້\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:849
 #, c-format
 msgid "encoding vector `%s' is in use\n"
-msgstr ""
+msgstr "ເວັກເຕີການເຂົ້າລະຫັດ `%s' ກຳລັງຖືກໃຊ້ງານ\n"
 
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: opcode %d ບໍ່ຖືກຕ້ອງໃນຕົວອັກສອນ %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
 msgid "(gf) Character %d: invalid opcode %d\n"
-msgstr ""
+msgstr "(gf) ຕົວອັກສອນ %d: opcode %d ບໍ່ຖືກຕ້ອງ\n"
 
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
 msgid "(gf) character %d has an incorrect bounding box\n"
-msgstr ""
+msgstr "(gf) ຕົວອັກສອນ %d ມີ bounding box ທີ່ບໍ່ຖືກຕ້ອງ\n"
 
 #: backend/dvi/mdvi-lib/gf.c:288
 #, c-format
 msgid "%s: bad checksum (expected %u, found %u)\n"
-msgstr ""
+msgstr "%s: checksum ບໍ່ຖືກຕ້ອງ (ຄາດການ %u, ພົບ %u)\n"
 
 #: backend/dvi/mdvi-lib/gf.c:324
 #, c-format
 msgid "%s: junk in postamble\n"
-msgstr ""
+msgstr "%s: ມີຂໍ້ມູນຂີ້ເຫຍື້ອໃນ postamble\n"
 
 #: backend/dvi/mdvi-lib/gf.c:361
 #, c-format
 msgid "%s: File corrupted, or not a GF file\n"
-msgstr ""
+msgstr "%s: ໄຟລ໌ເສຍຫາຍ ຫຼື ບໍ່ແມ່ນໄຟລ໌ GF\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:212
 #, c-format
 msgid "invalid page specification `%s'\n"
-msgstr ""
+msgstr "ການລະບຸໜ້າ `%s' ບໍ່ຖືກຕ້ອງ\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:232
 msgid "garbage after DVI page specification ignored\n"
-msgstr ""
+msgstr "ຂໍ້ມູນຂີ້ເຫຍື້ອຫຼັງການລະບຸໜ້າ DVI ຈະຖືກລະເລີຍ\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:260
 msgid "more than 10 counters in page specification\n"
-msgstr ""
+msgstr "ມີຕົວນັບຫຼາຍກວ່າ 10 ຕົວໃນການລະບຸໜ້າ\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:262
 msgid "garbage after TeX page specification ignored\n"
-msgstr ""
+msgstr "ຂໍ້ມູນຂີ້ເຫຍື້ອຫຼັງການລະບຸໜ້າ TeX ຈະຖືກລະເລີຍ\n"
 
 #: backend/dvi/mdvi-lib/paper.c:104 backend/dvi/mdvi-lib/paper.c:111
 msgid "custom"
-msgstr ""
+msgstr "ກຳນົດເອງ"
 
 #: backend/dvi/mdvi-lib/pk.c:309
 msgid "Bad PK file: More bits than required\n"
-msgstr ""
+msgstr "ໄຟລ໌ PK ບໍ່ຖືກຕ້ອງ: ມີບິດຫຼາຍກວ່າທີ່ຕ້ອງການ\n"
 
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
 msgid "%s: checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: ຄ່າ checksum ບໍ່ກົງກັນ (ຄາດການ %u, ໄດ້ຮັບ %u)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:420
 #, c-format
 msgid "%s: unexpected preamble\n"
-msgstr ""
+msgstr "%s: preamble ແບບບໍ່ຄາດຄິດ\n"
 
 #: backend/dvi/mdvi-lib/pk.c:477
 #, c-format
 msgid "%s: unexpected charcode (%d)\n"
-msgstr ""
+msgstr "%s: ລະຫັດຕົວອັກສອນແບບບໍ່ຄາດຄິດ (%d)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:512
 #, c-format
 msgid "%s: unexpected end of file (no postamble)\n"
-msgstr ""
+msgstr "%s: ສິ້ນສຸດໄຟລ໌ແບບບໍ່ຄາດຄິດ (ບໍ່ມີ postamble)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:518
 msgid "invalid PK file! (junk in postamble)\n"
-msgstr ""
+msgstr "ໄຟລ໌ PK ບໍ່ຖືກຕ້ອງ! (ມີຂໍ້ມູນຂີ້ເຫຍື້ອໃນ postamble)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:535
 #, c-format
 msgid "%s: File corrupted, or not a PK file\n"
-msgstr ""
+msgstr "%s: ໄຟລ໌ເສຍຫາຍ ຫຼື ບໍ່ແມ່ນໄຟລ໌ PK\n"
 
 #: backend/dvi/mdvi-lib/special.c:240
 #, c-format
 msgid "%s: tried to pop top level layer\n"
-msgstr ""
+msgstr "%s: ພະຍາຍາມດຶງເລເຢີລະດັບເທິງສຸດອອກ\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:150
 #, c-format
 msgid "%s: malformed value for key `%s'\n"
-msgstr ""
+msgstr "%s: ຄ່າສຳລັບຄີ `%s' ບໍ່ຖືກຕ້ອງ\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:161
 #, c-format
 msgid "%s: unknown key `%s' ignored\n"
-msgstr ""
+msgstr "%s: ບໍ່ຮູ້ຈັກຄີ `%s' ຈະຖືກລະເລີຍ\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:166
 #, c-format
 msgid "%s: no argument for key `%s', using defaults\n"
-msgstr ""
+msgstr "%s: ບໍ່ມີອາກິວເມັນສຳລັບຄີ `%s', ຈະໃຊ້ຄ່າເລີ່ມຕົ້ນ\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:170
 #, c-format
 msgid "%s: argument `%s' ignored for key `%s'\n"
-msgstr ""
+msgstr "%s: ອາກິວເມັນ `%s' ຖືກລະເລີຍສຳລັບຄີ `%s'\n"
 
 #: backend/dvi/mdvi-lib/t1.c:187
 msgid "(t1) failed to reset device resolution\n"
-msgstr ""
+msgstr "(t1) ບໍ່ສາມາດຕັ້ງຄ່າຄວາມລະອຽດອຸປະກອນຄືນໃໝ່ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/t1.c:215
 #, c-format
 msgid "%s: could not encode font\n"
-msgstr ""
+msgstr "%s: ບໍ່ສາມາດເຂົ້າລະຫັດຟອນໄດ້\n"
 
 #: backend/dvi/mdvi-lib/tfm.c:175
 #, c-format
 msgid "%s: Checksum mismatch (got %u, expected %u)\n"
-msgstr ""
+msgstr "%s: ຄ່າ Checksum ບໍ່ກົງກັນ (ໄດ້ຮັບ %u, ຄາດການ %u)\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:91
 #, c-format
 msgid "%s: Error reading AFM data\n"
-msgstr ""
+msgstr "%s: ຂໍ້ຜິດພາດໃນການອ່ານຂໍ້ມູນ AFM\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:182
 #, c-format
 msgid "Warning: TFM file `%s' has suspicious size\n"
-msgstr ""
+msgstr "ຄຳເຕືອນ: ໄຟລ໌ TFM `%s' ມີຂະໜາດທີ່ໜ້າສົງໄສ\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:511
 #, c-format
 msgid "%s: font coding scheme truncated to 40 bytes\n"
-msgstr ""
+msgstr "%s: ຮູບແບບການເຂົ້າລະຫັດຟອນຖືກຕັດອອກເຫຼືອ 40 ໄບຕ໌\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:291 backend/dvi/mdvi-lib/tfmfile.c:589
 #, c-format
 msgid "%s: File corrupted, or not a TFM file\n"
-msgstr ""
+msgstr "%s: ໄຟລ໌ເສຍຫາຍ ຫຼື ບໍ່ແມ່ນໄຟລ໌ TFM\n"
 
 #: backend/dvi/mdvi-lib/tt.c:151
 #, c-format
 msgid "(tt) %s: could not load face: %s\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ສາມາດໂຫຼດ face ໄດ້: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:159
 #, c-format
 msgid "(tt) %s: could not create face: %s\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ສາມາດສ້າງ face ໄດ້: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:168
 #, c-format
 msgid "(tt) %s: could not create glyph: %s\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ສາມາດສ້າງ glyph ໄດ້: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:201
 #, c-format
 msgid "(tt) %s: no acceptable map found, using #0\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ພົບ map ທີ່ຍອມຮັບໄດ້, ຈະໃຊ້ #0\n"
 
 #: backend/dvi/mdvi-lib/tt.c:214
 #, c-format
 msgid "(tt) %s: could not set resolution: %s\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ສາມາດກຳນົດຄວາມລະອຽດໄດ້: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:221
 #, c-format
 msgid "(tt) %s: could not set point size: %s\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ສາມາດກຳນົດຂະໜາດພອຍຕ໌ໄດ້: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:240
 #, c-format
 msgid "(tt) %s: could not load PS name table\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ສາມາດໂຫຼດຕາຕະລາງຊື່ PS ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/tt.c:265
 #, c-format
 msgid "%s: no encoding vector found, expect bad output\n"
-msgstr ""
+msgstr "%s: ບໍ່ພົບເວັກເຕີການເຂົ້າລະຫັດ, ຄາດວ່າຜົນອອກມາຈະບໍ່ຖືກຕ້ອງ\n"
 
 #: backend/dvi/mdvi-lib/tt.c:325
 #, c-format
 msgid "(tt) %s: no font metric data\n"
-msgstr ""
+msgstr "(tt) %s: ບໍ່ມີຂໍ້ມູນ metric ຂອງຟອນ\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "ອຸ້ຍ!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "ໄອ້ຍະ!!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "ໂອ໊ຍ!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "ຮິວສຕັນ, ພວກເຮົາກຳລັງມີບັນຫາ"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3.. 2.. 1.. ຕູ້ມ!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "ຂ້ອຍກາຍເປັນອະດີດແລ້ວ"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
-msgstr ""
+msgstr "ຂ້ອຍກຳລັງຈະມອດແລ້ວ"
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
-msgstr ""
+msgstr "ຮູ້ສຶກເຖິງສິ່ງຜິດປົກກະຕິ"
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
-msgstr ""
+msgstr "ກຳລັງຂັດຂ້ອງ"
 
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: ຂໍ້ຜິດພາດ: "
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
-msgstr ""
+msgstr "ຂໍ້ຜິດພາດ"
 
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: ຄຳເຕືອນ: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
-msgstr ""
+msgstr "ຄຳເຕືອນ"
 
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: ຂໍ້ຜິດພາດຮ້າຍແຮງ: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "ຮ້າຍແຮງ"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
 msgid "out of memory allocating %u bytes\n"
-msgstr ""
+msgstr "ໜ່ວຍຄວາມຈຳບໍ່ພໍໃນການຈັດສັນ %u ໄບຕ໌\n"
 
 #: backend/dvi/mdvi-lib/util.c:224
 msgid "attempted to reallocate with zero size\n"
-msgstr ""
+msgstr "ພະຍາຍາມຈັດສັນໜ່ວຍຄວາມຈຳໃໝ່ດ້ວຍຂະໜາດສູນ\n"
 
 #: backend/dvi/mdvi-lib/util.c:227
 #, c-format
 msgid "failed to reallocate %u bytes\n"
-msgstr ""
+msgstr "ບໍ່ສາມາດຈັດສັນ %u ໄບຕ໌ ໃໝ່ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/util.c:236
 msgid "attempted to callocate 0 members\n"
-msgstr ""
+msgstr "ພະຍາຍາມ callocate 0 ສະມາຊິກ\n"
 
 #: backend/dvi/mdvi-lib/util.c:238
 #, c-format
 msgid "attempted to callocate %u members with size 0\n"
-msgstr ""
+msgstr "ພະຍາຍາມ callocate %u ສະມາຊິກດ້ວຍຂະໜາດສູນ\n"
 
 #: backend/dvi/mdvi-lib/util.c:242
 #, c-format
 msgid "failed to allocate %ux%u bytes\n"
-msgstr ""
+msgstr "ບໍ່ສາມາດຈັດສັນ %ux%u ໄບຕ໌ ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/util.c:250
 msgid "attempted to free NULL pointer\n"
-msgstr ""
+msgstr "ພະຍາຍາມ free NULL pointer\n"
 
 #: backend/dvi/mdvi-lib/vf.c:82
 #, c-format
 msgid "%s: Checksum mismatch (expected %u, got %u)\n"
-msgstr ""
+msgstr "%s: ຄ່າ Checksum ບໍ່ກົງກັນ (ຄາດການ %u, ໄດ້ຮັບ %u)\n"
 
 #: backend/dvi/mdvi-lib/vf.c:130
 #, c-format
 msgid "(vf) %s: could not load font `%s'\n"
-msgstr ""
+msgstr "(vf) %s: ບໍ່ສາມາດໂຫຼດຟອນ `%s' ໄດ້\n"
 
 #: backend/dvi/mdvi-lib/vf.c:170
 #, c-format
 msgid "(vf) %s: unexpected character %d\n"
-msgstr ""
+msgstr "(vf) %s: ຕົວອັກສອນ %d ແບບບໍ່ຄາດຄິດ\n"
 
 #: backend/dvi/mdvi-lib/vf.c:186
 #, c-format
 msgid "(vf) %s: character %d redefined\n"
-msgstr ""
+msgstr "(vf) %s: ຕົວອັກສອນ %d ຖືກກຳນົດຄືນໃໝ່\n"
 
 #: backend/dvi/mdvi-lib/vf.c:209
 #, c-format
 msgid "(vf) %s: no postamble\n"
-msgstr ""
+msgstr "(vf) %s: ບໍ່ມີ postamble\n"
 
 #: backend/dvi/mdvi-lib/vf.c:235
 #, c-format
 msgid "%s: File corrupted, or not a VF file.\n"
-msgstr ""
+msgstr "%s: ໄຟລ໌ເສຍຫາຍ ຫຼື ບໍ່ແມ່ນໄຟລ໌ VF.\n"
 
 #: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
-msgstr ""
+msgstr "ບໍ່ແມ່ນເອກະສານ ePub"
 
 #: backend/epub/epub-document.c:668 libdocument/ev-document-factory.c:142
 #: libdocument/ev-document-factory.c:285
 msgid "Unknown MIME Type"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກປະເພດ MIME"
 
 #: backend/epub/epub-document.c:709 backend/epub/epub-document.c:908
 msgid "epub file is invalid or corrupt"
-msgstr ""
+msgstr "ໄຟລ໌ epub ບໍ່ຖືກຕ້ອງ ຫຼື ເສຍຫາຍ"
 
 #: backend/epub/epub-document.c:782
 msgid "could not retrieve filename"
-msgstr ""
+msgstr "ບໍ່ສາມາດດຶງຊື່ໄຟລ໌ໄດ້"
 
 #: backend/epub/epub-document.c:810
 msgid "could not open archive"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ຈັດເກັບໄດ້"
 
 #: backend/epub/epub-document.c:826 backend/epub/epub-document.c:843
 msgid "could not extract archive"
-msgstr ""
+msgstr "ບໍ່ສາມາດແຕກໄຟລ໌ຈັດເກັບໄດ້"
 
 #: backend/epub/epub-document.c:876 backend/epub/epub-document.c:959
 msgid "could not retrieve container file"
-msgstr ""
+msgstr "ບໍ່ສາມາດດຶງໄຟລ໌ container ໄດ້"
 
 #: backend/epub/epub-document.c:888
 msgid "could not open container file"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ container ໄດ້"
 
 #: backend/epub/epub-document.c:898
 msgid "container file is corrupt"
-msgstr ""
+msgstr "ໄຟລ໌ container ເສຍຫາຍ"
 
 #: backend/epub/epub-document.c:918
 msgid "epub file is corrupt, no container"
-msgstr ""
+msgstr "ໄຟລ໌ epub ເສຍຫາຍ, ບໍ່ພົບ container"
 
 #: backend/epub/epub-document.c:992
 msgid "could not parse content manifest"
-msgstr ""
+msgstr "ບໍ່ສາມາດວິເຄາະ content manifest ໄດ້"
 
 #: backend/epub/epub-document.c:1001
 msgid "content file is invalid"
-msgstr ""
+msgstr "ໄຟລ໌ເນື້ອໃນບໍ່ຖືກຕ້ອງ"
 
 #: backend/epub/epub-document.c:1010
 msgid "epub file has no spine"
-msgstr ""
+msgstr "ໄຟລ໌ epub ບໍ່ມີ spine"
 
 #: backend/epub/epub-document.c:1019
 msgid "epub file has no manifest"
-msgstr ""
+msgstr "ໄຟລ໌ epub ບໍ່ມີ manifest"
 
 #: backend/epub/epub-document.c:1105
 msgid "Could not set up document tree for loading, some files missing"
-msgstr ""
+msgstr "ບໍ່ສາມາດຕັ້ງຄ່າໂຄງສ້າງເອກະສານເພື່ອໂຫຼດໄດ້, ບາງໄຟລ໌ຫາຍໄປ"
 
 #: backend/epub/epub-document.c:1806
 #, c-format
 msgid "There was an error deleting “%s”."
-msgstr ""
+msgstr "ມີຂໍ້ຜິດພາດໃນການລຶບ “%s”."
 
 #: backend/epub/epubdocument.atril-backend.desktop.in:3
 msgid "epub Documents"
-msgstr ""
+msgstr "ເອກະສານ epub"
 
 #: backend/pdf/ev-poppler.cc:513
 msgid "This work is in the Public Domain"
-msgstr ""
+msgstr "ຜົນງານນີ້ເປັນສາທາລະນະສະມັດ (Public Domain)"
 
 #: backend/pdf/ev-poppler.cc:768 backend/pdf/ev-poppler.cc:774
 msgid "Yes"
-msgstr ""
+msgstr "ແມ່ນ"
 
 #: backend/pdf/ev-poppler.cc:771 backend/pdf/ev-poppler.cc:774
 msgid "No"
-msgstr ""
+msgstr "ບໍ່"
 
 #: backend/pdf/ev-poppler.cc:901
 msgid "Type 1"
-msgstr ""
+msgstr "Type 1"
 
 #: backend/pdf/ev-poppler.cc:903
 msgid "Type 1C"
-msgstr ""
+msgstr "Type 1C"
 
 #: backend/pdf/ev-poppler.cc:905
 msgid "Type 3"
-msgstr ""
+msgstr "Type 3"
 
 #: backend/pdf/ev-poppler.cc:907
 msgid "TrueType"
-msgstr ""
+msgstr "TrueType"
 
 #: backend/pdf/ev-poppler.cc:909
 msgid "Type 1 (CID)"
-msgstr ""
+msgstr "Type 1 (CID)"
 
 #: backend/pdf/ev-poppler.cc:911
 msgid "Type 1C (CID)"
-msgstr ""
+msgstr "Type 1C (CID)"
 
 #: backend/pdf/ev-poppler.cc:913
 msgid "TrueType (CID)"
-msgstr ""
+msgstr "TrueType (CID)"
 
 #: backend/pdf/ev-poppler.cc:915
 msgid "Unknown font type"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກປະເພດຟອນ"
 
 #: backend/pdf/ev-poppler.cc:941
 msgid "No name"
-msgstr "ບໍ່ມີຊື"
+msgstr "ບໍ່ມີຊື່"
 
 #: backend/pdf/ev-poppler.cc:949
 msgid "Embedded subset"
-msgstr ""
+msgstr "ຝັງຕົວບາງສ່ວນ (Embedded subset)"
 
 #: backend/pdf/ev-poppler.cc:951
 msgid "Embedded"
-msgstr ""
+msgstr "ຝັງຕົວ (Embedded)"
 
 #: backend/pdf/ev-poppler.cc:953
 msgid "Not embedded"
-msgstr ""
+msgstr "ບໍ່ໄດ້ຝັງຕົວ"
 
 #: backend/pdf/pdfdocument.atril-backend.desktop.in:4
 msgid "PDF Documents"
-msgstr ""
+msgstr "ເອກະສານ PDF"
 
 #: backend/pixbuf/pixbufdocument.atril-backend.desktop.in:3
 msgid "Images"
-msgstr ""
+msgstr "ຮູບພາບ"
 
 #: backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
-msgstr ""
+msgstr "ບໍ່ສາມາດໂຫຼດເອກະສານ “%s”"
 
 #: backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr ""
+msgstr "ບໍ່ສາມາດບັນທຶກເອກະສານ “%s”"
 
 #: backend/ps/psdocument.atril-backend.desktop.in:4
 msgid "PostScript Documents"
-msgstr ""
+msgstr "ເອກະສານ PostScript"
 
 #: backend/tiff/tiff-document.c:114
 msgid "Invalid document"
-msgstr ""
+msgstr "ເອກະສານບໍ່ຖືກຕ້ອງ"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:3
 msgid "Tiff Documents"
-msgstr ""
+msgstr "ເອກະສານ Tiff"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:4
 msgid "XPS Documents"
-msgstr ""
+msgstr "ເອກະສານ XPS"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
 msgid "Couldn't save attachment “%s”: %s"
-msgstr ""
+msgstr "ບໍ່ສາມາດບັນທຶກໄຟລ໌ແນບ “%s”: %s"
 
 #: libdocument/ev-attachment.c:368
 #, c-format
 msgid "Couldn't open attachment “%s”: %s"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ແນບ “%s”: %s"
 
 #: libdocument/ev-attachment.c:403
 #, c-format
 msgid "Couldn't open attachment “%s”"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ແນບ “%s”"
 
 #: libdocument/ev-document-factory.c:167
 #, c-format
 msgid "File type %s (%s) is not supported"
-msgstr ""
+msgstr "ບໍ່ຮອງຮັບໄຟລ໌ປະເພດ %s (%s)"
 
 #: libdocument/ev-document-factory.c:358
 msgid "All Documents"
-msgstr ""
+msgstr "ເອກະສານທັງໝົດ"
 
 #: libdocument/ev-document-factory.c:389
 msgid "All Files"
-msgstr ""
+msgstr "ໄຟລ໌ທັງໝົດ"
 
 #: libdocument/ev-file-helpers.c:147
 #, c-format
 msgid "Failed to create a temporary file: %s"
-msgstr ""
+msgstr "ບໍ່ສາມາດສ້າງໄຟລ໌ຊົ່ວຄາວ: %s"
 
 #: libdocument/ev-file-helpers.c:224
 #, c-format
 msgid "Failed to create a temporary directory: %s"
-msgstr ""
+msgstr "ບໍ່ສາມາດສ້າງໂຟນເດີຊົ່ວຄາວ: %s"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "ໄຟລ໌ນີ້ບໍ່ແມ່ນໄຟລ໌ .desktop ທີ່ຖືກຕ້ອງ"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກເວີຊັນຂອງໄຟລ໌ເດດທັອບ '%s'"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:975
 #, c-format
 msgid "Starting %s"
-msgstr "ກໍາລັງເລີ້ມ %s"
+msgstr "ກຳລັງເລີ່ມ %s"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "ແອັບພລິເຄຊັນບໍ່ຮອງຮັບການເປີດເອກະສານຜ່ານຄຳສັ່ງ (command line)"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກຕົວເລືອກການເປີດ: %d"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1401
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr ""
+msgstr "ບໍ່ສາມາດສົ່ງ URI ຂອງເອກະສານໄປຫາໄຟລ໌ເດດທັອບທີ່ມີ 'Type=Link'"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
-msgstr "ຮ້ອງໃຊ້ບໍ່ໃດ້"
+msgstr "ບໍ່ແມ່ນລາຍການທີ່ສາມາດເປີດໃຊ້ງານໄດ້"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "ປິດການເຊື່ອມຕໍ່ກັບຕົວຈັດການເຊດຊັນ (session manager)"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "ລະບຸໄຟລ໌ທີ່ບັນຈຸການຕັ້ງຄ່າທີ່ບັນທຶກໄວ້"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:238 previewer/ev-previewer.c:36
 #: previewer/ev-previewer.c:37
 msgid "FILE"
-msgstr ""
+msgstr "ໄຟລ໌"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
-msgstr ""
+msgstr "ລະບຸ ID ຂອງການຈັດການເຊດຊັນ"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:243
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:269
 msgid "Session management options:"
-msgstr ""
+msgstr "ຕົວເລືອກການຈັດການເຊດຊັນ:"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Show session management options"
-msgstr ""
+msgstr "ສະແດງຕົວເລືອກການຈັດການເຊດຊັນ"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:982
 #, c-format
 msgid "Show “_%s”"
-msgstr ""
+msgstr "ສະແດງ “_%s”"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1471
 msgid "_Move on Toolbar"
-msgstr ""
+msgstr "_ຍ້າຍເທິງແຖບເຄື່ອງມື"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1472
 msgid "Move the selected item on the toolbar"
-msgstr ""
+msgstr "ຍ້າຍລາຍການທີ່ເລືອກເທິງແຖບເຄື່ອງມື"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
 msgid "_Remove from Toolbar"
-msgstr ""
+msgstr "_ເອົາອອກຈາກແຖບເຄື່ອງມື"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1474
 msgid "Remove the selected item from the toolbar"
-msgstr ""
+msgstr "ເອົາລາຍການທີ່ເລືອກອອກຈາກແຖບເຄື່ອງມື"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1475
 msgid "_Delete Toolbar"
-msgstr ""
+msgstr "_ລຶບແຖບເຄື່ອງມື"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1476
 msgid "Remove the selected toolbar"
-msgstr ""
+msgstr "ເອົາແຖບເຄື່ອງມືທີ່ເລືອກອອກ"
 
 #: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
-msgstr ""
+msgstr "ເສັ້ນແບ່ງ"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6993
 msgid "Fit Page"
-msgstr ""
+msgstr "ພໍດີໜ້າ"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6997
 msgid "Fit Width"
-msgstr ""
+msgstr "ພໍດີຄວາມກວ້າງ"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6630
 msgid "Expand Window to Fit"
-msgstr ""
+msgstr "ຂະຫຍາຍໜ້າຕ່າງໃຫ້ພໍດີ"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
-msgstr ""
+msgstr "50%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:54
 msgid "70%"
-msgstr ""
+msgstr "70%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:55
 msgid "85%"
-msgstr ""
+msgstr "85%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:56
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:57
 msgid "125%"
-msgstr ""
+msgstr "125%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:58
 msgid "150%"
-msgstr ""
+msgstr "150%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:59
 msgid "175%"
-msgstr ""
+msgstr "175%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:60
 msgid "200%"
-msgstr ""
+msgstr "200%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:61
 msgid "300%"
-msgstr ""
+msgstr "300%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:62
 msgid "400%"
-msgstr ""
+msgstr "400%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:63
 msgid "800%"
-msgstr ""
+msgstr "800%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:64
 msgid "1600%"
-msgstr ""
+msgstr "1600%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:65
 msgid "3200%"
-msgstr ""
+msgstr "3200%"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:66
 msgid "6400%"
-msgstr ""
+msgstr "6400%"
 
 #: data/atril.appdata.xml.in.in:7 data/atril.desktop.in.in:2
 #: shell/ev-window.c:5516
 msgid "Atril Document Viewer"
-msgstr ""
+msgstr "ຕົວເບິ່ງເອກະສານ Atril"
 
 #: data/atril.appdata.xml.in.in:8
 msgid "A Document Viewer for the MATE desktop environment"
-msgstr ""
+msgstr "ຕົວເບິ່ງເອກະສານສຳລັບສະພາບແວດລ້ອມເດັສທັອບ MATE"
 
 #: data/atril.appdata.xml.in.in:10
 msgid ""
@@ -894,6 +898,10 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril ແມ່ນຕົວເບິ່ງເອກະສານແບບຫຼາຍໜ້າທີ່ໃຊ້ງ່າຍ. ມັນສາມາດສະແດງ ແລະ ພິມໄຟລ໌ PostScript (PS), "
+"Encapsulated PostScript (EPS), DJVU, DVI, XPS ແລະ Portable Document Format "
+"(PDF), ລວມທັງໄຟລ໌ຈັດເກັບປຶ້ມກາຕູນ. ເມື່ອເອກະສານຮອງຮັບ, ມັນຍັງອະນຸຍາດໃຫ້ຄົ້ນຫາຂໍ້ຄວາມ, ສຳເນົາຂໍ້ຄວາ"
+"ມໄປຫາຄລິບບອດ, ການນຳທາງໄຮເປີເທັກ ແລະ ບຸກມາກສາລະບານ."
 
 #: data/atril.appdata.xml.in.in:18
 msgid ""
@@ -901,249 +909,252 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril ແມ່ນການແຕກແໜງມາຈາກ Evince ແລະ ເປັນສ່ວນໜຶ່ງຂອງສະພາບແວດລ້ອມເດັສທັອບ MATE. ຖ້າທ່ານຕ້ອ"
+"ງການຮູ້ເພີ່ມເຕີມກ່ຽວກັບ MATE ແລະ Atril, ກະລຸນາເຂົ້າເບິ່ງເວັບໄຊທ໌ຂອງໂຄງການ."
 
 #: data/atril.desktop.in.in:3 shell/ev-window-title.c:157
 msgid "Document Viewer"
-msgstr ""
+msgstr "ຕົວເບິ່ງເອກະສານ"
 
 #: data/atril.desktop.in.in:4
 msgid "View multi-page documents"
-msgstr ""
+msgstr "ເບິ່ງເອກະສານແບບຫຼາຍໜ້າ"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:19
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
-msgstr ""
+msgstr "ຂ້າມຂໍ້ຈຳກັດຂອງເອກະສານ"
 
 #: data/org.mate.Atril.gschema.xml:13
 msgid "Override document restrictions, like restriction to copy or to print."
-msgstr ""
+msgstr "ຂ້າມຂໍ້ຈຳກັດຂອງເອກະສານ ເຊັ່ນ ຂໍ້ຈຳກັດໃນການສຳເນົາ ຫຼື ການພິມ."
 
 #: data/org.mate.Atril.gschema.xml:17
 msgid "Automatically reload the document"
-msgstr ""
+msgstr "ໂຫຼດເອກະສານຄືນໃໝ່ໂດຍອັດຕະໂນມັດ"
 
 #: data/org.mate.Atril.gschema.xml:18
 msgid "Whether the document is automatically reloaded on file change."
-msgstr ""
+msgstr "ກຳນົດວ່າຈະໃຫ້ໂຫຼດເອກະສານຄືນໃໝ່ໂດຍອັດຕະໂນມັດຫຼືບໍ່ເມື່ອໄຟລ໌ມີການປ່ຽນແປງ."
 
 #: data/org.mate.Atril.gschema.xml:22
 msgid "The URI of the directory last used to open or save a document."
-msgstr ""
+msgstr "URI ຂອງໂຟນເດີຫຼ້າສຸດທີ່ໃຊ້ໃນການເປີດ ຫຼື ບັນທຶກເອກະສານ."
 
 #: data/org.mate.Atril.gschema.xml:26
 msgid "The URI of the directory last used to save a picture."
-msgstr ""
+msgstr "URI ຂອງໂຟນເດີຫຼ້າສຸດທີ່ໃຊ້ໃນການບັນທຶກຮູບພາບ."
 
 #: data/org.mate.Atril.gschema.xml:30
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "ຂະໜາດແຄຊ໌ຂອງໜ້າເປັນ MiB"
 
 #: data/org.mate.Atril.gschema.xml:31
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
 msgstr ""
+"ຂະໜາດສູງສຸດທີ່ຈະຖືກໃຊ້ເພື່ອແຄຊ໌ໜ້າທີ່ປະມວນຜົນແລ້ວ, ຈຳກັດລະດັບການຊູມສູງສຸດ."
 
 #: data/org.mate.Atril.gschema.xml:35
 msgid ""
 "Show a dialog to confirm that the user wants to activate the caret "
 "navigation."
-msgstr ""
+msgstr "ສະແດງກ່ອງຂໍ້ຄວາມເພື່ອຢືນຢັນວ່າຜູ້ໃຊ້ຕ້ອງການເປີດໃຊ້ການນຳທາງດ້ວຍເຄີເຊີ."
 
 #: previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
-msgstr ""
+msgstr "ລຶບໄຟລ໌ຊົ່ວຄາວ"
 
 #: previewer/ev-previewer.c:36
 msgid "Print settings file"
-msgstr ""
+msgstr "ພິມໄຟລ໌ການຕັ້ງຄ່າ"
 
 #: previewer/ev-previewer.c:107 previewer/ev-previewer.c:143
 msgid "MATE Document Previewer"
-msgstr ""
+msgstr "ຕົວສະແດງຕົວຢ່າງເອກະສານ MATE"
 
 #: previewer/ev-previewer-window.c:96 shell/ev-window.c:3666
 msgid "Failed to print document"
-msgstr ""
+msgstr "ບໍ່ສາມາດພິມເອກະສານໄດ້"
 
 #: previewer/ev-previewer-window.c:240
 #, c-format
 msgid "The selected printer '%s' could not be found"
-msgstr ""
+msgstr "ບໍ່ພົບເຄື່ອງພິມ '%s' ທີ່ເລືອກ"
 
 #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6595
 msgid "_Close"
-msgstr ""
+msgstr "_ປິດ"
 
 #: previewer/ev-previewer-window.c:287 shell/ev-window.c:6637
 msgid "_Previous Page"
-msgstr ""
+msgstr "_ໜ້າກ່ອນໜ້າ"
 
 #: previewer/ev-previewer-window.c:288 shell/ev-window.c:6638
 msgid "Go to the previous page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າກ່ອນໜ້າ"
 
 #: previewer/ev-previewer-window.c:290 shell/ev-window.c:6640
 msgid "_Next Page"
-msgstr ""
+msgstr "_ໜ້າຖັດໄປ"
 
 #: previewer/ev-previewer-window.c:291 shell/ev-window.c:6641
 msgid "Go to the next page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າຖັດໄປ"
 
 #: previewer/ev-previewer-window.c:293 shell/ev-window.c:6617
 msgid "Zoom _In"
-msgstr ""
+msgstr "ຊູມ_ເຂົ້າ"
 
 #: previewer/ev-previewer-window.c:294 shell/ev-window.c:6618
 msgid "Enlarge the document"
-msgstr ""
+msgstr "ຂະຫຍາຍເອກະສານ"
 
 #: previewer/ev-previewer-window.c:296 shell/ev-window.c:6620
 msgid "Zoom _Out"
-msgstr ""
+msgstr "ຊູມ_ອອກ"
 
 #: previewer/ev-previewer-window.c:297 shell/ev-window.c:6621
 msgid "Shrink the document"
-msgstr ""
+msgstr "ຫຍໍ້ເອກະສານ"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6624
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "ຕັ້ງຄ່າການຊູມຄືນໃໝ່ເປັນ 100%"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1319
 msgid "Print"
-msgstr ""
+msgstr "ພິມ"
 
 #: previewer/ev-previewer-window.c:305 shell/ev-window.c:6591
 msgid "Print this document"
-msgstr ""
+msgstr "ພິມເອກະສານນີ້"
 
 #: previewer/ev-previewer-window.c:339 shell/ev-window.c:6743
 msgid "Fit Pa_ge"
-msgstr ""
+msgstr "ພໍດີ_ໜ້າ"
 
 #: previewer/ev-previewer-window.c:340 shell/ev-window.c:6744
 msgid "Make the current document fill the window"
-msgstr ""
+msgstr "ເຮັດໃຫ້ເອກະສານປັດຈຸບັນພໍດີກັບໜ້າຕ່າງ"
 
 #: previewer/ev-previewer-window.c:342 shell/ev-window.c:6746
 msgid "Fit _Width"
-msgstr ""
+msgstr "ພໍດີ_ຄວາມກວ້າງ"
 
 #: previewer/ev-previewer-window.c:343 shell/ev-window.c:6747
 msgid "Make the current document fill the window width"
-msgstr ""
+msgstr "ເຮັດໃຫ້ເອກະສານປັດຈຸບັນພໍດີກັບຄວາມກວ້າງຂອງໜ້າຕ່າງ"
 
 #: previewer/ev-previewer-window.c:553 shell/ev-window.c:6903
 msgid "Page"
-msgstr ""
+msgstr "ໜ້າ"
 
 #: previewer/ev-previewer-window.c:554 shell/ev-window.c:6904
 msgid "Select Page"
-msgstr ""
+msgstr "ເລືອກໜ້າ"
 
 #: properties/ev-properties-main.c:116
 msgid "Document"
-msgstr ""
+msgstr "ເອກະສານ"
 
 #: properties/ev-properties-view.c:60
 msgid "Title:"
-msgstr ""
+msgstr "ຊື່ເລື່ອງ:"
 
 #: properties/ev-properties-view.c:61
 msgid "Location:"
-msgstr ""
+msgstr "ທີ່ຢູ່:"
 
 #: properties/ev-properties-view.c:62
 msgid "Subject:"
-msgstr ""
+msgstr "ຫົວຂໍ້:"
 
 #: properties/ev-properties-view.c:63
 #: shell/ev-annotation-properties-dialog.c:156
 msgid "Author:"
-msgstr ""
+msgstr "ຜູ້ຂຽນ:"
 
 #: properties/ev-properties-view.c:64
 msgid "Keywords:"
-msgstr ""
+msgstr "ຄຳສຳຄັນ:"
 
 #: properties/ev-properties-view.c:65
 msgid "Producer:"
-msgstr ""
+msgstr "ຜູ້ຜະລິດ:"
 
 #: properties/ev-properties-view.c:66
 msgid "Creator:"
-msgstr ""
+msgstr "ຜູ້ສ້າງ:"
 
 #: properties/ev-properties-view.c:67
 msgid "Created:"
-msgstr ""
+msgstr "ສ້າງເມື່ອ:"
 
 #: properties/ev-properties-view.c:68
 msgid "Modified:"
-msgstr ""
+msgstr "ແກ້ໄຂເມື່ອ:"
 
 #: properties/ev-properties-view.c:69
 msgid "Number of Pages:"
-msgstr ""
+msgstr "ຈຳນວນໜ້າ:"
 
 #: properties/ev-properties-view.c:70
 msgid "Optimized:"
-msgstr ""
+msgstr "ປັບແຕ່ງແລ້ວ:"
 
 #: properties/ev-properties-view.c:71
 msgid "Format:"
-msgstr ""
+msgstr "ຮູບແບບ:"
 
 #: properties/ev-properties-view.c:72
 msgid "Security:"
-msgstr ""
+msgstr "ຄວາມປອດໄພ:"
 
 #: properties/ev-properties-view.c:73
 msgid "Paper Size:"
-msgstr ""
+msgstr "ຂະໜາດເຈ້ຍ:"
 
 #: properties/ev-properties-view.c:193 libview/ev-print-operation.c:1902
 msgid "None"
-msgstr ""
+msgstr "ບໍ່ມີ"
 
 #: properties/ev-properties-view.c:221
 msgid "default:mm"
-msgstr ""
+msgstr "default:mm"
 
 #: properties/ev-properties-view.c:265
 #, c-format
 msgid "%.0f × %.0f mm"
-msgstr ""
+msgstr "%.0f × %.0f ມມ"
 
 #: properties/ev-properties-view.c:269
 #, c-format
 msgid "%.2f × %.2f inch"
-msgstr ""
+msgstr "%.2f × %.2f ນິ້ວ"
 
 #: properties/ev-properties-view.c:293
 #, c-format
 msgid "%s, Portrait (%s)"
-msgstr ""
+msgstr "%s, ແນວຕັ້ງ (%s)"
 
 #: properties/ev-properties-view.c:300
 #, c-format
 msgid "%s, Landscape (%s)"
-msgstr ""
+msgstr "%s, ແນວນອນ (%s)"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:4
 msgid "Atril properties"
-msgstr ""
+msgstr "ຄຸນສົມບັດຂອງ Atril"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:5
 msgid "Shows details for Atril documents"
-msgstr ""
+msgstr "ສະແດງລາຍລະອຽດສຳລັບເອກະສານ Atril"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:9
 msgid ""
@@ -1153,53 +1164,58 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
+"ລິຂະສິດ (C) 2000, 2001 Eazel Inc.\n"
+"ລິຂະສິດ (C) 2003 Andrew Sobala <aes@gnome.org>\n"
+"ລິຂະສິດ (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
+"ລິຂະສິດ (C) 2005 Red Hat, Inc\n"
+"ລິຂະສິດ (C) 2012–2021 ນັກພັດທະນາ MATE"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
 msgid "(%d of %d)"
-msgstr ""
+msgstr "(%d ຈາກ %d)"
 
 #: libmisc/ev-page-action-widget.c:66
 #, c-format
 msgid "of %d"
-msgstr ""
+msgstr "ຈາກ %d"
 
 #: libview/ev-print-operation.c:346
 msgid "Preparing to print…"
-msgstr ""
+msgstr "ກຳລັງກຽມພິມ…"
 
 #: libview/ev-print-operation.c:348
 msgid "Finishing…"
-msgstr ""
+msgstr "ກຳລັງສິ້ນສຸດ…"
 
 #: libview/ev-print-operation.c:350
 #, c-format
 msgid "Printing page %d of %d…"
-msgstr ""
+msgstr "ກຳລັງພິມໜ້າ %d ຈາກ %d…"
 
 #: libview/ev-print-operation.c:1172
 msgid "Printing is not supported on this printer."
-msgstr ""
+msgstr "ບໍ່ຮອງຮັບການພິມໃນເຄື່ອງພິມເຄື່ອງນີ້."
 
 #: libview/ev-print-operation.c:1237
 msgid "Invalid page selection"
-msgstr ""
+msgstr "ການເລືອກໜ້າບໍ່ຖືກຕ້ອງ"
 
 #: libview/ev-print-operation.c:1240
 msgid "Your print range selection does not include any pages"
-msgstr ""
+msgstr "ຊ່ວງການພິມທີ່ທ່ານເລືອກບໍ່ມີໜ້າໃດເລີຍ"
 
 #: libview/ev-print-operation.c:1896
 msgid "Page Scaling:"
-msgstr ""
+msgstr "ການປັບຂະໜາດໜ້າ:"
 
 #: libview/ev-print-operation.c:1903
 msgid "Shrink to Printable Area"
-msgstr ""
+msgstr "ຫຍໍ້ໃຫ້ພໍດີກັບພື້ນທີ່ພິມ"
 
 #: libview/ev-print-operation.c:1904
 msgid "Fit to Printable Area"
-msgstr ""
+msgstr "ປັບໃຫ້ພໍດີກັບພື້ນທີ່ພິມ"
 
 #: libview/ev-print-operation.c:1907
 msgid ""
@@ -1214,543 +1230,556 @@ msgid ""
 "• \"Fit to Printable Area\": Document pages are enlarged or reduced as "
 "required to fit the printable area of the printer page.\n"
 msgstr ""
+"ປັບຂະໜາດໜ້າເອກະສານໃຫ້ພໍດີກັບໜ້າເຄື່ອງພິມທີ່ເລືອກ. ເລືອກຈາກໜຶ່ງໃນລາຍການລຸ່ມນີ້:\n"
+"\n"
+"• \"ບໍ່ມີ\": ບໍ່ມີການປັບຂະໜາດໜ້າ.\n"
+"\n"
+"• \"ຫຍໍ້ໃຫ້ພໍດີກັບພື້ນທີ່ພິມ\": ໜ້າເອກະສານທີ່ໃຫຍ່ກວ່າພື້ນທີ່ພິມຈະຖືກຫຍໍ້ລົງໃຫ້ພໍດີ.\n"
+"\n"
+"• \"ປັບໃຫ້ພໍດີກັບພື້ນທີ່ພິມ\": ໜ້າເອກະສານຈະຖືກຂະຫຍາຍ ຫຼື ຫຍໍ້ຕາມຄວາມຕ້ອງການໃຫ້ພໍດີກັບພື້ນທີ່ພິມ.\n"
 
 #: libview/ev-print-operation.c:1919
 msgid "Auto Rotate and Center"
-msgstr ""
+msgstr "ໝູນອັດຕະໂນມັດ ແລະ ຈັດວາງໄວ້ກາງ"
 
 #: libview/ev-print-operation.c:1922
 msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
 msgstr ""
+"ໝູນທິດທາງຂອງໜ້າເຄື່ອງພິມໃນແຕ່ລະໜ້າໃຫ້ກົງກັບທິດທາງຂອງແຕ່ລະໜ້າເອກະສານ. ໜ້າເອກະສານຈະຖືກຈັດວາງໄວ້ກາ"
+"ງໜ້າເຄື່ອງພິມ."
 
 #: libview/ev-print-operation.c:1927
 msgid "Select page size using document page size"
-msgstr ""
+msgstr "ເລືອກຂະໜາດໜ້າໂດຍໃຊ້ຂະໜາດໜ້າເອກະສານ"
 
 #: libview/ev-print-operation.c:1929
 msgid ""
 "When enabled, each page will be printed on the same size paper as the "
 "document page."
-msgstr ""
+msgstr "ເມື່ອເປີດໃຊ້ງານ, ແຕ່ລະໜ້າຈະຖືກພິມໃສ່ເຈ້ຍຂະໜາດດຽວກັນກັບໜ້າເອກະສານ."
 
 #: libview/ev-print-operation.c:2011
 msgid "Page Handling"
-msgstr ""
+msgstr "ການຈັດການໜ້າ"
 
 #: libview/ev-jobs.c:619
 #, c-format
 msgid "Failed to render page %d"
-msgstr ""
+msgstr "ບໍ່ສາມາດປະມວນຜົນໜ້າ %d ໄດ້"
 
 #: libview/ev-jobs.c:1629
 #, c-format
 msgid "Failed to print page %d: %s"
-msgstr ""
+msgstr "ບໍ່ສາມາດພິມໜ້າ %d: %s"
 
 #: libview/ev-view-accessible.c:43
 msgid "Scroll Up"
-msgstr ""
+msgstr "ເລື່ອນຂຶ້ນ"
 
 #: libview/ev-view-accessible.c:44
 msgid "Scroll Down"
-msgstr ""
+msgstr "ເລື່ອນລົງ"
 
 #: libview/ev-view-accessible.c:50
 msgid "Scroll View Up"
-msgstr ""
+msgstr "ເລື່ອນມຸມມອງຂຶ້ນ"
 
 #: libview/ev-view-accessible.c:51
 msgid "Scroll View Down"
-msgstr ""
+msgstr "ເລື່ອນມຸມມອງລົງ"
 
 #: libview/ev-view-accessible.c:128
 msgid "Document View"
-msgstr ""
+msgstr "ມຸມມອງເອກະສານ"
 
 #: libview/ev-view-presentation.c:729
 msgid "Jump to page:"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າ:"
 
 #: libview/ev-view-presentation.c:1062
 msgid "End of presentation. Click to exit."
-msgstr ""
+msgstr "ຈົບການນຳສະເໜີ. ຄລິກເພື່ອອອກ."
 
 #: libview/ev-view.c:1905
 msgid "Go to first page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າທຳອິດ"
 
 #: libview/ev-view.c:1907
 msgid "Go to previous page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າກ່ອນໜ້າ"
 
 #: libview/ev-view.c:1909
 msgid "Go to next page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າຖັດໄປ"
 
 #: libview/ev-view.c:1911
 msgid "Go to last page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າສຸດທ້າຍ"
 
 #: libview/ev-view.c:1913
 msgid "Go to page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າ"
 
 #: libview/ev-view.c:1915
 msgid "Find"
-msgstr ""
+msgstr "ຄົ້ນຫາ"
 
 #: libview/ev-view.c:1943
 #, c-format
 msgid "Go to page %s"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າ %s"
 
 #: libview/ev-view.c:1949
 #, c-format
 msgid "Go to %s on file “%s”"
-msgstr ""
+msgstr "ໄປທີ່ %s ໃນໄຟລ໌ “%s”"
 
 #: libview/ev-view.c:1952
 #, c-format
 msgid "Go to file “%s”"
-msgstr ""
+msgstr "ໄປທີ່ໄຟລ໌ “%s”"
 
 #: libview/ev-view.c:1960
 #, c-format
 msgid "Launch %s"
-msgstr ""
+msgstr "ເປີດ %s"
 
 #: shell/eggfindbar.c:276
 msgid "Find:"
-msgstr ""
+msgstr "ຄົ້ນຫາ:"
 
 #: shell/eggfindbar.c:301
 msgid "Find previous occurrence of the search string"
-msgstr ""
+msgstr "ຄົ້ນຫາຂໍ້ຄວາມທີ່ພົບກ່ອນໜ້ານີ້"
 
 #: shell/eggfindbar.c:309
 msgid "Find next occurrence of the search string"
-msgstr ""
+msgstr "ຄົ້ນຫາຂໍ້ຄວາມທີ່ພົບຖັດໄປ"
 
 #: shell/eggfindbar.c:316
 msgid "Case Sensitive"
-msgstr ""
+msgstr "ຕົວພິມໃຫຍ່-ນ້ອຍມີຄວາມໝາຍຕ່າງກັນ"
 
 #: shell/eggfindbar.c:319
 msgid "Toggle case sensitive search"
-msgstr ""
+msgstr "ເປີດ/ປິດ ການຄົ້ນຫາແບບຕົວພິມໃຫຍ່-ນ້ອຍມີຄວາມໝາຍຕ່າງກັນ"
 
 #: shell/ev-annotation-properties-dialog.c:96
 msgid "Icon:"
-msgstr ""
+msgstr "ໄອຄອນ:"
 
 #: shell/ev-annotation-properties-dialog.c:102
 msgid "Note"
-msgstr ""
+msgstr "ໝາຍເຫດ"
 
 #: shell/ev-annotation-properties-dialog.c:103
 msgid "Comment"
-msgstr ""
+msgstr "ຄຳອະທິບາຍ"
 
 #: shell/ev-annotation-properties-dialog.c:104
 msgid "Key"
-msgstr ""
+msgstr "ຄີ"
 
 #: shell/ev-annotation-properties-dialog.c:105
 msgid "Help"
-msgstr ""
+msgstr "ຊ່ວຍເຫຼືອ"
 
 #: shell/ev-annotation-properties-dialog.c:106
 msgid "New Paragraph"
-msgstr ""
+msgstr "ຫຍໍ້ໜ້າໃໝ່"
 
 #: shell/ev-annotation-properties-dialog.c:107
 msgid "Paragraph"
-msgstr ""
+msgstr "ຫຍໍ້ໜ້າ"
 
 #: shell/ev-annotation-properties-dialog.c:108
 msgid "Insert"
-msgstr ""
+msgstr "ແຊກ"
 
 #: shell/ev-annotation-properties-dialog.c:109
 msgid "Cross"
-msgstr ""
+msgstr "ກາກະບາດ"
 
 #: shell/ev-annotation-properties-dialog.c:110
 msgid "Circle"
-msgstr ""
+msgstr "ວົງມົນ"
 
 #: shell/ev-annotation-properties-dialog.c:111
 msgid "Unknown"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກ"
 
 #: shell/ev-annotation-properties-dialog.c:136
 msgid "Annotation Properties"
-msgstr ""
+msgstr "ຄຸນສົມບັດຂອງຄຳອະທິບາຍປະກອບ"
 
 #: shell/ev-annotation-properties-dialog.c:167
 msgid "Color:"
-msgstr ""
+msgstr "ສີ:"
 
 #: shell/ev-annotation-properties-dialog.c:177
 msgid "Style:"
-msgstr ""
+msgstr "ຮູບແບບ:"
 
 #: shell/ev-annotation-properties-dialog.c:191
 msgid "Transparent"
-msgstr ""
+msgstr "ໂປ່ງໃສ"
 
 #: shell/ev-annotation-properties-dialog.c:198
 msgid "Opaque"
-msgstr ""
+msgstr "ທຶບແສງ"
 
 #: shell/ev-annotation-properties-dialog.c:208
 msgid "Initial window state:"
-msgstr ""
+msgstr "ສະຖານະໜ້າຕ່າງເລີ່ມຕົ້ນ:"
 
 #: shell/ev-annotation-properties-dialog.c:214
 msgid "Open"
-msgstr ""
+msgstr "ເປີດ"
 
 #: shell/ev-annotation-properties-dialog.c:215
 msgid "Close"
-msgstr ""
+msgstr "ປິດ"
 
 #: shell/ev-keyring.c:86
 #, c-format
 msgid "Password for document %s"
-msgstr ""
+msgstr "ລະຫັດຜ່ານສຳລັບເອກະສານ %s"
 
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:264
 msgid "Loading…"
-msgstr ""
+msgstr "ກຳລັງໂຫຼດ…"
 
 #: shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
-msgstr ""
+msgstr "ເປີດເອກະສານທີ່ໃຊ້ຫຼ້າສຸດ"
 
 #: shell/ev-password-view.c:133
 msgid ""
 "This document is locked and can only be read by entering the correct "
 "password."
 msgstr ""
+"ເອກະສານນີ້ຖືກລັອກໄວ້ ແລະ ສາມາດອ່ານໄດ້ໂດຍການປ້ອນລະຫັດຜ່ານທີ່ຖືກຕ້ອງເທົັ້ນ."
 
 #: shell/ev-password-view.c:142 shell/ev-password-view.c:258
 msgid "_Unlock Document"
-msgstr ""
+msgstr "_ປົດລັອກເອກະສານ"
 
 #: shell/ev-password-view.c:250
 msgid "Enter password"
-msgstr ""
+msgstr "ປ້ອນລະຫັດຜ່ານ"
 
 #: shell/ev-password-view.c:286
 #, c-format
 msgid ""
 "The document “%s” is locked and requires a password before it can be opened."
-msgstr ""
+msgstr "ເອກະສານ “%s” ຖືກລັອກໄວ້ ແລະ ຕ້ອງການລະຫັດຜ່ານກ່ອນທີ່ຈະເປີດໄດ້."
 
 #: shell/ev-password-view.c:289
 msgid "Password required"
-msgstr ""
+msgstr "ຕ້ອງການລະຫັດຜ່ານ"
 
 #: shell/ev-password-view.c:319
 msgid "_Password:"
-msgstr ""
+msgstr "_ລະຫັດຜ່ານ:"
 
 #: shell/ev-password-view.c:351
 msgid "Forget password _immediately"
-msgstr ""
+msgstr "ລືມລະຫັດຜ່ານ_ທັນທີ"
 
 #: shell/ev-password-view.c:363
 msgid "Remember password until you _log out"
-msgstr ""
+msgstr "ຈື່ລະຫັດຜ່ານໄວ້ຈົນກວ່າທ່ານຈະ_ອອກຈາກລະບົບ"
 
 #: shell/ev-password-view.c:375
 msgid "Remember _forever"
-msgstr ""
+msgstr "ຈື່ໄວ້_ຕະຫຼອດໄປ"
 
 #: shell/ev-properties-dialog.c:120
 msgid "Properties"
-msgstr ""
+msgstr "ຄຸນສົມບັດ"
 
 #: shell/ev-properties-dialog.c:158
 msgid "General"
-msgstr ""
+msgstr "ທົ່ວໄປ"
 
 #: shell/ev-properties-dialog.c:168
 msgid "Fonts"
-msgstr ""
+msgstr "ຟອນ"
 
 #: shell/ev-properties-dialog.c:181
 msgid "Document License"
-msgstr ""
+msgstr "ໃບອະນຸຍາດເອກະສານ"
 
 #: shell/ev-properties-fonts.c:136
 msgid "Font"
-msgstr ""
+msgstr "ຟອນ"
 
 #: shell/ev-properties-fonts.c:163
 #, c-format
 msgid "Gathering font information… %3d%%"
-msgstr ""
+msgstr "ກຳລັງຮວບຮວມຂໍ້ມູນຟອນ… %3d%%"
 
 #: shell/ev-properties-license.c:134
 msgid "Usage terms"
-msgstr ""
+msgstr "ເງື່ອນໄຂການໃຊ້ງານ"
 
 #: shell/ev-properties-license.c:140
 msgid "Text License"
-msgstr ""
+msgstr "ໃບອະນຸຍາດຂໍ້ຄວາມ"
 
 #: shell/ev-properties-license.c:146
 msgid "Further Information"
-msgstr ""
+msgstr "ຂໍ້ມູນເພີ່ມເຕີມ"
 
 #: shell/ev-sidebar.c:369
 msgid "Hide sidebar"
-msgstr ""
+msgstr "ເຊື່ອງແຖບຂ້າງ"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
-msgstr ""
+msgstr "ເພີ່ມ"
 
 #: shell/ev-sidebar-annotations.c:207
 msgid "Add text annotation"
-msgstr ""
+msgstr "ເພີ່ມຄຳອະທິບາຍປະກອບຂໍ້ຄວາມ"
 
 #: shell/ev-sidebar-annotations.c:342
 msgid "Document contains no annotations"
-msgstr ""
+msgstr "ເອກະສານບໍ່ມີຄຳອະທິບາຍປະກອບ"
 
 #: shell/ev-sidebar-annotations.c:374
 #, c-format
 msgid "Page %d"
-msgstr ""
+msgstr "ໜ້າ %d"
 
 #: shell/ev-sidebar-annotations.c:515
 msgid "Annotations"
-msgstr ""
+msgstr "ຄຳອະທິບາຍປະກອບ"
 
 #: shell/ev-sidebar-attachments.c:692
 msgid "Attachments"
-msgstr ""
+msgstr "ໄຟລ໌ແນບ"
 
 #: shell/ev-sidebar-bookmarks.c:154
 msgid "_Open Bookmark"
-msgstr ""
+msgstr "_ເປີດບຸກມາກ"
 
 #: shell/ev-sidebar-bookmarks.c:156
 msgid "_Rename Bookmark"
-msgstr ""
+msgstr "_ປ່ຽນຊື່ບຸກມາກ"
 
 #: shell/ev-sidebar-bookmarks.c:158
 msgid "_Remove Bookmark"
-msgstr ""
+msgstr "_ເອົາບຸກມາກອອກ"
 
 #: shell/ev-sidebar-bookmarks.c:313 shell/ev-window.c:1015
 #: shell/ev-window.c:5144
 #, c-format
 msgid "Page %s"
-msgstr ""
+msgstr "ໜ້າ %s"
 
 #: shell/ev-sidebar-bookmarks.c:469
 msgid "_Add"
-msgstr ""
+msgstr "_ເພີ່ມ"
 
 #: shell/ev-sidebar-bookmarks.c:479
 msgid "_Remove"
-msgstr ""
+msgstr "_ເອົາອອກ"
 
 #: shell/ev-sidebar-bookmarks.c:605
 msgid "Bookmarks"
-msgstr ""
+msgstr "ບຸກມາກ"
 
 #: shell/ev-sidebar-layers.c:440
 msgid "Layers"
-msgstr ""
+msgstr "ເລເຢີ"
 
 #: shell/ev-sidebar-links.c:735
 msgid "Index"
-msgstr ""
+msgstr "ດັດຊະນີ"
 
 #: shell/ev-sidebar-thumbnails.c:1031
 msgid "Thumbnails"
-msgstr ""
+msgstr "ຮູບຕົວຢ່າງ"
 
 #: shell/ev-window.c:1012
 #, c-format
 msgid "Page %s — %s"
-msgstr ""
+msgstr "ໜ້າ %s — %s"
 
 #: shell/ev-window.c:1172
 msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
 msgstr ""
+"ບໍ່ສາມາດເຂົ້າສູ່ໂໝດການນຳສະເໜີດ້ວຍເອກະສານ ePub ໄດ້, ກະລຸນາໃຊ້ໂໝດເຕັມຈໍແທນ."
 
 #: shell/ev-window.c:1778
 msgid "The document contains no pages"
-msgstr ""
+msgstr "ເອກະສານບໍ່ມີໜ້າໃດເລີຍ"
 
 #: shell/ev-window.c:1781
 msgid "The document contains only empty pages"
-msgstr ""
+msgstr "ເອກະສານມີແຕ່ໜ້າຫວ່າງເປົ່າ"
 
 #: shell/ev-window.c:1828
 msgid "Presentation mode is not supported for ePub documents."
-msgstr ""
+msgstr "ບໍ່ຮອງຮັບໂໝດການນຳສະເໜີສຳລັບເອກະສານ ePub."
 
 #: shell/ev-window.c:2022 shell/ev-window.c:2203
 msgid "Unable to open document"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດເອກະສານໄດ້"
 
 #: shell/ev-window.c:2159
 #, c-format
 msgid "Loading document from “%s”"
-msgstr ""
+msgstr "ກຳລັງໂຫຼດເອກະສານຈາກ “%s”"
 
 #: shell/ev-window.c:2314 shell/ev-window.c:2605
 #, c-format
 msgid "Downloading document (%d%%)"
-msgstr ""
+msgstr "ກຳລັງດາວໂຫຼດເອກະສານ (%d%%)"
 
 #: shell/ev-window.c:2347
 msgid "Failed to load remote file."
-msgstr ""
+msgstr "ບໍ່ສາມາດໂຫຼດໄຟລ໌ທາງໄກໄດ້."
 
 #: shell/ev-window.c:2549
 #, c-format
 msgid "Reloading document from %s"
-msgstr ""
+msgstr "ກຳລັງໂຫຼດເອກະສານຄືນໃໝ່ຈາກ %s"
 
 #: shell/ev-window.c:2581
 msgid "Failed to reload document."
-msgstr ""
+msgstr "ບໍ່ສາມາດໂຫຼດເອກະສານຄືນໃໝ່ໄດ້."
 
 #: shell/ev-window.c:2799
 msgid "Open Document"
-msgstr ""
+msgstr "ເປີດເອກະສານ"
 
 #: shell/ev-window.c:3078
 #, c-format
 msgid "Saving document to %s"
-msgstr ""
+msgstr "ກຳລັງບັນທຶກເອກະສານໄປທີ່ %s"
 
 #: shell/ev-window.c:3081
 #, c-format
 msgid "Saving attachment to %s"
-msgstr ""
+msgstr "ກຳລັງບັນທຶກໄຟລ໌ແນບໄປທີ່ %s"
 
 #: shell/ev-window.c:3084
 #, c-format
 msgid "Saving image to %s"
-msgstr ""
+msgstr "ກຳລັງບັນທຶກຮູບພາບໄປທີ່ %s"
 
 #: shell/ev-window.c:3128 shell/ev-window.c:3228
 #, c-format
 msgid "The file could not be saved as “%s”."
-msgstr ""
+msgstr "ບໍ່ສາມາດບັນທຶກໄຟລ໌ເປັນ “%s” ໄດ້."
 
 #: shell/ev-window.c:3159
 #, c-format
 msgid "Uploading document (%d%%)"
-msgstr ""
+msgstr "ກຳລັງອັບໂຫຼດເອກະສານ (%d%%)"
 
 #: shell/ev-window.c:3163
 #, c-format
 msgid "Uploading attachment (%d%%)"
-msgstr ""
+msgstr "ກຳລັງອັບໂຫຼດໄຟລ໌ແນບ (%d%%)"
 
 #: shell/ev-window.c:3167
 #, c-format
 msgid "Uploading image (%d%%)"
-msgstr ""
+msgstr "ກຳລັງອັບໂຫຼດຮູບພາບ (%d%%)"
 
 #: shell/ev-window.c:3280
 msgid "Save As…"
-msgstr ""
+msgstr "ບັນທຶກເປັນ…"
 
 #: shell/ev-window.c:3358
 msgid "Could not send current document"
-msgstr ""
+msgstr "ບໍ່ສາມາດສົ່ງເອກະສານປັດຈຸບັນໄດ້"
 
 #: shell/ev-window.c:3610
 #, c-format
 msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
-msgstr[0] ""
+msgstr[0] "ມີ %lu ລາຍການທີ່ຍັງຄົງຄ້າງໃນຄິວ"
 
 #: shell/ev-window.c:3723
 #, c-format
 msgid "Printing job “%s”"
-msgstr ""
+msgstr "ລາຍການພິມ “%s”"
 
 #: shell/ev-window.c:3900
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a "
 "copy, changes will be permanently lost."
 msgstr ""
+"ເອກະສານມີຊ່ອງຟອມທີ່ຖືກປ້ອນຂໍ້ມູນແລ້ວ. ຖ້າທ່ານບໍ່ບັນທຶກສຳເນົາໄວ້, ການປ່ຽນແປງຈະຫາຍໄປຖາວອນ."
 
 #: shell/ev-window.c:3904
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
+"ເອກະສານມີຄຳອະທິບາຍປະກອບໃໝ່ ຫຼື ທີ່ຖືກແກ້ໄຂ. ຖ້າທ່ານບໍ່ບັນທຶກສຳເນົາໄວ້, ການປ່ຽນແປງຈະຫາຍໄປຖາວອນ."
 
 #: shell/ev-window.c:3910
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
-msgstr ""
+msgstr "ບັນທຶກສຳເນົາຂອງເອກະສານ “%s” ກ່ອນຈະປິດບໍ່?"
 
 #: shell/ev-window.c:3929
 msgid "Close _without Saving"
-msgstr ""
+msgstr "ປິດ_ໂດຍບໍ່ບັນທຶກ"
 
 #: shell/ev-window.c:3933 shell/ev-window.c:6584
 msgid "_Save As…"
-msgstr ""
+msgstr "_ບັນທຶກເປັນ…"
 
 #: shell/ev-window.c:4002
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
-msgstr ""
+msgstr "ລໍຖ້າໃຫ້ລາຍການພິມ “%s” ສຳເລັດກ່ອນຈະປິດບໍ່?"
 
 #: shell/ev-window.c:4009
 #, c-format
 msgid "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
-msgstr[0] ""
+msgstr[0] "ມີ %d ລາຍການພິມທີ່ກຳລັງເຮັດວຽກຢູ່. ລໍຖ້າໃຫ້ການພິມສຳເລັດກ່ອນຈະປິດບໍ່?"
 
 #: shell/ev-window.c:4024
 msgid "If you close the window, pending print jobs will not be printed."
-msgstr ""
+msgstr "ຖ້າທ່ານປິດໜ້າຕ່າງ, ລາຍການພິມທີ່ຄ້າງຢູ່ຈະບໍ່ຖືກພິມ."
 
 #: shell/ev-window.c:4028
 msgid "Cancel _print and Close"
-msgstr ""
+msgstr "ຍົກເລີກ_ການພິມ ແລະ ປິດ"
 
 #: shell/ev-window.c:4032
 msgid "Close _after Printing"
-msgstr ""
+msgstr "ປິດ_ຫຼັງຈາກພິມສຳເລັດ"
 
 #: shell/ev-window.c:4471
 msgid "Running in presentation mode"
-msgstr ""
+msgstr "ກຳລັງເຮັດວຽກໃນໂໝດການນຳສະເໜີ"
 
 #: shell/ev-window.c:4537
 msgid "Presentation mode is not supported for ePub documents"
-msgstr ""
+msgstr "ບໍ່ຮອງຮັບໂໝດການນຳສະເໜີສຳລັບເອກະສານ ePub"
 
 #: shell/ev-window.c:4865
 msgid "Toolbar Editor"
-msgstr ""
+msgstr "ຕົວແກ້ໄຂແຖບເຄື່ອງມື"
 
 #: shell/ev-window.c:5190
 msgid "There was an error displaying help"
-msgstr ""
+msgstr "ມີຂໍ້ຜິດພາດໃນການສະແດງການຊ່ວຍເຫຼືອ"
 
 #: shell/ev-window.c:5443
 #, c-format
@@ -1758,18 +1787,20 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
+"Atril ແມ່ນຕົວເບິ່ງເອກະສານແບບຫຼາຍໜ້າທີ່ໃຊ້ງ່າຍ,\n"
+"ຂັບເຄື່ອນໂດຍ SyncTex %s ແລະ %s %s."
 
 #: shell/ev-window.c:5446
 msgid "Atril is a simple multi-page document viewer."
-msgstr ""
+msgstr "Atril ແມ່ນຕົວເບິ່ງເອກະສານແບບຫຼາຍໜ້າທີ່ໃຊ້ງ່າຍ."
 
 #: shell/ev-window.c:5459
 msgid "MATE Documentation Team"
-msgstr ""
+msgstr "ທີມງານເອກະສານ MATE"
 
 #: shell/ev-window.c:5460
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "ທີມງານເອກະສານ GNOME"
 
 #: shell/ev-window.c:5465
 msgid ""
@@ -1778,6 +1809,9 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril ແມ່ນຊອບແວຟຣີ; ທ່ານສາມາດແຈກຢາຍຄືນໃໝ່ ແລະ/ຫຼື ແກ້ໄຂມັນໄດ້ພາຍໃຕ້ເງື່ອນໄຂຂອງ GNU "
+"General Public License ທີ່ຈັດພິມໂດຍ Free Software Foundation; ບໍ່ວ່າຈະເປັນເວີຊັນ 2 ຂອງໃ"
+"ບອະນຸຍາດ, ຫຼື (ຕາມຕົວເລືອກຂອງທ່ານ) ເວີຊັນໃດໜຶ່ງທີ່ໃໝ່ກວ່າ."
 
 #: shell/ev-window.c:5469
 msgid ""
@@ -1786,6 +1820,9 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril ຖືກແຈກຢາຍດ້ວຍຄວາມຫວັງວ່າມັນຈະເປັນປະໂຫຍດ, ແຕ່ບໍ່ມີການຮັບປະກັນໃດໆ; ໂດຍບໍ່ມີເຖິງການຮັບປະກັນໂ"
+"ດຍນັຍຂອງການຊື້ຂາຍ ຫຼື ຄວາມເໝາະສົມສຳລັບຈຸດປະສົງສະເພາະໃດໜຶ່ງ. ເບິ່ງ GNU General Public "
+"License ສຳລັບລາຍລະອຽດເພີ່ມເຕີມ."
 
 #: shell/ev-window.c:5473
 msgid ""
@@ -1793,43 +1830,48 @@ msgid ""
 "Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"ທ່ານຄວນຈະໄດ້ຮັບສຳເນົາຂອງ GNU General Public License ພ້ອມກັບ Atril; ຖ້າບໍ່ໄດ້ຮັບ, ກະລຸນາຂຽ"
+"ນໄປທີ່ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, "
+"Boston, MA 02110-1301 USA"
 
 #: shell/ev-window.c:5518
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "ກ່ຽວກັບຕົວເບິ່ງເອກະສານ Atril"
 
 #: shell/ev-window.c:5519
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"ລິຂະສິດ © 1996–2009 ຄະນະຜູ້ຂຽນ Evince\n"
+"ລິຂະສິດ © 2012–2021 ນັກພັດທະນາ MATE"
 
 #: shell/ev-window.c:5526
 msgid "translator-credits"
-msgstr ""
+msgstr "ຜູ້ແປພາສາລາວ"
 
 #: shell/ev-window.c:5830
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
+msgstr[0] "ພົບ %d ບ່ອນໃນໜ້ານີ້"
 
 #: shell/ev-window.c:5835
 msgid "Not found"
-msgstr ""
+msgstr "ບໍ່ພົບ"
 
 #: shell/ev-window.c:5841
 #, c-format
 msgid "%3d%% remaining to search"
-msgstr ""
+msgstr "ເຫຼືອອີກ %3d%% ໃນການຄົ້ນຫາ"
 
 #: shell/ev-window.c:6251
 msgid "Enable caret navigation?"
-msgstr ""
+msgstr "ເປີດໃຊ້ການນຳທາງດ້ວຍເຄີເຊີ (caret navigation) ບໍ່?"
 
 #: shell/ev-window.c:6253
 msgid "_Enable"
-msgstr ""
+msgstr "_ເປີດໃຊ້"
 
 #: shell/ev-window.c:6256
 msgid ""
@@ -1837,424 +1879,427 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"ການກົດ F7 ຈະເປີດ ຫຼື ປິດການນຳທາງດ້ວຍເຄີເຊີ. ຄຸນສົມບັດນີ້ຈະວາງເຄີເຊີທີ່ເຄື່ອນຍ້າຍໄດ້ໃນໜ້າຂໍ້ຄວາມ, ເຮັດໃ"
+"ຫ້ທ່ານສາມາດຍ້າຍໄປມາ ແລະ ເລືອກຂໍ້ຄວາມດ້ວຍຄີບອດຂອງທ່ານໄດ້. ທ່ານຕ້ອງການເປີດໃຊ້ການນຳທາງດ້ວຍເຄີເຊີ"
+"ບໍ່?"
 
 #: shell/ev-window.c:6261
 msgid "Don't show this message again"
-msgstr ""
+msgstr "ບໍ່ຕ້ອງສະແດງຂໍ້ຄວາມນີ້ອີກ"
 
 #: shell/ev-window.c:6570
 msgid "_File"
-msgstr ""
+msgstr "_ໄຟລ໌"
 
 #: shell/ev-window.c:6571
 msgid "_Edit"
-msgstr ""
+msgstr "_ແກ້ໄຂ"
 
 #: shell/ev-window.c:6572
 msgid "_View"
-msgstr ""
+msgstr "_ມຸມມອງ"
 
 #: shell/ev-window.c:6573
 msgid "_Go"
-msgstr ""
+msgstr "_ໄປ"
 
 #: shell/ev-window.c:6574
 msgid "_Bookmarks"
-msgstr ""
+msgstr "_ບຸກມາກ"
 
 #: shell/ev-window.c:6575
 msgid "_Help"
-msgstr ""
+msgstr "_ຊ່ວຍເຫຼືອ"
 
 #: shell/ev-window.c:6578 shell/ev-window.c:6944
 msgid "_Open…"
-msgstr ""
+msgstr "_ເປີດ…"
 
 #: shell/ev-window.c:6579 shell/ev-window.c:6945
 msgid "Open an existing document"
-msgstr ""
+msgstr "ເປີດເອກະສານທີ່ມີຢູ່"
 
 #: shell/ev-window.c:6581
 msgid "Op_en a Copy"
-msgstr ""
+msgstr "ເປີ_ດສຳເນົາ"
 
 #: shell/ev-window.c:6582
 msgid "Open a copy of the current document in a new window"
-msgstr ""
+msgstr "ເປີດສຳເນົາຂອງເອກະສານປັດຈຸບັນໃນໜ້າຕ່າງໃໝ່"
 
 #: shell/ev-window.c:6585
 msgid "Save a copy of the current document"
-msgstr ""
+msgstr "ບັນທຶກສຳເນົາຂອງເອກະສານປັດຈຸບັນ"
 
 #: shell/ev-window.c:6587
 msgid "Send _To..."
-msgstr ""
+msgstr "ສົ່ງ_ໄປຫາ..."
 
 #: shell/ev-window.c:6588
 msgid "Send current document by mail, instant message..."
-msgstr ""
+msgstr "ສົ່ງເອກະສານປັດຈຸບັນຜ່ານທາງອີເມວ, ຂໍ້ຄວາມທັນທີ..."
 
 #: shell/ev-window.c:6590
 msgid "_Print…"
-msgstr ""
+msgstr "_ພິມ…"
 
 #: shell/ev-window.c:6593
 msgid "P_roperties"
-msgstr ""
+msgstr "ຄຸ_ນສົມບັດ"
 
 #: shell/ev-window.c:6599
 msgid "_Copy"
-msgstr ""
+msgstr "_ຄັດລອກ"
 
 #: shell/ev-window.c:6601
 msgid "Select _All"
-msgstr ""
+msgstr "ເລືອກ_ທັງໝົດ"
 
 #: shell/ev-window.c:6603
 msgid "Find Ne_xt"
-msgstr ""
+msgstr "ຫາ_ຕໍ່ໄປ"
 
 #: shell/ev-window.c:6605
 msgid "Find Pre_vious"
-msgstr ""
+msgstr "ຫາ_ກ່ອນໜ້າ"
 
 #: shell/ev-window.c:6607
 msgid "T_oolbar"
-msgstr ""
+msgstr "ແຖບ_ເຄື່ອງມື"
 
 #: shell/ev-window.c:6609
 msgid "Rotate _Left"
-msgstr ""
+msgstr "ໝູນ_ຊ້າຍ"
 
 #: shell/ev-window.c:6611
 msgid "Rotate _Right"
-msgstr ""
+msgstr "ໝູນ_ຂວາ"
 
 #: shell/ev-window.c:6613
 msgid "Save Current Settings as _Default"
-msgstr ""
+msgstr "ບັນທຶກການຕັ້ງຄ່າປັດຈຸບັນເປັນຄ່າ_ເລີ່ມຕົ້ນ"
 
 #: shell/ev-window.c:6623
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_ຕັ້ງຄ່າການຊູມຄືນໃໝ່"
 
 #: shell/ev-window.c:6626
 msgid "_Reload"
-msgstr ""
+msgstr "_ໂຫຼດໃໝ່"
 
 #: shell/ev-window.c:6627
 msgid "Reload the document"
-msgstr ""
+msgstr "ໂຫຼດເອກະສານຄືນໃໝ່"
 
 #: shell/ev-window.c:6629
 msgid "_Expand Window to Fit"
-msgstr ""
+msgstr "_ຂະຫຍາຍໜ້າຕ່າງໃຫ້ພໍດີ"
 
 #: shell/ev-window.c:6633
 msgid "Auto_scroll"
-msgstr ""
+msgstr "ເລື່ອນ_ອັດຕະໂນມັດ"
 
 #: shell/ev-window.c:6643
 msgid "_First Page"
-msgstr ""
+msgstr "_ໜ້າທຳອິດ"
 
 #: shell/ev-window.c:6644
 msgid "Go to the first page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າທຳອິດ"
 
 #: shell/ev-window.c:6646
 msgid "_Last Page"
-msgstr ""
+msgstr "_ໜ້າສຸດທ້າຍ"
 
 #: shell/ev-window.c:6647
 msgid "Go to the last page"
-msgstr ""
+msgstr "ໄປທີ່ໜ້າສຸດທ້າຍ"
 
 #: shell/ev-window.c:6651
 msgid "_Add Bookmark"
-msgstr ""
+msgstr "ເພີ່ມ_ບຸກມາກ"
 
 #: shell/ev-window.c:6652
 msgid "Add a bookmark for the current page"
-msgstr ""
+msgstr "ເພີ່ມບຸກມາກສຳລັບໜ້າປັດຈຸບັນ"
 
 #: shell/ev-window.c:6656
 msgid "_Contents"
-msgstr ""
+msgstr "_ເນື້ອໃນ"
 
 #: shell/ev-window.c:6659
 msgid "_About"
-msgstr ""
+msgstr "_ກ່ຽວກັບ"
 
 #: shell/ev-window.c:6663
 msgid "Leave Fullscreen"
-msgstr ""
+msgstr "ອອກຈາກເຕັມຈໍ"
 
 #: shell/ev-window.c:6664
 msgid "Leave fullscreen mode"
-msgstr ""
+msgstr "ອອກຈາກໂໝດເຕັມຈໍ"
 
 #: shell/ev-window.c:6666
 msgid "Start Presentation"
-msgstr ""
+msgstr "ເລີ່ມການນຳສະເໜີ"
 
 #: shell/ev-window.c:6667
 msgid "Start a presentation"
-msgstr ""
+msgstr "ເລີ່ມການນຳສະເໜີ"
 
 #: shell/ev-window.c:6722
 msgid "_Toolbar"
-msgstr ""
+msgstr "_ແຖບເຄື່ອງມື"
 
 #: shell/ev-window.c:6723
 msgid "Show or hide the toolbar"
-msgstr ""
+msgstr "ສະແດງ ຫຼື ເຊື່ອງແຖບເຄື່ອງມື"
 
 #: shell/ev-window.c:6725
 msgid "Side _Pane"
-msgstr ""
+msgstr "_ແຖບຂ້າງ"
 
 #: shell/ev-window.c:6726
 msgid "Show or hide the side pane"
-msgstr ""
+msgstr "ສະແດງ ຫຼື ເຊື່ອງແຖບຂ້າງ"
 
 #: shell/ev-window.c:6728
 msgid "_Continuous"
-msgstr ""
+msgstr "_ຕໍ່ເນື່ອງ"
 
 #: shell/ev-window.c:6729
 msgid "Show the entire document"
-msgstr ""
+msgstr "ສະແດງເອກະສານທັງໝົດ"
 
 #: shell/ev-window.c:6731
 msgid "_Dual"
-msgstr ""
+msgstr "_ແບບຄູ່"
 
 #: shell/ev-window.c:6732
 msgid "Show two pages at once"
-msgstr ""
+msgstr "ສະແດງສອງໜ້າພ້ອມກັນ"
 
 #: shell/ev-window.c:6734
 msgid "_Odd pages left"
-msgstr ""
+msgstr "_ໜ້າຄູ່ຢູ່ຊ້າຍ"
 
 #: shell/ev-window.c:6735
 msgid "Show odd pages on the left in dual mode"
-msgstr ""
+msgstr "ສະແດງໜ້າຄູ່ຢູ່ເບື້ອງຊ້າຍໃນໂໝດແບບຄູ່"
 
 #: shell/ev-window.c:6737
 msgid "_Fullscreen"
-msgstr ""
+msgstr "_ເຕັມຈໍ"
 
 #: shell/ev-window.c:6738
 msgid "Expand the window to fill the screen"
-msgstr ""
+msgstr "ຂະຫຍາຍໜ້າຕ່າງໃຫ້ເຕັມຈໍ"
 
 #: shell/ev-window.c:6740
 msgid "Pre_sentation"
-msgstr ""
+msgstr "ການນຳ_ສະເໜີ"
 
 #: shell/ev-window.c:6741
 msgid "Run document as a presentation"
-msgstr ""
+msgstr "ເປີດເອກະສານເປັນການນຳສະເໜີ"
 
 #: shell/ev-window.c:6749
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "ກັບ_ສີ"
 
 #: shell/ev-window.c:6750
 msgid "Show page contents with the colors inverted"
-msgstr ""
+msgstr "ສະແດງເນື້ອໃນໜ້າໂດຍການກັບສີ"
 
 #: shell/ev-window.c:6752
 msgid "Caret _Navigation"
-msgstr ""
+msgstr "ການນຳທາງດ້ວຍ_ເຄີເຊີ"
 
 #: shell/ev-window.c:6753
 msgid "Activate or disable caret-navigation"
-msgstr ""
+msgstr "ເປີດໃຊ້ ຫຼື ປິດການນຳທາງດ້ວຍເຄີເຊີ"
 
 #: shell/ev-window.c:6756
 msgid "_Find…"
-msgstr ""
+msgstr "_ຄົ້ນຫາ…"
 
 #: shell/ev-window.c:6757
 msgid "Find a word or phrase in the document"
-msgstr ""
+msgstr "ຄົ້ນຫາຄຳ ຫຼື ວະລີໃນເອກະສານ"
 
 #: shell/ev-window.c:6764
 msgid "_Open Link"
-msgstr ""
+msgstr "_ເປີດລິ້ງ"
 
 #: shell/ev-window.c:6766
 msgid "_Go To"
-msgstr ""
+msgstr "_ໄປທີ່"
 
 #: shell/ev-window.c:6768
 msgid "Open in New _Window"
-msgstr ""
+msgstr "ເປີດໃນ_ປ່ອງຢ້ຽມໃໝ່"
 
 #: shell/ev-window.c:6770
 msgid "_Copy Link Address"
-msgstr ""
+msgstr "_ສຳເນົາທີ່ຢູ່ລິ້ງ"
 
 #: shell/ev-window.c:6772
 msgid "_Save Image As…"
-msgstr ""
+msgstr "_ບັນທຶກຮູບພາບເປັນ…"
 
 #: shell/ev-window.c:6774
 msgid "Copy _Image"
-msgstr ""
+msgstr "ສຳເນົາ_ຮູບພາບ"
 
 #: shell/ev-window.c:6776
 msgid "Annotation Properties…"
-msgstr ""
+msgstr "ຄຸນສົມບັດຂອງຄຳອະທິບາຍປະກອບ…"
 
 #: shell/ev-window.c:6778
 msgid "Remove Annot…"
-msgstr ""
+msgstr "ເອົາຄຳອະທິບາຍປະກອບອອກ…"
 
 #: shell/ev-window.c:6783
 msgid "_Open Attachment"
-msgstr ""
+msgstr "_ເປີດໄຟລ໌ແນບ"
 
 #: shell/ev-window.c:6785
 msgid "_Save Attachment As…"
-msgstr ""
+msgstr "_ບັນທຶກໄຟລ໌ແນບເປັນ…"
 
 #: shell/ev-window.c:6918
 msgid "Zoom"
-msgstr ""
+msgstr "ຊູມ"
 
 #: shell/ev-window.c:6920
 msgid "Adjust the zoom level"
-msgstr ""
+msgstr "ປັບລະດັບການຊູມ"
 
 #: shell/ev-window.c:6930
 msgid "Navigation"
-msgstr ""
+msgstr "ການນຳທາງ"
 
 #: shell/ev-window.c:6932
 msgid "Back"
-msgstr ""
+msgstr "ກັບຄືນ"
 
 #: shell/ev-window.c:6935
 msgid "Move across visited pages"
-msgstr ""
+msgstr "ຍ້າຍໄປຕາມໜ້າຕ່າງໆທີ່ເຄີຍເບິ່ງ"
 
 #: shell/ev-window.c:6966
 msgid "Send To"
-msgstr ""
+msgstr "ສົ່ງໄປຫາ"
 
 #: shell/ev-window.c:6972
 msgid "Previous"
-msgstr ""
+msgstr "ກ່ອນໜ້າ"
 
 #: shell/ev-window.c:6977
 msgid "Next"
-msgstr ""
+msgstr "ຖັດໄປ"
 
 #: shell/ev-window.c:6981
 msgid "Zoom In"
-msgstr ""
+msgstr "ຊູມເຂົ້າ"
 
 #: shell/ev-window.c:6985
 msgid "Zoom Out"
-msgstr ""
+msgstr "ຊູມອອກ"
 
 #: shell/ev-window.c:6989
 msgid "Reset Zoom"
-msgstr ""
+msgstr "ຕັ້ງຄ່າການຊູມຄືນໃໝ່"
 
 #: shell/ev-window.c:7133 shell/ev-window.c:7149
 msgid "Unable to launch external application."
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດແອັບພລິເຄຊັນພາຍນອກໄດ້."
 
 #: shell/ev-window.c:7206
 msgid "Unable to open external link"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດລິ້ງພາຍນອກໄດ້"
 
 #: shell/ev-window.c:7400
 msgid "Couldn't find appropriate format to save image"
-msgstr ""
+msgstr "ບໍ່ພົບຮູບແບບທີ່ເໝາະສົມໃນການບັນທຶກຮູບພາບ"
 
 #: shell/ev-window.c:7432
 msgid "The image could not be saved."
-msgstr ""
+msgstr "ບໍ່ສາມາດບັນທຶກຮູບພາບໄດ້."
 
 #: shell/ev-window.c:7464
 msgid "Save Image"
-msgstr ""
+msgstr "ບັນທຶກຮູບພາບ"
 
 #: shell/ev-window.c:7602
 msgid "Unable to open attachment"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ແນບໄດ້"
 
 #: shell/ev-window.c:7658
 msgid "The attachment could not be saved."
-msgstr ""
+msgstr "ບໍ່ສາມາດບັນທຶກໄຟລ໌ແນບໄດ້."
 
 #: shell/ev-window.c:7703
 msgid "Save Attachment"
-msgstr ""
+msgstr "ບັນທຶກໄຟລ໌ແນບ"
 
 #: shell/ev-window-title.c:170
 #, c-format
 msgid "%s — Password Required"
-msgstr ""
+msgstr "%s — ຕ້ອງການລະຫັດຜ່ານ"
 
 #: shell/ev-utils.c:38
 msgid "By extension"
-msgstr ""
+msgstr "ຕາມນາມສະກຸນ"
 
 #: shell/main.c:56 shell/main.c:232
 msgid "MATE Document Viewer"
-msgstr ""
+msgstr "ຕົວເບິ່ງເອກະສານ MATE"
 
 #: shell/main.c:64
 msgid "The page label of the document to display."
-msgstr ""
+msgstr "ປ້າຍຊື່ໜ້າຂອງເອກະສານທີ່ຈະສະແດງ."
 
 #: shell/main.c:64
 msgid "PAGE"
-msgstr ""
+msgstr "ໜ້າ"
 
 #: shell/main.c:65
 msgid "The page number of the document to display."
-msgstr ""
+msgstr "ໝາຍເລກໜ້າຂອງເອກະສານທີ່ຈະສະແດງ."
 
 #: shell/main.c:65
 msgid "NUMBER"
-msgstr ""
+msgstr "ໝາຍເລກ"
 
 #: shell/main.c:66
 msgid "Run atril in fullscreen mode"
-msgstr ""
+msgstr "ເປີດ atril ໃນໂໝດເຕັມຈໍ"
 
 #: shell/main.c:67
 msgid "Named destination to display."
-msgstr ""
+msgstr "ຈຸດໝາຍປາຍທາງທີ່ລະບຸຊື່ທີ່ຈະສະແດງ."
 
 #: shell/main.c:67
 msgid "DEST"
-msgstr ""
+msgstr "ປາຍທາງ"
 
 #: shell/main.c:68
 msgid "Run atril in presentation mode"
-msgstr ""
+msgstr "ເປີດ atril ໃນໂໝດການນຳສະເໜີ"
 
 #: shell/main.c:69
 msgid "Run atril as a previewer"
-msgstr ""
+msgstr "ເປີດ atril ໃນຖານະຕົວສະແດງຕົວຢ່າງ"
 
 #: shell/main.c:70
 msgid "The word or phrase to find in the document"
-msgstr ""
+msgstr "ຄຳ ຫຼື ວະລີທີ່ຈະຄົ້ນຫາໃນເອກະສານ"
 
 #: shell/main.c:70
 msgid "STRING"
-msgstr ""
+msgstr "ຂໍ້ຄວາມ"
 
 #: shell/main.c:74
 msgid "[FILE…]"
-msgstr ""
+msgstr "[ໄຟລ໌…]"
