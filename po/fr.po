@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-# Translators:
 # rogue_spectre <rogue-spectre@laposte.net>, 2018
 # Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
 # Nicolas Roelandt (Personnel), 2018
@@ -25,37 +22,38 @@
 # mauron, 2021
 # Heldwin <listes.00@gmail.com>, 2022
 # David D, 2024
+# Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2026.
+#
+# Translators:
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: David D, 2024\n"
-"Language-Team: French (https://app.transifex.com/mate/teams/13566/fr/)\n"
+"PO-Revision-Date: 2026-06-04 12:47+0000\n"
+"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
+"Language-Team: French <https://translate.fedoraproject.org/projects/mate-"
+"desktop/atril/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
-"1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % "
+"1000000 == 0) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
-#, fuzzy
-#| msgid "File corrupted"
 msgid "File is corrupted"
-msgstr "Fichier corrompu"
+msgstr "Le fichier est corrompu"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "L’archive est chiffrée"
 
 #: backend/comics/comics-document.c:262
-#, fuzzy
-#| msgid "No files in archive"
 msgid "No supported images in archive"
-msgstr "Aucun fichier dans l'archive"
+msgstr "Aucune image n’est prise en charge dans l’archive"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
@@ -71,6 +69,8 @@ msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
+"libarchive n’a pas la prise en charge pour la compression de cette bande "
+"dessinée, veuillez contacter votre distributeur"
 
 #: backend/comics/comics-document.c:365
 msgid "File corrupted"
