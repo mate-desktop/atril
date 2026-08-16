@@ -2,7 +2,7 @@
 # Translators:
 # 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2021
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2021, 2026.
 # Junghee Lee <daemul72@gmail.com>, 2021
 # D.K Kim <pepct84@gmail.com>, 2021
 # 김인수 <simmon@nplob.com>, 2026.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2023-08-31 17:43+0200\n"
-"PO-Revision-Date: 2026-06-14 22:10+0000\n"
-"Last-Translator: 김인수 <simmon@nplob.com>\n"
+"PO-Revision-Date: 2026-06-16 08:10+0000\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/mate-"
 "desktop/help-documentation/atril-help/ko/>\n"
 "Language: ko\n"
@@ -31,7 +31,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/annotation-properties.page:7
 msgid "How to customize the author, color, style or icon of an annotation."
-msgstr "주석의 작성자, 색상, 유형 또는 아이콘을 사용자 정의하는 방법."
+msgstr "주석의 작성자, 색상, 모양새 또는 아이콘을 사용자 정의하는 방법입니다."
 
 #. (itstool) path: credit/name
 #: C/annotation-properties.page:10 C/annotations-disabled.page:10
@@ -63,12 +63,12 @@ msgstr "Tiffany Antopolski"
 #: C/synctex-search.page:14 C/synctex-support.page:18 C/textselection.page:14
 #: C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
+msgstr "크리에이티브 커먼즈 동일조건변경허락 3.0"
 
 #. (itstool) path: page/title
 #: C/annotation-properties.page:18
 msgid "Customize annotations"
-msgstr "주석을 사용자 정의합니다"
+msgstr "주석을 별도로 설정합니다"
 
 #. (itstool) path: item/p
 #: C/annotation-properties.page:22
@@ -145,6 +145,9 @@ msgid ""
 "annotations, find them in the <link xref=\"annotations-navigate\">annotation "
 "side pane</link>."
 msgstr ""
+"주석을 달아 둔 페이지를 봅니다. 어떤 페이지에 주석을 달아 두었는지 확실히 알 "
+"수 없다면 <link xref=\"annotations-navigate\">가장자리 주석 창</link>에서 "
+"찾아보십시오."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:32
@@ -152,6 +155,8 @@ msgid ""
 "Right-click on the annotation icon in the document, and click <gui "
 "style=\"menuitem\">Remove Annotation</gui>."
 msgstr ""
+"문서의 주석 아이콘에 커서를 둔 후 오른쪽 단추를 누른 다음, <gui "
+"style=\"menuitem\">주석 제거</gui>를 누르십시오."
 
 #. (itstool) path: item/p
 #: C/annotations-delete.page:36
@@ -159,11 +164,13 @@ msgid ""
 "Save the changes to a new document by clicking <gui style=\"menuitem\">File</"
 "gui>, followed by <gui style=\"menuitem\">Save As…</gui>."
 msgstr ""
+"바뀐 내용을 <gui style=\"menuitem\">파일</gui> 다음, <gui style=\"menuitem\">"
+"다른 이름으로 저장...</gui>을 눌러 새 문서에 저장하십시오."
 
 #. (itstool) path: info/desc
 #: C/annotations-disabled.page:7
 msgid "Annotations can only be added to PDF files."
-msgstr ""
+msgstr "주석은 PDF 파일에만 추가할 수 있습니다."
 
 #. (itstool) path: page/title
 #: C/annotations-disabled.page:17
@@ -176,6 +183,8 @@ msgid ""
 "Annotations can only be added to PDF files. If your file is of a format "
 "other than PDF, the option to add annotations will be greyed out (disabled)."
 msgstr ""
+"주석은 PDF 파일에만 추가할 수 있습니다. PDF가 아닌 다른 형식이라면, 주석 "
+"추가 옵션이 가려집니다(비활성)."
 
 #. (itstool) path: info/desc
 #: C/annotations-navigate.page:7
@@ -185,7 +194,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/annotations-navigate.page:19
 msgid "Annotation navigation"
-msgstr ""
+msgstr "주석 탐색"
 
 #. (itstool) path: page/p
 #: C/annotations-navigate.page:20
@@ -194,21 +203,25 @@ msgid ""
 "to display the list of all the annotations in the document. The list "
 "indicates the type, page number and author of the annotation."
 msgstr ""
+"문서에 주석을 만들어두었을 경우, 문서의 모든 주석 목록을 나타내는 가장자리 "
+"창을 활용할 수 있습니다. 해당 목록에는 형식, 페이지 번호, 주석 작성자 정보가 "
+"담겨있습니다."
 
 #. (itstool) path: info/desc
 #: C/annotations.page:8
 msgid "How to create and customize annotations."
-msgstr ""
+msgstr "주석을 만들고 편집하는 방법입니다."
 
 #. (itstool) path: credit/name
 #: C/annotations.page:15 C/shortcuts.page:31
+#, fuzzy
 msgid "Andre Klapper"
-msgstr ""
+msgstr "Andre Klapper"
 
 #. (itstool) path: page/title
 #: C/annotations.page:24
 msgid "Adding annotations"
-msgstr ""
+msgstr "주석 추가"
 
 #. (itstool) path: page/p
 #: C/annotations.page:25
@@ -216,6 +229,8 @@ msgid ""
 "An annotation is a note or comment added to a PDF document. You can add "
 "annotations using Atril."
 msgstr ""
+"주석은 PDF 문서에 메모 또는 댓글 형태로 추가합니다. 애트릴로 주석을 추가할 "
+"수 있습니다."
 
 #. (itstool) path: page/p
 #: C/annotations.page:28
@@ -238,7 +253,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/annotations.page:39
 msgid "To create an annotation:"
-msgstr ""
+msgstr "주석을 만들려면:"
 
 #. (itstool) path: item/p
 #: C/annotations.page:44
@@ -283,12 +298,12 @@ msgstr ""
 #. (itstool) path: credit/name
 #: C/annotations-save.page:14
 msgid "Shobha Tyagi"
-msgstr ""
+msgstr "Shobha Tyagi"
 
 #. (itstool) path: page/title
 #: C/annotations-save.page:21
 msgid "Save a copy of an annotated PDF"
-msgstr ""
+msgstr "주석을 추가한 PDF의 사본 저장"
 
 #. (itstool) path: page/p
 #: C/annotations-save.page:22
