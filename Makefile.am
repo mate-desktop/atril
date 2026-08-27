@@ -54,7 +54,6 @@ EXTRA_DIST =            \
     backend/dvi/meson.build \
     backend/dvi/mdvi-lib/meson.build \
     backend/epub/meson.build \
-    backend/epub/minizip/meson.build \
     backend/pdf/meson.build \
     backend/pixbuf/meson.build \
     backend/ps/meson.build \
