@@ -1,3 +1,28 @@
+### atril 1.28.7
+
+* Increased recent files display to 10 entries
+* Standardize height of action_widget
+* Add option to reset metadata for documents
+* epub: add NULL guards to prevent crashes with malformed EPUBs
+* Add allow-links-change-zoom setting
+* epub: Add libgepub-0.7 build dependency
+* epub: Replace backend internals with libgepub
+* epub: Implement night mode using WebKit user stylesheets
+* epub: Pre-compute page paths and disable find interface
+* epub: Remove dead code and unused virtual methods
+* epub: Remove MathJax build configuration
+* epub: Expose GepubDoc handle via EvDocument virtual method
+* epub: Store GepubDoc handle in EvWebView and simplify navigation
+* epub: Implement search using WebKit find controller
+* a11y: implement text selection support for pages
+* a11y: fix selection bleeding into the previous line
+* a11y: report selection changes on the right page
+* a11y: keep selections on other pages when adding or removing one
+* a11y: allow selecting through the very last character
+* a11y: report selection changes only on pages that actually changed
+* Update translation files
+* Translated using Weblate (many languages)
+
 ### atril 1.28.6
 
   * Fix and off-by-one error for fit-to-page zoom
