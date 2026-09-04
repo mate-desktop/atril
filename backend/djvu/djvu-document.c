@@ -31,6 +31,7 @@
 #include "ev-document-links.h"
 #include "ev-selection.h"
 #include "ev-file-helpers.h"
+#include "ev-document-text.h"
 
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
@@ -56,6 +57,7 @@ static void djvu_document_file_exporter_iface_init (EvFileExporterInterface *ifa
 static void djvu_document_find_iface_init (EvDocumentFindInterface *iface);
 static void djvu_document_document_links_iface_init  (EvDocumentLinksInterface *iface);
 static void djvu_selection_iface_init (EvSelectionInterface *iface);
+static void djvu_document_text_iface_init (EvDocumentTextInterface *iface);
 
 EV_BACKEND_REGISTER_WITH_CODE (DjvuDocument, djvu_document,
     {
@@ -64,6 +66,7 @@ EV_BACKEND_REGISTER_WITH_CODE (DjvuDocument, djvu_document,
       EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_FIND, djvu_document_find_iface_init);
       EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_LINKS, djvu_document_document_links_iface_init);
       EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_SELECTION, djvu_selection_iface_init);
+      EV_BACKEND_IMPLEMENT_INTERFACE (EV_TYPE_DOCUMENT_TEXT, djvu_document_text_iface_init);
      });
 
 #define EV_DJVU_ERROR ev_djvu_error_quark ()
@@ -469,6 +472,37 @@ static void
 djvu_selection_iface_init (EvSelectionInterface *iface)
 {
 	iface->get_selected_text = djvu_selection_get_selected_text;
+}
+
+static gchar *
+djvu_document_text_get_text (EvDocumentText  *selection,
+			     EvPage          *page)
+{
+	DjvuDocument *djvu_document = DJVU_DOCUMENT (selection);
+	miniexp_t     page_text;
+	gchar        *text = NULL;
+
+	while ((page_text = ddjvu_document_get_pagetext (djvu_document->d_document,
+							 page->index,
+							 "char")) == miniexp_dummy)
+		djvu_handle_events (djvu_document, TRUE, NULL);
+
+	if (page_text != miniexp_nil) {
+		DjvuTextPage *tpage = djvu_text_page_new (page_text);
+
+		djvu_text_page_prepare_search (tpage, TRUE);
+		text = tpage->text;
+		tpage->text = NULL;
+		djvu_text_page_free (tpage);
+		ddjvu_miniexp_release (djvu_document->d_document, page_text);
+	}
+	return text;
+}
+
+static void
+djvu_document_text_iface_init (EvDocumentTextInterface *iface)
+{
+	iface->get_text = djvu_document_text_get_text;
 }
 
 static void
