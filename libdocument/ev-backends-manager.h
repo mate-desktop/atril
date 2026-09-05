@@ -39,6 +39,7 @@ typedef struct _EvTypeInfo {
 gboolean    _ev_backends_manager_init                     (void);
 void        _ev_backends_manager_shutdown                 (void);
 
+gboolean    ev_backends_manager_mime_type_supported       (const gchar *mime_type);
 EvDocument  *ev_backends_manager_get_document             (const gchar *mime_type);
 
 EV_DEPRECATED
