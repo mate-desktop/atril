@@ -3426,12 +3426,41 @@ pdf_document_signatures_get_signature_state (EvDocumentSignatures *document,
 		                                                           NULL,
 		                                                           &error);
 		if (!signature_info) {
+			if (error)
+				g_warning ("Signature validation failed: %s", error->message);
 			all_valid = FALSE;
 			continue;
 		}
 
-		signature_status = poppler_signature_info_get_signature_status (signature_info);
 		certificate_status = poppler_signature_info_get_certificate_status (signature_info);
+
+		/* POPPLER_CERTIFICATE_GENERIC_ERROR here means the online OCSP
+		 * revocation check itself could not complete (no network, or no
+		 * OCSP responder configured on the certificate) -- an actual
+		 * revocation is reported as POPPLER_CERTIFICATE_REVOKED regardless
+		 * of this retry, so this never masks a real revocation. Retry
+		 * without OCSP so an otherwise-trusted chain whose revocation
+		 * status merely couldn't be checked isn't reported as broken. */
+		if (certificate_status == POPPLER_CERTIFICATE_GENERIC_ERROR) {
+			g_autoptr(GError) retry_error = NULL;
+			PopplerSignatureInfo *retry_info;
+
+			retry_info = poppler_form_field_signature_validate_sync (field,
+			                                                       (PopplerSignatureValidationFlags)
+			                                                       (POPPLER_SIGNATURE_VALIDATION_FLAG_VALIDATE_CERTIFICATE |
+			                                                        POPPLER_SIGNATURE_VALIDATION_FLAG_WITHOUT_OCSP_REVOCATION_CHECK),
+			                                                       NULL,
+			                                                       &retry_error);
+			if (retry_info) {
+				poppler_signature_info_free (signature_info);
+				signature_info = retry_info;
+				certificate_status = poppler_signature_info_get_certificate_status (signature_info);
+			} else if (retry_error) {
+				g_warning ("Signature validation retry (without OCSP) failed: %s", retry_error->message);
+			}
+		}
+
+		signature_status = poppler_signature_info_get_signature_status (signature_info);
 
 		switch (signature_status) {
 		case POPPLER_SIGNATURE_VALID:
@@ -3528,9 +3557,9 @@ pdf_document_signatures_sign (EvDocumentSignatures *document,
 	poppler_signing_data_set_signature_text_left (signing_data, data->signature_left);
 
 	color = poppler_color_new ();
-	color->red = data->font_color.red * 255;
-	color->green = data->font_color.green * 255;
-	color->blue = data->font_color.blue * 255;
+	color->red = data->font_color.red * 65535;
+	color->green = data->font_color.green * 65535;
+	color->blue = data->font_color.blue * 65535;
 	poppler_signing_data_set_font_color (signing_data, color);
 	g_clear_pointer (&color, poppler_color_free);
 
@@ -3539,16 +3568,16 @@ pdf_document_signatures_sign (EvDocumentSignatures *document,
 	poppler_signing_data_set_border_width (signing_data, data->border_width);
 
 	color = poppler_color_new ();
-	color->red = data->border_color.red * 255;
-	color->green = data->border_color.green * 255;
-	color->blue = data->border_color.blue * 255;
+	color->red = data->border_color.red * 65535;
+	color->green = data->border_color.green * 65535;
+	color->blue = data->border_color.blue * 65535;
 	poppler_signing_data_set_border_color (signing_data, color);
 	g_clear_pointer (&color, poppler_color_free);
 
 	color = poppler_color_new ();
-	color->red = data->background_color.red * 255;
-	color->green = data->background_color.green * 255;
-	color->blue = data->background_color.blue * 255;
+	color->red = data->background_color.red * 65535;
+	color->green = data->background_color.green * 65535;
+	color->blue = data->background_color.blue * 65535;
 	poppler_signing_data_set_background_color (signing_data, color);
 	g_clear_pointer (&color, poppler_color_free);
 
