@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Patricio Castagnaro <pcastagnaro@gmail.com>, 2018
 # Adrián Benavente <benaventeadrian@gmail.com>, 2018
@@ -11,22 +8,26 @@
 # Renzo Sparta <exequiel0210@gmail.com>, 2019
 # Reshi Starkey <rhapsody.girl@gmail.com>, 2019
 # Alejo Fernandez <alejoo.fernandez.2003@gmail.com>, 2024
+# Fernando Velo <seacat.linux@gmail.com>, 2026.
+#
+# Translators:
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Alejo Fernandez <alejoo.fernandez.2003@gmail.com>, 2024\n"
-"Language-Team: Spanish (Argentina) (https://app.transifex.com/mate/teams/"
-"13566/es_AR/)\n"
+"PO-Revision-Date: 2026-09-24 18:18+0000\n"
+"Last-Translator: Fernando Velo <seacat.linux@gmail.com>\n"
+"Language-Team: Spanish (Argentina) <https://translate.fedoraproject.org/"
+"projects/mate-desktop/applications/atril/es_AR/>\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.9.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
 #, fuzzy
@@ -36,26 +37,28 @@ msgstr "Archivo corrupto"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "El archivador está encriptado"
 
 #: backend/comics/comics-document.c:262
 msgid "No supported images in archive"
-msgstr ""
+msgstr "No hay imágenes compatibles en el archivador"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
-msgstr ""
+msgstr "No hay archivos en el archivador"
 
 #: backend/comics/comics-document.c:321
 #, c-format
 msgid "Not a comic book MIME type: %s"
-msgstr ""
+msgstr "No es un tipo MIME de cómic: %s"
 
 #: backend/comics/comics-document.c:328
 msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
+"libarchive carece de soporte para la compresión de este cómic; por favor, "
+"contacte a su distribuidor"
 
 #: backend/comics/comics-document.c:365
 msgid "File corrupted"
@@ -67,183 +70,186 @@ msgstr "Comics"
 
 #: backend/djvu/djvu-document.c:172
 msgid "DjVu document has incorrect format"
-msgstr ""
+msgstr "El documento DjVu tiene formato incorrecto"
 
 #: backend/djvu/djvu-document.c:249
 msgid ""
 "The document is composed of several files. One or more of these files cannot "
 "be accessed."
 msgstr ""
+"El documento consta de varios archivos. No es posible acceder a uno o varios "
+"de estos archivos."
 
 #: backend/djvu/djvudocument.atril-backend.desktop.in:3
 msgid "DjVu Documents"
-msgstr ""
+msgstr "Documentos DjVu"
 
 #: backend/dvi/dvi-document.c:107
 msgid "DVI document has incorrect format"
-msgstr ""
+msgstr "El documento DVI tiene formato incorrecto"
 
 #: backend/dvi/dvidocument.atril-backend.desktop.in:3
 msgid "DVI Documents"
-msgstr ""
+msgstr "Documentos DVI"
 
 #: backend/dvi/mdvi-lib/dviread.c:209
 msgid "unexpected EOF\n"
-msgstr ""
+msgstr "EOF inesperado\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:425
 #, c-format
 msgid "could not load font `%s'\n"
-msgstr ""
+msgstr "no se pudo cargar la fuente `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:479
 #, c-format
 msgid "could not reload `%s'\n"
-msgstr ""
+msgstr "no se pudo recargar `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:704
 #, c-format
 msgid "%s: unsupported DVI format (version %u)\n"
-msgstr ""
+msgstr "%s: formato DVI no soportado (versión %u)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:864
 msgid "no pages selected\n"
-msgstr ""
+msgstr "no se seleccionaron páginas\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:897
 #, c-format
 msgid "%s: File corrupted, or not a DVI file\n"
-msgstr ""
+msgstr "%s: Archivo corrupto o no es un archivo DVI\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:978
 #, c-format
 msgid "%s: vf macro had errors\n"
-msgstr ""
+msgstr "%s: la macro vf tiene errores\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:981
 #, c-format
 msgid "%s: stack not empty after vf macro\n"
-msgstr ""
+msgstr "%s: la pila no está vacía después de la macro vf\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1006
 #, c-format
 msgid "%s: could not reopen file (%s)\n"
-msgstr ""
+msgstr "%s: no se pudo reabrir el archivo (%s)\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1023
 #, c-format
 msgid "%s: page %d out of range\n"
-msgstr ""
+msgstr "%s: página %d fuera de rango\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1030
 #, c-format
 msgid "%s: bad offset at page %d\n"
-msgstr ""
+msgstr "%s: offset incorrecto en la página %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1093
 msgid "stack not empty at end of page\n"
-msgstr ""
+msgstr "la pila no está vacía al final de la página\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1250
 msgid "no default font set yet\n"
-msgstr ""
+msgstr "aún no se estableció la fuente predeterminada\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1260
 #, c-format
 msgid "requested character %d does not exist in `%s'\n"
-msgstr ""
+msgstr "el caracter solicitado %d no existe en `%s'\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1333
 msgid "enlarging stack\n"
-msgstr ""
+msgstr "ampliando la pila\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1351
 msgid "stack underflow\n"
-msgstr ""
+msgstr "desbordamiento de pila\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1465 backend/dvi/mdvi-lib/dviread.c:1487
 #, c-format
 msgid "font %d is not defined\n"
-msgstr ""
+msgstr "la fuente %d no está definida\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1504
 msgid "malformed special length\n"
-msgstr ""
+msgstr "longitud especial mal formada\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1531
 #, c-format
 msgid "font %d is not defined in postamble\n"
-msgstr ""
+msgstr "la tipografía %d no está definida en el postámbulo\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1543
 #, c-format
 msgid "unexpected opcode %d\n"
-msgstr ""
+msgstr "código de operación inesperado %d\n"
 
 #: backend/dvi/mdvi-lib/dviread.c:1549
 #, c-format
 msgid "undefined opcode %d\n"
-msgstr ""
+msgstr "código de operación indefinido %d\n"
 
 #: backend/dvi/mdvi-lib/font.c:474
 #, c-format
 msgid "%s: no fonts defined\n"
-msgstr ""
+msgstr "%s: no hay tipografías definidas\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:590
 #, c-format
 msgid "%s: %d: [%s] requested encoding `%s' does not match vector `%s'\n"
 msgstr ""
+"%s: %d: [%s] la codificación solicitada `%s' no coincide con el vector `%s'\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:757
 #, c-format
 msgid "%s: could not load fontmap\n"
-msgstr ""
+msgstr "%s: no se pudo cargar el mapa de tipografías\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:771
 #, c-format
 msgid "%s: could not set as default encoding\n"
-msgstr ""
+msgstr "%s: no se pudo establecer como codificación predeterminada\n"
 
 #: backend/dvi/mdvi-lib/fontmap.c:849
 #, c-format
 msgid "encoding vector `%s' is in use\n"
-msgstr ""
+msgstr "el vector de codificación `%s' está en uso\n"
 
 #: backend/dvi/mdvi-lib/gf.c:111
 #, c-format
 msgid "GF: invalid opcode %d in character %d\n"
-msgstr ""
+msgstr "GF: código de operación %d inválido en el caracter %d\n"
 
 #: backend/dvi/mdvi-lib/gf.c:209
 #, c-format
 msgid "(gf) Character %d: invalid opcode %d\n"
-msgstr ""
+msgstr "(gf) Caracter %d: código de operación %d inválido\n"
 
 #: backend/dvi/mdvi-lib/gf.c:225
 #, c-format
 msgid "(gf) character %d has an incorrect bounding box\n"
-msgstr ""
+msgstr "(gf) el caracter %d tiene un cuadro delimitador incorrecto\n"
 
 #: backend/dvi/mdvi-lib/gf.c:288
 #, c-format
 msgid "%s: bad checksum (expected %u, found %u)\n"
-msgstr ""
+msgstr "%s: suma de comprobación incorrecta (se esperaba %u, se encontró %u)\n"
 
 #: backend/dvi/mdvi-lib/gf.c:324
 #, c-format
 msgid "%s: junk in postamble\n"
-msgstr ""
+msgstr "%s: basura en el postámbulo\n"
 
 #: backend/dvi/mdvi-lib/gf.c:361
 #, c-format
 msgid "%s: File corrupted, or not a GF file\n"
-msgstr ""
+msgstr "%s: Archivo corrupto o no es un archivo GF\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:212
 #, c-format
 msgid "invalid page specification `%s'\n"
-msgstr ""
+msgstr "especificación de página inválida `%s'\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:232
 msgid "garbage after DVI page specification ignored\n"
@@ -251,7 +257,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/pagesel.c:260
 msgid "more than 10 counters in page specification\n"
-msgstr ""
+msgstr "más de 10 contadores en la especificación de la página\n"
 
 #: backend/dvi/mdvi-lib/pagesel.c:262
 msgid "garbage after TeX page specification ignored\n"
@@ -259,168 +265,172 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/paper.c:104 backend/dvi/mdvi-lib/paper.c:111
 msgid "custom"
-msgstr ""
+msgstr "personalizado"
 
 #: backend/dvi/mdvi-lib/pk.c:309
 msgid "Bad PK file: More bits than required\n"
-msgstr ""
+msgstr "Archivo PK incorrecto: más bits de los requeridos\n"
 
 #: backend/dvi/mdvi-lib/pk.c:363
 #, c-format
 msgid "%s: checksum mismatch (expected %u, got %u)\n"
 msgstr ""
+"%s: discrepancia en la suma de comprobación (se esperaba %u, se obtuvo %u)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:420
 #, c-format
 msgid "%s: unexpected preamble\n"
-msgstr ""
+msgstr "%s: preámbulo inesperado\n"
 
 #: backend/dvi/mdvi-lib/pk.c:477
 #, c-format
 msgid "%s: unexpected charcode (%d)\n"
-msgstr ""
+msgstr "%s: código de carácter inesperado (%d)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:512
 #, c-format
 msgid "%s: unexpected end of file (no postamble)\n"
-msgstr ""
+msgstr "%s: fin de archivo inesperado (sin postámbulo)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:518
 msgid "invalid PK file! (junk in postamble)\n"
-msgstr ""
+msgstr "¡Archivo PK no válido! (datos basura en el postámbulo)\n"
 
 #: backend/dvi/mdvi-lib/pk.c:535
 #, c-format
 msgid "%s: File corrupted, or not a PK file\n"
-msgstr ""
+msgstr "%s: Archivo corrupto o no es un archivo PK\n"
 
 #: backend/dvi/mdvi-lib/special.c:240
 #, c-format
 msgid "%s: tried to pop top level layer\n"
-msgstr ""
+msgstr "%s: se intentó extraer la capa de nivel superior\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:150
 #, c-format
 msgid "%s: malformed value for key `%s'\n"
-msgstr ""
+msgstr "%s: valor mal formado para la clave `%s'\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:161
 #, c-format
 msgid "%s: unknown key `%s' ignored\n"
-msgstr ""
+msgstr "%s: clave desconocida `%s' ignorada\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:166
 #, c-format
 msgid "%s: no argument for key `%s', using defaults\n"
-msgstr ""
+msgstr "%s: sin argumento para la clave `%s', usando valores predeterminados\n"
 
 #: backend/dvi/mdvi-lib/sp-epsf.c:170
 #, c-format
 msgid "%s: argument `%s' ignored for key `%s'\n"
-msgstr ""
+msgstr "%s: argumento `%s' ignorado para la clave `%s'\n"
 
 #: backend/dvi/mdvi-lib/t1.c:187
 msgid "(t1) failed to reset device resolution\n"
-msgstr ""
+msgstr "(t1) no se pudo restablecer la resolución del dispositivo\n"
 
 #: backend/dvi/mdvi-lib/t1.c:215
 #, c-format
 msgid "%s: could not encode font\n"
-msgstr ""
+msgstr "%s: no se pudo codificar la tipografía\n"
 
 #: backend/dvi/mdvi-lib/tfm.c:175
 #, c-format
 msgid "%s: Checksum mismatch (got %u, expected %u)\n"
 msgstr ""
+"%s: Discrepancia en la suma de comprobación (se obtuvo %u, se esperaba %u)\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:91
 #, c-format
 msgid "%s: Error reading AFM data\n"
-msgstr ""
+msgstr "%s: Error al leer datos AFM\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:182
 #, c-format
 msgid "Warning: TFM file `%s' has suspicious size\n"
-msgstr ""
+msgstr "Advertencia: El archivo TFM `%s' tiene un tamaño sospechoso\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:232 backend/dvi/mdvi-lib/tfmfile.c:511
 #, c-format
 msgid "%s: font coding scheme truncated to 40 bytes\n"
-msgstr ""
+msgstr "%s: esquema de codificación de tipografía truncado a 40 bytes\n"
 
 #: backend/dvi/mdvi-lib/tfmfile.c:291 backend/dvi/mdvi-lib/tfmfile.c:589
 #, c-format
 msgid "%s: File corrupted, or not a TFM file\n"
-msgstr ""
+msgstr "%s: Archivo corrupto o no es un archivo TFM\n"
 
 #: backend/dvi/mdvi-lib/tt.c:151
 #, c-format
 msgid "(tt) %s: could not load face: %s\n"
-msgstr ""
+msgstr "(tt) %s: no se pudo cargar la tipografía: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:159
 #, c-format
 msgid "(tt) %s: could not create face: %s\n"
-msgstr ""
+msgstr "(tt) %s: no se pudo crear la tipografía: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:168
 #, c-format
 msgid "(tt) %s: could not create glyph: %s\n"
-msgstr ""
+msgstr "(tt) %s: no se pudo crear el glifo: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:201
 #, c-format
 msgid "(tt) %s: no acceptable map found, using #0\n"
-msgstr ""
+msgstr "(tt) %s: no se encontró ningún mapa aceptable, usando #0\n"
 
 #: backend/dvi/mdvi-lib/tt.c:214
 #, c-format
 msgid "(tt) %s: could not set resolution: %s\n"
-msgstr ""
+msgstr "(tt) %s: no se pudo establecer la resolución: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:221
 #, c-format
 msgid "(tt) %s: could not set point size: %s\n"
-msgstr ""
+msgstr "(tt) %s: no se pudo establecer el tamaño del punto: %s\n"
 
 #: backend/dvi/mdvi-lib/tt.c:240
 #, c-format
 msgid "(tt) %s: could not load PS name table\n"
-msgstr ""
+msgstr "(tt) %s: no se pudo cargar la tabla de nombres PS\n"
 
 #: backend/dvi/mdvi-lib/tt.c:265
 #, c-format
 msgid "%s: no encoding vector found, expect bad output\n"
 msgstr ""
+"%s: no se encontró ningún vector de codificación; cabe esperar una salida "
+"incorrecta\n"
 
 #: backend/dvi/mdvi-lib/tt.c:325
 #, c-format
 msgid "(tt) %s: no font metric data\n"
-msgstr ""
+msgstr "(tt) %s: sin datos de métrica de tipografía\n"
 
 #: backend/dvi/mdvi-lib/util.c:35
 msgid "Ooops!"
-msgstr ""
+msgstr "¡Ups!"
 
 #: backend/dvi/mdvi-lib/util.c:36
 msgid "Aieeeee!!"
-msgstr ""
+msgstr "¡Aeeeeee!"
 
 #: backend/dvi/mdvi-lib/util.c:37
 msgid "Ouch!"
-msgstr ""
+msgstr "¡Ay!"
 
 #: backend/dvi/mdvi-lib/util.c:38
 msgid "Houston, we have a problem"
-msgstr ""
+msgstr "Houston, tenemos un problema"
 
 #: backend/dvi/mdvi-lib/util.c:39
 msgid "3.. 2.. 1.. BOOM!"
-msgstr ""
+msgstr "3... 2... 1... ¡BUM!"
 
 #: backend/dvi/mdvi-lib/util.c:40
 msgid "I'm history"
-msgstr ""
+msgstr "Soné"
 
 #: backend/dvi/mdvi-lib/util.c:41
 msgid "I'm going down"
@@ -428,7 +438,7 @@ msgstr ""
 
 #: backend/dvi/mdvi-lib/util.c:42
 msgid "I smell a rat"
-msgstr ""
+msgstr "Aquí hay gato encerrado"
 
 #: backend/dvi/mdvi-lib/util.c:151
 msgid "Crashing"
@@ -437,95 +447,96 @@ msgstr ""
 #: backend/dvi/mdvi-lib/util.c:161
 #, c-format
 msgid "%s: Error: "
-msgstr ""
+msgstr "%s: Error: "
 
 #: backend/dvi/mdvi-lib/util.c:168
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: backend/dvi/mdvi-lib/util.c:177
 #, c-format
 msgid "%s: Warning: "
-msgstr ""
+msgstr "%s: Advertencia: "
 
 #: backend/dvi/mdvi-lib/util.c:184 libview/ev-print-operation.c:1238
 msgid "Warning"
-msgstr ""
+msgstr "Advertencia"
 
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr ""
+msgstr "%s: Fatal: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
-msgstr ""
+msgstr "Fatal"
 
 #: backend/dvi/mdvi-lib/util.c:214
 #, c-format
 msgid "out of memory allocating %u bytes\n"
-msgstr ""
+msgstr "memoria insuficiente al asignar %u bytes\n"
 
 #: backend/dvi/mdvi-lib/util.c:224
 msgid "attempted to reallocate with zero size\n"
-msgstr ""
+msgstr "se intentó reasignar con tamaño cero\n"
 
 #: backend/dvi/mdvi-lib/util.c:227
 #, c-format
 msgid "failed to reallocate %u bytes\n"
-msgstr ""
+msgstr "no se pudieron reasignar %u bytes\n"
 
 #: backend/dvi/mdvi-lib/util.c:236
 msgid "attempted to callocate 0 members\n"
-msgstr ""
+msgstr "se intentó asignar 0 miembros\n"
 
 #: backend/dvi/mdvi-lib/util.c:238
 #, c-format
 msgid "attempted to callocate %u members with size 0\n"
-msgstr ""
+msgstr "se intentó asignar %u miembros con tamaño 0\n"
 
 #: backend/dvi/mdvi-lib/util.c:242
 #, c-format
 msgid "failed to allocate %ux%u bytes\n"
-msgstr ""
+msgstr "error al asignar %ux%u bytes\n"
 
 #: backend/dvi/mdvi-lib/util.c:250
 msgid "attempted to free NULL pointer\n"
-msgstr ""
+msgstr "se intentó liberar un puntero NULL\n"
 
 #: backend/dvi/mdvi-lib/vf.c:82
 #, c-format
 msgid "%s: Checksum mismatch (expected %u, got %u)\n"
 msgstr ""
+"%s: Discrepancia en la suma de comprobación (se esperaba %u, se obtuvo %u)\n"
 
 #: backend/dvi/mdvi-lib/vf.c:130
 #, c-format
 msgid "(vf) %s: could not load font `%s'\n"
-msgstr ""
+msgstr "(vf) %s: no se pudo cargar la tipografía `%s'\n"
 
 #: backend/dvi/mdvi-lib/vf.c:170
 #, c-format
 msgid "(vf) %s: unexpected character %d\n"
-msgstr ""
+msgstr "(vf) %s: caracter inesperado %d\n"
 
 #: backend/dvi/mdvi-lib/vf.c:186
 #, c-format
 msgid "(vf) %s: character %d redefined\n"
-msgstr ""
+msgstr "(vf) %s: caracter %d redefinido\n"
 
 #: backend/dvi/mdvi-lib/vf.c:209
 #, c-format
 msgid "(vf) %s: no postamble\n"
-msgstr ""
+msgstr "(vf) %s: sin postámbulo\n"
 
 #: backend/dvi/mdvi-lib/vf.c:235
 #, c-format
 msgid "%s: File corrupted, or not a VF file.\n"
-msgstr ""
+msgstr "%s: Archivo corrupto o no es un archivo VF.\n"
 
 #: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
-msgstr ""
+msgstr "No es un documento ePub"
 
 #: backend/epub/epub-document.c:668 libdocument/ev-document-factory.c:142
 #: libdocument/ev-document-factory.c:285
@@ -534,68 +545,70 @@ msgstr "Tipo MIME desconocido"
 
 #: backend/epub/epub-document.c:709 backend/epub/epub-document.c:908
 msgid "epub file is invalid or corrupt"
-msgstr ""
+msgstr "el archivo epub es inválido o está dañado"
 
 #: backend/epub/epub-document.c:782
 msgid "could not retrieve filename"
-msgstr ""
+msgstr "no se pudo recuperar el nombre del archivo"
 
 #: backend/epub/epub-document.c:810
 msgid "could not open archive"
-msgstr ""
+msgstr "no se pudo abrir el archivo"
 
 #: backend/epub/epub-document.c:826 backend/epub/epub-document.c:843
 msgid "could not extract archive"
-msgstr ""
+msgstr "no se pudo extraer el archivador"
 
 #: backend/epub/epub-document.c:876 backend/epub/epub-document.c:959
 msgid "could not retrieve container file"
-msgstr ""
+msgstr "no se pudo recuperar el archivo contenedor"
 
 #: backend/epub/epub-document.c:888
 msgid "could not open container file"
-msgstr ""
+msgstr "no se pudo abrir el archivo contenedor"
 
 #: backend/epub/epub-document.c:898
 msgid "container file is corrupt"
-msgstr ""
+msgstr "el archivo contenedor está dañado"
 
 #: backend/epub/epub-document.c:918
 msgid "epub file is corrupt, no container"
-msgstr ""
+msgstr "el archivo epub está dañado, sin contenedor"
 
 #: backend/epub/epub-document.c:992
 msgid "could not parse content manifest"
-msgstr ""
+msgstr "no se pudo analizar el manifiesto de contenido"
 
 #: backend/epub/epub-document.c:1001
 msgid "content file is invalid"
-msgstr ""
+msgstr "el archivo de contenido es inválido"
 
 #: backend/epub/epub-document.c:1010
 msgid "epub file has no spine"
-msgstr ""
+msgstr "el archivo epub no tiene lomo"
 
 #: backend/epub/epub-document.c:1019
 msgid "epub file has no manifest"
-msgstr ""
+msgstr "el archivo epub no tiene manifiesto"
 
 #: backend/epub/epub-document.c:1105
 msgid "Could not set up document tree for loading, some files missing"
 msgstr ""
+"No se pudo configurar el árbol del documento para la carga; faltan algunos "
+"archivos"
 
 #: backend/epub/epub-document.c:1806
 #, c-format
 msgid "There was an error deleting “%s”."
-msgstr "Hubo un error borrando \"%s\""
+msgstr "Hubo un error al borrar \"%s\"."
 
 #: backend/epub/epubdocument.atril-backend.desktop.in:3
 msgid "epub Documents"
-msgstr ""
+msgstr "Documentos epub"
 
 #: backend/pdf/ev-poppler.cc:513
 msgid "This work is in the Public Domain"
-msgstr ""
+msgstr "Esta obra es de dominio público"
 
 #: backend/pdf/ev-poppler.cc:768 backend/pdf/ev-poppler.cc:774
 msgid "Yes"
@@ -619,23 +632,23 @@ msgstr "Tipo 3"
 
 #: backend/pdf/ev-poppler.cc:907
 msgid "TrueType"
-msgstr ""
+msgstr "TrueType"
 
 #: backend/pdf/ev-poppler.cc:909
 msgid "Type 1 (CID)"
-msgstr ""
+msgstr "Tipo 1 (CID)"
 
 #: backend/pdf/ev-poppler.cc:911
 msgid "Type 1C (CID)"
-msgstr ""
+msgstr "Tipo 1C (CID)"
 
 #: backend/pdf/ev-poppler.cc:913
 msgid "TrueType (CID)"
-msgstr ""
+msgstr "TrueType (CID)"
 
 #: backend/pdf/ev-poppler.cc:915
 msgid "Unknown font type"
-msgstr ""
+msgstr "Tipo de tipografía desconocido"
 
 #: backend/pdf/ev-poppler.cc:941
 msgid "No name"
@@ -643,15 +656,15 @@ msgstr "Sin nombre"
 
 #: backend/pdf/ev-poppler.cc:949
 msgid "Embedded subset"
-msgstr ""
+msgstr "Subconjunto incrustado"
 
 #: backend/pdf/ev-poppler.cc:951
 msgid "Embedded"
-msgstr ""
+msgstr "Incrustado"
 
 #: backend/pdf/ev-poppler.cc:953
 msgid "Not embedded"
-msgstr ""
+msgstr "No incrustado"
 
 #: backend/pdf/pdfdocument.atril-backend.desktop.in:4
 msgid "PDF Documents"
@@ -664,16 +677,16 @@ msgstr "Imágenes"
 #: backend/ps/ev-spectre.c:102
 #, c-format
 msgid "Failed to load document “%s”"
-msgstr ""
+msgstr "No se pudo cargar el documento \"%s\""
 
 #: backend/ps/ev-spectre.c:135
 #, c-format
 msgid "Failed to save document “%s”"
-msgstr ""
+msgstr "No se pudo guardar el documento \"%s\""
 
 #: backend/ps/psdocument.atril-backend.desktop.in:4
 msgid "PostScript Documents"
-msgstr ""
+msgstr "Documentos PostScript"
 
 #: backend/tiff/tiff-document.c:114
 msgid "Invalid document"
@@ -681,31 +694,31 @@ msgstr "Documento inválido"
 
 #: backend/tiff/tiffdocument.atril-backend.desktop.in:3
 msgid "Tiff Documents"
-msgstr ""
+msgstr "Documentos Tiff"
 
 #: backend/xps/xpsdocument.atril-backend.desktop.in:4
 msgid "XPS Documents"
-msgstr ""
+msgstr "Documentos XPS"
 
 #: libdocument/ev-attachment.c:299 libdocument/ev-attachment.c:320
 #, c-format
 msgid "Couldn't save attachment “%s”: %s"
-msgstr ""
+msgstr "No se pudo guardar el archivo adjunto “%s”:%s"
 
 #: libdocument/ev-attachment.c:368
 #, c-format
 msgid "Couldn't open attachment “%s”: %s"
-msgstr ""
+msgstr "No se pudo abrir el archivo adjunto “%s”:%s"
 
 #: libdocument/ev-attachment.c:403
 #, c-format
 msgid "Couldn't open attachment “%s”"
-msgstr ""
+msgstr "No se pudo abrir el archivo adjunto \"%s\""
 
 #: libdocument/ev-document-factory.c:167
 #, c-format
 msgid "File type %s (%s) is not supported"
-msgstr ""
+msgstr "El tipo de archivo %s (%s) no está soportado"
 
 #: libdocument/ev-document-factory.c:358
 msgid "All Documents"
@@ -718,16 +731,16 @@ msgstr "Todos los archivos"
 #: libdocument/ev-file-helpers.c:147
 #, c-format
 msgid "Failed to create a temporary file: %s"
-msgstr ""
+msgstr "No se pudo crear un archivo temporal: %s"
 
 #: libdocument/ev-file-helpers.c:224
 #, c-format
 msgid "Failed to create a temporary directory: %s"
-msgstr ""
+msgstr "No se pudo crear el directorio temporal: %s"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:168
 msgid "File is not a valid .desktop file"
-msgstr "El archivo no posee un formato .desktop válido"
+msgstr "El archivo no es un archivo .desktop válido"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:193
 #, c-format
@@ -741,7 +754,7 @@ msgstr "Empezando %s"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1117
 msgid "Application does not accept documents on command line"
-msgstr "La aplicación no acepta documentos en la línea de comandos."
+msgstr "La aplicación no acepta documentos en la línea de comandos"
 
 #: cut-n-paste/smclient/libegg/eggdesktopfile.c:1185
 #, c-format
@@ -759,7 +772,7 @@ msgstr "No es un ítem de lanzamiento"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
-msgstr "Deshabilitar la conexión a la sesión de manager"
+msgstr "Deshabilitar la conexión con el administrador de sesiones"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
@@ -772,7 +785,7 @@ msgstr "ARCHIVO"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
-msgstr "Especifique el ID de la sesión de management"
+msgstr "Especifique el ID de gestión de sesiones"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:243
 msgid "ID"
@@ -780,40 +793,40 @@ msgstr "ID"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:269
 msgid "Session management options:"
-msgstr ""
+msgstr "Opciones de gestión de sesiones:"
 
 #: cut-n-paste/smclient/libegg/eggsmclient.c:270
 msgid "Show session management options"
-msgstr ""
+msgstr "Mostrar las opciones de gestión de sesiones"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:982
 #, c-format
 msgid "Show “_%s”"
-msgstr ""
+msgstr "Mostrar “_%s”"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1471
 msgid "_Move on Toolbar"
-msgstr ""
+msgstr "_Mover en la barra de herramientas"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1472
 msgid "Move the selected item on the toolbar"
-msgstr ""
+msgstr "Mover el elemento seleccionado en la barra de herramientas"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
 msgid "_Remove from Toolbar"
-msgstr ""
+msgstr "_Eliminar de la barra de herramientas"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1474
 msgid "Remove the selected item from the toolbar"
-msgstr ""
+msgstr "Eliminar el elemento seleccionado de la barra de herramientas"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1475
 msgid "_Delete Toolbar"
-msgstr ""
+msgstr "_Eliminar barra de herramientas"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1476
 msgid "Remove the selected toolbar"
-msgstr ""
+msgstr "Eliminar la barra de herramientas seleccionada"
 
 #: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:489
 msgid "Separator"
@@ -821,15 +834,15 @@ msgstr "Separador"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:49 shell/ev-window.c:6993
 msgid "Fit Page"
-msgstr ""
+msgstr "Ajustar a la página"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:50 shell/ev-window.c:6997
 msgid "Fit Width"
-msgstr ""
+msgstr "Ajustar al ancho"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:51 shell/ev-window.c:6630
 msgid "Expand Window to Fit"
-msgstr ""
+msgstr "Expandir ventana para ajustar"
 
 #: cut-n-paste/zoom-control/ephy-zoom.h:53
 msgid "50%"
@@ -904,6 +917,12 @@ msgid ""
 "supported by the document, it also allows searching for text, copying text "
 "to the clipboard, hypertext navigation and table-of-contents bookmarks."
 msgstr ""
+"Atril es un visor sencillo de documentos de varias páginas. Puede mostrar e "
+"imprimir archivos PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, "
+"XPS y Portable Document Format (PDF), así como archivos de cómics. Cuando el "
+"documento lo permite, también ofrece funciones de búsqueda de texto, copia "
+"de texto al portapapeles, navegación por hipervínculos y marcadores de tabla "
+"de contenido."
 
 #: data/atril.appdata.xml.in.in:18
 msgid ""
@@ -911,6 +930,9 @@ msgid ""
 "would like to know more about MATE and Atril, please visit the project's "
 "home page."
 msgstr ""
+"Atril es una bifurcación de Evince y forma parte del entorno de escritorio "
+"MATE. Si desea saber más sobre MATE y Atril, visite la página web del "
+"proyecto."
 
 #: data/atril.desktop.in.in:3 shell/ev-window-title.c:157
 msgid "Document Viewer"
@@ -918,113 +940,121 @@ msgstr "Visor de Documentos"
 
 #: data/atril.desktop.in.in:4
 msgid "View multi-page documents"
-msgstr ""
+msgstr "Ver documentos de varias páginas"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/atril.desktop.in.in:19
 msgid "MATE;document;viewer;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
-msgstr ""
+msgstr "MATE;documento;visor;pdf;dvi;ps;xps;tiff;pixbuf;djvu;comics;"
 
 #: data/org.mate.Atril.gschema.xml:12
 msgid "Override document restrictions"
-msgstr ""
+msgstr "Anular las restricciones del documento"
 
 #: data/org.mate.Atril.gschema.xml:13
 msgid "Override document restrictions, like restriction to copy or to print."
 msgstr ""
+"Anular las restricciones del documento, como la restricción de copiar o "
+"imprimir."
 
 #: data/org.mate.Atril.gschema.xml:17
 msgid "Automatically reload the document"
-msgstr ""
+msgstr "Recargar el documento automáticamente"
 
 #: data/org.mate.Atril.gschema.xml:18
 msgid "Whether the document is automatically reloaded on file change."
-msgstr ""
+msgstr "Si el documento se recarga automáticamente al cambiar el archivo."
 
 #: data/org.mate.Atril.gschema.xml:22
 msgid "The URI of the directory last used to open or save a document."
 msgstr ""
+"La URI del directorio utilizado por última vez para abrir o guardar un "
+"documento."
 
 #: data/org.mate.Atril.gschema.xml:26
 msgid "The URI of the directory last used to save a picture."
-msgstr ""
+msgstr "La URI del directorio utilizado por última vez para guardar una imagen."
 
 #: data/org.mate.Atril.gschema.xml:30
 msgid "Page cache size in MiB"
-msgstr ""
+msgstr "Tamaño de la caché de página en MiB"
 
 #: data/org.mate.Atril.gschema.xml:31
 msgid ""
 "The maximum size that will be used to cache rendered pages, limits maximum "
 "zoom level."
 msgstr ""
+"El tamaño máximo que se utilizará para almacenar en caché las páginas "
+"renderizadas limita el nivel máximo de zoom."
 
 #: data/org.mate.Atril.gschema.xml:35
 msgid ""
 "Show a dialog to confirm that the user wants to activate the caret "
 "navigation."
 msgstr ""
+"Mostrar un cuadro de diálogo para confirmar que el usuario desea activar la "
+"navegación del cursor."
 
 #: previewer/ev-previewer.c:35
 msgid "Delete the temporary file"
-msgstr ""
+msgstr "Eliminar el archivo temporal"
 
 #: previewer/ev-previewer.c:36
 msgid "Print settings file"
-msgstr ""
+msgstr "Archivo de configuración de impresión"
 
 #: previewer/ev-previewer.c:107 previewer/ev-previewer.c:143
 msgid "MATE Document Previewer"
-msgstr ""
+msgstr "Previsualizador de documentos MATE"
 
 #: previewer/ev-previewer-window.c:96 shell/ev-window.c:3666
 msgid "Failed to print document"
-msgstr ""
+msgstr "No se pudo imprimir el documento"
 
 #: previewer/ev-previewer-window.c:240
 #, c-format
 msgid "The selected printer '%s' could not be found"
-msgstr ""
+msgstr "No se pudo encontrar la impresora seleccionada '%s'"
 
 #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6595
 msgid "_Close"
-msgstr ""
+msgstr "_Cerrar"
 
 #: previewer/ev-previewer-window.c:287 shell/ev-window.c:6637
 msgid "_Previous Page"
-msgstr ""
+msgstr "_Página anterior"
 
 #: previewer/ev-previewer-window.c:288 shell/ev-window.c:6638
 msgid "Go to the previous page"
-msgstr ""
+msgstr "Ir a la página anterior"
 
 #: previewer/ev-previewer-window.c:290 shell/ev-window.c:6640
 msgid "_Next Page"
-msgstr ""
+msgstr "Siguie_nte página"
 
 #: previewer/ev-previewer-window.c:291 shell/ev-window.c:6641
 msgid "Go to the next page"
-msgstr ""
+msgstr "Ir a la siguiente página"
 
 #: previewer/ev-previewer-window.c:293 shell/ev-window.c:6617
 msgid "Zoom _In"
-msgstr ""
+msgstr "A_cercar"
 
 #: previewer/ev-previewer-window.c:294 shell/ev-window.c:6618
 msgid "Enlarge the document"
-msgstr ""
+msgstr "Agrandar el documento"
 
 #: previewer/ev-previewer-window.c:296 shell/ev-window.c:6620
 msgid "Zoom _Out"
-msgstr ""
+msgstr "Ale_jar"
 
 #: previewer/ev-previewer-window.c:297 shell/ev-window.c:6621
 msgid "Shrink the document"
-msgstr ""
+msgstr "Reducir el documento"
 
 #: previewer/ev-previewer-window.c:300 shell/ev-window.c:6624
 msgid "Reset zoom to 100%"
-msgstr ""
+msgstr "Restablecer el zoom al 100 %"
 
 #: previewer/ev-previewer-window.c:304 libview/ev-print-operation.c:1319
 msgid "Print"
@@ -1036,27 +1066,27 @@ msgstr "Imprimir este documento"
 
 #: previewer/ev-previewer-window.c:339 shell/ev-window.c:6743
 msgid "Fit Pa_ge"
-msgstr ""
+msgstr "Ajustar a la pá_gina"
 
 #: previewer/ev-previewer-window.c:340 shell/ev-window.c:6744
 msgid "Make the current document fill the window"
-msgstr ""
+msgstr "Hacer que el documento actual ocupe toda la ventana"
 
 #: previewer/ev-previewer-window.c:342 shell/ev-window.c:6746
 msgid "Fit _Width"
-msgstr ""
+msgstr "A_justar al ancho"
 
 #: previewer/ev-previewer-window.c:343 shell/ev-window.c:6747
 msgid "Make the current document fill the window width"
-msgstr ""
+msgstr "Hacer que el documento actual ocupe todo el ancho de la ventana"
 
 #: previewer/ev-previewer-window.c:553 shell/ev-window.c:6903
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: previewer/ev-previewer-window.c:554 shell/ev-window.c:6904
 msgid "Select Page"
-msgstr ""
+msgstr "Seleccionar página"
 
 #: properties/ev-properties-main.c:116
 msgid "Document"
@@ -1068,7 +1098,7 @@ msgstr "Título:"
 
 #: properties/ev-properties-view.c:61
 msgid "Location:"
-msgstr ""
+msgstr "Ubicación:"
 
 #: properties/ev-properties-view.c:62
 msgid "Subject:"
@@ -1085,7 +1115,7 @@ msgstr "Palabras clave:"
 
 #: properties/ev-properties-view.c:65
 msgid "Producer:"
-msgstr ""
+msgstr "Productor:"
 
 #: properties/ev-properties-view.c:66
 msgid "Creator:"
@@ -1105,47 +1135,47 @@ msgstr "Número de páginas:"
 
 #: properties/ev-properties-view.c:70
 msgid "Optimized:"
-msgstr ""
+msgstr "Optimizado:"
 
 #: properties/ev-properties-view.c:71
 msgid "Format:"
-msgstr "Formato"
+msgstr "Formato:"
 
 #: properties/ev-properties-view.c:72
 msgid "Security:"
-msgstr ""
+msgstr "Seguridad:"
 
 #: properties/ev-properties-view.c:73
 msgid "Paper Size:"
-msgstr ""
+msgstr "Tamaño del papel:"
 
 #: properties/ev-properties-view.c:193 libview/ev-print-operation.c:1902
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #: properties/ev-properties-view.c:221
 msgid "default:mm"
-msgstr ""
+msgstr "predeterminado:mm"
 
 #: properties/ev-properties-view.c:265
 #, c-format
 msgid "%.0f × %.0f mm"
-msgstr ""
+msgstr "%.0f × %.0f mm"
 
 #: properties/ev-properties-view.c:269
 #, c-format
 msgid "%.2f × %.2f inch"
-msgstr ""
+msgstr "%.2f × %.2f pulgadas"
 
 #: properties/ev-properties-view.c:293
 #, c-format
 msgid "%s, Portrait (%s)"
-msgstr ""
+msgstr "%s, Retrato (%s)"
 
 #: properties/ev-properties-view.c:300
 #, c-format
 msgid "%s, Landscape (%s)"
-msgstr ""
+msgstr "%s, Apaisado (%s)"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:4
 msgid "Atril properties"
@@ -1153,7 +1183,7 @@ msgstr "Propiedades de Atril"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:5
 msgid "Shows details for Atril documents"
-msgstr ""
+msgstr "Muestra detalles de los documentos de Atril"
 
 #: properties/libatril-properties-page.caja-extension.desktop.in.in:9
 msgid ""
@@ -1163,53 +1193,58 @@ msgid ""
 "Copyright (C) 2005 Red Hat, Inc\n"
 "Copyright (C) 2012–2021 The MATE developers"
 msgstr ""
+"Copyright (C) 2000, 2001 Eazel Inc.\n"
+"Copyright (C) 2003 Andrew Sobala <aes@gnome.org>\n"
+"Copyright (C) 2005 Bastien Nocera <hadess@hadess.net>\n"
+"Copyright (C) 2005 Red Hat, Inc\n"
+"Copyright (C) 2012–2021 Los desarrolladores de MATE"
 
 #: libmisc/ev-page-action-widget.c:64
 #, c-format
 msgid "(%d of %d)"
-msgstr ""
+msgstr "(%d de %d)"
 
 #: libmisc/ev-page-action-widget.c:66
 #, c-format
 msgid "of %d"
-msgstr ""
+msgstr "de %d"
 
 #: libview/ev-print-operation.c:346
 msgid "Preparing to print…"
-msgstr ""
+msgstr "Preparando la impresión…"
 
 #: libview/ev-print-operation.c:348
 msgid "Finishing…"
-msgstr ""
+msgstr "Terminando…"
 
 #: libview/ev-print-operation.c:350
 #, c-format
 msgid "Printing page %d of %d…"
-msgstr ""
+msgstr "Imprimiendo página %d de %d…"
 
 #: libview/ev-print-operation.c:1172
 msgid "Printing is not supported on this printer."
-msgstr ""
+msgstr "La impresión no es compatible con esta impresora."
 
 #: libview/ev-print-operation.c:1237
 msgid "Invalid page selection"
-msgstr ""
+msgstr "Selección de página inválida"
 
 #: libview/ev-print-operation.c:1240
 msgid "Your print range selection does not include any pages"
-msgstr ""
+msgstr "Su selección de rango de impresión no incluye ninguna página"
 
 #: libview/ev-print-operation.c:1896
 msgid "Page Scaling:"
-msgstr ""
+msgstr "Escala de página:"
 
 #: libview/ev-print-operation.c:1903
 msgid "Shrink to Printable Area"
-msgstr ""
+msgstr "Reducir al área imprimible"
 
 #: libview/ev-print-operation.c:1904
 msgid "Fit to Printable Area"
-msgstr ""
+msgstr "Ajustar al área imprimible"
 
 #: libview/ev-print-operation.c:1907
 msgid ""
@@ -1224,140 +1259,159 @@ msgid ""
 "• \"Fit to Printable Area\": Document pages are enlarged or reduced as "
 "required to fit the printable area of the printer page.\n"
 msgstr ""
+"Ajustar la escala de las páginas del documento para que se adapten al tamaño "
+"de papel de la impresora seleccionada. Seleccione una de las siguientes "
+"opciones:\n"
+"\n"
+"• \"Ninguna\": No se realiza ningún escalado de página.\n"
+"\n"
+"• \"Reducir al área de impresión\": las páginas del documento que superan el "
+"área de impresión se reducen para ajustarse al área de impresión de la "
+"página de la impresora.\n"
+"\n"
+"• \"Ajustar al área imprimible\": Las páginas del documento se amplían o "
+"reducen según sea necesario para ajustarse al área imprimible de la página "
+"de la impresora.\n"
 
 #: libview/ev-print-operation.c:1919
 msgid "Auto Rotate and Center"
-msgstr ""
+msgstr "Rotación y centrado automáticos"
 
 #: libview/ev-print-operation.c:1922
 msgid ""
 "Rotate printer page orientation of each page to match orientation of each "
 "document page. Document pages will be centered within the printer page."
 msgstr ""
+"Gire la orientación de cada página de impresión para que coincida con la "
+"orientación de cada página del documento. Las páginas del documento se "
+"centrarán dentro de la página de impresión."
 
 #: libview/ev-print-operation.c:1927
 msgid "Select page size using document page size"
 msgstr ""
+"Seleccionar el tamaño de página utilizando el tamaño de página del documento"
 
 #: libview/ev-print-operation.c:1929
 msgid ""
 "When enabled, each page will be printed on the same size paper as the "
 "document page."
 msgstr ""
+"Cuando esta opción está activada, cada página se imprimirá en papel del "
+"mismo tamaño que la página del documento."
 
 #: libview/ev-print-operation.c:2011
 msgid "Page Handling"
-msgstr ""
+msgstr "Gestión de páginas"
 
 #: libview/ev-jobs.c:619
 #, c-format
 msgid "Failed to render page %d"
-msgstr ""
+msgstr "No se pudo renderizar la página %d"
 
 #: libview/ev-jobs.c:1629
 #, c-format
 msgid "Failed to print page %d: %s"
-msgstr ""
+msgstr "No se pudo imprimir la página %d:%s"
 
 #: libview/ev-view-accessible.c:43
 msgid "Scroll Up"
-msgstr ""
+msgstr "Desplazarse hacia arriba"
 
 #: libview/ev-view-accessible.c:44
 msgid "Scroll Down"
-msgstr ""
+msgstr "Desplazarse hacia abajo"
 
 #: libview/ev-view-accessible.c:50
 msgid "Scroll View Up"
-msgstr ""
+msgstr "Desplazar la vista hacia arriba"
 
 #: libview/ev-view-accessible.c:51
 msgid "Scroll View Down"
-msgstr ""
+msgstr "Desplazar la vista hacia abajo"
 
 #: libview/ev-view-accessible.c:128
 msgid "Document View"
-msgstr ""
+msgstr "Vista del documento"
 
 #: libview/ev-view-presentation.c:729
 msgid "Jump to page:"
-msgstr ""
+msgstr "Ir a la página:"
 
 #: libview/ev-view-presentation.c:1062
 msgid "End of presentation. Click to exit."
-msgstr ""
+msgstr "Fin de la presentación. Haga clic para salir."
 
 #: libview/ev-view.c:1905
 msgid "Go to first page"
-msgstr ""
+msgstr "Ir a la primera página"
 
 #: libview/ev-view.c:1907
 msgid "Go to previous page"
-msgstr ""
+msgstr "Ir a la página anterior"
 
 #: libview/ev-view.c:1909
 msgid "Go to next page"
-msgstr ""
+msgstr "Ir a la siguiente página"
 
 #: libview/ev-view.c:1911
 msgid "Go to last page"
-msgstr ""
+msgstr "Ir a la última página"
 
 #: libview/ev-view.c:1913
 msgid "Go to page"
-msgstr ""
+msgstr "Ir a la página"
 
 #: libview/ev-view.c:1915
 msgid "Find"
-msgstr ""
+msgstr "Encontrar"
 
 #: libview/ev-view.c:1943
 #, c-format
 msgid "Go to page %s"
-msgstr ""
+msgstr "Ir a la página %s"
 
 #: libview/ev-view.c:1949
 #, c-format
 msgid "Go to %s on file “%s”"
-msgstr ""
+msgstr "Ir a %s en el archivo \"%s\""
 
 #: libview/ev-view.c:1952
 #, c-format
 msgid "Go to file “%s”"
-msgstr ""
+msgstr "Ir al archivo \"%s\""
 
 #: libview/ev-view.c:1960
 #, c-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Iniciar %s"
 
 #: shell/eggfindbar.c:276
 msgid "Find:"
-msgstr ""
+msgstr "Encontrar:"
 
 #: shell/eggfindbar.c:301
 msgid "Find previous occurrence of the search string"
-msgstr ""
+msgstr "Encontrar la aparición anterior de la cadena de búsqueda"
 
 #: shell/eggfindbar.c:309
 msgid "Find next occurrence of the search string"
-msgstr ""
+msgstr "Encontrar la siguiente aparición de la cadena de búsqueda"
 
 #: shell/eggfindbar.c:316
 msgid "Case Sensitive"
-msgstr ""
+msgstr "Distingue mayúsculas y minúsculas"
 
 #: shell/eggfindbar.c:319
 msgid "Toggle case sensitive search"
-msgstr ""
+msgstr "Alternar búsqueda sensible a mayúsculas y minúsculas"
 
 #: shell/ev-annotation-properties-dialog.c:96
 msgid "Icon:"
-msgstr ""
+msgstr "Icono:"
 
 #: shell/ev-annotation-properties-dialog.c:102
 msgid "Note"
-msgstr ""
+msgstr "Nota"
 
 #: shell/ev-annotation-properties-dialog.c:103
 msgid "Comment"
@@ -1365,7 +1419,7 @@ msgstr "Comentario"
 
 #: shell/ev-annotation-properties-dialog.c:104
 msgid "Key"
-msgstr ""
+msgstr "Clave"
 
 #: shell/ev-annotation-properties-dialog.c:105
 msgid "Help"
@@ -1373,11 +1427,11 @@ msgstr "Ayuda"
 
 #: shell/ev-annotation-properties-dialog.c:106
 msgid "New Paragraph"
-msgstr ""
+msgstr "Nuevo párrafo"
 
 #: shell/ev-annotation-properties-dialog.c:107
 msgid "Paragraph"
-msgstr ""
+msgstr "Párrafo"
 
 #: shell/ev-annotation-properties-dialog.c:108
 msgid "Insert"
@@ -1385,11 +1439,11 @@ msgstr "Insertar"
 
 #: shell/ev-annotation-properties-dialog.c:109
 msgid "Cross"
-msgstr ""
+msgstr "Cruz"
 
 #: shell/ev-annotation-properties-dialog.c:110
 msgid "Circle"
-msgstr ""
+msgstr "Círculo"
 
 #: shell/ev-annotation-properties-dialog.c:111
 msgid "Unknown"
@@ -1397,7 +1451,7 @@ msgstr "Desconocido"
 
 #: shell/ev-annotation-properties-dialog.c:136
 msgid "Annotation Properties"
-msgstr ""
+msgstr "Propiedades de la anotación"
 
 #: shell/ev-annotation-properties-dialog.c:167
 msgid "Color:"
@@ -1405,19 +1459,19 @@ msgstr "Color:"
 
 #: shell/ev-annotation-properties-dialog.c:177
 msgid "Style:"
-msgstr ""
+msgstr "Estilo:"
 
 #: shell/ev-annotation-properties-dialog.c:191
 msgid "Transparent"
-msgstr ""
+msgstr "Transparente"
 
 #: shell/ev-annotation-properties-dialog.c:198
 msgid "Opaque"
-msgstr ""
+msgstr "Opaco"
 
 #: shell/ev-annotation-properties-dialog.c:208
 msgid "Initial window state:"
-msgstr ""
+msgstr "Estado inicial de la ventana:"
 
 #: shell/ev-annotation-properties-dialog.c:214
 msgid "Open"
@@ -1430,26 +1484,28 @@ msgstr "Cerrar"
 #: shell/ev-keyring.c:86
 #, c-format
 msgid "Password for document %s"
-msgstr ""
+msgstr "Contraseña para el documento %s"
 
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:264
 msgid "Loading…"
-msgstr "Cargando..."
+msgstr "Cargando…"
 
 #: shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
-msgstr ""
+msgstr "Abrir un documento utilizado recientemente"
 
 #: shell/ev-password-view.c:133
 msgid ""
 "This document is locked and can only be read by entering the correct "
 "password."
 msgstr ""
+"Este documento está bloqueado y solo se puede leer introduciendo la "
+"contraseña correcta."
 
 #: shell/ev-password-view.c:142 shell/ev-password-view.c:258
 msgid "_Unlock Document"
-msgstr ""
+msgstr "Desblo_quear documento"
 
 #: shell/ev-password-view.c:250
 msgid "Enter password"
@@ -1460,10 +1516,12 @@ msgstr "Introduzca la contraseña"
 msgid ""
 "The document “%s” is locked and requires a password before it can be opened."
 msgstr ""
+"El documento \"%s\" está bloqueado y se requiere una contraseña para poder "
+"abrirlo."
 
 #: shell/ev-password-view.c:289
 msgid "Password required"
-msgstr ""
+msgstr "Se requiere contraseña"
 
 #: shell/ev-password-view.c:319
 msgid "_Password:"
@@ -1475,11 +1533,11 @@ msgstr ""
 
 #: shell/ev-password-view.c:363
 msgid "Remember password until you _log out"
-msgstr ""
+msgstr "Recordar contraseña hasta cerrar _la sesión"
 
 #: shell/ev-password-view.c:375
 msgid "Remember _forever"
-msgstr ""
+msgstr "Recordar _siempre"
 
 #: shell/ev-properties-dialog.c:120
 msgid "Properties"
@@ -1491,87 +1549,87 @@ msgstr "General"
 
 #: shell/ev-properties-dialog.c:168
 msgid "Fonts"
-msgstr "Fuentes"
+msgstr "Tipografías"
 
 #: shell/ev-properties-dialog.c:181
 msgid "Document License"
-msgstr ""
+msgstr "Licencia del documento"
 
 #: shell/ev-properties-fonts.c:136
 msgid "Font"
-msgstr "Fuente"
+msgstr "Tipografía"
 
 #: shell/ev-properties-fonts.c:163
 #, c-format
 msgid "Gathering font information… %3d%%"
-msgstr ""
+msgstr "Recopilando información de la tipografía… %3d%%"
 
 #: shell/ev-properties-license.c:134
 msgid "Usage terms"
-msgstr ""
+msgstr "Condiciones de uso"
 
 #: shell/ev-properties-license.c:140
 msgid "Text License"
-msgstr ""
+msgstr "Licencia del texto"
 
 #: shell/ev-properties-license.c:146
 msgid "Further Information"
-msgstr ""
+msgstr "Más información"
 
 #: shell/ev-sidebar.c:369
 msgid "Hide sidebar"
-msgstr ""
+msgstr "Ocultar barra lateral"
 
 #: shell/ev-sidebar-annotations.c:201
 msgid "Add"
-msgstr ""
+msgstr "Agregar"
 
 #: shell/ev-sidebar-annotations.c:207
 msgid "Add text annotation"
-msgstr ""
+msgstr "Añadir anotación de texto"
 
 #: shell/ev-sidebar-annotations.c:342
 msgid "Document contains no annotations"
-msgstr ""
+msgstr "El documento no contiene anotaciones"
 
 #: shell/ev-sidebar-annotations.c:374
 #, c-format
 msgid "Page %d"
-msgstr ""
+msgstr "Página %d"
 
 #: shell/ev-sidebar-annotations.c:515
 msgid "Annotations"
-msgstr ""
+msgstr "Anotaciones"
 
 #: shell/ev-sidebar-attachments.c:692
 msgid "Attachments"
-msgstr ""
+msgstr "Adjuntos"
 
 #: shell/ev-sidebar-bookmarks.c:154
 msgid "_Open Bookmark"
-msgstr ""
+msgstr "_Abrir marcador"
 
 #: shell/ev-sidebar-bookmarks.c:156
 msgid "_Rename Bookmark"
-msgstr ""
+msgstr "_Renombrar marcador"
 
 #: shell/ev-sidebar-bookmarks.c:158
 msgid "_Remove Bookmark"
-msgstr ""
+msgstr "_Eliminar marcador"
 
 #: shell/ev-sidebar-bookmarks.c:313 shell/ev-window.c:1015
 #: shell/ev-window.c:5144
 #, c-format
 msgid "Page %s"
-msgstr ""
+msgstr "Página %s"
 
 #: shell/ev-sidebar-bookmarks.c:469
 msgid "_Add"
-msgstr ""
+msgstr "_Agregar"
 
 #: shell/ev-sidebar-bookmarks.c:479
 msgid "_Remove"
-msgstr ""
+msgstr "_Eliminar"
 
 #: shell/ev-sidebar-bookmarks.c:605
 msgid "Bookmarks"
@@ -1583,61 +1641,63 @@ msgstr "Capas"
 
 #: shell/ev-sidebar-links.c:735
 msgid "Index"
-msgstr ""
+msgstr "Indice"
 
 #: shell/ev-sidebar-thumbnails.c:1031
 msgid "Thumbnails"
-msgstr ""
+msgstr "Miniaturas"
 
 #: shell/ev-window.c:1012
 #, c-format
 msgid "Page %s — %s"
-msgstr ""
+msgstr "Página %s — %s"
 
 #: shell/ev-window.c:1172
 msgid ""
 "Cannot enter presentation mode with ePub documents, use fullscreen mode "
 "instead."
 msgstr ""
+"No es posible activar el modo de presentación con documentos ePub; utilice "
+"en su lugar el modo de pantalla completa."
 
 #: shell/ev-window.c:1778
 msgid "The document contains no pages"
-msgstr ""
+msgstr "El documento no contiene páginas"
 
 #: shell/ev-window.c:1781
 msgid "The document contains only empty pages"
-msgstr ""
+msgstr "El documento contiene solamente páginas vacías"
 
 #: shell/ev-window.c:1828
 msgid "Presentation mode is not supported for ePub documents."
-msgstr ""
+msgstr "El modo de presentación no es compatible con documentos ePub."
 
 #: shell/ev-window.c:2022 shell/ev-window.c:2203
 msgid "Unable to open document"
-msgstr ""
+msgstr "No se puede abrir el documento"
 
 #: shell/ev-window.c:2159
 #, c-format
 msgid "Loading document from “%s”"
-msgstr ""
+msgstr "Cargando documento desde \"%s\""
 
 #: shell/ev-window.c:2314 shell/ev-window.c:2605
 #, c-format
 msgid "Downloading document (%d%%)"
-msgstr ""
+msgstr "Descargando documento (%d%%)"
 
 #: shell/ev-window.c:2347
 msgid "Failed to load remote file."
-msgstr ""
+msgstr "No se pudo cargar el archivo remoto."
 
 #: shell/ev-window.c:2549
 #, c-format
 msgid "Reloading document from %s"
-msgstr ""
+msgstr "Recargando documento desde %s"
 
 #: shell/ev-window.c:2581
 msgid "Failed to reload document."
-msgstr ""
+msgstr "No se pudo recargar el documento."
 
 #: shell/ev-window.c:2799
 msgid "Open Document"
@@ -1646,88 +1706,92 @@ msgstr "Abrir Documento"
 #: shell/ev-window.c:3078
 #, c-format
 msgid "Saving document to %s"
-msgstr ""
+msgstr "Guardando documento en %s"
 
 #: shell/ev-window.c:3081
 #, c-format
 msgid "Saving attachment to %s"
-msgstr ""
+msgstr "Guardando el archivo adjunto en %s"
 
 #: shell/ev-window.c:3084
 #, c-format
 msgid "Saving image to %s"
-msgstr ""
+msgstr "Guardando imagen en %s"
 
 #: shell/ev-window.c:3128 shell/ev-window.c:3228
 #, c-format
 msgid "The file could not be saved as “%s”."
-msgstr ""
+msgstr "No se pudo guardar el archivo como \"%s\"."
 
 #: shell/ev-window.c:3159
 #, c-format
 msgid "Uploading document (%d%%)"
-msgstr ""
+msgstr "Subiendo documento (%d%%)"
 
 #: shell/ev-window.c:3163
 #, c-format
 msgid "Uploading attachment (%d%%)"
-msgstr ""
+msgstr "Subiendo archivo adjunto (%d%%)"
 
 #: shell/ev-window.c:3167
 #, c-format
 msgid "Uploading image (%d%%)"
-msgstr ""
+msgstr "Subiendo imagen (%d%%)"
 
 #: shell/ev-window.c:3280
 msgid "Save As…"
-msgstr "Guardar como..."
+msgstr "Guardar como…"
 
 #: shell/ev-window.c:3358
 msgid "Could not send current document"
-msgstr ""
+msgstr "No se pudo enviar el documento actual"
 
 #: shell/ev-window.c:3610
 #, c-format
 msgid "%lu pending job in queue"
 msgid_plural "%lu pending jobs in queue"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%lu pendiente en la cola"
+msgstr[1] "%lu pendientes en la cola"
+msgstr[2] "%lu pendientes en la cola"
 
 #: shell/ev-window.c:3723
 #, c-format
 msgid "Printing job “%s”"
-msgstr ""
+msgstr "Imprimiendo trabajo \"%s\""
 
 #: shell/ev-window.c:3900
 msgid ""
 "Document contains form fields that have been filled out. If you don't save a "
 "copy, changes will be permanently lost."
 msgstr ""
+"El documento contiene campos de formulario que se han completado. Si no "
+"guarda una copia, los cambios se perderán permanentemente."
 
 #: shell/ev-window.c:3904
 msgid ""
 "Document contains new or modified annotations. If you don't save a copy, "
 "changes will be permanently lost."
 msgstr ""
+"El documento contiene anotaciones nuevas o modificadas. Si no guarda una "
+"copia, los cambios se perderán permanentemente."
 
 #: shell/ev-window.c:3910
 #, c-format
 msgid "Save a copy of document “%s” before closing?"
-msgstr ""
+msgstr "¿Guardar una copia del documento \"%s\" antes de cerrar?"
 
 #: shell/ev-window.c:3929
 msgid "Close _without Saving"
-msgstr ""
+msgstr "Cerrar _sin guardar"
 
 #: shell/ev-window.c:3933 shell/ev-window.c:6584
 msgid "_Save As…"
-msgstr ""
+msgstr "_Guardar como…"
 
 #: shell/ev-window.c:4002
 #, c-format
 msgid "Wait until print job “%s” finishes before closing?"
-msgstr ""
+msgstr "¿Esperar a que finalice el trabajo de impresión \"%s\" antes de cerrar?"
 
 #: shell/ev-window.c:4009
 #, c-format
@@ -1735,36 +1799,43 @@ msgid "There is %d print job active. Wait until print finishes before closing?"
 msgid_plural ""
 "There are %d print jobs active. Wait until print finishes before closing?"
 msgstr[0] ""
+"Hay %d trabajo de impresión activo. ¿Esperar a que finalice la impresión "
+"antes de cerrar?"
 msgstr[1] ""
+"Hay %d trabajos de impresión activos. ¿Esperar a que finalice la impresión "
+"antes de cerrar?"
 msgstr[2] ""
+"Hay %d trabajos de impresión activos. ¿Esperar a que finalice la impresión "
+"antes de cerrar?"
 
 #: shell/ev-window.c:4024
 msgid "If you close the window, pending print jobs will not be printed."
 msgstr ""
+"Si cierra la ventana, los trabajos de impresión pendientes no se imprimirán."
 
 #: shell/ev-window.c:4028
 msgid "Cancel _print and Close"
-msgstr ""
+msgstr "Cancelar _imprimir y Cerrar"
 
 #: shell/ev-window.c:4032
 msgid "Close _after Printing"
-msgstr ""
+msgstr "Cerrar _después de imprimir"
 
 #: shell/ev-window.c:4471
 msgid "Running in presentation mode"
-msgstr ""
+msgstr "Ejecutando en modo de presentación"
 
 #: shell/ev-window.c:4537
 msgid "Presentation mode is not supported for ePub documents"
-msgstr ""
+msgstr "El modo de presentación no es compatible con documentos ePub"
 
 #: shell/ev-window.c:4865
 msgid "Toolbar Editor"
-msgstr ""
+msgstr "Editor de barras de herramientas"
 
 #: shell/ev-window.c:5190
 msgid "There was an error displaying help"
-msgstr ""
+msgstr "Se produjo un error al mostrar la ayuda"
 
 #: shell/ev-window.c:5443
 #, c-format
@@ -1772,10 +1843,12 @@ msgid ""
 "Atril is a simple multi-page document viewer,\n"
 "powered by SyncTex %s and %s %s."
 msgstr ""
+"Atril es un visor sencillo de documentos de varias páginas,\n"
+"impulsado por SyncTex %s y %s %s."
 
 #: shell/ev-window.c:5446
 msgid "Atril is a simple multi-page document viewer."
-msgstr ""
+msgstr "Atril es un visor de documentos multipágina sencillo."
 
 #: shell/ev-window.c:5459
 msgid "MATE Documentation Team"
@@ -1783,7 +1856,7 @@ msgstr "Equipo de documentación de MATE"
 
 #: shell/ev-window.c:5460
 msgid "GNOME Documentation Team"
-msgstr ""
+msgstr "Equipo de documentación GNOME"
 
 #: shell/ev-window.c:5465
 msgid ""
@@ -1792,6 +1865,10 @@ msgid ""
 "Foundation; either version 2 of the License, or (at your option) any later "
 "version."
 msgstr ""
+"Atril es software libre; puede redistribuirlo y/o modificarlo bajo los "
+"términos de la Licencia Pública General de GNU tal como ha sido publicada "
+"por la Free Software Foundation; ya sea la versión 2 de la Licencia o (a su "
+"elección) cualquier versión posterior."
 
 #: shell/ev-window.c:5469
 msgid ""
@@ -1800,6 +1877,10 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
+"Atril se distribuye con la esperanza de que sea útil, pero SIN NINGUNA "
+"GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD "
+"PARA UN PROPÓSITO PARTICULAR. Consulte la Licencia Pública General de GNU "
+"para obtener más detalles."
 
 #: shell/ev-window.c:5473
 msgid ""
@@ -1807,16 +1888,21 @@ msgid ""
 "Atril; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "Street, Fifth Floor, Boston, MA 02110-1301  USA"
 msgstr ""
+"Debería haber recibido una copia de la Licencia Pública General de GNU junto "
+"con Atril; si no es así, escriba a la Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, EE. UU"
 
 #: shell/ev-window.c:5518
 msgid "About Atril Document Viewer"
-msgstr ""
+msgstr "Acerca del Visor de documentos Atril"
 
 #: shell/ev-window.c:5519
 msgid ""
 "Copyright © 1996–2009 The Evince authors\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Copyright © 1996–2009 Los autores de Evince\n"
+"Copyright © 2012–2021 Los desarrolladores de MATE"
 
 #: shell/ev-window.c:5526
 msgid "translator-credits"
@@ -1828,26 +1914,26 @@ msgstr ""
 #, c-format
 msgid "%d found on this page"
 msgid_plural "%d found on this page"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d encontrado en esta página"
+msgstr[1] "%d encontrados en esta página"
+msgstr[2] "%d encontrados en esta página"
 
 #: shell/ev-window.c:5835
 msgid "Not found"
-msgstr ""
+msgstr "No se encontró"
 
 #: shell/ev-window.c:5841
 #, c-format
 msgid "%3d%% remaining to search"
-msgstr ""
+msgstr "%3d%% restante por buscar"
 
 #: shell/ev-window.c:6251
 msgid "Enable caret navigation?"
-msgstr ""
+msgstr "¿Activar la navegación por cursor?"
 
 #: shell/ev-window.c:6253
 msgid "_Enable"
-msgstr ""
+msgstr "_Habilitar"
 
 #: shell/ev-window.c:6256
 msgid ""
@@ -1855,10 +1941,14 @@ msgid ""
 "movable cursor in text pages, allowing you to move around and select text "
 "with your keyboard. Do you want to enable the caret navigation?"
 msgstr ""
+"Al pulsar F7 se activa o desactiva la navegación por cursor. Esta función "
+"coloca un cursor móvil en las páginas de texto, lo que le permite "
+"desplazarse y seleccionar texto mediante el teclado. ¿Desea activar la "
+"navegación por cursor?"
 
 #: shell/ev-window.c:6261
 msgid "Don't show this message again"
-msgstr ""
+msgstr "No mostrar este mensaje nuevamente"
 
 #: shell/ev-window.c:6570
 msgid "_File"
@@ -1874,11 +1964,11 @@ msgstr "_Ver"
 
 #: shell/ev-window.c:6573
 msgid "_Go"
-msgstr ""
+msgstr "_Ir"
 
 #: shell/ev-window.c:6574
 msgid "_Bookmarks"
-msgstr ""
+msgstr "_Marcadores"
 
 #: shell/ev-window.c:6575
 msgid "_Help"
@@ -1886,39 +1976,39 @@ msgstr "Ay_uda"
 
 #: shell/ev-window.c:6578 shell/ev-window.c:6944
 msgid "_Open…"
-msgstr ""
+msgstr "_Abrir…"
 
 #: shell/ev-window.c:6579 shell/ev-window.c:6945
 msgid "Open an existing document"
-msgstr ""
+msgstr "Abrir un documento existente"
 
 #: shell/ev-window.c:6581
 msgid "Op_en a Copy"
-msgstr ""
+msgstr "A_brir una copia"
 
 #: shell/ev-window.c:6582
 msgid "Open a copy of the current document in a new window"
-msgstr ""
+msgstr "Abra una copia del documento actual en una ventana nueva"
 
 #: shell/ev-window.c:6585
 msgid "Save a copy of the current document"
-msgstr ""
+msgstr "Guardar una copia del documento actual"
 
 #: shell/ev-window.c:6587
 msgid "Send _To..."
-msgstr ""
+msgstr "En_viar a..."
 
 #: shell/ev-window.c:6588
 msgid "Send current document by mail, instant message..."
-msgstr ""
+msgstr "Enviar el documento actual por correo, mensaje instantáneo..."
 
 #: shell/ev-window.c:6590
 msgid "_Print…"
-msgstr ""
+msgstr "_Imprimir…"
 
 #: shell/ev-window.c:6593
 msgid "P_roperties"
-msgstr ""
+msgstr "P_ropiedades"
 
 #: shell/ev-window.c:6599
 msgid "_Copy"
@@ -1930,31 +2020,31 @@ msgstr "Seleccionar _Todo"
 
 #: shell/ev-window.c:6603
 msgid "Find Ne_xt"
-msgstr ""
+msgstr "Buscar el si_guiente"
 
 #: shell/ev-window.c:6605
 msgid "Find Pre_vious"
-msgstr ""
+msgstr "Buscar el an_terior"
 
 #: shell/ev-window.c:6607
 msgid "T_oolbar"
-msgstr ""
+msgstr "Barra de _herramientas"
 
 #: shell/ev-window.c:6609
 msgid "Rotate _Left"
-msgstr ""
+msgstr "Girar a la i_zquierda"
 
 #: shell/ev-window.c:6611
 msgid "Rotate _Right"
-msgstr ""
+msgstr "Girar a la de_recha"
 
 #: shell/ev-window.c:6613
 msgid "Save Current Settings as _Default"
-msgstr ""
+msgstr "Guardar la configuración actual como _predeterminada"
 
 #: shell/ev-window.c:6623
 msgid "_Reset Zoom"
-msgstr ""
+msgstr "_Restablecer zoom"
 
 #: shell/ev-window.c:6626
 msgid "_Reload"
@@ -1962,39 +2052,39 @@ msgstr "Re_cargar"
 
 #: shell/ev-window.c:6627
 msgid "Reload the document"
-msgstr ""
+msgstr "Recargar el documento"
 
 #: shell/ev-window.c:6629
 msgid "_Expand Window to Fit"
-msgstr ""
+msgstr "_Expandir ventana para ajustar"
 
 #: shell/ev-window.c:6633
 msgid "Auto_scroll"
-msgstr ""
+msgstr "De_splazamiento automático"
 
 #: shell/ev-window.c:6643
 msgid "_First Page"
-msgstr ""
+msgstr "_Primera página"
 
 #: shell/ev-window.c:6644
 msgid "Go to the first page"
-msgstr ""
+msgstr "Ir a la primera página"
 
 #: shell/ev-window.c:6646
 msgid "_Last Page"
-msgstr ""
+msgstr "_Útlima página"
 
 #: shell/ev-window.c:6647
 msgid "Go to the last page"
-msgstr ""
+msgstr "Ir a la última página"
 
 #: shell/ev-window.c:6651
 msgid "_Add Bookmark"
-msgstr ""
+msgstr "_Agregar marcador"
 
 #: shell/ev-window.c:6652
 msgid "Add a bookmark for the current page"
-msgstr ""
+msgstr "Agregar un marcador a la página actual"
 
 #: shell/ev-window.c:6656
 msgid "_Contents"
@@ -2006,7 +2096,7 @@ msgstr "_Acerca de"
 
 #: shell/ev-window.c:6663
 msgid "Leave Fullscreen"
-msgstr ""
+msgstr "Salir de pantalla completa"
 
 #: shell/ev-window.c:6664
 msgid "Leave fullscreen mode"
@@ -2022,35 +2112,35 @@ msgstr "Comenzar una presentación"
 
 #: shell/ev-window.c:6722
 msgid "_Toolbar"
-msgstr ""
+msgstr "_Barra de herramientas"
 
 #: shell/ev-window.c:6723
 msgid "Show or hide the toolbar"
-msgstr ""
+msgstr "Mostrar u ocultar la barra de herramientas"
 
 #: shell/ev-window.c:6725
 msgid "Side _Pane"
-msgstr ""
+msgstr "_Panel lateral"
 
 #: shell/ev-window.c:6726
 msgid "Show or hide the side pane"
-msgstr ""
+msgstr "Mostrar u ocultar el panel lateral"
 
 #: shell/ev-window.c:6728
 msgid "_Continuous"
-msgstr ""
+msgstr "_Continuo"
 
 #: shell/ev-window.c:6729
 msgid "Show the entire document"
-msgstr ""
+msgstr "Mostrar el documento entero"
 
 #: shell/ev-window.c:6731
 msgid "_Dual"
-msgstr ""
+msgstr "_Dual"
 
 #: shell/ev-window.c:6732
 msgid "Show two pages at once"
-msgstr ""
+msgstr "Mostrar dos páginas por vez"
 
 #: shell/ev-window.c:6734
 msgid "_Odd pages left"
@@ -2058,111 +2148,111 @@ msgstr ""
 
 #: shell/ev-window.c:6735
 msgid "Show odd pages on the left in dual mode"
-msgstr ""
+msgstr "Mostrar las páginas impares a la izquierda en el modo dual"
 
 #: shell/ev-window.c:6737
 msgid "_Fullscreen"
-msgstr ""
+msgstr "_Pantalla completa"
 
 #: shell/ev-window.c:6738
 msgid "Expand the window to fill the screen"
-msgstr ""
+msgstr "Expandir la ventana para que ocupe toda la pantalla"
 
 #: shell/ev-window.c:6740
 msgid "Pre_sentation"
-msgstr ""
+msgstr "Pre_sentación"
 
 #: shell/ev-window.c:6741
 msgid "Run document as a presentation"
-msgstr ""
+msgstr "Ejecutar el documento como una presentación"
 
 #: shell/ev-window.c:6749
 msgid "Inverted _Colors"
-msgstr ""
+msgstr "_Colores invertidos"
 
 #: shell/ev-window.c:6750
 msgid "Show page contents with the colors inverted"
-msgstr ""
+msgstr "Mostrar el contenido de la página con los colores invertidos"
 
 #: shell/ev-window.c:6752
 msgid "Caret _Navigation"
-msgstr ""
+msgstr "_Navegación por cursor"
 
 #: shell/ev-window.c:6753
 msgid "Activate or disable caret-navigation"
-msgstr ""
+msgstr "Activar o desactivar la navegación por cursor"
 
 #: shell/ev-window.c:6756
 msgid "_Find…"
-msgstr ""
+msgstr "_Encontrar…"
 
 #: shell/ev-window.c:6757
 msgid "Find a word or phrase in the document"
-msgstr ""
+msgstr "Busca una palabra o frase en el documento"
 
 #: shell/ev-window.c:6764
 msgid "_Open Link"
-msgstr ""
+msgstr "_Abrir enlace"
 
 #: shell/ev-window.c:6766
 msgid "_Go To"
-msgstr ""
+msgstr "_Ir a"
 
 #: shell/ev-window.c:6768
 msgid "Open in New _Window"
-msgstr ""
+msgstr "Abrir en _ventana nueva"
 
 #: shell/ev-window.c:6770
 msgid "_Copy Link Address"
-msgstr ""
+msgstr "_Copiar dirección del enlace"
 
 #: shell/ev-window.c:6772
 msgid "_Save Image As…"
-msgstr ""
+msgstr "_Guardar imagen como…"
 
 #: shell/ev-window.c:6774
 msgid "Copy _Image"
-msgstr ""
+msgstr "Copiar _imagen"
 
 #: shell/ev-window.c:6776
 msgid "Annotation Properties…"
-msgstr ""
+msgstr "Propiedades de la anotación…"
 
 #: shell/ev-window.c:6778
 msgid "Remove Annot…"
-msgstr ""
+msgstr "Eliminar anotación…"
 
 #: shell/ev-window.c:6783
 msgid "_Open Attachment"
-msgstr ""
+msgstr "_Abrir adjunto"
 
 #: shell/ev-window.c:6785
 msgid "_Save Attachment As…"
-msgstr ""
+msgstr "_Guardar adjunto como…"
 
 #: shell/ev-window.c:6918
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: shell/ev-window.c:6920
 msgid "Adjust the zoom level"
-msgstr ""
+msgstr "Ajustar el nivel de zoom"
 
 #: shell/ev-window.c:6930
 msgid "Navigation"
-msgstr ""
+msgstr "Navegación"
 
 #: shell/ev-window.c:6932
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: shell/ev-window.c:6935
 msgid "Move across visited pages"
-msgstr ""
+msgstr "Mover a través de las páginas visitadas"
 
 #: shell/ev-window.c:6966
 msgid "Send To"
-msgstr ""
+msgstr "Enviar a"
 
 #: shell/ev-window.c:6972
 msgid "Previous"
@@ -2174,31 +2264,31 @@ msgstr "Siguiente"
 
 #: shell/ev-window.c:6981
 msgid "Zoom In"
-msgstr ""
+msgstr "Acercar"
 
 #: shell/ev-window.c:6985
 msgid "Zoom Out"
-msgstr ""
+msgstr "Alejar"
 
 #: shell/ev-window.c:6989
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Restablecer el zoom"
 
 #: shell/ev-window.c:7133 shell/ev-window.c:7149
 msgid "Unable to launch external application."
-msgstr ""
+msgstr "No se puede iniciar la aplicación externa."
 
 #: shell/ev-window.c:7206
 msgid "Unable to open external link"
-msgstr ""
+msgstr "No se puede abrir el enlace externo"
 
 #: shell/ev-window.c:7400
 msgid "Couldn't find appropriate format to save image"
-msgstr ""
+msgstr "No se pudo encontrar un formato adecuado para guardar la imagen"
 
 #: shell/ev-window.c:7432
 msgid "The image could not be saved."
-msgstr ""
+msgstr "No se pudo guardar la imagen."
 
 #: shell/ev-window.c:7464
 msgid "Save Image"
@@ -2206,76 +2296,76 @@ msgstr "Guardar Imagen"
 
 #: shell/ev-window.c:7602
 msgid "Unable to open attachment"
-msgstr ""
+msgstr "No se pudo abrir el adjunto"
 
 #: shell/ev-window.c:7658
 msgid "The attachment could not be saved."
-msgstr ""
+msgstr "No se pudo guardar el adjunto."
 
 #: shell/ev-window.c:7703
 msgid "Save Attachment"
-msgstr ""
+msgstr "Guardar adjunto"
 
 #: shell/ev-window-title.c:170
 #, c-format
 msgid "%s — Password Required"
-msgstr ""
+msgstr "%s — Se requiere contraseña"
 
 #: shell/ev-utils.c:38
 msgid "By extension"
-msgstr ""
+msgstr "Por extensión"
 
 #: shell/main.c:56 shell/main.c:232
 msgid "MATE Document Viewer"
-msgstr ""
+msgstr "Visor de documentos de MATE"
 
 #: shell/main.c:64
 msgid "The page label of the document to display."
-msgstr ""
+msgstr "La etiqueta de página del documento que se va a mostrar."
 
 #: shell/main.c:64
 msgid "PAGE"
-msgstr ""
+msgstr "PÁGINA"
 
 #: shell/main.c:65
 msgid "The page number of the document to display."
-msgstr ""
+msgstr "El número de página del documento que se va a mostrar."
 
 #: shell/main.c:65
 msgid "NUMBER"
-msgstr ""
+msgstr "NÚMERO"
 
 #: shell/main.c:66
 msgid "Run atril in fullscreen mode"
-msgstr ""
+msgstr "Ejecutar Atril en modo de pantalla completa"
 
 #: shell/main.c:67
 msgid "Named destination to display."
-msgstr ""
+msgstr "Destino designado para mostrar."
 
 #: shell/main.c:67
 msgid "DEST"
-msgstr ""
+msgstr "DEST"
 
 #: shell/main.c:68
 msgid "Run atril in presentation mode"
-msgstr ""
+msgstr "Ejecutar Atril en modo de presentación"
 
 #: shell/main.c:69
 msgid "Run atril as a previewer"
-msgstr ""
+msgstr "Ejecutar Atril como un previsualizador"
 
 #: shell/main.c:70
 msgid "The word or phrase to find in the document"
-msgstr ""
+msgstr "La palabra o frase que se debe buscar en el documento"
 
 #: shell/main.c:70
 msgid "STRING"
-msgstr ""
+msgstr "CADENA"
 
 #: shell/main.c:74
 msgid "[FILE…]"
-msgstr ""
+msgstr "[ARCHIVO...]"
 
 #, c-format
 #~ msgid "Error %s"
