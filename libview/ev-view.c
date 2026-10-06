@@ -6893,7 +6893,7 @@ ev_view_rotation_changed_cb (EvDocumentModel *model,
 
 	ev_view_remove_all (view);
 
-	if (rotation != 0)
+	if (rotation != 0 && view->pixbuf_cache)
 		clear_selection (view);
 }
 
