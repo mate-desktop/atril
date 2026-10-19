@@ -3512,6 +3512,28 @@ pdf_document_signatures_get_signature_state (EvDocumentSignatures *document,
 #endif /* POPPLER_CHECK_VERSION(22, 2, 0) */
 
 #if POPPLER_CHECK_VERSION(23, 7, 0)
+static PopplerColor *
+pdf_document_signatures_poppler_color_new (const GdkRGBA *rgba)
+{
+	PopplerColor *color = poppler_color_new ();
+
+#if POPPLER_CHECK_VERSION(24, 12, 0)
+	/* PopplerColor channels are 16 bit, poppler scales them to [0, 1] */
+	color->red = CLAMP (rgba->red, 0., 1.) * 65535;
+	color->green = CLAMP (rgba->green, 0., 1.) * 65535;
+	color->blue = CLAMP (rgba->blue, 0., 1.) * 65535;
+#else
+	/* Older poppler passes the channels unscaled to AnnotColor, which
+	 * expects values in [0, 1], so only fully on or off is possible.
+	 * Anything larger results in a black signature field. */
+	color->red = rgba->red >= 0.5 ? 1 : 0;
+	color->green = rgba->green >= 0.5 ? 1 : 0;
+	color->blue = rgba->blue >= 0.5 ? 1 : 0;
+#endif
+
+	return color;
+}
+
 static gboolean
 pdf_document_signatures_sign (EvDocumentSignatures *document,
                               EvSignaturesData     *data,
@@ -3560,10 +3582,7 @@ pdf_document_signatures_sign (EvDocumentSignatures *document,
 	poppler_signing_data_set_signature_text (signing_data, data->signature);
 	poppler_signing_data_set_signature_text_left (signing_data, data->signature_left);
 
-	color = poppler_color_new ();
-	color->red = data->font_color.red * 65535;
-	color->green = data->font_color.green * 65535;
-	color->blue = data->font_color.blue * 65535;
+	color = pdf_document_signatures_poppler_color_new (&data->font_color);
 	poppler_signing_data_set_font_color (signing_data, color);
 	g_clear_pointer (&color, poppler_color_free);
 
@@ -3571,17 +3590,11 @@ pdf_document_signatures_sign (EvDocumentSignatures *document,
 	poppler_signing_data_set_left_font_size (signing_data, data->left_font_size);
 	poppler_signing_data_set_border_width (signing_data, data->border_width);
 
-	color = poppler_color_new ();
-	color->red = data->border_color.red * 65535;
-	color->green = data->border_color.green * 65535;
-	color->blue = data->border_color.blue * 65535;
+	color = pdf_document_signatures_poppler_color_new (&data->border_color);
 	poppler_signing_data_set_border_color (signing_data, color);
 	g_clear_pointer (&color, poppler_color_free);
 
-	color = poppler_color_new ();
-	color->red = data->background_color.red * 65535;
-	color->green = data->background_color.green * 65535;
-	color->blue = data->background_color.blue * 65535;
+	color = pdf_document_signatures_poppler_color_new (&data->background_color);
 	poppler_signing_data_set_background_color (signing_data, color);
 	g_clear_pointer (&color, poppler_color_free);
 
