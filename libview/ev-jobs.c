@@ -37,6 +37,7 @@
 #include "ev-document-print.h"
 #include "ev-document-annotations.h"
 #include "ev-document-attachments.h"
+#include "ev-document-signatures.h"
 #include "ev-document-text.h"
 #include "ev-debug.h"
 
@@ -69,6 +70,7 @@ static guint job_find_signals[FIND_LAST_SIGNAL] = { 0 };
 G_DEFINE_ABSTRACT_TYPE (EvJob, ev_job, G_TYPE_OBJECT)
 G_DEFINE_TYPE (EvJobLinks, ev_job_links, EV_TYPE_JOB)
 G_DEFINE_TYPE (EvJobAttachments, ev_job_attachments, EV_TYPE_JOB)
+G_DEFINE_TYPE (EvJobSignatures, ev_job_signatures, EV_TYPE_JOB)
 G_DEFINE_TYPE (EvJobAnnots, ev_job_annots, EV_TYPE_JOB)
 G_DEFINE_TYPE (EvJobRender, ev_job_render, EV_TYPE_JOB)
 G_DEFINE_TYPE (EvJobPageData, ev_job_page_data, EV_TYPE_JOB)
@@ -453,6 +455,56 @@ ev_job_attachments_new (EvDocument *document)
 	ev_debug_message (DEBUG_JOBS, NULL);
 
 	job = g_object_new (EV_TYPE_JOB_ATTACHMENTS, NULL);
+	job->document = g_object_ref (document);
+
+	return job;
+}
+
+/* EvJobSignatures */
+static void
+ev_job_signatures_init (EvJobSignatures *job)
+{
+	EV_JOB (job)->run_mode = EV_JOB_RUN_THREAD;
+	job->state = EV_DOCUMENT_SIGNATURE_STATE_NONE;
+}
+
+static gboolean
+ev_job_signatures_run (EvJob *job)
+{
+	EvJobSignatures *job_signatures = EV_JOB_SIGNATURES (job);
+
+	ev_debug_message (DEBUG_JOBS, NULL);
+	ev_profiler_start (EV_PROFILE_JOBS, "%s (%p)", EV_GET_TYPE_NAME (job), job);
+
+	/* Validation may check certificate revocation online, which is
+	 * why it runs in a thread rather than blocking the UI */
+	ev_document_doc_mutex_lock ();
+	job_signatures->state =
+		ev_document_signatures_get_signature_state (EV_DOCUMENT_SIGNATURES (job->document),
+		                                            &job_signatures->n_signatures);
+	ev_document_doc_mutex_unlock ();
+
+	ev_job_succeeded (job);
+
+	return FALSE;
+}
+
+static void
+ev_job_signatures_class_init (EvJobSignaturesClass *class)
+{
+	EvJobClass *job_class = EV_JOB_CLASS (class);
+
+	job_class->run = ev_job_signatures_run;
+}
+
+EvJob *
+ev_job_signatures_new (EvDocument *document)
+{
+	EvJob *job;
+
+	ev_debug_message (DEBUG_JOBS, NULL);
+
+	job = g_object_new (EV_TYPE_JOB_SIGNATURES, NULL);
 	job->document = g_object_ref (document);
 
 	return job;

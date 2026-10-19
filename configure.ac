@@ -434,6 +434,21 @@ fi
 AM_CONDITIONAL(ENABLE_PDF, test x$enable_pdf = xyes)
 dnl ================== end of pdf checks ============================================
 
+dnl ================== pdf digital signing checks ===================================
+dnl The PDF backend always calls poppler-glib's signing/validation API
+dnl (poppler_document_sign and friends) when PDF support is enabled, so this
+dnl is informational only: it reports whether the poppler-glib found above
+dnl actually declares that API, it does not disable the PDF backend.
+enable_pdf_signing=no
+if test "x$enable_pdf" = "xyes"; then
+    save_CFLAGS="$CFLAGS"
+    CFLAGS="$CFLAGS $POPPLER_CFLAGS"
+    AC_CHECK_DECLS([poppler_document_sign], [enable_pdf_signing=yes], [enable_pdf_signing=no],
+                   [#include <poppler.h>])
+    CFLAGS="$save_CFLAGS"
+fi
+dnl ================== end of pdf digital signing checks =============================
+
 dnl libspectre (used by ps and dvi backends)
 SPECTRE_REQUIRED=0.2.0
 PKG_CHECK_MODULES(SPECTRE, libspectre >= $SPECTRE_REQUIRED,have_spectre=yes,have_spectre=no)
@@ -792,6 +807,7 @@ Configure summary:
     Tests...............:    $enable_tests
 
     PDF Backend.........:    $enable_pdf
+    PDF Digital Signing.:    $enable_pdf_signing
     Synctex enabled.....:    $enable_synctex
     PostScript Backend..:    $enable_ps
     TIFF Backend........:    $enable_tiff
