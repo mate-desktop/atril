@@ -28,9 +28,7 @@ EXTRA_DIST = \
 	testGoMenu.py \
 	testHelpMenu.py \
 	testWrongFileExtension.py \
-	testZoom.py
-	test7.py \
-	testDigitalSignatures.py \
+	testZoom.py \
 	generate-signature-fixtures.sh
 
 -include $(top_srcdir)/git.mk

@@ -31,6 +31,7 @@
 #endif
 
 #include <errno.h>
+#include <sys/stat.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -547,7 +548,8 @@ ev_window_setup_action_sensitivity (EvWindow *ev_window)
 
 	/* Digital signing */
 	ev_window_set_action_sensitive (ev_window, "DigitalSigning",
-					has_pages && EV_IS_DOCUMENT_SIGNATURES (document));
+					has_pages && EV_IS_DOCUMENT_SIGNATURES (document) &&
+					ev_document_signatures_can_sign (EV_DOCUMENT_SIGNATURES (document)));
 
 	/* Toolbar-specific actions: */
 	ev_window_set_action_sensitive (ev_window, PAGE_SELECTOR_ACTION, has_pages);
@@ -3481,7 +3483,9 @@ ev_window_signature_password_callback (const char *text)
 		}
 	}
 
-	if (!nss_prompting_enabled)
+	/* NSS may ask for the password from poppler's signing thread,
+	 * we can only show a dialog from the main thread */
+	if (!nss_prompting_enabled || !g_main_context_is_owner (g_main_context_default ()))
 		return NULL;
 
 	parent = gtk_application_get_active_window (GTK_APPLICATION (g_application_get_default ()));
@@ -3530,7 +3534,7 @@ on_document_signed (GObject      *source_object,
 	GError *error = NULL;
 
 	if (!ev_document_signatures_sign_finish (EV_DOCUMENT_SIGNATURES (source_object), result, &error)) {
-		g_warning ("Failed to sign document: %s", error->message);
+		ev_window_error_message (save_data->window, error, "%s", _("Failed to sign document"));
 		g_error_free (error);
 		if (save_data->temporary_filename)
 			g_unlink (save_data->temporary_filename);
@@ -3547,6 +3551,14 @@ on_document_signed (GObject      *source_object,
 		ev_window_error_message (save_data->window, error, "%s", _("Failed to sign document"));
 		g_error_free (error);
 		g_unlink (save_data->temporary_filename);
+		nss_prompting_enabled = FALSE;
+		ev_signed_file_save_data_free (save_data);
+		return;
+	}
+
+	/* The current document was overwritten, show the signed version */
+	if (save_data->temporary_filename) {
+		ev_window_reload_document (save_data->window, NULL);
 		nss_prompting_enabled = FALSE;
 		ev_signed_file_save_data_free (save_data);
 		return;
@@ -3575,7 +3587,8 @@ ev_window_certificate_save_file (EvWindow                *window,
 	EvWindowPrivate *priv = window->priv;
 	EvSignedFileSaveData *save_data;
 	EvSignaturesData *data;
-	time_t t;
+	GDateTime *now;
+	gchar *date;
 	gchar *tmp;
 	gchar *source_filename = NULL;
 	gchar *destination_filename = NULL;
@@ -3592,6 +3605,7 @@ ev_window_certificate_save_file (EvWindow                *window,
 		gchar *basename = g_path_get_basename (filename);
 		gchar *tmp_template = g_strdup_printf ("%s/.%s.atril-signed-XXXXXX", dirname, basename);
 		gint fd = g_mkstemp (tmp_template);
+		GStatBuf st;
 
 		if (fd == -1) {
 			error = g_error_new_literal (G_FILE_ERROR,
@@ -3607,6 +3621,8 @@ ev_window_certificate_save_file (EvWindow                *window,
 			return;
 		}
 
+		if (g_stat (filename, &st) == 0)
+			fchmod (fd, st.st_mode & 07777);
 		close (fd);
 		destination_filename = tmp_template;
 		g_free (basename);
@@ -3622,12 +3638,15 @@ ev_window_certificate_save_file (EvWindow                *window,
 	ev_document_signatures_data_set_page (data, priv->signature_page);
 	ev_document_signatures_data_set_rect (data, priv->signature_bounding_box);
 
-	time (&t);
+	now = g_date_time_new_now_local ();
+	date = g_date_time_format (now, "%c");
 	tmp = g_strdup_printf (_("Digitally signed by %s\nDate: %s"),
 	                       ev_certificate_info_get_subject_common_name (certificate_info),
-	                       ctime (&t));
+	                       date);
 	ev_document_signatures_data_set_signature (data, tmp);
 	g_free (tmp);
+	g_free (date);
+	g_date_time_unref (now);
 	ev_document_signatures_data_set_signature_left (data, ev_certificate_info_get_subject_common_name (certificate_info));
 
 	save_data = g_new0 (EvSignedFileSaveData, 1);
@@ -3639,7 +3658,10 @@ ev_window_certificate_save_file (EvWindow                *window,
 	if (!ev_document_signatures_sign (EV_DOCUMENT_SIGNATURES (priv->document), data, NULL,
 	                                 on_document_signed, save_data, &error)) {
 		ev_window_error_message (window, error, "%s", _("Failed to sign document"));
-		g_error_free (error);
+		g_clear_error (&error);
+		if (save_data->temporary_filename)
+			g_unlink (save_data->temporary_filename);
+		nss_prompting_enabled = FALSE;
 		ev_signed_file_save_data_free (save_data);
 	}
 
@@ -3649,7 +3671,7 @@ ev_window_certificate_save_file (EvWindow                *window,
 
 static void
 ev_window_on_save_signed_file_response (GtkWidget *dialog,
-                                        guint      response,
+                                        gint       response,
                                         gpointer   user_data)
 {
 	EvWindow *window = EV_WINDOW (user_data);
@@ -3703,7 +3725,7 @@ ev_window_certificate_save_as_dialog (EvWindow *window)
 
 static void
 ev_window_certificate_selection_response (GtkWidget *dialog,
-                                          guint      response,
+                                          gint       response,
                                           gpointer   user_data)
 {
 	EvWindow *window = EV_WINDOW (user_data);
@@ -3716,6 +3738,8 @@ ev_window_certificate_selection_response (GtkWidget *dialog,
 		return;
 	}
 
+	g_clear_pointer (&priv->signature_certificate_info, ev_certificate_info_free);
+
 	GtkListBoxRow *row = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->certificate_listbox));
 	if (row) {
 		const char *cert_id = g_object_get_data (G_OBJECT (row), "cert-id");
@@ -3726,8 +3750,10 @@ ev_window_certificate_selection_response (GtkWidget *dialog,
 	gtk_widget_destroy (dialog);
 	priv->certificate_listbox = NULL;
 
-	if (!priv->signature_certificate_info)
+	if (!priv->signature_certificate_info) {
+		nss_prompting_enabled = FALSE;
 		return;
+	}
 
 	ev_window_certificate_save_as_dialog (window);
 }
@@ -3758,7 +3784,7 @@ ev_window_create_certificate_selection (EvWindow *window)
 		for (list = certificates; list; list = list->next) {
 			EvCertificateInfo *cert_info = list->data;
 			GtkWidget *row = gtk_list_box_row_new ();
-			gchar *label_text = g_strdup_printf ("%s\n<small>%s</small>",
+			gchar *label_text = g_markup_printf_escaped ("%s\n<small>%s</small>",
 			        ev_certificate_info_get_id (cert_info),
 			        ev_certificate_info_get_subject_common_name (cert_info));
 			GtkWidget *label = gtk_label_new (NULL);
@@ -3787,7 +3813,7 @@ ev_window_create_certificate_selection (EvWindow *window)
 
 static void
 ev_window_on_signature_rect_too_small_response (GtkWidget *dialog,
-                                                guint      response,
+                                                gint       response,
                                                 gpointer   user_data)
 {
 	EvWindow *window = EV_WINDOW (user_data);
@@ -3799,7 +3825,12 @@ ev_window_on_signature_rect_too_small_response (GtkWidget *dialog,
 		return;
 	}
 
-	ev_window_cmd_digital_signing (NULL, window);
+	if (response == GTK_RESPONSE_CANCEL) {
+		ev_window_cmd_digital_signing (NULL, window);
+		return;
+	}
+
+	nss_prompting_enabled = FALSE;
 }
 
 static void
@@ -3822,7 +3853,7 @@ ev_window_show_signature_rect_too_small_warning (EvWindow *window)
 
 static void
 ev_window_on_signature_rect (EvView      *view,
-                             gint         page,
+                             guint        page,
                              EvRectangle *rect,
                              gpointer     user_data)
 {

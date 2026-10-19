@@ -74,9 +74,11 @@ ev_document_signatures_sign (EvDocumentSignatures *document_signatures,
 {
    EvDocumentSignaturesInterface *iface = EV_DOCUMENT_SIGNATURES_GET_IFACE (document_signatures);
 
-	if (iface->sign)
-	   return iface->sign (document_signatures, data, cancellable, callback, user_data, error);
+   if (iface->sign)
+       return iface->sign (document_signatures, data, cancellable, callback, user_data, error);
 
+   g_set_error_literal (error, G_IO_ERROR, G_IO_ERROR_NOT_SUPPORTED,
+                        "Digital signing is not supported by this document backend");
    return FALSE;
 }
 
@@ -98,10 +100,13 @@ ev_document_signatures_can_sign (EvDocumentSignatures *document_signatures)
 {
    EvDocumentSignaturesInterface *iface = EV_DOCUMENT_SIGNATURES_GET_IFACE (document_signatures);
 
+   if (!iface->sign)
+       return FALSE;
+
    if (iface->can_sign)
        return iface->can_sign (document_signatures);
 
-   return FALSE;
+   return TRUE;
 }
 
 EvDocumentSignatureState

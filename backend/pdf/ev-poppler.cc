@@ -3351,7 +3351,7 @@ pdf_document_document_layers_iface_init (EvDocumentLayersInterface *iface)
 	iface->layer_is_visible = pdf_document_layers_layer_is_visible;
 }
 
-#if POPPLER_CHECK_VERSION(22, 2, 0)
+#if POPPLER_CHECK_VERSION(23, 7, 0)
 typedef struct {
 	EvDocumentSignatures *document;
 	GAsyncReadyCallback   callback;
@@ -3389,7 +3389,9 @@ pdf_document_sign_cb (GObject      *source_object,
 	g_object_unref (task);
 	pdf_sign_closure_free (closure);
 }
+#endif /* POPPLER_CHECK_VERSION(23, 7, 0) */
 
+#if POPPLER_CHECK_VERSION(22, 2, 0)
 static EvDocumentSignatureState
 pdf_document_signatures_get_signature_state (EvDocumentSignatures *document,
 	                                     guint                *n_signatures)
@@ -3507,7 +3509,9 @@ pdf_document_signatures_get_signature_state (EvDocumentSignatures *document,
 
 	return EV_DOCUMENT_SIGNATURE_STATE_PRESENT;
 }
+#endif /* POPPLER_CHECK_VERSION(22, 2, 0) */
 
+#if POPPLER_CHECK_VERSION(23, 7, 0)
 static gboolean
 pdf_document_signatures_sign (EvDocumentSignatures *document,
                               EvSignaturesData     *data,
@@ -3618,17 +3622,6 @@ pdf_document_signatures_sign_finish (EvDocumentSignatures *document,
 	return g_task_propagate_boolean (G_TASK (result), error);
 }
 
-static gboolean
-pdf_document_signatures_can_sign (EvDocumentSignatures *document)
-{
-	GList *certs = poppler_get_available_signing_certificates ();
-	gboolean can_sign = certs != NULL;
-
-	g_list_free_full (certs, (GDestroyNotify) poppler_certificate_info_free);
-
-	return can_sign;
-}
-
 static void
 pdf_document_set_password_callback (EvDocumentSignatures        *document,
                                     EvSignaturePasswordCallback  cb)
@@ -3683,18 +3676,19 @@ pdf_document_get_certificate_info (EvDocumentSignatures *document,
 
 	return info;
 }
-#endif /* POPPLER_CHECK_VERSION(22, 2, 0) */
+#endif /* POPPLER_CHECK_VERSION(23, 7, 0) */
 
 static void
 pdf_document_signatures_iface_init (EvDocumentSignaturesInterface *iface)
 {
-#if POPPLER_CHECK_VERSION(22, 2, 0)
+#if POPPLER_CHECK_VERSION(23, 7, 0)
 	iface->set_password_callback = pdf_document_set_password_callback;
 	iface->get_available_signing_certificates = pdf_document_get_available_signing_certificates;
 	iface->get_certificate_info = pdf_document_get_certificate_info;
 	iface->sign = pdf_document_signatures_sign;
 	iface->sign_finish = pdf_document_signatures_sign_finish;
-	iface->can_sign = pdf_document_signatures_can_sign;
+#endif
+#if POPPLER_CHECK_VERSION(22, 2, 0)
 	iface->get_signature_state = pdf_document_signatures_get_signature_state;
 #endif
 }
