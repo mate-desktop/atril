@@ -54,6 +54,9 @@ typedef struct _EvJobLinksClass EvJobLinksClass;
 typedef struct _EvJobAttachments EvJobAttachments;
 typedef struct _EvJobAttachmentsClass EvJobAttachmentsClass;
 
+typedef struct _EvJobSignatures EvJobSignatures;
+typedef struct _EvJobSignaturesClass EvJobSignaturesClass;
+
 typedef struct _EvJobAnnots EvJobAnnots;
 typedef struct _EvJobAnnotsClass EvJobAnnotsClass;
 
@@ -93,6 +96,11 @@ typedef struct _EvJobPrintClass EvJobPrintClass;
 #define EV_JOB_ATTACHMENTS(object)	     (G_TYPE_CHECK_INSTANCE_CAST((object), EV_TYPE_JOB_ATTACHMENTS, EvJobAttachments))
 #define EV_JOB_ATTACHMENTS_CLASS(klass)	     (G_TYPE_CHECK_CLASS_CAST((klass), EV_TYPE_JOB_ATTACHMENTS, EvJobAttachmentsClass))
 #define EV_IS_JOB_ATTACHMENTS(object)	     (G_TYPE_CHECK_INSTANCE_TYPE((object), EV_TYPE_JOB_ATTACHMENTS))
+
+#define EV_TYPE_JOB_SIGNATURES               (ev_job_signatures_get_type())
+#define EV_JOB_SIGNATURES(object)            (G_TYPE_CHECK_INSTANCE_CAST((object), EV_TYPE_JOB_SIGNATURES, EvJobSignatures))
+#define EV_JOB_SIGNATURES_CLASS(klass)       (G_TYPE_CHECK_CLASS_CAST((klass), EV_TYPE_JOB_SIGNATURES, EvJobSignaturesClass))
+#define EV_IS_JOB_SIGNATURES(object)         (G_TYPE_CHECK_INSTANCE_TYPE((object), EV_TYPE_JOB_SIGNATURES))
 
 #define EV_TYPE_JOB_ANNOTS                   (ev_job_annots_get_type())
 #define EV_JOB_ANNOTS(object)                (G_TYPE_CHECK_INSTANCE_CAST((object), EV_TYPE_JOB_ANNOTS, EvJobAnnots))
@@ -209,6 +217,19 @@ struct _EvJobAttachments
 };
 
 struct _EvJobAttachmentsClass
+{
+	EvJobClass parent_class;
+};
+
+struct _EvJobSignatures
+{
+	EvJob parent;
+
+	EvDocumentSignatureState state;
+	guint                    n_signatures;
+};
+
+struct _EvJobSignaturesClass
 {
 	EvJobClass parent_class;
 };
@@ -433,6 +454,10 @@ EvJob          *ev_job_links_new          (EvDocument     *document);
 /* EvJobAttachments */
 GType           ev_job_attachments_get_type (void) G_GNUC_CONST;
 EvJob          *ev_job_attachments_new      (EvDocument     *document);
+
+/* EvJobSignatures */
+GType           ev_job_signatures_get_type  (void) G_GNUC_CONST;
+EvJob          *ev_job_signatures_new       (EvDocument     *document);
 
 /* EvJobAnnots */
 GType           ev_job_annots_get_type      (void) G_GNUC_CONST;

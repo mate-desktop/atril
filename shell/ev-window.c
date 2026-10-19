@@ -226,6 +226,7 @@ struct _EvWindowPrivate {
 	EvJob            *thumbnail_job;
 	EvJob            *save_job;
 	EvJob            *find_job;
+	EvJob            *signatures_job;
 
 	/* Printing */
 	GQueue           *print_queue;
@@ -401,7 +402,11 @@ static void     ev_window_close_find_bar                (EvWindow         *ev_wi
 static gchar *caja_sendto = NULL;
 
 static char *ev_window_signature_password_callback (const char *text);
-static void  ev_window_show_signature_message    (EvWindow   *window);
+static void  ev_window_show_signature_message    (EvWindow   *window,
+                                                  EvDocumentSignatureState state,
+                                                  guint       n_signatures);
+static void  ev_window_signatures_job_cb         (EvJob      *job,
+                                                  EvWindow   *window);
 static void  ev_window_cmd_digital_signing         (GtkAction *action, EvWindow *ev_window);
 static void  ev_window_clear_signature_state       (EvWindow   *window);
 
@@ -854,6 +859,8 @@ ev_window_set_message_area (EvWindow  *window,
 				   (gpointer) &(window->priv->message_area));
 }
 
+/* The NSS password callback may also run in job threads */
+G_LOCK_DEFINE_STATIC (nss_password_cache);
 static gchar *nss_password_cache = NULL;
 static gboolean nss_prompting_enabled = FALSE;
 
@@ -932,24 +939,67 @@ ev_window_warning_message (EvWindow    *window,
 }
 
 static void
-ev_window_show_signature_message (EvWindow *window)
+ev_window_clear_signatures_job (EvWindow *window)
 {
-	EvDocumentSignatureState state;
+	EvWindowPrivate *priv = window->priv;
+
+	if (priv->signatures_job == NULL)
+		return;
+
+	if (!ev_job_is_finished (priv->signatures_job))
+		ev_job_cancel (priv->signatures_job);
+
+	g_signal_handlers_disconnect_by_func (priv->signatures_job,
+	                                      ev_window_signatures_job_cb,
+	                                      window);
+	g_clear_object (&priv->signatures_job);
+}
+
+static void
+ev_window_signatures_job_cb (EvJob    *job,
+                             EvWindow *window)
+{
+	EvJobSignatures *job_signatures = EV_JOB_SIGNATURES (job);
+	EvDocumentSignatureState state = job_signatures->state;
+	guint n_signatures = job_signatures->n_signatures;
+	gboolean same_document = job->document == window->priv->document;
+
+	ev_window_clear_signatures_job (window);
+
+	if (same_document)
+		ev_window_show_signature_message (window, state, n_signatures);
+}
+
+static void
+ev_window_start_signatures_job (EvWindow *window)
+{
+	EvWindowPrivate *priv = window->priv;
+
+	ev_window_clear_signatures_job (window);
+
+	if (!priv->document || !EV_IS_DOCUMENT_SIGNATURES (priv->document))
+		return;
+
+	priv->signatures_job = ev_job_signatures_new (priv->document);
+	g_signal_connect (priv->signatures_job, "finished",
+	                  G_CALLBACK (ev_window_signatures_job_cb),
+	                  window);
+	ev_job_scheduler_push_job (priv->signatures_job, EV_JOB_PRIORITY_NONE);
+}
+
+static void
+ev_window_show_signature_message (EvWindow                 *window,
+                                  EvDocumentSignatureState  state,
+                                  guint                     n_signatures)
+{
 	GtkMessageType message_type;
 	GtkWidget *area;
 	gchar *primary_text;
 	const gchar *secondary_text = NULL;
-	guint n_signatures = 0;
 
-	if (window->priv->message_area ||
-	    !window->priv->document ||
-	    !EV_IS_DOCUMENT_SIGNATURES (window->priv->document))
+	if (window->priv->message_area)
 		return;
 
-	nss_prompting_enabled = TRUE;
-	state = ev_document_signatures_get_signature_state (EV_DOCUMENT_SIGNATURES (window->priv->document),
-	                                                    &n_signatures);
-	nss_prompting_enabled = FALSE;
 	if (state == EV_DOCUMENT_SIGNATURE_STATE_NONE || n_signatures == 0)
 		return;
 
@@ -1917,7 +1967,7 @@ ev_window_set_document (EvWindow *ev_window, EvDocument *document)
 					   _("The document contains only empty pages"));
 	}
 
-	ev_window_show_signature_message (ev_window);
+	ev_window_start_signatures_job (ev_window);
 
 #if ENABLE_EPUB
 	if (document->iswebdocument == TRUE &&
@@ -3471,15 +3521,20 @@ ev_window_signature_password_callback (const char *text)
 	GtkWindow *parent;
 	gint response;
 
-	if (nss_password_cache)
-		return g_strdup (nss_password_cache);
+	G_LOCK (nss_password_cache);
+	ret = g_strdup (nss_password_cache);
+	G_UNLOCK (nss_password_cache);
+	if (ret)
+		return ret;
 
 	if (ev_keyring_is_available ()) {
 		gchar *keyring_password = ev_keyring_lookup_nss_password (text);
 		if (keyring_password) {
+			G_LOCK (nss_password_cache);
 			g_free (nss_password_cache);
-			nss_password_cache = keyring_password;
-			return g_strdup (nss_password_cache);
+			nss_password_cache = g_strdup (keyring_password);
+			G_UNLOCK (nss_password_cache);
+			return keyring_password;
 		}
 	}
 
@@ -3511,8 +3566,10 @@ ev_window_signature_password_callback (const char *text)
 
 		if (password && *password) {
 			ret = g_strdup (password);
+			G_LOCK (nss_password_cache);
 			g_free (nss_password_cache);
 			nss_password_cache = g_strdup (password);
+			G_UNLOCK (nss_password_cache);
 			if (ev_keyring_is_available ())
 				ev_keyring_save_nss_password (text, password);
 		}
@@ -7008,6 +7065,8 @@ ev_window_dispose (GObject *object)
 	if (priv->reload_job) {
 		ev_window_clear_reload_job (window);
 	}
+
+	ev_window_clear_signatures_job (window);
 
 	if (priv->save_job) {
 		ev_window_clear_save_job (window);
