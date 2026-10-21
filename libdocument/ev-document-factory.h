@@ -31,8 +31,9 @@
 
 G_BEGIN_DECLS
 
-EvDocument* ev_document_factory_get_document (const char *uri, GError **error);
-void 	    ev_document_factory_add_filters  (GtkWidget *chooser, EvDocument *document);
+EvDocument* ev_document_factory_get_document                      (const char *uri, GError **error);
+void 	    ev_document_factory_add_filters                       (GtkWidget *chooser, EvDocument *document);
+gboolean    ev_document_factory_mime_type_supported_by_gdk_pixbuf (const gchar *mime_type);
 
 G_END_DECLS
 
