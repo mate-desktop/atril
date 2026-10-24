@@ -14,7 +14,9 @@ libcomicsdocument_la_SOURCES = \
 	comics-document.c      \
 	comics-document.h      \
 	ev-archive.c     \
-	ev-archive.h
+	ev-archive.h     \
+	ev-image-size.c  \
+	ev-image-size.h
 
 libcomicsdocument_la_LDFLAGS = $(BACKEND_LIBTOOL_FLAGS)
 libcomicsdocument_la_LIBADD =				\

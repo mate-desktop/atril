@@ -12,6 +12,7 @@ backend_desktop = configure_file(
 comics_sources = files(
   'comics-document.c',
   'ev-archive.c',
+  'ev-image-size.c',
 )
 
 comics_deps = [
