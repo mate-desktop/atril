@@ -35,6 +35,7 @@
 #include "ev-document-thumbnails.h"
 #include "ev-file-helpers.h"
 #include "ev-archive.h"
+#include "ev-image-size.h"
 #include <archive.h>
 #include <archive_entry.h>
 
@@ -57,8 +58,13 @@ struct _ComicsDocument
 	gchar         *archive_uri;
 	GPtrArray     *page_names; /* elem: char * */
 	GHashTable    *page_positions; /* key: char *, value: uint + 1 */
-
+	GHashTable    *page_sizes; /* key: char *, value: PageSize * */
 };
+
+typedef struct {
+	gint width;
+	gint height;
+} PageSize;
 
 static void       
 comics_document_document_thumbnails_iface_init (EvDocumentThumbnailsInterface *iface);
@@ -152,6 +158,48 @@ char *basename;
 	return ret;
 }
 
+/* Reads the start of the current archive entry to find the image size.
+ * Returns FALSE if decompressing the entry failed. */
+static gboolean
+read_entry_image_size (EvArchive *archive,
+		       PageSize **size)
+{
+	GByteArray *data;
+	EvImageSizeResult res = EV_IMAGE_SIZE_NEED_MORE;
+	guchar buf[BLOCK_SIZE];
+	gint width = 0, height = 0;
+	gboolean ret = TRUE;
+
+	*size = NULL;
+	data = g_byte_array_new ();
+	while (res == EV_IMAGE_SIZE_NEED_MORE) {
+		GError *error = NULL;
+		gssize read;
+
+		read = ev_archive_read_data (archive, buf, sizeof (buf), &error);
+		if (read < 0) {
+			g_debug ("Failed to read '%s': %s",
+				 ev_archive_get_entry_pathname (archive), error->message);
+			g_error_free (error);
+			ret = FALSE;
+			break;
+		}
+		if (read == 0)
+			break;
+		g_byte_array_append (data, buf, read);
+		res = ev_image_size_from_header (data->data, data->len, &width, &height);
+	}
+	g_byte_array_free (data, TRUE);
+
+	if (res == EV_IMAGE_SIZE_FOUND) {
+		*size = g_new (PageSize, 1);
+		(*size)->width = width;
+		(*size)->height = height;
+	}
+
+	return ret;
+}
+
 static gboolean
 archive_reopen_if_needed (ComicsDocument  *comics_document,
 			  const char      *page_wanted,
@@ -177,8 +225,14 @@ archive_reopen_if_needed (ComicsDocument  *comics_document,
 return ev_archive_open_filename (comics_document->archive, comics_document->archive_path, error);
 }
 
+/* Lists the images in the archive. If page_sizes is not NULL, also reads
+ * the start of each image to fill it with the image sizes; read_failed is
+ * then set if decompressing an image failed, which may have left the
+ * listing incomplete. */
 static GPtrArray *
 comics_document_list (ComicsDocument  *comics_document,
+		      GHashTable      *page_sizes,
+		      gboolean        *read_failed,
 		      GError         **error)
 {
 GPtrArray *array = NULL;
@@ -244,6 +298,17 @@ GPtrArray *array = NULL;
 
 		g_debug ("Adding '%s' to the list of files in the comics", name);
 		g_ptr_array_add (array, g_strdup (name));
+
+		if (page_sizes) {
+			PageSize *size;
+
+			if (!read_entry_image_size (comics_document->archive, &size)) {
+				*read_failed = TRUE;
+				page_sizes = NULL;
+			} else if (size) {
+				g_hash_table_insert (page_sizes, g_strdup (name), size);
+			}
+		}
 	}
 out:
 	if (array->len == 0) {
@@ -354,6 +419,7 @@ comics_document_load (EvDocument *document,
 	ComicsDocument *comics_document = COMICS_DOCUMENT (document);
 	gchar *mime_type;
 	GFile *file;
+	gboolean read_failed = FALSE;
 	file = g_file_new_for_uri (uri);
 	comics_document->archive_path = g_file_get_path (file);
 	g_object_unref (file);
@@ -379,8 +445,21 @@ comics_document_load (EvDocument *document,
 
 	g_free (mime_type);
 
-	/* Get list of files in archive */
-	comics_document->page_names = comics_document_list (comics_document, error);
+	/* Get list of files in archive, and the size of each image */
+	comics_document->page_sizes = g_hash_table_new_full (g_str_hash, g_str_equal,
+							     g_free, g_free);
+	comics_document->page_names = comics_document_list (comics_document,
+							    comics_document->page_sizes,
+							    &read_failed, error);
+	if (read_failed) {
+		/* Reading an image failed, so list again without reading them */
+		if (comics_document->page_names) {
+			g_ptr_array_foreach (comics_document->page_names, (GFunc) g_free, NULL);
+			g_ptr_array_free (comics_document->page_names, TRUE);
+		}
+		g_clear_error (error);
+		comics_document->page_names = comics_document_list (comics_document, NULL, NULL, error);
+	}
 	if (!comics_document->page_names)
 		return FALSE;
 
@@ -443,9 +522,20 @@ comics_document_get_page_size (EvDocument *document,
 
 	const char *page_path;
 	PixbufInfo info;
+	PageSize *size;
 	GError *error = NULL;
 
 	page_path = g_ptr_array_index (comics_document->page_names, page->index);
+
+	/* Use the size read from the image header when loading, if any */
+	size = g_hash_table_lookup (comics_document->page_sizes, page_path);
+	if (size) {
+		if (width)
+			*width = size->width;
+		if (height)
+			*height = size->height;
+		return;
+	}
 
 	if (!archive_reopen_if_needed (comics_document, page_path, &error)) {
 		g_warning ("Fatal error opening archive: %s", error->message);
@@ -618,6 +708,7 @@ comics_document_finalize (GObject *object)
                 g_ptr_array_free (comics_document->page_names, TRUE);
 	}
 	g_clear_pointer (&comics_document->page_positions, g_hash_table_destroy);
+	g_clear_pointer (&comics_document->page_sizes, g_hash_table_destroy);
 	g_clear_object (&comics_document->archive);
 	g_free (comics_document->archive_path);
 	g_free (comics_document->archive_uri);
