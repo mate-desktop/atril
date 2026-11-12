@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the atril package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-# Translators:
 # Hilding Kåstad <hilding.kastad@gmail.com>, 2018
 # 6a42dd6e7ca9a813693714b0d9aa1ad8, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
@@ -19,37 +16,37 @@
 # Kristoffer Grundström <lovaren@gmail.com>, 2021
 # Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2024
 # Luna Jernberg <droidbittin@gmail.com>, 2024
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025, 2026.
+#
+# Translators:
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atril 1.27.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/atril/issues\n"
 "POT-Creation-Date: 2026-04-10 17:37+0200\n"
-"PO-Revision-Date: 2018-03-11 14:35+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
-"Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
+"PO-Revision-Date: 2026-10-19 13:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/atril/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #: backend/comics/comics-document.c:197 backend/comics/comics-document.c:267
-#, fuzzy
-#| msgid "File corrupted"
 msgid "File is corrupted"
-msgstr "Filen är korrupt"
+msgstr "Filen är skadad"
 
 #: backend/comics/comics-document.c:257
 msgid "Archive is encrypted"
-msgstr ""
+msgstr "Arkivet är krypterat"
 
 #: backend/comics/comics-document.c:262
-#, fuzzy
-#| msgid "No files in archive"
 msgid "No supported images in archive"
-msgstr "Inga filer i arkivet"
+msgstr "Inga bilder som stöds i arkivet"
 
 #: backend/comics/comics-document.c:272
 msgid "No files in archive"
@@ -65,6 +62,8 @@ msgid ""
 "libarchive lacks support for this comic book’s compression, please contact "
 "your distributor"
 msgstr ""
+"libarchive saknar stöd för den här serietidningens komprimering; kontakta "
+"din distributör"
 
 #: backend/comics/comics-document.c:365
 msgid "File corrupted"
@@ -466,7 +465,7 @@ msgstr "Varning"
 #: backend/dvi/mdvi-lib/util.c:193
 #, c-format
 msgid "%s: Fatal: "
-msgstr "%s: Ödesdiger"
+msgstr "%s: Allvarligt fel: "
 
 #: backend/dvi/mdvi-lib/util.c:200
 msgid "Fatal"
@@ -532,7 +531,7 @@ msgstr "(vf) %s: ingen postamble\n"
 #: backend/dvi/mdvi-lib/vf.c:235
 #, c-format
 msgid "%s: File corrupted, or not a VF file.\n"
-msgstr "%s: Fil korrupt,  eller inte en VF fil\n"
+msgstr "%s: Filen är skadad eller inte en fil i VF-format.\n"
 
 #: backend/epub/epub-document.c:655
 msgid "Not an ePub document"
@@ -1207,11 +1206,11 @@ msgstr "av %d"
 
 #: libview/ev-print-operation.c:346
 msgid "Preparing to print…"
-msgstr "Förbereder utskrift..."
+msgstr "Förbereder utskrift…"
 
 #: libview/ev-print-operation.c:348
 msgid "Finishing…"
-msgstr "Färdigställer..."
+msgstr "Slutför…"
 
 #: libview/ev-print-operation.c:350
 #, c-format
@@ -1482,7 +1481,7 @@ msgstr "Lösenord för dokumentet %s"
 #: shell/ev-loading-message.c:50 shell/ev-sidebar-annotations.c:157
 #: shell/ev-sidebar-layers.c:122 shell/ev-sidebar-links.c:264
 msgid "Loading…"
-msgstr "Läser in..."
+msgstr "Läser in…"
 
 #: shell/ev-open-recent-action.c:72
 msgid "Open a recently used document"
@@ -1597,7 +1596,7 @@ msgstr "Bilagor"
 
 #: shell/ev-sidebar-bookmarks.c:154
 msgid "_Open Bookmark"
-msgstr "_Öppna bokmärke"
+msgstr "Ö_ppna bokmärke"
 
 #: shell/ev-sidebar-bookmarks.c:156
 msgid "_Rename Bookmark"
@@ -1730,7 +1729,7 @@ msgstr "Skickar upp bild (%d %%)"
 
 #: shell/ev-window.c:3280
 msgid "Save As…"
-msgstr "Spara som..."
+msgstr "Spara som…"
 
 #: shell/ev-window.c:3358
 msgid "Could not send current document"
@@ -1838,7 +1837,7 @@ msgstr "Atril är en enkel flersidig dokumentvisare."
 
 #: shell/ev-window.c:5459
 msgid "MATE Documentation Team"
-msgstr "MATE Documentation Team"
+msgstr "MATE-dokumentationsgruppen"
 
 #: shell/ev-window.c:5460
 msgid "GNOME Documentation Team"
@@ -1957,7 +1956,7 @@ msgstr "_Hjälp"
 
 #: shell/ev-window.c:6578 shell/ev-window.c:6944
 msgid "_Open…"
-msgstr "_Öppna..."
+msgstr "Ö_ppna…"
 
 #: shell/ev-window.c:6579 shell/ev-window.c:6945
 msgid "Open an existing document"
@@ -1985,7 +1984,7 @@ msgstr "Skicka nuvarande dokument via mail, snabbmeddelande..."
 
 #: shell/ev-window.c:6590
 msgid "_Print…"
-msgstr "Skriv _ut..."
+msgstr "Skriv _ut…"
 
 #: shell/ev-window.c:6593
 msgid "P_roperties"
@@ -2025,7 +2024,7 @@ msgstr "Spara aktuella inställningar som s_tandard"
 
 #: shell/ev-window.c:6623
 msgid "_Reset Zoom"
-msgstr "_Återställ Zoom"
+msgstr "Å_terställ zoom"
 
 #: shell/ev-window.c:6626
 msgid "_Reload"
@@ -2045,7 +2044,7 @@ msgstr "Auto_rulla"
 
 #: shell/ev-window.c:6643
 msgid "_First Page"
-msgstr "F_örsta sidan"
+msgstr "Fö_rsta sidan"
 
 #: shell/ev-window.c:6644
 msgid "Go to the first page"
@@ -2165,7 +2164,7 @@ msgstr "Aktivera eller inaktivera markörnavigering"
 
 #: shell/ev-window.c:6756
 msgid "_Find…"
-msgstr "Sö_k..."
+msgstr "Sö_k…"
 
 #: shell/ev-window.c:6757
 msgid "Find a word or phrase in the document"
@@ -2173,7 +2172,7 @@ msgstr "Sök ett ord eller en fras i dokumentet"
 
 #: shell/ev-window.c:6764
 msgid "_Open Link"
-msgstr "_Öppna länk"
+msgstr "Ö_ppna länk"
 
 #: shell/ev-window.c:6766
 msgid "_Go To"
@@ -2189,7 +2188,7 @@ msgstr "_Kopiera länkadress"
 
 #: shell/ev-window.c:6772
 msgid "_Save Image As…"
-msgstr "_Spara bild som..."
+msgstr "_Spara bild som…"
 
 #: shell/ev-window.c:6774
 msgid "Copy _Image"
@@ -2201,15 +2200,15 @@ msgstr "Egenskaper för kommentar…"
 
 #: shell/ev-window.c:6778
 msgid "Remove Annot…"
-msgstr "Ta bort Anteck..."
+msgstr "Ta bort anteckning…"
 
 #: shell/ev-window.c:6783
 msgid "_Open Attachment"
-msgstr "_Öppna bilaga"
+msgstr "Ö_ppna bilaga"
 
 #: shell/ev-window.c:6785
 msgid "_Save Attachment As…"
-msgstr "Spara bilaga so_m..."
+msgstr "Spara bilaga so_m…"
 
 #: shell/ev-window.c:6918
 msgid "Zoom"
