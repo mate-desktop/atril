@@ -156,46 +156,34 @@ EXTRA_DIST = \
 
 # GObject Introspection
 
-if ENABLE_INTROSPECTION
+-include $(INTROSPECTION_MAKEFILE)
+INTROSPECTION_GIRS =
+INTROSPECTION_SCANNER_ENV = PKG_CONFIG_PATH=$(top_builddir):$$PKG_CONFIG_PATH
+INTROSPECTION_SCANNER_ARGS = -v --strip-prefix=Ev
+INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 
-AtrilDocument-$(EV_API_VERSION).gir: libatrildocument.la Makefile $(INST_H_FILES) $(filter %.c,$(libatrildocument_la_SOURCES))
-	$(AM_V_GEN) PKG_CONFIG_PATH=$(top_builddir):$$PKG_CONFIG_PATH \
-	$(G_IR_SCANNER) -v --namespace AtrilDocument \
-	--strip-prefix=Ev \
-	--nsversion=$(EV_API_VERSION) \
-	--include=GLib-2.0 \
-	--include=Gio-2.0 \
-	--include=Gdk-3.0 \
-	--include=GdkPixbuf-2.0 \
-	--include=Gtk-3.0 \
-	--library=libatrildocument.la \
-	--libtool="$(LIBTOOL)" \
-	--output $@ \
-	--pkg atril-document-$(EV_API_VERSION) \
-	-I$(top_srcdir) \
-	-I$(top_builddir) \
-	-I$(srcdir) \
-	-I$(builddir) \
-	-DATRIL_COMPILATION \
-	$(filter %.h,$^) \
-	$(filter %.c,$^)
+if HAVE_INTROSPECTION
 
-girdir = $(GIRDIR)
-gir_DATA = AtrilDocument-$(EV_API_VERSION).gir
+AtrilDocument-$(EV_API_VERSION).gir: libatrildocument.la
+AtrilDocument_@EV_API_VERSION_U@_gir_NAMESPACE = AtrilDocument
+AtrilDocument_@EV_API_VERSION_U@_gir_VERSION = $(EV_API_VERSION)
+AtrilDocument_@EV_API_VERSION_U@_gir_INCLUDES = GLib-2.0 Gio-2.0 Gdk-3.0 GdkPixbuf-2.0 Gtk-3.0
+AtrilDocument_@EV_API_VERSION_U@_gir_LIBS = libatrildocument.la
+AtrilDocument_@EV_API_VERSION_U@_gir_PACKAGES = atril-document-$(EV_API_VERSION)
+AtrilDocument_@EV_API_VERSION_U@_gir_CFLAGS = -I$(top_srcdir) -I$(top_builddir) \
+	-I$(srcdir) -I$(builddir) -DATRIL_COMPILATION
+AtrilDocument_@EV_API_VERSION_U@_gir_FILES = $(INST_H_FILES) $(filter %.c,$(libatrildocument_la_SOURCES))
+INTROSPECTION_GIRS += AtrilDocument-$(EV_API_VERSION).gir
 
-typelibsdir = $(GIRTYPELIBDIR)
-typelibs_DATA = AtrilDocument-$(EV_API_VERSION).typelib
+girdir = $(INTROSPECTION_GIRDIR)
+gir_DATA = $(INTROSPECTION_GIRS)
+
+typelibdir = $(INTROSPECTION_TYPELIBDIR)
+typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
 
 EXTRA_DIST += $(gir_DATA)
-CLEANFILES += $(gir_DATA) $(typelibs_DATA)
+CLEANFILES += $(gir_DATA) $(typelib_DATA)
 
-%.typelib: %.gir
-	$(AM_V_GEN) LD_LIBRARY_PATH=$${LD_LIBRARY_PATH:+$$LD_LIBRARY_PATH:}. $(G_IR_COMPILER) \
-	--includedir=$(srcdir) \
-	--includedir=. \
-	$(G_IR_COMPILER_OPTS) \
-	$< -o $@
-
-endif # ENABLE_INTROSPECTION
+endif # HAVE_INTROSPECTION
 
 -include $(top_srcdir)/git.mk
