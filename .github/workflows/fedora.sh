@@ -36,6 +36,7 @@ requires+=(
 	mate-common
 	mate-desktop-devel
 	poppler-glib-devel
+	poppler-utils
 	redhat-rpm-config
 	texlive-lib-devel
 	webkit2gtk4.1-devel

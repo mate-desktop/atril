@@ -7,7 +7,8 @@ test_cases = [
     'testBookmarksMenu.py',
     'testEncryptedFile.py',
     'testFileReloading.py',
-    'testWrongFileExtension.py'
+    'testWrongFileExtension.py',
+    'testDigitalSignatures.py'
 ]
 
 foreach case : test_cases
