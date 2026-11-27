@@ -83,6 +83,12 @@ mime_type_supported_by_gdk_pixbuf (const gchar *mime_type)
 
 	return retval;
 }
+
+gboolean
+ev_document_factory_mime_type_supported_by_gdk_pixbuf (const gchar *mime_type)
+{
+	return mime_type_supported_by_gdk_pixbuf (mime_type);
+}
 #endif /* ENABLE_PIXBUF */
 
 static EvCompressionType

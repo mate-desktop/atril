@@ -217,6 +217,20 @@ ev_backends_manager_get_backend_info (const gchar *mime_type)
 	return NULL;
 }
 
+gboolean
+ev_backends_manager_mime_type_supported (const gchar *mime_type)
+{
+	if (ev_backends_manager_get_backend_info (mime_type))
+		return TRUE;
+
+#ifdef ENABLE_PIXBUF
+	if (ev_document_factory_mime_type_supported_by_gdk_pixbuf (mime_type))
+		return TRUE;
+#endif
+
+	return FALSE;
+}
+
 EvDocument *
 ev_backends_manager_get_document (const gchar *mime_type)
 {
